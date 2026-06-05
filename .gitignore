@@ -1,0 +1,16 @@
+# Python Virtual Environment
+venv/
+__pycache__/
+*.pyc
+
+# Local secrets
+.env
+
+# Large raw audio files (do not sync to Github)
+00_Ingest_Buffer/raw_audio/*
+!00_Ingest_Buffer/raw_audio/.gitkeep
+
+# Quartz cache and dependencies
+quartz/node_modules/
+quartz/.quartz-cache/
+quartz/public/

@@ -1,0 +1,3 @@
+google-genai
+watchdog
+python-dotenv
