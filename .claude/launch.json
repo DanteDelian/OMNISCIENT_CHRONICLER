@@ -1,0 +1,17 @@
+{
+	"version": "0.0.1",
+	"configurations": [
+		{
+			"name": "chronicler",
+			"runtimeExecutable": "npm",
+			"runtimeArgs": ["--prefix", "app", "run", "dev", "--", "--port", "5173", "--strictPort"],
+			"port": 5173
+		},
+		{
+			"name": "chronicler-prod",
+			"runtimeExecutable": "node",
+			"runtimeArgs": ["app/build"],
+			"port": 3000
+		}
+	]
+}

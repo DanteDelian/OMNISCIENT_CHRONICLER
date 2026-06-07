@@ -1,0 +1,132 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+/* Klassenbasierter Dark-Mode (mode-watcher setzt .dark auf <html>). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+	--font-display: 'Cinzel', ui-serif, Georgia, serif;
+	--font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+	/* Semantische Farben referenzieren Runtime-Variablen (theme-bar-fähig). */
+	--color-bg: var(--c-bg);
+	--color-surface: var(--c-surface);
+	--color-surface2: var(--c-surface2);
+	--color-border: var(--c-border);
+	--color-ink: var(--c-ink);
+	--color-muted: var(--c-muted);
+	--color-primary: var(--c-primary);
+	--color-primary-fg: var(--c-primary-fg);
+	--color-accent: var(--c-accent);
+	--color-danger: var(--c-danger);
+	--color-success: var(--c-success);
+}
+
+:root {
+	--c-bg: #f3f1ec;
+	--c-surface: #ffffff;
+	--c-surface2: #f0eef4;
+	--c-border: #e3e0ea;
+	--c-ink: #211f2b;
+	--c-muted: #6b6680;
+	--c-primary: #7c3aed;
+	--c-primary-fg: #ffffff;
+	--c-accent: #c2840a;
+	--c-danger: #dc2626;
+	--c-success: #16a34a;
+}
+
+.dark {
+	--c-bg: #0b0a10;
+	--c-surface: #15131d;
+	--c-surface2: #1d1a28;
+	--c-border: #2a2640;
+	--c-ink: #f4f2fa;
+	--c-muted: #a39fb8;
+	--c-primary: #a78bfa;
+	--c-primary-fg: #14101f;
+	--c-accent: #fbbf24;
+	--c-danger: #f87171;
+	--c-success: #4ade80;
+}
+
+@layer base {
+	html {
+		background-color: var(--color-bg);
+		color: var(--color-ink);
+		font-family: var(--font-sans);
+		-webkit-text-size-adjust: 100%;
+	}
+	body {
+		min-height: 100dvh;
+		background-color: var(--color-bg);
+		color: var(--color-ink);
+	}
+	h1, h2, h3, h4 {
+		font-family: var(--font-display);
+		letter-spacing: 0.01em;
+	}
+	::selection {
+		background: color-mix(in oklab, var(--color-primary) 35%, transparent);
+	}
+	/* Schlanke Scrollbars */
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: var(--color-border) transparent;
+	}
+}
+
+@layer components {
+	.card {
+		@apply rounded-2xl border border-border bg-surface shadow-sm;
+	}
+	.card-pad {
+		@apply p-4 sm:p-5;
+	}
+	.panel-title {
+		@apply font-display text-sm font-semibold uppercase tracking-wider text-muted;
+	}
+	.btn {
+		@apply inline-flex select-none items-center justify-center gap-2 rounded-xl border border-border
+			bg-surface2 px-3 py-2 text-sm font-medium text-ink transition active:scale-[0.97]
+			hover:border-primary/40 disabled:pointer-events-none disabled:opacity-50;
+	}
+	.btn-primary {
+		@apply border-transparent bg-primary text-primary-fg hover:opacity-90 hover:border-transparent;
+	}
+	.btn-danger {
+		@apply border-transparent bg-danger text-white hover:opacity-90 hover:border-transparent;
+	}
+	.btn-ghost {
+		@apply border-transparent bg-transparent hover:bg-surface2;
+	}
+	.btn-icon {
+		@apply h-10 w-10 rounded-xl p-0;
+	}
+	.input {
+		@apply w-full rounded-xl border border-border bg-surface2 px-3 py-2 text-sm text-ink
+			outline-none transition placeholder:text-muted focus:border-primary/60
+			focus:ring-2 focus:ring-primary/20;
+	}
+	.chip {
+		@apply inline-flex items-center gap-1 rounded-full border border-border bg-surface2
+			px-2.5 py-1 text-xs font-medium text-muted transition;
+	}
+	.chip-active {
+		@apply border-primary/50 bg-primary/15 text-ink;
+	}
+	.stat-tile {
+		@apply flex flex-col items-center justify-center rounded-xl border border-border bg-surface2 p-3 text-center;
+	}
+}
+
+/* Große Zahlen ohne Spinner für Touch-Inputs */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+input[type='number'] {
+	-moz-appearance: textfield;
+	appearance: textfield;
+}

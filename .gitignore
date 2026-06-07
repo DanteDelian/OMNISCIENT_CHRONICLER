@@ -1,16 +1,27 @@
-# Python Virtual Environment
+# ----- Secrets -----
+.env
+*.local
+
+# ----- Node / SvelteKit (app/) -----
+node_modules/
+app/.svelte-kit/
+app/build/
+app/.vite/
+app/dist/
+.DS_Store
+
+# ----- Python KI-Sidecar (ai-sidecar/) -----
 venv/
+.venv/
 __pycache__/
 *.pyc
 
-# Local secrets
-.env
+# ----- Lokale Daten (nicht syncen) -----
+# SQLite-DB und hochgeladene Audio-Dateien bleiben lokal
+data/
+!data/.gitkeep
 
-# Large raw audio files (do not sync to Github)
-00_Ingest_Buffer/raw_audio/*
-!00_Ingest_Buffer/raw_audio/.gitkeep
-
-# Quartz cache and dependencies
-quartz/node_modules/
-quartz/.quartz-cache/
-quartz/public/
+# ----- Obsidian (nur Workspace-Layout ignorieren, Config behalten) -----
+vault/.obsidian/workspace.json
+vault/.obsidian/workspace-mobile.json
+vault/.obsidian/cache/
