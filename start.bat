@@ -1,7 +1,7 @@
 @echo off
-title Omniscient Chronicler v3
+title Omniscient Chronicler v4
 echo ============================================================
-echo   OMNISCIENT CHRONICLER v3 - lokal-first D^&D Dashboard
+echo   OMNISCIENT CHRONICLER v4 - lokal-first D^&D Dashboard
 echo ============================================================
 echo.
 
@@ -17,13 +17,9 @@ if not exist build (
 	call npm run build
 )
 
-if exist "%~dp0ai-sidecar\venv" (
-	echo [KI] Starte KI-Sidecar in separatem Fenster...
-	start "Chronicler KI-Sidecar" cmd /c "cd /d %~dp0ai-sidecar && venv\Scripts\python server.py"
-)
-
 echo.
 echo Starte Server... im WLAN erreichbar unter http://DEINE-IP:3000
+echo ^(genaue Adresse: Dashboard -^> Einstellungen -^> WLAN-Zugriff^)
 echo Beenden mit Strg+C.
 echo.
 

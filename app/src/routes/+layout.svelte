@@ -9,13 +9,18 @@
 	import '@fontsource/cinzel/700.css';
 	import { onMount } from 'svelte';
 	import { ModeWatcher } from 'mode-watcher';
+	import { fade } from 'svelte/transition';
 	import { page } from '$app/state';
 	import { navItems } from '$lib/nav';
 	import { character } from '$lib/stores/character.svelte';
+	import { live } from '$lib/stores/live.svelte';
+	import { ui } from '$lib/stores/ui.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 	import QuickCapture from '$lib/components/QuickCapture.svelte';
 	import Toaster from '$lib/components/Toaster.svelte';
+	import CommandPalette from '$lib/components/CommandPalette.svelte';
 	import Feather from '@lucide/svelte/icons/feather';
+	import Search from '@lucide/svelte/icons/search';
 
 	let { children } = $props();
 
@@ -27,6 +32,16 @@
 			} catch (e) {
 				console.error('Charakter laden fehlgeschlagen', e);
 			}
+		}
+		live.start();
+	});
+
+	// Bei externer Datei-Änderung (z.B. Claude Code editiert campaign/character.json) live nachladen.
+	let lastRev = 0;
+	$effect(() => {
+		if (live.rev !== lastRev) {
+			lastRev = live.rev;
+			character.refresh();
 		}
 	});
 
@@ -40,7 +55,13 @@
 
 <ModeWatcher defaultMode="dark" />
 
-<div class="flex min-h-dvh flex-col md:flex-row">
+<div class="aurora" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="embers" aria-hidden="true">
+	{#each Array(12) as _, i (i)}<span class="ember"></span>{/each}
+</div>
+
+<div class="relative z-10 flex min-h-dvh flex-col md:flex-row">
 	<!-- Desktop-/Tablet-Sidebar -->
 	<aside
 		class="sticky top-0 z-30 hidden h-dvh w-60 shrink-0 flex-col border-r border-border bg-surface/70 px-3 py-4 backdrop-blur md:flex lg:w-64"
@@ -53,6 +74,15 @@
 				Omniscient<br /><span class="text-muted">Chronicler</span>
 			</span>
 		</a>
+
+		<button
+			class="mb-3 flex items-center gap-2 rounded-xl border border-border bg-surface2/60 px-3 py-2 text-sm text-muted transition hover:border-primary/40 hover:text-ink"
+			onclick={() => (ui.paletteOpen = true)}
+		>
+			<Search class="h-4 w-4" />
+			<span class="flex-1 text-left">Suchen…</span>
+			<kbd class="rounded bg-surface px-1.5 py-0.5 text-[10px]">⌘K</kbd>
+		</button>
 
 		<nav class="flex flex-1 flex-col gap-1">
 			{#each navItems as item (item.href)}
@@ -86,12 +116,25 @@
 			</span>
 			<span class="font-display text-base font-bold">Chronicler</span>
 		</a>
-		<ThemeToggle />
+		<div class="flex items-center gap-1">
+			<button
+				class="btn btn-icon btn-ghost"
+				onclick={() => (ui.paletteOpen = true)}
+				aria-label="Suchen"
+			>
+				<Search class="h-5 w-5" />
+			</button>
+			<ThemeToggle />
+		</div>
 	</header>
 
 	<!-- Hauptinhalt -->
 	<main class="mx-auto w-full max-w-6xl flex-1 px-4 py-5 pb-24 sm:px-6 md:pb-8">
-		{@render children()}
+		{#key page.url.pathname}
+			<div in:fade={{ duration: 160 }}>
+				{@render children()}
+			</div>
+		{/key}
 	</main>
 
 	<!-- Mobile-Bottom-Nav -->
@@ -115,3 +158,4 @@
 
 <QuickCapture />
 <Toaster />
+<CommandPalette />

@@ -1,12 +1,19 @@
 <script lang="ts">
 	import { character } from '$lib/stores/character.svelte';
+	import AnimatedNumber from '$lib/components/AnimatedNumber.svelte';
 	import Heart from '@lucide/svelte/icons/heart';
 	import Shield from '@lucide/svelte/icons/shield-plus';
 	import Minus from '@lucide/svelte/icons/minus';
 	import Plus from '@lucide/svelte/icons/plus';
 
 	let amount = $state(1);
+	let flash = $state('');
 	const c = $derived(character.current);
+
+	function doFlash(kind: 'dmg' | 'heal') {
+		flash = kind === 'dmg' ? 'flash-bad' : 'flash-good';
+		setTimeout(() => (flash = ''), 700);
+	}
 
 	function applyDamage(n: number) {
 		if (!c || n <= 0) return;
@@ -19,12 +26,14 @@
 		}
 		const cur = Math.max(0, c.hp.current - rest);
 		character.patch({ hp: { current: cur, temp } });
+		doFlash('dmg');
 	}
 
 	function heal(n: number) {
 		if (!c || n <= 0) return;
 		const cur = Math.min(c.hp.max, c.hp.current + n);
 		character.patch({ hp: { current: cur } });
+		doFlash('heal');
 	}
 
 	function setTemp(v: number) {
@@ -42,6 +51,7 @@
 	const barColor = $derived(
 		ratio > 0.5 ? 'var(--color-success)' : ratio > 0.25 ? 'var(--color-accent)' : 'var(--color-danger)'
 	);
+	const low = $derived(!!c && c.hp.current > 0 && ratio <= 0.25);
 </script>
 
 {#if c}
@@ -54,8 +64,11 @@
 		</div>
 
 		<!-- Große HP-Anzeige -->
-		<div class="flex items-baseline justify-center gap-1 font-display">
-			<span class="text-6xl font-bold tabular-nums">{c.hp.current}</span>
+		<div class="flex items-baseline justify-center gap-1 rounded-2xl py-1 font-display {flash}">
+			<AnimatedNumber
+				value={c.hp.current}
+				class="text-6xl font-bold tabular-nums {low ? 'lowhp text-danger' : ''}"
+			/>
 			<span class="text-2xl text-muted">/</span>
 			<input
 				class="w-16 bg-transparent text-2xl text-muted tabular-nums outline-none"

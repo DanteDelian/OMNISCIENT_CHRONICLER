@@ -37,16 +37,16 @@
 }
 
 .dark {
-	--c-bg: #0b0a10;
-	--c-surface: #15131d;
-	--c-surface2: #1d1a28;
-	--c-border: #2a2640;
-	--c-ink: #f4f2fa;
-	--c-muted: #a39fb8;
-	--c-primary: #a78bfa;
-	--c-primary-fg: #14101f;
-	--c-accent: #fbbf24;
-	--c-danger: #f87171;
+	--c-bg: #0a0813;
+	--c-surface: #14111f;
+	--c-surface2: #1e1830;
+	--c-border: #2f2747;
+	--c-ink: #f3f0fa;
+	--c-muted: #a89ec6;
+	--c-primary: #b794ff;
+	--c-primary-fg: #140f22;
+	--c-accent: #f5c451;
+	--c-danger: #fb7185;
 	--c-success: #4ade80;
 }
 
@@ -129,4 +129,219 @@ input[type='number']::-webkit-inner-spin-button {
 input[type='number'] {
 	-moz-appearance: textfield;
 	appearance: textfield;
+}
+
+/* ---------- Animationen & Effekte ---------- */
+@layer components {
+	.card {
+		transition:
+			transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+			box-shadow 0.25s ease,
+			border-color 0.25s ease;
+	}
+	.card-hover:hover {
+		transform: translateY(-3px);
+		border-color: color-mix(in oklab, var(--color-primary) 45%, var(--color-border));
+		box-shadow: 0 14px 36px -14px color-mix(in oklab, var(--color-primary) 40%, transparent);
+	}
+	.grad-text {
+		background: linear-gradient(100deg, var(--color-primary), var(--color-accent));
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+	}
+}
+
+/* Aurora-Hintergrund (liegt hinter dem Inhalt) */
+.aurora {
+	position: fixed;
+	inset: 0;
+	z-index: 0;
+	overflow: hidden;
+	pointer-events: none;
+}
+.aurora::before,
+.aurora::after {
+	content: '';
+	position: absolute;
+	width: 55vmax;
+	height: 55vmax;
+	border-radius: 50%;
+	filter: blur(95px);
+	opacity: 0.18;
+	will-change: transform;
+}
+.aurora::before {
+	background: var(--color-primary);
+	top: -18vmax;
+	left: -12vmax;
+	animation: aurora-a 24s ease-in-out infinite;
+}
+.aurora::after {
+	background: var(--color-accent);
+	bottom: -20vmax;
+	right: -12vmax;
+	animation: aurora-b 30s ease-in-out infinite;
+}
+@keyframes aurora-a {
+	0%, 100% { transform: translate(0, 0) scale(1); }
+	50% { transform: translate(12vmax, 9vmax) scale(1.18); }
+}
+@keyframes aurora-b {
+	0%, 100% { transform: translate(0, 0) scale(1); }
+	50% { transform: translate(-11vmax, -7vmax) scale(1.12); }
+}
+
+@keyframes pop {
+	0% { transform: scale(0.6); opacity: 0; }
+	60% { transform: scale(1.12); }
+	100% { transform: scale(1); opacity: 1; }
+}
+.animate-pop { animation: pop 0.35s cubic-bezier(0.2, 0.9, 0.3, 1.4); }
+
+@keyframes flash-good {
+	from { background-color: color-mix(in oklab, var(--color-success) 40%, transparent); }
+	to { background-color: transparent; }
+}
+@keyframes flash-bad {
+	from { background-color: color-mix(in oklab, var(--color-danger) 40%, transparent); }
+	to { background-color: transparent; }
+}
+.flash-good { animation: flash-good 0.7s ease-out; }
+.flash-bad { animation: flash-bad 0.7s ease-out; }
+
+@keyframes lowhp {
+	0%, 100% { opacity: 1; }
+	50% { opacity: 0.5; }
+}
+.lowhp { animation: lowhp 1.3s ease-in-out infinite; }
+
+.drag-handle { cursor: grab; touch-action: none; }
+.dragging { opacity: 0.5; }
+
+@media (prefers-reduced-motion: reduce) {
+	.aurora::before,
+	.aurora::after,
+	.lowhp,
+	.animate-pop,
+	.ember {
+		animation: none !important;
+	}
+}
+
+/* ---------- Dark-Fantasy (Baldur's-Gate-Stil) ---------- */
+/* Vignette für Tiefe */
+.vignette {
+	position: fixed;
+	inset: 0;
+	z-index: 0;
+	pointer-events: none;
+	background: radial-gradient(125% 105% at 50% -5%, transparent 52%, rgba(0, 0, 0, 0.5) 100%);
+}
+:root:not(.dark) .vignette {
+	background: radial-gradient(125% 105% at 50% -5%, transparent 60%, rgba(0, 0, 0, 0.12) 100%);
+}
+
+/* Karten: feiner Lichtschein oben + goldener Innenrand im Dark-Mode */
+.dark .card {
+	background-image: linear-gradient(
+		180deg,
+		color-mix(in oklab, var(--color-primary) 8%, transparent),
+		transparent 42%
+	);
+	box-shadow:
+		0 1px 0 0 color-mix(in oklab, var(--color-accent) 16%, transparent) inset,
+		0 12px 34px -20px rgba(0, 0, 0, 0.85);
+}
+.dark .card-hover:hover {
+	box-shadow:
+		0 1px 0 0 color-mix(in oklab, var(--color-accent) 30%, transparent) inset,
+		0 18px 42px -16px color-mix(in oklab, var(--color-primary) 45%, transparent);
+}
+.panel-title {
+	color: color-mix(in oklab, var(--color-accent) 72%, var(--color-muted));
+}
+
+/* Ember-Partikel (sanft aufsteigende Glut) */
+.embers {
+	position: fixed;
+	inset: 0;
+	z-index: 0;
+	overflow: hidden;
+	pointer-events: none;
+}
+:root:not(.dark) .embers {
+	display: none;
+}
+.ember {
+	position: absolute;
+	bottom: -12px;
+	width: 3px;
+	height: 3px;
+	border-radius: 50%;
+	background: radial-gradient(circle, var(--color-accent) 0%, transparent 70%);
+	opacity: 0;
+	animation: ember-rise linear infinite;
+	will-change: transform, opacity;
+}
+@keyframes ember-rise {
+	0% { transform: translateY(0) scale(0.5); opacity: 0; }
+	12% { opacity: 0.7; }
+	88% { opacity: 0.45; }
+	100% { transform: translateY(-104vh) scale(1.1); opacity: 0; }
+}
+.ember:nth-child(1) { left: 5%; animation-duration: 16s; animation-delay: 0s; }
+.ember:nth-child(2) { left: 13%; animation-duration: 21s; animation-delay: 4s; }
+.ember:nth-child(3) { left: 22%; animation-duration: 18s; animation-delay: 1.5s; }
+.ember:nth-child(4) { left: 31%; animation-duration: 24s; animation-delay: 6s; background: radial-gradient(circle, var(--color-primary) 0%, transparent 70%); }
+.ember:nth-child(5) { left: 40%; animation-duration: 19s; animation-delay: 2.5s; }
+.ember:nth-child(6) { left: 48%; animation-duration: 23s; animation-delay: 8s; }
+.ember:nth-child(7) { left: 57%; animation-duration: 17s; animation-delay: 0.8s; background: radial-gradient(circle, var(--color-primary) 0%, transparent 70%); }
+.ember:nth-child(8) { left: 65%; animation-duration: 26s; animation-delay: 5s; }
+.ember:nth-child(9) { left: 73%; animation-duration: 20s; animation-delay: 3.2s; }
+.ember:nth-child(10) { left: 81%; animation-duration: 22s; animation-delay: 7s; }
+.ember:nth-child(11) { left: 89%; animation-duration: 18s; animation-delay: 1s; background: radial-gradient(circle, var(--color-primary) 0%, transparent 70%); }
+.ember:nth-child(12) { left: 95%; animation-duration: 25s; animation-delay: 9s; }
+
+/* Seltenheits-Glow für Item-Karten */
+.rarity-glow {
+	box-shadow: 0 0 0 1px color-mix(in oklab, var(--rarity, var(--color-border)) 60%, transparent),
+		0 8px 26px -16px var(--rarity, transparent);
+}
+
+/* Krit-Funken beim Würfeln */
+.crit-particle {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 6px;
+	width: 6px;
+	border-radius: 9999px;
+	background: var(--color-accent);
+	animation: crit-burst 0.7s cubic-bezier(0.2, 0.7, 0.3, 1) forwards;
+}
+@keyframes crit-burst {
+	0% {
+		transform: translate(-50%, -50%) rotate(var(--a)) translateY(0) scale(1.1);
+		opacity: 1;
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(var(--a)) translateY(calc(-1 * var(--d))) scale(0);
+		opacity: 0;
+	}
+}
+@keyframes shake {
+	0%, 100% { transform: translateX(0); }
+	20% { transform: translateX(-5px); }
+	60% { transform: translateX(5px); }
+	80% { transform: translateX(-3px); }
+}
+.animate-shake {
+	animation: shake 0.32s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+	.crit-particle,
+	.animate-shake {
+		animation: none !important;
+	}
 }

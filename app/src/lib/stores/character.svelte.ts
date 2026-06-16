@@ -24,6 +24,16 @@ class CharacterStore {
 		this.current = c;
 	}
 
+	/** Lädt den Charakter neu vom Server (z.B. nach externer Datei-Änderung durch Claude). */
+	async refresh() {
+		try {
+			const res = await fetch('/api/character');
+			if (res.ok) this.current = (await res.json()) as Character;
+		} catch {
+			/* offline */
+		}
+	}
+
 	/** Optimistisches Update + Persistenz via API. */
 	async patch(p: CharacterPatch, source: EventSource = 'manual') {
 		if (!this.current) return;

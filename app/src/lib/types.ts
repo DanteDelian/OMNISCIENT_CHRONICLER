@@ -20,6 +20,45 @@ export interface SpellSlot {
 	used: number;
 }
 
+/** Übungsgrad: 0 = keine, 1 = geübt, 2 = Expertise. */
+export type ProfLevel = 0 | 1 | 2;
+
+export interface SkillDef {
+	key: string;
+	label: string;
+	ability: AbilityKey;
+}
+
+/** Die 18 D&D-5e-Fertigkeiten (deutsche Bezeichnungen). */
+export const SKILLS: SkillDef[] = [
+	{ key: 'acrobatics', label: 'Akrobatik', ability: 'dex' },
+	{ key: 'animal', label: 'Mit Tieren umgehen', ability: 'wis' },
+	{ key: 'arcana', label: 'Arkane Kunde', ability: 'int' },
+	{ key: 'athletics', label: 'Athletik', ability: 'str' },
+	{ key: 'deception', label: 'Täuschen', ability: 'cha' },
+	{ key: 'history', label: 'Geschichte', ability: 'int' },
+	{ key: 'insight', label: 'Motiv erkennen', ability: 'wis' },
+	{ key: 'intimidation', label: 'Einschüchtern', ability: 'cha' },
+	{ key: 'investigation', label: 'Nachforschungen', ability: 'int' },
+	{ key: 'medicine', label: 'Heilkunde', ability: 'wis' },
+	{ key: 'nature', label: 'Naturkunde', ability: 'int' },
+	{ key: 'perception', label: 'Wahrnehmung', ability: 'wis' },
+	{ key: 'performance', label: 'Auftreten', ability: 'cha' },
+	{ key: 'persuasion', label: 'Überzeugen', ability: 'cha' },
+	{ key: 'religion', label: 'Religion', ability: 'int' },
+	{ key: 'sleight', label: 'Fingerfertigkeit', ability: 'dex' },
+	{ key: 'stealth', label: 'Heimlichkeit', ability: 'dex' },
+	{ key: 'survival', label: 'Überlebenskunst', ability: 'wis' }
+];
+
+export interface Attack {
+	id: string;
+	name: string;
+	bonus: number; // Angriffsbonus (d20 + bonus)
+	damage: string; // Würfelausdruck, z.B. "1d8+2"
+	damageType: string;
+}
+
 export type TrackerType = 'counter' | 'bar' | 'toggle' | 'resource';
 
 export interface CustomTracker {
@@ -38,8 +77,12 @@ export interface Character {
 	className: string;
 	race: string;
 	level: number;
+	xp: number;
 	background: string;
 	alignment: string;
+	pronouns: string;
+	portrait: string; // Bildpfad (campaign/assets/…) oder Emoji
+	appearance: string; // Beschreibung des Aussehens
 	proficiencyBonus: number;
 	abilities: Record<AbilityKey, number>;
 	hp: { current: number; max: number; temp: number };
@@ -53,6 +96,9 @@ export interface Character {
 	deathSaves: { successes: number; failures: number };
 	spellSlots: SpellSlot[];
 	customTrackers: CustomTracker[];
+	saveProficiencies: AbilityKey[];
+	skills: Record<string, ProfLevel>;
+	attacks: Attack[];
 	currency: { gp: number; sp: number; cp: number };
 	notes: string;
 	createdAt: number;
@@ -88,7 +134,27 @@ export interface CharacterSnapshot {
 	state: Character;
 }
 
-export type ItemCategory = 'gear' | 'magic' | 'treasure';
+export type ItemCategory = 'weapon' | 'armor' | 'gear' | 'consumable' | 'magic' | 'treasure';
+
+export const ITEM_CATEGORY_LABELS: Record<ItemCategory, string> = {
+	weapon: 'Waffe',
+	armor: 'Rüstung',
+	gear: 'Ausrüstung',
+	consumable: 'Verbrauch',
+	magic: 'Magisch',
+	treasure: 'Schatz'
+};
+
+export type Rarity = 'common' | 'uncommon' | 'rare' | 'veryrare' | 'legendary' | 'artifact';
+
+export const RARITY: Record<Rarity, { label: string; color: string }> = {
+	common: { label: 'Gewöhnlich', color: '#9ca3af' },
+	uncommon: { label: 'Ungewöhnlich', color: '#4ade80' },
+	rare: { label: 'Selten', color: '#60a5fa' },
+	veryrare: { label: 'Sehr selten', color: '#a78bfa' },
+	legendary: { label: 'Legendär', color: '#fbbf24' },
+	artifact: { label: 'Artefakt', color: '#f87171' }
+};
 
 export interface InventoryItem {
 	id: string;
@@ -97,7 +163,10 @@ export interface InventoryItem {
 	quantity: number;
 	weight: number;
 	category: ItemCategory;
+	rarity: Rarity;
+	description: string;
 	equipped: boolean;
+	attuned: boolean;
 	notes: string;
 	updatedAt: number;
 }
@@ -121,6 +190,44 @@ export interface Quest {
 	reward: string;
 	notes: string;
 	sortOrder: number;
+	updatedAt: number;
+}
+
+/** Sitzungs-Vorbereitung nach der Lazy-DM-Methode. */
+export interface ChecklistItem {
+	id: string;
+	text: string;
+	done: boolean;
+}
+
+export interface SecretItem {
+	id: string;
+	text: string;
+	revealed: boolean;
+}
+
+export type PlanStatus = 'planning' | 'ready' | 'played';
+
+export const PLAN_STATUS_LABELS: Record<PlanStatus, string> = {
+	planning: 'In Planung',
+	ready: 'Bereit',
+	played: 'Gespielt'
+};
+
+export interface SessionPlan {
+	id: string;
+	characterId: string;
+	title: string;
+	sessionDate: string;
+	status: PlanStatus;
+	strongStart: string;
+	scenes: ChecklistItem[];
+	secrets: SecretItem[];
+	npcs: string;
+	locations: string;
+	treasure: string;
+	notes: string;
+	checklist: ChecklistItem[];
 	updatedAt: number;
 }
 

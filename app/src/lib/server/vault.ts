@@ -2,27 +2,26 @@ import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
 import type { Note } from '$lib/types';
-import { VAULT_DIR } from './paths';
+import { LORE_DIR, CAMPAIGN_DIR, ensureDirs, notifyChange } from './campaign';
 
-const IGNORE_DIRS = new Set(['.obsidian', '.git', 'node_modules', '.trash']);
+const IGNORE_DIRS = new Set(['.git', 'node_modules', '.trash', '.history']);
 
-function ensureVault() {
-	fs.mkdirSync(VAULT_DIR, { recursive: true });
-	fs.mkdirSync(path.join(VAULT_DIR, 'Notizen'), { recursive: true });
-}
-
-/** Wandelt einen relativen Pfad in einen sicheren absoluten Pfad im Vault. */
+/** Wandelt einen relativen Pfad (rel zu lore/) in einen sicheren absoluten Pfad. */
 function safeAbs(relPath: string): string {
 	const clean = relPath.replace(/\\/g, '/').replace(/^\/+/, '');
-	const abs = path.resolve(VAULT_DIR, clean);
-	if (abs !== VAULT_DIR && !abs.startsWith(VAULT_DIR + path.sep)) {
-		throw new Error('Pfad außerhalb des Vaults');
+	const abs = path.resolve(LORE_DIR, clean);
+	if (abs !== LORE_DIR && !abs.startsWith(LORE_DIR + path.sep)) {
+		throw new Error('Pfad außerhalb des Lore-Verzeichnisses');
 	}
 	return abs;
 }
 
 function relOf(abs: string): string {
-	return path.relative(VAULT_DIR, abs).split(path.sep).join('/');
+	return path.relative(LORE_DIR, abs).split(path.sep).join('/');
+}
+
+function notify(abs: string) {
+	notifyChange(path.relative(CAMPAIGN_DIR, abs).split(path.sep).join('/'));
 }
 
 function extractLinks(body: string): string[] {
@@ -72,6 +71,7 @@ function parseNote(abs: string): Note {
 }
 
 function walk(dir: string, acc: string[]) {
+	if (!fs.existsSync(dir)) return;
 	for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
 		if (entry.isDirectory()) {
 			if (IGNORE_DIRS.has(entry.name)) continue;
@@ -82,14 +82,12 @@ function walk(dir: string, acc: string[]) {
 	}
 }
 
-/** Alle Notizen im Vault (ohne Body-Volltext zu wiederholen — Body ist enthalten). */
+/** Alle Lore-Markdown-Notizen (npcs/places/notes). */
 export function listNotes(): Note[] {
-	ensureVault();
+	ensureDirs();
 	const files: string[] = [];
-	walk(VAULT_DIR, files);
-	return files
-		.map(parseNote)
-		.sort((a, b) => b.updatedAt - a.updatedAt);
+	walk(LORE_DIR, files);
+	return files.map(parseNote).sort((a, b) => b.updatedAt - a.updatedAt);
 }
 
 export function readNote(relPath: string): Note | null {
@@ -110,6 +108,7 @@ export function writeNote(
 			? matter.stringify(body, frontmatter)
 			: body;
 	fs.writeFileSync(abs, content, 'utf-8');
+	notify(abs);
 	return parseNote(abs);
 }
 
@@ -124,19 +123,21 @@ function slugify(title: string): string {
 	);
 }
 
-export function createNote(title: string, folder = 'Notizen'): Note {
-	ensureVault();
+export function createNote(title: string, folder = 'notes'): Note {
+	ensureDirs();
 	const base = slugify(title);
 	let rel = `${folder}/${base}.md`;
 	let i = 2;
 	while (fs.existsSync(safeAbs(rel))) {
 		rel = `${folder}/${base}-${i++}.md`;
 	}
-	const body = `# ${title}\n\n`;
-	return writeNote(rel, body, { created: new Date().toISOString() });
+	return writeNote(rel, `# ${title}\n\n`, { created: new Date().toISOString() });
 }
 
 export function deleteNote(relPath: string): void {
 	const abs = safeAbs(relPath);
-	if (fs.existsSync(abs)) fs.rmSync(abs);
+	if (fs.existsSync(abs)) {
+		fs.rmSync(abs);
+		notify(abs);
+	}
 }

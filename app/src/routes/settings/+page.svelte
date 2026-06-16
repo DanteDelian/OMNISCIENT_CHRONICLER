@@ -64,26 +64,25 @@
 		</div>
 	</Card>
 
-	<Card title="KI-Import (Phase 2)">
+	<Card title="Mit Claude Code bearbeiten">
 		<div class="flex items-start gap-3 text-sm">
 			<Sparkles class="mt-0.5 h-4 w-4 text-primary" />
 			<p class="text-muted">
-				Audio-/Text-Import mit austauschbarem Modell (Gemini oder lokal via Ollama) und
-				Diff-Vorschau folgt im KI-Sidecar.
+				Alle Kampagnendaten liegen als Dateien in <code>campaign/</code>. Zuhause am PC kannst du sie
+				gemeinsam mit Claude Code direkt bearbeiten — das Dashboard aktualisiert sich live.
 			</p>
 		</div>
 	</Card>
 
-	<Card title="Speicherorte" class="md:col-span-2">
-		<dl class="grid gap-2 text-sm sm:grid-cols-2">
+	<Card title="Speicherort" class="md:col-span-2">
+		<dl class="grid gap-2 text-sm">
 			<div>
-				<dt class="text-muted">Vault (Markdown)</dt>
-				<dd><code class="break-all">{data.vaultDir}</code></dd>
-			</div>
-			<div>
-				<dt class="text-muted">Daten (SQLite)</dt>
-				<dd><code class="break-all">{data.dataDir}</code></dd>
+				<dt class="text-muted">Kampagnendaten (Dateien + Git)</dt>
+				<dd><code class="break-all">{data.campaignDir}</code></dd>
 			</div>
 		</dl>
+		<p class="mt-2 text-xs text-muted">
+			Versionierung & Sync zwischen Geräten über Git (<code>git pull</code> / <code>git push</code>).
+		</p>
 	</Card>
 </div>

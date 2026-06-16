@@ -17,11 +17,21 @@
 	let history = $state<Roll[]>([]);
 	let _id = 0;
 
+	// Anzeige / Animation
+	let display = $state<number | null>(null);
+	let rolling = $state(false);
+	let lastCrit = $state<Roll['crit'] | undefined>(undefined);
+	let lastLabel = $state('');
+	let popKey = $state(0);
+	let burstKey = $state(0);
+	let shaking = $state(false);
+
 	function rollDie(sides: number): number {
 		return 1 + Math.floor(Math.random() * sides);
 	}
 
 	function roll(sides: number) {
+		if (rolling) return;
 		let rolls: number[];
 		let label = `${count}d${sides}`;
 		if (sides === 20 && mode !== 'normal') {
@@ -40,17 +50,78 @@
 			if (rolls[0] === 20) crit = 'hit';
 			else if (rolls[0] === 1) crit = 'miss';
 		}
-		const entry: Roll = { id: ++_id, label: `${label}${modifier ? (modifier > 0 ? `+${modifier}` : modifier) : ''}`, rolls, total, crit };
-		history = [entry, ...history].slice(0, 8);
-		toasts.push(
-			`🎲 ${total}`,
-			`${entry.label} → [${rolls.join(', ')}]`,
-			crit === 'hit' ? 'good' : crit === 'miss' ? 'bad' : 'default'
-		);
+		const modStr = modifier ? (modifier > 0 ? `+${modifier}` : `${modifier}`) : '';
+		const entry: Roll = { id: ++_id, label: `${label}${modStr}`, rolls, total, crit };
+
+		// Würfel-Animation: Zahlen rattern, dann Ergebnis poppen
+		rolling = true;
+		lastCrit = undefined;
+		const maxFace = sides * Math.max(1, count);
+		let ticks = 0;
+		const iv = setInterval(() => {
+			display = rollDie(maxFace) + modifier;
+			if (++ticks >= 9) {
+				clearInterval(iv);
+				display = total;
+				lastCrit = crit;
+				lastLabel = entry.label;
+				rolling = false;
+				popKey++;
+				if (crit === 'hit') burstKey++;
+				if (crit === 'miss') {
+					shaking = true;
+					setTimeout(() => (shaking = false), 360);
+				}
+				history = [entry, ...history].slice(0, 8);
+				toasts.push(
+					`🎲 ${total}`,
+					`${entry.label} → [${rolls.join(', ')}]`,
+					crit === 'hit' ? 'good' : crit === 'miss' ? 'bad' : 'default'
+				);
+			}
+		}, 45);
 	}
 </script>
 
 <div class="flex flex-col gap-3">
+	<!-- Ergebnis-Anzeige -->
+	<div
+		class="relative grid place-items-center overflow-hidden rounded-2xl border border-border bg-surface2/60 py-4
+			{lastCrit === 'hit' ? 'border-success/50' : lastCrit === 'miss' ? 'border-danger/50' : ''}"
+		class:animate-shake={shaking}
+	>
+		{#if lastCrit === 'hit'}
+			{#key burstKey}
+				<div class="pointer-events-none absolute inset-0">
+					{#each Array(18) as _, i (i)}
+						<span
+							class="crit-particle"
+							style="--a:{i * 20}deg; --d:{42 + (i % 3) * 16}px; background:{i % 2
+								? 'var(--color-accent)'
+								: 'var(--color-primary)'}; animation-delay:{(i % 4) * 18}ms"
+						></span>
+					{/each}
+				</div>
+			{/key}
+		{/if}
+		{#if display === null}
+			<span class="flex items-center gap-2 text-sm text-muted"><Dices class="h-4 w-4" /> Würfel wählen</span>
+		{:else}
+			{#key popKey}
+				<span
+					class="font-display text-5xl font-bold tabular-nums {rolling
+						? 'opacity-60 blur-[1px]'
+						: 'animate-pop'} {lastCrit === 'hit' ? 'text-success' : lastCrit === 'miss' ? 'text-danger' : ''}"
+				>
+					{display}
+				</span>
+			{/key}
+			{#if !rolling && lastLabel}
+				<span class="mt-0.5 text-xs text-muted">{lastLabel}</span>
+			{/if}
+		{/if}
+	</div>
+
 	<!-- d20-Modus -->
 	<div class="flex gap-1.5">
 		{#each [['normal', 'Normal'], ['adv', 'Vorteil'], ['dis', 'Nachteil']] as [val, lbl] (val)}
@@ -66,16 +137,20 @@
 	<!-- Würfel -->
 	<div class="grid grid-cols-4 gap-2">
 		{#each DICE as d (d)}
-			<button class="btn flex-col gap-0.5 py-3 font-display font-bold" onclick={() => roll(d)}>
+			<button
+				class="btn flex-col gap-0.5 py-3 font-display font-bold transition hover:-translate-y-0.5 hover:border-primary/50"
+				onclick={() => roll(d)}
+				disabled={rolling}
+			>
 				<Dices class="h-4 w-4 text-primary" />
 				d{d}
 			</button>
 		{/each}
-		<div class="col-span-1 flex flex-col items-center justify-center rounded-xl border border-border bg-surface2 px-1">
+		<div class="flex flex-col items-center justify-center rounded-xl border border-border bg-surface2 px-1">
 			<span class="text-[10px] text-muted">Anzahl</span>
 			<input class="w-full bg-transparent text-center font-bold outline-none" type="number" min="1" bind:value={count} />
 		</div>
-		<div class="col-span-1 flex flex-col items-center justify-center rounded-xl border border-border bg-surface2 px-1">
+		<div class="flex flex-col items-center justify-center rounded-xl border border-border bg-surface2 px-1">
 			<span class="text-[10px] text-muted">Bonus</span>
 			<input class="w-full bg-transparent text-center font-bold outline-none" type="number" bind:value={modifier} />
 		</div>

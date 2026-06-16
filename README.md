@@ -1,14 +1,23 @@
-# Omniscient Chronicler v3
+# Omniscient Chronicler v4
 
-Ein **lokal-first, installierbares D&D-Dashboard & Omni-Notizbuch** (PWA).
-Läuft auf deinem Laptop, erreichbar von Tablet & Handy im selben WLAN.
+Ein **lokal-first, installierbares D&D-Dashboard** im Dark-Fantasy-Look — ein interaktiver
+Charakterbogen, Kampf-Tracker und Kampagnen-Planer, der sich wie ein eigenes Spiel anfühlt.
+Läuft auf Laptop, Tablet & Handy.
 
-- 🎲 **Live-Charakterbogen** – HP, RK, Attribute, Zustände, Rettungswürfe, Zauberplätze, eigene Tracker. Werte direkt am Spieltisch ändern, alles wird gespeichert (mit Verlauf/Event-Log).
-- 📓 **Omni-Notizbuch** – Markdown-Notizen, Obsidian-kompatibel (Wikilinks), bleiben deine Dateien im `vault/`.
-- 🗺️ **Quests, Chronik, Glossar** – Quest-Board, Session-Chronik, Personen & Orte.
-- 🎲 **Würfelroller** – d4–d100, Vorteil/Nachteil, Verlauf.
-- 🌙 Dark/Light, responsive (Handy/Tablet/Laptop), als App installierbar.
-- 🤖 **KI-Import** (Phase 2) – Session-Audio → automatische Fortschreibung mit **Diff-Vorschau** und austauschbarem Modell (Gemini oder lokal via Ollama/Gemma).
+- 🧝 **Voller Charakterbogen** — Porträt, HP-Ring, Attribute, **Fertigkeiten & Rettungswürfe** (anklickbar würfeln), **Angriffe** mit Wurf-Buttons, Zauberplätze, eigene Tracker, Zustände, Rettungswürfe, Rasten.
+- 🎒 **Inventar** — Item-Karten mit Seltenheits-Farben, Beschreibungen (Markdown), Detail-Modal, Ausrüsten/Einstimmen.
+- ⚔️ **Kampf-Tracker** — Initiative-Reihenfolge, aktiver Zug, Runden, HP & Zustände der Gegner, „Held übernehmen".
+- 📋 **Session-Vorbereitung** (Lazy-DM-Methode) — Starker Auftakt, Szenen, Geheimnisse & Hinweise (aufdeckbar), NSCs, Orte, Schätze, Checkliste.
+- 🎲 **Würfelroller** mit Krit-Funken · ⌘K-**Befehlspalette** mit Volltextsuche · Quest-Board · Chronik · Glossar.
+- 🌌 Dark-Fantasy-Look (BG3-inspiriert): Vignette, Glut-Partikel, glühende Karten, animierte Zahlen.
+- 🔄 **Live-Sync:** Dateien in `campaign/` sind die Datenquelle — ändert Claude Code sie, aktualisiert sich das Dashboard sofort.
+
+## Claude Code ist die KI-Schnittstelle
+
+Statt einer eingebauten KI bearbeitest du die Kampagne **gemeinsam mit Claude Code**: Alle Daten
+liegen als lesbare Dateien in `campaign/` (JSON + Markdown). Zuhause am PC sagst du z. B.
+„Claude, leg einen NSC namens Saladin an" oder „erhöhe Valerius' max. TP auf 16" — Claude editiert
+die Datei, das laufende Dashboard zieht live nach. Git versioniert deine komplette Kampagne.
 
 ## Schnellstart
 
@@ -16,52 +25,39 @@ Läuft auf deinem Laptop, erreichbar von Tablet & Handy im selben WLAN.
 Doppelklick auf start.bat
 ```
 
-Beim ersten Start werden Abhängigkeiten installiert und die App gebaut. Danach:
-
-- Auf dem Laptop öffnen: <http://localhost:3000>
-- Auf Tablet/Handy im selben WLAN: `http://<Laptop-IP>:3000`
-  (die genaue Adresse zeigt die App unter **Einstellungen → WLAN-Zugriff**)
+Beim ersten Start wird installiert, gebaut und `campaign/` mit einem Beispielcharakter angelegt.
+Danach:
+- Laptop: <http://localhost:3000>
+- Tablet/Handy im selben WLAN: `http://<Laptop-IP>:3000` (Adresse unter **Einstellungen → WLAN-Zugriff**)
 
 ### Entwicklung
 
 ```bash
 cd app
 npm install
-npm run dev      # http://localhost:5173, im WLAN per --host
+npm run dev      # http://localhost:5173 (im WLAN per --host)
 ```
-
-## KI-Import (Audio/Text → Chronik)
-
-1. **Sidecar starten:** Doppelklick auf [start-sidecar.bat](start-sidecar.bat) (legt beim ersten Mal automatisch ein Python-venv an).
-2. **Modell wählen** in `.env`:
-   - Lokal & kostenlos: `AI_PROVIDER=ollama` + `OLLAMA_MODEL=gemma4` (Ollama muss laufen).
-   - Cloud: `AI_PROVIDER=gemini` + `GEMINI_API_KEY=...` (auch für Audio-Transkription).
-3. In der App unter **KI-Import**: Text einfügen *oder* Audio hochladen → **Vorschläge erzeugen** → in der **Diff-Vorschau** Häkchen setzen → **Übernehmen**.
-   Vor jeder Übernahme wird automatisch ein **Snapshot** angelegt (Undo-Sicherung), jede Änderung landet im Event-Log. Kein automatischer Git-Push.
-
-> Hinweis: Große lokale Modelle (17 GB+) brauchen pro Antwort u.U. mehrere Minuten. Für schnelle Tests ein kleineres Ollama-Modell pullen oder Gemini nutzen.
 
 ## Struktur
 
 ```
-vault/        Markdown-Notizen (Obsidian-kompatibel) – DEINE Inhalte
-data/         SQLite-DB (Charakterwerte, Verlauf) + Uploads (lokal, nicht im Git)
-app/          SvelteKit-App (Frontend + API)
-ai-sidecar/   Python-KI-Dienst (Phase 2; Referenz der alten Pipeline liegt hier)
-start.bat     startet die App
-.env.example  Konfigurationsvorlage (zu .env kopieren)
+campaign/         DEINE Kampagnendaten (Git-getrackt, Claude-editierbar)
+  character.json  voller Charakterbogen
+  inventory.json  Items (Seltenheit, Beschreibung, …)
+  quests.json · prep.json · meta.json
+  chronicle.md    Session-Logbuch
+  lore/{npcs,places,notes}/*.md
+  README.md       Schema-Doku für Claude
+app/              SvelteKit-App (Frontend + API + Datei-Backend)
+start.bat         startet die App
 ```
 
 ## Technik
 
-SvelteKit 2 / Svelte 5 · Tailwind 4 · SQLite (better-sqlite3) · PWA (vite-pwa) · adapter-node.
-Charakterwerte liegen strukturiert in SQLite (atomare Updates + Verlauf), Notizen als Markdown im Vault.
-Das Datenmodell ist Sync-fähig vorbereitet (UUID v7, `updatedAt`, Soft-Delete, Event-Log) für späteren optionalen Cloud-Sync.
+SvelteKit 2 / Svelte 5 · Tailwind 4 · adapter-node · PWA. **Keine Datenbank, kein Cloud-Zwang,
+keine externe KI** — die App liest/schreibt direkt die Dateien in `campaign/`, ein Datei-Watcher
++ SSE liefern Live-Updates. Sync & Historie über Git (`git pull` / `git push`).
 
 ## Konfiguration (optional)
 
-`.env.example` → `.env` kopieren. Wichtigste Optionen:
-
-- `APP_PIN` – PIN-Schutz, wenn die App im WLAN läuft.
-- `PORT` / `HOST` – Standard 3000 / 0.0.0.0.
-- `VAULT_DIR` / `DATA_DIR` – abweichende Speicherorte.
+`.env.example` → `.env`. Optionen: `APP_PIN` (PIN-Schutz im WLAN), `PORT`/`HOST`, `CAMPAIGN_DIR`.

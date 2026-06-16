@@ -10,18 +10,7 @@ app/.vite/
 app/dist/
 .DS_Store
 
-# ----- Python KI-Sidecar (ai-sidecar/) -----
-venv/
-.venv/
-__pycache__/
-*.pyc
-
-# ----- Lokale Daten (nicht syncen) -----
-# SQLite-DB und hochgeladene Audio-Dateien bleiben lokal
-data/
-!data/.gitkeep
-
-# ----- Obsidian (nur Workspace-Layout ignorieren, Config behalten) -----
-vault/.obsidian/workspace.json
-vault/.obsidian/workspace-mobile.json
-vault/.obsidian/cache/
+# ----- Generierte Kampagnen-Historie -----
+# WICHTIG: campaign/ selbst wird getrackt (das sind deine Daten!),
+# nur die generierte Historie nicht.
+campaign/.history/

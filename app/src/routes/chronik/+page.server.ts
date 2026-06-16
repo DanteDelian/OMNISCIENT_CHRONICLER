@@ -1,6 +1,6 @@
-import { readNote } from '$lib/server/vault';
+import { loadText } from '$lib/server/campaign';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = () => ({
-	note: readNote('01_Chronik/chronik.md')
+	body: loadText('chronicle.md', '')
 });

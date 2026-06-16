@@ -1,5 +1,5 @@
 import os from 'node:os';
-import { VAULT_DIR, DATA_DIR } from '$lib/server/paths';
+import { CAMPAIGN_DIR } from '$lib/server/campaign';
 import { pinEnabled } from '$lib/server/auth';
 import type { PageServerLoad } from './$types';
 
@@ -13,5 +13,5 @@ export const load: PageServerLoad = ({ url }) => {
 		}
 	}
 	const lanUrls = ips.map((ip) => `${url.protocol}//${ip}${port ? ':' + port : ''}`);
-	return { lanUrls, vaultDir: VAULT_DIR, dataDir: DATA_DIR, pinEnabled: pinEnabled() };
+	return { lanUrls, campaignDir: CAMPAIGN_DIR, pinEnabled: pinEnabled() };
 };

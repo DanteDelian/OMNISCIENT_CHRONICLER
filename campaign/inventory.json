@@ -1,0 +1,44 @@
+[
+  {
+    "id": "019ed0e4-1643-7063-882a-405183ff8abb",
+    "characterId": "valerius",
+    "name": "Rapier",
+    "quantity": 1,
+    "weight": 1,
+    "category": "weapon",
+    "rarity": "common",
+    "description": "Eine elegante Stichwaffe. *Finesse-Eigenschaft.*",
+    "equipped": true,
+    "attuned": false,
+    "notes": "",
+    "updatedAt": 1781621069379
+  },
+  {
+    "id": "019ed0e4-1643-7063-882a-45fa4011943f",
+    "characterId": "valerius",
+    "name": "Lederrüstung",
+    "quantity": 1,
+    "weight": 4.5,
+    "category": "armor",
+    "rarity": "common",
+    "description": "Leichte, geschmeidige Rüstung. RK 11 + GE-Modifikator.",
+    "equipped": true,
+    "attuned": false,
+    "notes": "",
+    "updatedAt": 1781621069379
+  },
+  {
+    "id": "019ed0e4-1643-7063-882a-49c22061c65b",
+    "characterId": "valerius",
+    "name": "Chronisten-Tagebuch",
+    "quantity": 1,
+    "weight": 0,
+    "category": "gear",
+    "rarity": "common",
+    "description": "Zum Festhalten der Lore. Der Quell aller Macht des Chronisten.",
+    "equipped": false,
+    "attuned": false,
+    "notes": "",
+    "updatedAt": 1781621069379
+  }
+]
