@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { character } from '$lib/stores/character.svelte';
+	import { toasts } from '$lib/stores/toast.svelte';
 	import type { CustomTracker, TrackerType } from '$lib/types';
 	import Plus from '@lucide/svelte/icons/plus';
 	import Trash2 from '@lucide/svelte/icons/trash-2';
@@ -29,7 +30,15 @@
 
 	function remove(id: string) {
 		if (!c) return;
+		const deleted = c.customTrackers.find((t) => t.id === id);
+		const restore = [...c.customTrackers];
 		save(c.customTrackers.filter((t) => t.id !== id));
+		if (deleted) {
+			toasts.push('Tracker gelöscht', deleted.label, 'default', {
+				label: 'Rückgängig',
+				fn: () => save(restore)
+			});
+		}
 	}
 
 	function add() {

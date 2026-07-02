@@ -1,4 +1,6 @@
 import type { Character, CharacterPatch, EventSource } from '$lib/types';
+import { levelForXp } from '$lib/types';
+import { fx } from './fx.svelte';
 
 /** Lokales Anwenden eines Patches (optimistisches UI), spiegelt die Server-Merge-Logik. */
 function applyPatch(cur: Character, p: CharacterPatch): Character {
@@ -12,25 +14,37 @@ function applyPatch(cur: Character, p: CharacterPatch): Character {
 		currency: { ...cur.currency, ...(pp.currency ?? {}) },
 		conditions: pp.conditions ?? cur.conditions,
 		spellSlots: pp.spellSlots ?? cur.spellSlots,
-		customTrackers: pp.customTrackers ?? cur.customTrackers
+		customTrackers: pp.customTrackers ?? cur.customTrackers,
+		skills: pp.skills ?? cur.skills,
+		saveProficiencies: pp.saveProficiencies ?? cur.saveProficiencies,
+		attacks: pp.attacks ?? cur.attacks,
+		spells: pp.spells ?? cur.spells,
+		features: pp.features ?? cur.features
 	};
 }
 
 class CharacterStore {
 	current = $state<Character | null>(null);
 	saving = $state(false);
+	error = $state(false);
 
 	set(c: Character) {
 		this.current = c;
+		this.error = false;
 	}
 
 	/** Lädt den Charakter neu vom Server (z.B. nach externer Datei-Änderung durch Claude). */
 	async refresh() {
 		try {
 			const res = await fetch('/api/character');
-			if (res.ok) this.current = (await res.json()) as Character;
+			if (res.ok) {
+				this.current = (await res.json()) as Character;
+				this.error = false;
+			} else {
+				this.error = true;
+			}
 		} catch {
-			/* offline */
+			this.error = this.current === null;
 		}
 	}
 
@@ -38,6 +52,11 @@ class CharacterStore {
 	async patch(p: CharacterPatch, source: EventSource = 'manual') {
 		if (!this.current) return;
 		this.current = applyPatch(this.current, p);
+
+		// Level-Up-Erkennung: XP über der Schwelle? → Feier vorschlagen
+		const suggested = levelForXp(this.current.xp);
+		if (suggested > this.current.level) fx.suggestLevelUp(suggested);
+
 		this.saving = true;
 		try {
 			const res = await fetch('/api/character', {

@@ -3,8 +3,8 @@
 	import { ui } from '$lib/stores/ui.svelte';
 	import { navItems } from '$lib/nav';
 	import { character } from '$lib/stores/character.svelte';
-	import { toasts } from '$lib/stores/toast.svelte';
-	import { rollDie } from '$lib/dice';
+	import { rollExpr } from '$lib/dice';
+	import { performCheck, performDamage } from '$lib/rolls';
 	import { fmtMod } from '$lib/types';
 	import Search from '@lucide/svelte/icons/search';
 	import FileText from '@lucide/svelte/icons/file-text';
@@ -78,9 +78,8 @@
 				sub: 'Schnellwurf',
 				icon: Dices,
 				run: () => {
-					const d = rollDie(20);
-					toasts.push(`🎲 d20: ${d}`, '', d === 20 ? 'good' : d === 1 ? 'bad' : 'default');
 					close();
+					performCheck('Schneller Wurf', 0);
 				}
 			},
 			{
@@ -90,15 +89,29 @@
 				icon: Dices,
 				run: () => {
 					const b = character.current?.initiativeBonus ?? 0;
-					const d = rollDie(20);
-					toasts.push(`Initiative: ${d + b}`, `d20 (${d}) ${fmtMod(b)}`, 'default');
 					close();
+					performCheck('Initiative', b);
 				}
 			}
 		];
 		const all = [...base, ...actions];
 		if (!q) return all;
-		return all.filter((c) => c.label.toLowerCase().includes(q));
+		const filteredAll = all.filter((c) => c.label.toLowerCase().includes(q));
+		// Würfelausdruck eingetippt? („2d6+3", „d100") → als erste Aktion anbieten
+		if (rollExpr(q)) {
+			filteredAll.unshift({
+				id: 'act:expr',
+				label: `🎲 ${q} würfeln`,
+				sub: 'Würfelausdruck',
+				icon: Dices,
+				run: () => {
+					const expr = q;
+					close();
+					performDamage(`🎲 ${expr}`, expr);
+				}
+			});
+		}
+		return filteredAll;
 	}
 
 	async function runSearch(q: string) {

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { goto, invalidateAll } from '$app/navigation';
+	import { goto, invalidateAll, beforeNavigate } from '$app/navigation';
 	import { renderMarkdown } from '$lib/markdown';
 	import { toasts } from '$lib/stores/toast.svelte';
 	import FileText from '@lucide/svelte/icons/file-text';
@@ -33,6 +33,16 @@
 	}
 
 	let confirmDelNote = $state(false);
+
+	// Ungespeicherte Änderungen nicht stillschweigend verwerfen
+	let allowLeave = $state(false);
+	beforeNavigate((nav) => {
+		if (!dirty || allowLeave) return;
+		nav.cancel();
+		allowLeave = true;
+		setTimeout(() => (allowLeave = false), 4000);
+		toasts.push('Ungespeicherte Änderungen!', 'Strg+S speichert — nochmal navigieren verwirft.', 'bad');
+	});
 
 	async function newNote() {
 		const res = await fetch('/api/notes', {

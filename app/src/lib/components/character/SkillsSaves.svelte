@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { character } from '$lib/stores/character.svelte';
-	import { toasts } from '$lib/stores/toast.svelte';
 	import {
 		ABILITY_KEYS,
 		ABILITY_LABELS,
@@ -10,7 +9,7 @@
 		type AbilityKey,
 		type ProfLevel
 	} from '$lib/types';
-	import { rollDie } from '$lib/dice';
+	import { performCheck } from '$lib/rolls';
 	import Eye from '@lucide/svelte/icons/eye';
 	import Star from '@lucide/svelte/icons/star';
 
@@ -45,12 +44,7 @@
 	}
 
 	function roll(label: string, bonus: number) {
-		const d = rollDie(20);
-		toasts.push(
-			`${label}: ${d + bonus}`,
-			`d20 (${d}) ${fmtMod(bonus)}`,
-			d === 20 ? 'good' : d === 1 ? 'bad' : 'default'
-		);
+		performCheck(label, bonus);
 	}
 
 	const passivePerception = $derived(c ? 10 + skillBonus('perception', 'wis') : 10);
@@ -103,7 +97,7 @@
 	<div class="grid gap-x-4 sm:grid-cols-2">
 		{#each SKILLS as s (s.key)}
 			{@const lvl = skillLevel(s.key)}
-			<div class="flex items-center justify-between gap-2 border-b border-border/50 py-1">
+			<div class="flex min-h-11 items-center justify-between gap-2 border-b border-border/50 py-1.5">
 				<button
 					class="flex min-w-0 items-center gap-2 text-left text-sm"
 					onclick={() => cycleSkill(s.key)}

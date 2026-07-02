@@ -11,14 +11,19 @@
 	import HpTracker from '$lib/components/character/HpTracker.svelte';
 	import RestControls from '$lib/components/character/RestControls.svelte';
 	import AbilityScores from '$lib/components/character/AbilityScores.svelte';
+	import Spellbook from '$lib/components/character/Spellbook.svelte';
+	import FeaturesCard from '$lib/components/character/FeaturesCard.svelte';
 	import ConditionChips from '$lib/components/character/ConditionChips.svelte';
 	import SpellSlots from '$lib/components/character/SpellSlots.svelte';
 	import CustomTrackers from '$lib/components/character/CustomTrackers.svelte';
 	import CurrencyTracker from '$lib/components/character/CurrencyTracker.svelte';
+	import XpBar from '$lib/components/character/XpBar.svelte';
 	import InventoryCard from '$lib/components/character/InventoryCard.svelte';
 	import QuestsWidget from '$lib/components/character/QuestsWidget.svelte';
 	import HpHistory from '$lib/components/character/HpHistory.svelte';
 	import DiceRoller from '$lib/components/DiceRoller.svelte';
+	import AmbiencePlayer from '$lib/components/AmbiencePlayer.svelte';
+	import SpotifyWidget from '$lib/components/SpotifyWidget.svelte';
 	import Shield from '@lucide/svelte/icons/shield';
 	import Zap from '@lucide/svelte/icons/zap';
 	import Wind from '@lucide/svelte/icons/wind';
@@ -29,20 +34,25 @@
 	import EyeOff from '@lucide/svelte/icons/eye-off';
 	import RotateCcw from '@lucide/svelte/icons/rotate-ccw';
 	import Check from '@lucide/svelte/icons/check';
+	import Star from '@lucide/svelte/icons/star';
 
 	const c = $derived(character.current);
 
 	const TITLES: Record<string, string> = {
 		hp: 'Trefferpunkte',
 		dice: 'Würfel',
+		spellbook: 'Zauberbuch',
 		abilities: 'Attribute',
 		conditions: 'Zustände',
+		features: 'Merkmale',
 		trackers: 'Ressourcen & Tracker',
 		spells: 'Zauberplätze',
 		currency: 'Währung',
 		inventory: 'Inventar',
 		quests: 'Aktive Quests',
-		history: 'TP-Verlauf'
+		history: 'TP-Verlauf',
+		ambience: 'Musik (Ambience)',
+		spotify: 'Spotify'
 	};
 
 	let items = $state<{ id: string }[]>([]);
@@ -55,10 +65,12 @@
 		items = base.map((id) => ({ id }));
 	});
 
+	// Drag nur am Griff starten — sonst wird Touch-Scrollen zur Falle
+	let dragActive = $state(false);
 	const dndOptions = $derived({
 		items,
 		flipDurationMs: 180,
-		dragDisabled: !dashboard.customizing,
+		dragDisabled: !dashboard.customizing || !dragActive,
 		dropTargetStyle: {}
 	});
 
@@ -68,6 +80,7 @@
 	function finalize(e: CustomEvent<{ items: { id: string }[] }>) {
 		items = e.detail.items;
 		dashboard.setOrder(items.map((i) => i.id));
+		dragActive = false;
 	}
 
 	// HP-Ring
@@ -80,10 +93,11 @@
 </script>
 
 <svelte:head><title>Dashboard · Omniscient Chronicler</title></svelte:head>
+<svelte:window onpointerup={() => (dragActive = false)} />
 
 {#if c}
 	<!-- Hero -->
-	<div class="card card-pad mb-4 overflow-hidden bg-gradient-to-br from-primary/10 via-transparent to-accent/5">
+	<div class="card card-ornate card-pad mb-4 overflow-hidden bg-gradient-to-br from-primary/10 via-transparent to-accent/5">
 		<div class="flex flex-wrap items-center justify-between gap-4">
 			<div class="flex items-center gap-4">
 				<!-- HP-Ring -->
@@ -108,9 +122,20 @@
 						<span class="text-[10px] text-muted">/ {c.hp.max} TP</span>
 					</div>
 				</div>
-				<div>
-					<h1 class="grad-text font-display text-2xl font-bold sm:text-3xl">{c.name}</h1>
+				<div class="min-w-0">
+					<div class="flex items-center gap-2">
+						<h1 class="grad-text truncate font-display text-2xl font-bold sm:text-3xl">{c.name}</h1>
+						<button
+							class="shrink-0 transition {c.inspiration ? 'text-accent insp-glow' : 'text-muted opacity-40 hover:opacity-80'}"
+							onclick={() => character.patch({ inspiration: !c.inspiration })}
+							title="Inspiration {c.inspiration ? '(aktiv!)' : ''}"
+							aria-pressed={c.inspiration}
+						>
+							<Star class="h-6 w-6 {c.inspiration ? 'fill-current animate-pop' : ''}" />
+						</button>
+					</div>
 					<p class="text-sm text-muted">Stufe {c.level} · {c.race} · {c.className}</p>
+					<div class="mt-2 max-w-72"><XpBar /></div>
 				</div>
 			</div>
 			<div class="grid grid-cols-4 gap-2 sm:gap-3">
@@ -175,13 +200,20 @@
 					{#if dashboard.customizing}
 						<div class="flex items-center gap-1">
 							<button
-								class="btn btn-icon btn-ghost !h-7 !w-7"
+								class="btn btn-icon btn-ghost !h-9 !w-9"
 								onclick={() => dashboard.toggle(item.id)}
 								aria-label="Sichtbarkeit"
 							>
 								{#if hidden}<EyeOff class="h-4 w-4" />{:else}<Eye class="h-4 w-4" />{/if}
 							</button>
-							<span class="drag-handle text-muted"><GripVertical class="h-5 w-5" /></span>
+							<button
+								class="drag-handle grid h-9 w-9 cursor-grab place-items-center rounded-lg text-muted transition hover:bg-surface2 hover:text-ink"
+								onpointerdown={() => (dragActive = true)}
+								title="Zum Verschieben ziehen"
+								aria-label="Widget verschieben"
+							>
+								<GripVertical class="h-5 w-5" />
+							</button>
 						</div>
 					{/if}
 				</div>
@@ -191,6 +223,10 @@
 					<div class="mt-4"><RestControls /></div>
 				{:else if item.id === 'dice'}
 					<DiceRoller />
+				{:else if item.id === 'spellbook'}
+					<Spellbook />
+				{:else if item.id === 'features'}
+					<FeaturesCard />
 				{:else if item.id === 'abilities'}
 					<AbilityScores />
 				{:else if item.id === 'conditions'}
@@ -207,10 +243,22 @@
 					<QuestsWidget />
 				{:else if item.id === 'history'}
 					<HpHistory />
+				{:else if item.id === 'ambience'}
+					<AmbiencePlayer />
+				{:else if item.id === 'spotify'}
+					<SpotifyWidget />
 				{/if}
 			</div>
 		{/each}
 	</section>
+{:else if character.error}
+	<div class="grid min-h-[60vh] place-items-center">
+		<div class="card card-pad max-w-sm text-center">
+			<p class="font-display text-lg font-bold">Die Chronik schweigt…</p>
+			<p class="mt-1 text-sm text-muted">Der Charakter konnte nicht geladen werden.</p>
+			<button class="btn btn-primary mt-4" onclick={() => character.refresh()}>Erneut versuchen</button>
+		</div>
+	</div>
 {:else}
 	<div class="grid min-h-[60vh] place-items-center text-muted">
 		<div class="animate-pulse font-display text-lg">Die Chronik erwacht…</div>

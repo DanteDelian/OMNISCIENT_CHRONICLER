@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { character } from '$lib/stores/character.svelte';
+	import { fx } from '$lib/stores/fx.svelte';
 	import AnimatedNumber from '$lib/components/AnimatedNumber.svelte';
 	import Heart from '@lucide/svelte/icons/heart';
 	import Shield from '@lucide/svelte/icons/shield-plus';
@@ -8,6 +9,7 @@
 
 	let amount = $state(1);
 	let flash = $state('');
+	let shakeKey = $state(0);
 	const c = $derived(character.current);
 
 	function doFlash(kind: 'dmg' | 'heal') {
@@ -27,6 +29,8 @@
 		const cur = Math.max(0, c.hp.current - rest);
 		character.patch({ hp: { current: cur, temp } });
 		doFlash('dmg');
+		fx.pulse('damage');
+		if (n >= Math.max(1, c.hp.max) / 4) shakeKey++;
 	}
 
 	function heal(n: number) {
@@ -34,6 +38,7 @@
 		const cur = Math.min(c.hp.max, c.hp.current + n);
 		character.patch({ hp: { current: cur } });
 		doFlash('heal');
+		fx.pulse('heal');
 	}
 
 	function setTemp(v: number) {
@@ -80,12 +85,14 @@
 		</div>
 
 		<!-- HP-Leiste -->
-		<div class="h-3 w-full overflow-hidden rounded-full bg-surface2">
-			<div
-				class="h-full rounded-full transition-all duration-300"
-				style="width: {ratio * 100}%; background-color: {barColor}"
-			></div>
-		</div>
+		{#key shakeKey}
+			<div class="h-3 w-full overflow-hidden rounded-full bg-surface2 {shakeKey ? 'animate-shake' : ''}">
+				<div
+					class="h-full rounded-full transition-all duration-300"
+					style="width: {ratio * 100}%; background-color: {barColor}"
+				></div>
+			</div>
+		{/key}
 
 		<!-- Schaden / Heilung -->
 		<div class="flex items-stretch gap-2">

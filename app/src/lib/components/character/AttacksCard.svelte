@@ -2,7 +2,7 @@
 	import { character } from '$lib/stores/character.svelte';
 	import { toasts } from '$lib/stores/toast.svelte';
 	import { fmtMod, type Attack } from '$lib/types';
-	import { rollDie, rollExpr } from '$lib/dice';
+	import { performCheck, performDamage } from '$lib/rolls';
 	import Swords from '@lucide/svelte/icons/swords';
 	import Dices from '@lucide/svelte/icons/dices';
 	import Plus from '@lucide/svelte/icons/plus';
@@ -17,25 +17,11 @@
 	let damageType = $state('');
 
 	function rollAttack(a: Attack) {
-		const d = rollDie(20);
-		const total = d + a.bonus;
-		toasts.push(
-			`${a.name}: ${total}${d === 20 ? ' — KRIT!' : d === 1 ? ' — Patzer' : ''}`,
-			`Angriff · d20 (${d}) ${fmtMod(a.bonus)}`,
-			d === 20 ? 'good' : d === 1 ? 'bad' : 'default'
-		);
+		performCheck(`${a.name} — Angriff`, a.bonus);
 	}
 
 	function rollDamage(a: Attack) {
-		const r = rollExpr(a.damage);
-		if (!r) {
-			toasts.push('Ungültiger Würfelausdruck', a.damage, 'bad');
-			return;
-		}
-		toasts.push(
-			`${a.name}: ${r.total} Schaden`,
-			`${a.damage} → ${r.detail}${a.damageType ? ' · ' + a.damageType : ''}`
-		);
+		performDamage(`${a.name} — Schaden`, a.damage, a.damageType ? ' · ' + a.damageType : '');
 	}
 
 	function add() {
@@ -55,7 +41,15 @@
 
 	function remove(id: string) {
 		if (!c) return;
+		const deleted = c.attacks.find((a) => a.id === id);
+		const restore = [...c.attacks];
 		character.patch({ attacks: c.attacks.filter((a) => a.id !== id) });
+		if (deleted) {
+			toasts.push('Angriff gelöscht', deleted.name, 'default', {
+				label: 'Rückgängig',
+				fn: () => character.patch({ attacks: restore })
+			});
+		}
 	}
 </script>
 

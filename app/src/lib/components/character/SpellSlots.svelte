@@ -48,11 +48,15 @@
 				<div class="flex flex-1 flex-wrap items-center gap-1.5">
 					{#each Array(slot.total) as _, i (i)}
 						<button
-							class="h-5 w-5 rounded-md border-2 border-primary transition
-								{slot.used > i ? 'bg-transparent opacity-40' : 'bg-primary'}"
+							class="grid h-9 w-9 place-items-center"
 							onclick={() => usePip(slot.level, i)}
 							aria-label="Platz {i + 1}"
-						></button>
+						>
+							<span
+								class="h-5 w-5 rounded-md border-2 border-primary transition
+									{slot.used > i ? 'bg-transparent opacity-40' : 'bg-primary'}"
+							></span>
+						</button>
 					{/each}
 				</div>
 				<div class="flex items-center gap-1">

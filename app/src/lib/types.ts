@@ -350,6 +350,51 @@ export interface IngestChange {
 	payload: Record<string, unknown>;
 }
 
+/** Deutsche Labels für Event-Log-Feldpfade. */
+export const FIELD_LABELS: Record<string, string> = {
+	'hp.current': 'TP',
+	'hp.max': 'Max. TP',
+	'hp.temp': 'Temp. TP',
+	ac: 'RK',
+	level: 'Stufe',
+	xp: 'EP',
+	initiativeBonus: 'Initiative',
+	speed: 'Tempo',
+	proficiencyBonus: 'Übungsbonus',
+	inspiration: 'Inspiration',
+	'deathSaves.successes': 'Todesrettung: Erfolge',
+	'deathSaves.failures': 'Todesrettung: Fehlschläge',
+	'currency.gp': 'Gold',
+	'currency.sp': 'Silber',
+	'currency.cp': 'Kupfer',
+	'abilities.str': 'Stärke',
+	'abilities.dex': 'Geschicklichkeit',
+	'abilities.con': 'Konstitution',
+	'abilities.int': 'Intelligenz',
+	'abilities.wis': 'Weisheit',
+	'abilities.cha': 'Charisma',
+	conditions: 'Zustände',
+	spellSlots: 'Zauberplätze',
+	customTrackers: 'Tracker',
+	skills: 'Fertigkeiten',
+	saveProficiencies: 'Rettungswurf-Übungen',
+	attacks: 'Angriffe',
+	spells: 'Zauberbuch',
+	features: 'Merkmale',
+	notes: 'Notizen',
+	name: 'Name',
+	className: 'Klasse',
+	race: 'Volk',
+	background: 'Hintergrund',
+	alignment: 'Gesinnung',
+	pronouns: 'Pronomen',
+	portrait: 'Porträt',
+	appearance: 'Aussehen',
+	hitDice: 'Trefferwürfel',
+	hitDiceRemaining: 'Trefferwürfel übrig',
+	created: 'Erstellt'
+};
+
 /** Standard-5e-Conditions als Vorschläge für die Condition-Chips. */
 export const DND_CONDITIONS = [
 	'Blind',

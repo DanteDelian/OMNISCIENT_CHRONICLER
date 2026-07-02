@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { invalidateAll } from '$app/navigation';
+	import { fx } from '$lib/stores/fx.svelte';
+	import { sound } from '$lib/sound';
 	import { QUEST_STATUS_LABELS, type Quest, type QuestStatus } from '$lib/types';
 	import Plus from '@lucide/svelte/icons/plus';
 	import Trash2 from '@lucide/svelte/icons/trash-2';
@@ -42,7 +44,13 @@
 	async function move(q: Quest, dir: -1 | 1) {
 		const idx = ORDER.indexOf(q.status);
 		const next = ORDER[idx + dir];
-		if (next) patch(q.id, { status: next });
+		if (!next) return;
+		if (next === 'done') {
+			// Quest abgeschlossen — kleine Feier!
+			fx.pulse('levelup');
+			sound.crit();
+		}
+		patch(q.id, { status: next });
 	}
 
 	function askDel(id: string) {
@@ -106,14 +114,14 @@
 								<option value="low">Niedrig</option>
 							</select>
 							<div class="flex items-center gap-1">
-								<button class="btn btn-icon btn-ghost !h-7 !w-7" onclick={() => move(q, -1)} disabled={q.status === 'rumor'} aria-label="Zurück">
+								<button class="btn btn-icon btn-ghost !h-9 !w-9" onclick={() => move(q, -1)} disabled={q.status === 'rumor'} aria-label="Zurück">
 									<ChevronLeft class="h-4 w-4" />
 								</button>
-								<button class="btn btn-icon btn-ghost !h-7 !w-7" onclick={() => move(q, 1)} disabled={q.status === 'done'} aria-label="Weiter">
+								<button class="btn btn-icon btn-ghost !h-9 !w-9" onclick={() => move(q, 1)} disabled={q.status === 'done'} aria-label="Weiter">
 									<ChevronRight class="h-4 w-4" />
 								</button>
 								<button
-									class="btn btn-icon !h-7 !w-7 text-danger {pendingDel === q.id ? '!bg-danger !text-white' : 'btn-ghost'}"
+									class="btn btn-icon !h-9 !w-9 text-danger {pendingDel === q.id ? '!bg-danger !text-white' : 'btn-ghost'}"
 									onclick={() => askDel(q.id)}
 									title={pendingDel === q.id ? 'Nochmal tippen zum Löschen' : 'Löschen'}
 									aria-label="Löschen"

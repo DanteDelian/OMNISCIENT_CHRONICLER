@@ -11,8 +11,19 @@
   "portrait": "🧝",
   "appearance": "Astralelf mit sternenklarem Blick. Tritt als „Floshem, die Unsichtbare Hand“ auf — Waldelf-Magier der Donnergarde, Kapuze tief im Gesicht.",
   "proficiencyBonus": 3,
-  "abilities": { "str": 10, "dex": 13, "con": 16, "int": 18, "wis": 8, "cha": 12 },
-  "hp": { "current": 28, "max": 28, "temp": 0 },
+  "abilities": {
+    "str": 10,
+    "dex": 13,
+    "con": 16,
+    "int": 18,
+    "wis": 8,
+    "cha": 12
+  },
+  "hp": {
+    "current": 28,
+    "max": 28,
+    "temp": 0
+  },
   "ac": 11,
   "initiativeBonus": 1,
   "speed": 9,
@@ -20,11 +31,26 @@
   "hitDiceRemaining": 5,
   "inspiration": false,
   "conditions": [],
-  "deathSaves": { "successes": 0, "failures": 0 },
+  "deathSaves": {
+    "successes": 0,
+    "failures": 0
+  },
   "spellSlots": [
-    { "level": 1, "total": 4, "used": 0 },
-    { "level": 2, "total": 3, "used": 0 },
-    { "level": 3, "total": 2, "used": 0 }
+    {
+      "level": 1,
+      "total": 4,
+      "used": 0
+    },
+    {
+      "level": 2,
+      "total": 3,
+      "used": 0
+    },
+    {
+      "level": 3,
+      "total": 2,
+      "used": 0
+    }
   ],
   "customTrackers": [
     {
@@ -37,11 +63,31 @@
       "color": "#f5c451"
     }
   ],
-  "saveProficiencies": ["int", "wis"],
-  "skills": { "arcana": 1, "deception": 1, "insight": 1, "perception": 1 },
+  "saveProficiencies": [
+    "int",
+    "wis"
+  ],
+  "skills": {
+    "arcana": 1,
+    "deception": 1,
+    "insight": 1,
+    "perception": 1
+  },
   "attacks": [
-    { "id": "attack-dolch", "name": "Dolch", "bonus": 4, "damage": "1d4+1", "damageType": "Stich (Wurf 6/18 m)" },
-    { "id": "attack-stab", "name": "Zweihandstab", "bonus": 3, "damage": "1d6", "damageType": "Wucht" }
+    {
+      "id": "attack-dolch",
+      "name": "Dolch",
+      "bonus": 4,
+      "damage": "1d4+1",
+      "damageType": "Stich (Wurf 6/18 m)"
+    },
+    {
+      "id": "attack-stab",
+      "name": "Zweihandstab",
+      "bonus": 3,
+      "damage": "1d6",
+      "damageType": "Wucht"
+    }
   ],
   "spells": [
     {
@@ -207,14 +253,22 @@
       "id": "feat-sternenschritt",
       "name": "Sternenschritt",
       "source": "Astralelf",
-      "uses": { "current": 3, "max": 3, "resetOn": "long" },
+      "uses": {
+        "current": 3,
+        "max": 3,
+        "resetOn": "long"
+      },
       "description": "Bonusaktion: Teleportiere dich bis zu 9 m an einen sichtbaren freien Ort."
     },
     {
       "id": "feat-arkane-erholung",
       "name": "Arkane Erholung",
       "source": "Zauberer",
-      "uses": { "current": 1, "max": 1, "resetOn": "long" },
+      "uses": {
+        "current": 1,
+        "max": 1,
+        "resetOn": "long"
+      },
       "description": "1×/Tag nach einer **kurzen Rast**: Verbrauchte Zauberplätze mit Gesamtgrad ≤ 3 zurückgewinnen."
     },
     {
@@ -248,8 +302,12 @@
       "description": "Aktion: Erschaffe einen unbelebten, nichtmagischen Gegenstand (≤ 90 cm, ≤ 4,5 kg) in Hand oder Sichtweite. Hält 1 Stunde."
     }
   ],
-  "currency": { "gp": 17, "sp": 16, "cp": 0 },
+  "currency": {
+    "gp": 17,
+    "sp": 16,
+    "cp": 0
+  },
   "notes": "Zauber-SG 15 · Zauberangriff +7 (IN). Vertrauter: Falke. Ziel: eigene Organisation & Machtbasis in Xantus. Die „Donnergarde“-Tarnung ist aufgeflogen — neue Identität nötig!",
   "createdAt": 1782973000000,
-  "updatedAt": 1782973000000
+  "updatedAt": 1783013932030
 }

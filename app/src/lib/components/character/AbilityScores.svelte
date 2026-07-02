@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { character } from '$lib/stores/character.svelte';
 	import { ABILITY_KEYS, ABILITY_LABELS, abilityMod, fmtMod, type AbilityKey } from '$lib/types';
-	import { toasts } from '$lib/stores/toast.svelte';
+	import { performCheck } from '$lib/rolls';
 	import Dices from '@lucide/svelte/icons/dices';
 
 	const c = $derived(character.current);
@@ -13,14 +13,7 @@
 
 	function rollCheck(key: AbilityKey) {
 		if (!c) return;
-		const mod = abilityMod(c.abilities[key]);
-		const d20 = 1 + Math.floor(Math.random() * 20);
-		const total = d20 + mod;
-		toasts.push(
-			`${ABILITY_LABELS[key]}: ${total}`,
-			`d20 (${d20}) ${fmtMod(mod)}`,
-			d20 === 20 ? 'good' : d20 === 1 ? 'bad' : 'default'
-		);
+		performCheck(`${ABILITY_LABELS[key]}-Probe`, abilityMod(c.abilities[key]));
 	}
 </script>
 

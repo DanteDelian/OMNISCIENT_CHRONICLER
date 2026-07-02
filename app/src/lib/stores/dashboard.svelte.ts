@@ -1,14 +1,18 @@
 const DEFAULT_ORDER = [
 	'hp',
 	'dice',
+	'spellbook',
 	'abilities',
 	'conditions',
+	'features',
 	'trackers',
 	'spells',
 	'currency',
 	'inventory',
 	'quests',
-	'history'
+	'history',
+	'ambience',
+	'spotify'
 ];
 const LS_KEY = 'cc-dashboard-v1';
 

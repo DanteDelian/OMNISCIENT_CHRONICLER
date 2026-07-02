@@ -3,13 +3,15 @@
 	import { character } from '$lib/stores/character.svelte';
 	import { live } from '$lib/stores/live.svelte';
 	import { toasts } from '$lib/stores/toast.svelte';
-	import type { CharacterEvent } from '$lib/types';
+	import { FIELD_LABELS, type CharacterEvent } from '$lib/types';
 	import Card from '$lib/components/ui/Card.svelte';
 	import AnimatedNumber from '$lib/components/AnimatedNumber.svelte';
 	import HpTracker from '$lib/components/character/HpTracker.svelte';
 	import RestControls from '$lib/components/character/RestControls.svelte';
 	import AbilityScores from '$lib/components/character/AbilityScores.svelte';
 	import SkillsSaves from '$lib/components/character/SkillsSaves.svelte';
+	import Spellbook from '$lib/components/character/Spellbook.svelte';
+	import FeaturesCard from '$lib/components/character/FeaturesCard.svelte';
 	import AttacksCard from '$lib/components/character/AttacksCard.svelte';
 	import InventoryCard from '$lib/components/character/InventoryCard.svelte';
 	import ConditionChips from '$lib/components/character/ConditionChips.svelte';
@@ -17,7 +19,9 @@
 	import SpellSlots from '$lib/components/character/SpellSlots.svelte';
 	import CustomTrackers from '$lib/components/character/CustomTrackers.svelte';
 	import CurrencyTracker from '$lib/components/character/CurrencyTracker.svelte';
+	import XpBar from '$lib/components/character/XpBar.svelte';
 	import Camera from '@lucide/svelte/icons/camera';
+	import Star from '@lucide/svelte/icons/star';
 
 	const c = $derived(character.current);
 	let events = $state<CharacterEvent[]>([]);
@@ -81,7 +85,7 @@
 
 {#if c}
 	<!-- Hero mit Porträt -->
-	<div class="card card-pad mb-4 overflow-hidden bg-gradient-to-br from-primary/10 via-transparent to-accent/5">
+	<div class="card card-ornate card-pad mb-4 overflow-hidden bg-gradient-to-br from-primary/10 via-transparent to-accent/5">
 		<div class="flex flex-col gap-4 sm:flex-row sm:items-center">
 			<!-- Porträt mit glühendem Rahmen -->
 			<div class="relative mx-auto sm:mx-0">
@@ -123,11 +127,22 @@
 			</div>
 
 			<div class="min-w-0 flex-1">
-				<input
-					class="w-full bg-transparent font-display text-2xl font-bold leading-tight outline-none focus:text-primary sm:text-3xl"
-					value={c.name}
-					onchange={(e) => setStr('name', e.currentTarget.value)}
-				/>
+				<div class="flex items-center gap-2">
+					<input
+						class="w-full min-w-0 bg-transparent font-display text-2xl font-bold leading-tight outline-none focus:text-primary sm:text-3xl"
+						value={c.name}
+						onchange={(e) => setStr('name', e.currentTarget.value)}
+					/>
+					<button
+						class="shrink-0 transition {c.inspiration ? 'text-accent insp-glow' : 'text-muted opacity-40 hover:opacity-80'}"
+						onclick={() => character.patch({ inspiration: !c.inspiration })}
+						title="Inspiration {c.inspiration ? '(aktiv!)' : ''}"
+						aria-pressed={c.inspiration}
+					>
+						<Star class="h-7 w-7 {c.inspiration ? 'fill-current animate-pop' : ''}" />
+					</button>
+				</div>
+				<div class="mt-2"><XpBar /></div>
 				<div class="mt-2 flex flex-wrap gap-2 text-sm">
 					<input class="input !w-28 !py-1" value={c.race} placeholder="Volk" onchange={(e) => setStr('race', e.currentTarget.value)} />
 					<input class="input !w-32 !py-1" value={c.className} placeholder="Klasse" onchange={(e) => setStr('className', e.currentTarget.value)} />
@@ -163,7 +178,9 @@
 			</div>
 		</Card>
 		<Card title="Attribute" class="card-hover"><AbilityScores /></Card>
+		<Card title="Zauberbuch" class="card-hover"><Spellbook /></Card>
 		<Card title="Fertigkeiten & Rettungswürfe" class="card-hover"><SkillsSaves /></Card>
+		<Card title="Merkmale" class="card-hover"><FeaturesCard /></Card>
 		<Card title="Angriffe" class="card-hover"><AttacksCard /></Card>
 		<Card title="Inventar" class="card-hover"><InventoryCard /></Card>
 		<Card title="Zustände" class="card-hover"><ConditionChips /></Card>
@@ -193,7 +210,7 @@
 				<ul class="flex flex-col gap-1.5 text-sm">
 					{#each events as e (e.id)}
 						<li class="flex items-center justify-between gap-2 border-b border-border/60 pb-1.5">
-							<span class="truncate text-muted">{e.field}</span>
+							<span class="truncate text-muted">{FIELD_LABELS[e.field] ?? e.field}</span>
 							<span class="shrink-0 tabular-nums">
 								{#if e.delta != null}<span class={e.delta >= 0 ? 'text-success' : 'text-danger'}
 										>{e.delta >= 0 ? '+' : ''}{e.delta}</span

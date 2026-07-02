@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { toasts } from '$lib/stores/toast.svelte';
+	import { ui } from '$lib/stores/ui.svelte';
 	import Card from '$lib/components/ui/Card.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 	import Smartphone from '@lucide/svelte/icons/smartphone';
@@ -20,10 +21,29 @@
 <h1 class="mb-4 font-display text-2xl font-bold">Einstellungen</h1>
 
 <div class="grid gap-4 md:grid-cols-2">
-	<Card title="Darstellung">
+	<Card title="Darstellung & Effekte">
 		<div class="flex items-center justify-between">
 			<span class="text-sm">Hell / Dunkel</span>
 			<ThemeToggle />
+		</div>
+		<div class="mt-3 flex items-center justify-between border-t border-border/60 pt-3">
+			<div>
+				<span class="block text-sm">Sound-Effekte</span>
+				<span class="text-xs text-muted">Würfel, Krits, Level-Up (synthetisiert, dezent)</span>
+			</div>
+			<button
+				class="relative h-7 w-12 rounded-full transition {ui.sound ? 'bg-primary' : 'bg-surface2 border border-border'}"
+				onclick={() => ui.setSound(!ui.sound)}
+				role="switch"
+				aria-checked={ui.sound}
+				aria-label="Sound-Effekte"
+			>
+				<span
+					class="absolute top-0.5 h-6 w-6 rounded-full bg-white shadow transition-all {ui.sound
+						? 'left-[calc(100%-1.625rem)]'
+						: 'left-0.5'}"
+				></span>
+			</button>
 		</div>
 	</Card>
 

@@ -20,9 +20,9 @@ export interface NavItem {
 export const navItems: NavItem[] = [
 	{ href: '/', label: 'Dashboard', icon: LayoutDashboard, primary: true },
 	{ href: '/character', label: 'Charakter', icon: Shield, primary: true },
-	{ href: '/prep', label: 'Vorbereitung', icon: ClipboardList, primary: true },
 	{ href: '/combat', label: 'Kampf', icon: Swords, primary: true },
 	{ href: '/notes', label: 'Notizen', icon: NotebookPen, primary: true },
+	{ href: '/prep', label: 'Vorbereitung', icon: ClipboardList },
 	{ href: '/quests', label: 'Quests', icon: ScrollText },
 	{ href: '/chronik', label: 'Chronik', icon: BookOpen },
 	{ href: '/glossar', label: 'Glossar', icon: Users },

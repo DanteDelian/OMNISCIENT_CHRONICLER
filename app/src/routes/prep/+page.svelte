@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { goto, invalidateAll } from '$app/navigation';
+	import { page } from '$app/state';
 	import {
 		PLAN_STATUS_LABELS,
 		type SessionPlan,
@@ -20,8 +21,12 @@
 	import MapPin from '@lucide/svelte/icons/map-pin';
 	import Gem from '@lucide/svelte/icons/gem';
 	import ListChecks from '@lucide/svelte/icons/list-checks';
+	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
 
 	let { data } = $props();
+
+	// Mobil: ?id= entscheidet zwischen Listen- und Editor-Ansicht
+	const hasId = $derived(!!page.url.searchParams.get('id'));
 
 	let plan = $state<SessionPlan | null>(null);
 	let lastId = $state<string | null>(null);
@@ -120,8 +125,8 @@
 </div>
 
 <div class="grid gap-4 lg:grid-cols-[240px_1fr]">
-	<!-- Liste -->
-	<aside class="card card-pad lg:max-h-[calc(100dvh-9rem)] lg:overflow-auto" class:hidden={!!plan && data.plans.length > 0 ? false : false}>
+	<!-- Liste (mobil ausgeblendet, sobald ein Plan geöffnet ist) -->
+	<aside class="card card-pad {hasId ? 'hidden lg:block' : ''} lg:max-h-[calc(100dvh-9rem)] lg:overflow-auto">
 		<div class="flex flex-col gap-1">
 			{#each data.plans as p (p.id)}
 				<a
@@ -140,16 +145,21 @@
 		</div>
 	</aside>
 
-	<!-- Editor -->
+	<!-- Editor (mobil nur mit ?id= sichtbar) -->
 	{#if plan}
-		<div class="flex flex-col gap-4">
+		<div class="flex-col gap-4 {hasId ? 'flex' : 'hidden lg:flex'}">
 			<!-- Kopf -->
 			<div class="card card-pad">
-				<input
-					class="w-full bg-transparent font-display text-xl font-bold outline-none focus:text-primary"
-					value={plan.title}
-					onchange={(e) => save({ title: e.currentTarget.value })}
-				/>
+				<div class="flex items-center gap-2">
+					<a href="/prep" class="btn btn-icon btn-ghost shrink-0 lg:hidden" aria-label="Zurück zur Liste">
+						<ArrowLeft class="h-5 w-5" />
+					</a>
+					<input
+						class="w-full bg-transparent font-display text-xl font-bold outline-none focus:text-primary"
+						value={plan.title}
+						onchange={(e) => save({ title: e.currentTarget.value })}
+					/>
+				</div>
 				<div class="mt-2 flex flex-wrap items-center gap-2">
 					<input class="input !w-40 !py-1 text-sm" type="date" value={plan.sessionDate} onchange={(e) => save({ sessionDate: e.currentTarget.value })} />
 					<div class="flex gap-1">

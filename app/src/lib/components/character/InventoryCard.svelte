@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { scale, fade } from 'svelte/transition';
 	import { live } from '$lib/stores/live.svelte';
+	import { toasts } from '$lib/stores/toast.svelte';
 	import { renderMarkdown } from '$lib/markdown';
 	import {
 		ITEM_CATEGORY_LABELS,
@@ -48,15 +49,29 @@
 	}
 
 	async function changeQty(it: InventoryItem, d: number) {
+		// Menge 0 löscht NICHT mehr — der Gegenstand bleibt (ausgegraut) erhalten.
 		const q = Math.max(0, it.quantity + d);
-		if (q === 0) return remove(it.id);
 		await patch(it.id, { quantity: q });
 	}
 
 	async function remove(id: string) {
+		const deleted = items.find((i) => i.id === id);
 		items = items.filter((i) => i.id !== id);
 		if (selected?.id === id) selected = null;
 		await fetch(`/api/inventory/${id}`, { method: 'DELETE' });
+		if (deleted) {
+			toasts.push('Gegenstand gelöscht', deleted.name, 'default', {
+				label: 'Rückgängig',
+				fn: async () => {
+					await fetch('/api/inventory', {
+						method: 'POST',
+						headers: { 'content-type': 'application/json' },
+						body: JSON.stringify(deleted)
+					});
+					await load();
+				}
+			});
+		}
 	}
 
 	async function addItem() {
@@ -84,37 +99,44 @@
 <div class="flex flex-col gap-1.5">
 	{#each items as it (it.id)}
 		{@const rar = RARITY[it.rarity]}
-		<button
-			class="group flex items-center gap-2.5 rounded-xl border border-border bg-surface2 px-2.5 py-2 text-left transition hover:border-[var(--rar)]"
+		{@const empty = it.quantity === 0}
+		<div
+			class="group flex items-center gap-2.5 rounded-xl border border-border bg-surface2 px-2.5 py-2 text-left transition hover:border-[var(--rar)] {empty ? 'opacity-45' : ''}"
 			style="--rar:{rar.color}"
+			role="button"
+			tabindex="0"
 			onclick={() => (selected = it)}
+			onkeydown={(e) => e.key === 'Enter' && (selected = it)}
 		>
 			<span class="h-7 w-1 shrink-0 rounded-full" style="background:{rar.color}"></span>
 			<div class="min-w-0 flex-1">
 				<span class="flex items-center gap-1.5">
-					<span class="truncate text-sm font-semibold" style="color:{rar.color}">{it.name}</span>
+					<span class="truncate text-sm font-semibold {empty ? 'line-through' : ''}" style="color:{rar.color}">{it.name}</span>
 					{#if it.equipped}<Shield class="h-3 w-3 shrink-0 fill-current text-primary" />{/if}
 					{#if it.attuned}<Sparkles class="h-3 w-3 shrink-0 text-accent" />{/if}
 				</span>
 				<span class="text-[11px] text-muted">{ITEM_CATEGORY_LABELS[it.category]} · {rar.label}</span>
 			</div>
-			<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions -->
-			<div class="flex shrink-0 items-center gap-0.5" onclick={(e) => e.stopPropagation()}>
-				<span
-					class="btn btn-icon !h-7 !w-7 text-xs"
-					role="button"
-					tabindex="0"
-					onclick={() => changeQty(it, -1)}>−</span
+			<div class="flex shrink-0 items-center gap-0.5">
+				<button
+					class="btn btn-icon !h-9 !w-9 text-sm"
+					onclick={(e) => {
+						e.stopPropagation();
+						changeQty(it, -1);
+					}}
+					aria-label="Menge verringern">−</button
 				>
 				<span class="w-6 text-center text-sm tabular-nums">{it.quantity}</span>
-				<span
-					class="btn btn-icon !h-7 !w-7 text-xs"
-					role="button"
-					tabindex="0"
-					onclick={() => changeQty(it, 1)}>+</span
+				<button
+					class="btn btn-icon !h-9 !w-9 text-sm"
+					onclick={(e) => {
+						e.stopPropagation();
+						changeQty(it, 1);
+					}}
+					aria-label="Menge erhöhen">+</button
 				>
 			</div>
-		</button>
+		</div>
 	{:else}
 		<p class="py-2 text-center text-sm text-muted">Inventar ist leer.</p>
 	{/each}

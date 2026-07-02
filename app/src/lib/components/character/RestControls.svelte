@@ -11,8 +11,17 @@
 		const trackers = c.customTrackers.map((t) =>
 			t.resetOn === 'short' && t.max != null ? { ...t, value: t.max } : t
 		);
-		character.patch({ customTrackers: trackers }, 'rest');
-		toasts.push('Kurze Rast', 'Kurzrast-Ressourcen aufgefrischt');
+		const features = c.features.map((f) =>
+			f.uses && f.uses.resetOn === 'short' ? { ...f, uses: { ...f.uses, current: f.uses.max } } : f
+		);
+		character.patch({ customTrackers: trackers, features }, 'rest');
+		const arkane = c.features.find((f) => f.id === 'feat-arkane-erholung');
+		toasts.push(
+			'Kurze Rast',
+			arkane && arkane.uses && arkane.uses.current > 0
+				? '💡 Arkane Erholung verfügbar: Slots mit Gesamtgrad ≤ 3 zurückholen!'
+				: 'Kurzrast-Ressourcen aufgefrischt'
+		);
 	}
 
 	function longRest() {
@@ -21,16 +30,20 @@
 			{
 				hp: { current: c.hp.max, temp: 0 },
 				deathSaves: { successes: 0, failures: 0 },
+				hitDiceRemaining: c.level,
 				spellSlots: c.spellSlots.map((s) => ({ ...s, used: 0 })),
 				customTrackers: c.customTrackers.map((t) =>
 					(t.resetOn === 'short' || t.resetOn === 'long') && t.max != null
 						? { ...t, value: t.max }
 						: t
+				),
+				features: c.features.map((f) =>
+					f.uses ? { ...f, uses: { ...f.uses, current: f.uses.max } } : f
 				)
 			},
 			'rest'
 		);
-		toasts.push('Lange Rast', 'TP, Zauberplätze & Ressourcen aufgefrischt', 'good');
+		toasts.push('Lange Rast', 'TP, Zauberplätze, Merkmale & Ressourcen aufgefrischt', 'good');
 	}
 </script>
 

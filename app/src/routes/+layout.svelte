@@ -15,23 +15,24 @@
 	import { character } from '$lib/stores/character.svelte';
 	import { live } from '$lib/stores/live.svelte';
 	import { ui } from '$lib/stores/ui.svelte';
+	import { fx } from '$lib/stores/fx.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 	import QuickCapture from '$lib/components/QuickCapture.svelte';
 	import Toaster from '$lib/components/Toaster.svelte';
 	import CommandPalette from '$lib/components/CommandPalette.svelte';
+	import RollOverlay from '$lib/components/RollOverlay.svelte';
+	import LevelUpOverlay from '$lib/components/LevelUpOverlay.svelte';
 	import Feather from '@lucide/svelte/icons/feather';
 	import Search from '@lucide/svelte/icons/search';
+	import Menu from '@lucide/svelte/icons/menu';
+	import X from '@lucide/svelte/icons/x';
 
 	let { children } = $props();
 
 	onMount(async () => {
+		ui.load();
 		if (!character.current) {
-			try {
-				const res = await fetch('/api/character');
-				if (res.ok) character.set(await res.json());
-			} catch (e) {
-				console.error('Charakter laden fehlgeschlagen', e);
-			}
+			await character.refresh();
 		}
 		live.start();
 	});
@@ -51,6 +52,13 @@
 	}
 
 	const primary = navItems.filter((i) => i.primary);
+	const secondary = navItems.filter((i) => !i.primary);
+
+	// „Mehr"-Sheet bei Navigation schließen
+	$effect(() => {
+		void page.url.pathname;
+		ui.moreOpen = false;
+	});
 </script>
 
 <ModeWatcher defaultMode="dark" />
@@ -146,16 +154,64 @@
 			{@const Icon = item.icon}
 			<a
 				href={item.href}
-				class="flex flex-1 flex-col items-center gap-1 py-2 text-[11px] font-medium transition
+				class="flex min-h-12 flex-1 flex-col items-center justify-center gap-1 py-2 text-[11px] font-medium transition
 					{isActive(item.href) ? 'text-primary' : 'text-muted'}"
 			>
 				<Icon class="h-5 w-5" />
 				{item.label}
 			</a>
 		{/each}
+		<button
+			class="flex min-h-12 flex-1 flex-col items-center justify-center gap-1 py-2 text-[11px] font-medium transition
+				{ui.moreOpen ? 'text-primary' : 'text-muted'}"
+			onclick={() => (ui.moreOpen = !ui.moreOpen)}
+		>
+			<Menu class="h-5 w-5" />
+			Mehr
+		</button>
 	</nav>
+
+	<!-- Mobiles „Mehr"-Sheet -->
+	{#if ui.moreOpen}
+		<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions -->
+		<div
+			class="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm md:hidden"
+			onclick={(e) => e.target === e.currentTarget && (ui.moreOpen = false)}
+		>
+			<div
+				class="absolute inset-x-0 bottom-0 rounded-t-3xl border-t border-border bg-surface p-4 pb-24"
+				style="padding-bottom: calc(6rem + env(safe-area-inset-bottom))"
+			>
+				<div class="mb-3 flex items-center justify-between">
+					<span class="panel-title">Weitere Seiten</span>
+					<button class="btn btn-icon btn-ghost" onclick={() => (ui.moreOpen = false)} aria-label="Schließen">
+						<X class="h-5 w-5" />
+					</button>
+				</div>
+				<div class="grid grid-cols-2 gap-2">
+					{#each secondary as item (item.href)}
+						{@const Icon = item.icon}
+						<a
+							href={item.href}
+							class="flex min-h-12 items-center gap-3 rounded-xl border border-border bg-surface2 px-4 py-3 text-sm font-medium
+								{isActive(item.href) ? 'border-primary/50 text-primary' : ''}"
+						>
+							<Icon class="h-5 w-5" />
+							{item.label}
+						</a>
+					{/each}
+				</div>
+			</div>
+		</div>
+	{/if}
 </div>
 
+<!-- Globale Effekt-Ebenen -->
+{#if fx.edge}
+	<div class="fx-edge fx-{fx.edge}" aria-hidden="true"></div>
+{/if}
 <QuickCapture />
 <Toaster />
 <CommandPalette />
+<RollOverlay />
+<LevelUpOverlay />

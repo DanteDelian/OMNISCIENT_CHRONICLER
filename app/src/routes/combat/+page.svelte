@@ -1,20 +1,44 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { flip } from 'svelte/animate';
+	import { fly } from 'svelte/transition';
 	import { combat } from '$lib/stores/combat.svelte';
 	import { character } from '$lib/stores/character.svelte';
-	import { abilityMod } from '$lib/types';
 	import { rollDie } from '$lib/dice';
 	import { toasts } from '$lib/stores/toast.svelte';
+	import { sound } from '$lib/sound';
 	import Swords from '@lucide/svelte/icons/swords';
 	import ChevronRight from '@lucide/svelte/icons/chevron-right';
+	import ChevronLeft from '@lucide/svelte/icons/chevron-left';
 	import RotateCcw from '@lucide/svelte/icons/rotate-ccw';
 	import Plus from '@lucide/svelte/icons/plus';
 	import Trash2 from '@lucide/svelte/icons/trash-2';
 	import UserPlus from '@lucide/svelte/icons/user-plus';
 	import Shield from '@lucide/svelte/icons/shield';
+	import Skull from '@lucide/svelte/icons/skull';
+	import Dices from '@lucide/svelte/icons/dices';
 
 	onMount(() => combat.load());
+
+	function nextTurn() {
+		const newRound = combat.next();
+		if (newRound) sound.click();
+	}
+
+	function resetCombat() {
+		if (!combat.combatants.length) return;
+		const backup = combat.reset();
+		toasts.push('Kampf beendet', `${backup.combatants.length} Kämpfer entfernt`, 'default', {
+			label: 'Rückgängig',
+			fn: () => combat.restore(backup)
+		});
+	}
+
+	function rollInit(id: string) {
+		const d = rollDie(20);
+		combat.patch(id, { initiative: d });
+		sound.diceRattle();
+	}
 
 	const QUICK_CONDITIONS = ['Vergiftet', 'Liegend', 'Betäubt', 'Gepackt', 'Verängstigt', 'Bewusstlos'];
 
@@ -65,14 +89,27 @@
 		</span>
 		<div>
 			<h1 class="font-display text-2xl font-bold leading-none">Kampf</h1>
-			<span class="text-sm text-muted">Runde {combat.round}</span>
+			{#key combat.round}
+				<span class="inline-block text-sm font-semibold text-accent" in:fly={{ y: 8, duration: 250 }}>
+					Runde {combat.round}
+				</span>
+			{/key}
 		</div>
 	</div>
 	<div class="flex items-center gap-2">
-		<button class="btn btn-ghost text-muted" onclick={() => combat.reset()} title="Kampf zurücksetzen">
+		<button class="btn btn-ghost text-muted" onclick={resetCombat} title="Kampf zurücksetzen">
 			<RotateCcw class="h-4 w-4" />
 		</button>
-		<button class="btn btn-primary text-base" onclick={() => combat.next()} disabled={!combat.combatants.length}>
+		<button
+			class="btn !h-11"
+			onclick={() => combat.prev()}
+			disabled={!combat.combatants.length}
+			title="Vorheriger Zug"
+			aria-label="Vorheriger Zug"
+		>
+			<ChevronLeft class="h-5 w-5" />
+		</button>
+		<button class="btn btn-primary !h-11 text-base" onclick={nextTurn} disabled={!combat.combatants.length}>
 			Nächster Zug <ChevronRight class="h-5 w-5" />
 		</button>
 	</div>
@@ -98,11 +135,12 @@
 	{#each combat.combatants as c (c.id)}
 		{@const active = c.id === combat.activeId}
 		{@const ratio = hpRatio(c)}
+		{@const down = c.hp === 0}
 		<div
 			animate:flip={{ duration: 200 }}
 			class="card overflow-hidden p-0 transition {active
 				? 'ring-2 ring-accent shadow-[0_0_24px_-6px_var(--color-accent)]'
-				: ''}"
+				: ''} {down ? 'opacity-55 saturate-50' : ''}"
 		>
 			<div class="flex items-stretch">
 				<!-- Initiative -->
@@ -118,17 +156,25 @@
 						value={c.initiative}
 						onchange={(e) => combat.patch(c.id, { initiative: +e.currentTarget.value })}
 					/>
+					<button
+						class="mb-1 p-1 text-muted transition hover:text-accent"
+						onclick={() => rollInit(c.id)}
+						title="Initiative würfeln (d20)"
+						aria-label="Initiative würfeln"
+					>
+						<Dices class="h-4 w-4" />
+					</button>
 				</div>
 
 				<div class="min-w-0 flex-1 p-3">
 					<div class="flex items-center justify-between gap-2">
-						<span class="flex items-center gap-1.5 truncate font-semibold">
-							{#if c.isPlayer}<Shield class="h-3.5 w-3.5 shrink-0 text-primary" />{/if}
+						<span class="flex items-center gap-1.5 truncate font-semibold {down ? 'line-through' : ''}">
+							{#if down}<Skull class="h-4 w-4 shrink-0 text-danger" />{:else if c.isPlayer}<Shield class="h-3.5 w-3.5 shrink-0 text-primary" />{/if}
 							{c.name}
 						</span>
 						<div class="flex items-center gap-1 text-sm">
 							<span class="chip !py-0.5 text-xs">RK {c.ac}</span>
-							<button class="btn btn-icon btn-ghost !h-7 !w-7 text-danger" onclick={() => combat.remove(c.id)} aria-label="Entfernen">
+							<button class="btn btn-icon btn-ghost !h-9 !w-9 text-danger" onclick={() => combat.remove(c.id)} aria-label="Entfernen">
 								<Trash2 class="h-4 w-4" />
 							</button>
 						</div>
@@ -136,7 +182,7 @@
 
 					<!-- HP-Leiste + Steuerung -->
 					<div class="mt-2 flex items-center gap-2">
-						<button class="btn btn-icon !h-7 !w-7 !border-danger/40 text-danger" onclick={() => combat.patch(c.id, { hp: Math.max(0, c.hp - 1) })}>−</button>
+						<button class="btn btn-icon !h-9 !w-9 !border-danger/40 text-danger" onclick={() => combat.patch(c.id, { hp: Math.max(0, c.hp - 1) })}>−</button>
 						<div class="relative h-5 flex-1 overflow-hidden rounded-full bg-surface2">
 							<div
 								class="h-full rounded-full transition-all duration-300"
@@ -146,14 +192,14 @@
 								{c.hp} / {c.maxHp}
 							</span>
 						</div>
-						<button class="btn btn-icon !h-7 !w-7 !border-success/40 text-success" onclick={() => combat.patch(c.id, { hp: Math.min(c.maxHp, c.hp + 1) })}>+</button>
+						<button class="btn btn-icon !h-9 !w-9 !border-success/40 text-success" onclick={() => combat.patch(c.id, { hp: Math.min(c.maxHp, c.hp + 1) })}>+</button>
 					</div>
 
 					<!-- Zustände -->
 					<div class="mt-2 flex flex-wrap gap-1">
 						{#each QUICK_CONDITIONS as cond (cond)}
 							<button
-								class="chip !py-0.5 text-[11px] {c.conditions.includes(cond) ? 'chip-active' : ''}"
+								class="chip min-h-8 !py-0.5 text-[11px] {c.conditions.includes(cond) ? 'chip-active' : ''}"
 								onclick={() => toggleCond(c.id, cond, c.conditions)}
 							>
 								{cond}
