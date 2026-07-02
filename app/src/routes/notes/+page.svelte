@@ -32,13 +32,13 @@
 		goto('/notes?path=' + encodeURIComponent(path));
 	}
 
+	let confirmDelNote = $state(false);
+
 	async function newNote() {
-		const title = prompt('Titel der neuen Notiz');
-		if (!title) return;
 		const res = await fetch('/api/notes', {
 			method: 'POST',
 			headers: { 'content-type': 'application/json' },
-			body: JSON.stringify({ title })
+			body: JSON.stringify({ title: 'Neue Notiz' })
 		});
 		const note = await res.json();
 		await goto('/notes?path=' + encodeURIComponent(note.path));
@@ -63,10 +63,15 @@
 
 	async function del() {
 		if (!data.selected) return;
-		if (!confirm(`„${data.selected.title}" löschen?`)) return;
+		if (!confirmDelNote) {
+			confirmDelNote = true;
+			setTimeout(() => (confirmDelNote = false), 3000);
+			return;
+		}
 		await fetch('/api/notes/file?path=' + encodeURIComponent(data.selected.path), {
 			method: 'DELETE'
 		});
+		confirmDelNote = false;
 		await goto('/notes');
 		await invalidateAll();
 	}
@@ -128,7 +133,12 @@
 					<button class="btn btn-icon" onclick={() => (view = view === 'edit' ? 'preview' : 'edit')} title="Ansicht wechseln">
 						{#if view === 'edit'}<Eye class="h-4 w-4" />{:else}<Pencil class="h-4 w-4" />{/if}
 					</button>
-					<button class="btn btn-icon btn-ghost text-danger" onclick={del} aria-label="Löschen">
+					<button
+						class="btn btn-icon text-danger {confirmDelNote ? '!bg-danger !text-white' : 'btn-ghost'}"
+						onclick={del}
+						title={confirmDelNote ? 'Nochmal tippen zum Löschen' : 'Löschen'}
+						aria-label="Löschen"
+					>
 						<Trash2 class="h-4 w-4" />
 					</button>
 					<button class="btn btn-primary" onclick={save} disabled={!dirty}>

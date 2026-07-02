@@ -25,10 +25,12 @@
 
 	let plan = $state<SessionPlan | null>(null);
 	let lastId = $state<string | null>(null);
+	let confirmDel = $state(false);
 	$effect(() => {
 		if (data.selected && data.selected.id !== lastId) {
 			plan = structuredClone($state.snapshot(data.selected)) as SessionPlan;
 			lastId = data.selected.id;
+			confirmDel = false;
 		} else if (!data.selected) {
 			plan = null;
 			lastId = null;
@@ -54,21 +56,20 @@
 	}
 
 	async function newPlan() {
-		const title = prompt('Titel der Session');
-		if (!title) return;
 		const r = await fetch('/api/prep', {
 			method: 'POST',
 			headers: { 'content-type': 'application/json' },
-			body: JSON.stringify({ title })
+			body: JSON.stringify({ title: 'Neue Session' })
 		});
 		const p = await r.json();
-		await goto('/prep?id=' + p.id);
 		await invalidateAll();
+		await goto('/prep?id=' + p.id);
 	}
 
 	async function delPlan() {
-		if (!plan || !confirm(`„${plan.title}" löschen?`)) return;
+		if (!plan) return;
 		await fetch(`/api/prep/${plan.id}`, { method: 'DELETE' });
+		confirmDel = false;
 		await goto('/prep');
 		await invalidateAll();
 	}
@@ -158,7 +159,11 @@
 							</button>
 						{/each}
 					</div>
-					<button class="btn btn-ghost ml-auto text-danger" onclick={delPlan}><Trash2 class="h-4 w-4" /></button>
+					{#if confirmDel}
+						<button class="btn btn-danger ml-auto" onclick={delPlan}>Wirklich löschen?</button>
+					{:else}
+						<button class="btn btn-ghost ml-auto text-danger" onclick={() => (confirmDel = true)} aria-label="Löschen"><Trash2 class="h-4 w-4" /></button>
+					{/if}
 				</div>
 			</div>
 

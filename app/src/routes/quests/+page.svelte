@@ -19,13 +19,13 @@
 		return data.quests.filter((q) => q.status === s);
 	}
 
+	let pendingDel = $state<string | null>(null);
+
 	async function add(status: QuestStatus) {
-		const title = prompt('Quest-Titel');
-		if (!title) return;
 		await fetch('/api/quests', {
 			method: 'POST',
 			headers: { 'content-type': 'application/json' },
-			body: JSON.stringify({ title, status })
+			body: JSON.stringify({ title: 'Neue Quest', status })
 		});
 		await invalidateAll();
 	}
@@ -45,8 +45,18 @@
 		if (next) patch(q.id, { status: next });
 	}
 
-	async function del(id: string) {
-		if (!confirm('Quest löschen?')) return;
+	function askDel(id: string) {
+		if (pendingDel === id) {
+			doDel(id);
+		} else {
+			pendingDel = id;
+			setTimeout(() => {
+				if (pendingDel === id) pendingDel = null;
+			}, 3000);
+		}
+	}
+	async function doDel(id: string) {
+		pendingDel = null;
 		await fetch(`/api/quests/${id}`, { method: 'DELETE' });
 		await invalidateAll();
 	}
@@ -102,7 +112,12 @@
 								<button class="btn btn-icon btn-ghost !h-7 !w-7" onclick={() => move(q, 1)} disabled={q.status === 'done'} aria-label="Weiter">
 									<ChevronRight class="h-4 w-4" />
 								</button>
-								<button class="btn btn-icon btn-ghost !h-7 !w-7 text-danger" onclick={() => del(q.id)} aria-label="Löschen">
+								<button
+									class="btn btn-icon !h-7 !w-7 text-danger {pendingDel === q.id ? '!bg-danger !text-white' : 'btn-ghost'}"
+									onclick={() => askDel(q.id)}
+									title={pendingDel === q.id ? 'Nochmal tippen zum Löschen' : 'Löschen'}
+									aria-label="Löschen"
+								>
 									<Trash2 class="h-4 w-4" />
 								</button>
 							</div>

@@ -38,17 +38,22 @@
 		character.patch({ [field]: v });
 	}
 
-	function editPortrait() {
+	let editingPortrait = $state(false);
+	let portraitDraft = $state('');
+	function startPortrait() {
 		if (!c) return;
-		const v = prompt('Porträt: Emoji (z.B. 🧝) oder Bildpfad (campaign/assets/…)', c.portrait);
-		if (v !== null) setStr('portrait', v.trim());
+		portraitDraft = c.portrait;
+		editingPortrait = true;
+	}
+	function savePortrait() {
+		setStr('portrait', portraitDraft.trim());
+		editingPortrait = false;
 	}
 
 	async function snapshot() {
-		const label = prompt('Bezeichnung des Snapshots (z.B. "Session 12 – Ende")');
-		if (label === null) return;
-		await character.snapshot(label || 'Snapshot');
-		toasts.push('Snapshot gespeichert', label || '', 'good');
+		const label = `Snapshot · ${new Date().toLocaleString('de-DE')}`;
+		await character.snapshot(label);
+		toasts.push('Snapshot gespeichert', label, 'good');
 		loadHistory();
 	}
 
@@ -79,22 +84,43 @@
 	<div class="card card-pad mb-4 overflow-hidden bg-gradient-to-br from-primary/10 via-transparent to-accent/5">
 		<div class="flex flex-col gap-4 sm:flex-row sm:items-center">
 			<!-- Porträt mit glühendem Rahmen -->
-			<button
-				class="group relative mx-auto grid h-28 w-28 shrink-0 place-items-center rounded-2xl border-2 border-primary/40 bg-surface2 shadow-[0_0_30px_-6px_var(--color-primary)] transition hover:border-primary sm:mx-0"
-				onclick={editPortrait}
-				title="Porträt ändern"
-			>
-				{#if isImage}
-					<img src={c.portrait} alt={c.name} class="h-full w-full rounded-2xl object-cover" />
-				{:else}
-					<span class="text-6xl leading-none">{c.portrait || '🧙'}</span>
-				{/if}
-				<span
-					class="absolute -bottom-2 -right-2 grid h-7 w-7 place-items-center rounded-lg bg-primary text-primary-fg opacity-0 transition group-hover:opacity-100"
+			<div class="relative mx-auto sm:mx-0">
+				<button
+					class="group relative grid h-28 w-28 shrink-0 place-items-center rounded-2xl border-2 border-primary/40 bg-surface2 shadow-[0_0_30px_-6px_var(--color-primary)] transition hover:border-primary"
+					onclick={startPortrait}
+					title="Porträt ändern"
 				>
-					<Camera class="h-4 w-4" />
-				</span>
-			</button>
+					{#if isImage}
+						<img src={c.portrait} alt={c.name} class="h-full w-full rounded-2xl object-cover" />
+					{:else}
+						<span class="text-6xl leading-none">{c.portrait || '🧙'}</span>
+					{/if}
+					<span
+						class="absolute -bottom-2 -right-2 grid h-7 w-7 place-items-center rounded-lg bg-primary text-primary-fg opacity-0 transition group-hover:opacity-100"
+					>
+						<Camera class="h-4 w-4" />
+					</span>
+				</button>
+				{#if editingPortrait}
+					<div
+						class="absolute left-1/2 top-full z-30 mt-2 w-60 -translate-x-1/2 rounded-xl border border-border bg-surface p-3 shadow-xl"
+					>
+						<!-- svelte-ignore a11y_autofocus -->
+						<input
+							class="input"
+							bind:value={portraitDraft}
+							autofocus
+							placeholder="🐉 oder campaign/assets/bild.png"
+							onkeydown={(e) => e.key === 'Enter' && savePortrait()}
+						/>
+						<p class="mt-1 text-[11px] text-muted">Emoji oder Bildpfad (Bilder nach campaign/assets/)</p>
+						<div class="mt-2 flex justify-end gap-2">
+							<button class="btn btn-ghost !py-1" onclick={() => (editingPortrait = false)}>Abbrechen</button>
+							<button class="btn btn-primary !py-1" onclick={savePortrait}>OK</button>
+						</div>
+					</div>
+				{/if}
+			</div>
 
 			<div class="min-w-0 flex-1">
 				<input
