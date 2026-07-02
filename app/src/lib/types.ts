@@ -59,6 +59,69 @@ export interface Attack {
 	damageType: string;
 }
 
+/** Zauberschulen mit deutschen Labels und Farbcodes (für Icons/Badges). */
+export type SpellSchool =
+	| 'abjuration'
+	| 'conjuration'
+	| 'divination'
+	| 'enchantment'
+	| 'evocation'
+	| 'illusion'
+	| 'necromancy'
+	| 'transmutation';
+
+export const SPELL_SCHOOLS: Record<SpellSchool, { label: string; color: string }> = {
+	abjuration: { label: 'Bannmagie', color: '#60a5fa' },
+	conjuration: { label: 'Beschwörung', color: '#a78bfa' },
+	divination: { label: 'Erkenntnis', color: '#7dd3fc' },
+	enchantment: { label: 'Verzauberung', color: '#f472b6' },
+	evocation: { label: 'Hervorrufung', color: '#fb923c' },
+	illusion: { label: 'Illusion', color: '#c084fc' },
+	necromancy: { label: 'Nekromantie', color: '#4ade80' },
+	transmutation: { label: 'Verwandlung', color: '#fbbf24' }
+};
+
+export interface Spell {
+	id: string;
+	name: string;
+	level: number; // 0 = Zaubertrick
+	school: SpellSchool;
+	ritual?: boolean;
+	concentration?: boolean;
+	/** Immer vorbereitet (z.B. Nebelschritt durch Volk/Schule) */
+	alwaysPrepared?: boolean;
+	prepared: boolean;
+	castTime: string;
+	range: string;
+	description: string; // Markdown
+}
+
+export interface Feature {
+	id: string;
+	name: string;
+	source: string; // z.B. "Astralelf", "Zauberer", "Schule der Beschwörung"
+	uses?: { current: number; max: number; resetOn: 'short' | 'long' };
+	description: string; // Markdown
+}
+
+/** D&D-5e-XP-Schwellen: XP_THRESHOLDS[n] = Gesamt-EP für Stufe n+1. */
+export const XP_THRESHOLDS = [
+	0, 300, 900, 2700, 6500, 14000, 23000, 34000, 48000, 64000, 85000, 100000, 120000, 140000,
+	165000, 195000, 225000, 265000, 305000, 355000
+];
+
+export function levelForXp(xp: number): number {
+	let lvl = 1;
+	for (let i = 0; i < XP_THRESHOLDS.length; i++) {
+		if (xp >= XP_THRESHOLDS[i]) lvl = i + 1;
+	}
+	return Math.min(20, lvl);
+}
+
+export function profBonusForLevel(level: number): number {
+	return Math.ceil(level / 4) + 1;
+}
+
 export type TrackerType = 'counter' | 'bar' | 'toggle' | 'resource';
 
 export interface CustomTracker {
@@ -99,6 +162,8 @@ export interface Character {
 	saveProficiencies: AbilityKey[];
 	skills: Record<string, ProfLevel>;
 	attacks: Attack[];
+	spells: Spell[];
+	features: Feature[];
 	currency: { gp: number; sp: number; cp: number };
 	notes: string;
 	createdAt: number;

@@ -52,6 +52,8 @@ function flatten(c: Character): Record<string, unknown> {
 		skills: JSON.stringify(c.skills),
 		saveProficiencies: JSON.stringify(c.saveProficiencies),
 		attacks: JSON.stringify(c.attacks),
+		spells: JSON.stringify(c.spells),
+		features: JSON.stringify(c.features),
 		notes: c.notes
 	};
 }
@@ -73,6 +75,8 @@ function mergeCharacter(cur: Character, patch: CharacterPatch): Character {
 		skills: p.skills ?? cur.skills,
 		saveProficiencies: p.saveProficiencies ?? cur.saveProficiencies,
 		attacks: p.attacks ?? cur.attacks,
+		spells: p.spells ?? cur.spells ?? [],
+		features: p.features ?? cur.features ?? [],
 		updatedAt: Date.now()
 	};
 }
@@ -105,7 +109,11 @@ export function getCharacter(id: string): Character | null {
 /** Liefert den aktiven Charakter; seedet die Kampagne beim ersten Start. */
 export function getActiveCharacter(): Character {
 	ensureSeeded();
-	return loadJson<Character>(FILE, seedCharacter());
+	const c = loadJson<Character>(FILE, seedCharacter());
+	// Ältere Dateien ohne neue Felder tolerieren
+	c.spells ??= [];
+	c.features ??= [];
+	return c;
 }
 
 /** Wendet ein Patch an, schreibt Event-Log-Einträge (events.jsonl) und speichert. */

@@ -1,84 +1,255 @@
 {
   "id": "valerius",
-  "name": "Valerius Moonwhisper",
-  "className": "Barde",
-  "race": "Hochelf",
-  "level": 1,
-  "xp": 0,
-  "background": "Gelehrter / Chronist",
-  "alignment": "Rechtschaffen Neutral",
+  "name": "Valerius „Floshem“ Moonwhisper",
+  "className": "Zauberer (Beschwörung)",
+  "race": "Astralelf",
+  "level": 5,
+  "xp": 6500,
+  "background": "Zaffera-Zögling aus Oakhaven",
+  "alignment": "Chaotisch Neutral",
   "pronouns": "er/ihm",
   "portrait": "🧝",
-  "appearance": "Silbriges Haar, mondblaue Augen, ein Federkiel stets griffbereit.",
-  "proficiencyBonus": 2,
-  "abilities": {
-    "str": 8,
-    "dex": 14,
-    "con": 12,
-    "int": 13,
-    "wis": 10,
-    "cha": 16
-  },
-  "hp": {
-    "current": 9,
-    "max": 9,
-    "temp": 0
-  },
-  "ac": 12,
-  "initiativeBonus": 2,
+  "appearance": "Astralelf mit sternenklarem Blick. Tritt als „Floshem, die Unsichtbare Hand“ auf — Waldelf-Magier der Donnergarde, Kapuze tief im Gesicht.",
+  "proficiencyBonus": 3,
+  "abilities": { "str": 10, "dex": 13, "con": 16, "int": 18, "wis": 8, "cha": 12 },
+  "hp": { "current": 28, "max": 28, "temp": 0 },
+  "ac": 11,
+  "initiativeBonus": 1,
   "speed": 9,
-  "hitDice": "1d8",
-  "hitDiceRemaining": 1,
+  "hitDice": "5d6",
+  "hitDiceRemaining": 5,
   "inspiration": false,
-  "conditions": [
-    "Festgesetzt"
-  ],
-  "deathSaves": {
-    "successes": 0,
-    "failures": 0
-  },
+  "conditions": [],
+  "deathSaves": { "successes": 0, "failures": 0 },
   "spellSlots": [
-    {
-      "level": 1,
-      "total": 2,
-      "used": 0
-    }
+    { "level": 1, "total": 4, "used": 0 },
+    { "level": 2, "total": 3, "used": 0 },
+    { "level": 3, "total": 2, "used": 0 }
   ],
   "customTrackers": [
     {
-      "id": "019ed0e4-1640-7289-8c41-8b1e073aa8c0",
-      "label": "Bardische Inspiration",
+      "id": "tracker-ohrring",
+      "label": "Ohrring: Botschaft (1/Tag)",
       "type": "resource",
       "value": 1,
-      "max": 3,
+      "max": 1,
       "resetOn": "long",
-      "color": "#a78bfa"
+      "color": "#f5c451"
     }
   ],
-  "saveProficiencies": [
-    "dex",
-    "cha"
-  ],
-  "skills": {
-    "perception": 1,
-    "persuasion": 1,
-    "performance": 1
-  },
+  "saveProficiencies": ["int", "wis"],
+  "skills": { "arcana": 1, "deception": 1, "insight": 1, "perception": 1 },
   "attacks": [
+    { "id": "attack-dolch", "name": "Dolch", "bonus": 4, "damage": "1d4+1", "damageType": "Stich (Wurf 6/18 m)" },
+    { "id": "attack-stab", "name": "Zweihandstab", "bonus": 3, "damage": "1d6", "damageType": "Wucht" }
+  ],
+  "spells": [
     {
-      "id": "019ed0e4-1640-7289-8c41-8cc4a4731a34",
-      "name": "Rapier",
-      "bonus": 4,
-      "damage": "1d8+2",
-      "damageType": "Stich"
+      "id": "spell-totenglocke",
+      "name": "Totenglocke",
+      "level": 0,
+      "school": "necromancy",
+      "prepared": true,
+      "castTime": "1 Aktion",
+      "range": "18 m",
+      "description": "WE-Rettungswurf (SG 15) oder **2W8 nekrotischer Schaden** — **2W12**, falls das Ziel bereits verletzt ist."
+    },
+    {
+      "id": "spell-geringfuegige-illusion",
+      "name": "Geringfügige Illusion",
+      "level": 0,
+      "school": "illusion",
+      "prepared": true,
+      "castTime": "1 Aktion",
+      "range": "9 m",
+      "description": "Erschafft einen Ton oder das unbewegte Bild eines Objekts (≤ 1,5 m) für 1 Minute. Durchschauen: IN (Nachforschungen) gegen SG 15. Perfekt für Ablenkungen und die Floshem-Tarnung."
+    },
+    {
+      "id": "spell-taschenspielerei",
+      "name": "Taschenspielerei",
+      "level": 0,
+      "school": "transmutation",
+      "prepared": true,
+      "castTime": "1 Aktion",
+      "range": "3 m",
+      "description": "Kleine magische Tricks: Funkenregen, reinigen/beschmutzen, erwärmen/kühlen, Symbole erscheinen lassen. Bis zu 3 Effekte gleichzeitig aktiv."
+    },
+    {
+      "id": "spell-botschaft",
+      "name": "Botschaft",
+      "level": 0,
+      "school": "transmutation",
+      "prepared": true,
+      "castTime": "1 Aktion",
+      "range": "36 m",
+      "description": "Geflüsterte Nachricht — nur das Ziel hört sie und kann antworten. Kein Sichtkontakt nötig. Unverzichtbar für die stille Koordination mit [[Draka Stormscale]]."
+    },
+    {
+      "id": "spell-vertrauten-finden",
+      "name": "Vertrauten finden",
+      "level": 1,
+      "school": "conjuration",
+      "ritual": true,
+      "prepared": false,
+      "castTime": "1 Stunde (Ritual)",
+      "range": "3 m",
+      "description": "Beschwört einen Geist in Tiergestalt — aktuell: **Falke**. Kann nicht angreifen, aber helfen, spähen (du siehst durch seine Sinne!) und Berührungszauber überbringen. Werte: [[Vertraute & Diener]]."
+    },
+    {
+      "id": "spell-unsichtbarer-diener",
+      "name": "Unsichtbarer Diener",
+      "level": 1,
+      "school": "conjuration",
+      "ritual": true,
+      "prepared": true,
+      "castTime": "1 Aktion",
+      "range": "18 m",
+      "description": "Unsichtbare Kraft für einfache Aufgaben, 1 Stunde (RK 10, 1 TP, ST 2, trägt 4,5 kg). Kann nicht angreifen — aber Türen öffnen, tragen, servieren."
+    },
+    {
+      "id": "spell-schutz-vor-gut-und-boese",
+      "name": "Schutz vor Gut und Böse",
+      "level": 1,
+      "school": "abjuration",
+      "concentration": true,
+      "prepared": true,
+      "castTime": "1 Aktion",
+      "range": "Berührung",
+      "description": "10 Min: Schützt vor Aberrationen, Himmlischen, Elementaren, Feen, Unholden und Untoten — sie haben Nachteil auf Angriffe; keine Bezauberung/Furcht/Besessenheit."
+    },
+    {
+      "id": "spell-magie-entdecken",
+      "name": "Magie entdecken",
+      "level": 1,
+      "school": "divination",
+      "ritual": true,
+      "concentration": true,
+      "prepared": true,
+      "castTime": "1 Aktion",
+      "range": "Selbst (9 m)",
+      "description": "Spüre 10 Min lang Magie im Umkreis; als Aktion Aura + Zauberschule erkennen."
+    },
+    {
+      "id": "spell-eismesser",
+      "name": "Eismesser",
+      "level": 1,
+      "school": "conjuration",
+      "prepared": true,
+      "castTime": "1 Aktion",
+      "range": "18 m",
+      "description": "Fernkampf-Zauberangriff (**+7**): 1W10 Stich — danach Explosion: GE-Rettungswurf (SG 15) oder **2W6 Kälte** im 1,5-m-Umkreis. +1W6 je höherem Grad."
+    },
+    {
+      "id": "spell-schild",
+      "name": "Schild",
+      "level": 1,
+      "school": "abjuration",
+      "prepared": true,
+      "castTime": "1 Reaktion",
+      "range": "Selbst",
+      "description": "**+5 RK** bis zu deinem nächsten Zug (auch gegen den auslösenden Angriff); blockt *Magische Geschosse*. ⚠ Konkurriert mit *Gegenzauber* um die Reaktion!"
+    },
+    {
+      "id": "spell-netz",
+      "name": "Netz",
+      "level": 2,
+      "school": "conjuration",
+      "concentration": true,
+      "prepared": true,
+      "castTime": "1 Aktion",
+      "range": "18 m",
+      "description": "6-m-Würfel klebriger Netze (bis 1 Std): GE-Rettungswurf (SG 15) oder **festgehalten**. Braucht Verankerung; brennbar (2W4 Feuer). Valerius’ Signaturzauber — hat drei Society-Magier auf einmal gestoppt."
+    },
+    {
+      "id": "spell-sengender-strahl",
+      "name": "Sengender Strahl",
+      "level": 2,
+      "school": "evocation",
+      "prepared": true,
+      "castTime": "1 Aktion",
+      "range": "36 m",
+      "description": "**3 Strahlen**, je +7 Angriff, je 2W6 Feuer. +1 Strahl je höherem Grad."
+    },
+    {
+      "id": "spell-nebelschritt",
+      "name": "Nebelschritt",
+      "level": 2,
+      "school": "conjuration",
+      "alwaysPrepared": true,
+      "prepared": true,
+      "castTime": "1 Bonusaktion",
+      "range": "Selbst",
+      "description": "In silbrigem Nebel bis zu 9 m an einen sichtbaren freien Ort teleportieren. **Immer vorbereitet** (Astralelf & Beschwörungsschule)."
+    },
+    {
+      "id": "spell-tote-erwecken",
+      "name": "Tote erwecken",
+      "level": 3,
+      "school": "necromancy",
+      "prepared": true,
+      "castTime": "1 Minute",
+      "range": "3 m",
+      "description": "Erschafft **Skelett** oder Zombie aus Leichnam/Knochen; 24 Std unter Kontrolle (Befehle = Bonusaktion). Re-Cast als Aktion erneuert 4 Untote je Slot → mit 2 Slots bis zu **8 Skelette** dauerhaft. Taktik & Statblocks: [[Zauber-Taktiken]], [[Vertraute & Diener]]."
+    },
+    {
+      "id": "spell-gegenzauber",
+      "name": "Gegenzauber",
+      "level": 3,
+      "school": "abjuration",
+      "prepared": true,
+      "castTime": "1 Reaktion",
+      "range": "18 m",
+      "description": "Bricht feindliche Zauber ≤ Grad 3 **automatisch** ab; ab Grad 4: IN-Wurf (1W20+4) gegen SG 10+Grad. ⚠ Konkurriert mit *Schild* um die Reaktion. Taktik: [[Zauber-Taktiken]]."
     }
   ],
-  "currency": {
-    "gp": 0,
-    "sp": 0,
-    "cp": 0
-  },
-  "notes": "Chronist der eigenen Taten. Feder statt Schwert.",
-  "createdAt": 1781621069376,
-  "updatedAt": 1781621208626
+  "features": [
+    {
+      "id": "feat-sternenschritt",
+      "name": "Sternenschritt",
+      "source": "Astralelf",
+      "uses": { "current": 3, "max": 3, "resetOn": "long" },
+      "description": "Bonusaktion: Teleportiere dich bis zu 9 m an einen sichtbaren freien Ort."
+    },
+    {
+      "id": "feat-arkane-erholung",
+      "name": "Arkane Erholung",
+      "source": "Zauberer",
+      "uses": { "current": 1, "max": 1, "resetOn": "long" },
+      "description": "1×/Tag nach einer **kurzen Rast**: Verbrauchte Zauberplätze mit Gesamtgrad ≤ 3 zurückgewinnen."
+    },
+    {
+      "id": "feat-feenabstammung",
+      "name": "Feenabstammung",
+      "source": "Astralelf",
+      "description": "Vorteil auf Rettungswürfe gegen Bezauberung; Magie kann dich nicht einschläfern."
+    },
+    {
+      "id": "feat-astrale-trance",
+      "name": "Astrale Trance",
+      "source": "Astralelf",
+      "description": "Du schläfst nicht — 4 Stunden tiefe Meditation ersetzen 8 Stunden Schlaf."
+    },
+    {
+      "id": "feat-scharfe-sinne",
+      "name": "Scharfe Sinne",
+      "source": "Astralelf",
+      "description": "Geübt in Wahrnehmung."
+    },
+    {
+      "id": "feat-gelehrter-der-beschwoerung",
+      "name": "Gelehrter der Beschwörung",
+      "source": "Schule der Beschwörung",
+      "description": "Beschwörungszauber ins Zauberbuch kopieren kostet halbe Zeit & halbes Gold."
+    },
+    {
+      "id": "feat-geringe-beschwoerung",
+      "name": "Geringe Beschwörung",
+      "source": "Schule der Beschwörung",
+      "description": "Aktion: Erschaffe einen unbelebten, nichtmagischen Gegenstand (≤ 90 cm, ≤ 4,5 kg) in Hand oder Sichtweite. Hält 1 Stunde."
+    }
+  ],
+  "currency": { "gp": 17, "sp": 16, "cp": 0 },
+  "notes": "Zauber-SG 15 · Zauberangriff +7 (IN). Vertrauter: Falke. Ziel: eigene Organisation & Machtbasis in Xantus. Die „Donnergarde“-Tarnung ist aufgeflogen — neue Identität nötig!",
+  "createdAt": 1782973000000,
+  "updatedAt": 1782973000000
 }
