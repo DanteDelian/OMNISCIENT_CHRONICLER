@@ -100,28 +100,44 @@
 	<div class="card card-ornate card-pad mb-4 overflow-hidden bg-gradient-to-br from-primary/10 via-transparent to-accent/5">
 		<div class="flex flex-wrap items-center justify-between gap-4">
 			<div class="flex items-center gap-4">
-				<!-- HP-Ring -->
-				<div class="relative grid h-24 w-24 shrink-0 place-items-center">
-					<svg viewBox="0 0 80 80" class="h-24 w-24 -rotate-90">
-						<circle cx="40" cy="40" r={RADIUS} fill="none" stroke="var(--color-surface2)" stroke-width="7" />
+				<!-- HP-Ring mit Porträt -->
+				<a
+					href="/character"
+					class="relative grid h-24 w-24 shrink-0 place-items-center"
+					title="Zum Charakterbogen"
+				>
+					{#if c.portrait.includes('/') || c.portrait.includes('.')}
+						<img
+							src={c.portrait}
+							alt={c.name}
+							class="absolute inset-2 h-20 w-20 rounded-full object-cover"
+						/>
+					{:else}
+						<span class="absolute inset-2 grid h-20 w-20 place-items-center rounded-full bg-surface2 text-4xl leading-none">
+							{c.portrait || '🧙'}
+						</span>
+					{/if}
+					<svg viewBox="0 0 80 80" class="relative h-24 w-24 -rotate-90">
+						<circle cx="40" cy="40" r={RADIUS} fill="none" stroke="var(--color-surface2)" stroke-width="6" opacity="0.6" />
 						<circle
 							cx="40"
 							cy="40"
 							r={RADIUS}
 							fill="none"
 							stroke={ringColor}
-							stroke-width="7"
+							stroke-width="6"
 							stroke-linecap="round"
 							stroke-dasharray={CIRC}
 							stroke-dashoffset={CIRC * (1 - ratio)}
 							style="transition: stroke-dashoffset 0.6s cubic-bezier(.2,.8,.2,1), stroke 0.4s"
 						/>
 					</svg>
-					<div class="absolute flex flex-col items-center leading-none">
-						<AnimatedNumber value={c.hp.current} class="font-display text-2xl font-bold" />
-						<span class="text-[10px] text-muted">/ {c.hp.max} TP</span>
-					</div>
-				</div>
+					<span
+						class="absolute -bottom-1 left-1/2 -translate-x-1/2 rounded-full border border-border bg-surface px-2 py-0.5 font-display text-xs font-bold tabular-nums shadow"
+					>
+						<AnimatedNumber value={c.hp.current} class={ratio <= 0.25 ? 'text-danger' : ''} />/{c.hp.max}
+					</span>
+				</a>
 				<div class="min-w-0">
 					<div class="flex items-center gap-2">
 						<h1 class="grad-text truncate font-display text-2xl font-bold sm:text-3xl">{c.name}</h1>
@@ -251,6 +267,25 @@
 			</div>
 		{/each}
 	</section>
+{:else if character.none}
+	<!-- Onboarding: Kampagne hat noch keinen Charakter -->
+	<div class="grid min-h-[70vh] place-items-center">
+		<div class="card card-ornate card-pad max-w-md text-center">
+			<span class="mx-auto mb-3 block text-6xl">🧙</span>
+			<h1 class="grad-text font-display text-3xl font-bold">Willkommen, Chronist!</h1>
+			<p class="mt-2 text-sm text-muted">
+				Diese Kampagne hat noch keinen Helden. Erschaffe deinen Charakter — danach warten
+				Charakterbogen, Würfel, Zauberbuch, Kampf-Tracker und Session-Planer auf dich.
+			</p>
+			<a class="btn btn-primary mt-5 w-full !py-3 text-base" href="/characters?neu=1">
+				✨ Ersten Charakter erschaffen
+			</a>
+			<p class="mt-3 text-[11px] text-muted">
+				Tipp: Zuhause kannst du die Kampagne gemeinsam mit Claude Code füllen — alle Daten liegen als
+				Dateien in <code>campaign/</code>.
+			</p>
+		</div>
+	</div>
 {:else if character.error}
 	<div class="grid min-h-[60vh] place-items-center">
 		<div class="card card-pad max-w-sm text-center">

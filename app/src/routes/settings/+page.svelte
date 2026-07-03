@@ -84,13 +84,26 @@
 		</div>
 	</Card>
 
-	<Card title="Mit Claude Code bearbeiten">
+	<Card title="Claude Code = deine Kampagnen-KI" class="md:col-span-2">
 		<div class="flex items-start gap-3 text-sm">
-			<Sparkles class="mt-0.5 h-4 w-4 text-primary" />
-			<p class="text-muted">
-				Alle Kampagnendaten liegen als Dateien in <code>campaign/</code>. Zuhause am PC kannst du sie
-				gemeinsam mit Claude Code direkt bearbeiten — das Dashboard aktualisiert sich live.
-			</p>
+			<Sparkles class="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+			<div class="min-w-0 flex-1">
+				<p class="text-muted">
+					Terminal im Projektordner öffnen → <code>claude</code> starten → einfach sagen, was passieren
+					soll. Claude editiert die Dateien in <code>campaign/</code>, das Dashboard aktualisiert sich
+					<strong class="text-ink">live</strong>. Beispiele (antippen zum Kopieren):
+				</p>
+				<div class="mt-2 flex flex-col gap-1.5">
+					{#each ['Valerius hat 50 Gold gefunden und einen Heiltrank getrunken', 'Lege einen NSC an: Der maskierte Händler, trifft uns im Hafen', 'Fasse die heutige Session in der Chronik zusammen: …', 'Erstelle einen Session-Plan für nächsten Freitag mit 3 Szenen', 'Valerius steigt auf Stufe 6: +5 max. TP, neuer Zauber Feuerball'] as p (p)}
+						<button
+							class="rounded-lg border border-border bg-surface2 px-3 py-1.5 text-left text-xs text-muted transition hover:border-primary/40 hover:text-ink"
+							onclick={() => copy(p)}
+						>
+							„{p}"
+						</button>
+					{/each}
+				</div>
+			</div>
 		</div>
 	</Card>
 

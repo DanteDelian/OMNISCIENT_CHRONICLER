@@ -38,14 +38,35 @@ npm install
 npm run dev      # http://localhost:5173 (im WLAN per --host)
 ```
 
+## Mehrere Charaktere & mit Freunden nutzen
+
+**Charakterverwaltung:** Unter **Charaktere** (Menü) legst du beliebig viele Helden an und wechselst
+per Klick den aktiven Bogen — alles (Bogen, Inventar, Quests, Pläne) hängt am aktiven Charakter.
+
+**Variante A — Freunde bekommen ihre eigene Version:**
+1. Projektordner kopieren/zippen (oder Git-Repo teilen) — **vorher `campaign/` löschen**, sonst
+   bekommen sie deine Kampagne mitgeliefert.
+2. Freund:in startet `start.bat` → die App erkennt die leere Kampagne und zeigt das **Onboarding**
+   („Ersten Charakter erschaffen", 10 Sekunden).
+3. Voraussetzung nur: Node.js installiert.
+
+**Variante B — gemeinsam am Spieltisch:**
+Eine Instanz läuft auf dem Laptop, alle öffnen die WLAN-Adresse (Einstellungen → WLAN-Zugriff).
+Jeder Spieler hat seinen Charakter in der Verwaltung; gewechselt wird der global aktive Bogen.
+Optional `APP_PIN` setzen.
+
+**Backup/Sync zwischen eigenen Geräten:** Git (`git pull`/`git push`) — die ganze Kampagne inklusive
+Historie.
+
 ## Struktur
 
 ```
-campaign/         DEINE Kampagnendaten (Git-getrackt, Claude-editierbar)
-  character.json  voller Charakterbogen
-  inventory.json  Items (Seltenheit, Beschreibung, …)
+campaign/              DEINE Kampagnendaten (Git-getrackt, Claude-editierbar)
+  characters/*.json    Charakterbögen (mehrere möglich; aktiv = meta.activeCharacterId)
+  inventory.json       Items (Seltenheit, Beschreibung, …)
   quests.json · prep.json · meta.json
-  chronicle.md    Session-Logbuch
+  assets/              Bilder (Porträt, Karten) → /api/assets/…
+  chronicle.md         Session-Logbuch
   lore/{npcs,places,notes}/*.md
   README.md       Schema-Doku für Claude
 app/              SvelteKit-App (Frontend + API + Datei-Backend)

@@ -32,6 +32,7 @@ export function ensureDirs() {
 		LORE_DIR,
 		ASSETS_DIR,
 		HISTORY_DIR,
+		path.join(CAMPAIGN_DIR, 'characters'),
 		path.join(LORE_DIR, 'npcs'),
 		path.join(LORE_DIR, 'places'),
 		path.join(LORE_DIR, 'notes')
@@ -75,6 +76,24 @@ export function saveJson(rel: string, data: unknown) {
 
 export function fileExists(rel: string): boolean {
 	return fs.existsSync(campaignFile(rel));
+}
+
+/** Listet Dateinamen (nur .json) in einem Kampagnen-Unterordner. */
+export function listJsonFiles(relDir: string): string[] {
+	const abs = campaignFile(relDir);
+	if (!fs.existsSync(abs)) return [];
+	return fs
+		.readdirSync(abs)
+		.filter((f) => f.toLowerCase().endsWith('.json'))
+		.sort();
+}
+
+export function deleteFile(rel: string) {
+	const p = campaignFile(rel);
+	if (fs.existsSync(p)) {
+		fs.rmSync(p);
+		notifyChange(rel);
+	}
 }
 
 // ---------- Text (Markdown, Chronik) ----------

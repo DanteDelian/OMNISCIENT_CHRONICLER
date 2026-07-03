@@ -27,10 +27,13 @@ class CharacterStore {
 	current = $state<Character | null>(null);
 	saving = $state(false);
 	error = $state(false);
+	/** true = Kampagne hat noch gar keinen Charakter (Onboarding zeigen) */
+	none = $state(false);
 
 	set(c: Character) {
 		this.current = c;
 		this.error = false;
+		this.none = false;
 	}
 
 	/** Lädt den Charakter neu vom Server (z.B. nach externer Datei-Änderung durch Claude). */
@@ -38,7 +41,14 @@ class CharacterStore {
 		try {
 			const res = await fetch('/api/character');
 			if (res.ok) {
-				this.current = (await res.json()) as Character;
+				const data = (await res.json()) as Character | null;
+				if (data && data.id) {
+					this.current = data;
+					this.none = false;
+				} else {
+					this.current = null;
+					this.none = true;
+				}
 				this.error = false;
 			} else {
 				this.error = true;

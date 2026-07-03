@@ -5,10 +5,13 @@ import type { InventoryItem } from '$lib/types';
 import type { RequestHandler } from './$types';
 
 export const GET: RequestHandler = () => {
-	return json(listItems(getActiveCharacter().id));
+	const char = getActiveCharacter();
+	return json(char ? listItems(char.id) : []);
 };
 
 export const POST: RequestHandler = async ({ request }) => {
+	const char = getActiveCharacter();
+	if (!char) return json({ error: 'Kein Charakter aktiv' }, { status: 400 });
 	const data = (await request.json().catch(() => ({}))) as Partial<InventoryItem>;
-	return json(createItem(getActiveCharacter().id, data));
+	return json(createItem(char.id, data));
 };

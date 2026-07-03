@@ -5,10 +5,13 @@ import type { Quest } from '$lib/types';
 import type { RequestHandler } from './$types';
 
 export const GET: RequestHandler = () => {
-	return json(listQuests(getActiveCharacter().id));
+	const char = getActiveCharacter();
+	return json(char ? listQuests(char.id) : []);
 };
 
 export const POST: RequestHandler = async ({ request }) => {
+	const char = getActiveCharacter();
+	if (!char) return json({ error: 'Kein Charakter aktiv' }, { status: 400 });
 	const data = (await request.json().catch(() => ({}))) as Partial<Quest>;
-	return json(createQuest(getActiveCharacter().id, data));
+	return json(createQuest(char.id, data));
 };

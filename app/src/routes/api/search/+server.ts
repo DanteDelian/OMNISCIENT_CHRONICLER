@@ -28,6 +28,7 @@ export const GET: RequestHandler = ({ url }) => {
 	const q = (url.searchParams.get('q') ?? '').trim().toLowerCase();
 	if (q.length < 2) return json([]);
 	const char = getActiveCharacter();
+	const charId = char?.id ?? '';
 	const results: Result[] = [];
 
 	for (const n of listNotes()) {
@@ -45,7 +46,7 @@ export const GET: RequestHandler = ({ url }) => {
 		});
 	}
 
-	for (const qu of listQuests(char.id)) {
+	for (const qu of listQuests(charId)) {
 		const s = score(q, qu.title, `${qu.giver} ${qu.nextStep} ${qu.notes}`);
 		if (s <= 0) continue;
 		results.push({
@@ -57,7 +58,7 @@ export const GET: RequestHandler = ({ url }) => {
 		});
 	}
 
-	for (const it of listItems(char.id)) {
+	for (const it of listItems(charId)) {
 		const s = score(q, it.name, it.notes);
 		if (s <= 0) continue;
 		results.push({
@@ -69,7 +70,7 @@ export const GET: RequestHandler = ({ url }) => {
 		});
 	}
 
-	for (const p of listPlans(char.id)) {
+	for (const p of listPlans(charId)) {
 		const s = score(q, p.title, `${p.strongStart} ${p.npcs} ${p.locations} ${p.notes}`);
 		if (s <= 0) continue;
 		results.push({
