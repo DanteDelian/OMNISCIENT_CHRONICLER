@@ -6,7 +6,12 @@ interface Meta {
 	name: string;
 	system: string;
 	spotifyUrl?: string;
+	activeCharacterId?: string;
 	createdAt?: number;
+	// Kampagnen-Zustand (Campaign State) — die aktuelle Lage der Kampagne.
+	location?: string; // Wo sind wir gerade?
+	situation?: string; // Was ist die aktuelle Lage? (kurzer Satz)
+	story?: string; // Aktueller Handlungsbogen (Kapitel-Titel)
 }
 
 const FALLBACK: Meta = { name: 'Die Chroniken von Xantus', system: 'D&D 5e', spotifyUrl: '' };
