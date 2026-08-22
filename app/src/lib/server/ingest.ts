@@ -11,12 +11,13 @@ import type {
 	IngestKind,
 	SessionUpdatesDTO
 } from '$lib/types';
-import { profBonusForLevel } from '$lib/types';
+import { profBonusForLevel, KNOWLEDGE_TIER_LABELS } from '$lib/types';
 import { newId } from '$lib/id';
 import { getActiveCharacter, updateCharacter } from './characters';
 import { listQuests, createQuest, updateQuest } from './quests';
 import { listItems, createItem, updateItem } from './inventory';
 import { listNotes, readNote, writeNote } from './vault';
+import { createKnowledge } from './knowledge';
 import { loadText, saveText, appendEvent } from './campaign';
 import { createSession } from './sessions';
 
@@ -166,6 +167,25 @@ export function proposeChanges(dto: SessionUpdatesDTO, char: Character | null): 
 		});
 	}
 
+	for (const k of dto.knowledge ?? []) {
+		if (!k.statement?.trim()) continue;
+		const tier = k.tier || 'rumor';
+		out.push({
+			id: newId(),
+			kind: 'knowledge',
+			title: `${KNOWLEDGE_TIER_LABELS[tier]}${k.topic ? ' · ' + k.topic : ''}`,
+			summary: k.statement.trim(),
+			confidence: tier === 'fact' ? 'known' : tier === 'rumor' ? 'inferred' : 'suggested',
+			after: k.statement.trim(),
+			payload: {
+				statement: k.statement.trim(),
+				tier,
+				view: k.view || 'character',
+				topic: k.topic || 'Allgemein'
+			}
+		});
+	}
+
 	if (dto.character && char) {
 		const c = dto.character;
 		const parts: string[] = [];
@@ -277,6 +297,16 @@ export function applySession(
 				case 'glossar': {
 					const body = /^#\s/m.test(p.content) ? p.content : `# ${p.name}\n\n${p.content}`;
 					writeNote(p.path, body, { title: p.name, source_session: session.number });
+					break;
+				}
+				case 'knowledge': {
+					createKnowledge(char?.id ?? null, {
+						statement: p.statement,
+						tier: p.tier,
+						view: p.view,
+						topic: p.topic,
+						sourceSession: session.number
+					});
 					break;
 				}
 				case 'character': {

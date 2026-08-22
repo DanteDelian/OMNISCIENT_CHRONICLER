@@ -42,12 +42,15 @@ GIB AUSSCHLIESSLICH GÜLTIGES JSON in genau dieser Form zurück (keine Code-Fenc
   "quests": [{ "title": "", "giver": "", "status": "rumor|active|done", "priority": "low|normal|high", "next_step": "", "reward": "" }],
   "inventory": [{ "name": "", "quantity": 1, "weight": 0, "category": "weapon|armor|gear|consumable|magic|treasure", "note": "" }],
   "glossar": [{ "type": "Personen|Orte", "name": "", "content": "Markdown-Kurzeintrag, beginne mit einem Satz Wer/Was." }],
+  "knowledge": [{ "statement": "atomare Aussage", "tier": "fact|rumor|theory", "view": "character|player", "topic": "Thema, z.B. Der Kult" }],
   "character": { "hp_max": null, "level": null, "gold_delta": 0, "silver_delta": 0, "copper_delta": 0, "new_conditions": [] }
 }
 Regeln:
 - inventory.quantity NEGATIV bei Verlust/Verbrauch (z.B. „einen Trank benutzt" -> -1).
 - Nur Felder füllen, für die es Belege gibt; leere Arrays statt Erfindungen. "character" darf null sein.
-- quests: bereits erledigte -> status "done"; neue Gerüchte -> "rumor".`;
+- quests: bereits erledigte -> status "done"; neue Gerüchte -> "rumor".
+- knowledge: fact = im Spiel BESTÄTIGT · rumor = jemand behauptet/hat gehört · theory = Vermutung/Spekulation.
+  Mach aus einer Theorie NIE einen Fakt. view="player" nur für Meta-/Spielerwissen, das die Figur (noch) nicht hat; sonst "character".`;
 
 class GeminiProvider implements AiProvider {
 	readonly name = 'gemini';
@@ -110,6 +113,7 @@ export function parseDto(text: string): SessionUpdatesDTO {
 		quests: Array.isArray(raw.quests) ? raw.quests : [],
 		inventory: Array.isArray(raw.inventory) ? raw.inventory : [],
 		glossar: Array.isArray(raw.glossar) ? raw.glossar : [],
+		knowledge: Array.isArray(raw.knowledge) ? raw.knowledge : [],
 		character: raw.character ?? null
 	};
 }
@@ -134,6 +138,10 @@ class MockProvider implements AiProvider {
 			],
 			inventory: [{ name: 'Demo-Fund', quantity: 1, weight: 0, category: 'gear', note: 'aus dem Offline-Modus' }],
 			glossar: [{ type: 'Personen', name: 'Demo-NSC', content: 'Ein im Offline-Modus angelegter Beispiel-Eintrag.' }],
+			knowledge: [
+				{ statement: 'Ein Demo-Fakt aus dem Offline-Modus.', tier: 'fact', view: 'character', topic: 'Demo' },
+				{ statement: 'Vielleicht steckt mehr dahinter (Vermutung).', tier: 'theory', view: 'player', topic: 'Demo' }
+			],
 			character: { hp_max: null, level: null, gold_delta: 5, silver_delta: 0, copper_delta: 0, new_conditions: [] }
 		};
 	}

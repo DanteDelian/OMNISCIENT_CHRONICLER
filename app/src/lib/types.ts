@@ -341,6 +341,12 @@ export interface SessionUpdatesDTO {
 		note: string;
 	}[];
 	glossar: { type: 'Personen' | 'Orte'; name: string; content: string }[];
+	knowledge?: {
+		statement: string;
+		tier: 'fact' | 'rumor' | 'theory';
+		view?: 'character' | 'player';
+		topic?: string;
+	}[];
 	character?: {
 		hp_max?: number | null;
 		level?: number | null;
@@ -351,7 +357,14 @@ export interface SessionUpdatesDTO {
 	} | null;
 }
 
-export type IngestKind = 'chronik' | 'analyse' | 'quest' | 'inventory' | 'glossar' | 'character';
+export type IngestKind =
+	| 'chronik'
+	| 'analyse'
+	| 'quest'
+	| 'inventory'
+	| 'glossar'
+	| 'character'
+	| 'knowledge';
 
 export const INGEST_KIND_LABELS: Record<IngestKind, string> = {
 	chronik: 'Chronik',
@@ -359,7 +372,8 @@ export const INGEST_KIND_LABELS: Record<IngestKind, string> = {
 	quest: 'Quest',
 	inventory: 'Inventar',
 	glossar: 'Glossar',
-	character: 'Charakter'
+	character: 'Charakter',
+	knowledge: 'Wissen'
 };
 
 /**
@@ -398,6 +412,41 @@ export interface Session {
 	highlights: string[];
 	changeKinds: IngestKind[];
 	appliedCount: number;
+	createdAt: number;
+	updatedAt: number;
+}
+
+/**
+ * Wissens-Hierarchie — Kernprinzip: die App unterscheidet, was bestätigt ist,
+ * was jemand behauptet und was nur vermutet wird. Eine Theorie wird NIE
+ * automatisch zum Fakt.
+ */
+export type KnowledgeTier = 'fact' | 'rumor' | 'theory';
+
+export const KNOWLEDGE_TIER_LABELS: Record<KnowledgeTier, string> = {
+	fact: 'Fakt',
+	rumor: 'Gerücht',
+	theory: 'Theorie'
+};
+
+/** Charakterwissen vs. Spielerwissen (Metagaming-Grenze sichtbar halten). */
+export type KnowledgeView = 'character' | 'player';
+
+export const KNOWLEDGE_VIEW_LABELS: Record<KnowledgeView, string> = {
+	character: 'Charakter weiß es',
+	player: 'Nur Spielerwissen'
+};
+
+export interface KnowledgeEntry {
+	id: string;
+	characterId: string | null;
+	statement: string; // atomare Aussage
+	tier: KnowledgeTier;
+	view: KnowledgeView;
+	topic: string; // Gruppierung, z.B. „Der Kult", „Voss"
+	subject: string; // optional verknüpfte Entität (Wikilink-Titel)
+	sourceSession: number | null; // Provenance
+	resolved: boolean; // Theorie bestätigt/widerlegt & abgehakt
 	createdAt: number;
 	updatedAt: number;
 }

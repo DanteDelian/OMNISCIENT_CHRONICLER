@@ -12,6 +12,7 @@
 	import Package from '@lucide/svelte/icons/package';
 	import Users from '@lucide/svelte/icons/users';
 	import Shield from '@lucide/svelte/icons/shield';
+	import Lightbulb from '@lucide/svelte/icons/lightbulb';
 	import Check from '@lucide/svelte/icons/check';
 	import X from '@lucide/svelte/icons/x';
 	import Pencil from '@lucide/svelte/icons/pencil';
@@ -40,7 +41,8 @@
 		quest: ScrollText,
 		inventory: Package,
 		glossar: Users,
-		character: Shield
+		character: Shield,
+		knowledge: Lightbulb
 	};
 	const CONF_COLOR: Record<ChangeConfidence, string> = {
 		known: 'var(--color-success)',
