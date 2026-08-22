@@ -9,6 +9,10 @@ Läuft auf Laptop, Tablet & Handy.
 - ⚔️ **Kampf-Tracker** — Initiative-Reihenfolge, aktiver Zug, Runden, HP & Zustände der Gegner, „Held übernehmen".
 - 📋 **Session-Vorbereitung** (Lazy-DM-Methode) — Starker Auftakt, Szenen, Geheimnisse & Hinweise (aufdeckbar), NSCs, Orte, Schätze, Checkliste.
 - 🎲 **Würfelroller** mit Krit-Funken · ⌘K-**Befehlspalette** mit Volltextsuche · Quest-Board · Chronik · Glossar.
+- 🪄 **Session-Werkstatt** — nach der Session Roh-Notizen eingeben; eine **optionale** KI schlägt daraus
+  Änderungen an Chronik, Quests, Inventar, Glossar & Charakter vor, die du **einzeln prüfst**
+  (Akzeptieren/Bearbeiten/Ablehnen). Es wird **nichts ohne deine Freigabe** geschrieben, und jede
+  übernommene Änderung trägt ihre Session als Quelle (Provenance).
 - 🌌 Dark-Fantasy-Look (BG3-inspiriert): Vignette, Glut-Partikel, glühende Karten, animierte Zahlen.
 - 🔄 **Live-Sync:** Dateien in `campaign/` sind die Datenquelle — ändert Claude Code sie, aktualisiert sich das Dashboard sofort.
 
@@ -18,6 +22,22 @@ Statt einer eingebauten KI bearbeitest du die Kampagne **gemeinsam mit Claude Co
 liegen als lesbare Dateien in `campaign/` (JSON + Markdown). Zuhause am PC sagst du z. B.
 „Claude, leg einen NSC namens Saladin an" oder „erhöhe Valerius' max. TP auf 16" — Claude editiert
 die Datei, das laufende Dashboard zieht live nach. Git versioniert deine komplette Kampagne.
+
+### Optionale In-App-KI (Session-Werkstatt)
+
+Zusätzlich kannst du die **Session-Werkstatt** direkt in der App nutzen: Roh-Notizen rein → geprüfter
+Vorschlags-Diff → übernehmen. Standard-Provider ist **Gemini**, vollständig optional und steckbar:
+
+```
+# .env  (bzw. app/.env in der Entwicklung)
+AI_PROVIDER=gemini            # gemini | mock | none
+GEMINI_API_KEY=dein-key
+GEMINI_MODEL=gemini-2.5-flash
+```
+
+Ohne Schlüssel läuft alles weiter — die Werkstatt zeigt dann den manuellen/Claude-Code-Weg. `AI_PROVIDER=mock`
+liefert einen Offline-Demo-Patch ohne externen Aufruf. Die KI **schlägt nur vor** und schreibt nie ohne deine
+Freigabe.
 
 ## Schnellstart
 

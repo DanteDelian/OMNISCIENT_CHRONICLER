@@ -307,8 +307,22 @@ export interface Note {
 	updatedAt: number;
 }
 
-/** Rohe KI-Vorschläge vom Sidecar (entspricht dem Pydantic-Schema). */
+/** Status des (optionalen, steckbaren) KI-Providers. */
+export interface AiStatus {
+	configured: boolean;
+	provider: string;
+	model: string;
+	hint?: string;
+}
+
+/** Rohe KI-Vorschläge vom Sidecar (steckbarer Provider, structured output). */
 export interface SessionUpdatesDTO {
+	/** Prägnanter Titel der Session (z.B. „Der Sturm auf die Zuflucht"). */
+	session_title?: string;
+	/** 2–3 Sätze Zusammenfassung. */
+	session_summary?: string;
+	/** Wichtigste Ereignisse als kurze Stichpunkte. */
+	session_highlights?: string[];
 	chronik_append: string;
 	analyse_content: string;
 	quests: {
@@ -339,15 +353,53 @@ export interface SessionUpdatesDTO {
 
 export type IngestKind = 'chronik' | 'analyse' | 'quest' | 'inventory' | 'glossar' | 'character';
 
+export const INGEST_KIND_LABELS: Record<IngestKind, string> = {
+	chronik: 'Chronik',
+	analyse: 'Analyse',
+	quest: 'Quest',
+	inventory: 'Inventar',
+	glossar: 'Glossar',
+	character: 'Charakter'
+};
+
+/**
+ * Woher eine vorgeschlagene Änderung stammt — Kernprinzip: die KI ersetzt nie die Wahrheit.
+ * known = direkt im Text gesagt · inferred = daraus abgeleitet · suggested = Vermutung/Idee der KI.
+ */
+export type ChangeConfidence = 'known' | 'inferred' | 'suggested';
+
+export const CONFIDENCE_LABELS: Record<ChangeConfidence, string> = {
+	known: 'Bekannt',
+	inferred: 'Abgeleitet',
+	suggested: 'Vorschlag'
+};
+
 /** Ein einzelner, bestätigbarer Änderungsvorschlag für die Diff-Vorschau. */
 export interface IngestChange {
 	id: string;
 	kind: IngestKind;
 	title: string;
 	summary: string;
+	confidence?: ChangeConfidence;
 	before?: string;
 	after?: string;
 	payload: Record<string, unknown>;
+}
+
+/** Eine Sitzung als eigenständige Entität (kanonisch: campaign/sessions.json). */
+export interface Session {
+	id: string;
+	characterId: string | null;
+	number: number;
+	title: string;
+	date: string; // ISO (YYYY-MM-DD)
+	rawNotes: string;
+	summary: string;
+	highlights: string[];
+	changeKinds: IngestKind[];
+	appliedCount: number;
+	createdAt: number;
+	updatedAt: number;
 }
 
 /** Deutsche Labels für Event-Log-Feldpfade. */

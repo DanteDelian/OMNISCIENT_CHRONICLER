@@ -8,6 +8,7 @@ import NotebookPen from '@lucide/svelte/icons/notebook-pen';
 import ScrollText from '@lucide/svelte/icons/scroll-text';
 import BookOpen from '@lucide/svelte/icons/book-open';
 import Users from '@lucide/svelte/icons/users';
+import WandSparkles from '@lucide/svelte/icons/wand-sparkles';
 import Settings from '@lucide/svelte/icons/settings';
 
 export interface NavItem {
@@ -21,6 +22,7 @@ export interface NavItem {
 export const navItems: NavItem[] = [
 	{ href: '/', label: 'Dashboard', icon: LayoutDashboard, primary: true },
 	{ href: '/character', label: 'Charakter', icon: Shield, primary: true },
+	{ href: '/werkstatt', label: 'Werkstatt', icon: WandSparkles, primary: true },
 	{ href: '/combat', label: 'Kampf', icon: Swords, primary: true },
 	{ href: '/notes', label: 'Notizen', icon: NotebookPen, primary: true },
 	{ href: '/characters', label: 'Charaktere', icon: UsersRound },

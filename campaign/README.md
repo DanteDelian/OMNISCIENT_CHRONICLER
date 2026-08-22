@@ -18,7 +18,9 @@ bearbeiten** — das Dashboard aktualisiert sich live (per Datei-Watcher/SSE).
   - category: weapon|armor|gear|consumable|magic|treasure · rarity: common|uncommon|rare|veryrare|legendary|artifact
 - `quests.json` — `{ title, giver, status: rumor|active|done, priority, nextStep, reward, notes }`
 - `prep.json` — Lazy-DM Session-Pläne (Auftakt, Szenen, Geheimnisse, NSCs, Orte, Schätze, Checkliste).
-- `chronicle.md` — Session-Logbuch (Markdown, unten anhängen).
+- `sessions.json` — Sessions als Entitäten: `{ number, title, date, summary, highlights, changeKinds, appliedCount }`.
+  Wird von der **Session-Werkstatt** gepflegt; verknüpft übernommene Änderungen mit ihrer Quelle (Provenance).
+- `chronicle.md` — Session-Logbuch (Markdown, unten anhängen). Die Werkstatt hängt je Session einen Block an.
 - `lore/{npcs,places,notes}/*.md` — Lore als Markdown; `[[Wikilinks]]` verbinden Einträge (Auflösung über Titel/H1).
 - `assets/` — Bilder (Porträt, Karten); im UI unter `/api/assets/<datei>` (siehe assets/README.md).
 - `.history/` — generiert (Event-Log, Snapshots). Nicht von Hand bearbeiten.
