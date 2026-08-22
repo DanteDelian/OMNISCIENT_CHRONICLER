@@ -43,7 +43,6 @@ export function ensureSeeded() {
 	saveJson('meta.json', {
 		name: 'Neue Kampagne',
 		system: 'D&D 5e',
-		spotifyUrl: '',
 		createdAt: Date.now()
 	});
 	saveJson('inventory.json', []);

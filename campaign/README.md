@@ -4,7 +4,7 @@ Diese Dateien sind die einzige Datenquelle des Dashboards. **Du (Claude Code) da
 bearbeiten** — das Dashboard aktualisiert sich live (per Datei-Watcher/SSE).
 
 ## Dateien
-- `character.json` — der komplette Charakterbogen. Wichtige Felder:
+- `characters/<id>.json` — die Charakterbögen (mehrere möglich; aktiv = `meta.activeCharacterId`). Wichtige Felder:
   - `hp: { current, max, temp }`, `ac`, `level`, `xp`, `proficiencyBonus`
   - `abilities: { str, dex, con, int, wis, cha }` (Werte, nicht Modifikatoren)
   - `skills: { <key>: 0|1|2 }` (0 keine, 1 geübt, 2 Expertise) — Keys siehe app/src/lib/types.ts (SKILLS)
@@ -20,6 +20,7 @@ bearbeiten** — das Dashboard aktualisiert sich live (per Datei-Watcher/SSE).
 - `prep.json` — Lazy-DM Session-Pläne (Auftakt, Szenen, Geheimnisse, NSCs, Orte, Schätze, Checkliste).
 - `sessions.json` — Sessions als Entitäten: `{ number, title, date, summary, highlights, changeKinds, appliedCount }`.
   Wird von der **Session-Werkstatt** gepflegt; verknüpft übernommene Änderungen mit ihrer Quelle (Provenance).
+- `knowledge.json` — Wissen: `{ statement, tier: fact|rumor|theory, view: character|player, topic, sourceSession }`.
 - `chronicle.md` — Session-Logbuch (Markdown, unten anhängen). Die Werkstatt hängt je Session einen Block an.
 - `lore/{npcs,places,notes}/*.md` — Lore als Markdown; `[[Wikilinks]]` verbinden Einträge (Auflösung über Titel/H1).
 - `assets/` — Bilder (Porträt, Karten); im UI unter `/api/assets/<datei>` (siehe assets/README.md).

@@ -28,6 +28,7 @@ export function createQuest(characterId: string, data: Partial<Quest>): Quest {
 		reward: data.reward || '',
 		notes: data.notes || '',
 		sortOrder: data.sortOrder ?? now,
+		sourceSession: data.sourceSession ?? null,
 		updatedAt: now
 	};
 	quests.push(q);

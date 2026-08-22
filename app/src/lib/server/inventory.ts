@@ -26,6 +26,7 @@ export function createItem(characterId: string, data: Partial<InventoryItem>): I
 		equipped: data.equipped ?? false,
 		attuned: data.attuned ?? false,
 		notes: data.notes || '',
+		sourceSession: data.sourceSession ?? null,
 		updatedAt: Date.now()
 	};
 	items.push(item);

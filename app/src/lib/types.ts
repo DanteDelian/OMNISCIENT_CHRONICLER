@@ -1,5 +1,6 @@
-// Gemeinsame Typen für Omniscient Chronicler v3.
-// Diese Shapes spiegeln die JSON-Felder in der SQLite-DB wider.
+// Gemeinsame Typen für Omniscient Chronicler.
+// Diese Shapes spiegeln die JSON-/Markdown-Dateien im campaign/-Vault wider
+// (dateibasiert, keine Datenbank) — siehe docs/ARCHITECTURE.md.
 
 export type AbilityKey = 'str' | 'dex' | 'con' | 'int' | 'wis' | 'cha';
 
@@ -233,6 +234,7 @@ export interface InventoryItem {
 	equipped: boolean;
 	attuned: boolean;
 	notes: string;
+	sourceSession?: number | null; // Provenance: aus welcher Session
 	updatedAt: number;
 }
 
@@ -255,6 +257,7 @@ export interface Quest {
 	reward: string;
 	notes: string;
 	sortOrder: number;
+	sourceSession?: number | null; // Provenance: aus welcher Session
 	updatedAt: number;
 }
 

@@ -20,6 +20,7 @@
 	import CustomTrackers from '$lib/components/character/CustomTrackers.svelte';
 	import CurrencyTracker from '$lib/components/character/CurrencyTracker.svelte';
 	import XpBar from '$lib/components/character/XpBar.svelte';
+	import DiceRoller from '$lib/components/DiceRoller.svelte';
 	import Camera from '@lucide/svelte/icons/camera';
 	import Star from '@lucide/svelte/icons/star';
 
@@ -187,6 +188,7 @@
 		<Card title="Zauberplätze" class="card-hover"><SpellSlots /></Card>
 		<Card title="Ressourcen & Tracker" class="card-hover"><CustomTrackers /></Card>
 		<Card title="Währung" class="card-hover"><CurrencyTracker /></Card>
+		<Card title="Würfel" class="card-hover"><DiceRoller /></Card>
 
 		<Card title="Aussehen & Notizen" class="card-hover">
 			<textarea

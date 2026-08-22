@@ -1,42 +1,17 @@
-# sv
+# app/ — SvelteKit-Frontend + API + Datei-Backend
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Die Anwendung des **Omniscient Chronicler**. Sie liest/schreibt den Kampagnen-Vault in `../campaign/`.
 
-## Creating a project
+- Projekt-Übersicht & Start: **[../README.md](../README.md)**
+- Ziel-Funktionen: **[../docs/FEATURES.md](../docs/FEATURES.md)**
+- Architektur & Datenmodell: **[../docs/ARCHITECTURE.md](../docs/ARCHITECTURE.md)**
+- Konventionen für Claude Code: **[../CLAUDE.md](../CLAUDE.md)**
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Entwicklung
 
-```sh
-# create a new project
-npx sv create my-app
+```bash
+npm install
+npm run dev      # http://localhost:5173 (liest app/.env)
+npm run check    # svelte-check — vor jedem Commit grün halten
+npm run build    # Produktionsbuild (adapter-node)
 ```
-
-To recreate this project with the same configuration:
-
-```sh
-# recreate this project
-npx sv@0.15.4 create --template minimal --types ts --add tailwindcss="plugins:typography" sveltekit-adapter="adapter:node" --no-download-check --no-install app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.

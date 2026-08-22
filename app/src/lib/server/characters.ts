@@ -23,7 +23,6 @@ const SNAP_FILE = '.history/snapshots.json';
 interface MetaLite {
 	name?: string;
 	system?: string;
-	spotifyUrl?: string;
 	activeCharacterId?: string;
 	createdAt?: number;
 }

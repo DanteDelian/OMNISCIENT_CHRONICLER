@@ -280,7 +280,7 @@ export function applySession(
 				case 'quest': {
 					if (!char) throw new Error('Kein aktiver Charakter');
 					if (p.existingId) updateQuest(p.existingId, p.data);
-					else createQuest(char.id, p.data);
+					else createQuest(char.id, { ...p.data, sourceSession: session.number });
 					break;
 				}
 				case 'inventory': {
@@ -290,7 +290,7 @@ export function applySession(
 						const q = Math.max(0, (cur?.quantity ?? 0) + (p.delta ?? 0));
 						updateItem(p.existingId, { quantity: q });
 					} else {
-						createItem(char.id, p.data);
+						createItem(char.id, { ...p.data, sourceSession: session.number });
 					}
 					break;
 				}

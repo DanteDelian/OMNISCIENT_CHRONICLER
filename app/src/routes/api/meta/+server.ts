@@ -5,7 +5,6 @@ import type { RequestHandler } from './$types';
 interface Meta {
 	name: string;
 	system: string;
-	spotifyUrl?: string;
 	activeCharacterId?: string;
 	createdAt?: number;
 	// Kampagnen-Zustand (Campaign State) — die aktuelle Lage der Kampagne.
@@ -14,7 +13,7 @@ interface Meta {
 	story?: string; // Aktueller Handlungsbogen (Kapitel-Titel)
 }
 
-const FALLBACK: Meta = { name: 'Die Chroniken von Xantus', system: 'D&D 5e', spotifyUrl: '' };
+const FALLBACK: Meta = { name: 'Die Chroniken von Xantus', system: 'D&D 5e' };
 
 export const GET: RequestHandler = () => {
 	return json(loadJson<Meta>('meta.json', FALLBACK));
