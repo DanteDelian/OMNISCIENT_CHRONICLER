@@ -1,218 +1,285 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { flip } from 'svelte/animate';
-	import { fly } from 'svelte/transition';
-	import { combat } from '$lib/stores/combat.svelte';
 	import { character } from '$lib/stores/character.svelte';
-	import { rollDie } from '$lib/dice';
+	import { live } from '$lib/stores/live.svelte';
 	import { toasts } from '$lib/stores/toast.svelte';
-	import { sound } from '$lib/sound';
+	import { COMPANION_KIND_LABELS, type Companion, type CompanionKind } from '$lib/types';
+	import { CREATURE_TEMPLATES } from '$lib/creatures';
+	import AttacksCard from '$lib/components/character/AttacksCard.svelte';
+	import SpellSlots from '$lib/components/character/SpellSlots.svelte';
+	import ConditionChips from '$lib/components/character/ConditionChips.svelte';
+	import DeathSaves from '$lib/components/character/DeathSaves.svelte';
 	import Swords from '@lucide/svelte/icons/swords';
-	import ChevronRight from '@lucide/svelte/icons/chevron-right';
-	import ChevronLeft from '@lucide/svelte/icons/chevron-left';
-	import RotateCcw from '@lucide/svelte/icons/rotate-ccw';
-	import Plus from '@lucide/svelte/icons/plus';
-	import Trash2 from '@lucide/svelte/icons/trash-2';
-	import UserPlus from '@lucide/svelte/icons/user-plus';
 	import Shield from '@lucide/svelte/icons/shield';
-	import Skull from '@lucide/svelte/icons/skull';
-	import Dices from '@lucide/svelte/icons/dices';
+	import Brain from '@lucide/svelte/icons/brain';
+	import Plus from '@lucide/svelte/icons/plus';
+	import Minus from '@lucide/svelte/icons/minus';
+	import Copy from '@lucide/svelte/icons/copy';
+	import Trash2 from '@lucide/svelte/icons/trash-2';
+	import PawPrint from '@lucide/svelte/icons/paw-print';
+	import RotateCcw from '@lucide/svelte/icons/rotate-ccw';
 
-	onMount(() => combat.load());
+	const c = $derived(character.current);
 
-	function nextTurn() {
-		const newRound = combat.next();
-		if (newRound) sound.click();
+	// ---- Aktions-Ökonomie (pro Runde, flüchtig) ----
+	let round = $state(1);
+	let used = $state({ action: false, bonus: false, reaction: false, movement: false });
+	const ECON = [
+		{ key: 'action', label: 'Aktion' },
+		{ key: 'bonus', label: 'Bonus' },
+		{ key: 'reaction', label: 'Reaktion' },
+		{ key: 'movement', label: 'Bewegung' }
+	] as const;
+	function newRound() {
+		round++;
+		used = { action: false, bonus: false, reaction: false, movement: false };
 	}
 
-	function resetCombat() {
-		if (!combat.combatants.length) return;
-		const backup = combat.reset();
-		toasts.push('Kampf beendet', `${backup.combatants.length} Kämpfer entfernt`, 'default', {
-			label: 'Rückgängig',
-			fn: () => combat.restore(backup)
+	// ---- Trefferpunkte ----
+	let dmg = $state(0);
+	function applyDamage(sign: 1 | -1) {
+		if (!c || !dmg) return;
+		const amt = dmg * sign;
+		let temp = c.hp.temp;
+		let cur = c.hp.current;
+		if (amt < 0 && temp > 0) {
+			const fromTemp = Math.min(temp, -amt);
+			temp -= fromTemp;
+			cur += amt + fromTemp;
+		} else cur += amt;
+		character.patch({ hp: { current: Math.max(0, Math.min(c.hp.max, cur)), temp } });
+		dmg = 0;
+	}
+	const hpRatio = $derived(c ? Math.max(0, Math.min(1, c.hp.current / Math.max(1, c.hp.max))) : 0);
+	const hpColor = $derived(hpRatio > 0.5 ? 'var(--color-success)' : hpRatio > 0.25 ? 'var(--color-accent)' : 'var(--color-danger)');
+
+	// ---- Konzentration ----
+	let conc = $state(false);
+	let concSpell = $state('');
+	let concDmg = $state(0);
+	const concDC = $derived(Math.max(10, Math.floor((concDmg || 0) / 2)));
+
+	// ---- Reaktionen-Referenz (aus Zauberbuch + Standard) ----
+	const reactions = $derived([
+		...(c?.spells.filter((s) => /reaktion/i.test(s.castTime)).map((s) => ({ name: s.name, trigger: s.range })) ?? []),
+		{ name: 'Gelegenheitsangriff', trigger: 'Feind verlässt deine Reichweite' }
+	]);
+
+	// ---- Begleiter / Kreaturen ----
+	let companions = $state<Companion[]>([]);
+	async function loadComp() {
+		const r = await fetch('/api/companions');
+		if (r.ok) companions = await r.json();
+	}
+	onMount(loadComp);
+	let lastRev = -1;
+	$effect(() => {
+		if (live.rev !== lastRev) { lastRev = live.rev; loadComp(); }
+	});
+
+	let addOpen = $state(false);
+	async function addTemplate(t: (typeof CREATURE_TEMPLATES)[number]) {
+		addOpen = false;
+		await fetch('/api/companions', {
+			method: 'POST',
+			headers: { 'content-type': 'application/json' },
+			body: JSON.stringify({ name: t.name, kind: t.kind, ac: t.ac, hp: { max: t.hpMax, current: t.hpMax }, speed: t.speed, attack: t.attack, note: t.note })
 		});
+		await loadComp();
+	}
+	async function addCustom() {
+		addOpen = false;
+		await fetch('/api/companions', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name: 'Neue Kreatur', kind: 'other', ac: 12, hp: { max: 10, current: 10 } }) });
+		await loadComp();
+	}
+	async function compHp(comp: Companion, delta: number) {
+		const cur = Math.max(0, Math.min(comp.hp.max, comp.hp.current + delta));
+		companions = companions.map((x) => (x.id === comp.id ? { ...x, hp: { ...x.hp, current: cur } } : x));
+		await fetch(`/api/companions/${comp.id}`, { method: 'PATCH', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ hp: { current: cur } }) });
+	}
+	async function dup(comp: Companion) {
+		await fetch('/api/companions', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name: comp.name, kind: comp.kind, ac: comp.ac, hp: { max: comp.hp.max, current: comp.hp.max }, speed: comp.speed, attack: comp.attack, note: comp.note }) });
+		await loadComp();
+	}
+	async function remove(comp: Companion) {
+		companions = companions.filter((x) => x.id !== comp.id);
+		await fetch(`/api/companions/${comp.id}`, { method: 'DELETE' });
+	}
+	async function dismissAll() {
+		if (!companions.length) return;
+		companions = [];
+		await fetch('/api/companions', { method: 'DELETE' });
+		toasts.push('Alle Kreaturen entlassen', undefined, 'default');
 	}
 
-	function rollInit(id: string) {
-		const d = rollDie(20);
-		combat.patch(id, { initiative: d });
-		sound.diceRattle();
-	}
-
-	const QUICK_CONDITIONS = ['Vergiftet', 'Liegend', 'Betäubt', 'Gepackt', 'Verängstigt', 'Bewusstlos'];
-
-	let name = $state('');
-	let init = $state(10);
-	let hp = $state(10);
-	let ac = $state(12);
-
-	function addEnemy() {
-		if (!name.trim()) return;
-		combat.add({ name: name.trim(), initiative: init, hp, maxHp: hp, ac, isPlayer: false });
-		name = '';
-	}
-
-	function addHero() {
-		const c = character.current;
-		if (!c) return;
-		const roll = rollDie(20) + c.initiativeBonus;
-		combat.add({
-			name: c.name,
-			initiative: roll,
-			hp: c.hp.current,
-			maxHp: c.hp.max,
-			ac: c.ac,
-			isPlayer: true
-		});
-		toasts.push(`${c.name} tritt ein`, `Initiative ${roll}`, 'good');
-	}
-
-	function toggleCond(id: string, cond: string, current: string[]) {
-		combat.patch(id, {
-			conditions: current.includes(cond) ? current.filter((x) => x !== cond) : [...current, cond]
-		});
-	}
-
-	function hpRatio(c: { hp: number; maxHp: number }) {
-		return Math.max(0, Math.min(1, c.hp / Math.max(1, c.maxHp)));
-	}
+	const KIND_COLOR: Record<CompanionKind, string> = {
+		familiar: 'var(--color-success)',
+		summon: 'var(--color-primary)',
+		undead: '#9aa2ad',
+		ally: 'var(--color-accent)',
+		other: 'var(--color-muted)'
+	};
 </script>
 
 <svelte:head><title>Kampf · Omniscient Chronicler</title></svelte:head>
 
-<!-- Kopf -->
-<div class="card card-pad mb-4 flex flex-wrap items-center justify-between gap-3">
-	<div class="flex items-center gap-3">
-		<span class="grid h-12 w-12 place-items-center rounded-xl bg-danger/15 text-danger">
-			<Swords class="h-6 w-6" />
-		</span>
-		<div>
-			<h1 class="font-display text-2xl font-bold leading-none">Kampf</h1>
-			{#key combat.round}
-				<span class="inline-block text-sm font-semibold text-accent" in:fly={{ y: 8, duration: 250 }}>
-					Runde {combat.round}
-				</span>
-			{/key}
+{#if c}
+	<div class="mx-auto max-w-6xl">
+		<div class="mb-4 flex items-center gap-3">
+			<div class="grid h-11 w-11 place-items-center rounded-xl border border-border bg-surface2 text-primary"><Swords size={22} /></div>
+			<div>
+				<h1 class="font-display text-2xl font-semibold leading-tight">Kampf</h1>
+				<p class="text-sm text-muted">Deine Kommandozentrale am Tisch — Werte, Aktionen, Beschwörungen.</p>
+			</div>
 		</div>
-	</div>
-	<div class="flex items-center gap-2">
-		<button class="btn btn-ghost text-muted" onclick={resetCombat} title="Kampf zurücksetzen">
-			<RotateCcw class="h-4 w-4" />
-		</button>
-		<button
-			class="btn !h-11"
-			onclick={() => combat.prev()}
-			disabled={!combat.combatants.length}
-			title="Vorheriger Zug"
-			aria-label="Vorheriger Zug"
-		>
-			<ChevronLeft class="h-5 w-5" />
-		</button>
-		<button class="btn btn-primary !h-11 text-base" onclick={nextTurn} disabled={!combat.combatants.length}>
-			Nächster Zug <ChevronRight class="h-5 w-5" />
-		</button>
-	</div>
-</div>
 
-<!-- Hinzufügen -->
-<div class="card card-pad mb-4">
-	<div class="flex flex-wrap items-end gap-2">
-		<label class="flex flex-1 flex-col gap-1 text-xs text-muted">
-			Name
-			<input class="input" placeholder="Goblin-Anführer" bind:value={name} onkeydown={(e) => e.key === 'Enter' && addEnemy()} />
-		</label>
-		<label class="flex flex-col gap-1 text-xs text-muted">Init<input class="input !w-16 text-center" type="number" bind:value={init} /></label>
-		<label class="flex flex-col gap-1 text-xs text-muted">TP<input class="input !w-16 text-center" type="number" bind:value={hp} /></label>
-		<label class="flex flex-col gap-1 text-xs text-muted">RK<input class="input !w-16 text-center" type="number" bind:value={ac} /></label>
-		<button class="btn btn-primary" onclick={addEnemy}><Plus class="h-4 w-4" /></button>
-		<button class="btn" onclick={addHero} disabled={!character.current}><UserPlus class="h-4 w-4" /> Held</button>
-	</div>
-</div>
-
-<!-- Initiative-Liste -->
-<div class="flex flex-col gap-2">
-	{#each combat.combatants as c (c.id)}
-		{@const active = c.id === combat.activeId}
-		{@const ratio = hpRatio(c)}
-		{@const down = c.hp === 0}
-		<div
-			animate:flip={{ duration: 200 }}
-			class="card overflow-hidden p-0 transition {active
-				? 'ring-2 ring-accent shadow-[0_0_24px_-6px_var(--color-accent)]'
-				: ''} {down ? 'opacity-55 saturate-50' : ''}"
-		>
-			<div class="flex items-stretch">
-				<!-- Initiative -->
-				<div
-					class="flex w-14 shrink-0 flex-col items-center justify-center gap-0 {active
-						? 'bg-accent/15 text-accent'
-						: 'bg-surface2 text-muted'}"
-				>
-					<span class="text-[9px] uppercase">Init</span>
-					<input
-						class="w-full bg-transparent text-center font-display text-xl font-bold outline-none"
-						type="number"
-						value={c.initiative}
-						onchange={(e) => combat.patch(c.id, { initiative: +e.currentTarget.value })}
-					/>
-					<button
-						class="mb-1 p-1 text-muted transition hover:text-accent"
-						onclick={() => rollInit(c.id)}
-						title="Initiative würfeln (d20)"
-						aria-label="Initiative würfeln"
-					>
-						<Dices class="h-4 w-4" />
-					</button>
+		<!-- ═══ Vitalwerte + Aktions-Ökonomie ═══ -->
+		<div class="mb-4 grid gap-4 lg:grid-cols-[1.4fr_1fr]">
+			<!-- HP + Aktionen -->
+			<div class="card card-pad">
+				<!-- Trefferpunkte -->
+				<div class="flex items-baseline justify-between">
+					<span class="panel-title">Trefferpunkte</span>
+					{#if c.hp.temp > 0}<span class="text-xs" style="color:var(--color-accent)">+{c.hp.temp} temporär</span>{/if}
+				</div>
+				<div class="mt-1 flex items-end gap-2">
+					<span class="font-display text-4xl font-bold tabular-nums" style="color:{hpColor}">{c.hp.current}</span>
+					<span class="mb-1 text-lg text-muted">/ {c.hp.max}</span>
+				</div>
+				<div class="mt-2 h-2.5 overflow-hidden rounded-full bg-surface2">
+					<div class="h-full rounded-full transition-all duration-500" style="width:{hpRatio * 100}%;background:{hpColor}"></div>
+				</div>
+				<div class="mt-3 flex flex-wrap items-center gap-2">
+					<button class="btn btn-danger" onclick={() => applyDamage(-1)}>−&nbsp;Schaden</button>
+					<input class="input w-20 text-center" type="number" min="0" bind:value={dmg} />
+					<button class="btn" style="border-color:color-mix(in oklab,var(--color-success) 45%,transparent);color:var(--color-success)" onclick={() => applyDamage(1)}>Heilen&nbsp;+</button>
+					{#if c.hp.current === 0}<div class="ml-auto"><DeathSaves /></div>{/if}
 				</div>
 
-				<div class="min-w-0 flex-1 p-3">
-					<div class="flex items-center justify-between gap-2">
-						<span class="flex items-center gap-1.5 truncate font-semibold {down ? 'line-through' : ''}">
-							{#if down}<Skull class="h-4 w-4 shrink-0 text-danger" />{:else if c.isPlayer}<Shield class="h-3.5 w-3.5 shrink-0 text-primary" />{/if}
-							{c.name}
-						</span>
-						<div class="flex items-center gap-1 text-sm">
-							<span class="chip !py-0.5 text-xs">RK {c.ac}</span>
-							<button class="btn btn-icon btn-ghost !h-9 !w-9 text-danger" onclick={() => combat.remove(c.id)} aria-label="Entfernen">
-								<Trash2 class="h-4 w-4" />
-							</button>
-						</div>
-					</div>
+				<!-- Aktions-Ökonomie -->
+				<div class="mt-5 flex items-center justify-between">
+					<span class="panel-title">Runde {round}</span>
+					<button class="btn btn-ghost !py-1 text-xs" onclick={newRound}><RotateCcw class="h-3.5 w-3.5" /> Neue Runde</button>
+				</div>
+				<div class="mt-2 grid grid-cols-4 gap-2">
+					{#each ECON as e (e.key)}
+						<button
+							class="flex flex-col items-center gap-1 rounded-xl border py-2.5 text-xs font-medium transition"
+							class:opacity-45={used[e.key]}
+							style="border-color:{used[e.key] ? 'var(--color-border)' : 'color-mix(in oklab,var(--color-primary) 40%,transparent)'};background:{used[e.key] ? 'transparent' : 'color-mix(in oklab,var(--color-primary) 10%,transparent)'}"
+							onclick={() => (used[e.key] = !used[e.key])}
+						>
+							<span class="text-base">{used[e.key] ? '○' : '●'}</span>
+							{e.label}
+						</button>
+					{/each}
+				</div>
+			</div>
 
-					<!-- HP-Leiste + Steuerung -->
-					<div class="mt-2 flex items-center gap-2">
-						<button class="btn btn-icon !h-9 !w-9 !border-danger/40 text-danger" onclick={() => combat.patch(c.id, { hp: Math.max(0, c.hp - 1) })}>−</button>
-						<div class="relative h-5 flex-1 overflow-hidden rounded-full bg-surface2">
-							<div
-								class="h-full rounded-full transition-all duration-300"
-								style="width:{ratio * 100}%; background:{ratio > 0.5 ? 'var(--color-success)' : ratio > 0.25 ? 'var(--color-accent)' : 'var(--color-danger)'}"
-							></div>
-							<span class="absolute inset-0 grid place-items-center text-xs font-bold tabular-nums">
-								{c.hp} / {c.maxHp}
-							</span>
+			<!-- AC / Konzentration -->
+			<div class="grid gap-4">
+				<div class="card card-pad flex items-center justify-around text-center">
+					<div><Shield class="mx-auto mb-1 h-5 w-5 text-primary" /><div class="font-display text-2xl font-bold">{c.ac}</div><div class="text-[10px] uppercase text-muted">RK</div></div>
+					<div class="h-10 w-px bg-border"></div>
+					<div><div class="font-display text-2xl font-bold">{c.initiativeBonus >= 0 ? '+' : ''}{c.initiativeBonus}</div><div class="text-[10px] uppercase text-muted">Initiative</div></div>
+					<div class="h-10 w-px bg-border"></div>
+					<div><div class="font-display text-2xl font-bold">{c.speed}</div><div class="text-[10px] uppercase text-muted">Tempo</div></div>
+				</div>
+				<div class="card card-pad" style="border-color:{conc ? 'color-mix(in oklab,var(--color-primary) 45%,transparent)' : 'var(--color-border)'}">
+					<label class="flex cursor-pointer items-center gap-2">
+						<Brain class="h-4 w-4 {conc ? 'text-primary' : 'text-muted'}" />
+						<span class="panel-title !m-0 flex-1">Konzentration</span>
+						<input type="checkbox" bind:checked={conc} class="h-4 w-4 accent-[var(--color-primary)]" />
+					</label>
+					{#if conc}
+						<input class="input mt-2" placeholder="Worauf? (z.B. Netz)" bind:value={concSpell} />
+						<div class="mt-2 flex items-center gap-2 text-sm">
+							<span class="text-muted">Schaden erlitten:</span>
+							<input class="input w-20 text-center" type="number" min="0" bind:value={concDmg} />
+							<span class="ml-auto">CON-Rettung <b style="color:var(--color-accent)">SG {concDC}</b></span>
 						</div>
-						<button class="btn btn-icon !h-9 !w-9 !border-success/40 text-success" onclick={() => combat.patch(c.id, { hp: Math.min(c.maxHp, c.hp + 1) })}>+</button>
-					</div>
-
-					<!-- Zustände -->
-					<div class="mt-2 flex flex-wrap gap-1">
-						{#each QUICK_CONDITIONS as cond (cond)}
-							<button
-								class="chip min-h-8 !py-0.5 text-[11px] {c.conditions.includes(cond) ? 'chip-active' : ''}"
-								onclick={() => toggleCond(c.id, cond, c.conditions)}
-							>
-								{cond}
-							</button>
-						{/each}
-					</div>
+					{/if}
 				</div>
 			</div>
 		</div>
-	{:else}
-		<div class="card card-pad grid place-items-center py-12 text-center text-muted">
-			<Swords class="mb-2 h-10 w-10 opacity-40" />
-			<p>Noch keine Kämpfer. Füge Gegner hinzu oder übernimm deinen Helden.</p>
+
+		<!-- ═══ Angriffe/Zauber  +  Kreaturen ═══ -->
+		<div class="grid gap-4 lg:grid-cols-[1fr_1.1fr]">
+			<!-- Aktionen -->
+			<div class="grid gap-4">
+				<div class="card card-pad"><span class="panel-title">Angriffe</span><div class="mt-2"><AttacksCard /></div></div>
+				<div class="card card-pad"><span class="panel-title">Zauberplätze</span><div class="mt-2"><SpellSlots /></div></div>
+				<div class="card card-pad"><span class="panel-title">Zustände</span><div class="mt-2"><ConditionChips /></div></div>
+				{#if reactions.length}
+					<div class="card card-pad">
+						<span class="panel-title">Reaktionen parat</span>
+						<ul class="mt-2 grid gap-1.5 text-sm">
+							{#each reactions as r (r.name)}
+								<li class="flex items-baseline gap-2"><span class="font-medium">{r.name}</span><span class="truncate text-xs text-muted">{r.trigger}</span></li>
+							{/each}
+						</ul>
+					</div>
+				{/if}
+			</div>
+
+			<!-- Meine Kreaturen -->
+			<div class="card card-pad">
+				<div class="mb-3 flex items-center gap-2">
+					<PawPrint class="h-4 w-4 text-primary" />
+					<span class="panel-title !m-0 flex-1">Meine Kreaturen ({companions.length})</span>
+					{#if companions.length}<button class="btn btn-ghost !py-1 text-xs" onclick={dismissAll}>Alle entlassen</button>{/if}
+					<div class="relative">
+						<button class="btn btn-primary !py-1.5" onclick={() => (addOpen = !addOpen)}><Plus class="h-4 w-4" /> Beschwören</button>
+						{#if addOpen}
+							<div class="absolute right-0 z-20 mt-1 w-64 rounded-xl border border-border bg-surface p-1.5 shadow-xl">
+								{#each CREATURE_TEMPLATES as t (t.name)}
+									<button class="flex w-full items-center gap-2 rounded-lg px-2.5 py-1.5 text-left text-sm hover:bg-surface2" onclick={() => addTemplate(t)}>
+										<span class="h-2 w-2 shrink-0 rounded-full" style="background:{KIND_COLOR[t.kind]}"></span>
+										<span class="flex-1">{t.name}</span>
+										<span class="text-xs text-muted">{t.hpMax} TP</span>
+									</button>
+								{/each}
+								<button class="mt-1 w-full rounded-lg border-t border-border px-2.5 py-1.5 text-left text-sm text-muted hover:bg-surface2" onclick={addCustom}>+ Eigene Kreatur…</button>
+							</div>
+						{/if}
+					</div>
+				</div>
+
+				{#if !companions.length}
+					<p class="py-6 text-center text-sm text-muted">Keine aktiven Kreaturen. Beschwöre deinen Vertrauten, Skelette oder eigene Kreaturen — jede mit eigenem TP-Tracker.</p>
+				{:else}
+					<div class="grid gap-2.5">
+						{#each companions as comp (comp.id)}
+							{@const r = Math.max(0, Math.min(1, comp.hp.current / Math.max(1, comp.hp.max)))}
+							<div class="rounded-xl border border-border p-3" style="border-left:3px solid {KIND_COLOR[comp.kind]}" class:opacity-50={comp.hp.current === 0}>
+								<div class="flex items-center gap-2">
+									<span class="min-w-0 flex-1 truncate font-medium">{comp.name}</span>
+									<span class="chip text-[10px]">{COMPANION_KIND_LABELS[comp.kind]}</span>
+									<span class="text-xs text-muted">RK {comp.ac}</span>
+									<button class="btn btn-icon btn-ghost h-7 w-7" title="Duplizieren" onclick={() => dup(comp)}><Copy class="h-3.5 w-3.5" /></button>
+									<button class="btn btn-icon btn-ghost h-7 w-7" title="Entlassen" onclick={() => remove(comp)}><Trash2 class="h-3.5 w-3.5" /></button>
+								</div>
+								<div class="mt-2 flex items-center gap-2">
+									<button class="btn btn-icon h-8 w-8 !border-danger/40" onclick={() => compHp(comp, -1)}><Minus class="h-4 w-4" /></button>
+									<div class="flex-1">
+										<div class="flex justify-between text-xs tabular-nums"><span>{comp.hp.current} / {comp.hp.max} TP</span></div>
+										<div class="mt-0.5 h-2 overflow-hidden rounded-full bg-surface2"><div class="h-full rounded-full" style="width:{r * 100}%;background:{KIND_COLOR[comp.kind]}"></div></div>
+									</div>
+									<button class="btn btn-icon h-8 w-8" style="border-color:color-mix(in oklab,var(--color-success) 40%,transparent)" onclick={() => compHp(comp, 1)}><Plus class="h-4 w-4" /></button>
+								</div>
+								{#if comp.attack || comp.speed || comp.note}
+									<p class="mt-1.5 text-xs text-muted">
+										{#if comp.speed}{comp.speed}{/if}{#if comp.attack} · {comp.attack}{/if}
+										{#if comp.note}<br />{comp.note}{/if}
+									</p>
+								{/if}
+							</div>
+						{/each}
+					</div>
+				{/if}
+			</div>
 		</div>
-	{/each}
-</div>
+	</div>
+{:else}
+	<div class="grid min-h-[60vh] place-items-center text-muted"><span class="animate-pulse font-display text-lg">Bereite den Kampf vor…</span></div>
+{/if}

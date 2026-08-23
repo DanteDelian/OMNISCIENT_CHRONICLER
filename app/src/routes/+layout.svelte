@@ -4,9 +4,7 @@
 	import '@fontsource/inter/500.css';
 	import '@fontsource/inter/600.css';
 	import '@fontsource/inter/700.css';
-	import '@fontsource/cinzel/500.css';
-	import '@fontsource/cinzel/600.css';
-	import '@fontsource/cinzel/700.css';
+	import '@fontsource-variable/fraunces';
 	import { onMount } from 'svelte';
 	import { ModeWatcher } from 'mode-watcher';
 	import { fade } from 'svelte/transition';
@@ -62,12 +60,6 @@
 </script>
 
 <ModeWatcher defaultMode="dark" />
-
-<div class="aurora" aria-hidden="true"></div>
-<div class="vignette" aria-hidden="true"></div>
-<div class="embers" aria-hidden="true">
-	{#each Array(12) as _, i (i)}<span class="ember"></span>{/each}
-</div>
 
 <div class="relative z-10 flex min-h-dvh flex-col md:flex-row">
 	<!-- Desktop-/Tablet-Sidebar -->

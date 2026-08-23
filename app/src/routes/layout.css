@@ -5,7 +5,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-	--font-display: 'Cinzel', ui-serif, Georgia, serif;
+	--font-display: 'Fraunces Variable', 'Fraunces', ui-serif, Georgia, serif;
 	--font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
 
 	/* Semantische Farben referenzieren Runtime-Variablen (theme-bar-fähig). */
@@ -37,17 +37,17 @@
 }
 
 .dark {
-	--c-bg: #0a0813;
-	--c-surface: #14111f;
-	--c-surface2: #1e1830;
-	--c-border: #2f2747;
-	--c-ink: #f3f0fa;
-	--c-muted: #a89ec6;
-	--c-primary: #b794ff;
+	--c-bg: #0b0a11;
+	--c-surface: #14131c;
+	--c-surface2: #1c1a26;
+	--c-border: #2a2836;
+	--c-ink: #ecebf3;
+	--c-muted: #948fa6;
+	--c-primary: #a78bfa;
 	--c-primary-fg: #140f22;
-	--c-accent: #f5c451;
-	--c-danger: #fb7185;
-	--c-success: #4ade80;
+	--c-accent: #e6b45f;
+	--c-danger: #f2807b;
+	--c-success: #5ec8a3;
 }
 
 @layer base {
@@ -84,7 +84,7 @@
 		@apply p-4 sm:p-5;
 	}
 	.panel-title {
-		@apply font-display text-sm font-semibold uppercase tracking-wider text-muted;
+		@apply text-[0.7rem] font-semibold uppercase tracking-[0.15em] text-muted;
 	}
 	.btn {
 		@apply inline-flex select-none items-center justify-center gap-2 rounded-xl border border-border
@@ -145,10 +145,8 @@ input[type='number'] {
 		box-shadow: 0 14px 36px -14px color-mix(in oklab, var(--color-primary) 40%, transparent);
 	}
 	.grad-text {
-		background: linear-gradient(100deg, var(--color-primary), var(--color-accent));
-		-webkit-background-clip: text;
-		background-clip: text;
-		color: transparent;
+		color: var(--color-ink);
+		letter-spacing: -0.01em;
 	}
 }
 
@@ -244,22 +242,11 @@ input[type='number'] {
 
 /* Karten: feiner Lichtschein oben + goldener Innenrand im Dark-Mode */
 .dark .card {
-	background-image: linear-gradient(
-		180deg,
-		color-mix(in oklab, var(--color-primary) 8%, transparent),
-		transparent 42%
-	);
-	box-shadow:
-		0 1px 0 0 color-mix(in oklab, var(--color-accent) 16%, transparent) inset,
-		0 12px 34px -20px rgba(0, 0, 0, 0.85);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.22);
 }
 .dark .card-hover:hover {
-	box-shadow:
-		0 1px 0 0 color-mix(in oklab, var(--color-accent) 30%, transparent) inset,
-		0 18px 42px -16px color-mix(in oklab, var(--color-primary) 45%, transparent);
-}
-.panel-title {
-	color: color-mix(in oklab, var(--color-accent) 72%, var(--color-muted));
+	box-shadow: 0 10px 28px -14px rgba(0, 0, 0, 0.6);
+	border-color: color-mix(in oklab, var(--color-primary) 32%, var(--color-border));
 }
 
 /* Ember-Partikel (sanft aufsteigende Glut) */
@@ -372,50 +359,14 @@ input[type='number'] {
 .insp-glow { animation: insp-pulse 2.4s ease-in-out infinite; }
 
 /* ---------- BG3-Politur ---------- */
-/* Ornament-Ecken für Hero-Karten & Modals */
+/* card-ornate: neutral (Ornament-Ecken entfernt für ein ruhiges, professionelles Bild) */
 .card-ornate { position: relative; }
-.card-ornate::before,
-.card-ornate::after {
-	content: '';
-	position: absolute;
-	width: 24px;
-	height: 24px;
-	pointer-events: none;
-	border: 1.5px solid color-mix(in oklab, var(--color-accent) 55%, transparent);
-	z-index: 1;
-}
-.card-ornate::before {
-	top: 7px;
-	left: 7px;
-	border-right: 0;
-	border-bottom: 0;
-	border-top-left-radius: 12px;
-}
-.card-ornate::after {
-	bottom: 7px;
-	right: 7px;
-	border-left: 0;
-	border-top: 0;
-	border-bottom-right-radius: 12px;
-}
 
-/* Zierlinie hinter Panel-Titeln */
 .panel-title {
 	display: flex;
 	align-items: center;
-	gap: 0.6rem;
+	gap: 0.55rem;
 	min-width: 0;
-}
-.panel-title::after {
-	content: '';
-	flex: 1;
-	min-width: 12px;
-	height: 1px;
-	background: linear-gradient(
-		90deg,
-		color-mix(in oklab, var(--color-accent) 40%, transparent),
-		transparent
-	);
 }
 
 /* Konsistente, sichtbare Fokus-Ringe */

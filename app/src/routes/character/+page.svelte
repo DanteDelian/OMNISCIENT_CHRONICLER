@@ -85,31 +85,29 @@
 <svelte:head><title>Charakter · {c?.name ?? ''}</title></svelte:head>
 
 {#if c}
-	<!-- Hero mit Porträt -->
-	<div class="card card-ornate card-pad mb-4 overflow-hidden bg-gradient-to-br from-primary/10 via-transparent to-accent/5">
-		<div class="flex flex-col gap-4 sm:flex-row sm:items-center">
-			<!-- Porträt mit glühendem Rahmen -->
-			<div class="relative mx-auto sm:mx-0">
+	<!-- Charakter-Kopf: großes Porträt + Identität + Vitalwerte -->
+	<div class="card card-pad mb-4">
+		<div class="flex flex-col gap-5 sm:flex-row">
+			<!-- Großes Porträt -->
+			<div class="relative mx-auto w-44 shrink-0 sm:mx-0">
 				<button
-					class="group relative grid h-28 w-28 shrink-0 place-items-center rounded-2xl border-2 border-primary/40 bg-surface2 shadow-[0_0_30px_-6px_var(--color-primary)] transition hover:border-primary"
+					class="group relative block aspect-square w-full overflow-hidden rounded-2xl border border-border bg-surface2 transition hover:border-primary/50"
 					onclick={startPortrait}
 					title="Porträt ändern"
 				>
 					{#if isImage}
-						<img src={c.portrait} alt={c.name} class="h-full w-full rounded-2xl object-cover" />
+						<img src={c.portrait} alt={c.name} class="h-full w-full object-cover" />
 					{:else}
-						<span class="text-6xl leading-none">{c.portrait || '🧙'}</span>
+						<span class="grid h-full w-full place-items-center text-7xl leading-none">{c.portrait || '🧙'}</span>
 					{/if}
 					<span
-						class="absolute -bottom-2 -right-2 grid h-7 w-7 place-items-center rounded-lg bg-primary text-primary-fg opacity-0 transition group-hover:opacity-100"
+						class="absolute inset-x-0 bottom-0 flex items-center justify-center gap-1.5 bg-black/55 py-1.5 text-xs text-white opacity-0 backdrop-blur-sm transition group-hover:opacity-100"
 					>
-						<Camera class="h-4 w-4" />
+						<Camera class="h-3.5 w-3.5" /> ändern
 					</span>
 				</button>
 				{#if editingPortrait}
-					<div
-						class="absolute left-1/2 top-full z-30 mt-2 w-60 -translate-x-1/2 rounded-xl border border-border bg-surface p-3 shadow-xl"
-					>
+					<div class="absolute left-1/2 top-full z-30 mt-2 w-64 -translate-x-1/2 rounded-xl border border-border bg-surface p-3 shadow-xl">
 						<!-- svelte-ignore a11y_autofocus -->
 						<input
 							class="input"
@@ -127,50 +125,55 @@
 				{/if}
 			</div>
 
-			<div class="min-w-0 flex-1">
-				<div class="flex items-center gap-2">
+			<!-- Identität -->
+			<div class="flex min-w-0 flex-1 flex-col">
+				<div class="flex items-start justify-between gap-2">
 					<input
-						class="w-full min-w-0 bg-transparent font-display text-2xl font-bold leading-tight outline-none focus:text-primary sm:text-3xl"
+						class="w-full min-w-0 bg-transparent font-display text-3xl font-semibold leading-tight tracking-tight outline-none focus:text-primary sm:text-4xl"
 						value={c.name}
 						onchange={(e) => setStr('name', e.currentTarget.value)}
 					/>
-					<button
-						class="shrink-0 transition {c.inspiration ? 'text-accent insp-glow' : 'text-muted opacity-40 hover:opacity-80'}"
-						onclick={() => character.patch({ inspiration: !c.inspiration })}
-						title="Inspiration {c.inspiration ? '(aktiv!)' : ''}"
-						aria-pressed={c.inspiration}
-					>
-						<Star class="h-7 w-7 {c.inspiration ? 'fill-current animate-pop' : ''}" />
-					</button>
+					<div class="flex shrink-0 items-center gap-1">
+						<button
+							class="grid h-9 w-9 place-items-center rounded-lg transition {c.inspiration ? 'text-accent insp-glow' : 'text-muted opacity-40 hover:opacity-80'}"
+							onclick={() => character.patch({ inspiration: !c.inspiration })}
+							title="Inspiration {c.inspiration ? '(aktiv!)' : ''}"
+							aria-pressed={c.inspiration}
+						>
+							<Star class="h-6 w-6 {c.inspiration ? 'fill-current animate-pop' : ''}" />
+						</button>
+						<button class="btn btn-ghost btn-icon" onclick={snapshot} title="Snapshot speichern"><Camera class="h-4 w-4" /></button>
+					</div>
 				</div>
-				<div class="mt-2"><XpBar /></div>
-				<div class="mt-2 flex flex-wrap gap-2 text-sm">
-					<input class="input !w-28 !py-1" value={c.race} placeholder="Volk" onchange={(e) => setStr('race', e.currentTarget.value)} />
-					<input class="input !w-32 !py-1" value={c.className} placeholder="Klasse" onchange={(e) => setStr('className', e.currentTarget.value)} />
-					<input class="input !w-44 !py-1" value={c.background} placeholder="Hintergrund" onchange={(e) => setStr('background', e.currentTarget.value)} />
-					<input class="input !w-28 !py-1" value={c.alignment} placeholder="Gesinnung" onchange={(e) => setStr('alignment', e.currentTarget.value)} />
+				<div class="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted">
+					<input class="min-w-0 max-w-32 bg-transparent outline-none focus:text-ink" value={c.race} placeholder="Volk" onchange={(e) => setStr('race', e.currentTarget.value)} />
+					<span class="opacity-40">·</span>
+					<input class="min-w-0 max-w-40 bg-transparent outline-none focus:text-ink" value={c.className} placeholder="Klasse" onchange={(e) => setStr('className', e.currentTarget.value)} />
+					<span class="opacity-40">·</span>
+					<input class="min-w-0 max-w-32 bg-transparent outline-none focus:text-ink" value={c.alignment} placeholder="Gesinnung" onchange={(e) => setStr('alignment', e.currentTarget.value)} />
+				</div>
+				<input class="mt-1 w-full bg-transparent text-sm text-muted outline-none focus:text-ink" value={c.background} placeholder="Hintergrund" onchange={(e) => setStr('background', e.currentTarget.value)} />
+				<div class="mt-3 max-w-md"><XpBar /></div>
+				<div class="mt-auto pt-4">
+					<div class="grid grid-cols-3 gap-2 sm:grid-cols-6">
+						{#each STATS as m (m.f)}
+							<label class="stat-tile gap-0.5">
+								<span class="text-[10px] uppercase tracking-wide text-muted">{m.label}</span>
+								<input
+									class="w-full bg-transparent text-center font-display text-xl font-semibold tabular-nums outline-none"
+									type="number"
+									value={c[m.f as keyof typeof c] as number}
+									onchange={(e) => setNum(m.f, +e.currentTarget.value)}
+								/>
+							</label>
+						{/each}
+					</div>
 				</div>
 			</div>
-
-			<button class="btn shrink-0" onclick={snapshot}><Camera class="h-4 w-4" /> Snapshot</button>
-		</div>
-
-		<div class="mt-4 grid grid-cols-3 gap-2 sm:grid-cols-6">
-			{#each STATS as m (m.f)}
-				<label class="stat-tile gap-0.5">
-					<span class="text-[10px] uppercase tracking-wide text-muted">{m.label}</span>
-					<input
-						class="w-full bg-transparent text-center font-display text-xl font-bold tabular-nums outline-none"
-						type="number"
-						value={c[m.f as keyof typeof c] as number}
-						onchange={(e) => setNum(m.f, +e.currentTarget.value)}
-					/>
-				</label>
-			{/each}
 		</div>
 	</div>
 
-	<div class="gap-4 md:columns-2 xl:columns-3 [&>*]:mb-4 [&>*]:break-inside-avoid">
+	<div class="grid items-start gap-4 sm:grid-cols-2 xl:grid-cols-3">
 		<Card title="Trefferpunkte" class="card-hover">
 			<HpTracker />
 			<div class="mt-4 space-y-3">

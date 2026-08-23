@@ -10,6 +10,7 @@ import BookOpen from '@lucide/svelte/icons/book-open';
 import Users from '@lucide/svelte/icons/users';
 import WandSparkles from '@lucide/svelte/icons/wand-sparkles';
 import Lightbulb from '@lucide/svelte/icons/lightbulb';
+import Map from '@lucide/svelte/icons/map';
 import Settings from '@lucide/svelte/icons/settings';
 
 export interface NavItem {
@@ -31,6 +32,7 @@ export const navItems: NavItem[] = [
 	{ href: '/quests', label: 'Quests', icon: ScrollText },
 	{ href: '/chronik', label: 'Chronik', icon: BookOpen },
 	{ href: '/glossar', label: 'Glossar', icon: Users },
+	{ href: '/karte', label: 'Karte', icon: Map },
 	{ href: '/wissen', label: 'Wissen', icon: Lightbulb },
 	{ href: '/settings', label: 'Einstellungen', icon: Settings }
 ];

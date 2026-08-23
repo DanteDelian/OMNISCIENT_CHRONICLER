@@ -318,6 +318,31 @@ export interface AiStatus {
 	hint?: string;
 }
 
+/** Begleiter/Beschwörungen/Untote — die vom Charakter kontrollierten Kreaturen (Kampf). */
+export type CompanionKind = 'familiar' | 'summon' | 'undead' | 'ally' | 'other';
+
+export const COMPANION_KIND_LABELS: Record<CompanionKind, string> = {
+	familiar: 'Vertrauter',
+	summon: 'Beschwörung',
+	undead: 'Untot',
+	ally: 'Verbündeter',
+	other: 'Kreatur'
+};
+
+export interface Companion {
+	id: string;
+	characterId: string;
+	name: string;
+	kind: CompanionKind;
+	ac: number;
+	hp: { current: number; max: number; temp: number };
+	speed: string; // z.B. „9 m, Fliegen 18 m"
+	attack: string; // Kurzreferenz, z.B. „Knochenbogen +4, 1W6+2"
+	note: string;
+	conditions: string[];
+	updatedAt: number;
+}
+
 /** Rohe KI-Vorschläge vom Sidecar (steckbarer Provider, structured output). */
 export interface SessionUpdatesDTO {
 	/** Prägnanter Titel der Session (z.B. „Der Sturm auf die Zuflucht"). */
