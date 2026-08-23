@@ -61,6 +61,9 @@
 
 <ModeWatcher defaultMode="dark" />
 
+<div class="oc-atmos" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
 <div class="relative z-10 flex min-h-dvh flex-col md:flex-row">
 	<!-- Desktop-/Tablet-Sidebar -->
 	<aside

@@ -5,7 +5,6 @@
 	import { live } from '$lib/stores/live.svelte';
 	import { toasts } from '$lib/stores/toast.svelte';
 	import {
-		fmtMod,
 		KNOWLEDGE_TIER_LABELS,
 		QUEST_STATUS_LABELS,
 		type Session,
@@ -14,13 +13,8 @@
 		type SessionPlan,
 		type KnowledgeTier
 	} from '$lib/types';
-	import AnimatedNumber from '$lib/components/AnimatedNumber.svelte';
 	import SinceLastSession from '$lib/components/SinceLastSession.svelte';
 	import WandSparkles from '@lucide/svelte/icons/wand-sparkles';
-	import Shield from '@lucide/svelte/icons/shield';
-	import Zap from '@lucide/svelte/icons/zap';
-	import Wind from '@lucide/svelte/icons/wind';
-	import Star from '@lucide/svelte/icons/star';
 	import MapPin from '@lucide/svelte/icons/map-pin';
 	import BookOpen from '@lucide/svelte/icons/book-open';
 	import ClipboardList from '@lucide/svelte/icons/clipboard-list';
@@ -89,8 +83,6 @@
 	// HP-Ring
 	const ratio = $derived(c ? Math.max(0, Math.min(1, c.hp.current / Math.max(1, c.hp.max))) : 0);
 	const ringColor = $derived(ratio > 0.5 ? 'var(--color-success)' : ratio > 0.25 ? 'var(--color-accent)' : 'var(--color-danger)');
-	const R = 30;
-	const CIRC = 2 * Math.PI * R;
 
 	// Campaign-State bearbeiten
 	let editing = $state(false);
@@ -120,27 +112,29 @@
 {#if c}
 	<div class="mx-auto max-w-5xl" in:fade={{ duration: 200 }}>
 		<!-- ═══ Aktuelle Lage (Hero) ═══ -->
-		<section class="card card-ornate card-pad mb-4 overflow-hidden">
-			<div class="flex flex-wrap items-start justify-between gap-4">
+		<section class="relative mb-4 overflow-hidden rounded-2xl border border-border">
+			<div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/12 via-transparent to-accent/5"></div>
+			<div class="relative flex flex-col gap-5 p-5 sm:flex-row sm:items-center sm:p-7">
 				<div class="min-w-0 flex-1">
-					<p class="panel-title mb-2">{meta.name || 'Die Chronik'}</p>
+					<p class="panel-title" style="color:var(--color-accent)">{meta.name || 'Die Chronik'}</p>
 					{#if !editing}
-						<div class="flex items-start gap-2">
-							<MapPin class="mt-1 h-6 w-6 shrink-0 text-accent" />
-							<div class="min-w-0">
-								<h1 class="grad-text font-display text-2xl font-bold leading-tight sm:text-3xl">
-									{meta.location || 'Wo steht ihr gerade?'}
-								</h1>
-								<p class="mt-1 max-w-prose text-muted">
-									{meta.situation || 'Trage die aktuelle Lage ein — sie ist das Erste, was du bei jedem Öffnen siehst.'}
-								</p>
-							</div>
+						<div class="mt-2 flex items-start gap-2.5">
+							<MapPin class="mt-2 h-6 w-6 shrink-0 text-accent" />
+							<h1 class="font-display text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
+								{meta.location || 'Wo steht ihr gerade?'}
+							</h1>
 							<button class="btn btn-icon btn-ghost ml-auto h-9 w-9 shrink-0" title="Lage bearbeiten" onclick={startEdit}>
 								<Pencil class="h-4 w-4" />
 							</button>
 						</div>
+						<p class="mt-2.5 max-w-prose text-[1.05rem] leading-relaxed text-ink/85">
+							{meta.situation || 'Trage die aktuelle Lage ein — sie ist das Erste, was du bei jedem Öffnen siehst.'}
+						</p>
+						<a href="/werkstatt" class="btn btn-primary mt-4" title="Session-Notizen verarbeiten">
+							<WandSparkles class="h-4 w-4" /> Session verarbeiten
+						</a>
 					{:else}
-						<div class="grid gap-2" transition:fade={{ duration: 120 }}>
+						<div class="mt-2 grid gap-2" transition:fade={{ duration: 120 }}>
 							<input class="input font-display text-lg" placeholder="Aktueller Ort (z.B. Xantus – Die Festung)" bind:value={draft.location} />
 							<textarea class="input" rows="2" placeholder="Die aktuelle Lage in einem Satz…" bind:value={draft.situation}></textarea>
 							<div class="flex justify-end gap-2">
@@ -150,8 +144,26 @@
 						</div>
 					{/if}
 				</div>
-				<a href="/werkstatt" class="btn btn-primary shrink-0 !py-2.5" title="Session-Notizen verarbeiten">
-					<WandSparkles class="h-4 w-4" /> Session verarbeiten
+
+				<!-- Charakter-Medaillon -->
+				<a href="/character" class="group flex shrink-0 items-center gap-4 rounded-2xl border border-border bg-surface/60 p-3 backdrop-blur transition hover:border-primary/40 sm:w-52 sm:flex-col sm:gap-2.5 sm:text-center">
+					<div class="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl border border-border sm:h-24 sm:w-24">
+						{#if c.portrait.includes('/') || c.portrait.includes('.')}
+							<img src={c.portrait} alt={c.name} class="h-full w-full object-cover" />
+						{:else}
+							<span class="grid h-full w-full place-items-center bg-surface2 text-4xl">{c.portrait || '🧙'}</span>
+						{/if}
+					</div>
+					<div class="min-w-0">
+						<div class="truncate font-display text-base font-semibold">{c.name}</div>
+						<div class="text-xs text-muted">Stufe {c.level} · {c.className}</div>
+						<div class="mt-1.5 flex items-center gap-2 sm:justify-center">
+							<div class="h-1.5 w-20 overflow-hidden rounded-full bg-surface2">
+								<div class="h-full rounded-full" style="width:{ratio * 100}%;background:{ringColor}"></div>
+							</div>
+							<span class="text-[11px] tabular-nums text-muted">{c.hp.current}/{c.hp.max}</span>
+						</div>
+					</div>
 				</a>
 			</div>
 		</section>
@@ -161,38 +173,8 @@
 			<SinceLastSession number={lastSession.number} title={lastSession.title} />
 		{/if}
 
-		<!-- ═══ Held · Letzte · Nächste Session ═══ -->
-		<div class="mb-4 grid gap-4 md:grid-cols-3">
-			<!-- Held -->
-			<a href="/character" class="card card-hover card-pad block">
-				<div class="mb-3 flex items-center gap-3">
-					<div class="relative grid h-16 w-16 shrink-0 place-items-center">
-						{#if c.portrait.includes('/') || c.portrait.includes('.')}
-							<img src={c.portrait} alt={c.name} class="absolute inset-1.5 h-13 w-13 rounded-full object-cover" style="height:3.25rem;width:3.25rem" />
-						{:else}
-							<span class="absolute inset-1.5 grid place-items-center rounded-full bg-surface2 text-2xl" style="height:3.25rem;width:3.25rem">{c.portrait || '🧙'}</span>
-						{/if}
-						<svg viewBox="0 0 68 68" class="relative h-16 w-16 -rotate-90">
-							<circle cx="34" cy="34" r={R} fill="none" stroke="var(--color-surface2)" stroke-width="5" opacity="0.6" />
-							<circle cx="34" cy="34" r={R} fill="none" stroke={ringColor} stroke-width="5" stroke-linecap="round" stroke-dasharray={CIRC} stroke-dashoffset={CIRC * (1 - ratio)} style="transition:stroke-dashoffset .6s cubic-bezier(.2,.8,.2,1)" />
-						</svg>
-					</div>
-					<div class="min-w-0">
-						<div class="flex items-center gap-1.5">
-							<h2 class="truncate font-display text-lg font-bold">{c.name}</h2>
-							{#if c.inspiration}<Star class="h-4 w-4 shrink-0 fill-current text-accent" />{/if}
-						</div>
-						<p class="text-xs text-muted">Stufe {c.level} · {c.race} · {c.className}</p>
-						<p class="mt-0.5 text-sm"><AnimatedNumber value={c.hp.current} />/{c.hp.max} TP</p>
-					</div>
-				</div>
-				<div class="grid grid-cols-3 gap-2">
-					<div class="stat-tile !p-2"><Shield class="mb-0.5 h-3.5 w-3.5 text-primary" /><span class="font-display font-bold">{c.ac}</span><span class="text-[10px] text-muted">RK</span></div>
-					<div class="stat-tile !p-2"><Zap class="mb-0.5 h-3.5 w-3.5 text-accent" /><span class="font-display font-bold">{fmtMod(c.initiativeBonus)}</span><span class="text-[10px] text-muted">Init</span></div>
-					<div class="stat-tile !p-2"><Wind class="mb-0.5 h-3.5 w-3.5 text-muted" /><span class="font-display font-bold">{c.speed}</span><span class="text-[10px] text-muted">Tempo</span></div>
-				</div>
-			</a>
-
+		<!-- ═══ Letzte · Nächste Session ═══ -->
+		<div class="mb-4 grid gap-4 md:grid-cols-2">
 			<!-- Letzte Session -->
 			<a href="/chronik" class="card card-hover card-pad block">
 				<div class="mb-2 flex items-center justify-between">
