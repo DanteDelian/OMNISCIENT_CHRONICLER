@@ -9,7 +9,7 @@
 	import { ModeWatcher } from 'mode-watcher';
 	import { fade } from 'svelte/transition';
 	import { page } from '$app/state';
-	import { navItems } from '$lib/nav';
+	import { navItems, featuredNav, NAV_GROUPS } from '$lib/nav';
 	import { character } from '$lib/stores/character.svelte';
 	import { live } from '$lib/stores/live.svelte';
 	import { ui } from '$lib/stores/ui.svelte';
@@ -51,6 +51,7 @@
 
 	const primary = navItems.filter((i) => i.primary);
 	const secondary = navItems.filter((i) => !i.primary);
+	const FeaturedIcon = featuredNav.icon;
 
 	// „Mehr"-Sheet bei Navigation schließen
 	$effect(() => {
@@ -87,19 +88,37 @@
 			<kbd class="rounded bg-surface px-1.5 py-0.5 text-[10px]">⌘K</kbd>
 		</button>
 
-		<nav class="flex flex-1 flex-col gap-1">
-			{#each navItems as item (item.href)}
-				{@const Icon = item.icon}
-				<a
-					href={item.href}
-					class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition
-						{isActive(item.href)
-						? 'bg-primary/15 text-ink'
-						: 'text-muted hover:bg-surface2 hover:text-ink'}"
-				>
-					<Icon class="h-5 w-5 {isActive(item.href) ? 'text-primary' : ''}" />
-					{item.label}
-				</a>
+		<a
+			href={featuredNav.href}
+			class="mb-4 flex items-center gap-2.5 rounded-xl border px-3 py-2.5 text-sm font-semibold transition
+				{isActive(featuredNav.href)
+				? 'border-primary/60 bg-primary/20 text-ink'
+				: 'border-primary/35 bg-primary/10 text-ink hover:bg-primary/[0.16]'}"
+		>
+			<FeaturedIcon class="h-5 w-5 text-primary" />
+			{featuredNav.label}
+		</a>
+
+		<nav class="flex flex-1 flex-col gap-4 overflow-y-auto pb-2">
+			{#each NAV_GROUPS as g (g)}
+				<div>
+					<span class="mb-1 block px-3 text-[0.62rem] font-semibold uppercase tracking-[0.16em] text-muted/60">{g}</span>
+					<div class="flex flex-col gap-0.5">
+						{#each navItems.filter((i) => i.group === g) as item (item.href)}
+							{@const Icon = item.icon}
+							<a
+								href={item.href}
+								class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition
+									{isActive(item.href)
+									? 'bg-primary/15 text-ink'
+									: 'text-muted hover:bg-surface2 hover:text-ink'}"
+							>
+								<Icon class="h-[18px] w-[18px] {isActive(item.href) ? 'text-primary' : ''}" />
+								{item.label}
+							</a>
+						{/each}
+					</div>
+				</div>
 			{/each}
 		</nav>
 
@@ -183,6 +202,13 @@
 						<X class="h-5 w-5" />
 					</button>
 				</div>
+				<a
+					href={featuredNav.href}
+					class="mb-2 flex items-center gap-3 rounded-xl border border-primary/40 bg-primary/12 px-4 py-3 text-sm font-semibold {isActive(featuredNav.href) ? 'text-primary' : ''}"
+				>
+					<FeaturedIcon class="h-5 w-5 text-primary" />
+					{featuredNav.label}
+				</a>
 				<div class="grid grid-cols-2 gap-2">
 					{#each secondary as item (item.href)}
 						{@const Icon = item.icon}

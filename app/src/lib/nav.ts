@@ -13,26 +13,37 @@ import Lightbulb from '@lucide/svelte/icons/lightbulb';
 import Map from '@lucide/svelte/icons/map';
 import Settings from '@lucide/svelte/icons/settings';
 
+export type NavGroup = 'Kampagne' | 'Held' | 'System';
+
 export interface NavItem {
 	href: string;
 	label: string;
 	icon: Component;
+	group: NavGroup;
 	/** In der mobilen Bottom-Nav sichtbar (max. 5). */
 	primary?: boolean;
 }
 
 export const navItems: NavItem[] = [
-	{ href: '/', label: 'Dashboard', icon: LayoutDashboard, primary: true },
-	{ href: '/character', label: 'Charakter', icon: Shield, primary: true },
-	{ href: '/werkstatt', label: 'Werkstatt', icon: WandSparkles, primary: true },
-	{ href: '/combat', label: 'Kampf', icon: Swords, primary: true },
-	{ href: '/notes', label: 'Notizen', icon: NotebookPen, primary: true },
-	{ href: '/characters', label: 'Charaktere', icon: UsersRound },
-	{ href: '/prep', label: 'Vorbereitung', icon: ClipboardList },
-	{ href: '/quests', label: 'Quests', icon: ScrollText },
-	{ href: '/chronik', label: 'Chronik', icon: BookOpen },
-	{ href: '/glossar', label: 'Glossar', icon: Users },
-	{ href: '/karte', label: 'Karte', icon: Map },
-	{ href: '/wissen', label: 'Wissen', icon: Lightbulb },
-	{ href: '/settings', label: 'Einstellungen', icon: Settings }
+	{ href: '/', label: 'Dashboard', icon: LayoutDashboard, group: 'Kampagne', primary: true },
+	{ href: '/chronik', label: 'Chronik', icon: BookOpen, group: 'Kampagne' },
+	{ href: '/karte', label: 'Karte', icon: Map, group: 'Kampagne' },
+	{ href: '/wissen', label: 'Wissen', icon: Lightbulb, group: 'Kampagne' },
+	{ href: '/glossar', label: 'Glossar', icon: Users, group: 'Kampagne' },
+	{ href: '/quests', label: 'Quests', icon: ScrollText, group: 'Kampagne' },
+	{ href: '/character', label: 'Charakter', icon: Shield, group: 'Held', primary: true },
+	{ href: '/combat', label: 'Kampf', icon: Swords, group: 'Held', primary: true },
+	{ href: '/notes', label: 'Notizen', icon: NotebookPen, group: 'Held', primary: true },
+	{ href: '/prep', label: 'Vorbereitung', icon: ClipboardList, group: 'Held' },
+	{ href: '/characters', label: 'Charaktere', icon: UsersRound, group: 'Held' },
+	{ href: '/settings', label: 'Einstellungen', icon: Settings, group: 'System' }
 ];
+
+/** Prominente Haupt-Aktion (nicht Teil der Gruppen-Navigation). */
+export const featuredNav = {
+	href: '/werkstatt',
+	label: 'Session verarbeiten',
+	icon: WandSparkles
+};
+
+export const NAV_GROUPS: NavGroup[] = ['Kampagne', 'Held', 'System'];
