@@ -11,6 +11,8 @@ interface Meta {
 	location?: string; // Wo sind wir gerade?
 	situation?: string; // Was ist die aktuelle Lage? (kurzer Satz)
 	story?: string; // Aktueller Handlungsbogen (Kapitel-Titel)
+	briefingGoals?: string; // Nächste-Session-Briefing: meine Ziele
+	briefingRemember?: string; // Nächste-Session-Briefing: woran ich denken will
 }
 
 const FALLBACK: Meta = { name: 'Die Chroniken von Xantus', system: 'D&D 5e' };

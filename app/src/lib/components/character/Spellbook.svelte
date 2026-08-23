@@ -4,7 +4,7 @@
 	import { toasts } from '$lib/stores/toast.svelte';
 	import { sound } from '$lib/sound';
 	import { renderMarkdown } from '$lib/markdown';
-	import { SPELL_SCHOOLS, type Spell } from '$lib/types';
+	import { SPELL_SCHOOLS, type Spell, type SpellSchool } from '$lib/types';
 	import SchoolIcon from '$lib/components/SchoolIcon.svelte';
 	import Search from '@lucide/svelte/icons/search';
 	import BookOpen from '@lucide/svelte/icons/book-open';
@@ -14,12 +14,22 @@
 
 	const c = $derived(character.current);
 	let query = $state('');
+	let schoolFilter = $state<SpellSchool | null>(null);
 	let selected = $state<Spell | null>(null);
+
+	// Schulen, die im Buch vorkommen (für den Filter)
+	const schools = $derived.by(() => {
+		const set = new Set<SpellSchool>();
+		for (const s of c?.spells ?? []) set.add(s.school);
+		return [...set].sort((a, b) => SPELL_SCHOOLS[a].label.localeCompare(SPELL_SCHOOLS[b].label));
+	});
 
 	const filtered = $derived.by(() => {
 		if (!c) return [];
 		const q = query.trim().toLowerCase();
-		return q ? c.spells.filter((s) => s.name.toLowerCase().includes(q)) : c.spells;
+		return c.spells.filter(
+			(s) => (!q || s.name.toLowerCase().includes(q)) && (!schoolFilter || s.school === schoolFilter)
+		);
 	});
 
 	const byLevel = $derived.by(() => {
@@ -98,6 +108,22 @@
 				<BookMarked class="h-3.5 w-3.5 text-primary" /> {preparedCount}
 			</span>
 		</div>
+
+		{#if schools.length > 1}
+			<div class="mb-2 flex flex-wrap gap-1">
+				{#each schools as sc (sc)}
+					<button
+						class="inline-flex items-center gap-1 rounded-md border px-1.5 py-0.5 text-[11px] transition"
+						style="border-color:{schoolFilter === sc ? SPELL_SCHOOLS[sc].color : 'var(--color-border)'};color:{schoolFilter === sc ? SPELL_SCHOOLS[sc].color : 'var(--color-muted)'}"
+						onclick={() => (schoolFilter = schoolFilter === sc ? null : sc)}
+						title={SPELL_SCHOOLS[sc].label}
+					>
+						<span class="h-1.5 w-1.5 rounded-full" style="background:{SPELL_SCHOOLS[sc].color}"></span>
+						{SPELL_SCHOOLS[sc].label}
+					</button>
+				{/each}
+			</div>
+		{/if}
 
 		<div class="flex flex-col gap-3">
 			{#each byLevel as [lvl, spells] (lvl)}
