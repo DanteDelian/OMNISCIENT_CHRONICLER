@@ -15,6 +15,7 @@
 		type KnowledgeTier
 	} from '$lib/types';
 	import AnimatedNumber from '$lib/components/AnimatedNumber.svelte';
+	import SinceLastSession from '$lib/components/SinceLastSession.svelte';
 	import WandSparkles from '@lucide/svelte/icons/wand-sparkles';
 	import Shield from '@lucide/svelte/icons/shield';
 	import Zap from '@lucide/svelte/icons/zap';
@@ -154,6 +155,11 @@
 				</a>
 			</div>
 		</section>
+
+		<!-- ═══ Seit der letzten Session ═══ -->
+		{#if lastSession}
+			<SinceLastSession number={lastSession.number} title={lastSession.title} />
+		{/if}
 
 		<!-- ═══ Held · Letzte · Nächste Session ═══ -->
 		<div class="mb-4 grid gap-4 md:grid-cols-3">
