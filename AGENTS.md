@@ -51,6 +51,8 @@ neue Zauber in `spells.json` mit `status: "buch"`, Journal-Eintrag mit `level`. 
   `callout-*`, Tokens wie `text-astral`, `bg-panel`, `border-line`. Neue UI immer daraus bauen.
 - **Bausteine:** `Markdown` (mit Verweisen), `RefChip`, `SourceChip`, `Pips`, `Modal`, `PageHeader`, `StatBlock`,
   `SpellDetail`, `Callout`. Regeln und Rechnungen: `lib/rules.ts`, Regeltexte: `lib/rules-ref.ts`.
+- **Druckfassung** (`/druck`): Teile in `lib/components/print/` (Präfix `P`), Stil in `routes/druck/print.css`,
+  nur Klassen unter `.druck`. Neue Daten, die man am Tisch braucht, auch dort ergänzen.
 - Vor jedem Commit: `npm run check` und `npm run check:data` grün.
 
 ## Befehle
@@ -61,6 +63,7 @@ npm run dev          # http://localhost:5173
 npm run check        # svelte-check
 npm run check:data   # Kampagnendaten und Verweise
 npm run build        # Produktionsbuild (start.bat startet ihn auf Port 3000)
+npm run druck        # Druckfassung als PDFs nach druck/ (App muss laufen)
 ```
 
 ## Nicht tun

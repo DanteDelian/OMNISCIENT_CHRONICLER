@@ -53,3 +53,23 @@ export function renderInline(src: string, resolve?: Resolver): string {
 	if (!src) return '';
 	return marked.parseInline(linkify(src, resolve), { async: false }) as string;
 }
+
+/** Sprungmarke eines Index-Eintrags in der Druckfassung (PDF-interne Verweise). */
+export function printAnchor(key: string): string {
+	return 'ref-' + key.replace(/[^a-z0-9]+/gi, '-');
+}
+
+/** Druckfassung: Verweise werden zu PDF-internen Sprüngen statt App-Links. */
+function linkifyPrint(src: string, resolve?: Resolver): string {
+	return src.replace(/\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|([^\]]+))?\]\]/g, (_m, target: string, label?: string) => {
+		const text = (label || target).trim();
+		const hit = resolve?.(target.trim());
+		return hit ? `<a class="xref" href="#${printAnchor(hit.key)}">${text}</a>` : `<span class="xref">${text}</span>`;
+	});
+}
+
+export function renderPrint(src: string, resolve?: Resolver, inline = false): string {
+	if (!src) return '';
+	if (inline) return marked.parseInline(linkifyPrint(src, resolve), { async: false }) as string;
+	return callouts(marked.parse(linkifyPrint(src, resolve), { async: false }) as string);
+}

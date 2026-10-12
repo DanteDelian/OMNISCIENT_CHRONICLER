@@ -1,0 +1,791 @@
+/* ============================================================
+   Druckfassung · A4, hell und tintensparend
+   Gilt nur unter .druck (Route /druck). Am Bildschirm erscheinen die
+   Dokumente als Blätter auf grauem Grund, im Druck als echte Seiten.
+   ============================================================ */
+
+@page {
+	size: A4;
+	margin: 15mm 15mm 17mm;
+	@bottom-left {
+		content: 'Valerius Moonwhisper · Grimoire';
+		font-family: 'Geist Variable', sans-serif;
+		font-size: 6.8pt;
+		letter-spacing: 0.08em;
+		color: #8b879a;
+	}
+	@bottom-right {
+		content: counter(page);
+		font-family: 'Geist Mono Variable', monospace;
+		font-size: 7.5pt;
+		color: #8b879a;
+	}
+}
+
+@page cover {
+	margin: 0;
+	@bottom-left {
+		content: none;
+	}
+	@bottom-right {
+		content: none;
+	}
+}
+
+html:has(.druck),
+html:has(.druck) body {
+	background: #d8d5e1 !important;
+	color-scheme: light;
+}
+
+.druck {
+	--p-ink: #1d1a28;
+	--p-ink-2: #474357;
+	--p-ink-3: #7c778e;
+	--p-line: #dcd8e6;
+	--p-line-2: #c7c2d6;
+	--p-soft: #f6f4fb;
+	--p-soft-2: #efecf7;
+	--p-accent: #5b47d6;
+	--p-gold: #9a6f12;
+	--p-life: #17805a;
+	--p-blood: #b4233a;
+	--p-warn: #a35f00;
+	--p-info: #2563a8;
+
+	color: var(--p-ink);
+	font-family: var(--font-sans);
+	font-size: 9.3pt;
+	line-height: 1.5;
+	font-feature-settings: 'ss01', 'cv11';
+	-webkit-print-color-adjust: exact;
+	print-color-adjust: exact;
+	padding-bottom: 12mm;
+}
+
+/* ---------- Werkzeugleiste (nur Bildschirm) ---------- */
+.druck .toolbar {
+	position: sticky;
+	top: 0;
+	z-index: 20;
+	margin-bottom: 8mm;
+	border-bottom: 1px solid #c9c4d8;
+	background: rgb(250 249 253 / 0.94);
+	backdrop-filter: blur(10px);
+	font-size: 10pt;
+}
+
+/* ---------- Blätter ---------- */
+.druck .sheet {
+	position: relative;
+	width: 210mm;
+	min-height: 120mm;
+	margin: 0 auto 9mm;
+	padding: 15mm 15mm 17mm;
+	background: #fff;
+	border-radius: 2px;
+	box-shadow:
+		0 1px 2px rgb(30 20 60 / 0.12),
+		0 12px 40px rgb(30 20 60 / 0.16);
+}
+
+.druck .sheet.cover-sheet {
+	page: cover;
+	height: 297mm;
+	padding: 0;
+	overflow: hidden;
+}
+.druck .sheet.one-page {
+	height: 297mm;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+.druck .fill {
+	flex: 1 1 auto;
+	min-height: 0;
+}
+
+@media print {
+	html:has(.druck),
+	html:has(.druck) body {
+		background: #fff !important;
+	}
+	.druck {
+		padding: 0;
+	}
+	.druck .toolbar,
+	.druck .screen-only {
+		display: none !important;
+	}
+	.druck .sheet {
+		width: auto;
+		min-height: 0;
+		margin: 0;
+		padding: 0;
+		border-radius: 0;
+		box-shadow: none;
+	}
+	.druck .sheet + .sheet {
+		break-before: page;
+	}
+	.druck .sheet.cover-sheet {
+		width: 210mm;
+		height: 297mm;
+	}
+	/* Seitenhöhe minus Ränder (15 + 17 mm), mit etwas Luft gegen Überlauf */
+	.druck .sheet.one-page {
+		height: 263mm;
+	}
+}
+
+/* ---------- Typografie ---------- */
+.druck h1,
+.druck h2,
+.druck h3,
+.druck h4 {
+	color: var(--p-ink);
+	break-after: avoid;
+}
+.druck .doc-head {
+	margin-bottom: 6mm;
+	padding-bottom: 3.5mm;
+	border-bottom: 0.8pt solid var(--p-ink);
+	position: relative;
+}
+.druck .doc-head::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -2.2pt;
+	border-bottom: 0.4pt solid var(--p-line-2);
+}
+.druck .doc-head h1 {
+	font-family: var(--font-display);
+	font-size: 30pt;
+	font-weight: 400;
+	line-height: 1.02;
+	letter-spacing: -0.01em;
+}
+.druck .doc-sub {
+	margin-top: 1.5mm;
+	color: var(--p-ink-2);
+	font-size: 9.5pt;
+}
+.druck .doc-head.compact {
+	margin-bottom: 4mm;
+	padding-bottom: 2.4mm;
+}
+.druck .doc-head.compact h1 {
+	font-size: 22pt;
+}
+.druck .doc-head.compact .doc-sub {
+	margin-top: 0.6mm;
+	font-size: 8.5pt;
+}
+.druck .eyebrow {
+	color: var(--p-accent);
+	font-size: 6.8pt;
+	font-weight: 600;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	margin-bottom: 1.2mm;
+}
+.druck h2 {
+	font-family: var(--font-display);
+	font-size: 17pt;
+	font-weight: 400;
+	line-height: 1.1;
+	margin: 6mm 0 2.5mm;
+}
+.druck h2 .count {
+	font-family: var(--font-sans);
+	font-size: 8pt;
+	color: var(--p-ink-3);
+	margin-left: 2mm;
+}
+.druck h3 {
+	font-size: 10.5pt;
+	font-weight: 650;
+	line-height: 1.25;
+	margin: 3.5mm 0 1.2mm;
+}
+.druck h4 {
+	font-size: 7pt;
+	font-weight: 650;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--p-ink-3);
+	margin: 2.5mm 0 1mm;
+}
+.druck p {
+	margin: 0 0 1.6mm;
+}
+.druck b,
+.druck strong {
+	font-weight: 650;
+	color: var(--p-ink);
+}
+.druck i,
+.druck em {
+	font-style: italic;
+}
+.druck .muted {
+	color: var(--p-ink-3);
+}
+.druck .soft {
+	color: var(--p-ink-2);
+}
+.druck .small {
+	font-size: 8pt;
+}
+.druck .tiny {
+	font-size: 7pt;
+}
+.druck .num {
+	font-family: var(--font-mono);
+	font-variant-numeric: tabular-nums;
+}
+.druck .serif {
+	font-family: var(--font-display);
+	font-weight: 400;
+}
+.druck .label {
+	font-size: 6.6pt;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--p-ink-3);
+}
+.druck .xref {
+	color: inherit;
+	text-decoration: none;
+	border-bottom: 0.5pt dotted var(--p-ink-3);
+}
+.druck a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* ---------- Bausteine ---------- */
+.druck .avoid {
+	break-inside: avoid;
+}
+.druck .page-break {
+	break-before: page;
+}
+.druck .cols-2 {
+	column-count: 2;
+	column-gap: 7mm;
+	column-rule: 0.4pt solid var(--p-line);
+}
+.druck .cols-3 {
+	column-count: 3;
+	column-gap: 6mm;
+	column-rule: 0.4pt solid var(--p-line);
+}
+.druck .grid {
+	display: grid;
+	gap: 3mm;
+}
+.druck .g2 {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.druck .g3 {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.druck .g4 {
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.druck .g6 {
+	grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.druck .row {
+	display: flex;
+	align-items: baseline;
+	gap: 2mm;
+}
+.druck .spread {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 3mm;
+}
+.druck .box {
+	border: 0.6pt solid var(--p-line-2);
+	border-radius: 2mm;
+	padding: 2.6mm 3mm;
+	break-inside: avoid;
+}
+.druck .box-soft {
+	background: var(--p-soft);
+	border-radius: 2mm;
+	padding: 2.6mm 3mm;
+	break-inside: avoid;
+}
+.druck .box-accent {
+	border-left: 2pt solid var(--p-accent);
+	background: #f4f2ff;
+	border-radius: 0 2mm 2mm 0;
+	padding: 2.2mm 3mm;
+	break-inside: avoid;
+}
+.druck .stat {
+	border: 0.6pt solid var(--p-line-2);
+	border-radius: 2mm;
+	padding: 2mm 1.5mm 1.6mm;
+	text-align: center;
+	break-inside: avoid;
+}
+.druck .stat .v {
+	font-family: var(--font-mono);
+	font-size: 15pt;
+	font-weight: 600;
+	line-height: 1.1;
+}
+.druck .stat .l {
+	font-size: 6.4pt;
+	font-weight: 600;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--p-ink-3);
+	margin-top: 0.6mm;
+}
+.druck .stat .s {
+	font-size: 6.8pt;
+	color: var(--p-ink-3);
+}
+.druck .pill {
+	display: inline-block;
+	border: 0.6pt solid color-mix(in srgb, var(--c, var(--p-ink-3)) 55%, white);
+	background: color-mix(in srgb, var(--c, var(--p-ink-3)) 9%, white);
+	color: var(--c, var(--p-ink-2));
+	border-radius: 99px;
+	padding: 0 1.6mm;
+	font-size: 6.8pt;
+	font-weight: 600;
+	line-height: 1.55;
+	white-space: nowrap;
+	vertical-align: 0.3pt;
+}
+.druck .tag {
+	display: inline-block;
+	border: 0.5pt solid var(--p-line-2);
+	border-radius: 1mm;
+	padding: 0 1.2mm;
+	font-size: 7pt;
+	color: var(--p-ink-2);
+	line-height: 1.5;
+	margin: 0 0.6mm 0.8mm 0;
+}
+.druck .rule {
+	border: 0;
+	border-top: 0.4pt solid var(--p-line);
+	margin: 3mm 0;
+}
+
+/* Kästchen zum Abhaken und Schreiblinien */
+.druck .cb,
+.druck .dot {
+	display: inline-block;
+	width: 3.4mm;
+	height: 3.4mm;
+	border: 0.8pt solid var(--p-ink-2);
+	border-radius: 0.7mm;
+	vertical-align: -0.7mm;
+	background: #fff;
+}
+.druck .dot {
+	border-radius: 50%;
+}
+.druck .cb.lg,
+.druck .dot.lg {
+	width: 4.6mm;
+	height: 4.6mm;
+}
+.druck .boxes {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 1.2mm;
+	vertical-align: middle;
+}
+.druck .write {
+	display: inline-block;
+	min-width: 22mm;
+	border-bottom: 0.6pt solid var(--p-ink-3);
+	height: 4.2mm;
+	vertical-align: -1mm;
+}
+/* Schreiblinien: ein Kachelmuster ist im PDF zuverlässiger als ein wiederholter Verlauf. */
+.druck .lines {
+	background-image: linear-gradient(to bottom, transparent calc(100% - 0.6pt), var(--p-line-2) calc(100% - 0.6pt));
+	background-size: 100% 7mm;
+	background-repeat: repeat;
+}
+
+/* ---------- Tabellen ---------- */
+.druck table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 8.4pt;
+}
+.druck th {
+	text-align: left;
+	font-size: 6.4pt;
+	font-weight: 650;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--p-ink-3);
+	border-bottom: 0.8pt solid var(--p-ink-2);
+	padding: 1mm 1.6mm 1mm;
+}
+.druck td {
+	border-bottom: 0.4pt solid var(--p-line);
+	padding: 1.1mm 1.6mm;
+	vertical-align: top;
+}
+.druck tr {
+	break-inside: avoid;
+}
+.druck tbody tr:nth-child(even) td {
+	background: #faf9fd;
+}
+.druck table.tight td {
+	padding: 0.6mm 1.4mm;
+	line-height: 1.35;
+}
+.druck td.r,
+.druck th.r {
+	text-align: right;
+}
+.druck td.c,
+.druck th.c {
+	text-align: center;
+}
+
+/* ---------- Markdown ---------- */
+.druck .md > :first-child {
+	margin-top: 0;
+}
+.druck .md p {
+	margin: 0 0 2mm;
+}
+.druck .md h1 {
+	font-family: var(--font-display);
+	font-size: 20pt;
+	font-weight: 400;
+	margin: 6mm 0 2mm;
+}
+.druck .md h2 {
+	margin-top: 5.5mm;
+}
+.druck .md h3 {
+	margin-top: 4mm;
+}
+.druck .md ul,
+.druck .md ol {
+	margin: 0 0 2mm;
+	padding-left: 4.6mm;
+}
+.druck .md ul {
+	list-style: disc;
+}
+.druck .md ol {
+	list-style: decimal;
+}
+.druck .md li {
+	margin: 0 0 0.9mm;
+	padding-left: 0.6mm;
+}
+.druck .md li::marker {
+	color: var(--p-ink-3);
+}
+.druck .md table {
+	margin: 1mm 0 3mm;
+}
+.druck .md blockquote {
+	border-left: 2pt solid var(--p-line-2);
+	padding: 0.5mm 0 0.5mm 3mm;
+	margin: 0 0 2.5mm;
+	color: var(--p-ink-2);
+}
+.druck .md hr {
+	border: 0;
+	border-top: 0.4pt solid var(--p-line);
+	margin: 4mm 0;
+}
+.druck .md code {
+	font-family: var(--font-mono);
+	font-size: 0.92em;
+	background: var(--p-soft);
+	border-radius: 0.8mm;
+	padding: 0 0.8mm;
+}
+
+/* Hinweis-Kästen */
+.druck .callout {
+	--c: var(--p-info);
+	border: 0;
+	border-left: 2pt solid var(--c);
+	background: color-mix(in srgb, var(--c) 6%, white);
+	border-radius: 0 2mm 2mm 0;
+	padding: 2mm 3mm 1mm;
+	margin: 0 0 3mm;
+	color: var(--p-ink);
+	break-inside: avoid;
+}
+.druck .callout-tip {
+	--c: var(--p-life);
+}
+.druck .callout-rule {
+	--c: var(--p-info);
+}
+.druck .callout-warning {
+	--c: var(--p-warn);
+}
+.druck .callout-fix {
+	--c: var(--p-blood);
+}
+.druck .callout-note {
+	--c: var(--p-accent);
+}
+.druck .callout-title {
+	display: block;
+	color: var(--p-ink);
+	font-size: inherit;
+	font-weight: 650;
+	margin-bottom: 1mm;
+}
+.druck .callout-title::before {
+	content: attr(data-label);
+	color: var(--c);
+	background: none;
+	padding: 0;
+	border-radius: 0;
+	font-size: 6.4pt;
+	font-weight: 700;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	margin-right: 2mm;
+}
+.druck .callout p {
+	margin-bottom: 1.2mm;
+}
+
+/* ---------- Zauber ---------- */
+.druck .spell {
+	padding: 0 0 3mm;
+	margin: 0 0 3.5mm;
+}
+.druck .spell-top {
+	break-inside: avoid;
+	break-after: avoid;
+}
+.druck .spell-head {
+	border-top: 2pt solid var(--c, var(--p-accent));
+	padding-top: 1.6mm;
+}
+.druck .spell-name {
+	font-family: var(--font-display);
+	font-size: 15pt;
+	font-weight: 400;
+	line-height: 1.05;
+}
+.druck .spell-meta {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 0.3mm 2.5mm;
+	font-size: 7.8pt;
+	margin: 1.6mm 0 2mm;
+	padding: 1.6mm 2.2mm;
+	background: var(--p-soft);
+	border-radius: 1.6mm;
+	break-inside: avoid;
+}
+.druck .spell-meta dt {
+	color: var(--p-ink-3);
+	font-weight: 600;
+}
+.druck .for-val {
+	border-left: 2pt solid var(--p-gold);
+	background: #fbf6ea;
+	border-radius: 0 1.6mm 1.6mm 0;
+	padding: 1.4mm 2.4mm;
+	margin: 1.6mm 0;
+	break-inside: avoid;
+}
+.druck .for-val .label {
+	color: var(--p-gold);
+}
+.druck .bullets {
+	margin: 0.6mm 0 1.4mm;
+	padding-left: 4mm;
+	list-style: disc;
+}
+.druck .bullets li {
+	margin-bottom: 0.7mm;
+}
+.druck .bullets li::marker {
+	color: var(--p-ink-3);
+}
+
+/* ---------- Wertblöcke ---------- */
+.druck .statblock {
+	border-top: 2pt solid var(--p-blood);
+	border-bottom: 2pt solid var(--p-blood);
+	background: #fdfaf6;
+	padding: 2mm 2.6mm 1.6mm;
+	break-inside: avoid;
+	font-size: 8.2pt;
+}
+.druck .statblock.current {
+	border-color: var(--p-accent);
+	background: #f6f4ff;
+}
+.druck .statblock .sb-name {
+	font-family: var(--font-display);
+	font-size: 14pt;
+	line-height: 1.05;
+	color: #7a1d2c;
+}
+.druck .statblock.current .sb-name {
+	color: var(--p-accent);
+}
+.druck .statblock .sb-sub {
+	font-style: italic;
+	font-size: 7.4pt;
+	color: var(--p-ink-2);
+}
+.druck .statblock .sb-line {
+	margin: 0.4mm 0;
+}
+.druck .statblock .sb-abil {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	text-align: center;
+	margin: 1.2mm 0;
+	padding: 1mm 0;
+	border-top: 0.5pt solid #e3c9c9;
+	border-bottom: 0.5pt solid #e3c9c9;
+}
+.druck .statblock .sb-abil .k {
+	font-size: 6.2pt;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	color: var(--p-ink-3);
+}
+.druck .statblock .sb-trait {
+	margin: 0.8mm 0;
+}
+
+/* ---------- Deckblatt ---------- */
+.druck .cover {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 24mm 22mm 18mm;
+	text-align: center;
+	background:
+		radial-gradient(120mm 90mm at 50% 22%, #f1edff 0%, transparent 70%),
+		radial-gradient(90mm 70mm at 85% 95%, #fbf3e0 0%, transparent 70%),
+		#fff;
+}
+.druck .cover-frame {
+	position: absolute;
+	inset: 9mm;
+	border: 0.8pt solid #c9a24a;
+	pointer-events: none;
+}
+.druck .cover-frame::after {
+	content: '';
+	position: absolute;
+	inset: 1.6mm;
+	border: 0.4pt solid #e2cf9f;
+}
+.druck .cover-portrait {
+	width: 62mm;
+	height: 62mm;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 1.2pt solid #c9a24a;
+	box-shadow: 0 0 0 2.4mm #fff, 0 0 0 2.8mm #e2cf9f;
+	margin: 6mm 0 9mm;
+}
+.druck .cover-title {
+	font-family: var(--font-display);
+	font-size: 46pt;
+	line-height: 0.98;
+	letter-spacing: -0.01em;
+}
+.druck .cover-sub {
+	margin-top: 3mm;
+	font-family: var(--font-display);
+	font-style: italic;
+	font-size: 15pt;
+	color: var(--p-ink-2);
+}
+.druck .cover-ornament {
+	margin: 7mm 0 6mm;
+	color: #b08a35;
+	letter-spacing: 0.6em;
+	font-size: 9pt;
+}
+.druck .cover-toc {
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 10mm;
+	width: 150mm;
+	text-align: left;
+	font-size: 9pt;
+}
+.druck .cover-toc li {
+	display: flex;
+	gap: 3mm;
+	align-items: baseline;
+	padding: 1.15mm 0;
+	border-bottom: 0.4pt dotted var(--p-line-2);
+}
+.druck .cover-toc .n {
+	font-family: var(--font-mono);
+	color: #b08a35;
+	font-size: 8pt;
+	width: 6mm;
+}
+.druck .cover-foot {
+	margin-top: auto;
+	font-size: 7.6pt;
+	color: var(--p-ink-3);
+	letter-spacing: 0.06em;
+}
+
+/* ---------- Karte ---------- */
+.druck .map {
+	position: relative;
+	border-radius: 2mm;
+	overflow: hidden;
+	border: 0.6pt solid var(--p-line-2);
+}
+.druck .map img {
+	display: block;
+	width: 100%;
+}
+.druck .map .pin {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	width: 5mm;
+	height: 5mm;
+	border-radius: 50%;
+	background: #fff;
+	border: 1pt solid var(--c, var(--p-ink));
+	color: var(--c, var(--p-ink));
+	font-family: var(--font-mono);
+	font-size: 6.6pt;
+	font-weight: 700;
+	display: grid;
+	place-items: center;
+	box-shadow: 0 0.4mm 1.2mm rgb(0 0 0 / 0.35);
+}

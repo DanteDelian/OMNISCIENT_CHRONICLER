@@ -19,6 +19,7 @@ gebaut und auch auf Tablet und Handy nutzbar.
 | **Karte** | Echsen-Karte mit Zoom, gedeuteten und ungedeuteten Markierungen, eigene Markierungen per Klick |
 | **Archiv** | Prüfbericht, Taktik-Handbuch, DM-Nachrichten, Backstory, Alchemie, Einkauf und alle Drive-Originale mit Bewertung |
 | **Regeln** | Zustände, Aktionen, Zauberwirken, Deckung, Licht, Todesrettung, Rasten, jeweils mit Bezug zu Valerius |
+| **Druckfassung** | Alle Dokumente als helles A4-Layout zum Ausdrucken: Deckblatt, Charakterbogen, Sitzungsbogen zum Abhaken, Zauberbuch im Regelbuch-Stil, Gefolge, Regeln, Inventar, Quests, Journal, Welt, Karte, Archiv. Teile frei wählbar, PDFs per Befehl |
 
 Überall: **Suche mit Strg+K** (oder `/`), **Vorschaukarten** beim Überfahren von Verweisen, **Würfelschale** mit `D`,
 Ziffern `1` bis `0` springen zu den Bereichen.
@@ -37,7 +38,12 @@ npm run dev          # http://localhost:5173
 npm run check        # Typprüfung
 npm run check:data   # Kampagnendaten und alle Verweise prüfen
 npm run build        # Produktionsbuild
+npm run druck        # alle PDFs nach druck/ (das Grimoire muss laufen)
 ```
+
+**Ausdrucken:** Seite **Druckfassung** öffnen (Seitenleiste unter „Wissen“ oder `/druck`), Teile auswählen, „Drucken“.
+Im Druckdialog Kopf- und Fußzeilen ausschalten, die Seitenzahlen setzt die Druckfassung selbst. Fertige PDFs
+(komplett und einzeln) erzeugt `npm run druck` im Ordner `druck/`.
 
 ## Daten
 

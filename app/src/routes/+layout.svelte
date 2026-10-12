@@ -24,6 +24,8 @@
 
 	let { data, children } = $props();
 	let mobileNav = $state(false);
+	// Die Druckfassung bringt ihr eigenes, helles Layout mit.
+	const bare = $derived(page.url.pathname.startsWith('/druck'));
 
 	// Serverdaten übernehmen (beim ersten Laden und nach jeder Live-Änderung).
 	untrack(() => {
@@ -72,6 +74,8 @@
 
 {#if !data.campaign}
 	<div class="starfield"></div>
+	{@render children()}
+{:else if campaign.data && bare}
 	{@render children()}
 {:else if campaign.data}
 	<div class="starfield"></div>

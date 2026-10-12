@@ -9,7 +9,8 @@ import {
 	Globe,
 	Map as MapIcon,
 	Library,
-	Scale
+	Scale,
+	Printer
 } from '@lucide/svelte';
 
 export const NAV = [
@@ -36,7 +37,8 @@ export const NAV = [
 		group: 'Wissen',
 		items: [
 			{ href: '/archiv', label: 'Archiv', icon: Library, key: '0' },
-			{ href: '/regeln', label: 'Regeln', icon: Scale, key: '' }
+			{ href: '/regeln', label: 'Regeln', icon: Scale, key: '' },
+			{ href: '/druck', label: 'Druckfassung', icon: Printer, key: '' }
 		]
 	}
 ];

@@ -37,10 +37,12 @@ app/src/
     journal.ts            Schnellnotizen und neue Journal-Einträge
     stores/               campaign (Daten + Speichern), live (SSE), rolls (Würfel), ui (Dialoge)
     server/               store (Dateien, Watcher), data (laden + Index), auth (PIN)
-    components/           Bausteine; play/ = Karten des Spieltischs
-  routes/                 Seiten: / bogen zauber gefolge inventar quests journal welt karte archiv regeln login
+    components/           Bausteine; play/ = Karten des Spieltischs; print/ = Teile der Druckfassung
+    print.ts              Teile, Beschriftungen und Papierfarben der Druckfassung
+  routes/                 Seiten: / bogen zauber gefolge inventar quests journal welt karte archiv regeln druck login
                           api/: save, stream, assets, health
 app/scripts/check-data.mjs  Konsistenzprüfung der Kampagnendaten (npm run check:data)
+app/scripts/druck.mjs       PDFs der Druckfassung über Edge/Chrome ohne Fenster (npm run druck)
 ```
 
 ## Entscheidungen
@@ -50,4 +52,8 @@ app/scripts/check-data.mjs  Konsistenzprüfung der Kampagnendaten (npm run check
   Aliasse und Spitznamen auf, das Prüfskript findet tote Verweise.
 - **Daten als Quelle für Wahrscheinlichkeiten:** Trefferchancen, Konzentrationschancen und Durchschnittsschaden
   rechnet `rules.ts` aus den Werten. Nichts davon ist fest eingetragen.
+- **Druckfassung als eigene Route** (`/druck`) statt Druck-CSS für jede Seite: eigenes helles Layout
+  (`routes/druck/print.css`, A4, `@page`-Ränder mit Seitenzahlen), die Bildschirmseiten bleiben unberührt.
+  Das Layout blendet dafür Seitenleiste und Dialoge aus. `npm run druck` steuert Edge oder Chrome über das
+  DevTools-Protokoll an und erzeugt daraus PDFs mit Lesezeichen und internen Verweisen.
 - **Bilder** liegen als WebP vor (Porträt 59 KB statt 6,9 MB, Karte 306 KB statt 3,2 MB). Die Originale bleiben in `assets/`.
