@@ -1,19 +1,55 @@
-import { marked } from 'marked';
-
-marked.setOptions({ breaks: true, gfm: true });
-
 /**
- * Rendert Markdown zu HTML und wandelt Obsidian-Wikilinks [[Ziel]] / [[Ziel|Text]]
- * in interne Links um. Läuft sowohl im Browser als auch auf dem Server.
+ * Markdown → HTML mit [[Wikilinks]] (inkl. Vorschaukarten-Attribut) und
+ * Hinweis-Kästen im GitHub-Stil: > [!TIP] Titel / [!RULE] / [!WARNING] / [!NOTE] / [!FIX]
  */
-export function renderMarkdown(src: string): string {
-	const withLinks = src.replace(
-		/\[\[([^\]|#]+)(?:#[^\]|]+)?(?:\|([^\]]+))?\]\]/g,
-		(_m, target: string, label?: string) => {
-			const text = (label || target).trim();
-			const href = '/glossar/' + encodeURIComponent(target.trim());
-			return `[${text}](${href})`;
-		}
-	);
-	return marked.parse(withLinks) as string;
+import { marked } from 'marked';
+import type { RefEntry } from './types';
+
+marked.setOptions({ gfm: true, breaks: true });
+
+type Resolver = (name: string) => RefEntry | undefined;
+
+const CALLOUT_LABEL: Record<string, string> = {
+	tip: 'Tipp',
+	rule: 'Regel',
+	warning: 'Achtung',
+	note: 'Hinweis',
+	fix: 'Korrigiert'
+};
+
+function escapeAttr(s: string): string {
+	return s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+}
+
+export function linkify(src: string, resolve?: Resolver): string {
+	return src.replace(/\[\[([^\]|#]+)(?:#[^\]|]*)?(?:\|([^\]]+))?\]\]/g, (_m, target: string, label?: string) => {
+		const text = (label || target).trim();
+		const hit = resolve?.(target.trim());
+		if (!hit) return `<span class="ref-missing" title="Noch kein Eintrag: ${escapeAttr(target.trim())}">${text}</span>`;
+		return `<a class="ref" href="${hit.href}" data-ref="${escapeAttr(hit.key)}">${text}</a>`;
+	});
+}
+
+function callouts(html: string): string {
+	return html.replace(/<blockquote>([\s\S]*?)<\/blockquote>/g, (whole, inner: string) => {
+		const m = inner.match(/^\s*<p>\[!(\w+)\]\s*([\s\S]*?)(<br>\s*|<\/p>)/i);
+		if (!m) return whole;
+		const type = m[1].toLowerCase();
+		const label = CALLOUT_LABEL[type] ?? 'Hinweis';
+		let rest = inner.slice(m[0].length);
+		if (m[3].startsWith('<br>')) rest = '<p>' + rest;
+		return `<div class="callout callout-${type}"><div class="callout-title" data-label="${label}">${m[2]}</div>${rest}</div>`;
+	});
+}
+
+export function renderMarkdown(src: string, resolve?: Resolver): string {
+	if (!src) return '';
+	const html = marked.parse(linkify(src, resolve), { async: false }) as string;
+	return callouts(html);
+}
+
+/** Einzeiliges Markdown (ohne <p>-Hülle), z. B. für Listenpunkte. */
+export function renderInline(src: string, resolve?: Resolver): string {
+	if (!src) return '';
+	return marked.parseInline(linkify(src, resolve), { async: false }) as string;
 }

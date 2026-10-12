@@ -1,29 +1,17 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
-	import Feather from '@lucide/svelte/icons/feather';
 	let { form } = $props();
 </script>
 
-<svelte:head><title>Anmelden · Omniscient Chronicler</title></svelte:head>
+<svelte:head><title>Anmelden · Valerius</title></svelte:head>
 
-<div class="grid min-h-[70vh] place-items-center">
-	<div class="card card-pad w-full max-w-sm text-center">
-		<span class="mx-auto mb-4 grid h-12 w-12 place-items-center rounded-2xl bg-primary text-primary-fg">
-			<Feather class="h-6 w-6" />
-		</span>
-		<h1 class="font-display text-xl font-bold">Omniscient Chronicler</h1>
-		<p class="mb-4 text-sm text-muted">Bitte PIN eingeben</p>
-		<form method="POST" use:enhance class="flex flex-col gap-3">
-			<input
-				class="input text-center text-2xl tracking-[0.5em]"
-				type="password"
-				name="pin"
-				inputmode="numeric"
-				autocomplete="current-password"
-				placeholder="••••"
-			/>
-			{#if form?.error}<p class="text-sm text-danger">{form.error}</p>{/if}
-			<button class="btn btn-primary" type="submit">Entsperren</button>
-		</form>
-	</div>
+<div class="relative z-10 grid min-h-dvh place-items-center p-4">
+	<form method="POST" use:enhance class="panel panel-glow w-full max-w-sm p-6 text-center">
+		<img src="/favicon.svg" alt="" class="mx-auto h-12 w-12" />
+		<h1 class="title-display mt-3 text-3xl">Valerius' Grimoire</h1>
+		<p class="mt-1 text-sm text-ink-3">PIN eingeben</p>
+		<input class="input num mt-5 !h-12 text-center text-xl tracking-[0.4em]" type="password" name="pin" aria-label="PIN" inputmode="numeric" autocomplete="current-password" required />
+		{#if form?.wrong}<p class="mt-2 text-sm text-blood">Falsche PIN.</p>{/if}
+		<button class="btn btn-primary mt-4 w-full">Öffnen</button>
+	</form>
 </div>

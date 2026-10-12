@@ -1,55 +1,70 @@
 # CLAUDE.md — Leitfaden für Claude Code
 
-Kurzorientierung für die Arbeit an diesem Repository.
+**Valerius · Grimoire**: Session-Dashboard und Nachschlagewerk für Patricks D&D-5e-Charakter Valerius Moonwhisper
+(Astralelf, Magier 5, Schule der Beschwörung). SvelteKit-App in `app/` über den Daten in `campaign/`.
+Schema der Daten: **`campaign/README.md`**. Technik: **`docs/ARCHITECTURE.md`**.
 
-## Was das ist
+## Zwei Rollen
 
-Ein lokal-first D&D-5e-**Kampagnen-Grimoire**: eine SvelteKit-App (`app/`) über einem dateibasierten
-Kampagnen-Vault (`campaign/`). Vollständige Vision & Ziel-Funktionen: **`docs/FEATURES.md`**.
-Technik & Datenfluss: **`docs/ARCHITECTURE.md`**.
+1. **Chronist:** Du pflegst `campaign/` (JSON + Markdown). Offene Browser aktualisieren sich live.
+2. **Entwickler:** Du erweiterst die App in `app/`.
 
-## Zwei Rollen für Claude
+## Arbeitsabläufe als Chronist
 
-1. **Als KI-Schnittstelle der App:** Du editierst die Dateien in `campaign/` (JSON + Markdown) direkt;
-   das laufende Dashboard zieht per Datei-Watcher/SSE live nach. Schema-Doku: **`campaign/README.md`**.
-2. **Als Entwickler:innen-Werkzeug:** Du erweiterst die App in `app/`.
+### „Das ist in der Session passiert …“
+1. **Datum klären.** Steht es nicht in der Nachricht, frag nach. Sonst `dateMode: "unbekannt"`, nie raten.
+2. **Journal-Eintrag** in `journal.json` anlegen: `order` = letzter + 10, `events` (ein Ereignis pro Zeile, mit
+   `[[Verweisen]]`), `places`, `people`, `loot`, `lost`, `encounters`, `quests` (Änderungen), `sources`.
+   Gibt es für das Datum schon „Session-Notizen“ (Schnellnotizen vom Tisch, `id: notizen-JJJJ-MM-TT`), einarbeiten.
+3. **Folgen nachziehen:** `quests.json` (Status, nächster Schritt), `inventory.json` (Beute, Geld, Verbrauch),
+   neue Personen oder Orte als `world/*.md`, `docs/lage.md` aktualisieren, bei Stufenaufstieg siehe unten.
+4. `cd app && npm run check:data`, dann Git-Commit der Kampagnendaten.
 
-## Kernprinzipien (bitte einhalten)
+### Abgleich mit Google Drive
+- Ordner „Valerius“: `13bTXk9i1u6Nu9rRG_5afo8RW0Id-61vT`, Ordner „Kho“ (Gefährtin): `1HFBGateqVOesOlInskMQMx6WtBmlc6cn`.
+- Dokumente lesen, gegen die Regeln (Spielerhandbuch 2014, Xanathars, Spelljammer für den Astralelfen) prüfen,
+  Abweichungen in `campaign/` korrigieren und im Prüfbericht (`docs/pruefbericht.md`) festhalten.
+- `sources.json` mit Stand und Bewertung pflegen. Von Gemini erzeugte Entwürfe bekommen den Status `gemini`:
+  Patrick will sie nur als Vorschläge, nicht als Fakten.
+- Drive-Dateien **nie ohne Rückfrage** ändern.
 
-- **Dateien sind die Wahrheit.** Kanonisch ist `campaign/` (Git-versioniert, kein Lock-in). Keine Datenbank.
-- **KI schlägt vor, überschreibt nicht blind.** Die Session-Werkstatt schreibt erst nach Nutzer-Freigabe;
-  jede Übernahme trägt Provenance (`source='ai-session'`, `sessionId`). Erfinde nichts.
-- **Wissen hat Ebenen:** Fakt / Gerücht / Theorie — eine Theorie wird nie automatisch zum Fakt.
-- **Gamefyed, aber kein Videospiel.** Immersive Atmosphäre ja; künstliche Gamification (Beziehungs-Scores,
-  NSC-XP, Deko-Rewards) nein.
+### Stufenaufstieg
+`character.json` (Stufe, Übungsbonus, TP-Maximum: Patrick fragen, ob gewürfelt wird, Plätze, neue Merkmale),
+neue Zauber in `spells.json` mit `status: "buch"`, Journal-Eintrag mit `level`. Ein Magier bekommt pro Stufe
+2 Zauber kostenlos ins Buch.
 
-## Konventionen (App)
+## Inhaltliche Regeln
 
-- **Svelte 5 (Runes):** `$state`, `$derived`, `$effect`, `$props`; Stores als `*.svelte.ts`-Klassen
-  (siehe `lib/stores/`). Reaktiv auf Datenänderungen via `live.rev`.
-- **Design-System (`app/src/routes/layout.css`):** Klassen `.card` / `.card-pad` / `.card-ornate` /
-  `.btn`(`-primary`/`-ghost`/`-danger`) / `.input` / `.chip` / `.panel-title` / `.stat-tile`;
-  Tokens `--color-primary` (Violett), `--color-accent` (Gold), Fonts Cinzel (Display) + Inter.
-  **Neue UI immer über diese Klassen** bauen, nicht ad-hoc.
-- **Server-Endpoints:** `src/routes/api/**/+server.ts`, Muster `getActiveCharacter()` + `json()`.
-  Alle Routen sind durch `hooks.server.ts` (optionaler PIN) geschützt.
-- **Datei-IO nur über `lib/server/campaign.ts`** (`loadJson/saveJson/loadText/saveText`) und
-  `lib/server/vault.ts` (Notizen) — damit Live-Sync & Provenance greifen.
-- **Provenance:** Charakteränderungen über `updateCharacter(id, patch, source, sessionId)`;
-  neue Quests/Items/Wissen tragen `sourceSession`.
+- **Nichts erfinden.** Unbelegtes als *Theorie* kennzeichnen oder im Prüfbericht als offene Frage notieren.
+- **Widersprüche sichtbar lassen** (`contradictions` im Journal), nicht stillschweigend entscheiden.
+- **Zaubertexte vollständig:** alle Regeln eines Zaubers. SRD-Zauber dürfen übersetzt werden, Nicht-SRD-Zauber
+  (z. B. Xanathars) in eigenen Worten.
+- Sprache: Deutsch, Begriffe wie in Patricks Bögen (Magier, Menschenkenntnis, Bannzauber, GM/SM/KM, Meter mit Fuß).
+
+## Konventionen als Entwickler
+
+- **Svelte 5 Runes** (`$state`, `$derived`, `$effect`, `$props`), `ssr = false`, Daten lädt `+layout.server.ts`.
+- **Zustand:** `campaign` aus `lib/stores/campaign.svelte.ts`. Ändern immer über `campaign.change('<datei>', fn)`.
+  Das speichert entprellt nach `campaign/<datei>.json`. Spielaktionen (Schaden, Wirken, Rasten) liegen in `lib/game.ts`.
+- **Design-System** in `src/app.css`: `panel`, `panel-glow`, `sunken`, `btn` (`-primary`, `-ghost`, `-danger`, `-life`,
+  `-sm`, `-xs`), `chip`/`chip-on`, `badge` (Farbe über `--c`), `eyebrow`, `title-display`, `num`, `prose-grim`,
+  `callout-*`, Tokens wie `text-astral`, `bg-panel`, `border-line`. Neue UI immer daraus bauen.
+- **Bausteine:** `Markdown` (mit Verweisen), `RefChip`, `SourceChip`, `Pips`, `Modal`, `PageHeader`, `StatBlock`,
+  `SpellDetail`, `Callout`. Regeln und Rechnungen: `lib/rules.ts`, Regeltexte: `lib/rules-ref.ts`.
+- Vor jedem Commit: `npm run check` und `npm run check:data` grün.
 
 ## Befehle
 
 ```bash
 cd app
-npm run dev        # Dev-Server (http://localhost:5173, liest app/.env)
-npm run check      # svelte-check — vor jedem Commit grün halten
-npm run build      # Produktionsbuild (adapter-node)
+npm run dev          # http://localhost:5173
+npm run check        # svelte-check
+npm run check:data   # Kampagnendaten und Verweise
+npm run build        # Produktionsbuild (start.bat startet ihn auf Port 3000)
 ```
 
-## Do / Don't
+## Nicht tun
 
-- ✅ Bestehende Muster & Komponenten wiederverwenden; kleine, verifizierte Schritte; `npm run check` grün.
-- ✅ Nach inhaltlichen `campaign/`-Änderungen Git-Commit für die Kampagnen-Historie.
-- ❌ Keine Datenbank/Cloud/Microservices einführen. Keine erfundene Lore/Geografie.
-- ❌ Keine echten Secrets committen (`.env` ist gitignored).
+- Keine Datenbank, keine Cloud-Dienste, kein Konto-Zwang. Die Dateien in `campaign/` sind die Wahrheit.
+- Keine Secrets committen (`.env` ist ignoriert).
+- Keine erfundene Lore, keine Gemini-Vorschläge als Fakten übernehmen.

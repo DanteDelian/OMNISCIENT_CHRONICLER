@@ -1,235 +1,229 @@
 <script lang="ts">
-	import { onMount, onDestroy } from 'svelte';
-	import { goto } from '$app/navigation';
-	import { live } from '$lib/stores/live.svelte';
-	import MapIcon from '@lucide/svelte/icons/map';
-	import Users from '@lucide/svelte/icons/users';
-	import MapPin from '@lucide/svelte/icons/map-pin';
+	import { ZoomIn, ZoomOut, Maximize, MapPinPlus, Trash2, X, ExternalLink } from '@lucide/svelte';
+	import PageHeader from '$lib/components/PageHeader.svelte';
+	import Modal from '$lib/components/Modal.svelte';
+	import RefChip from '$lib/components/RefChip.svelte';
+	import Markdown from '$lib/components/Markdown.svelte';
+	import { campaign } from '$lib/stores/campaign.svelte';
+	import { uid } from '$lib/format';
+	import type { MapPin } from '$lib/types';
 
-	type Kind = 'place' | 'person';
-	type Conf = 'confirmed' | 'approximate' | 'rumored' | 'mentioned';
-	interface RawNode { id: string; title: string; kind: Kind; type: string; degree: number }
-	interface RawEdge { source: string; target: string; type: string; confidence: Conf; spatial: boolean; distance?: string }
-	interface SimNode extends RawNode { x: number; y: number; vx: number; vy: number }
+	const map = $derived(campaign.data.map);
+	const src = $derived(campaign.data.sources.find((s) => s.id === 'karte'));
 
-	const W = 920, H = 600;
-	let nodes = $state<SimNode[]>([]);
-	let edges = $state<RawEdge[]>([]);
-	let loaded = $state(false);
-	let hoverId = $state<string | null>(null);
+	const KINDS: Record<MapPin['kind'], { label: string; color: string }> = {
+		ziel: { label: 'Ziel', color: 'var(--color-blood)' },
+		gefahr: { label: 'Gefahr', color: 'var(--color-warn)' },
+		bestie: { label: 'Bestien', color: 'var(--color-s-herv)' },
+		ort: { label: 'Ort', color: 'var(--color-life)' },
+		unklar: { label: 'Ungedeutet', color: '#9aa0b8' },
+		eigen: { label: 'Eigene', color: 'var(--color-astral)' }
+	};
 
-	// Pan/Zoom
-	let k = $state(1), tx = $state(0), ty = $state(0);
-	let panning = $state(false);
-	let panStart = { x: 0, y: 0, tx: 0, ty: 0 };
+	let hidden = $state<Set<string>>(new Set());
+	let selected = $state<MapPin | null>(null);
+	let zoom = $state(1);
+	let pan = $state({ x: 0, y: 0 });
+	let placing = $state(false);
+	let draft = $state<MapPin | null>(null);
+	let stage: HTMLDivElement | undefined = $state();
+	let inner: HTMLDivElement | undefined = $state();
 
-	let raf = 0, alpha = 1;
+	let dragging = false;
+	let moved = false;
+	let start = { x: 0, y: 0, px: 0, py: 0 };
 
-	async function load() {
-		const r = await fetch('/api/map');
-		if (!r.ok) return;
-		const g = (await r.json()) as { nodes: RawNode[]; edges: RawEdge[] };
-		// deterministische Startpositionen auf einem Kreis (stabil, kein Zufall)
-		const cx = W / 2, cy = H / 2, R = Math.min(W, H) * 0.36;
-		nodes = g.nodes.map((n, i) => {
-			const a = (i / g.nodes.length) * Math.PI * 2;
-			return { ...n, x: cx + Math.cos(a) * R, y: cy + Math.sin(a) * R, vx: 0, vy: 0 };
-		});
-		edges = g.edges;
-		loaded = true;
-		alpha = 1;
-		cancelAnimationFrame(raf);
-		tick();
+	function clampZoom(z: number) {
+		return Math.min(5, Math.max(1, z));
 	}
 
-	function tick() {
-		const N = nodes;
-		const byId = new Map(N.map((n) => [n.id, n]));
-		// Abstoßung (O(n²), N≈27 → günstig)
-		for (let i = 0; i < N.length; i++) {
-			for (let j = i + 1; j < N.length; j++) {
-				const a = N[i], b = N[j];
-				let dx = a.x - b.x, dy = a.y - b.y;
-				let d2 = dx * dx + dy * dy || 0.01;
-				const f = (7200 / d2) * alpha;
-				const d = Math.sqrt(d2);
-				const ux = dx / d, uy = dy / d;
-				a.vx += ux * f; a.vy += uy * f;
-				b.vx -= ux * f; b.vy -= uy * f;
-			}
+	function onwheel(e: WheelEvent) {
+		e.preventDefault();
+		if (!stage) return;
+		const r = stage.getBoundingClientRect();
+		const cx = e.clientX - r.left;
+		const cy = e.clientY - r.top;
+		const next = clampZoom(zoom * (e.deltaY < 0 ? 1.15 : 1 / 1.15));
+		// Um den Mauszeiger zoomen
+		pan = { x: cx - ((cx - pan.x) * next) / zoom, y: cy - ((cy - pan.y) * next) / zoom };
+		zoom = next;
+		if (zoom === 1) pan = { x: 0, y: 0 };
+	}
+
+	function down(e: PointerEvent) {
+		dragging = true;
+		moved = false;
+		start = { x: e.clientX, y: e.clientY, px: pan.x, py: pan.y };
+	}
+	function move(e: PointerEvent) {
+		if (!dragging) return;
+		const dx = e.clientX - start.x;
+		const dy = e.clientY - start.y;
+		if (Math.abs(dx) + Math.abs(dy) > 4) moved = true;
+		if (zoom > 1) pan = { x: start.px + dx, y: start.py + dy };
+	}
+	function up(e: PointerEvent) {
+		dragging = false;
+		if (!moved && placing && inner) {
+			const r = inner.getBoundingClientRect();
+			const x = ((e.clientX - r.left) / r.width) * 100;
+			const y = ((e.clientY - r.top) / r.height) * 100;
+			draft = { id: uid('pin'), x: Math.round(x * 10) / 10, y: Math.round(y * 10) / 10, kind: 'eigen', label: '', text: '' };
+			placing = false;
 		}
-		// Federn entlang Kanten
-		for (const e of edges) {
-			const a = byId.get(e.source), b = byId.get(e.target);
-			if (!a || !b) continue;
-			let dx = b.x - a.x, dy = b.y - a.y;
-			const d = Math.hypot(dx, dy) || 0.01;
-			const f = 0.02 * (d - 118) * alpha;
-			const ux = dx / d, uy = dy / d;
-			a.vx += ux * f; a.vy += uy * f;
-			b.vx -= ux * f; b.vy -= uy * f;
-		}
-		// Zentrierung + Integration + Dämpfung + Ränder
-		for (const n of N) {
-			n.vx += (W / 2 - n.x) * 0.006 * alpha;
-			n.vy += (H / 2 - n.y) * 0.006 * alpha;
-			n.vx *= 0.86; n.vy *= 0.86;
-			n.x += n.vx; n.y += n.vy;
-			n.x = Math.max(40, Math.min(W - 40, n.x));
-			n.y = Math.max(36, Math.min(H - 36, n.y));
-		}
-		alpha *= 0.985;
-		if (alpha > 0.02) raf = requestAnimationFrame(tick);
 	}
 
-	onMount(load);
-	let lastRev = -1;
-	$effect(() => {
-		if (live.rev !== lastRev) { lastRev = live.rev; load(); }
-	});
-	onDestroy(() => {
-		if (raf) cancelAnimationFrame(raf);
-	});
-
-	const pos = $derived(new Map(nodes.map((n) => [n.id, n])));
-	const neighbors = $derived.by(() => {
-		const m = new Map<string, Set<string>>();
-		for (const e of edges) {
-			(m.get(e.source) ?? m.set(e.source, new Set()).get(e.source)!).add(e.target);
-			(m.get(e.target) ?? m.set(e.target, new Set()).get(e.target)!).add(e.source);
-		}
-		return m;
-	});
-	function active(id: string): boolean {
-		return !hoverId || hoverId === id || (neighbors.get(hoverId)?.has(id) ?? false);
-	}
-	function edgeActive(e: RawEdge): boolean {
-		return !hoverId || e.source === hoverId || e.target === hoverId;
-	}
-	const nodeColor = (kind: Kind) => (kind === 'place' ? 'var(--color-accent)' : 'var(--color-primary)');
-	const nodeR = (deg: number) => 5 + Math.min(16, deg * 1.5);
-	function dash(e: RawEdge): string {
-		if (!e.spatial) return '2 4'; // Wikilink = fein gepunktet
-		if (e.confidence === 'approximate') return '7 5';
-		if (e.confidence === 'rumored') return '2 6';
-		return '0'; // confirmed = durchgezogen
+	function setZoom(z: number) {
+		if (!stage) return;
+		const r = stage.getBoundingClientRect();
+		const cx = r.width / 2;
+		const cy = r.height / 2;
+		const next = clampZoom(z);
+		pan = next === 1 ? { x: 0, y: 0 } : { x: cx - ((cx - pan.x) * next) / zoom, y: cy - ((cy - pan.y) * next) / zoom };
+		zoom = next;
 	}
 
-	// Zoom/Pan
-	function onWheel(ev: WheelEvent) {
-		ev.preventDefault();
-		const factor = ev.deltaY < 0 ? 1.12 : 1 / 1.12;
-		const nk = Math.max(0.5, Math.min(3, k * factor));
-		k = nk;
+	function toggleKind(k: string) {
+		const n = new Set(hidden);
+		if (n.has(k)) n.delete(k);
+		else n.add(k);
+		hidden = n;
 	}
-	function onPointerDown(ev: PointerEvent) {
-		if ((ev.target as Element).closest('.map-node')) return;
-		panning = true; panStart = { x: ev.clientX, y: ev.clientY, tx, ty };
-		(ev.currentTarget as Element).setPointerCapture(ev.pointerId);
+
+	function saveDraft() {
+		if (!draft?.label.trim()) return;
+		const p = $state.snapshot(draft);
+		campaign.change('map', (m) => m.pins.push(p));
+		draft = null;
 	}
-	function onPointerMove(ev: PointerEvent) {
-		if (!panning) return;
-		tx = panStart.tx + (ev.clientX - panStart.x);
-		ty = panStart.ty + (ev.clientY - panStart.y);
+
+	function removePin(p: MapPin) {
+		campaign.change('map', (m) => (m.pins = m.pins.filter((x) => x.id !== p.id)));
+		selected = null;
 	}
-	function onPointerUp() { panning = false; }
-	function resetView() { k = 1; tx = 0; ty = 0; }
 </script>
 
-<svelte:head><title>Karte · Omniscient Chronicler</title></svelte:head>
+<svelte:head><title>Karte · Valerius</title></svelte:head>
 
-<div class="mx-auto max-w-5xl">
-	<div class="mb-3 flex flex-wrap items-center justify-between gap-3">
-		<div class="flex items-center gap-3">
-			<div class="grid h-11 w-11 place-items-center rounded-xl border border-border bg-surface2 text-primary">
-				<MapIcon size={22} />
-			</div>
-			<div>
-				<h1 class="text-xl font-semibold leading-tight">Karte</h1>
-				<p class="text-sm text-muted">Das Geflecht deiner Kampagne — nur, was beschrieben wurde.</p>
-			</div>
-		</div>
-		<div class="flex items-center gap-2 text-xs">
-			<span class="chip"><span class="mr-1 inline-block h-2.5 w-2.5 rounded-full" style="background:var(--color-accent)"></span>Ort</span>
-			<span class="chip"><span class="mr-1 inline-block h-2.5 w-2.5 rounded-full" style="background:var(--color-primary)"></span>Person</span>
-			<button class="btn btn-ghost !py-1.5" onclick={resetView}>Ansicht zurücksetzen</button>
-		</div>
-	</div>
+<PageHeader eyebrow="Karte" title={map.title} subtitle="Mausrad zoomt, Ziehen verschiebt. Markierungen anklicken für Details. Eigene Markierungen werden in campaign/map.json gespeichert.">
+	{#snippet actions()}
+		{#if src}<a class="btn" href={src.url} target="_blank" rel="noreferrer"><ExternalLink size={15} />Original in Drive</a>{/if}
+		<button class="btn {placing ? 'btn-primary' : ''}" onclick={() => (placing = !placing)}><MapPinPlus size={15} />{placing ? 'Klick auf die Karte …' : 'Markierung setzen'}</button>
+	{/snippet}
+</PageHeader>
 
-	<div class="card overflow-hidden p-0">
-		{#if loaded && nodes.length}
-			<!-- svelte-ignore a11y_no_static_element_interactions -->
-			<svg
-				viewBox="0 0 {W} {H}"
-				class="block h-[62vh] max-h-[640px] w-full touch-none select-none"
-				style="cursor:{panning ? 'grabbing' : 'grab'}"
-				onwheel={onWheel}
-				onpointerdown={onPointerDown}
-				onpointermove={onPointerMove}
-				onpointerup={onPointerUp}
-				role="application"
-				aria-label="Kampagnen-Beziehungskarte"
-			>
-				<g transform="translate({tx} {ty}) scale({k})">
-					<!-- Kanten -->
-					{#each edges as e (e.source + e.target)}
-						{@const a = pos.get(e.source)}
-						{@const b = pos.get(e.target)}
-						{#if a && b}
-							<line
-								x1={a.x} y1={a.y} x2={b.x} y2={b.y}
-								stroke={e.spatial ? 'var(--color-accent)' : 'var(--color-primary)'}
-								stroke-width={e.spatial ? 1.6 : 1}
-								stroke-dasharray={dash(e)}
-								opacity={edgeActive(e) ? (e.spatial ? 0.75 : 0.32) : 0.06}
-							/>
-						{/if}
-					{/each}
-					<!-- Knoten -->
-					{#each nodes as n (n.id)}
-						<g
-							class="map-node"
-							transform="translate({n.x} {n.y})"
-							style="cursor:pointer"
-							opacity={active(n.id) ? 1 : 0.28}
-							onpointerenter={() => (hoverId = n.id)}
-							onpointerleave={() => (hoverId = null)}
-							onclick={() => goto('/glossar/' + encodeURIComponent(n.title))}
-							role="button"
-							tabindex="0"
-							onkeydown={(ev) => ev.key === 'Enter' && goto('/glossar/' + encodeURIComponent(n.title))}
+<div class="grid gap-4 xl:grid-cols-[1fr_340px]">
+	<div class="panel relative overflow-hidden p-0">
+		<div
+			bind:this={stage}
+			class="relative aspect-square max-h-[calc(100dvh-210px)] w-full touch-none overflow-hidden bg-black/40 select-none {placing ? 'cursor-crosshair' : zoom > 1 ? 'cursor-grab' : ''}"
+			role="application"
+			aria-label="Karte"
+			onwheel={onwheel}
+			onpointerdown={down}
+			onpointermove={move}
+			onpointerup={up}
+			onpointerleave={() => (dragging = false)}
+		>
+			<div class="absolute inset-0 m-auto aspect-square max-h-full max-w-full">
+				<div bind:this={inner} class="absolute inset-0 origin-top-left" style="transform: translate({pan.x}px, {pan.y}px) scale({zoom})">
+					<img src="/api/assets/{map.image}" alt={map.title} class="h-full w-full object-contain" draggable="false" />
+					{#each map.pins.filter((p) => !hidden.has(p.kind)) as p (p.id)}
+						{@const k = KINDS[p.kind]}
+						<button
+							class="group absolute"
+							style="left: {p.x}%; top: {p.y}%; transform: translate(-50%, -50%) scale({1 / zoom})"
+							onpointerdown={(e) => e.stopPropagation()}
+							onclick={() => (selected = p)}
+							aria-label={p.label}
 						>
-							<circle
-								r={nodeR(n.degree)}
-								fill={nodeColor(n.kind)}
-								stroke="var(--color-bg)"
-								stroke-width="2"
-								style="filter:{hoverId === n.id ? 'drop-shadow(0 0 6px ' + nodeColor(n.kind) + ')' : 'none'}"
-							/>
-							<text
-								x="0" y={nodeR(n.degree) + 11}
-								text-anchor="middle"
-								font-size={hoverId === n.id ? 12 : 9.5}
-								font-weight={n.degree >= 5 ? 700 : 500}
-								fill="var(--color-ink)"
-								style="paint-order:stroke;stroke:var(--color-bg);stroke-width:3px"
-							>{n.title}</text>
-						</g>
+							<span
+								class="block h-4 w-4 rounded-full border-2 border-white/90 shadow-[0_0_0_3px_rgba(0,0,0,0.45)] transition group-hover:scale-125 {selected?.id === p.id ? 'scale-150' : ''}"
+								style="background: {k.color}"
+							></span>
+							<span class="pointer-events-none absolute top-5 left-1/2 hidden -translate-x-1/2 rounded-md bg-black/80 px-2 py-0.5 text-[11px] whitespace-nowrap text-white group-hover:block">{p.label}</span>
+						</button>
 					{/each}
-				</g>
-			</svg>
-		{:else if loaded}
-			<div class="p-10 text-center text-muted">
-				<MapPin size={30} class="mx-auto mb-2 opacity-50" />
-				<p>Noch keine Orte oder Personen im Glossar.</p>
+				</div>
 			</div>
-		{:else}
-			<div class="p-10 text-center text-muted">Karte wird gewoben…</div>
-		{/if}
+		</div>
+		<div class="absolute right-3 bottom-3 flex gap-1 rounded-xl border border-line bg-bg/80 p-1 backdrop-blur">
+			<button class="icon-btn" onclick={() => setZoom(zoom * 1.4)} aria-label="Hineinzoomen"><ZoomIn size={16} /></button>
+			<button class="icon-btn" onclick={() => setZoom(zoom / 1.4)} aria-label="Herauszoomen"><ZoomOut size={16} /></button>
+			<button class="icon-btn" onclick={() => setZoom(1)} aria-label="Zurücksetzen"><Maximize size={16} /></button>
+		</div>
 	</div>
 
-	<p class="mt-2 text-xs text-muted">
-		Kanten entstehen aus <a href="/glossar" class="text-primary">[[Wikilinks]]</a> (fein) und beschriebenen
-		räumlichen Relationen (gold). Ziehen = verschieben · Mausrad = zoomen · Klick = zum Eintrag.
-	</p>
+	<aside class="space-y-4">
+		{#if selected}
+			{@const k = KINDS[selected.kind]}
+			<div class="panel panel-glow p-4">
+				<div class="flex items-start justify-between gap-2">
+					<span class="badge" style="--c: {k.color}">{k.label}</span>
+					<button class="icon-btn !h-7 !w-7" onclick={() => (selected = null)} aria-label="Schließen"><X size={14} /></button>
+				</div>
+				<h3 class="mt-2 text-lg font-semibold">{selected.label}</h3>
+				<Markdown src={selected.text} class="prose-sm mt-1" />
+				<div class="mt-3 flex flex-wrap items-center gap-2">
+					{#if selected.link}<RefChip name={selected.link} />{/if}
+					{#if selected.kind === 'eigen'}<button class="btn btn-xs btn-danger" onclick={() => selected && removePin(selected)}><Trash2 size={11} />Entfernen</button>{/if}
+				</div>
+			</div>
+		{/if}
+
+		<div class="panel p-4">
+			<div class="eyebrow mb-2">Legende · klicken zum Ein- und Ausblenden</div>
+			<div class="flex flex-wrap gap-1.5">
+				{#each Object.entries(KINDS) as [id, k] (id)}
+					{@const n = map.pins.filter((p) => p.kind === id).length}
+					{#if n}
+						<button class="chip {hidden.has(id) ? 'opacity-40' : ''}" onclick={() => toggleKind(id)}>
+							<span class="h-2.5 w-2.5 rounded-full" style="background: {k.color}"></span>{k.label} · {n}
+						</button>
+					{/if}
+				{/each}
+			</div>
+		</div>
+
+		<div class="panel p-4">
+			<div class="eyebrow mb-2">Alle Markierungen</div>
+			<ul class="max-h-[46vh] space-y-1 overflow-y-auto">
+				{#each map.pins as p (p.id)}
+					<li>
+						<button class="flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-left text-sm hover:bg-white/[0.04] {selected?.id === p.id ? 'bg-white/[0.06]' : ''}" onclick={() => (selected = p)}>
+							<span class="h-2.5 w-2.5 shrink-0 rounded-full" style="background: {KINDS[p.kind].color}"></span>
+							<span class="truncate">{p.label}</span>
+							{#if p.uncertain}<span class="ml-auto text-[0.65rem] text-ink-3">unsicher</span>{/if}
+						</button>
+					</li>
+				{/each}
+			</ul>
+		</div>
+
+		<p class="px-1 text-xs leading-relaxed text-ink-3">{map.note}</p>
+	</aside>
 </div>
+
+<Modal open={!!draft} title="Neue Markierung" subtitle={draft ? `Position ${draft.x} % / ${draft.y} %` : ''} onclose={() => (draft = null)}>
+	{#if draft}
+		<form
+			class="space-y-3"
+			onsubmit={(e) => {
+				e.preventDefault();
+				saveDraft();
+			}}
+		>
+			<label class="block"><span class="mb-1 block text-xs text-ink-3">Bezeichnung</span><input class="input" bind:value={draft.label} required /></label>
+			<label class="block"><span class="mb-1 block text-xs text-ink-3">Notiz</span><textarea class="input" rows="3" bind:value={draft.text}></textarea></label>
+			<label class="block">
+				<span class="mb-1 block text-xs text-ink-3">Art</span>
+				<select class="input" bind:value={draft.kind}>{#each Object.entries(KINDS) as [id, k] (id)}<option value={id}>{k.label}</option>{/each}</select>
+			</label>
+			<label class="block"><span class="mb-1 block text-xs text-ink-3">Verweis (optional, z. B. Die Siedlung)</span><input class="input" bind:value={draft.link} /></label>
+			<div class="flex justify-end gap-2 pt-2">
+				<button type="button" class="btn" onclick={() => (draft = null)}>Abbrechen</button>
+				<button class="btn btn-primary">Speichern</button>
+			</div>
+		</form>
+	{/if}
+</Modal>

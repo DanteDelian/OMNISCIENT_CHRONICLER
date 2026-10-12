@@ -1,0 +1,54 @@
+---
+title: Einkaufs- und Verhandlungsliste
+subtitle: Was du brauchst und was du von Saladin willst
+icon: shopping-bag
+order: 8
+group: Pläne
+aliases: [Einkaufsliste, Einkaufsliste Valerius, Einkaufs- & Verhandlungsliste, Verhandlungsliste]
+updated: 2025-11-16
+---
+# Einkaufs- und Verhandlungsliste
+
+*Aus deinem Dokument vom 16.11.2025, mit Korrekturen.* Die interaktive Fassung mit Preisen und „Kann ich mir das leisten?“ steht unter **Inventar → Wunschliste**.
+
+**Budget bei normalen Händlern: 17 GM, 16 SM.**
+
+## Phase 1 · Sofort leistbar
+
+| Priorität | Gegenstand | Kosten | Nutzen |
+| :-- | :-- | :-- | :-- |
+| Mittel | Gute Kleidung | 15 GM | Nach der aufgeflogenen Tarnung Autorität ausstrahlen, vor Leon und dem Paladin |
+| Vorschlag | Kräuterkundeausrüstung | 5 GM | Laut Xanathars das Werkzeug für Heiltränke (DM fragen) |
+
+## Phase 2 · Nach dem Handel mit Saladin
+
+| Priorität | Gegenstand | Kosten | Nutzen |
+| :-- | :-- | :-- | :-- |
+| **Kritisch** | Alchemistenwerkzeug | 50 GM | Blocker für die Alchemie-Lehre bei der Kräuterfrau |
+| Hoch | Verkleidungsausrüstung | 25 GM | Neue Identität, Society-Uniformen anpassen, **Skelette mit Umhängen und Masken tarnen** |
+| Hoch | Spruchrollen-Herstellung | 10 GM Kalligraphenwerkzeug + Material | Material je Rolle: Grad 1 **25 GM**, Grad 2 **250 GM**, Grad 3 **500 GM** (Xanathars) |
+| Mittel | Spruchrolle *Leomunds winzige Hütte* | 250–500 GM + 150 GM Abschreiben | Ritual-Verteidigung: Gruppe und Untote rasten sicher |
+
+> [!FIX] **Preis für Spruchrollen**
+> Im Original stand „z. B. 250 GP für Grad 3“. Nach Xanathars kostet eine Rolle des 3. Grades **500 GM**, die 250 GM gelten für Grad 2.
+
+## Verhandlung mit Saladin
+
+Tauschware: die **magischen Ohrringe**, oder sie werden Teil eines größeren Deals. Siehe [[Saladin]].
+
+**Wunschliste (magische Gegenstände):**
+
+1. **Logistik:** *Nimmervoller Beutel*, für Knochen, Alchemie-Zutaten und Beute.
+2. **Ressourcen:** *Perle der Macht*, 1× pro Tag einen Platz bis Grad 3 zurück. Das sind vier weitere Skelette oder ein Notfall-*Gegenzauber*.
+3. **Verteidigung (Priorität):**
+   - *Armschienen der Verteidigung* (+2 RK ohne Rüstung und Schild, also RK 13)
+   - *Umhang des Schutzes* (+1 auf RK und alle Rettungswürfe)
+   - *Arkaner Grimoire +1* (+1 auf Zauber-SG und Zauberangriff, +1 Grad bei der Arkanen Erholung)
+
+> [!FIX] **Armschienen und Grimoire**
+> „Kragenschienen“ heißen **Armschienen** der Verteidigung. Der Arkane Grimoire verbessert **nicht** den Gegenzauber-Wurf, der ist ein Attributswurf ohne Zauberbonus.
+
+## Deine Verhandlungsstrategie
+
+- **Plan A (Hybris):** Du eröffnest mit der „Himmlischen Entführung“ und verlangst nicht weniger als die Mittel, also den Wahren Namen und den Bindungszauber, um ein mächtiges Himmlisches Wesen an deinen Willen zu ketten.
+- **Plan B (Pragmatismus):** Scheitert Plan A oder ist der Preis zu hoch, verlangst du einen Gegenstand, der einen untoten „Offizier“ (einen Gruftschrecken) an dich bindet. Damit wächst deine Armee ohne Zauberplatz-Kosten.

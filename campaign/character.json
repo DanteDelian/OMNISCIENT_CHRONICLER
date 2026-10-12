@@ -1,0 +1,194 @@
+{
+  "id": "valerius",
+  "name": "Valerius Moonwhisper",
+  "nickname": "Val",
+  "alias": "Floshem",
+  "aliasTitle": "die Unsichtbare Hand",
+  "aliasNote": "Tarnidentität der Donnergarde: Waldelf-Magier, laut, charismatisch, Kapuze tief im Gesicht. **Aufgeflogen**, seit der Tod der echten Donnergarde öffentlich ist.",
+  "player": "Patrick",
+  "race": "Astralelf",
+  "className": "Magier",
+  "subclass": "Schule der Beschwörung",
+  "level": 5,
+  "alignment": "Chaotisch neutral / böse",
+  "background": "",
+  "portrait": "floshem-portrait.webp",
+  "avatar": "floshem-avatar.webp",
+  "abilities": {
+    "str": 10,
+    "dex": 13,
+    "con": 16,
+    "int": 18,
+    "wis": 8,
+    "cha": 12
+  },
+  "proficiencyBonus": 3,
+  "saves": [
+    "int",
+    "wis"
+  ],
+  "skills": {
+    "arcana": "Magier",
+    "insight": "Magier",
+    "perception": "Astralelf (Scharfe Sinne)",
+    "deception": "Herkunft offen (Hintergrund?)"
+  },
+  "hp": {
+    "max": 36,
+    "hitDie": 6,
+    "note": "36 laut Patrick (Stand 11.10.2026). Zum Vergleich: alter Bogen 28, Durchschnittsregel 37 (Stufe 1: 6 + 3, Stufen 2–5: 4 × [4 + 3])."
+  },
+  "ac": {
+    "base": 11,
+    "formula": "10 + GE (ohne Rüstung)"
+  },
+  "speed": 9,
+  "darkvision": 18,
+  "spellcasting": {
+    "ability": "int",
+    "focus": "Arkaner Fokus (Ring)",
+    "preparedMax": 9,
+    "slots": {
+      "1": 4,
+      "2": 3,
+      "3": 2
+    }
+  },
+  "proficiencies": {
+    "armor": "keine",
+    "weapons": "Dolche, Wurfpfeile, Schleudern, Kampfstäbe, leichte Armbrüste",
+    "tools": "keine fest (Astrale Trance: täglich eines)",
+    "languages": "Gemeinsprache + 1 weitere (laut Astralelf-Regeln, nicht eingetragen)"
+  },
+  "attacks": [
+    {
+      "id": "dolch",
+      "name": "Dolch",
+      "bonus": 4,
+      "damage": "1d4+1",
+      "damageType": "Stich",
+      "range": "1,5 m · Wurf 6/18 m",
+      "props": "Finesse, leicht, Wurfwaffe"
+    },
+    {
+      "id": "kampfstab",
+      "name": "Zweihandstab (Kampfstab)",
+      "bonus": 3,
+      "damage": "1d6",
+      "damageAlt": "1d8",
+      "damageType": "Wucht",
+      "range": "1,5 m",
+      "props": "Vielseitig: zweihändig 1W8 · Teil der Floshem-Tarnung"
+    }
+  ],
+  "features": [
+    {
+      "id": "sternenschritt",
+      "name": "Sternenschritt",
+      "source": "Astralelf",
+      "economy": "bonus",
+      "uses": {
+        "max": 3,
+        "reset": "long"
+      },
+      "summary": "Bonusaktion: bis 9 m zu einem sichtbaren freien Ort teleportieren.",
+      "text": "Als **Bonusaktion** teleportierst du dich bis zu **9 m (30 ft)** an einen freien Ort, den du sehen kannst. So oft pro langer Rast, wie dein Übungsbonus beträgt (**3×**).\n\nKein Zauber: keine Komponenten, kein Zauberplatz, **kann nicht gegengezaubert werden**."
+    },
+    {
+      "id": "arkane-erholung",
+      "name": "Arkane Erholung",
+      "source": "Magier",
+      "economy": "rast",
+      "uses": {
+        "max": 1,
+        "reset": "long"
+      },
+      "summary": "1× pro Tag nach einer kurzen Rast: Plätze mit zusammen höchstens 3 Graden zurück.",
+      "text": "**Einmal pro Tag**, wenn du eine **kurze Rast** beendest, erhältst du verbrauchte Zauberplätze zurück, deren Grade zusammen höchstens **3** ergeben (die Hälfte deiner Stufe, aufgerundet). Zum Beispiel 1 × Grad 3 oder 1 × Grad 2 + 1 × Grad 1."
+    },
+    {
+      "id": "ohrring",
+      "name": "Ohrring-Botschaft",
+      "source": "Magische Ohrringe",
+      "economy": "aktion",
+      "uses": {
+        "max": 1,
+        "reset": "long"
+      },
+      "summary": "1× pro Tag eine Botschaft über große Distanz, nur zwischen den beiden Trägern.",
+      "text": "Das Ohrring-Paar erlaubt **1× pro Tag** eine magische *Botschaft* über große Entfernung, aber **nur zwischen den beiden Trägern**. Der zweite Ohrring ist für Draka gedacht. Die genaue Aktionsart weiß der DM.",
+      "note": "Das Zurücksetzen „pro Tag“ ist hier an die lange Rast gekoppelt."
+    },
+    {
+      "id": "geringe-beschwoerung",
+      "name": "Geringe Beschwörung",
+      "source": "Schule der Beschwörung",
+      "economy": "aktion",
+      "summary": "Aktion: einen nichtmagischen Gegenstand (≤ 90 cm, ≤ 5 kg) für 1 Stunde erschaffen.",
+      "text": "Als **Aktion** erschaffst du in deiner Hand oder auf dem Boden in 3 m einen unbelebten Gegenstand: höchstens **90 cm** Kantenlänge und **5 kg (10 Pfund)**, in der Form eines nichtmagischen Gegenstands, den du schon gesehen hast. Er ist **sichtbar magisch** und leuchtet schwach (1,5 m). Er verschwindet nach **1 Stunde**, wenn er Schaden nimmt oder wenn du das Merkmal erneut nutzt.",
+      "note": "Achtung für die Unsichtbare Hand: Das Objekt leuchtet und ist klar als magisch erkennbar."
+    },
+    {
+      "id": "astrale-trance",
+      "name": "Astrale Trance",
+      "source": "Astralelf",
+      "economy": "passiv",
+      "summary": "Kein Schlaf, lange Rast in 4 Stunden. Danach täglich: 1 Fertigkeit + 1 Waffe oder Werkzeug.",
+      "text": "Du brauchst keinen Schlaf, und **Magie kann dich nicht einschläfern**. Eine lange Rast schaffst du in **4 Stunden** Trance, bei Bewusstsein.\n\nNach jeder Trance erhältst du bis zum Ende deiner nächsten langen Rast Übung in **einer Fertigkeit** und mit **einer Waffe oder einem Werkzeug** deiner Wahl.",
+      "note": "Korrigiert: Der Optimiert-Bogen nennt nur Waffe oder Werkzeug, die **Fertigkeit** fehlt dort. Die tägliche Wahl stellst du auf dem Spieltisch ein."
+    },
+    {
+      "id": "feenabstammung",
+      "name": "Feenabstammung",
+      "source": "Astralelf",
+      "economy": "passiv",
+      "summary": "Vorteil auf Rettungswürfe gegen Bezauberung.",
+      "text": "Du hast **Vorteil** auf Rettungswürfe, um den Zustand *Bezaubert* zu vermeiden oder zu beenden.",
+      "note": "„Magie kann dich nicht einschläfern“ gehört beim Astralelfen zur Astralen Trance. Die Wirkung ist dieselbe."
+    },
+    {
+      "id": "scharfe-sinne",
+      "name": "Scharfe Sinne",
+      "source": "Astralelf",
+      "economy": "passiv",
+      "summary": "Übung in Wahrnehmung.",
+      "text": "Du bist in **Wahrnehmung** geübt."
+    },
+    {
+      "id": "dunkelsicht",
+      "name": "Dunkelsicht",
+      "source": "Astralelf",
+      "economy": "passiv",
+      "summary": "18 m: Dämmerlicht wie hell, Dunkelheit wie dämmrig (nur Grautöne).",
+      "text": "Im Umkreis von **18 m (60 ft)** siehst du dämmriges Licht wie helles und Dunkelheit wie dämmriges Licht, allerdings nur in Grautönen.",
+      "note": "Fehlte auf allen Bögen."
+    },
+    {
+      "id": "ritualzauberei",
+      "name": "Ritualzauberei",
+      "source": "Magier",
+      "economy": "passiv",
+      "summary": "Ritualzauber aus dem Buch ohne Vorbereitung wirken (+10 Minuten, kein Platz).",
+      "text": "Zauber mit dem Ritual-Merkmal, die in deinem Zauberbuch stehen, kannst du als Ritual wirken, **ohne sie vorzubereiten**. Die Wirkzeit verlängert sich um 10 Minuten, ein Zauberplatz wird nicht verbraucht: *Vertrauten finden*, *Unsichtbarer Diener*, *Magie entdecken*."
+    },
+    {
+      "id": "gelehrter-der-beschwoerung",
+      "name": "Gelehrter der Beschwörung",
+      "source": "Schule der Beschwörung",
+      "economy": "passiv",
+      "summary": "Beschwörungszauber kopieren: halbe Kosten und Zeit (25 GM und 1 Stunde pro Grad).",
+      "text": "Gold und Zeit, um einen **Beschwörungszauber** in dein Zauberbuch zu kopieren, sind **halbiert**: 25 GM und 1 Stunde pro Grad statt 50 GM und 2 Stunden."
+    },
+    {
+      "id": "gutartiges-versetzen",
+      "name": "Gutartiges Versetzen (ab Stufe 6)",
+      "source": "Schule der Beschwörung",
+      "economy": "aktion",
+      "upcoming": true,
+      "summary": "Ausblick: Aktion, bis 9 m teleportieren oder Platz mit einem Verbündeten tauschen.",
+      "text": "Ab **Stufe 6**: Als Aktion teleportierst du dich bis zu 9 m an einen freien Ort oder tauschst den Platz mit einer bereitwilligen kleinen oder mittelgroßen Kreatur. Danach erst wieder nach einer langen Rast oder sobald du einen Beschwörungszauber ab Grad 1 wirkst."
+    }
+  ],
+  "goal": "Eine eigene Organisation gründen und zur dominierenden Macht von Xantus aufsteigen. Nicht länger Handlanger der Zafferas sein, sondern selbst herrschen.",
+  "appearance": "Astralelf mit langem silbernem Haar und Bart. Als „Floshem“ tritt er als Waldelf-Magier auf: grüne Kapuze, Blätter am Umhang, grün leuchtende Magie (Porträt vom 12.10.2026)."
+}

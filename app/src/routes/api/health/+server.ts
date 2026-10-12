@@ -1,4 +1,4 @@
 import { json } from '@sveltejs/kit';
-import type { RequestHandler } from './$types';
+import { CAMPAIGN_DIR } from '$lib/server/store';
 
-export const GET: RequestHandler = () => json({ ok: true, app: 'omniscient-chronicler', version: 3 });
+export const GET = () => json({ ok: true, campaign: CAMPAIGN_DIR });

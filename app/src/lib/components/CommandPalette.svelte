@@ -1,235 +1,132 @@
 <script lang="ts">
+	/** ⌘K / Strg+K: Alles durchsuchen und Aktionen auslösen. */
 	import { goto } from '$app/navigation';
+	import { tick } from 'svelte';
+	import { fade, scale } from 'svelte/transition';
+	import { Search, CornerDownLeft } from '@lucide/svelte';
+	import { campaign } from '$lib/stores/campaign.svelte';
 	import { ui } from '$lib/stores/ui.svelte';
-	import { navItems } from '$lib/nav';
-	import { character } from '$lib/stores/character.svelte';
-	import { rollExpr } from '$lib/dice';
-	import { performCheck, performDamage } from '$lib/rolls';
-	import { fmtMod } from '$lib/types';
-	import Search from '@lucide/svelte/icons/search';
-	import FileText from '@lucide/svelte/icons/file-text';
-	import Users from '@lucide/svelte/icons/users';
-	import ScrollText from '@lucide/svelte/icons/scroll-text';
-	import Package from '@lucide/svelte/icons/package';
-	import ClipboardList from '@lucide/svelte/icons/clipboard-list';
-	import Dices from '@lucide/svelte/icons/dices';
-	import CornerDownLeft from '@lucide/svelte/icons/corner-down-left';
+	import { rolls } from '$lib/stores/rolls.svelte';
+	import { normalizeName, kindRank } from '$lib/refs';
 
-	interface Cmd {
+	let query = $state('');
+	let active = $state(0);
+	let input: HTMLInputElement | undefined = $state();
+
+	interface Item {
 		id: string;
-		label: string;
-		sub?: string;
-		icon: typeof Search;
+		title: string;
+		kind: string;
+		hint: string;
 		run: () => void;
 	}
 
-	let query = $state('');
-	let results = $state<Cmd[]>([]);
-	let active = $state(0);
-	let inputEl = $state<HTMLInputElement | null>(null);
-	let searchTimer: ReturnType<typeof setTimeout> | null = null;
+	const actions: Item[] = [
+		{ id: 'a:d20', title: 'W20 würfeln', kind: 'Aktion', hint: 'Würfel', run: () => rolls.check('W20', 0) },
+		{ id: 'a:dice', title: 'Würfelschale öffnen', kind: 'Aktion', hint: 'Taste D', run: () => (ui.dice = true) },
+		{ id: 'a:kurz', title: 'Kurze Rast', kind: 'Aktion', hint: 'Trefferwürfel, Arkane Erholung', run: () => (ui.rest = 'kurz') },
+		{ id: 'a:lang', title: 'Lange Rast', kind: 'Aktion', hint: 'Alles zurücksetzen', run: () => (ui.rest = 'lang') },
+		{ id: 'a:journal', title: 'Neuer Journal-Eintrag', kind: 'Aktion', hint: 'Was ist passiert?', run: () => goto('/journal?neu=1') }
+	];
 
-	const TYPE_ICON: Record<string, typeof Search> = {
-		note: FileText,
-		glossar: Users,
-		quest: ScrollText,
-		item: Package,
-		prep: ClipboardList
-	};
-
-	function close() {
-		ui.paletteOpen = false;
-		query = '';
-		results = [];
-		active = 0;
-	}
-
-	function navCommands(q: string): Cmd[] {
-		const base: Cmd[] = navItems.map((n) => ({
-			id: 'nav:' + n.href,
-			label: n.label,
-			sub: 'Seite öffnen',
-			icon: n.icon as typeof Search,
-			run: () => {
-				goto(n.href);
-				close();
+	const results = $derived.by((): Item[] => {
+		const q = normalizeName(query);
+		const entries = campaign.data?.index ?? [];
+		if (!q) {
+			return [
+				...actions,
+				...entries
+					.filter((e) => ['Seite', 'Dokument'].includes(e.kind))
+					.map((e) => ({ id: e.key, title: e.title, kind: e.kind, hint: e.meta ?? e.summary, run: () => goto(e.href) }))
+			].slice(0, 14);
+		}
+		const scored: { item: Item; score: number }[] = [];
+		for (const a of actions) {
+			if (normalizeName(a.title).includes(q)) scored.push({ item: a, score: 5 });
+		}
+		for (const e of entries) {
+			let best = 0;
+			for (const n of e.names) {
+				if (n === q) best = Math.max(best, 100);
+				else if (n.startsWith(q)) best = Math.max(best, 60);
+				else if (n.includes(q)) best = Math.max(best, 35);
 			}
-		}));
-		const actions: Cmd[] = [
-			{
-				id: 'act:newnote',
-				label: 'Neue Notiz',
-				sub: 'Schnellnotiz anlegen',
-				icon: FileText,
-				run: async () => {
-					const r = await fetch('/api/notes', {
-						method: 'POST',
-						headers: { 'content-type': 'application/json' },
-						body: JSON.stringify({ title: 'Neue Notiz' })
-					});
-					const note = await r.json();
-					close();
-					goto('/notes?path=' + encodeURIComponent(note.path));
-				}
-			},
-			{
-				id: 'act:d20',
-				label: 'd20 würfeln',
-				sub: 'Schnellwurf',
-				icon: Dices,
-				run: () => {
-					close();
-					performCheck('Schneller Wurf', 0);
-				}
-			},
-			{
-				id: 'act:init',
-				label: 'Initiative würfeln',
-				sub: character.current ? `d20 ${fmtMod(character.current.initiativeBonus)}` : 'd20',
-				icon: Dices,
-				run: () => {
-					const b = character.current?.initiativeBonus ?? 0;
-					close();
-					performCheck('Initiative', b);
-				}
-			}
-		];
-		const all = [...base, ...actions];
-		if (!q) return all;
-		const filteredAll = all.filter((c) => c.label.toLowerCase().includes(q));
-		// Würfelausdruck eingetippt? („2d6+3", „d100") → als erste Aktion anbieten
-		if (rollExpr(q)) {
-			filteredAll.unshift({
-				id: 'act:expr',
-				label: `🎲 ${q} würfeln`,
-				sub: 'Würfelausdruck',
-				icon: Dices,
-				run: () => {
-					const expr = q;
-					close();
-					performDamage(`🎲 ${expr}`, expr);
-				}
-			});
+			if (!best && normalizeName(e.summary).includes(q)) best = 8;
+			if (best) scored.push({ item: { id: e.key, title: e.title, kind: e.kind, hint: e.meta ?? e.summary, run: () => goto(e.href) }, score: best - kindRank(e.kind) * 0.5 });
 		}
-		return filteredAll;
-	}
-
-	async function runSearch(q: string) {
-		const local = navCommands(q);
-		if (q.length < 2) {
-			results = local;
-			active = 0;
-			return;
-		}
-		try {
-			const r = await fetch('/api/search?q=' + encodeURIComponent(q));
-			const data = (await r.json()) as {
-				type: string;
-				title: string;
-				sub: string;
-				href: string;
-			}[];
-			const remote: Cmd[] = data.map((d, i) => ({
-				id: 'res:' + i,
-				label: d.title,
-				sub: d.sub,
-				icon: TYPE_ICON[d.type] ?? FileText,
-				run: () => {
-					goto(d.href);
-					close();
-				}
-			}));
-			results = [...local, ...remote];
-		} catch {
-			results = local;
-		}
-		active = 0;
-	}
+		return scored.sort((a, b) => b.score - a.score).slice(0, 30).map((s) => s.item);
+	});
 
 	$effect(() => {
-		// Bei Öffnen Fokus + Default-Liste
-		if (ui.paletteOpen) {
-			results = navCommands('');
+		if (ui.palette) {
+			query = '';
 			active = 0;
-			queueMicrotask(() => inputEl?.focus());
+			tick().then(() => input?.focus());
 		}
 	});
 
-	function onInput() {
-		if (searchTimer) clearTimeout(searchTimer);
-		const q = query.trim().toLowerCase();
-		searchTimer = setTimeout(() => runSearch(q), 140);
+	$effect(() => {
+		void results;
+		active = 0;
+	});
+
+	function run(i: Item) {
+		ui.palette = false;
+		i.run();
 	}
 
-	function onKey(e: KeyboardEvent) {
+	function onkey(e: KeyboardEvent) {
 		if (e.key === 'ArrowDown') {
 			e.preventDefault();
-			active = Math.min(active + 1, results.length - 1);
+			active = Math.min(results.length - 1, active + 1);
 		} else if (e.key === 'ArrowUp') {
 			e.preventDefault();
-			active = Math.max(active - 1, 0);
-		} else if (e.key === 'Enter') {
+			active = Math.max(0, active - 1);
+		} else if (e.key === 'Enter' && results[active]) {
 			e.preventDefault();
-			results[active]?.run();
+			run(results[active]);
 		} else if (e.key === 'Escape') {
-			close();
-		}
-	}
-
-	// Globaler Shortcut
-	function onGlobalKey(e: KeyboardEvent) {
-		if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
-			e.preventDefault();
-			ui.paletteOpen = !ui.paletteOpen;
+			ui.palette = false;
 		}
 	}
 </script>
 
-<svelte:window onkeydown={onGlobalKey} />
-
-{#if ui.paletteOpen}
-	<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions -->
-	<div
-		class="fixed inset-0 z-[70] flex items-start justify-center bg-black/50 p-4 pt-[12vh] backdrop-blur-sm"
-		onclick={(e) => e.target === e.currentTarget && close()}
-	>
-		<div class="card w-full max-w-xl overflow-hidden p-0 shadow-2xl">
-			<div class="flex items-center gap-2 border-b border-border px-4">
-				<Search class="h-5 w-5 shrink-0 text-muted" />
-				<!-- svelte-ignore a11y_autofocus -->
+{#if ui.palette}
+	<div class="fixed inset-0 z-[70] flex items-start justify-center p-4 pt-[12vh]">
+		<button class="fixed inset-0 bg-black/60 backdrop-blur-sm" aria-label="Schließen" onclick={() => (ui.palette = false)} transition:fade={{ duration: 100 }}></button>
+		<div class="panel panel-glow relative w-full max-w-2xl overflow-hidden" transition:scale={{ start: 0.98, duration: 140 }}>
+			<div class="flex items-center gap-3 border-b border-line px-4">
+				<Search size={18} class="text-ink-3" />
 				<input
-					bind:this={inputEl}
+					bind:this={input}
 					bind:value={query}
-					oninput={onInput}
-					onkeydown={onKey}
-					autofocus
-					placeholder="Suchen oder Befehl… (Notizen, NPCs, Quests, Aktionen)"
-					class="w-full bg-transparent py-3.5 text-sm outline-none placeholder:text-muted"
+					onkeydown={onkey}
+					class="h-14 flex-1 bg-transparent text-[1.05rem] outline-none placeholder:text-ink-3"
+					placeholder="Zauber, Person, Ort, Quest, Gegenstand, Dokument …"
+					aria-label="Suche"
 				/>
-				<kbd class="hidden rounded bg-surface2 px-1.5 py-0.5 text-[10px] text-muted sm:block">ESC</kbd>
+				<span class="kbd">Esc</span>
 			</div>
-			<div class="max-h-[50vh] overflow-auto p-2">
-				{#each results as cmd, i (cmd.id)}
-					{@const Icon = cmd.icon}
-					<button
-						class="flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left transition {i ===
-						active
-							? 'bg-primary/15'
-							: 'hover:bg-surface2'}"
-						onclick={() => cmd.run()}
-						onmouseenter={() => (active = i)}
-					>
-						<Icon class="h-4 w-4 shrink-0 {i === active ? 'text-primary' : 'text-muted'}" />
-						<span class="min-w-0 flex-1">
-							<span class="block truncate text-sm font-medium">{cmd.label}</span>
-							{#if cmd.sub}<span class="block truncate text-xs text-muted">{cmd.sub}</span>{/if}
-						</span>
-						{#if i === active}<CornerDownLeft class="h-3.5 w-3.5 shrink-0 text-muted" />{/if}
-					</button>
+			<ul class="max-h-[56vh] overflow-y-auto p-2">
+				{#each results as r, i (r.id)}
+					<li>
+						<button
+							class="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left {i === active ? 'bg-white/[0.07]' : 'hover:bg-white/[0.04]'}"
+							onmouseenter={() => (active = i)}
+							onclick={() => run(r)}
+						>
+							<span class="badge w-24 justify-center">{r.kind}</span>
+							<span class="min-w-0 flex-1">
+								<span class="block truncate text-sm font-medium text-ink">{r.title}</span>
+								{#if r.hint}<span class="block truncate text-xs text-ink-3">{r.hint}</span>{/if}
+							</span>
+							{#if i === active}<CornerDownLeft size={14} class="text-ink-3" />{/if}
+						</button>
+					</li>
 				{:else}
-					<p class="px-3 py-6 text-center text-sm text-muted">Nichts gefunden.</p>
+					<li class="px-3 py-8 text-center text-sm text-ink-3">Nichts gefunden.</li>
 				{/each}
-			</div>
+			</ul>
 		</div>
 	</div>
 {/if}

@@ -1,37 +1,14 @@
-const LS_KEY = 'cc-ui-v1';
+/** Globaler UI-Zustand: Befehlspalette, Würfelschale, Detail-Schublade, Dialoge. */
 
 class UiStore {
-	paletteOpen = $state(false);
-	moreOpen = $state(false);
-	sound = $state(true);
-	loaded = $state(false);
-
-	load() {
-		if (typeof localStorage === 'undefined') return;
-		try {
-			const raw = localStorage.getItem(LS_KEY);
-			if (raw) {
-				const d = JSON.parse(raw);
-				this.sound = d.sound ?? true;
-			}
-		} catch {
-			/* ignore */
-		}
-		this.loaded = true;
-	}
-
-	setSound(v: boolean) {
-		this.sound = v;
-		this.save();
-	}
-
-	private save() {
-		try {
-			localStorage.setItem(LS_KEY, JSON.stringify({ sound: this.sound }));
-		} catch {
-			/* ignore */
-		}
-	}
+	palette = $state(false);
+	dice = $state(false);
+	/** Zauber-ID für die Schnellansicht (rechte Schublade). */
+	spellDrawer = $state<string | null>(null);
+	rest = $state<'kurz' | 'lang' | null>(null);
+	/** Offene Konzentrationsprobe nach Schaden. */
+	concentrationCheck = $state<{ dc: number; damage: number } | null>(null);
+	sidebarCollapsed = $state(false);
 }
 
 export const ui = new UiStore();

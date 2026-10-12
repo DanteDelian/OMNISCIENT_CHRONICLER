@@ -1,554 +1,357 @@
-// Gemeinsame Typen für Omniscient Chronicler.
-// Diese Shapes spiegeln die JSON-/Markdown-Dateien im campaign/-Vault wider
-// (dateibasiert, keine Datenbank) — siehe docs/ARCHITECTURE.md.
+/** Datentypen der Kampagnendateien in campaign/ (siehe campaign/README.md). */
 
-export type AbilityKey = 'str' | 'dex' | 'con' | 'int' | 'wis' | 'cha';
-
-export const ABILITY_KEYS: AbilityKey[] = ['str', 'dex', 'con', 'int', 'wis', 'cha'];
-
-export const ABILITY_LABELS: Record<AbilityKey, string> = {
-	str: 'Stärke',
-	dex: 'Geschicklichkeit',
-	con: 'Konstitution',
-	int: 'Intelligenz',
-	wis: 'Weisheit',
-	cha: 'Charisma'
-};
-
-export interface SpellSlot {
-	level: number;
-	total: number;
-	used: number;
-}
-
-/** Übungsgrad: 0 = keine, 1 = geübt, 2 = Expertise. */
-export type ProfLevel = 0 | 1 | 2;
-
-export interface SkillDef {
-	key: string;
-	label: string;
-	ability: AbilityKey;
-}
-
-/** Die 18 D&D-5e-Fertigkeiten (deutsche Bezeichnungen). */
-export const SKILLS: SkillDef[] = [
-	{ key: 'acrobatics', label: 'Akrobatik', ability: 'dex' },
-	{ key: 'animal', label: 'Mit Tieren umgehen', ability: 'wis' },
-	{ key: 'arcana', label: 'Arkane Kunde', ability: 'int' },
-	{ key: 'athletics', label: 'Athletik', ability: 'str' },
-	{ key: 'deception', label: 'Täuschen', ability: 'cha' },
-	{ key: 'history', label: 'Geschichte', ability: 'int' },
-	{ key: 'insight', label: 'Motiv erkennen', ability: 'wis' },
-	{ key: 'intimidation', label: 'Einschüchtern', ability: 'cha' },
-	{ key: 'investigation', label: 'Nachforschungen', ability: 'int' },
-	{ key: 'medicine', label: 'Heilkunde', ability: 'wis' },
-	{ key: 'nature', label: 'Naturkunde', ability: 'int' },
-	{ key: 'perception', label: 'Wahrnehmung', ability: 'wis' },
-	{ key: 'performance', label: 'Auftreten', ability: 'cha' },
-	{ key: 'persuasion', label: 'Überzeugen', ability: 'cha' },
-	{ key: 'religion', label: 'Religion', ability: 'int' },
-	{ key: 'sleight', label: 'Fingerfertigkeit', ability: 'dex' },
-	{ key: 'stealth', label: 'Heimlichkeit', ability: 'dex' },
-	{ key: 'survival', label: 'Überlebenskunst', ability: 'wis' }
-];
+export type Ability = 'str' | 'dex' | 'con' | 'int' | 'wis' | 'cha';
+export type Economy = 'aktion' | 'bonus' | 'reaktion' | 'minute' | 'stunde' | 'passiv' | 'rast';
 
 export interface Attack {
 	id: string;
 	name: string;
-	bonus: number; // Angriffsbonus (d20 + bonus)
-	damage: string; // Würfelausdruck, z.B. "1d8+2"
+	bonus: number;
+	damage: string;
+	damageAlt?: string;
 	damageType: string;
-}
-
-/** Zauberschulen mit deutschen Labels und Farbcodes (für Icons/Badges). */
-export type SpellSchool =
-	| 'abjuration'
-	| 'conjuration'
-	| 'divination'
-	| 'enchantment'
-	| 'evocation'
-	| 'illusion'
-	| 'necromancy'
-	| 'transmutation';
-
-export const SPELL_SCHOOLS: Record<SpellSchool, { label: string; color: string }> = {
-	abjuration: { label: 'Bannmagie', color: '#60a5fa' },
-	conjuration: { label: 'Beschwörung', color: '#a78bfa' },
-	divination: { label: 'Erkenntnis', color: '#7dd3fc' },
-	enchantment: { label: 'Verzauberung', color: '#f472b6' },
-	evocation: { label: 'Hervorrufung', color: '#fb923c' },
-	illusion: { label: 'Illusion', color: '#c084fc' },
-	necromancy: { label: 'Nekromantie', color: '#4ade80' },
-	transmutation: { label: 'Verwandlung', color: '#fbbf24' }
-};
-
-export interface Spell {
-	id: string;
-	name: string;
-	level: number; // 0 = Zaubertrick
-	school: SpellSchool;
-	ritual?: boolean;
-	concentration?: boolean;
-	/** Immer vorbereitet (z.B. Nebelschritt durch Volk/Schule) */
-	alwaysPrepared?: boolean;
-	prepared: boolean;
-	castTime: string;
 	range: string;
-	description: string; // Markdown
+	props?: string;
 }
 
 export interface Feature {
 	id: string;
 	name: string;
-	source: string; // z.B. "Astralelf", "Zauberer", "Schule der Beschwörung"
-	uses?: { current: number; max: number; resetOn: 'short' | 'long' };
-	description: string; // Markdown
-}
-
-/** D&D-5e-XP-Schwellen: XP_THRESHOLDS[n] = Gesamt-EP für Stufe n+1. */
-export const XP_THRESHOLDS = [
-	0, 300, 900, 2700, 6500, 14000, 23000, 34000, 48000, 64000, 85000, 100000, 120000, 140000,
-	165000, 195000, 225000, 265000, 305000, 355000
-];
-
-export function levelForXp(xp: number): number {
-	let lvl = 1;
-	for (let i = 0; i < XP_THRESHOLDS.length; i++) {
-		if (xp >= XP_THRESHOLDS[i]) lvl = i + 1;
-	}
-	return Math.min(20, lvl);
-}
-
-export function profBonusForLevel(level: number): number {
-	return Math.ceil(level / 4) + 1;
-}
-
-export type TrackerType = 'counter' | 'bar' | 'toggle' | 'resource';
-
-export interface CustomTracker {
-	id: string;
-	label: string;
-	type: TrackerType;
-	value: number; // toggle: 0/1
-	max?: number; // für bar/resource
-	resetOn?: 'short' | 'long' | 'none';
-	color?: string;
+	source: string;
+	economy: Economy;
+	uses?: { max: number; reset: 'long' | 'short' };
+	summary: string;
+	text: string;
+	note?: string;
+	upcoming?: boolean;
 }
 
 export interface Character {
 	id: string;
 	name: string;
-	className: string;
+	nickname?: string;
+	alias?: string;
+	aliasTitle?: string;
+	aliasNote?: string;
+	player?: string;
 	race: string;
+	className: string;
+	subclass: string;
 	level: number;
-	xp: number;
-	background: string;
 	alignment: string;
-	pronouns: string;
-	portrait: string; // Bildpfad (campaign/assets/…) oder Emoji
-	appearance: string; // Beschreibung des Aussehens
+	background: string;
+	/** Dateiname in campaign/assets/ (rund freigestellt, ~640 px) */
+	portrait: string;
+	/** Kleine Variante für Seitenleiste und Kopfzeile (~160 px) */
+	avatar?: string;
+	abilities: Record<Ability, number>;
 	proficiencyBonus: number;
-	abilities: Record<AbilityKey, number>;
-	hp: { current: number; max: number; temp: number };
-	ac: number;
-	initiativeBonus: number;
+	saves: Ability[];
+	skills: Record<string, string>;
+	hp: { max: number; hitDie: number; note?: string };
+	ac: { base: number; formula: string };
 	speed: number;
-	hitDice: string;
-	hitDiceRemaining: number;
-	inspiration: boolean;
-	conditions: string[];
-	deathSaves: { successes: number; failures: number };
-	spellSlots: SpellSlot[];
-	customTrackers: CustomTracker[];
-	saveProficiencies: AbilityKey[];
-	skills: Record<string, ProfLevel>;
+	darkvision: number;
+	spellcasting: { ability: Ability; focus: string; preparedMax: number; slots: Record<string, number> };
+	proficiencies: { armor: string; weapons: string; tools: string; languages: string };
 	attacks: Attack[];
-	spells: Spell[];
 	features: Feature[];
-	currency: { gp: number; sp: number; cp: number };
-	notes: string;
-	createdAt: number;
-	updatedAt: number;
+	goal?: string;
+	appearance?: string;
 }
 
-/** Tief-partielles Patch-Objekt für PATCH /api/character */
-export type CharacterPatch = {
-	[K in keyof Character]?: Character[K] extends object
-		? Partial<Character[K]>
-		: Character[K];
-};
-
-export type EventSource = 'manual' | 'ai-session' | 'rest' | 'dice' | 'seed';
-
-export interface CharacterEvent {
+export interface Minion {
 	id: string;
-	characterId: string;
-	ts: number;
-	field: string;
-	delta: number | null;
-	from: unknown;
-	to: unknown;
-	source: EventSource;
-	sessionId: string | null;
-}
-
-export interface CharacterSnapshot {
-	id: string;
-	characterId: string;
-	ts: number;
-	label: string;
-	state: Character;
-}
-
-export type ItemCategory = 'weapon' | 'armor' | 'gear' | 'consumable' | 'magic' | 'treasure';
-
-export const ITEM_CATEGORY_LABELS: Record<ItemCategory, string> = {
-	weapon: 'Waffe',
-	armor: 'Rüstung',
-	gear: 'Ausrüstung',
-	consumable: 'Verbrauch',
-	magic: 'Magisch',
-	treasure: 'Schatz'
-};
-
-export type Rarity = 'common' | 'uncommon' | 'rare' | 'veryrare' | 'legendary' | 'artifact';
-
-export const RARITY: Record<Rarity, { label: string; color: string }> = {
-	common: { label: 'Gewöhnlich', color: '#9ca3af' },
-	uncommon: { label: 'Ungewöhnlich', color: '#4ade80' },
-	rare: { label: 'Selten', color: '#60a5fa' },
-	veryrare: { label: 'Sehr selten', color: '#a78bfa' },
-	legendary: { label: 'Legendär', color: '#fbbf24' },
-	artifact: { label: 'Artefakt', color: '#f87171' }
-};
-
-export interface InventoryItem {
-	id: string;
-	characterId: string;
+	kind: 'skelett' | 'zombie';
 	name: string;
-	quantity: number;
-	weight: number;
-	category: ItemCategory;
-	rarity: Rarity;
-	description: string;
-	equipped: boolean;
-	attuned: boolean;
-	notes: string;
-	sourceSession?: number | null; // Provenance: aus welcher Session
+	hp: number;
+	maxHp: number;
+	renewed: boolean;
+	note?: string;
+}
+
+export interface PlayState {
+	hp: number;
+	tempHp: number;
+	deathSaves: { success: number; fail: number };
+	slotsUsed: Record<string, number>;
+	featureUsed: Record<string, number>;
+	hitDiceUsed: number;
+	inspiration: boolean;
+	exhaustion: number;
+	conditions: string[];
+	concentration: { spellId: string; name: string; since: number } | null;
+	shield: boolean;
+	trance: { skill: string; tool: string };
+	familiar: { form: string; present: boolean; hp: number };
+	servant: boolean;
+	minions: Minion[];
 	updatedAt: number;
 }
 
-export type QuestStatus = 'rumor' | 'active' | 'done';
+export interface Ref {
+	with: string;
+	text: string;
+}
 
-export const QUEST_STATUS_LABELS: Record<QuestStatus, string> = {
-	rumor: 'Gerücht / Offen',
-	active: 'Aktiv',
-	done: 'Abgeschlossen'
-};
+export interface Spell {
+	id: string;
+	name: string;
+	en: string;
+	level: number;
+	school: string;
+	status: 'buch' | 'frage' | 'vorschlag';
+	prepared?: boolean;
+	ritual?: boolean;
+	concentration?: boolean;
+	time: string;
+	economy: Economy;
+	trigger?: string;
+	range: string;
+	target?: string;
+	area?: string;
+	components: string;
+	duration: string;
+	attack?: string;
+	save?: string;
+	damage?: string;
+	rolls?: { label: string; expr: string }[];
+	source?: string;
+	summary?: string;
+	text: string;
+	higher?: string;
+	valerius?: string;
+	why?: string;
+	slot?: string;
+	tips?: string[];
+	uses?: string[];
+	rulings?: string[];
+	synergies?: Ref[];
+	conflicts?: Ref[];
+	corrections?: { doc: string; text: string }[];
+	note?: string;
+	docs?: string[];
+}
+
+export interface StatTrait {
+	name: string;
+	text: string;
+}
+
+export interface Familiar {
+	id: string;
+	name: string;
+	current?: boolean;
+	size: string;
+	ac: number;
+	hp: number;
+	speed: string;
+	abilities: Record<Ability, number>;
+	skills: string;
+	senses: string;
+	traits: StatTrait[];
+	verdict: string;
+	note?: string;
+}
+
+export interface UndeadBlock {
+	id: string;
+	name: string;
+	type: string;
+	ac: number;
+	acNote?: string;
+	hp: number;
+	hpFormula: string;
+	speed: string;
+	abilities: Record<Ability, number>;
+	saves?: string;
+	vulnerable?: string;
+	immune?: string;
+	senses: string;
+	languages: string;
+	cr: string;
+	traits?: StatTrait[];
+	actions: { name: string; bonus: number; damage: string; type: string; range: string }[];
+	verdict: string;
+}
+
+export interface PartyMember {
+	id: string;
+	name: string;
+	altName?: string;
+	role: string;
+	ac: string;
+	hp: number;
+	speed: string;
+	notes: string[];
+	source?: string;
+}
+
+export interface Creatures {
+	familiars: Familiar[];
+	servant: { id: string; name: string; ac: number; hp: number; speed: string; str: number; rules: string[] };
+	undead: UndeadBlock[];
+	party: PartyMember[];
+}
+
+export type ItemGroup = 'koerper' | 'verbrauch' | 'beute' | 'plot' | 'gelagert' | 'verloren';
+
+export interface Item {
+	id: string;
+	name: string;
+	group: ItemGroup;
+	qty: number;
+	desc: string;
+	note?: string;
+	magic?: boolean;
+	heal?: string;
+}
+
+export interface WishItem {
+	id: string;
+	name: string;
+	price?: number;
+	priceText?: string;
+	priority: 'kritisch' | 'hoch' | 'mittel' | 'vorschlag' | 'saladin';
+	phase: 'jetzt' | 'nach-saladin' | 'saladin';
+	why: string;
+	done?: boolean;
+}
+
+export interface Inventory {
+	currency: { gm: number; sm: number; km: number };
+	items: Item[];
+	wishlist: WishItem[];
+}
+
+export type QuestStatus = 'aktiv' | 'geruecht' | 'erledigt' | 'gescheitert';
 
 export interface Quest {
 	id: string;
-	characterId: string;
 	title: string;
-	giver: string;
 	status: QuestStatus;
-	priority: 'low' | 'normal' | 'high';
-	nextStep: string;
-	reward: string;
-	notes: string;
-	sortOrder: number;
-	sourceSession?: number | null; // Provenance: aus welcher Session
-	updatedAt: number;
+	urgent?: boolean;
+	kind?: string;
+	giver?: string;
+	next?: string;
+	reward?: string;
+	notes?: string;
+	links?: string[];
 }
 
-/** Sitzungs-Vorbereitung nach der Lazy-DM-Methode. */
-export interface ChecklistItem {
+export interface JournalEntry {
 	id: string;
-	text: string;
-	done: boolean;
-}
-
-export interface SecretItem {
-	id: string;
-	text: string;
-	revealed: boolean;
-}
-
-export type PlanStatus = 'planning' | 'ready' | 'played';
-
-export const PLAN_STATUS_LABELS: Record<PlanStatus, string> = {
-	planning: 'In Planung',
-	ready: 'Bereit',
-	played: 'Gespielt'
-};
-
-export interface SessionPlan {
-	id: string;
-	characterId: string;
+	order: number;
+	chapter?: string;
 	title: string;
-	sessionDate: string;
-	status: PlanStatus;
-	strongStart: string;
-	scenes: ChecklistItem[];
-	secrets: SecretItem[];
-	npcs: string;
-	locations: string;
-	treasure: string;
-	notes: string;
-	checklist: ChecklistItem[];
-	updatedAt: number;
+	type: 'session' | 'nachricht' | 'planung' | 'notiz';
+	date: string | null;
+	dateMode: 'exakt' | 'ca' | 'spaetestens' | 'zeitraum' | 'unbekannt';
+	dateLabel: string;
+	dateBasis?: string;
+	ingame?: string;
+	places?: string[];
+	people?: string[];
+	summary?: string;
+	events: string[];
+	loot?: string[];
+	lost?: string[];
+	encounters?: string[];
+	level?: number | null;
+	quests?: { ref: string; change: string }[];
+	notes?: string[];
+	contradictions?: string[];
+	sources?: string[];
 }
 
-export interface Note {
-	path: string; // relativ zum Vault-Root
-	title: string;
-	frontmatter: Record<string, unknown>;
-	body: string;
-	excerpt: string;
-	tags: string[];
-	links: string[];
-	updatedAt: number;
-}
-
-/** Status des (optionalen, steckbaren) KI-Providers. */
-export interface AiStatus {
-	configured: boolean;
-	provider: string;
-	model: string;
-	hint?: string;
-}
-
-/** Begleiter/Beschwörungen/Untote — die vom Charakter kontrollierten Kreaturen (Kampf). */
-export type CompanionKind = 'familiar' | 'summon' | 'undead' | 'ally' | 'other';
-
-export const COMPANION_KIND_LABELS: Record<CompanionKind, string> = {
-	familiar: 'Vertrauter',
-	summon: 'Beschwörung',
-	undead: 'Untot',
-	ally: 'Verbündeter',
-	other: 'Kreatur'
-};
-
-export interface Companion {
+export interface MapPin {
 	id: string;
-	characterId: string;
-	name: string;
-	kind: CompanionKind;
-	ac: number;
-	hp: { current: number; max: number; temp: number };
-	speed: string; // z.B. „9 m, Fliegen 18 m"
-	attack: string; // Kurzreferenz, z.B. „Knochenbogen +4, 1W6+2"
+	x: number;
+	y: number;
+	kind: 'ziel' | 'gefahr' | 'bestie' | 'ort' | 'unklar' | 'eigen';
+	label: string;
+	text: string;
+	link?: string;
+	uncertain?: boolean;
+}
+
+export interface MapData {
+	image: string;
+	title: string;
 	note: string;
-	conditions: string[];
-	updatedAt: number;
+	pins: MapPin[];
 }
 
-/** Rohe KI-Vorschläge vom Sidecar (steckbarer Provider, structured output). */
-export interface SessionUpdatesDTO {
-	/** Prägnanter Titel der Session (z.B. „Der Sturm auf die Zuflucht"). */
-	session_title?: string;
-	/** 2–3 Sätze Zusammenfassung. */
-	session_summary?: string;
-	/** Wichtigste Ereignisse als kurze Stichpunkte. */
-	session_highlights?: string[];
-	chronik_append: string;
-	analyse_content: string;
-	quests: {
-		title: string;
-		giver: string;
-		status: QuestStatus;
-		priority: 'low' | 'normal' | 'high';
-		next_step: string;
-		reward: string;
-	}[];
-	inventory: {
-		name: string;
-		quantity: number;
-		weight: number;
-		category: ItemCategory;
-		note: string;
-	}[];
-	glossar: { type: 'Personen' | 'Orte'; name: string; content: string }[];
-	knowledge?: {
-		statement: string;
-		tier: 'fact' | 'rumor' | 'theory';
-		view?: 'character' | 'player';
-		topic?: string;
-	}[];
-	character?: {
-		hp_max?: number | null;
-		level?: number | null;
-		gold_delta: number;
-		silver_delta: number;
-		copper_delta: number;
-		new_conditions: string[];
-	} | null;
-}
-
-export type IngestKind =
-	| 'chronik'
-	| 'analyse'
-	| 'quest'
-	| 'inventory'
-	| 'glossar'
-	| 'character'
-	| 'knowledge';
-
-export const INGEST_KIND_LABELS: Record<IngestKind, string> = {
-	chronik: 'Chronik',
-	analyse: 'Analyse',
-	quest: 'Quest',
-	inventory: 'Inventar',
-	glossar: 'Glossar',
-	character: 'Charakter',
-	knowledge: 'Wissen'
-};
-
-/**
- * Woher eine vorgeschlagene Änderung stammt — Kernprinzip: die KI ersetzt nie die Wahrheit.
- * known = direkt im Text gesagt · inferred = daraus abgeleitet · suggested = Vermutung/Idee der KI.
- */
-export type ChangeConfidence = 'known' | 'inferred' | 'suggested';
-
-export const CONFIDENCE_LABELS: Record<ChangeConfidence, string> = {
-	known: 'Bekannt',
-	inferred: 'Abgeleitet',
-	suggested: 'Vorschlag'
-};
-
-/** Ein einzelner, bestätigbarer Änderungsvorschlag für die Diff-Vorschau. */
-export interface IngestChange {
+export interface Source {
 	id: string;
-	kind: IngestKind;
 	title: string;
+	url: string;
+	kind: 'doc' | 'bild';
+	modified: string;
+	status: 'kanon' | 'referenz' | 'teilweise' | 'veraltet' | 'gemini';
+	group: string;
+	local?: string;
 	summary: string;
-	confidence?: ChangeConfidence;
-	before?: string;
-	after?: string;
-	payload: Record<string, unknown>;
 }
 
-/** Eine Sitzung als eigenständige Entität (kanonisch: campaign/sessions.json). */
-export interface Session {
-	id: string;
-	characterId: string | null;
-	number: number;
+export interface DocFile {
+	slug: string;
 	title: string;
-	date: string; // ISO (YYYY-MM-DD)
-	rawNotes: string;
+	subtitle?: string;
+	icon?: string;
+	order: number;
+	group: string;
+	aliases: string[];
+	updated?: string;
+	body: string;
+}
+
+export interface WorldEntry {
+	slug: string;
+	name: string;
+	aliases: string[];
+	kind: 'person' | 'fraktion' | 'ort';
+	group: string;
+	tone: 'ally' | 'enemy' | 'neutral' | 'unknown' | 'dead';
+	status: string;
 	summary: string;
-	highlights: string[];
-	changeKinds: IngestKind[];
-	appliedCount: number;
-	createdAt: number;
-	updatedAt: number;
+	body: string;
 }
 
-/**
- * Wissens-Hierarchie — Kernprinzip: die App unterscheidet, was bestätigt ist,
- * was jemand behauptet und was nur vermutet wird. Eine Theorie wird NIE
- * automatisch zum Fakt.
- */
-export type KnowledgeTier = 'fact' | 'rumor' | 'theory';
-
-export const KNOWLEDGE_TIER_LABELS: Record<KnowledgeTier, string> = {
-	fact: 'Fakt',
-	rumor: 'Gerücht',
-	theory: 'Theorie'
-};
-
-/** Charakterwissen vs. Spielerwissen (Metagaming-Grenze sichtbar halten). */
-export type KnowledgeView = 'character' | 'player';
-
-export const KNOWLEDGE_VIEW_LABELS: Record<KnowledgeView, string> = {
-	character: 'Charakter weiß es',
-	player: 'Nur Spielerwissen'
-};
-
-export interface KnowledgeEntry {
-	id: string;
-	characterId: string | null;
-	statement: string; // atomare Aussage
-	tier: KnowledgeTier;
-	view: KnowledgeView;
-	topic: string; // Gruppierung, z.B. „Der Kult", „Voss"
-	subject: string; // optional verknüpfte Entität (Wikilink-Titel)
-	sourceSession: number | null; // Provenance
-	resolved: boolean; // Theorie bestätigt/widerlegt & abgehakt
-	createdAt: number;
-	updatedAt: number;
+/** Ein Eintrag im Verweis-Index (Suche, [[Wikilinks]], Vorschaukarten). */
+export interface RefEntry {
+	key: string;
+	title: string;
+	kind: string;
+	summary: string;
+	href: string;
+	names: string[];
+	meta?: string;
 }
 
-/** Deutsche Labels für Event-Log-Feldpfade. */
-export const FIELD_LABELS: Record<string, string> = {
-	'hp.current': 'TP',
-	'hp.max': 'Max. TP',
-	'hp.temp': 'Temp. TP',
-	ac: 'RK',
-	level: 'Stufe',
-	xp: 'EP',
-	initiativeBonus: 'Initiative',
-	speed: 'Tempo',
-	proficiencyBonus: 'Übungsbonus',
-	inspiration: 'Inspiration',
-	'deathSaves.successes': 'Todesrettung: Erfolge',
-	'deathSaves.failures': 'Todesrettung: Fehlschläge',
-	'currency.gp': 'Gold',
-	'currency.sp': 'Silber',
-	'currency.cp': 'Kupfer',
-	'abilities.str': 'Stärke',
-	'abilities.dex': 'Geschicklichkeit',
-	'abilities.con': 'Konstitution',
-	'abilities.int': 'Intelligenz',
-	'abilities.wis': 'Weisheit',
-	'abilities.cha': 'Charisma',
-	conditions: 'Zustände',
-	spellSlots: 'Zauberplätze',
-	customTrackers: 'Tracker',
-	skills: 'Fertigkeiten',
-	saveProficiencies: 'Rettungswurf-Übungen',
-	attacks: 'Angriffe',
-	spells: 'Zauberbuch',
-	features: 'Merkmale',
-	notes: 'Notizen',
-	name: 'Name',
-	className: 'Klasse',
-	race: 'Volk',
-	background: 'Hintergrund',
-	alignment: 'Gesinnung',
-	pronouns: 'Pronomen',
-	portrait: 'Porträt',
-	appearance: 'Aussehen',
-	hitDice: 'Trefferwürfel',
-	hitDiceRemaining: 'Trefferwürfel übrig',
-	created: 'Erstellt'
-};
-
-/** Standard-5e-Conditions als Vorschläge für die Condition-Chips. */
-export const DND_CONDITIONS = [
-	'Blind',
-	'Bezaubert',
-	'Taub',
-	'Verängstigt',
-	'Gepackt',
-	'Handlungsunfähig',
-	'Unsichtbar',
-	'Gelähmt',
-	'Versteinert',
-	'Vergiftet',
-	'Liegend',
-	'Festgesetzt',
-	'Betäubt',
-	'Bewusstlos',
-	'Erschöpft'
-];
-
-/** D&D-5e Ability-Modifier. */
-export function abilityMod(score: number): number {
-	return Math.floor((score - 10) / 2);
+export interface Backlink {
+	key: string;
+	title: string;
+	kind: string;
+	href: string;
 }
 
-/** Formatiert einen Modifier mit Vorzeichen, z.B. +3 / -1. */
-export function fmtMod(mod: number): string {
-	return mod >= 0 ? `+${mod}` : `${mod}`;
+export interface CampaignData {
+	character: Character;
+	state: PlayState;
+	spells: Spell[];
+	creatures: Creatures;
+	inventory: Inventory;
+	quests: Quest[];
+	journal: JournalEntry[];
+	map: MapData;
+	sources: Source[];
+	docs: DocFile[];
+	world: WorldEntry[];
+	index: RefEntry[];
+	backlinks: Record<string, Backlink[]>;
 }
+
+/** Dateien, die die App zurückschreiben darf. */
+export const WRITABLE = ['state', 'inventory', 'quests', 'spells', 'journal', 'map'] as const;
+export type WritableFile = (typeof WRITABLE)[number];

@@ -1,14 +1,14 @@
 # campaign/assets/ — Bilder
 
-Bilder hier ablegen; im Dashboard erreichbar unter `/api/assets/<dateiname>`.
+Abrufbar im Grimoire unter `/api/assets/<dateiname>`.
 
-## Aus Google Drive zu übernehmen (manuell, 1 Minute)
-
-Ordner: https://drive.google.com/drive/folders/13bTXk9i1u6Nu9rRG_5afo8RW0Id-61vT
-
-| Drive-Datei | Hier speichern als | Verwendung |
+| Datei | Herkunft | Verwendung |
 | :-- | :-- | :-- |
-| `Valerius Icon für die Map.png` | `valerius.png` | Charakter-Porträt — danach in `campaign/character.json` das Feld `portrait` auf `/api/assets/valerius.png` setzen (oder Claude sagen: „setz mein Porträt") |
-| `Karte wüste für Valerius.jpg` | `karte-wueste.jpg` | Wird in der Lore-Notiz „Wüstenkarte" angezeigt |
+| `floshem.jpg` | Drive, „1791721883346.jpg“ (12.10.2026) | Original des Porträts |
+| `floshem-portrait.webp` | daraus rund freigestellt, 640 px | `character.json` → `portrait` |
+| `floshem-avatar.webp` | daraus, 160 px | `character.json` → `avatar` |
+| `karte-wueste.jpg` | Drive, „Karte wüste für Valerius.jpg“ | Original der Echsen-Karte |
+| `karte-wueste.webp` | daraus verkleinert, 2400 px | `map.json` → `image` |
 
-*(Warum manuell? Die Drive-Anbindung von Claude liefert Binärdateien nur als riesigen Base64-Text — Herunterladen im Browser ist schneller und sauberer.)*
+Neues Porträt: Bild hier ablegen (oder Claude bitten, es aus Drive zu holen), rund freistellen,
+als WebP speichern und die Dateinamen in `character.json` eintragen.

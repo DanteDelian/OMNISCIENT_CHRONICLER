@@ -1,0 +1,191 @@
+{
+  "familiars": [
+    {
+      "id": "falke",
+      "name": "Falke",
+      "current": true,
+      "size": "winzig",
+      "ac": 13,
+      "hp": 1,
+      "speed": "3 m, Fliegen 18 m",
+      "abilities": { "str": 5, "dex": 16, "con": 8, "int": 2, "wis": 14, "cha": 6 },
+      "skills": "Wahrnehmung +4",
+      "senses": "Passive Wahrnehmung 14",
+      "traits": [{ "name": "Scharfe Sicht", "text": "Vorteil auf Wahrnehmung, die auf Sicht beruht." }],
+      "verdict": "Der beste Späher bei Tag. Keine Dunkelsicht."
+    },
+    {
+      "id": "eule",
+      "name": "Eule",
+      "size": "winzig",
+      "ac": 11,
+      "hp": 1,
+      "speed": "1,5 m, Fliegen 18 m",
+      "abilities": { "str": 3, "dex": 13, "con": 8, "int": 2, "wis": 12, "cha": 7 },
+      "skills": "Wahrnehmung +3, Heimlichkeit +3",
+      "senses": "Dunkelsicht 36 m, passive Wahrnehmung 13",
+      "traits": [
+        { "name": "Vorbeiflug", "text": "Provoziert keine Gelegenheitsangriffe, wenn sie aus der Reichweite eines Feindes fliegt." },
+        { "name": "Scharfes Gehör und scharfe Sicht", "text": "Vorteil auf Wahrnehmung, die auf Gehör oder Sicht beruht." }
+      ],
+      "verdict": "Der beste Kampfhelfer: anfliegen, *Helfen*, gefahrlos wegfliegen. Sieht nachts."
+    },
+    {
+      "id": "katze",
+      "name": "Katze",
+      "size": "winzig",
+      "ac": 12,
+      "hp": 2,
+      "speed": "12 m, Klettern 9 m",
+      "abilities": { "str": 3, "dex": 15, "con": 10, "int": 3, "wis": 12, "cha": 7 },
+      "skills": "Wahrnehmung +3, Heimlichkeit +4",
+      "senses": "Passive Wahrnehmung 13",
+      "traits": [{ "name": "Scharfer Geruchssinn", "text": "Vorteil auf Wahrnehmung, die auf Geruch beruht." }],
+      "verdict": "Unauffällig in Städten und Siedlungen."
+    },
+    {
+      "id": "spinne",
+      "name": "Spinne",
+      "size": "winzig",
+      "ac": 12,
+      "hp": 1,
+      "speed": "6 m, Klettern 6 m",
+      "abilities": { "str": 2, "dex": 14, "con": 8, "int": 1, "wis": 10, "cha": 2 },
+      "skills": "Heimlichkeit +4",
+      "senses": "Dunkelsicht 9 m, passive Wahrnehmung 10",
+      "traits": [
+        { "name": "Spinnenklettern", "text": "Klettert an schwierigen Flächen und kopfüber an Decken, ohne Wurf." },
+        { "name": "Netzgespür", "text": "Bei Kontakt mit einem Netz kennt sie den Standort jeder Kreatur, die es berührt." },
+        { "name": "Netzläufer", "text": "Ignoriert Bewegungseinschränkungen durch Netze. Passt zu *Netz*!" }
+      ],
+      "verdict": "Spionage in Innenräumen, unsichtbar an der Decke."
+    },
+    {
+      "id": "tintenfisch",
+      "name": "Tintenfisch (Oktopus)",
+      "size": "klein",
+      "ac": 12,
+      "hp": 3,
+      "speed": "1,5 m, Schwimmen 9 m",
+      "abilities": { "str": 4, "dex": 15, "con": 11, "int": 3, "wis": 10, "cha": 4 },
+      "skills": "Wahrnehmung +2, Heimlichkeit +4",
+      "senses": "Dunkelsicht 9 m, passive Wahrnehmung 12",
+      "traits": [
+        { "name": "Luft anhalten", "text": "Außerhalb des Wassers 30 Minuten." },
+        { "name": "Unterwassertarnung", "text": "Vorteil auf Heimlichkeit unter Wasser." },
+        { "name": "Tintenwolke", "text": "Unter Wasser: 1,5 m Radius komplett verschleiert für 1 Minute, danach Spurt als Bonusaktion. Lädt nach kurzer oder langer Rast." }
+      ],
+      "verdict": "Für Unterwasser-Missionen, etwa beim Magischen Turm im See.",
+      "note": "Korrigiert: Die Tintenwolke des normalen Oktopus hat 1,5 m Radius. Die 6 m im alten Dokument gehören zum Riesenkraken."
+    },
+    {
+      "id": "piranha",
+      "name": "Piranha (Quipper)",
+      "size": "winzig",
+      "ac": 13,
+      "hp": 1,
+      "speed": "Schwimmen 12 m",
+      "abilities": { "str": 2, "dex": 16, "con": 9, "int": 1, "wis": 7, "cha": 2 },
+      "skills": "",
+      "senses": "Dunkelsicht 18 m, passive Wahrnehmung 8",
+      "traits": [
+        { "name": "Blutrausch", "text": "Vorteil auf Angriffe gegen verletzte Kreaturen. Als Vertrauter nutzlos, weil er nicht angreifen darf." },
+        { "name": "Wasseratmung", "text": "Atmet nur unter Wasser." }
+      ],
+      "verdict": "Schnellster Schwimmer, sonst schwach."
+    },
+    {
+      "id": "fledermaus",
+      "name": "Fledermaus",
+      "size": "winzig",
+      "ac": 12,
+      "hp": 1,
+      "speed": "1,5 m, Fliegen 9 m",
+      "abilities": { "str": 2, "dex": 15, "con": 8, "int": 2, "wis": 12, "cha": 4 },
+      "skills": "",
+      "senses": "Blindsicht 18 m, passive Wahrnehmung 11",
+      "traits": [
+        { "name": "Echolot", "text": "Keine Blindsicht, solange sie taub ist." },
+        { "name": "Scharfes Gehör", "text": "Vorteil auf Wahrnehmung, die auf Gehör beruht." }
+      ],
+      "verdict": "Orientiert sich in völliger Dunkelheit, langsam im Flug.",
+      "note": "Korrigiert: Die Fledermaus hat Blindsicht, keine Dunkelsicht."
+    }
+  ],
+  "servant": {
+    "id": "diener",
+    "name": "Unsichtbarer Diener",
+    "ac": 10,
+    "hp": 1,
+    "speed": "4,5 m pro Befehl",
+    "str": 2,
+    "rules": [
+      "Befehl: **Bonusaktion** (bewegen bis 4,5 m und mit einem Gegenstand interagieren).",
+      "Kann nicht angreifen, aber angegriffen werden. Er ist nur unsichtbar.",
+      "Einfache Dienerarbeiten: holen, putzen, flicken, Feuer machen, servieren.",
+      "Endet nach 1 Stunde, bei 0 TP oder wenn er sich mehr als 18 m von dir entfernt."
+    ]
+  },
+  "undead": [
+    {
+      "id": "skelett",
+      "name": "Skelett",
+      "type": "Mittelgroßer Untoter",
+      "ac": 13,
+      "acNote": "Rüstungsfetzen",
+      "hp": 13,
+      "hpFormula": "2W8 + 4",
+      "speed": "9 m",
+      "abilities": { "str": 10, "dex": 14, "con": 15, "int": 6, "wis": 8, "cha": 5 },
+      "vulnerable": "Wucht",
+      "immune": "Gift · Erschöpfung, Vergiftet",
+      "senses": "Dunkelsicht 18 m, passive Wahrnehmung 9",
+      "languages": "Versteht die Sprachen seines früheren Lebens, spricht nicht",
+      "cr": "1/4 (50 EP)",
+      "actions": [
+        { "name": "Knochenschwert (Kurzschwert)", "bonus": 4, "damage": "1d6+2", "type": "Stich", "range": "1,5 m" },
+        { "name": "Knochenbogen (Kurzbogen)", "bonus": 4, "damage": "1d6+2", "type": "Stich", "range": "24/96 m" }
+      ],
+      "verdict": "Fernkampf-Artillerie aus der Deckung. Entsteht aus **Knochen**."
+    },
+    {
+      "id": "zombie",
+      "name": "Zombie",
+      "type": "Mittelgroßer Untoter",
+      "ac": 8,
+      "hp": 22,
+      "hpFormula": "3W8 + 9",
+      "speed": "6 m",
+      "abilities": { "str": 13, "dex": 6, "con": 16, "int": 3, "wis": 6, "cha": 5 },
+      "saves": "WE +0",
+      "immune": "Gift · Vergiftet",
+      "senses": "Dunkelsicht 18 m, passive Wahrnehmung 8",
+      "languages": "Versteht die Sprachen seines früheren Lebens, spricht nicht",
+      "cr": "1/4 (50 EP)",
+      "traits": [
+        { "name": "Untote Zähigkeit", "text": "Würde Schaden ihn auf 0 TP bringen, macht er einen KO-Rettungswurf gegen SG 5 + Schaden. Gelingt er, bleibt er bei 1 TP. Gilt nicht bei gleißendem Schaden oder kritischen Treffern." }
+      ],
+      "actions": [{ "name": "Hieb", "bonus": 3, "damage": "1d6+1", "type": "Wucht", "range": "1,5 m" }],
+      "verdict": "Langsamer Trefferpunkte-Puffer. Entsteht aus einem **Leichnam**."
+    }
+  ],
+  "party": [
+    {
+      "id": "draka",
+      "name": "Draka „Khoraa“ Stormscale",
+      "altName": "In ihren eigenen Bögen: Aella Rayann „Khoraa“ Stormscale",
+      "role": "Bronzene Drachenblütige · Barbarin 5 (Pfad des Sturmherolds)",
+      "ac": "16 (Halbplatte) · 18 mit Schild",
+      "hp": 45,
+      "speed": "12 m",
+      "notes": [
+        "Kampfrausch 3× pro langer Rast: Resistenz gegen Hieb, Stich und Wucht, +2 Nahkampfschaden, Vorteil auf ST-Würfe",
+        "Sturmaura (Meer): Blitz auf eine Kreatur in 3 m, GE-Rettungswurf",
+        "Odem: 1,5 × 9 m Blitzlinie, GE-Rettungswurf SG 13, 2W6",
+        "Zusätzlicher Angriff · Leichtsinniger Angriff · Gefahrensinn",
+        "Soll den zweiten magischen Ohrring bekommen"
+      ],
+      "source": "aella-overview"
+    }
+  ]
+}

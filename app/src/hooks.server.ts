@@ -1,22 +1,20 @@
 import type { Handle } from '@sveltejs/kit';
-import { redirect, json } from '@sveltejs/kit';
-import { pinEnabled, pinToken, PIN_COOKIE } from '$lib/server/auth';
+import { json, redirect } from '@sveltejs/kit';
+import { PIN_COOKIE, pinEnabled, pinToken } from '$lib/server/auth';
+import { startWatcher } from '$lib/server/store';
+
+// Externe Änderungen an campaign/ (Claude Code, Editor, Git) sofort erkennen.
+startWatcher();
+
+const PUBLIC = ['/login', '/api/health', '/manifest.webmanifest', '/favicon.svg'];
 
 export const handle: Handle = async ({ event, resolve }) => {
 	if (pinEnabled()) {
-		const authed = event.cookies.get(PIN_COOKIE) === pinToken();
 		const p = event.url.pathname;
-		const isPublic =
-			p === '/login' ||
-			p === '/api/health' ||
-			p === '/manifest.webmanifest' ||
-			p.startsWith('/favicon') ||
-			p.startsWith('/_app/') ||
-			p.endsWith('.png') ||
-			p.endsWith('.svg');
-		if (!authed && !isPublic) {
+		const authed = event.cookies.get(PIN_COOKIE) === pinToken();
+		if (!authed && !PUBLIC.includes(p) && !p.startsWith('/_app/')) {
 			if (p.startsWith('/api')) return json({ error: 'PIN erforderlich' }, { status: 401 });
-			throw redirect(303, '/login');
+			redirect(303, '/login');
 		}
 	}
 	return resolve(event);

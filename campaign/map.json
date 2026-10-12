@@ -1,0 +1,21 @@
+{
+  "image": "karte-wueste.webp",
+  "title": "Echsen-Karte (Wüstenkarte)",
+  "note": "Aufklärungskarte der Echsenmenschen, gefunden im verlassenen Haus über den Tempelruinen. Gedeutete Markierungen stammen aus deiner Kartenanalyse im Kampagnen-Log. Alles, was als „ungedeutet“ markiert ist, ist nur ein sichtbares Symbol ohne bekannte Bedeutung.",
+  "pins": [
+    { "id": "turm", "x": 48.7, "y": 59.5, "kind": "ziel", "label": "Lhaaz-Turm (mit X)", "text": "Die Siedlung ist als feindliches Ziel markiert. Das X steht direkt neben dem Turm.", "link": "Die Siedlung" },
+    { "id": "schlachtfeld", "x": 77.2, "y": 81.2, "kind": "ziel", "label": "Schlachtfeld (gekreuzte Schwerter)", "text": "Leichen und Knochen: Rohstoff für *Tote erwecken*. Dein wichtigstes Reiseziel.", "link": "Schlachtfeld im Südosten" },
+    { "id": "gefahr-ost", "x": 88.5, "y": 27, "kind": "gefahr", "label": "Gefahrenzone (X-Cluster)", "text": "Mehrere X im Osten. Art der Gefahr unbekannt, vor der Durchreise aufklären." },
+    { "id": "gefahr-nord", "x": 15.2, "y": 2.2, "kind": "gefahr", "label": "X am Nordrand (bei einem Schiff)", "text": "Ein Schiff am oberen Kartenrand ist mit X markiert. Zur Nordroute laut Analyse.", "uncertain": true },
+    { "id": "saebelzahn", "x": 29.5, "y": 25.5, "kind": "bestie", "label": "Raubkatze (Säbelzahn)", "text": "Bestien-Lager: Jagdziel für Alchemie-Katalysatoren." },
+    { "id": "flugechse", "x": 25.8, "y": 65.5, "kind": "bestie", "label": "Flugechse", "text": "Bestien-Lager: Jagdziel für Alchemie-Katalysatoren." },
+    { "id": "freistadt", "x": 4, "y": 70.5, "kind": "ort", "label": "Gebäude mit Pfeil nach Westen", "text": "Laut deiner Analyse liegt im Südwesten die südliche Freistadt, dein künftiges Rekrutierungsgebiet.", "link": "Die südliche Freistadt" },
+    { "id": "mammut", "x": 1.6, "y": 22.5, "kind": "unklar", "label": "Elefant / Mammut", "text": "Ungedeutet. Am Westrand, nahe den Hügeln." },
+    { "id": "huegel", "x": 7.5, "y": 17.5, "kind": "unklar", "label": "Hügel", "text": "Ungedeutet. Nordwesten." },
+    { "id": "hoehle-1", "x": 37.8, "y": 9.2, "kind": "unklar", "label": "Höhleneingang", "text": "Ungedeutet. Norden." },
+    { "id": "hoehle-2", "x": 60.2, "y": 12.8, "kind": "unklar", "label": "Höhleneingang", "text": "Ungedeutet. Norden." },
+    { "id": "totenkopf", "x": 50.4, "y": 17.3, "kind": "unklar", "label": "Totenkopf", "text": "Ungedeutet. Norden, am Fluss." },
+    { "id": "loewe", "x": 83.5, "y": 53, "kind": "unklar", "label": "Löwenkopf", "text": "Ungedeutet. Osten. Vielleicht ein weiteres Bestien-Lager." },
+    { "id": "echse", "x": 32.7, "y": 81.5, "kind": "unklar", "label": "Echse / Saurier", "text": "Ungedeutet. Süden, am Fluss." }
+  ]
+}

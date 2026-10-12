@@ -1,93 +1,61 @@
-# Omniscient Chronicler
+# Valerius · Grimoire
 
-Ein **lokal-first, privates D&D-5e-Kampagnen-Grimoire** — das lebendige Gedächtnis deiner Kampagne.
-Kein Charakterbogen-Klon und kein Wiki mit D&D-Skin: Nach der Session erzählst du einfach, was passiert
-ist — die App leitet daraus geprüfte, quellenverfolgte Aktualisierungen ab und bereitet dich auf die
-nächste Session vor. Läuft auf Laptop, Tablet & Handy (installierbare PWA), ganz ohne Cloud.
+Das Session-Dashboard und Nachschlagewerk für **Valerius „Floshem“ Moonwhisper**, Astralelf-Magier der
+Schule der Beschwörung, Stufe 5, in der Kampagne um Xantus. Lokal, ohne Cloud, für den Laptop am Spieltisch
+gebaut und auch auf Tablet und Handy nutzbar.
 
-```
-PLAY  →  RAW  →  PROCESS  →  REVIEW  →  CAMPAIGN  →  NEXT SESSION
-```
+## Was drin ist
 
-## Funktionen
+| Bereich | Was du dort tust |
+| :-- | :-- |
+| **Spieltisch** | TP mit Schaden und Heilen, temporäre TP, Todesrettung · Zauberplätze und Kräfte zum Abhaken · „Was kann ich tun?“ nach Aktion, Bonusaktion und Reaktion · Wirken verbraucht Plätze und setzt Konzentration · Konzentrationsprobe erscheint automatisch nach Schaden · Proben und Rettungswürfe per Klick · Zustände mit Regeltext · Gefolge · Lage und Schnellnotiz |
+| **Charakterbogen** | Alle Werte, Fertigkeiten mit Herkunft der Übung, Angriffe, Merkmale, Astrale Trance. Druckbar |
+| **Zauberbuch** | Vollständige Regeltexte, deine Werte, Trefferrechner, Tipps, Einsatzideen, Synergien und Konflikte, Korrekturen mit Quelle. Vorbereitung (x/9), freie Plätze, Vorschläge |
+| **Gefolge** | Untote mit Live-TP und 24-Stunden-Kontrolle, alle Vertrauten-Gestalten, Unsichtbarer Diener, Draka |
+| **Inventar** | Geldbeutel mit Wechseln, Gegenstände (Heiltrank trinken heilt direkt), Wunschliste mit „leistbar“ |
+| **Journal** | Datierte Chronik mit Orten, Personen, Beute, Gegnern, Quest-Änderungen, Widersprüchen und Quellen |
+| **Quests** | Dringend, aktiv, Gerüchte, erledigt, gescheitert, jeweils mit Verlauf aus dem Journal |
+| **Welt** | 32 Personen, Fraktionen und Orte mit Rückverweisen |
+| **Karte** | Echsen-Karte mit Zoom, gedeuteten und ungedeuteten Markierungen, eigene Markierungen per Klick |
+| **Archiv** | Prüfbericht, Taktik-Handbuch, DM-Nachrichten, Backstory, Alchemie, Einkauf und alle Drive-Originale mit Bewertung |
+| **Regeln** | Zustände, Aktionen, Zauberwirken, Deckung, Licht, Todesrettung, Rasten, jeweils mit Bezug zu Valerius |
 
-- 🏛️ **Campaign-State-Startseite** — erzählt zuerst die aktuelle Lage: Ort & Situation, Held-Kurzstatus,
-  letzte & nächste Session, offene Fäden, zuletzt erfahrenes Wissen.
-- 🪄 **Session-Werkstatt** — Roh-Notizen rein → **optionale** KI schlägt Änderungen an Chronik, Quests,
-  Inventar, Glossar, Wissen & Charakter vor → du prüfst jede einzeln (Akzeptieren/Bearbeiten/Ablehnen).
-  **Nichts wird ohne deine Freigabe geschrieben**, jede Übernahme trägt ihre Session als Quelle.
-- 🧝 **Voller 5e-Charakterbogen** — Attribute, Fertigkeiten & Rettungswürfe (anklickbar würfeln),
-  Angriffe, Zauberbuch, Zauberplätze, Merkmale, Zustände, Rasten, Währung, eigene Tracker, Würfel,
-  Event-Verlauf & Snapshots. Mehrere Charaktere pro Kampagne.
-- 💡 **Wissen (Fakt / Gerücht / Theorie)** — mit Trennung von **Charakter- und Spielerwissen** und Quelle.
-- 🗺️ **Quests · Chronik · Glossar (NSCs & Orte)** — verknüpft über `[[Wikilinks]]`.
-- 📋 **Session-Vorbereitung** (Lazy-DM) · ⚔️ **Kampf-Tracker** · ⌘K-**Befehlspalette** mit Volltextsuche.
-- 🔄 **Live-Sync:** Dateien in `campaign/` sind die Wahrheit — ändert Claude Code sie, aktualisiert sich
-  das Dashboard sofort (auf allen Geräten im WLAN).
-- 🌌 Immersive Dark-Fantasy-Optik — gamefyed, aber kein Videospiel.
+Überall: **Suche mit Strg+K** (oder `/`), **Vorschaukarten** beim Überfahren von Verweisen, **Würfelschale** mit `D`,
+Ziffern `1` bis `0` springen zu den Bereichen.
 
-## Prinzipien
+## Starten
 
-- **Deine Dateien sind die Wahrheit** (`campaign/`, JSON + Markdown, Git-versioniert, kein Lock-in).
-- **Lokal & privat.** Externe KI ist optional; die Kernfunktion hängt an keinem Cloud-Konto.
-- **KI schlägt vor, du entscheidest** — nie blindes Überschreiben, keine erfundenen Fakten.
+Doppelklick auf **`start.bat`**. Beim ersten Mal werden Abhängigkeiten installiert und die App gebaut, danach öffnet
+sich der Browser auf <http://localhost:3000>. Tablet oder Handy im selben WLAN: `http://<IP-des-Laptops>:3000`.
 
-## Schnellstart
-
-```
-Doppelklick auf start.bat
-```
-
-Beim ersten Start wird installiert, gebaut und `campaign/` angelegt (Onboarding: ersten Charakter
-erschaffen). Danach:
-- Laptop: <http://localhost:3000>
-- Tablet/Handy im selben WLAN: `http://<Laptop-IP>:3000` (Adresse unter **Einstellungen → WLAN-Zugriff**)
-
-### Entwicklung
+Entwicklung:
 
 ```bash
 cd app
 npm install
-npm run dev        # http://localhost:5173
-npm run check      # Typprüfung (svelte-check)
+npm run dev          # http://localhost:5173
+npm run check        # Typprüfung
+npm run check:data   # Kampagnendaten und alle Verweise prüfen
+npm run build        # Produktionsbuild
 ```
 
-## Die zwei KI-Wege (beide optional)
+## Daten
 
-1. **Claude Code** editiert die `campaign/`-Dateien direkt — das laufende Dashboard zieht live nach.
-2. **Session-Werkstatt** in der App: Roh-Text → geprüfter Vorschlags-Diff → übernehmen. Standard-Provider
-   ist Gemini, vollständig optional und steckbar:
+Alles liegt lesbar in [`campaign/`](campaign/README.md) (JSON und Markdown) und ist per Git versioniert.
+Die App schreibt nur den Spielstand, das Inventar, Quests, Journal, Karte und die Vorbereitung der Zauber zurück.
+Ändert Claude Code eine Datei, aktualisieren sich alle offenen Geräte sofort.
 
-```
-# .env  (bzw. app/.env in der Entwicklung)
-AI_PROVIDER=gemini            # gemini | mock | none  (leer = auto: gemini wenn Key gesetzt)
-GEMINI_API_KEY=dein-key
-GEMINI_MODEL=gemini-2.5-flash
-```
+**Nach einer Session:** Erzähl Claude Code, was passiert ist. Claude legt einen datierten Journal-Eintrag an,
+aktualisiert Quests, Inventar, Personen und Orte und verlinkt alles. Am Tisch landen Schnellnotizen automatisch
+im Journal.
 
-Ohne Schlüssel läuft alles weiter; `AI_PROVIDER=mock` liefert einen Offline-Demo-Patch ohne externen Aufruf.
+## Optional
 
-## Struktur
+`.env` im Hauptordner (Vorlage `.env.example`): `APP_PIN` schützt die App im WLAN mit einer PIN, `PORT` und
+`HOST` steuern den Server.
 
-```
-campaign/          DEINE Kampagnendaten (Git-getrackt, Claude-editierbar) — Wahrheit
-app/               SvelteKit-App (Frontend + API + Datei-Backend)
-docs/              FEATURES.md (Ziel-Funktionen) · ARCHITECTURE.md (Architektur)
-start.bat          startet die App
-```
+---
 
-## Weiterführend
-
-- **[docs/FEATURES.md](docs/FEATURES.md)** — die Ziel-Funktionen & Roadmap.
-- **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** — Technik, Datenmodell, Datenfluss.
-- **[campaign/README.md](campaign/README.md)** — Schema-Doku der Kampagnendateien (für Claude Code).
-
-## Konfiguration (optional)
-
-`.env.example` → `.env`. Optionen: `APP_PIN` (PIN-Schutz im WLAN), `PORT`/`HOST`, `CAMPAIGN_DIR`,
-`AI_PROVIDER`/`GEMINI_API_KEY`/`GEMINI_MODEL`.
-
-## Technik
-
-SvelteKit 2 · Svelte 5 (Runes) · Tailwind 4 · adapter-node · PWA. **Keine Datenbank, kein Cloud-Zwang.**
-Datei-Watcher + SSE liefern Live-Updates; Sync & Historie über Git.
+Regelinhalte teilweise nach dem System Reference Document 5.1 von Wizards of the Coast LLC (CC BY 4.0), in eigener
+deutscher Fassung. Toll the Dead und Ice Knife stammen aus Xanathars Ratgeber für alles und sind in eigenen Worten
+zusammengefasst.

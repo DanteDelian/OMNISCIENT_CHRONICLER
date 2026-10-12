@@ -1,254 +1,246 @@
-[
-  {
-    "id": "item-dolch",
-    "characterId": "valerius",
-    "name": "Dolch",
-    "quantity": 1,
-    "weight": 0.5,
-    "category": "weapon",
-    "rarity": "common",
-    "description": "Leicht, Finesse, Wurfwaffe (6/18 m). **1W4+1 Stich.**",
-    "equipped": true,
-    "attuned": false,
-    "notes": "",
-    "updatedAt": 1782973000000
-  },
-  {
-    "id": "item-zweihandstab",
-    "characterId": "valerius",
-    "name": "Waldelfentypischer Zweihandstab",
-    "quantity": 1,
-    "weight": 2,
-    "category": "weapon",
-    "rarity": "common",
-    "description": "Teil der Floshem-Tarnung. **1W6 Wucht** (vielseitig 1W8).",
-    "equipped": true,
-    "attuned": false,
-    "notes": "",
-    "updatedAt": 1782973000000
-  },
-  {
-    "id": "item-fokus-ring",
-    "characterId": "valerius",
-    "name": "Arkaner Fokus (Ring)",
-    "quantity": 1,
-    "weight": 0,
-    "category": "gear",
-    "rarity": "common",
-    "description": "Unauffälliger Zauberfokus — perfekt für einen Magier, der nicht als solcher erkannt werden will.",
-    "equipped": true,
-    "attuned": false,
-    "notes": "",
-    "updatedAt": 1782973000000
-  },
-  {
-    "id": "item-zauberbuch",
-    "characterId": "valerius",
-    "name": "Wasserdichtes Zauberbuch",
-    "quantity": 1,
-    "weight": 1.5,
-    "category": "gear",
-    "rarity": "uncommon",
-    "description": "Enthält alle bekannten Zauber, wasserdicht gebunden. Valerius’ wertvollster Besitz.",
-    "equipped": true,
-    "attuned": false,
-    "notes": "",
-    "updatedAt": 1782973000000
-  },
-  {
-    "id": "item-gelehrten-ausruestung",
-    "characterId": "valerius",
-    "name": "Gelehrten-Ausrüstung",
-    "quantity": 1,
-    "weight": 1,
-    "category": "gear",
-    "rarity": "common",
-    "description": "Tinte, Feder, kleines Messer.",
-    "equipped": false,
-    "attuned": false,
-    "notes": "",
-    "updatedAt": 1782973000000
-  },
-  {
-    "id": "item-rationen",
-    "characterId": "valerius",
-    "name": "Rationen Proviant",
-    "quantity": 13,
-    "weight": 1,
-    "category": "consumable",
-    "rarity": "common",
-    "description": "",
-    "equipped": false,
-    "attuned": false,
-    "notes": "",
-    "updatedAt": 1782973000000
-  },
-  {
-    "id": "item-beeren",
-    "characterId": "valerius",
-    "name": "Diverse Beeren",
-    "quantity": 1,
-    "weight": 0,
-    "category": "consumable",
-    "rarity": "common",
-    "description": "Auf der Reise gesammelt.",
-    "equipped": false,
-    "attuned": false,
-    "notes": "",
-    "updatedAt": 1782973000000
-  },
-  {
-    "id": "item-unbekannte-kraeuter",
-    "characterId": "valerius",
-    "name": "Unbekannte Kräuter",
-    "quantity": 10,
-    "weight": 0,
-    "category": "consumable",
-    "rarity": "uncommon",
-    "description": "Müssen identifiziert werden — Schlüssel zur Alchemie-Quest der [[Kräuterfrau]]. Siehe [[Alchemie-Kompendium]].",
-    "equipped": false,
-    "attuned": false,
-    "notes": "",
-    "updatedAt": 1782973000000
-  },
-  {
-    "id": "item-gift",
-    "characterId": "valerius",
-    "name": "Gift (Portion)",
-    "quantity": 2,
-    "weight": 0,
-    "category": "consumable",
-    "rarity": "common",
-    "description": "Waffengift. Diskret einsetzbar — ganz im Stil der Zaffera-Schule.",
-    "equipped": false,
-    "attuned": false,
-    "notes": "",
-    "updatedAt": 1782973000000
-  },
-  {
-    "id": "item-heiltrank",
-    "characterId": "valerius",
-    "name": "Heiltrank",
-    "quantity": 2,
-    "weight": 0.5,
-    "category": "consumable",
-    "rarity": "common",
-    "description": "Heilt **2W4+2 TP**. Beute aus der Zuflucht der roten Echsen.",
-    "equipped": false,
-    "attuned": false,
-    "notes": "",
-    "updatedAt": 1782973000000
-  },
-  {
-    "id": "item-heilkraeuter",
-    "characterId": "valerius",
-    "name": "Heilkräuter",
-    "quantity": 1,
-    "weight": 0.5,
-    "category": "consumable",
-    "rarity": "uncommon",
-    "description": "Ausreichend für **3 Heiltränke** — sobald Alchemistenwerkzeuge vorhanden sind.",
-    "equipped": false,
-    "attuned": false,
-    "notes": "",
-    "updatedAt": 1782973000000
-  },
-  {
-    "id": "item-ohrringe",
-    "characterId": "valerius",
-    "name": "Magische Ohrringe (Paar)",
-    "quantity": 1,
-    "weight": 0,
-    "category": "magic",
-    "rarity": "rare",
-    "description": "**1×/Tag** eine magische *Botschaft* über große Distanz — aber **nur zwischen den Trägern** der beiden Ohrringe. Gefunden im verborgenen Lagerraum der Tempelruinen. Plan: [[Draka Stormscale]] erhält einen — sicherer Kommunikationskanal. Alternativ: Handelsware für [[Saladin]].",
-    "equipped": true,
-    "attuned": true,
-    "notes": "Schulen: Hellsicht & Teleportation",
-    "updatedAt": 1782973000000
-  },
-  {
-    "id": "item-lhaaz-schriftstueck",
-    "characterId": "valerius",
-    "name": "Schriftstück mit Lhaaz-Wappen",
-    "quantity": 1,
-    "weight": 0,
-    "category": "treasure",
-    "rarity": "uncommon",
-    "description": "Beim Angriff auf Lula erbeutet. Beweisstück — oder Druckmittel gegen das Haus [[Graf Lhaaz|Lhaaz]].",
-    "equipped": false,
-    "attuned": false,
-    "notes": "",
-    "updatedAt": 1782973000000
-  },
-  {
-    "id": "item-brief-cam",
-    "characterId": "valerius",
-    "name": "Brief von Cam Buckland",
-    "quantity": 1,
-    "weight": 0,
-    "category": "treasure",
-    "rarity": "common",
-    "description": "Der Brief, der die Donnergarde-Tarnung begründete. Volltext: [[Nachrichten vom DM]]. Absender: [[Cam Buckland]].",
-    "equipped": false,
-    "attuned": false,
-    "notes": "",
-    "updatedAt": 1782973000000
-  },
-  {
-    "id": "item-echsen-karte",
-    "characterId": "valerius",
-    "name": "Echsen-Karte (Aufklärungskarte)",
-    "quantity": 1,
-    "weight": 0,
-    "category": "treasure",
-    "rarity": "rare",
-    "description": "Feindliche Spionagekarte: markiert den **Lhaaz-Turm als Ziel (X)**, ein **Schlachtfeld** (gekreuzte Schwerter) im Südosten, Bestien-Lager und Gefahrenzonen. Analyse: [[Wüstenkarte]].",
-    "equipped": false,
-    "attuned": false,
-    "notes": "",
-    "updatedAt": 1782973000000
-  },
-  {
-    "id": "item-society-dolche",
-    "characterId": "valerius",
-    "name": "Dolch (Society-Beute)",
-    "quantity": 3,
-    "weight": 0.5,
-    "category": "weapon",
-    "rarity": "common",
-    "description": "Von den besiegten Magiern der [[Sorcerer Society]] erbeutet.",
-    "equipped": false,
-    "attuned": false,
-    "notes": "",
-    "updatedAt": 1782973000000
-  },
-  {
-    "id": "item-society-uniformen",
-    "characterId": "valerius",
-    "name": "Sorcerer-Society-Uniform",
-    "quantity": 3,
-    "weight": 1.5,
-    "category": "gear",
-    "rarity": "uncommon",
-    "description": "Authentische Uniformen der [[Sorcerer Society]] — **unschätzbar für Infiltrationen**. Mit Verkleidungsausrüstung anpassbar.",
-    "equipped": false,
-    "attuned": false,
-    "notes": "",
-    "updatedAt": 1782973000000
-  },
-  {
-    "id": "item-untoter-kadaver",
-    "characterId": "valerius",
-    "name": "Kadaver eines untoten Wesens",
-    "quantity": 1,
-    "weight": 20,
-    "category": "treasure",
-    "rarity": "uncommon",
-    "description": "Lagert bei der Haus-Baustelle. Einzigartige Reagenzien für Nekromantie & Alchemie — potenzielles Startmaterial für *Tote erwecken*.",
-    "equipped": false,
-    "attuned": false,
-    "notes": "Liegt bei der Baustelle, nicht im Gepäck",
-    "updatedAt": 1782973000000
-  }
-]
+{
+  "currency": { "gm": 17, "sm": 16, "km": 0 },
+  "items": [
+    {
+      "id": "fokus-ring",
+      "name": "Arkaner Fokus (Ring)",
+      "group": "koerper",
+      "qty": 1,
+      "desc": "Unauffälliger Zauberfokus am Finger. Ersetzt Materialkomponenten ohne angegebenen Goldwert."
+    },
+    {
+      "id": "zauberbuch",
+      "name": "Wasserdichtes Zauberbuch",
+      "group": "koerper",
+      "qty": 1,
+      "desc": "Alle Zauber, siehe Zauberbuch. Dein wertvollster Besitz: Geht es verloren, sind die Zauber weg."
+    },
+    {
+      "id": "ohrringe",
+      "name": "Magische Ohrringe (Paar)",
+      "group": "koerper",
+      "qty": 1,
+      "magic": true,
+      "desc": "1× pro Tag eine *Botschaft* über große Distanz, nur zwischen den beiden Trägern. Gefunden in einer Truhe im verborgenen Lagerraum unter dem verlassenen Haus bei den Tempelruinen. *Magie entdecken* zeigte Hellsicht und Teleportation.",
+      "note": "Plan: Draka bekommt einen (sicherer Kanal). Alternative: Tauschware für Saladin."
+    },
+    {
+      "id": "dolch",
+      "name": "Dolch",
+      "group": "koerper",
+      "qty": 1,
+      "desc": "+4 · 1W4+1 Stich · Finesse, leicht, Wurf 6/18 m"
+    },
+    {
+      "id": "zweihandstab",
+      "name": "Waldelfentypischer Zweihandstab",
+      "group": "koerper",
+      "qty": 1,
+      "desc": "Kampfstab: +3 · 1W6 Wucht, zweihändig 1W8. Teil der Floshem-Tarnung."
+    },
+    {
+      "id": "gelehrten-ausruestung",
+      "name": "Gelehrten-Ausrüstung",
+      "group": "koerper",
+      "qty": 1,
+      "desc": "Tinte, Schreibfedern, kleines Messer, Pergament."
+    },
+    {
+      "id": "rucksack",
+      "name": "Rucksack",
+      "group": "koerper",
+      "qty": 1,
+      "desc": "",
+      "note": "Steht nur im Optimiert-Bogen."
+    },
+    {
+      "id": "wasserschlauch",
+      "name": "Wasserschlauch",
+      "group": "koerper",
+      "qty": 1,
+      "desc": "",
+      "note": "Steht nur im Optimiert-Bogen."
+    },
+    {
+      "id": "heiltrank",
+      "name": "Heiltrank",
+      "group": "verbrauch",
+      "qty": 2,
+      "heal": "2d4+2",
+      "desc": "Heilt **2W4 + 2** TP. Trinken kostet eine Aktion. Beute aus der Zuflucht des roten Clans."
+    },
+    {
+      "id": "gift",
+      "name": "Gift (Portion)",
+      "group": "verbrauch",
+      "qty": 2,
+      "desc": "Art und Wirkung sind nicht notiert, beim DM erfragen."
+    },
+    {
+      "id": "rationen",
+      "name": "Rationen",
+      "group": "verbrauch",
+      "qty": 13,
+      "desc": "",
+      "note": "Kampagnen-Log: 13. Charakterbögen (alt und Optimiert): 11. Bitte prüfen."
+    },
+    {
+      "id": "beeren",
+      "name": "Diverse Beeren",
+      "group": "verbrauch",
+      "qty": 1,
+      "desc": "Unterwegs gesammelt."
+    },
+    {
+      "id": "unbekannte-kraeuter",
+      "name": "Unbekannte Kräuter",
+      "group": "verbrauch",
+      "qty": 10,
+      "desc": "Für die Quest der Kräuterfrau identifizieren, die Eintrittskarte in die Alchemie-Lehre."
+    },
+    {
+      "id": "heilkraeuter",
+      "name": "Heilkräuter",
+      "group": "verbrauch",
+      "qty": 1,
+      "desc": "Reichen für **3 Heiltränke**. Beute aus der Zuflucht.",
+      "note": "Regel-Tipp: Laut Xanathars braut man Heiltränke mit der Kräuterkundeausrüstung (5 GM), nicht mit dem Alchemistenwerkzeug. Die Werkzeugübung holst du dir über die Astrale Trance."
+    },
+    {
+      "id": "society-dolche",
+      "name": "Dolch (Society-Beute)",
+      "group": "beute",
+      "qty": 3,
+      "desc": "Von den drei Magiern der Sorcerer Society."
+    },
+    {
+      "id": "society-uniformen",
+      "name": "Sorcerer-Society-Uniform",
+      "group": "beute",
+      "qty": 3,
+      "desc": "Echte Uniformen der Sorcerer Society, wertvoll für Infiltration und eine neue Identität. Mit Verkleidungsausrüstung anpassbar."
+    },
+    {
+      "id": "lhaaz-schriftstueck",
+      "name": "Schriftstück mit Lhaaz-Wappen",
+      "group": "plot",
+      "qty": 1,
+      "desc": "Vom **Attentäter**, der Lula angriff. Ein Beweisstück, vielleicht ein Druckmittel gegen das Haus Lhaaz."
+    },
+    {
+      "id": "brief-cam",
+      "name": "Brief von Cam Buckland",
+      "group": "plot",
+      "qty": 1,
+      "desc": "Der Brief, mit dem die Donnergarde-Tarnung begann. Beschreibt Floshem als laut und auffallend. Volltext: [[Nachrichten vom DM]]."
+    },
+    {
+      "id": "echsen-karte",
+      "name": "Echsen-Karte",
+      "group": "plot",
+      "qty": 1,
+      "desc": "Aufklärungskarte der Echsenmenschen: Lhaaz-Turm als Ziel (X), Schlachtfeld (gekreuzte Schwerter) im Südosten, Bestien-Lager, Gefahrenzonen. Siehe **Karte**."
+    },
+    {
+      "id": "kadaver",
+      "name": "Kadaver eines untoten Wesens",
+      "group": "gelagert",
+      "qty": 1,
+      "desc": "Liegt neben der Haus-Baustelle in der Siedlung. Reagenzien für Alchemie und Nekromantie.",
+      "note": "*Tote erwecken* wirkt nur auf Überreste kleiner oder mittelgroßer Humanoider. Ob dieser Kadaver taugt, entscheidet der DM."
+    },
+    {
+      "id": "rolle-botschaft",
+      "name": "Spruchrolle: Botschaft",
+      "group": "verloren",
+      "qty": 1,
+      "desc": "Von einem der roten Echsenkrieger gestohlen. Rückholen oder Vergeltung, eine Frage des Prinzips."
+    }
+  ],
+  "wishlist": [
+    {
+      "id": "gute-kleidung",
+      "name": "Gute Kleidung",
+      "price": 15,
+      "priority": "mittel",
+      "phase": "jetzt",
+      "why": "Nach der aufgeflogenen Tarnung Autorität ausstrahlen, vor Leon und dem Paladin."
+    },
+    {
+      "id": "kraeuterkunde",
+      "name": "Kräuterkundeausrüstung",
+      "price": 5,
+      "priority": "vorschlag",
+      "phase": "jetzt",
+      "why": "Regel-Tipp: Damit braut man laut Xanathars Heiltränke. Mit den Heilkräutern und der Astralen Trance sofort nutzbar. Mit dem DM klären."
+    },
+    {
+      "id": "alchemistenwerkzeug",
+      "name": "Alchemistenwerkzeug",
+      "price": 50,
+      "priority": "kritisch",
+      "phase": "nach-saladin",
+      "why": "Quest-Blocker für die Alchemie-Lehre bei der Kräuterfrau."
+    },
+    {
+      "id": "verkleidung",
+      "name": "Verkleidungsausrüstung",
+      "price": 25,
+      "priority": "hoch",
+      "phase": "nach-saladin",
+      "why": "Neue Identität, Society-Uniformen anpassen, Skelette mit Umhängen und Masken tarnen."
+    },
+    {
+      "id": "kalligraphie",
+      "name": "Kalligraphenwerkzeug",
+      "price": 10,
+      "priority": "hoch",
+      "phase": "nach-saladin",
+      "why": "Für Spruchrollen. Material je Rolle laut Xanathars: Grad 1 25 GM, Grad 2 250 GM, Grad 3 500 GM."
+    },
+    {
+      "id": "rolle-huette",
+      "name": "Spruchrolle: Leomunds winzige Hütte",
+      "price": 400,
+      "priceText": "250–500 GM + 150 GM Kopieren",
+      "priority": "mittel",
+      "phase": "nach-saladin",
+      "why": "Ritual-Verteidigung: Gruppe und Untote rasten sicher."
+    },
+    {
+      "id": "nimmervoller-beutel",
+      "name": "Nimmervoller Beutel",
+      "priority": "saladin",
+      "phase": "saladin",
+      "why": "Logistik: Knochen, Zutaten, Beute."
+    },
+    {
+      "id": "perle-der-macht",
+      "name": "Perle der Macht",
+      "priority": "saladin",
+      "phase": "saladin",
+      "why": "1× pro Tag einen Zauberplatz bis Grad 3 zurück: 4 weitere Skelette oder ein Notfall-Gegenzauber."
+    },
+    {
+      "id": "armschienen",
+      "name": "Armschienen der Verteidigung",
+      "priority": "saladin",
+      "phase": "saladin",
+      "why": "+2 RK ohne Rüstung und Schild, also RK 13 (mit Magierrüstung 16)."
+    },
+    {
+      "id": "schutzumhang",
+      "name": "Umhang des Schutzes",
+      "priority": "saladin",
+      "phase": "saladin",
+      "why": "+1 auf RK und alle Rettungswürfe."
+    },
+    {
+      "id": "grimoire",
+      "name": "Arkaner Grimoire +1",
+      "priority": "saladin",
+      "phase": "saladin",
+      "why": "+1 auf Zauber-SG und Zauberangriff (*Netz* SG 16), +1 Grad bei der Arkanen Erholung. Den Gegenzauber-Wurf verbessert er **nicht**."
+    }
+  ]
+}

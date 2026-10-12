@@ -1,0 +1,152 @@
+[
+  {
+    "id": "charakterbogen-optimiert",
+    "title": "Charakterbogen Valerius Moonwhisper (Optimiert, Gemini)",
+    "url": "https://docs.google.com/document/d/14yc2vHl_5y8Nt8jZsFTI4JcJ_mN6RU796eqqc6G9e1o/edit",
+    "kind": "doc",
+    "modified": "2026-10-10",
+    "status": "gemini",
+    "group": "Charakter",
+    "local": "/",
+    "summary": "Gemini-Entwurf vom 10.10.2026, nicht übernommen. Richtig gerechnet: Durchschnitts-TP und das Entfernen von „Nebelschritt immer vorbereitet“. Falsch: WE-Modifikator −2, Inventar auf dem alten Stand (ohne Ohrringe, Uniformen, Heiltränke), Karte „noch nicht entschlüsselt“."
+  },
+  {
+    "id": "zauberbuch-optimiert",
+    "title": "Zauberbuch und Taktikhandbuch (Optimiert, Gemini)",
+    "url": "https://docs.google.com/document/d/1cFWZWq2HbvYwAB4Aey0aLnxy5pEeOSS8bx5AYOqtR70/edit",
+    "kind": "doc",
+    "modified": "2026-10-10",
+    "status": "gemini",
+    "group": "Zauber & Taktik",
+    "local": "/zauberbuch",
+    "summary": "Gemini-Entwurf vom 10.10.2026 mit vier vorgeschlagenen Zaubern. Auf deinen Wunsch nicht übernommen. Fehler darin: Gedanken wahrnehmen (WE statt IN), Fliegen wäre kein freier Platz, Arkane Erholung gilt nur 1× pro Tag, Tote erwecken erneuern „1 Aktion“."
+  },
+  {
+    "id": "zauber-von-val",
+    "title": "Zauber von Val",
+    "url": "https://docs.google.com/document/d/1S0-20VD12Pb5MLaqVweNhREFqOgZP7DYQfzbT5U_xTQ/edit",
+    "kind": "doc",
+    "modified": "2025-11-16",
+    "status": "referenz",
+    "group": "Zauber & Taktik",
+    "local": "/zauberbuch",
+    "summary": "Ausführliche Zaubertexte mit kreativen Anwendungen. Fehler: Netz als Verzauberung, Nebelschritt „immer vorbereitet“, Tote erwecken erneuern „als Aktion“."
+  },
+  {
+    "id": "beschworene-wesen",
+    "title": "Beschwörte Wesen Wertblöcke",
+    "url": "https://docs.google.com/document/d/1vgC9gYvyqnR5ZnWVRxJE2t5cRB0W3KFfUBz6XmJm7ME/edit",
+    "kind": "doc",
+    "modified": "2025-11-16",
+    "status": "referenz",
+    "group": "Zauber & Taktik",
+    "local": "/zauberbuch?tab=gefolge",
+    "summary": "Wertblöcke für Vertraute, Diener und Untote. Fehler: Diener-Traglast, Tintenwolke, Reaktion beim Überbringen."
+  },
+  {
+    "id": "kampagnen-log",
+    "title": "Beschwörungsmagier in D&D 5 (Kampagnen-Log)",
+    "url": "https://docs.google.com/document/d/1opeuq6UVlzmJs6NKGuiIxnihCyyUB6xk7n6E5dU25yc/edit",
+    "kind": "doc",
+    "modified": "2026-07-12",
+    "status": "teilweise",
+    "group": "Kampagne",
+    "local": "/welt",
+    "summary": "Chronik, Quests, Inventar und Glossar. Trotz des Titels dein Kampagnen-Log. Fehler: Lisbeths Schiff „kommt nie an“ (sie wurde längst gerettet)."
+  },
+  {
+    "id": "nachrichten-dm",
+    "title": "Nachrichten vom DM",
+    "url": "https://docs.google.com/document/d/17ngnqsSNXroImca6rxqBnvEWpq9Id9xyJHg39pwYYOs/edit",
+    "kind": "doc",
+    "modified": "2025-11-15",
+    "status": "kanon",
+    "group": "Kampagne",
+    "local": "/archiv/nachrichten-vom-dm",
+    "summary": "Cams Brief, die telepathische Warnung und die Klarstellungen des DM. Kanon."
+  },
+  {
+    "id": "backstory",
+    "title": "Backstory Valerius Moonwhisper",
+    "url": "https://docs.google.com/document/d/11LjH7wbm4CeLKDij1fXMbB2mq7uD1s-JiaU1qWVOQ1E/edit",
+    "kind": "doc",
+    "modified": "2025-02-23",
+    "status": "kanon",
+    "group": "Hintergrund",
+    "local": "/archiv/backstory",
+    "summary": "Oakhaven, die Zafferas, Draka und der Sprung nach Xantus."
+  },
+  {
+    "id": "alchemie",
+    "title": "Alchemi (Alchemie-Kompendium)",
+    "url": "https://docs.google.com/document/d/1pAy9VklkIaAfDWM1GpIsVm-FnA1h9kTzRbvj8VWlS-8/edit",
+    "kind": "doc",
+    "modified": "2025-08-12",
+    "status": "referenz",
+    "group": "Pläne",
+    "local": "/archiv/alchemie",
+    "summary": "Rezeptbuch und Weg zur Alchemie. Hinweis: Laut Xanathars braut man Heiltränke mit der Kräuterkundeausrüstung."
+  },
+  {
+    "id": "einkaufsliste",
+    "title": "Einkaufsliste Valerius",
+    "url": "https://docs.google.com/document/d/1XeQfB1byn5y9XSsQjhV7op-JYEYS3ZaQUe6L2l2In9A/edit",
+    "kind": "doc",
+    "modified": "2025-11-16",
+    "status": "teilweise",
+    "group": "Pläne",
+    "local": "/archiv/einkauf",
+    "summary": "Einkäufe und die Verhandlung mit Saladin. Fehler: Spruchrolle Grad 3 kostet 500 GM, „Kragenschienen“ heißen Armschienen."
+  },
+  {
+    "id": "charakterbogen-alt",
+    "title": "Charakterbogen Valerius (alt)",
+    "url": "https://docs.google.com/document/d/1vQqOS_A4SpHRYBfs-JcA2wmxLxRo05TDsEC6TwddLTs/edit",
+    "kind": "doc",
+    "modified": "2025-11-02",
+    "status": "veraltet",
+    "group": "Charakter",
+    "summary": "Abgelöst durch den Optimiert-Bogen und dieses Grimoire. HP 28, Menschenkenntnis +0, Nebelschritt „immer vorbereitet“."
+  },
+  {
+    "id": "karte",
+    "title": "Karte wüste für Valerius.jpg",
+    "url": "https://drive.google.com/file/d/1KuJAFBkb_A3JkCF6Z4H4HugK9TJ7J9gD/view",
+    "kind": "bild",
+    "modified": "2025-10-28",
+    "status": "kanon",
+    "group": "Kampagne",
+    "local": "/karte",
+    "summary": "Die Echsen-Karte. Im Grimoire mit Markierungen."
+  },
+  {
+    "id": "portraet",
+    "title": "Floshem-Porträt (1791721883346.jpg)",
+    "url": "https://drive.google.com/file/d/1Z41KaAm1cRkiNQ0Mo-LT2THjZ2bGKMX6/view",
+    "kind": "bild",
+    "modified": "2026-10-12",
+    "status": "kanon",
+    "group": "Charakter",
+    "summary": "Valerius als Floshem, hochgeladen am 12.10.2026. Ersetzt das alte Porträt. Im Grimoire rund freigestellt."
+  },
+  {
+    "id": "aella-overview",
+    "title": "Aella Rayann Overview (Draka)",
+    "url": "https://docs.google.com/document/d/1SQZev924bjtDT_p_bWBY9eIquJsuKsa1XJsWorTmR5U/edit",
+    "kind": "doc",
+    "modified": "2025-11-15",
+    "status": "referenz",
+    "group": "Gefährtin",
+    "summary": "Handbuch der Gefährtin. Enthält Kampagnen-Ereignisse, die in deinen Dokumenten fehlen: Lisbeths Rettung auf See, das Verhör, die Seeelfen."
+  },
+  {
+    "id": "kho-bogen",
+    "title": "Charakterbogen Kho. (Draka, Stufe 4)",
+    "url": "https://docs.google.com/document/d/1ctDrPA8gP7gOZbRO14dmlKRlHk4kNhyaAaK8eifG114/edit",
+    "kind": "doc",
+    "modified": "2025-10-05",
+    "status": "veraltet",
+    "group": "Gefährtin",
+    "summary": "Älterer Bogen der Gefährtin (Stufe 4)."
+  }
+]

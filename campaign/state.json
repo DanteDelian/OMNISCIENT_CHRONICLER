@@ -1,0 +1,36 @@
+{
+  "hp": 36,
+  "tempHp": 0,
+  "deathSaves": {
+    "success": 0,
+    "fail": 0
+  },
+  "slotsUsed": {
+    "1": 0,
+    "2": 0,
+    "3": 0
+  },
+  "featureUsed": {
+    "sternenschritt": 0,
+    "arkane-erholung": 0,
+    "ohrring": 0
+  },
+  "hitDiceUsed": 0,
+  "inspiration": false,
+  "exhaustion": 0,
+  "conditions": [],
+  "concentration": null,
+  "shield": false,
+  "trance": {
+    "skill": "",
+    "tool": ""
+  },
+  "familiar": {
+    "form": "falke",
+    "present": true,
+    "hp": 1
+  },
+  "servant": false,
+  "minions": [],
+  "updatedAt": 0
+}

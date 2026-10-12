@@ -1,238 +1,115 @@
 <script lang="ts">
-	import './layout.css';
-	import '@fontsource/inter/400.css';
-	import '@fontsource/inter/500.css';
-	import '@fontsource/inter/600.css';
-	import '@fontsource/inter/700.css';
-	import '@fontsource-variable/fraunces';
-	import { onMount } from 'svelte';
-	import { ModeWatcher } from 'mode-watcher';
-	import { fade } from 'svelte/transition';
+	import '@fontsource-variable/geist';
+	import '@fontsource-variable/geist-mono';
+	import '@fontsource/instrument-serif';
+	import '@fontsource/instrument-serif/400-italic.css';
+	import '../app.css';
+	import { onMount, untrack } from 'svelte';
+	import { goto } from '$app/navigation';
 	import { page } from '$app/state';
-	import { navItems, featuredNav, NAV_GROUPS } from '$lib/nav';
-	import { character } from '$lib/stores/character.svelte';
+	import { Menu, X } from '@lucide/svelte';
+	import { fly, fade } from 'svelte/transition';
+	import { campaign } from '$lib/stores/campaign.svelte';
 	import { live } from '$lib/stores/live.svelte';
 	import { ui } from '$lib/stores/ui.svelte';
-	import { fx } from '$lib/stores/fx.svelte';
-	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
-	import QuickCapture from '$lib/components/QuickCapture.svelte';
-	import Toaster from '$lib/components/Toaster.svelte';
+	import { NAV } from '$lib/nav';
+	import Sidebar from '$lib/components/Sidebar.svelte';
 	import CommandPalette from '$lib/components/CommandPalette.svelte';
-	import RollOverlay from '$lib/components/RollOverlay.svelte';
-	import LevelUpOverlay from '$lib/components/LevelUpOverlay.svelte';
-	import Feather from '@lucide/svelte/icons/feather';
-	import Search from '@lucide/svelte/icons/search';
-	import Menu from '@lucide/svelte/icons/menu';
-	import X from '@lucide/svelte/icons/x';
+	import DiceTray from '$lib/components/DiceTray.svelte';
+	import Toasts from '$lib/components/Toasts.svelte';
+	import RefHover from '$lib/components/RefHover.svelte';
+	import RestDialog from '$lib/components/RestDialog.svelte';
+	import ConcentrationPrompt from '$lib/components/ConcentrationPrompt.svelte';
+	import SpellDrawer from '$lib/components/SpellDrawer.svelte';
 
-	let { children } = $props();
+	let { data, children } = $props();
+	let mobileNav = $state(false);
 
-	onMount(async () => {
-		ui.load();
-		if (!character.current) {
-			await character.refresh();
-		}
+	// Serverdaten übernehmen (beim ersten Laden und nach jeder Live-Änderung).
+	untrack(() => {
+		if (data.campaign) campaign.load(data.campaign);
+	});
+	$effect.pre(() => {
+		const next = data.campaign;
+		if (next) untrack(() => campaign.load(next));
+	});
+
+	onMount(() => {
 		live.start();
+		const flush = () => campaign.flushAll();
+		window.addEventListener('pagehide', flush);
+		return () => window.removeEventListener('pagehide', flush);
 	});
 
-	// Bei externer Datei-Änderung (z.B. Claude Code editiert campaign/character.json) live nachladen.
-	let lastRev = 0;
-	$effect(() => {
-		if (live.rev !== lastRev) {
-			lastRev = live.rev;
-			character.refresh();
-		}
-	});
-
-	function isActive(href: string): boolean {
-		const p = page.url.pathname;
-		return href === '/' ? p === '/' : p === href || p.startsWith(href + '/');
+	function typing(e: KeyboardEvent) {
+		const t = e.target as HTMLElement | null;
+		return !!t && (t.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(t.tagName));
 	}
 
-	const primary = navItems.filter((i) => i.primary);
-	const secondary = navItems.filter((i) => !i.primary);
-	const FeaturedIcon = featuredNav.icon;
-
-	// „Mehr"-Sheet bei Navigation schließen
-	$effect(() => {
-		void page.url.pathname;
-		ui.moreOpen = false;
-	});
+	function onkey(e: KeyboardEvent) {
+		if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+			e.preventDefault();
+			ui.palette = !ui.palette;
+			return;
+		}
+		if (typing(e) || e.metaKey || e.ctrlKey || e.altKey) return;
+		if (e.key === '/') {
+			e.preventDefault();
+			ui.palette = true;
+		} else if (e.key.toLowerCase() === 'd') {
+			ui.dice = !ui.dice;
+		} else if (e.key === 'Escape') {
+			ui.dice = false;
+			ui.spellDrawer = null;
+		} else if (/^[0-9]$/.test(e.key)) {
+			const item = NAV.flatMap((g) => g.items).find((i) => i.key === e.key);
+			if (item) goto(item.href);
+		}
+	}
 </script>
 
-<ModeWatcher defaultMode="dark" />
+<svelte:window onkeydown={onkey} />
 
-<div class="oc-atmos" aria-hidden="true"></div>
-<div class="vignette" aria-hidden="true"></div>
+{#if !data.campaign}
+	<div class="starfield"></div>
+	{@render children()}
+{:else if campaign.data}
+	<div class="starfield"></div>
+	<div class="relative z-10 flex min-h-dvh">
+		<aside class="no-print sticky top-0 hidden h-dvh w-[248px] shrink-0 border-r border-line bg-bg/60 backdrop-blur-xl lg:block">
+			<Sidebar />
+		</aside>
 
-<div class="relative z-10 flex min-h-dvh flex-col md:flex-row">
-	<!-- Desktop-/Tablet-Sidebar -->
-	<aside
-		class="sticky top-0 z-30 hidden h-dvh w-60 shrink-0 flex-col border-r border-border bg-surface/70 px-3 py-4 backdrop-blur md:flex lg:w-64"
-	>
-		<a href="/" class="mb-6 flex items-center gap-2 px-2">
-			<span class="grid h-9 w-9 place-items-center rounded-xl bg-primary text-primary-fg">
-				<Feather class="h-5 w-5" />
-			</span>
-			<span class="font-display text-lg font-bold leading-tight">
-				Omniscient<br /><span class="text-muted">Chronicler</span>
-			</span>
-		</a>
-
-		<button
-			class="mb-3 flex items-center gap-2 rounded-xl border border-border bg-surface2/60 px-3 py-2 text-sm text-muted transition hover:border-primary/40 hover:text-ink"
-			onclick={() => (ui.paletteOpen = true)}
-		>
-			<Search class="h-4 w-4" />
-			<span class="flex-1 text-left">Suchen…</span>
-			<kbd class="rounded bg-surface px-1.5 py-0.5 text-[10px]">⌘K</kbd>
-		</button>
-
-		<a
-			href={featuredNav.href}
-			class="mb-4 flex items-center gap-2.5 rounded-xl border px-3 py-2.5 text-sm font-semibold transition
-				{isActive(featuredNav.href)
-				? 'border-primary/60 bg-primary/20 text-ink'
-				: 'border-primary/35 bg-primary/10 text-ink hover:bg-primary/[0.16]'}"
-		>
-			<FeaturedIcon class="h-5 w-5 text-primary" />
-			{featuredNav.label}
-		</a>
-
-		<nav class="flex flex-1 flex-col gap-4 overflow-y-auto pb-2">
-			{#each NAV_GROUPS as g (g)}
-				<div>
-					<span class="mb-1 block px-3 text-[0.62rem] font-semibold uppercase tracking-[0.16em] text-muted/60">{g}</span>
-					<div class="flex flex-col gap-0.5">
-						{#each navItems.filter((i) => i.group === g) as item (item.href)}
-							{@const Icon = item.icon}
-							<a
-								href={item.href}
-								class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition
-									{isActive(item.href)
-									? 'bg-primary/15 text-ink'
-									: 'text-muted hover:bg-surface2 hover:text-ink'}"
-							>
-								<Icon class="h-[18px] w-[18px] {isActive(item.href) ? 'text-primary' : ''}" />
-								{item.label}
-							</a>
-						{/each}
-					</div>
-				</div>
-			{/each}
-		</nav>
-
-		<div class="mt-2 flex items-center justify-between px-1">
-			<span class="text-xs text-muted">v3 · lokal</span>
-			<ThemeToggle />
+		<!-- Mobile Kopfzeile -->
+		<div class="no-print fixed inset-x-0 top-0 z-30 flex h-14 items-center justify-between border-b border-line bg-bg/80 px-4 backdrop-blur-xl lg:hidden">
+			<button class="icon-btn" onclick={() => (mobileNav = true)} aria-label="Menü"><Menu size={20} /></button>
+			<span class="title-display text-xl">Valerius</span>
+			<img src="/api/assets/{campaign.data.character.avatar ?? campaign.data.character.portrait}" alt="" class="h-8 w-8 rounded-full" />
 		</div>
-	</aside>
-
-	<!-- Mobile-Topbar -->
-	<header
-		class="sticky top-0 z-30 flex items-center justify-between border-b border-border bg-surface/80 px-4 py-3 backdrop-blur md:hidden"
-	>
-		<a href="/" class="flex items-center gap-2">
-			<span class="grid h-8 w-8 place-items-center rounded-lg bg-primary text-primary-fg">
-				<Feather class="h-4 w-4" />
-			</span>
-			<span class="font-display text-base font-bold">Chronicler</span>
-		</a>
-		<div class="flex items-center gap-1">
-			<button
-				class="btn btn-icon btn-ghost"
-				onclick={() => (ui.paletteOpen = true)}
-				aria-label="Suchen"
-			>
-				<Search class="h-5 w-5" />
-			</button>
-			<ThemeToggle />
-		</div>
-	</header>
-
-	<!-- Hauptinhalt -->
-	<main class="mx-auto w-full max-w-6xl flex-1 px-4 py-5 pb-24 sm:px-6 md:pb-8">
-		{#key page.url.pathname}
-			<div in:fade={{ duration: 160 }}>
-				{@render children()}
-			</div>
-		{/key}
-	</main>
-
-	<!-- Mobile-Bottom-Nav -->
-	<nav
-		class="fixed inset-x-0 bottom-0 z-30 flex items-stretch justify-around border-t border-border bg-surface/90 backdrop-blur md:hidden"
-		style="padding-bottom: env(safe-area-inset-bottom)"
-	>
-		{#each primary as item (item.href)}
-			{@const Icon = item.icon}
-			<a
-				href={item.href}
-				class="flex min-h-12 flex-1 flex-col items-center justify-center gap-1 py-2 text-[11px] font-medium transition
-					{isActive(item.href) ? 'text-primary' : 'text-muted'}"
-			>
-				<Icon class="h-5 w-5" />
-				{item.label}
-			</a>
-		{/each}
-		<button
-			class="flex min-h-12 flex-1 flex-col items-center justify-center gap-1 py-2 text-[11px] font-medium transition
-				{ui.moreOpen ? 'text-primary' : 'text-muted'}"
-			onclick={() => (ui.moreOpen = !ui.moreOpen)}
-		>
-			<Menu class="h-5 w-5" />
-			Mehr
-		</button>
-	</nav>
-
-	<!-- Mobiles „Mehr"-Sheet -->
-	{#if ui.moreOpen}
-		<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions -->
-		<div
-			class="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm md:hidden"
-			onclick={(e) => e.target === e.currentTarget && (ui.moreOpen = false)}
-		>
-			<div
-				class="absolute inset-x-0 bottom-0 rounded-t-3xl border-t border-border bg-surface p-4 pb-24"
-				style="padding-bottom: calc(6rem + env(safe-area-inset-bottom))"
-			>
-				<div class="mb-3 flex items-center justify-between">
-					<span class="panel-title">Weitere Seiten</span>
-					<button class="btn btn-icon btn-ghost" onclick={() => (ui.moreOpen = false)} aria-label="Schließen">
-						<X class="h-5 w-5" />
-					</button>
-				</div>
-				<a
-					href={featuredNav.href}
-					class="mb-2 flex items-center gap-3 rounded-xl border border-primary/40 bg-primary/12 px-4 py-3 text-sm font-semibold {isActive(featuredNav.href) ? 'text-primary' : ''}"
-				>
-					<FeaturedIcon class="h-5 w-5 text-primary" />
-					{featuredNav.label}
-				</a>
-				<div class="grid grid-cols-2 gap-2">
-					{#each secondary as item (item.href)}
-						{@const Icon = item.icon}
-						<a
-							href={item.href}
-							class="flex min-h-12 items-center gap-3 rounded-xl border border-border bg-surface2 px-4 py-3 text-sm font-medium
-								{isActive(item.href) ? 'border-primary/50 text-primary' : ''}"
-						>
-							<Icon class="h-5 w-5" />
-							{item.label}
-						</a>
-					{/each}
+		{#if mobileNav}
+			<div class="fixed inset-0 z-50 lg:hidden">
+				<button class="absolute inset-0 bg-black/60" aria-label="Schließen" onclick={() => (mobileNav = false)} transition:fade={{ duration: 120 }}></button>
+				<div class="absolute inset-y-0 left-0 w-[280px] border-r border-line bg-bg" transition:fly={{ x: -280, duration: 180 }}>
+					<button class="icon-btn absolute top-3 right-3" onclick={() => (mobileNav = false)} aria-label="Schließen"><X size={18} /></button>
+					<Sidebar onnavigate={() => (mobileNav = false)} />
 				</div>
 			</div>
-		</div>
-	{/if}
-</div>
+		{/if}
 
-<!-- Globale Effekt-Ebenen -->
-{#if fx.edge}
-	<div class="fx-edge fx-{fx.edge}" aria-hidden="true"></div>
+		<main class="min-w-0 flex-1 px-4 pt-20 pb-24 sm:px-6 lg:px-8 lg:pt-7">
+			{#key page.url.pathname}
+				<div class="rise mx-auto max-w-[1520px]">
+					{@render children()}
+				</div>
+			{/key}
+		</main>
+	</div>
+
+	<CommandPalette />
+	<DiceTray />
+	<Toasts />
+	<RefHover />
+	<RestDialog />
+	<ConcentrationPrompt />
+	<SpellDrawer />
 {/if}
-<QuickCapture />
-<Toaster />
-<CommandPalette />
-<RollOverlay />
-<LevelUpOverlay />
