@@ -17,5 +17,5 @@ summary: Uniformierte Magier, die alle Echsenmenschen ausrotten wollen. Ihr Anf�
 
 ## Der Anführer
 - Ein **Elf mit schuppenartiger Hautflechte**. Er beschwor zwei geflügelte Echsenkreaturen und teleportierte sich nach deren Niederlage **unsichtbar** davon. Seinen Bossraum, eine Magmakammer, hatte er schon geplündert.
-- *Theorie:* Drakas Notiz „komischer humanoider Echsentyp, sehr androgyn, kann Teufel beschwören (?)“ könnte dieselbe Person meinen.
+- *Theorie:* Aellas Notiz „komischer humanoider Echsentyp, sehr androgyn, kann Teufel beschwören (?)“ könnte dieselbe Person meinen.
 - *Gegenzauber* ist Valerius' Antwort, auch gegen die Flucht per Teleport.

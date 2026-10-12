@@ -20,7 +20,7 @@ Dank Küstenlage und eigener Schiffe wirkte die Familie an der **ersten Expediti
 | [[Leon Lhaaz]] | Sohn des Grafen, Anführer der Siedlung |
 | [[Lula Lhaaz]] | Tochter des Grafen, Geisel eines Echsen-Clans |
 
-**Familienkonflikt:** Der Graf ließ über die [[Zaffera-Syndikat|Zafferas]] Söldner anheuern, die Lisbeth beseitigen sollten. Der Anschlag scheiterte: Valerius und Draka haben sie gerettet.
+**Familienkonflikt:** Der Graf ließ über die [[Zaffera-Syndikat|Zafferas]] Söldner anheuern, die Lisbeth beseitigen sollten. Der Anschlag scheiterte: Valerius und Aella haben sie gerettet.
 
 **Schiffskarawanen:** Die Lhaaz-Schiffskarawanen sind die einzige Verbindung zurück in die alte Welt.
 

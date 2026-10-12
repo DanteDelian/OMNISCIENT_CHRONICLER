@@ -15,4 +15,4 @@ summary: Die junge Lhaaz-Stadt flussaufwärts mit Turm, Festung und Valerius' Ha
 - **Die Festung:** sozialer und politischer Mittelpunkt. Hier wirken die [[Kontakte der Festung|Kräuterfrau und andere Kontakte]].
 - **Das zugewiesene Haus:** mit Baustelle. Darunter soll Valerius' **geheimes Kellerlabor** entstehen. Daneben lagert der untote Kadaver.
 - [[Nitas Tempel]]: der Ort für Verhandlungen.
-- Draka beschreibt sie als „raues, unfertiges Stück Zivilisation am Rande der Wildnis“.
+- Aella beschreibt sie als „raues, unfertiges Stück Zivilisation am Rande der Wildnis“.

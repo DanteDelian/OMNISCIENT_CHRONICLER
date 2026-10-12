@@ -11,7 +11,7 @@ gebaut und auch auf Tablet und Handy nutzbar.
 | **Spieltisch** | TP mit Schaden und Heilen, temporäre TP, Todesrettung · Zauberplätze und Kräfte zum Abhaken · „Was kann ich tun?“ nach Aktion, Bonusaktion und Reaktion · Wirken verbraucht Plätze und setzt Konzentration · Konzentrationsprobe erscheint automatisch nach Schaden · Proben und Rettungswürfe per Klick · Zustände mit Regeltext · Gefolge · Lage und Schnellnotiz |
 | **Charakterbogen** | Alle Werte, Fertigkeiten mit Herkunft der Übung, Angriffe, Merkmale, Astrale Trance. Druckbar |
 | **Zauberbuch** | Vollständige Regeltexte, deine Werte, Trefferrechner, Tipps, Einsatzideen, Synergien und Konflikte, Korrekturen mit Quelle. Vorbereitung (x/9), freie Plätze, Vorschläge |
-| **Gefolge** | Untote mit Live-TP und 24-Stunden-Kontrolle, alle Vertrauten-Gestalten, Unsichtbarer Diener, Draka |
+| **Gefolge** | Untote mit Live-TP und 24-Stunden-Kontrolle, alle Vertrauten-Gestalten, Unsichtbarer Diener, Aella, Dschungel-Plan für den nächsten Vertrauten |
 | **Inventar** | Geldbeutel mit Wechseln, Gegenstände (Heiltrank trinken heilt direkt), Wunschliste mit „leistbar“ |
 | **Journal** | Datierte Chronik mit Orten, Personen, Beute, Gegnern, Quest-Änderungen, Widersprüchen und Quellen |
 | **Quests** | Dringend, aktiv, Gerüchte, erledigt, gescheitert, jeweils mit Verlauf aus dem Journal |

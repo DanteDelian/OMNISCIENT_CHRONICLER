@@ -6,7 +6,7 @@
 	import Pips from '$lib/components/Pips.svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { toggleSlot } from '$lib/game';
-	import { fmtMod, preparedCount, slotTotals, slotsLeft, spellAttack, spellDc } from '$lib/rules';
+	import { cantripsKnown, fmtMod, preparedCount, slotTotals, slotsLeft, spellAttack, spellDc, wizardPicks } from '$lib/rules';
 	import { normalizeName as normalize } from '$lib/refs';
 
 	type Filter = 'alle' | 'vorbereitet' | 'ritual' | 'konzentration' | 'reaktion';
@@ -21,7 +21,20 @@
 	const proposals = $derived(all.filter((x) => x.status === 'vorschlag'));
 	const prepared = $derived(preparedCount(all));
 	const leveledInBook = $derived(book.filter((x) => x.level > 0).length);
-	const rulesTotal = $derived(6 + 2 * (c.level - 1));
+	const cantripCount = $derived(book.filter((x) => x.level === 0).length);
+	const cantripMax = $derived(cantripsKnown(c.level));
+	const picks = $derived(wizardPicks(c.level, book.filter((x) => x.level > 0).map((x) => x.level)));
+	const rulesTotal = $derived(picks.reduce((sum, g) => sum + g.total, 0));
+	const freePicks = $derived(picks.filter((g) => g.used < g.total));
+	const freeTotal = $derived(rulesTotal - picks.reduce((sum, g) => sum + g.used, 0));
+
+	/** Auf welchen Stufen gab es die Zauber dieser Gruppe? */
+	function pickLevels(maxGrade: number): string {
+		const first = 2 * maxGrade - 1;
+		const last = maxGrade === 9 ? c.level : Math.min(c.level, 2 * maxGrade);
+		if (first === last) return `Stufe ${first}`;
+		return last - first === 1 ? `Stufen ${first} und ${last}` : `Stufen ${first} bis ${last}`;
+	}
 
 	const visible = $derived(
 		[...book, ...unclear].filter((sp) => {
@@ -82,7 +95,7 @@
 	<div class="panel p-4">
 		<div class="eyebrow">Im Buch</div>
 		<div class="num mt-1 text-3xl font-semibold">{leveledInBook}<span class="text-ink-3">/{rulesTotal}</span></div>
-		<div class="text-xs text-ink-3">Zauber ab Grad 1 · laut Regeln {rulesTotal} bis Stufe {c.level}</div>
+		<div class="text-xs text-ink-3">Zauber ab Grad 1 · {freeTotal} frei · dazu {cantripCount}/{cantripMax} Zaubertricks</div>
 	</div>
 </div>
 
@@ -119,18 +132,39 @@
 			<div class="mb-2 flex items-center gap-2"><BookOpen size={18} class="text-astral" /><h2 class="title-display text-3xl">Freie Plätze im Zauberbuch</h2></div>
 			<p class="text-sm leading-relaxed text-ink-2">
 				Ein Magier startet mit <b class="text-ink">6</b> Zaubern und erhält bei jedem Stufenaufstieg <b class="text-ink">2</b> kostenlos, bis Stufe {c.level} also
-				<b class="text-ink">{rulesTotal}</b>. In deinem Buch stehen <b class="text-ink">{leveledInBook}</b>, dazu fraglich Nebelschritt.
+				<b class="text-ink">{rulesTotal}</b>. In deinem Buch stehen <b class="text-ink">{leveledInBook}</b>.
 			</p>
 			<p class="mt-2 text-sm leading-relaxed text-ink-2">
-				Damit fehlen <b class="text-ink">{rulesTotal - leveledInBook - 1} bis {rulesTotal - leveledInBook}</b> Zauber: zwei bis Grad 1 (Aufstieg auf Stufe 2) und ein
-				bis zwei bis Grad 2 (Stufen 3 und 4). Bitte mit dem DM klären, ob sie nie gewählt wurden.
+				{#if freeTotal > 0}
+					Damit sind <b class="text-ink">{freeTotal}</b> Einträge frei:
+					{#each freePicks as g, i (g.maxGrade)}{i > 0 ? (i === freePicks.length - 1 ? ' und ' : ', ') : ''}<b class="text-ink">{g.total - g.used}</b> bis Grad {g.maxGrade}{/each}.
+				{:else}
+					Alle kostenlosen Einträge sind belegt.
+				{/if}
+				{#if cantripCount < cantripMax}
+					Dazu kommt <b class="text-ink">{cantripMax - cantripCount}</b> Zaubertrick: Ein Magier der Stufe {c.level} kennt {cantripMax}, du hast {cantripCount}.
+				{/if}
+				Bitte mit dem DM klären, ob diese Plätze nie gewählt wurden.
 			</p>
 		</div>
 		<div class="grid min-w-[260px] flex-1 grid-cols-2 gap-2 text-sm">
-			<div class="sunken p-3"><div class="num text-xl font-semibold">6 + 2</div><div class="text-xs text-ink-3">Grad 1 (Stufe 1 und 2)</div></div>
-			<div class="sunken p-3"><div class="num text-xl font-semibold">2 + 2</div><div class="text-xs text-ink-3">bis Grad 2 (Stufen 3 und 4)</div></div>
-			<div class="sunken p-3"><div class="num text-xl font-semibold">2</div><div class="text-xs text-ink-3">bis Grad 3 (Stufe 5): Tote erwecken, Gegenzauber</div></div>
-			<div class="sunken p-3"><div class="num text-xl font-semibold">+∞</div><div class="text-xs text-ink-3">Abschreiben: 50 GM und 2 Std. pro Grad, Beschwörung halb</div></div>
+			{#each picks as g (g.maxGrade)}
+				<div class="sunken p-3">
+					<div class="flex items-baseline justify-between gap-2">
+						<span class="num text-xl font-semibold">{g.used}<span class="text-ink-3">/{g.total}</span></span>
+						{#if g.used < g.total}<span class="badge" style="--c: var(--color-life)">{g.total - g.used} frei</span>{/if}
+					</div>
+					<div class="text-xs text-ink-3">bis Grad {g.maxGrade} · {pickLevels(g.maxGrade)}</div>
+				</div>
+			{/each}
+			<div class="sunken p-3">
+				<div class="flex items-baseline justify-between gap-2">
+					<span class="num text-xl font-semibold">{cantripCount}<span class="text-ink-3">/{cantripMax}</span></span>
+					{#if cantripCount < cantripMax}<span class="badge" style="--c: var(--color-life)">{cantripMax - cantripCount} frei</span>{/if}
+				</div>
+				<div class="text-xs text-ink-3">Zaubertricks · 4. ab Stufe 4</div>
+			</div>
+			<div class="sunken col-span-2 p-3"><div class="num text-xl font-semibold">+∞</div><div class="text-xs text-ink-3">Abschreiben aus Rollen und Büchern: 50 GM und 2 Std. pro Grad, als Beschwörer bei Beschwörungszaubern die Hälfte</div></div>
 		</div>
 	</div>
 

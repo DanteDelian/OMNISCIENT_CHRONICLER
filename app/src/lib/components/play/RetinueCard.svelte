@@ -6,7 +6,7 @@
 	const s = $derived(campaign.data.state);
 	const cr = $derived(campaign.data.creatures);
 	const familiar = $derived(cr.familiars.find((f) => f.id === s.familiar.form) ?? cr.familiars[0]);
-	const draka = $derived(cr.party[0]);
+	const partner = $derived(cr.party[0]);
 
 	function minionHp(id: string, delta: number) {
 		campaign.change('state', (st) => {
@@ -87,12 +87,12 @@
 		</p>
 	{/if}
 
-	{#if draka}
-		<a href="/welt/draka-stormscale" data-ref="world:draka-stormscale" class="mt-4 flex items-center gap-3 rounded-xl border border-line bg-white/[0.02] p-3 transition hover:border-white/15">
-			<div class="grid h-9 w-9 place-items-center rounded-lg bg-gold/10 text-sm font-semibold text-gold">D</div>
+	{#if partner}
+		<a href="/welt/aella-rayann" data-ref="world:aella-rayann" class="mt-4 flex items-center gap-3 rounded-xl border border-line bg-white/[0.02] p-3 transition hover:border-white/15">
+			<div class="grid h-9 w-9 place-items-center rounded-lg bg-gold/10 text-sm font-semibold text-gold">{partner.name.charAt(0)}</div>
 			<div class="min-w-0 flex-1">
-				<div class="text-sm font-medium">Draka „Khoraa“</div>
-				<div class="truncate text-xs text-ink-3">RK {draka.ac} · {draka.hp} TP · {draka.speed}</div>
+				<div class="text-sm font-medium">Aella „Khoraa“</div>
+				<div class="truncate text-xs text-ink-3">RK {partner.ac} · {partner.hp} TP · {partner.speed}</div>
 			</div>
 		</a>
 	{/if}

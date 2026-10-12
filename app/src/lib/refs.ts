@@ -13,7 +13,7 @@ export function normalizeName(s: string): string {
 		.trim();
 }
 
-/** „Draka „Khoraa“ Stormscale“ → „Draka Stormscale“ */
+/** „Aella Rayann „Khoraa“ Stormscale“ → „Aella Rayann Stormscale“ */
 function withoutNick(s: string): string {
 	return s.replace(/\s*[„"“][^„"“”]*[“”"]\s*/g, ' ').replace(/\s+/g, ' ').trim();
 }

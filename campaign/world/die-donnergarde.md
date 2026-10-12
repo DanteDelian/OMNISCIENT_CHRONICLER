@@ -13,7 +13,7 @@ summary: Die gestohlenen Tarnidentitäten Khoraa und Floshem.
 
 | Identität | Getragen von | Laut Cams Brief |
 | :-- | :-- | :-- |
-| **Khoraa**, die wandernde Dragonborn-Ritterin | [[Draka Stormscale|Draka]] | Rittertitel für die Rettung eines Dorfes vor einer Goblinhorde. Tut Gutes, bekannt für ihre zurückhaltende, ruhige Art |
+| **Khoraa**, die wandernde Dragonborn-Ritterin | [[Aella Rayann|Aella]] | Rittertitel für die Rettung eines Dorfes vor einer Goblinhorde. Tut Gutes, bekannt für ihre zurückhaltende, ruhige Art |
 | **Floshem, die Unsichtbare Hand** | Valerius | Waldelf-Magier, charismatisch, laut und aufsehenerregend. Zieht mit magischen Händen und Dienern jedes Gasthaus in seinen Bann |
 
 - Arrangiert von [[Cam Buckland]]: „Die meisten Nicht-Elfen können euch eh kaum auseinanderhalten … zieh dir die Kapuze ins Gesicht.“

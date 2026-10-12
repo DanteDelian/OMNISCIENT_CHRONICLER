@@ -7,7 +7,10 @@
     "kind": "Bedrohung",
     "next": "Vor Ankunft der nächsten Lhaaz-Schiffskarawane eine neue Tarnung oder einen neuen Plan haben.",
     "notes": "Der Maskierte Mönchsmeister hat die versteckten Leichen der echten Donnergarde gefunden. Der Schwindel ist öffentlich. Bausteine: 3 Society-Uniformen, Verkleidungsausrüstung (25 GM), *Selbstverkleidung* als möglicher Zauber.",
-    "links": ["Die Donnergarde", "Maskierter Mönchsmeister"]
+    "links": [
+      "Die Donnergarde",
+      "Maskierter Mönchsmeister"
+    ]
   },
   {
     "id": "lisbeth",
@@ -16,8 +19,12 @@
     "urgent": true,
     "kind": "Bedrohung",
     "next": "Einen Umgang mit Lisbeth finden, bevor die nächste Karawane die Nachricht vom Tod der echten Donnergarde bringt.",
-    "notes": "**Korrigiert:** Lisbeth lebt. Ihr habt sie aus dem Schiff gerettet, das von der eigenen Eskorte angegriffen wurde. Danach hat sie euch ins Kreuzverhör genommen und hält euch für Hochstapler. Aus Dankbarkeit lässt sie es vorerst ruhen. Cams Warnung, ihr Schiff werde nie ankommen, kam zu spät (vom DM bestätigt). Hebel: Graf Lhaaz hat über die Zafferas ihren Tod bestellt.",
-    "links": ["Lisbeth Lhaaz", "Graf Lhaaz", "Cam Buckland"]
+    "notes": "**Korrigiert:** Lisbeth lebt. Ihr habt sie aus dem Schiff gerettet, das von der eigenen Eskorte angegriffen wurde. Danach hat sie euch ins Kreuzverhör genommen und hält euch für Hochstapler. Aus Dankbarkeit lässt sie es vorerst ruhen. Cams Warnung, ihr Schiff werde nie ankommen, kam zu spät (vom DM bestätigt, von dir am 12.10.2026 noch einmal bestätigt). Hebel: Graf Lhaaz hat über die Zafferas ihren Tod bestellt.",
+    "links": [
+      "Lisbeth Lhaaz",
+      "Graf Lhaaz",
+      "Cam Buckland"
+    ]
   },
   {
     "id": "boot-abfangen",
@@ -38,7 +45,11 @@
     "kind": "Auftrag",
     "next": "Zum Dschinn zurückkehren und erzählen, was ihr unter Wasser gesehen habt. Danach die Ohrring-Verhandlung eröffnen (Plan A: Himmlische Entführung, Plan B: untoter Offizier).",
     "reward": "Verhandlungsziele: Nimmervoller Beutel, Perle der Macht, Schutzgegenstände",
-    "links": ["Saladin", "Der Magische Turm", "Einkaufs- und Verhandlungsliste"]
+    "links": [
+      "Saladin",
+      "Der Magische Turm",
+      "Einkaufs- und Verhandlungsliste"
+    ]
   },
   {
     "id": "lula",
@@ -49,7 +60,11 @@
     "kind": "Auftrag",
     "next": "Einen Weg zum Echsen-Clan finden, der Lula festhält: Verhandlung (Nitas Tempel hebt Sprachbarrieren auf) oder Befreiung.",
     "reward": "Gunst des Hauses Lhaaz, Ehre der Donnergarde",
-    "links": ["Lula Lhaaz", "Die Echsen-Allianz", "Nitas Tempel"]
+    "links": [
+      "Lula Lhaaz",
+      "Die Echsen-Allianz",
+      "Nitas Tempel"
+    ]
   },
   {
     "id": "schutz-lhaaz",
@@ -58,7 +73,10 @@
     "status": "aktiv",
     "kind": "Auftrag",
     "next": "Die Kinder des Grafen schützen, bis die neue Stadt steht. Kompliziert, seit die Tarnung aufgeflogen ist.",
-    "links": ["Leon Lhaaz", "Die Siedlung"]
+    "links": [
+      "Leon Lhaaz",
+      "Die Siedlung"
+    ]
   },
   {
     "id": "kraeuterfrau",
@@ -69,7 +87,10 @@
     "next": "Die 10 unbekannten Kräuter identifizieren. Damit beginnt die Alchemie-Lehre.",
     "reward": "Alchemie-Ausbildung, Zugang zu Rezepten",
     "notes": "Blocker: Alchemistenwerkzeug (50 GM).",
-    "links": ["Kontakte der Festung", "Alchemie-Kompendium"]
+    "links": [
+      "Kontakte der Festung",
+      "Alchemie-Kompendium"
+    ]
   },
   {
     "id": "heiltraenke",
@@ -78,7 +99,9 @@
     "kind": "Projekt",
     "next": "Herstellung mit dem DM klären. Laut Xanathars: Kräuterkundeausrüstung, 1 Tag pro Trank.",
     "reward": "3 × Heiltrank (2W4 + 2)",
-    "links": ["Alchemie-Kompendium"]
+    "links": [
+      "Alchemie-Kompendium"
+    ]
   },
   {
     "id": "skelette",
@@ -88,7 +111,22 @@
     "next": "Zum Schlachtfeld (Echsen-Karte, gekreuzte Schwerter) reisen und aus humanoiden Knochen die ersten Skelette erschaffen.",
     "reward": "Loyales Gefolge ohne Verratsrisiko",
     "notes": "Nur Überreste kleiner oder mittelgroßer Humanoider funktionieren. Aus Knochen werden Skelette, aus Leichen Zombies.",
-    "links": ["Schlachtfeld im Südosten", "Taktik-Handbuch"]
+    "links": [
+      "Schlachtfeld im Südosten",
+      "Taktik-Handbuch"
+    ]
+  },
+  {
+    "id": "vertrauter-dschungel",
+    "title": "Ein neuer Vertrauter für den Dschungel",
+    "status": "aktiv",
+    "kind": "Projekt",
+    "next": "In der nächsten Session neu beschwören (als Ritual 1 Stunde 10 Minuten, 10 GM). Vorher mit dem DM klären, ob ein Tukan oder Papagei mit den Werten des Raben geht.",
+    "notes": "Aktuell: Eule, davor Falke. Gesucht ist eine Gestalt, die im Dschungel nicht auffällt. Optionen mit Vor- und Nachteilen stehen auf der Seite **Gefolge**.",
+    "links": [
+      "Vertrauten finden",
+      "Gefolge"
+    ]
   },
   {
     "id": "kellerlabor",
@@ -96,7 +134,9 @@
     "status": "aktiv",
     "kind": "Projekt",
     "next": "Den Keller unter dem zugewiesenen Haus ausbauen, für Alchemie und diskrete Operationen.",
-    "links": ["Die Siedlung"]
+    "links": [
+      "Die Siedlung"
+    ]
   },
   {
     "id": "organisation",
@@ -105,7 +145,10 @@
     "kind": "Lebensziel",
     "next": "Langfristig eine eigene Machtbasis in Xantus aufbauen. Rekrutieren später in der südlichen Freistadt.",
     "reward": "Ein Imperium",
-    "links": ["Backstory", "Die südliche Freistadt"]
+    "links": [
+      "Backstory",
+      "Die südliche Freistadt"
+    ]
   },
   {
     "id": "zwei-seelen",
@@ -113,9 +156,13 @@
     "giver": "Crush Lu",
     "status": "aktiv",
     "kind": "Mysterium",
-    "next": "Herausfinden, warum Crush Lu „zwei Seelen“ in Tayas Körper spürte.",
-    "notes": "Widerspruch in den Notizen: Dein Kampagnen-Log sagt, die Wiederbelebung **scheiterte** (Schleimbert kam zurück). Drakas Notizen sagen „Taya wiederbeleben ✔“ und „Crush Lu, die Taya wiederbelebt hat“. Bitte klären.",
-    "links": ["Taya", "Crush Lu", "Schleimbert"]
+    "next": "Herausfinden, was die „zwei Seelen“ bedeuten, die Crush Lu bei Taya gespürt hat, und was Schleimbert jetzt ist.",
+    "notes": "**Geklärt (12.10.2026):** Aellas Notizen sind aktueller als dein Log. Danach hat Crush Lu Taya wiederbelebt („Taya wiederbeleben ✔“). Offen bleibt, was die „zwei Seelen“ bedeuten. Kontext von dir folgt.",
+    "links": [
+      "Taya",
+      "Crush Lu",
+      "Schleimbert"
+    ]
   },
   {
     "id": "botschaft-rolle",
@@ -123,7 +170,9 @@
     "status": "aktiv",
     "kind": "Rache",
     "next": "Den diebischen roten Echsenkrieger finden. Rückholen oder Vergeltung.",
-    "links": ["Der rote Echsen-Clan"]
+    "links": [
+      "Der rote Echsen-Clan"
+    ]
   },
   {
     "id": "teufelsjaeger",
@@ -132,7 +181,9 @@
     "kind": "Mysterium",
     "next": "Wer sind die Teufelsjäger, und warum ist ihre Nummer 2 hier?",
     "notes": "Handschriftliche Notiz im Kampagnen-Log: „die Nummer 2 der Teufelsjäger gesichtet“. Sonst nichts bekannt.",
-    "links": ["Die Nummer 2 der Teufelsjäger"]
+    "links": [
+      "Die Nummer 2 der Teufelsjäger"
+    ]
   },
   {
     "id": "gefahrenzonen",
@@ -140,7 +191,9 @@
     "status": "geruecht",
     "kind": "Erkundung",
     "next": "Die X-Markierungen im Osten und an der Nordroute aufklären. Die Art der Gefahr ist unbekannt.",
-    "links": ["Wüstenkarte"]
+    "links": [
+      "Wüstenkarte"
+    ]
   },
   {
     "id": "bestien",
@@ -148,7 +201,10 @@
     "status": "geruecht",
     "kind": "Erkundung",
     "next": "Die auf der Echsen-Karte markierten Bestien jagen (Raubkatzen, Flugechse). Organe und Häute als Katalysatoren.",
-    "links": ["Wüstenkarte", "Alchemie-Kompendium"]
+    "links": [
+      "Wüstenkarte",
+      "Alchemie-Kompendium"
+    ]
   },
   {
     "id": "norden",
@@ -156,7 +212,9 @@
     "status": "geruecht",
     "kind": "Erkundung",
     "next": "Die Herkunftsrichtung des Hügelriesen erkunden (aufgeschoben).",
-    "links": ["Wüstental im Westen"]
+    "links": [
+      "Wüstental im Westen"
+    ]
   },
   {
     "id": "zuflucht",
@@ -166,8 +224,11 @@
     "kind": "Auftrag",
     "next": "",
     "reward": "2 Heiltränke, Heilkräuter für 3 Tränke, Dank des roten Clans",
-    "notes": "Das Höhlensystem am Hügelberg wurde von der Sorcerer Society befreit. Der Anführer entkam unsichtbar per Teleport. Laut Drakas Notizen sind nur noch wenige Eier des Clans übrig, die Höhle ist aber wieder bewohnbar.",
-    "links": ["Hügelberg und Zuflucht", "Sorcerer Society"]
+    "notes": "Das Höhlensystem am Hügelberg wurde von der Sorcerer Society befreit. Der Anführer entkam unsichtbar per Teleport. Laut Aellas Notizen sind nur noch wenige Eier des Clans übrig, die Höhle ist aber wieder bewohnbar.",
+    "links": [
+      "Hügelberg und Zuflucht",
+      "Sorcerer Society"
+    ]
   },
   {
     "id": "ohrringe",
@@ -183,7 +244,9 @@
     "status": "erledigt",
     "kind": "Projekt",
     "reward": "Spionagekarte entschlüsselt: Lhaaz-Turm als Ziel, Schlachtfeld im Südosten, Bestien-Lager, Gefahrenzonen",
-    "links": ["Wüstenkarte"]
+    "links": [
+      "Wüstenkarte"
+    ]
   },
   {
     "id": "rekrutierung-echsen",
@@ -191,6 +254,8 @@
     "status": "gescheitert",
     "kind": "Plan",
     "notes": "Die ersten beiden Krieger sind geflohen, einer der neuen hat dich bestohlen. Als persönliche Gefolgschaft derzeit unzuverlässig.",
-    "links": ["Der rote Echsen-Clan"]
+    "links": [
+      "Der rote Echsen-Clan"
+    ]
   }
 ]

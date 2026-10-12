@@ -8,4 +8,4 @@ summary: Hebt Sprachbarrieren auf, neutraler Boden für Verhandlungen.
 ---
 # Nitas Tempel
 
-**Der Tempel hebt Sprachbarrieren auf.** Damit ist er der strategische Ort für jede Verhandlung, etwa mit den Echsen-Clans über [[Lula Lhaaz]]. Neutraler Boden, laut Draka „ein Ort, an dem selbst die größten Feinde miteinander reden“. Siehe [[Nita]].
+**Der Tempel hebt Sprachbarrieren auf.** Damit ist er der strategische Ort für jede Verhandlung, etwa mit den Echsen-Clans über [[Lula Lhaaz]]. Neutraler Boden, laut Aella „ein Ort, an dem selbst die größten Feinde miteinander reden“. Siehe [[Nita]].

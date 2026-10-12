@@ -15,14 +15,20 @@
     "save": "WE",
     "damage": "2W8 nekrotisch · 2W12, wenn das Ziel verletzt ist",
     "rolls": [
-      { "label": "Ziel unverletzt", "expr": "2d8" },
-      { "label": "Ziel verletzt", "expr": "2d12" }
+      {
+        "label": "Ziel unverletzt",
+        "expr": "2d8"
+      },
+      {
+        "label": "Ziel verletzt",
+        "expr": "2d12"
+      }
     ],
     "source": "Xanathars Ratgeber für alles (engl. S. 169)",
     "text": "Du zeigst auf eine Kreatur in Reichweite, die du sehen kannst, und für einen Moment erfüllt der Klang einer klagenden Totenglocke die Luft um sie herum.\n\nDas Ziel muss einen **Weisheitsrettungswurf** bestehen. Misslingt er, erleidet es **1W8 nekrotischen Schaden**. Fehlen dem Ziel bereits Trefferpunkte, ist es also nicht bei seinem Maximum, erleidet es stattdessen **1W12 nekrotischen Schaden**. Gelingt der Rettungswurf, passiert nichts.\n\n**Zaubertrick-Steigerung:** Der Schaden steigt um einen Würfel, wenn du Stufe 5 (2W8 oder 2W12), Stufe 11 (3W8 oder 3W12) und Stufe 17 (4W8 oder 4W12) erreichst.",
     "valerius": "Stufe 5: **2W8** (Ø 9, max. 16) oder **2W12** (Ø 13, max. 24) · Rettungswurf-SG **15**",
     "tips": [
-      "**Reihenfolge zählt:** Lass zuerst Draka, deine Skelette oder einen anderen Zauber treffen. Sobald dem Ziel auch nur 1 TP fehlt, würfelst du W12 statt W8. Das sind im Schnitt 4 Schaden mehr.",
+      "**Reihenfolge zählt:** Lass zuerst Aella, deine Skelette oder einen anderen Zauber treffen. Sobald dem Ziel auch nur 1 TP fehlt, würfelst du W12 statt W8. Das sind im Schnitt 4 Schaden mehr.",
       "**Kein Angriffswurf:** stark gegen schwer gepanzerte Gegner mit hoher RK. Gegen flinke Ziele mit niedriger RK, aber hoher Weisheit ist *Eismesser* oft besser.",
       "**Deckung hilft dem Ziel nicht:** Halbe und Dreivierteldeckung geben nur Boni auf RK und GE-Rettungswürfe. Nur volle Deckung verhindert, dass du das Ziel anvisierst.",
       "**Gegen Teufel deine beste Wahl:** Die meisten Teufel sind gegen Feuer immun und widerstehen Kälte. Nekrotischer Schaden trifft sie voll.",
@@ -34,10 +40,19 @@
       "Du musst das Ziel sehen. Unsichtbare oder vollständig verdeckte Ziele kannst du nicht anvisieren."
     ],
     "synergies": [
-      { "with": "Skelett", "text": "Ein Skelett-Pfeil verletzt das Ziel, danach trifft deine Totenglocke mit dem W12." },
-      { "with": "Draka Stormscale", "text": "Draka eröffnet, du schließt mit 2W12 ab." }
+      {
+        "with": "Skelett",
+        "text": "Ein Skelett-Pfeil verletzt das Ziel, danach trifft deine Totenglocke mit dem W12."
+      },
+      {
+        "with": "Aella Rayann",
+        "text": "Aella eröffnet, du schließt mit 2W12 ab."
+      }
     ],
-    "docs": ["zauber-von-val", "charakterbogen-alt"]
+    "docs": [
+      "zauber-von-val",
+      "charakterbogen-alt"
+    ]
   },
   {
     "id": "geringfuegige-illusion",
@@ -78,8 +93,16 @@
       "Physische Berührung entlarvt das Bild sofort, ohne Wurf.",
       "Wer die Illusion durchschaut, sieht sie nur noch schwach. Andere werden weiter getäuscht."
     ],
-    "synergies": [{ "with": "Taschenspielerei", "text": "Ein Geruch oder Funken ergänzen das Bild und machen es glaubwürdiger." }],
-    "docs": ["zauber-von-val", "charakterbogen-alt"]
+    "synergies": [
+      {
+        "with": "Taschenspielerei",
+        "text": "Ein Geruch oder Funken ergänzen das Bild und machen es glaubwürdiger."
+      }
+    ],
+    "docs": [
+      "zauber-von-val",
+      "charakterbogen-alt"
+    ]
   },
   {
     "id": "taschenspielerei",
@@ -117,7 +140,11 @@
       "Augenblickliche Effekte (anzünden, reinigen, Funken) zählen nicht zum Limit von drei.",
       "Der Zauber verursacht keinen Schaden und verändert nichts dauerhaft."
     ],
-    "docs": ["zauber-von-val", "charakterbogen-alt", "alchemie"]
+    "docs": [
+      "zauber-von-val",
+      "charakterbogen-alt",
+      "alchemie"
+    ]
   },
   {
     "id": "botschaft",
@@ -141,43 +168,25 @@
       "**Für große Entfernungen** gibt es die magischen Ohrringe: 1× pro Tag, nur zwischen den beiden Trägern."
     ],
     "uses": [
-      "Unauffällige Koordination mit Draka bei Erkundungen, Infiltrationen und Verhandlungen, etwa mit Leon Lhaaz oder den Echsenmenschen.",
-      "Unauffällige Anweisungen an Draka oder manipulierte NSCs.",
+      "Unauffällige Koordination mit Aella bei Erkundungen, Infiltrationen und Verhandlungen, etwa mit Leon Lhaaz oder den Echsenmenschen.",
+      "Unauffällige Anweisungen an Aella oder manipulierte NSCs.",
       "Gerüchte oder falsche Informationen gezielt „geheim“ an einzelne Personen weitergeben.",
       "Sicher kommunizieren, wenn du vermutest, dass jemand lauscht.",
       "Den Jäger oder die Apothekerin diskret kontaktieren.",
       "Mit Gruppenmitgliedern kommunizieren, während sie ihre Fähigkeiten einsetzen."
     ],
     "corrections": [
-      { "doc": "zauberbuch-optimiert", "text": "„Funktioniert durch Türen und Wände“ stimmt nur, wenn du das Ziel kennst und weißt, dass es dahinter ist." }
+      {
+        "doc": "zauberbuch-optimiert",
+        "text": "„Funktioniert durch Türen und Wände“ stimmt nur, wenn du das Ziel kennst und weißt, dass es dahinter ist."
+      }
     ],
-    "note": "Gestohlen wurde die **Spruchrolle** *Botschaft*, ein eigener Gegenstand. Den Zaubertrick beherrschst du weiterhin.",
-    "docs": ["zauber-von-val", "charakterbogen-alt", "kampagnen-log"]
-  },
-  {
-    "id": "astrales-feuer",
-    "name": "Astrales Feuer",
-    "en": "Astral Fire (Volksmerkmal)",
-    "level": 0,
-    "school": "Hervorrufung",
-    "status": "frage",
-    "time": "1 Aktion",
-    "economy": "aktion",
-    "range": "je nach Zaubertrick",
-    "components": "je nach Zaubertrick",
-    "duration": "je nach Zaubertrick",
-    "source": "Spelljammer: Astral Adventurer's Guide (Astralelf)",
-    "summary": "Astralelfen-Zaubertrick: Licht, Tanzende Lichter oder Heilige Flamme. Fehlt auf allen Bögen.",
-    "text": "Als Astralelf kennst du **einen** der folgenden Zaubertricks. Das Zauberattribut, Intelligenz, Weisheit oder Charisma, legst du bei der Volkswahl fest.\n\n### Heilige Flamme\n*Hervorrufung · 1 Aktion · 18 m · V, G · Unmittelbar*\n\nFlammenartiges Licht senkt sich auf eine Kreatur in Reichweite, die du sehen kannst. Das Ziel muss einen **Geschicklichkeitsrettungswurf** bestehen, sonst erleidet es **1W8 gleißenden Schaden**. Deckung hilft dem Ziel bei diesem Rettungswurf nicht. Steigerung: 2W8 ab Stufe 5, 3W8 ab Stufe 11, 4W8 ab Stufe 17.\n\n### Tanzende Lichter\n*Hervorrufung · 1 Aktion · 36 m · V, G, M (ein bisschen Phosphor oder Hexenholz oder ein Glühwürmchen) · Konzentration, bis zu 1 Minute*\n\nDu erschaffst bis zu vier fackelgroße Lichter, die als Fackeln, Laternen oder leuchtende Kugeln in der Luft schweben. Du kannst sie auch zu einer leuchtenden, vage humanoiden mittelgroßen Gestalt vereinen. Jedes Licht leuchtet dämmrig in 3 m Radius. Als Bonusaktion bewegst du die Lichter bis zu 18 m weit. Jedes Licht muss höchstens 6 m von einem anderen entfernt sein und erlischt außerhalb der Reichweite.\n\n### Licht\n*Hervorrufung · 1 Aktion · Berührung · V, M (ein Glühwürmchen oder phosphoreszierendes Moos) · 1 Stunde*\n\nEin Gegenstand von höchstens 3 m Größe leuchtet hell in 6 m Radius und dämmrig weitere 6 m, in einer Farbe deiner Wahl. Vollständiges Abdecken blockiert das Licht. Der Zauber endet, wenn du ihn erneut wirkst oder als Aktion beendest. Trägt eine feindliche Kreatur den Gegenstand, darf sie einen GE-Rettungswurf machen.",
-    "valerius": "Mit IN als Attribut: Heilige Flamme **SG 15**, **2W8 gleißend** (Ø 9, max. 16)",
-    "rolls": [{ "label": "Heilige Flamme", "expr": "2d8" }],
-    "tips": [
-      "**Empfehlung, falls die Wahl noch offen ist: Heilige Flamme mit IN.** Ein zweiter Schadens-Zaubertrick, der auf **GE** statt WE zielt. So hast du für jeden Gegnertyp einen Rettungswurf zur Auswahl.",
-      "**Gleißend statt nekrotisch:** gut gegen körperlose Untote, die gegen deine Totenglocke immun sind.",
-      "**Deckung ignorieren:** Heilige Flamme trifft auch Gegner hinter Zinnen oder Schießscharten."
-    ],
-    "note": "Steht auf **keinem** deiner Bögen. Bitte mit dem DM klären, welchen Zaubertrick Valerius hat.",
-    "docs": []
+    "note": "Gestohlen wurde die **Spruchrolle** *Botschaft*, ein eigener Gegenstand. Den Zaubertrick beherrschst du weiterhin.\n\n**Geklärt am 12.10.2026:** *Botschaft* ist ein **Zaubertrick** (Spielerhandbuch 2014 und 2024). Kurz stand im Raum, ob euer DM ihn als Grad-1-Zauber handhabt. Das ist vom Tisch.",
+    "docs": [
+      "zauber-von-val",
+      "charakterbogen-alt",
+      "kampagnen-log"
+    ]
   },
   {
     "id": "vertrauten-finden",
@@ -195,13 +204,13 @@
     "duration": "Unmittelbar",
     "source": "Spielerhandbuch 2014 (engl. S. 240) · SRD 5.1",
     "text": "Du erhältst die Dienste eines **Vertrauten**, eines Geistes, der eine Tiergestalt deiner Wahl annimmt: Fledermaus, Katze, Krabbe, Frosch (Kröte), **Falke**, Echse, Oktopus, **Eule**, Giftschlange, Fisch (Quipper), Ratte, Rabe, Seepferdchen, Spinne oder Wiesel. Er erscheint auf einem freien Feld in Reichweite und hat die Werte der gewählten Gestalt, ist aber ein **Himmlisches Wesen, Feenwesen oder Unhold** (deine Wahl) statt eines Tiers.\n\nDein Vertrauter handelt unabhängig von dir, gehorcht aber immer deinen Befehlen. Im Kampf würfelt er eigene Initiative und handelt in seinem eigenen Zug. **Ein Vertrauter kann nicht angreifen,** aber andere Aktionen normal ausführen.\n\nFällt der Vertraute auf 0 Trefferpunkte, verschwindet er und hinterlässt keinen Körper. Er erscheint wieder, wenn du diesen Zauber erneut wirkst.\n\nSolange er höchstens **30 m** entfernt ist, kannst du telepathisch mit ihm kommunizieren. Außerdem kannst du **als Aktion** bis zum Beginn deines nächsten Zuges durch seine Augen sehen und hören, was er hört, und nutzt dabei seine besonderen Sinne. In dieser Zeit bist du für deine eigenen Sinne taub und blind.\n\nAls Aktion kannst du deinen Vertrauten vorübergehend entlassen. Er verschwindet in eine Taschendimension und wartet dort auf deinen Ruf. Du kannst ihn auch für immer entlassen. Ist er vorübergehend entlassen, kannst du ihn als Aktion auf einem freien Feld in bis zu 9 m Entfernung wieder erscheinen lassen.\n\nDu kannst nicht mehr als einen Vertrauten gleichzeitig haben. Wirkst du den Zauber, während du schon einen hast, nimmt er stattdessen eine neue Gestalt aus der obigen Liste an.\n\nWenn du einen Zauber mit der Reichweite **Berührung** wirkst, kann dein Vertrauter ihn überbringen, als hätte er ihn gewirkt. Er muss höchstens 30 m von dir entfernt sein und **seine Reaktion** nutzen, um den Zauber beim Wirken zu überbringen. Verlangt der Zauber einen Angriffswurf, nutzt du deinen Angriffsmodifikator.",
-    "valerius": "Aktuell: **Falke** (RK 13, 1 TP, Fliegen 18 m, Wahrnehmung +4). Telepathie und Überbringen bis **30 m**. Kosten pro Wirken: **10 GM**.",
+    "valerius": "Aktuell: **Eule** (RK 11, 1 TP, Fliegen 18 m, Dunkelsicht 36 m, Vorbeiflug). Vorher: Falke. Neue Gestalt für den Dschungel ist geplant. Telepathie und Überbringen bis **30 m**. Kosten pro Wirken: **10 GM**.",
     "tips": [
-      "**Helfen statt Angreifen:** Der Vertraute darf nicht angreifen, aber die Aktion *Helfen* nutzen. Der nächste Angriff von dir oder Draka gegen das Ziel hat Vorteil.",
+      "**Helfen statt Angreifen:** Der Vertraute darf nicht angreifen, aber die Aktion *Helfen* nutzen. Der nächste Angriff von dir oder Aella gegen das Ziel hat Vorteil.",
       "**Durch seine Sinne sehen** kostet deine Aktion und macht dich bis zu deinem nächsten Zug blind und taub für deine eigene Umgebung. Also nicht mitten im Kampf.",
       "**In Sicherheit bringen:** Als Aktion in die Taschendimension schicken und später in bis zu 9 m Entfernung zurückrufen.",
-      "**Berührungszauber aus der Distanz:** Der Vertraute überbringt sie bis 30 m von dir entfernt, mit seiner eigenen Reaktion. Zum Beispiel *Schutz vor Gut und Böse* auf Draka.",
-      "**Gestalt wechseln** durch erneutes Wirken (als Ritual 1 Std. 10 Min., 10 GM): Falke bei Tag, Eule für Nacht und Kampf.",
+      "**Berührungszauber aus der Distanz:** Der Vertraute überbringt sie bis 30 m von dir entfernt, mit seiner eigenen Reaktion. Zum Beispiel *Schutz vor Gut und Böse* auf Aella.",
+      "**Gestalt wechseln** durch erneutes Wirken (als Ritual 1 Std. 10 Min., 10 GM). Für den Dschungel eignen sich unauffällige Gestalten, siehe **Gefolge** → „Nächste Beschwörung“.",
       "**Typ beachten:** Er ist Himmlisches Wesen, Feenwesen oder Unhold, kein Tier. Effekte, die nur Tiere betreffen, wirken nicht auf ihn."
     ],
     "uses": [
@@ -218,15 +227,36 @@
       "Fällt er auf 0 TP, verschwindet er ohne Körper. Ein neues Wirken bringt ihn zurück, wieder für 10 GM."
     ],
     "corrections": [
-      { "doc": "beschworene-wesen", "text": "„Nutzt deine Reaktion“ ist falsch. Beim Überbringen nutzt der Vertraute **seine** Reaktion." },
-      { "doc": "zauber-von-val", "text": "„Seine Eule“: Laut Kampagnen-Log ist dein Vertrauter ein **Falke**. Bitte klären." }
+      {
+        "doc": "beschworene-wesen",
+        "text": "„Nutzt deine Reaktion“ ist falsch. Beim Überbringen nutzt der Vertraute **seine** Reaktion."
+      }
     ],
     "synergies": [
-      { "with": "Schutz vor Gut und Böse", "text": "Der Vertraute bringt den Berührungszauber zu Draka, ohne dass du nach vorn musst." },
-      { "with": "Falke", "text": "Bester Späher bei Tag (Wahrnehmung +4, Vorteil auf Sicht)." },
-      { "with": "Eule", "text": "Vorbeiflug und Dunkelsicht: Helfen im Kampf, ohne Gelegenheitsangriffe zu provozieren." }
+      {
+        "with": "Schutz vor Gut und Böse",
+        "text": "Der Vertraute bringt den Berührungszauber zu Aella, ohne dass du nach vorn musst."
+      },
+      {
+        "with": "Eule",
+        "text": "Aktuell: Vorbeiflug und 36 m Dunkelsicht. Helfen im Kampf, ohne Gelegenheitsangriffe zu provozieren."
+      },
+      {
+        "with": "Rabe",
+        "text": "Werte für einen Tukan (Reskin, mit DM klären): Mimikry, Fliegen 15 m."
+      },
+      {
+        "with": "Spinne",
+        "text": "Netzläufer: bewegt sich frei durch dein Netz."
+      }
     ],
-    "docs": ["zauber-von-val", "beschworene-wesen", "charakterbogen-alt", "kampagnen-log"]
+    "docs": [
+      "zauber-von-val",
+      "beschworene-wesen",
+      "charakterbogen-alt",
+      "kampagnen-log"
+    ],
+    "summary": "Geist in Tiergestalt (aktuell: Eule). Späher, Helfer, überbringt Berührungszauber."
   },
   {
     "id": "unsichtbarer-diener",
@@ -266,13 +296,27 @@
       "Die Aktion *Helfen* ist für ihn nicht vorgesehen. Frag im Zweifel den DM."
     ],
     "corrections": [
-      { "doc": "beschworene-wesen", "text": "„Kann nicht angegriffen werden“ ist falsch, er hat RK 10 und 1 TP. „Bis 4,5 kg“ steht nicht in den Regeln." }
+      {
+        "doc": "beschworene-wesen",
+        "text": "„Kann nicht angegriffen werden“ ist falsch, er hat RK 10 und 1 TP. „Bis 4,5 kg“ steht nicht in den Regeln."
+      }
     ],
     "conflicts": [
-      { "with": "Sternenschritt", "text": "Beides kostet deine Bonusaktion." },
-      { "with": "Tote erwecken", "text": "Untote befehligen kostet ebenfalls die Bonusaktion." }
+      {
+        "with": "Sternenschritt",
+        "text": "Beides kostet deine Bonusaktion."
+      },
+      {
+        "with": "Tote erwecken",
+        "text": "Untote befehligen kostet ebenfalls die Bonusaktion."
+      }
     ],
-    "docs": ["zauber-von-val", "beschworene-wesen", "alchemie", "charakterbogen-alt"]
+    "docs": [
+      "zauber-von-val",
+      "beschworene-wesen",
+      "alchemie",
+      "charakterbogen-alt"
+    ]
   },
   {
     "id": "schutz-vor-gut-und-boese",
@@ -293,7 +337,7 @@
     "text": "Bis der Zauber endet, ist eine bereitwillige Kreatur, die du berührst, vor bestimmten Kreaturentypen geschützt: **Aberrationen, Himmlische Wesen, Elementare, Feenwesen, Unholde und Untote**.\n\nDer Schutz hat mehrere Vorteile. Kreaturen dieser Typen haben **Nachteil auf Angriffswürfe** gegen das Ziel. Das Ziel kann von ihnen außerdem **nicht bezaubert, verängstigt oder besessen** werden. Ist es bereits durch eine solche Kreatur bezaubert, verängstigt oder besessen, hat es **Vorteil** auf jeden neuen Rettungswurf gegen diesen Effekt.",
     "tips": [
       "**Gegen Geister und Besessenheit:** Xantus war eine Sträflingskolonie voller Flüche und Geister. Schutz vor Besessenheit ist dort Gold wert.",
-      "**Nachteil für jeden Angriff:** Ein Unhold oder Untoter, der Draka bedrängt, trifft deutlich seltener.",
+      "**Nachteil für jeden Angriff:** Ein Unhold oder Untoter, der Aella bedrängt, trifft deutlich seltener.",
       "**Über den Vertrauten wirken:** Als Berührungszauber kann ihn dein Vertrauter zu einem Verbündeten bringen.",
       "**Konzentration:** Er beendet dein *Netz*, und umgekehrt."
     ],
@@ -301,9 +345,22 @@
       "**Material:** Laut Sage Advice ersetzt dein Arkaner Fokus auch verbrauchte Komponenten, wenn sie keinen Preis haben. Andernfalls brauchst du Weihwasser oder Silber- und Eisenpulver für jedes Wirken. Mit dem DM klären.",
       "Die Kreaturentypen erkennst du nicht immer auf den ersten Blick. Frag im Zweifel, welcher Typ der Gegner ist."
     ],
-    "conflicts": [{ "with": "Netz", "text": "Beides braucht Konzentration." }],
-    "synergies": [{ "with": "Vertrauten finden", "text": "Der Vertraute überbringt den Schutz aus bis zu 30 m Entfernung." }],
-    "docs": ["zauber-von-val", "charakterbogen-alt"]
+    "conflicts": [
+      {
+        "with": "Netz",
+        "text": "Beides braucht Konzentration."
+      }
+    ],
+    "synergies": [
+      {
+        "with": "Vertrauten finden",
+        "text": "Der Vertraute überbringt den Schutz aus bis zu 30 m Entfernung."
+      }
+    ],
+    "docs": [
+      "zauber-von-val",
+      "charakterbogen-alt"
+    ]
   },
   {
     "id": "magie-entdecken",
@@ -329,10 +386,22 @@
       "**Genaue Eigenschaften** eines magischen Gegenstands erfährst du, wenn du dich während einer kurzen Rast mit ihm beschäftigst. So wurden die Ohrringe identifiziert."
     ],
     "corrections": [
-      { "doc": "kampagnen-log", "text": "„Hellsicht und Teleportation“: Teleportation ist keine Schule der Magie, Teleport-Zauber gehören zur Beschwörung. Vermutlich Erkenntnismagie und Beschwörung, oder der DM hat es so formuliert." }
+      {
+        "doc": "kampagnen-log",
+        "text": "„Hellsicht und Teleportation“: Teleportation ist keine Schule der Magie, Teleport-Zauber gehören zur Beschwörung. Vermutlich Erkenntnismagie und Beschwörung, oder der DM hat es so formuliert."
+      }
     ],
-    "conflicts": [{ "with": "Netz", "text": "Beides braucht Konzentration." }],
-    "docs": ["zauber-von-val", "kampagnen-log", "charakterbogen-alt"]
+    "conflicts": [
+      {
+        "with": "Netz",
+        "text": "Beides braucht Konzentration."
+      }
+    ],
+    "docs": [
+      "zauber-von-val",
+      "kampagnen-log",
+      "charakterbogen-alt"
+    ]
   },
   {
     "id": "eismesser",
@@ -352,8 +421,14 @@
     "save": "GE",
     "damage": "1W10 Stich bei Treffer + 2W6 Kälte (GE-Rettungswurf) im 1,5-m-Umkreis",
     "rolls": [
-      { "label": "Stich (Treffer)", "expr": "1d10" },
-      { "label": "Kälte (Explosion)", "expr": "2d6" }
+      {
+        "label": "Stich (Treffer)",
+        "expr": "1d10"
+      },
+      {
+        "label": "Kälte (Explosion)",
+        "expr": "2d6"
+      }
     ],
     "source": "Xanathars Ratgeber für alles (engl. S. 157)",
     "text": "Du erschaffst einen Eissplitter und schleuderst ihn auf eine Kreatur in Reichweite. Mach einen **Fernkampf-Zauberangriff** gegen das Ziel. Bei einem Treffer erleidet es **1W10 Stichschaden**.\n\n**Ob Treffer oder nicht, der Splitter explodiert danach.** Das Ziel und jede Kreatur im Umkreis von **1,5 m** um das Ziel müssen einen **Geschicklichkeitsrettungswurf** bestehen, sonst erleiden sie **2W6 Kälteschaden**. Bei Erfolg passiert ihnen nichts.",
@@ -361,7 +436,7 @@
     "valerius": "Angriff **+7** · Stich **1W10** (Ø 5,5) · Kälte **2W6** (Ø 7), SG **15** · Grad 2: 3W6 · Grad 3: 4W6",
     "tips": [
       "**Mindestschaden fast garantiert:** Auch ein Fehlschuss explodiert und zwingt zum Rettungswurf.",
-      "**Freund oder Feind:** Die Explosion trifft jede Kreatur im 1,5-m-Umkreis, auch Draka, wenn sie neben dem Ziel steht.",
+      "**Freund oder Feind:** Die Explosion trifft jede Kreatur im 1,5-m-Umkreis, auch Aella, wenn sie neben dem Ziel steht.",
       "**Gegen Festgehaltene:** Im *Netz* haben Gegner Nachteil auf GE-Rettungswürfe, die Explosion trifft also öfter.",
       "**Keine verbale Komponente:** funktioniert auch in magischer Stille oder geknebelt. Die Geste sieht man trotzdem.",
       "**Höhere Grade lohnen selten:** Ein Grad-2-Platz ist in *Netz* oder *Sengender Strahl* meist besser angelegt."
@@ -370,8 +445,16 @@
       "Der Splitter explodiert auch bei einem Fehlschuss.",
       "Das Ziel macht ebenfalls den Rettungswurf gegen die Explosion. Es kann also Stich- und Kälteschaden nehmen."
     ],
-    "synergies": [{ "with": "Netz", "text": "Festgehaltene haben Nachteil auf den GE-Rettungswurf gegen die Explosion." }],
-    "docs": ["zauber-von-val", "charakterbogen-alt"]
+    "synergies": [
+      {
+        "with": "Netz",
+        "text": "Festgehaltene haben Nachteil auf den GE-Rettungswurf gegen die Explosion."
+      }
+    ],
+    "docs": [
+      "zauber-von-val",
+      "charakterbogen-alt"
+    ]
   },
   {
     "id": "schild",
@@ -397,8 +480,16 @@
       "**Eine Reaktion pro Runde:** Wer *Schild* wirkt, kann in dieser Runde keinen *Gegenzauber* mehr sprechen.",
       "**Budget:** Du hast 4 Grad-1-Plätze. Plane 1 bis 2 Schilde pro Kampf ein."
     ],
-    "conflicts": [{ "with": "Gegenzauber", "text": "Beides kostet deine eine Reaktion pro Runde." }],
-    "docs": ["zauber-von-val", "charakterbogen-alt"]
+    "conflicts": [
+      {
+        "with": "Gegenzauber",
+        "text": "Beides kostet deine eine Reaktion pro Runde."
+      }
+    ],
+    "docs": [
+      "zauber-von-val",
+      "charakterbogen-alt"
+    ]
   },
   {
     "id": "netz",
@@ -416,7 +507,12 @@
     "components": "V, G, M (ein Stück Spinnennetz)",
     "duration": "Konzentration, bis zu 1 Stunde",
     "save": "GE",
-    "rolls": [{ "label": "Feuer im Netz", "expr": "2d4" }],
+    "rolls": [
+      {
+        "label": "Feuer im Netz",
+        "expr": "2d4"
+      }
+    ],
     "source": "Spielerhandbuch 2014 (engl. S. 287) · SRD 5.1",
     "text": "Du beschwörst eine Masse dicker, klebriger Netze an einem Punkt deiner Wahl in Reichweite. Die Netze füllen für die Wirkungsdauer einen **6-m-Würfel** ab diesem Punkt. Sie sind **schwieriges Gelände** und **leicht verschleiern** ihren Bereich.\n\nSind die Netze nicht zwischen zwei festen Massen verankert (etwa Wänden oder Bäumen) und auch **nicht über Boden, Wand oder Decke ausgelegt**, fällt das beschworene Netz in sich zusammen und der Zauber endet zu Beginn deines nächsten Zuges. Über eine ebene Fläche gelegte Netze sind 1,5 m dick.\n\nJede Kreatur, die ihren Zug in den Netzen **beginnt** oder sie während ihres Zuges **betritt**, muss einen **Geschicklichkeitsrettungswurf** machen. Misslingt er, ist sie **festgehalten**, solange sie in den Netzen bleibt oder bis sie sich befreit.\n\nEine durch die Netze festgehaltene Kreatur kann ihre **Aktion** nutzen, um einen **Stärkewurf gegen deinen Zauber-SG** zu machen. Gelingt er, ist sie nicht mehr festgehalten.\n\nDie Netze sind **brennbar**. Jeder 1,5-m-Würfel Netz, der Feuer ausgesetzt wird, verbrennt in 1 Runde und fügt jeder Kreatur, die ihren Zug im Feuer beginnt, **2W4 Feuerschaden** zu.",
     "valerius": "SG **15** · 6-m-Würfel · Befreien: ST-Wurf gegen **15** · Konzentration (KO-RW **+3**)",
@@ -427,7 +523,7 @@
       "**Boden reicht als Halt:** Auf dem Boden ausgelegt hält das Netz auch ohne Wände oder Bäume.",
       "**Leicht verschleiert:** Wahrnehmung über Sicht in den Netzen hat Nachteil.",
       "**Feuer ist zweischneidig:** *Sengender Strahl* brennt Netzteile weg und befreit Gefangene, macht aber 2W4 Feuer zu Zugbeginn. Bewusst einsetzen oder vermeiden.",
-      "**Verbündete nicht hineinschicken:** Das Netz ist auch für Draka schwieriges Gelände und hält auch sie fest.",
+      "**Verbündete nicht hineinschicken:** Das Netz ist auch für Aella schwieriges Gelände und hält auch sie fest.",
       "**Schütze deine Konzentration:** Bei Schaden KO-Rettungswurf mit SG 10 oder halbem Schaden, je nachdem, was höher ist. Bleib hinten."
     ],
     "uses": [
@@ -440,18 +536,40 @@
       "Feuer verbrennt nur den getroffenen 1,5-m-Würfel, nicht das ganze Netz."
     ],
     "corrections": [
-      { "doc": "zauber-von-val", "text": "Schule ist **Beschwörung**, nicht Verzauberung. Befreien ist ein **Stärkewurf**, kein Wurf auf Athletik oder Akrobatik. Ein auf dem Boden ausgelegtes Netz hält auch ohne Verankerung." }
+      {
+        "doc": "zauber-von-val",
+        "text": "Schule ist **Beschwörung**, nicht Verzauberung. Befreien ist ein **Stärkewurf**, kein Wurf auf Athletik oder Akrobatik. Ein auf dem Boden ausgelegtes Netz hält auch ohne Verankerung."
+      }
     ],
     "synergies": [
-      { "with": "Eismesser", "text": "Nachteil auf den GE-Rettungswurf gegen die Explosion." },
-      { "with": "Skelett", "text": "Skelett-Pfeile auf Festgehaltene haben Vorteil." },
-      { "with": "Spinne", "text": "Als Vertrauter: Netzläufer und Netzgespür. Sie bewegt sich frei durch dein Netz und spürt jeden darin." }
+      {
+        "with": "Eismesser",
+        "text": "Nachteil auf den GE-Rettungswurf gegen die Explosion."
+      },
+      {
+        "with": "Skelett",
+        "text": "Skelett-Pfeile auf Festgehaltene haben Vorteil."
+      },
+      {
+        "with": "Spinne",
+        "text": "Als Vertrauter: Netzläufer und Netzgespür. Sie bewegt sich frei durch dein Netz und spürt jeden darin."
+      }
     ],
     "conflicts": [
-      { "with": "Sengender Strahl", "text": "Feuer brennt das Netz weg." },
-      { "with": "Schutz vor Gut und Böse", "text": "Beides braucht Konzentration." }
+      {
+        "with": "Sengender Strahl",
+        "text": "Feuer brennt das Netz weg."
+      },
+      {
+        "with": "Schutz vor Gut und Böse",
+        "text": "Beides braucht Konzentration."
+      }
     ],
-    "docs": ["zauber-von-val", "kampagnen-log", "charakterbogen-alt"]
+    "docs": [
+      "zauber-von-val",
+      "kampagnen-log",
+      "charakterbogen-alt"
+    ]
   },
   {
     "id": "sengender-strahl",
@@ -470,8 +588,14 @@
     "attack": "Fernkampf-Zauberangriff (je Strahl)",
     "damage": "3 Strahlen × 2W6 Feuer",
     "rolls": [
-      { "label": "Ein Strahl", "expr": "2d6" },
-      { "label": "Alle drei treffen", "expr": "6d6" }
+      {
+        "label": "Ein Strahl",
+        "expr": "2d6"
+      },
+      {
+        "label": "Alle drei treffen",
+        "expr": "6d6"
+      }
     ],
     "source": "Spielerhandbuch 2014 (engl. S. 273) · SRD 5.1",
     "text": "Du erschaffst **drei Feuerstrahlen** und schleuderst sie auf Ziele in Reichweite. Du kannst sie auf ein Ziel oder auf mehrere richten. Mach für jeden Strahl einen **Fernkampf-Zauberangriff**. Bei einem Treffer erleidet das Ziel **2W6 Feuerschaden**.",
@@ -483,8 +607,16 @@
       "**Nicht ins eigene Netz:** Feuer brennt *Netz* weg und befreit die Gefangenen.",
       "**Verteilen oder bündeln:** Gegen viele schwache Gegner verteilen, gegen einen Boss bündeln."
     ],
-    "conflicts": [{ "with": "Netz", "text": "Feuer brennt das Netz weg und befreit Gefangene." }],
-    "docs": ["zauber-von-val", "charakterbogen-alt"]
+    "conflicts": [
+      {
+        "with": "Netz",
+        "text": "Feuer brennt das Netz weg und befreit Gefangene."
+      }
+    ],
+    "docs": [
+      "zauber-von-val",
+      "charakterbogen-alt"
+    ]
   },
   {
     "id": "tote-erwecken",
@@ -527,18 +659,41 @@
       "Jede Kreatur braucht ihren eigenen Leichnam oder Knochenhaufen."
     ],
     "corrections": [
-      { "doc": "zauber-von-val", "text": "Das Erneuern der Kontrolle dauert **1 Minute** (die Wirkzeit des Zaubers), nicht „1 Aktion“." },
-      { "doc": "zauberbuch-optimiert", "text": "Gleicher Fehler: „Mit einem erneuten Wirken (1 Aktion)“ ist falsch." }
+      {
+        "doc": "zauber-von-val",
+        "text": "Das Erneuern der Kontrolle dauert **1 Minute** (die Wirkzeit des Zaubers), nicht „1 Aktion“."
+      },
+      {
+        "doc": "zauberbuch-optimiert",
+        "text": "Gleicher Fehler: „Mit einem erneuten Wirken (1 Aktion)“ ist falsch."
+      }
     ],
     "synergies": [
-      { "with": "Netz", "text": "Skelett-Pfeile auf Festgehaltene haben Vorteil." },
-      { "with": "Totenglocke", "text": "Pfeile verletzen das Ziel, danach trifft die Totenglocke mit dem W12." }
+      {
+        "with": "Netz",
+        "text": "Skelett-Pfeile auf Festgehaltene haben Vorteil."
+      },
+      {
+        "with": "Totenglocke",
+        "text": "Pfeile verletzen das Ziel, danach trifft die Totenglocke mit dem W12."
+      }
     ],
     "conflicts": [
-      { "with": "Gegenzauber", "text": "Beide brauchen deine zwei Grad-3-Plätze." },
-      { "with": "Sternenschritt", "text": "Untote befehligen und Sternenschritt kosten beide die Bonusaktion." }
+      {
+        "with": "Gegenzauber",
+        "text": "Beide brauchen deine zwei Grad-3-Plätze."
+      },
+      {
+        "with": "Sternenschritt",
+        "text": "Untote befehligen und Sternenschritt kosten beide die Bonusaktion."
+      }
     ],
-    "docs": ["zauber-von-val", "beschworene-wesen", "kampagnen-log", "einkaufsliste"]
+    "docs": [
+      "zauber-von-val",
+      "beschworene-wesen",
+      "kampagnen-log",
+      "einkaufsliste"
+    ]
   },
   {
     "id": "gegenzauber",
@@ -554,7 +709,12 @@
     "range": "18 m (60 Fuß)",
     "components": "G",
     "duration": "Unmittelbar",
-    "rolls": [{ "label": "IN-Wurf gegen Grad 4+", "expr": "1d20+4" }],
+    "rolls": [
+      {
+        "label": "IN-Wurf gegen Grad 4+",
+        "expr": "1d20+4"
+      }
+    ],
     "source": "Spielerhandbuch 2014 (engl. S. 228) · SRD 5.1",
     "text": "Du versuchst, eine Kreatur beim Wirken eines Zaubers zu unterbrechen. Wirkt sie einen Zauber des **3. Grades oder niedriger**, **scheitert** ihr Zauber und hat keine Wirkung.\n\nWirkt sie einen Zauber des **4. Grades oder höher**, mach einen **Attributswurf mit deinem Zauberattribut** (Intelligenz). Der SG beträgt **10 + Grad des Zaubers**. Bei einem Erfolg scheitert der Zauber und hat keine Wirkung.",
     "higher": "Wirkst du den Zauber mit einem Platz ab Grad 4, hat der unterbrochene Zauber keine Wirkung, wenn sein Grad **höchstens dem Grad deines Platzes** entspricht.",
@@ -572,37 +732,20 @@
       "Ist der Zauber gebrochen, ist der Platz des Gegners trotzdem verbraucht."
     ],
     "conflicts": [
-      { "with": "Schild", "text": "Beides kostet deine eine Reaktion pro Runde." },
-      { "with": "Tote erwecken", "text": "Beide brauchen deine zwei Grad-3-Plätze." }
+      {
+        "with": "Schild",
+        "text": "Beides kostet deine eine Reaktion pro Runde."
+      },
+      {
+        "with": "Tote erwecken",
+        "text": "Beide brauchen deine zwei Grad-3-Plätze."
+      }
     ],
-    "docs": ["zauber-von-val", "kampagnen-log", "charakterbogen-alt"]
-  },
-  {
-    "id": "nebelschritt",
-    "name": "Nebelschritt",
-    "en": "Misty Step",
-    "level": 2,
-    "school": "Beschwörung",
-    "status": "frage",
-    "prepared": false,
-    "time": "1 Bonusaktion",
-    "economy": "bonus",
-    "range": "Selbst",
-    "components": "V",
-    "duration": "Unmittelbar",
-    "source": "Spielerhandbuch 2014 (engl. S. 260) · SRD 5.1",
-    "summary": "Bonusaktion: bis 9 m teleportieren. Laut altem Bogen im Buch, aber nicht „immer vorbereitet“.",
-    "text": "Kurz von silbrigem Nebel umgeben, teleportierst du dich bis zu **9 m** weit auf ein freies Feld, das du sehen kannst.",
-    "tips": [
-      "**Sternenschritt macht dasselbe:** 3× pro langer Rast, ohne Zauberplatz und ohne dass man ihn gegenzaubern kann. Nebelschritt lohnt sich nur, wenn du öfter teleportieren musst.",
-      "**Die Bonusaktions-Regel:** Wirkst du einen Zauber als Bonusaktion, darfst du im selben Zug mit deiner Aktion nur noch einen Zaubertrick wirken. *Sternenschritt* ist kein Zauber und löst diese Regel nicht aus. Sternenschritt plus *Netz* geht, Nebelschritt plus *Netz* nicht."
-    ],
-    "corrections": [
-      { "doc": "charakterbogen-alt", "text": "„Immer vorbereitet (Astralelf und Beschwörungsschule)“: **Diese Regel gibt es nicht.** Steht der Zauber im Buch, belegt er einen deiner 9 Vorbereitungsplätze." },
-      { "doc": "zauber-von-val", "text": "Gleicher Fehler im Abschnitt „Immer vorbereiteter Zauber“." }
-    ],
-    "note": "Steht er wirklich in deinem Zauberbuch? Falls ja, ist er einer deiner Zauber aus den Stufenaufstiegen. Mit dem DM klären.",
-    "docs": ["charakterbogen-alt", "zauber-von-val"]
+    "docs": [
+      "zauber-von-val",
+      "kampagnen-log",
+      "charakterbogen-alt"
+    ]
   },
   {
     "id": "magierruestung",
@@ -622,7 +765,7 @@
     "text": "Du berührst eine bereitwillige Kreatur, die keine Rüstung trägt, und eine schützende magische Kraft umgibt sie, bis der Zauber endet. Die Basis-RK des Ziels wird **13 + sein Geschicklichkeitsmodifikator**. Der Zauber endet, wenn das Ziel eine Rüstung anlegt oder du ihn als Aktion beendest.",
     "valerius": "Deine RK steigt von **11 auf 14**, mit *Schild* auf **19**. 8 Stunden, keine Konzentration.",
     "why": "**Deine RK von 11 ist dein größtes Risiko.** Ein normaler Gegner mit +5 trifft dich zu 75 %, mit Magierrüstung nur noch zu 60 %. Ein Grad-1-Platz am Morgen hält den ganzen Abenteuertag. Kein anderer Grad-1-Zauber bringt dir so viel Überleben.",
-    "slot": "Grad 1",
+    "slot": "jeden freien Eintrag (bis Grad 1 oder bis Grad 2)",
     "tips": [
       "**Morgens wirken:** 8 Stunden decken fast jeden Abenteuertag ab.",
       "**Läuft neben allem:** keine Konzentration, also parallel zu *Netz*."
@@ -646,7 +789,7 @@
     "text": "Du lässt dich selbst, samt Kleidung, Rüstung, Waffen und anderer Gegenstände, die du bei dir trägst, anders aussehen, bis der Zauber endet oder du ihn als Aktion beendest. Du kannst bis zu **30 cm** kleiner oder größer erscheinen und dünn, dick oder etwas dazwischen wirken. Deinen **Körperbau** kannst du nicht ändern, du brauchst also eine Gestalt mit derselben grundlegenden Anordnung der Gliedmaßen. Ansonsten bestimmst du das Ausmaß der Illusion.\n\nDie Veränderungen halten **keiner körperlichen Überprüfung** stand. Fügst du deiner Kleidung einen Hut hinzu, gehen Gegenstände durch ihn hindurch, und wer ihn berührt, fühlt nichts oder nur deinen Kopf und dein Haar. Erscheinst du dünner, stößt die Hand einer Person, die dich berühren will, scheinbar noch in der Luft gegen dich.\n\nUm zu erkennen, dass du verkleidet bist, kann eine Kreatur ihre Aktion nutzen, um dein Aussehen zu untersuchen, und muss einen **Intelligenzwurf (Nachforschung) gegen deinen Zauber-SG** schaffen.",
     "valerius": "Durchschauen: IN (Nachforschung) gegen **SG 15** · 1 Stunde · keine Konzentration",
     "why": "**Die direkte Antwort auf die aufgeflogene Donnergarde.** Jederzeit ein anderes Gesicht, zum Beispiel passend zu den drei Society-Uniformen. Keine Konzentration, also kein Konflikt mit *Netz*. Als Illusion kein Rabatt beim Kopieren, als freier Stufenaufstiegs-Zauber aber kostenlos.",
-    "slot": "Grad 1",
+    "slot": "jeden freien Eintrag (bis Grad 1 oder bis Grad 2)",
     "tips": [
       "**Nicht anfassen lassen:** Wer dich berührt, kann die Illusion bemerken. Händeschütteln und Umarmungen vermeiden.",
       "**Verkleidungsausrüstung dazu:** Echte Requisiten plus Illusion sind am überzeugendsten."
@@ -671,8 +814,10 @@
     "text": "Dieser Zauber erschafft eine kreisförmige, waagerechte Kraftfläche mit **90 cm Durchmesser** und 2,5 cm Dicke. Sie schwebt 90 cm über dem Boden auf einem freien Feld deiner Wahl in Reichweite, das du sehen kannst. Die Scheibe bleibt für die Wirkungsdauer bestehen und trägt **bis zu 500 Pfund** (rund 225 kg). Wird mehr Gewicht daraufgelegt, endet der Zauber, und alles darauf fällt zu Boden.\n\nDie Scheibe bewegt sich nicht, solange du höchstens 6 m von ihr entfernt bist. Entfernst du dich weiter, folgt sie dir und bleibt in 6 m Abstand. Sie überwindet unebenes Gelände, Treppen, Hänge und Ähnliches, aber **keinen Höhenunterschied von 3 m oder mehr**. Sie kann also keine 3 m tiefe Grube überqueren und eine solche auch nicht verlassen, wenn sie darin erschaffen wurde.\n\nEntfernst du dich mehr als 30 m von der Scheibe, meist weil sie einem Hindernis nicht folgen kann, endet der Zauber.",
     "valerius": "Ritual: kein Zauberplatz · 225 kg Traglast · 1 Stunde",
     "why": "**Logistik für deine Nekromantie:** Knochen und Leichen vom Schlachtfeld transportieren, Beute und Alchemie-Zutaten bergen. Als Ritual kostet sie dich nie einen Zauberplatz. Als Beschwörung passt sie zu deiner Schule.",
-    "slot": "Grad 1",
-    "tips": ["**Als Ritual ohne Vorbereitung:** wie *Unsichtbarer Diener* jederzeit verfügbar, wenn du 10 Minuten Zeit hast."],
+    "slot": "jeden freien Eintrag (bis Grad 1 oder bis Grad 2)",
+    "tips": [
+      "**Als Ritual ohne Vorbereitung:** wie *Unsichtbarer Diener* jederzeit verfügbar, wenn du 10 Minuten Zeit hast."
+    ],
     "docs": []
   },
   {
@@ -691,13 +836,18 @@
     "duration": "Unmittelbar",
     "save": "KO",
     "damage": "2W8 Schall, Stoß 3 m",
-    "rolls": [{ "label": "Schall", "expr": "2d8" }],
+    "rolls": [
+      {
+        "label": "Schall",
+        "expr": "2d8"
+      }
+    ],
     "source": "Spielerhandbuch 2014 (engl. S. 282) · SRD 5.1",
     "text": "Eine Welle donnernder Kraft fegt von dir aus. Jede Kreatur in einem **4,5-m-Würfel**, der von dir ausgeht, muss einen **Konstitutionsrettungswurf** machen. Misslingt er, erleidet sie **2W8 Schallschaden** und wird **3 m von dir weggestoßen**. Gelingt er, erleidet sie den halben Schaden und wird nicht gestoßen.\n\nAußerdem werden nicht befestigte Gegenstände, die sich vollständig im Bereich befinden, automatisch 3 m von dir weggestoßen, und der Zauber erzeugt einen donnernden Knall, der bis zu **90 m** weit zu hören ist.",
     "higher": "+1W8 Schall pro Grad über dem 1.",
     "valerius": "SG **15** · **2W8** (Ø 9) · Stoß 3 m",
     "why": "**Dein Notfallknopf, wenn Nahkämpfer dich erreichen.** Mit RK 11 bist du im Nahkampf verloren. Die Woge stößt alle in deiner Nähe 3 m weg, sogar **in dein Netz hinein**: Wer es betritt, muss sofort retten.",
-    "slot": "Grad 1",
+    "slot": "jeden freien Eintrag (bis Grad 1 oder bis Grad 2)",
     "tips": [
       "**Ins Netz stoßen:** Gegner, die du in dein *Netz* stößt, müssen beim Betreten einen GE-Rettungswurf machen.",
       "**Laut:** 90 m weit hörbar. Nichts für die Unsichtbare Hand bei Infiltrationen."
@@ -721,9 +871,9 @@
     "source": "Spielerhandbuch 2014 (engl. S. 254) · SRD 5.1",
     "text": "Eine Kreatur, die du berührst, wird **unsichtbar**, bis der Zauber endet. Alles, was das Ziel trägt oder bei sich hat, ist unsichtbar, solange es an seinem Körper bleibt. Der Zauber endet für ein Ziel, das **angreift oder einen Zauber wirkt**.",
     "higher": "Mit einem Platz ab Grad 3 kannst du **pro Grad über dem 2. eine weitere Kreatur** unsichtbar machen.",
-    "valerius": "Bis zu 1 Stunde · Konzentration · auch auf Draka wirkbar",
-    "why": "**Die Unsichtbare Hand wird wörtlich:** Spionage in Leons Quartier, Lula auskundschaften, Flucht aus jeder Lage. Auf Draka gewirkt, ist sie die perfekte Kundschafterin. Die wichtigste Infiltrationsmagie für deine Pläne.",
-    "slot": "bis Grad 2",
+    "valerius": "Bis zu 1 Stunde · Konzentration · auch auf Aella wirkbar",
+    "why": "**Die Unsichtbare Hand wird wörtlich:** Spionage in Leons Quartier, Lula auskundschaften, Flucht aus jeder Lage. Auf Aella gewirkt, ist sie die perfekte Kundschafterin. Die wichtigste Infiltrationsmagie für deine Pläne.",
+    "slot": "einen freien Eintrag bis Grad 2",
     "tips": [
       "**Unsichtbar heißt nicht lautlos:** Gegner können dich hören. Heimlichkeit trotzdem würfeln.",
       "**Endet beim Angriff oder Zaubern:** Erst positionieren, dann zuschlagen."
@@ -747,8 +897,10 @@
     "text": "Für die Wirkungsdauer siehst du **unsichtbare Kreaturen und Gegenstände**, als wären sie sichtbar, und du kannst in die **Ätherebene** blicken. Ätherische Kreaturen und Gegenstände erscheinen geisterhaft und durchscheinend.",
     "valerius": "1 Stunde · **keine Konzentration**",
     "why": "**Der Konter gegen den Society-Anführer,** der sich unsichtbar macht und wegteleportiert. Ohne Sicht kein *Gegenzauber*. Mit diesem Zauber siehst du ihn und kannst seine Flucht brechen. Er hilft auch gegen Geister in der Ätherebene, und Xantus ist voller Flüche und Geister. Keine Konzentration, also parallel zu *Netz*.",
-    "slot": "bis Grad 2",
-    "tips": ["**Vor dem Bosskampf wirken:** 1 Stunde reicht für einen ganzen Dungeon-Abschnitt."],
+    "slot": "einen freien Eintrag bis Grad 2",
+    "tips": [
+      "**Vor dem Bosskampf wirken:** 1 Stunde reicht für einen ganzen Dungeon-Abschnitt."
+    ],
     "docs": []
   },
   {
@@ -769,7 +921,7 @@
     "text": "Du nimmst eine andere Gestalt an. Wähle beim Wirken eine der folgenden Optionen. Ihre Wirkung hält bis zum Ende des Zaubers. Solange er andauert, kannst du eine Option als Aktion beenden und stattdessen die Vorteile einer anderen erhalten.\n\n**Anpassung an Wasser:** Dir wachsen Kiemen und Schwimmhäute zwischen den Fingern. Du kannst **unter Wasser atmen** und erhältst eine **Schwimmbewegung** in Höhe deiner normalen Bewegungsrate.\n\n**Aussehen verändern:** Du bestimmst dein Aussehen, einschließlich Größe, Gewicht, Gesichtszügen, Stimme, Haarlänge, Färbung und besonderer Merkmale. Du kannst wie ein Angehöriger eines anderen Volkes aussehen, deine Werte ändern sich aber nicht. Du kannst nicht wie eine Kreatur anderer Größenkategorie erscheinen, und deine Grundform bleibt gleich. Während der Wirkungsdauer kannst du dein Aussehen als Aktion erneut verändern.\n\n**Natürliche Waffen:** Dir wachsen Klauen, Reißzähne, Stacheln, Hörner oder eine andere natürliche Waffe deiner Wahl. Deine waffenlosen Angriffe verursachen **1W6** Wucht-, Stich- oder Hiebschaden, passend zur Waffe, und du bist darin geübt. Die natürliche Waffe ist magisch und gibt **+1** auf Angriff und Schaden.",
     "valerius": "Bis zu 1 Stunde · Konzentration",
     "why": "**Echte Verwandlung statt Illusion:** Anders als *Selbstverkleidung* hält sie Berührung und genauer Prüfung stand, ideal für eine dauerhafte neue Identität vor Lisbeth. Dazu **Wasseratmung und Schwimmen** für die Unterwasser-Mission und den Magischen Turm im See.",
-    "slot": "bis Grad 2",
+    "slot": "einen freien Eintrag bis Grad 2",
     "tips": [
       "**Mehrere Rollen in einer Stunde:** Das Aussehen lässt sich als Aktion erneut ändern.",
       "**Konzentration:** Ein Treffer kann die Verwandlung beenden. Bei Infiltrationen nicht in Kämpfe geraten."

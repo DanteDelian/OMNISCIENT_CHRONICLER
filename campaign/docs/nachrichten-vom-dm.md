@@ -50,5 +50,5 @@ Du hast deine Kontakte angesetzt, doch keiner konnte einen Weg finden, dich auf 
 
 > [!NOTE] **Was daraus folgt**
 > - Es ist **nicht** Valerius' Auftrag, Lisbeth zu beseitigen. Die [[Zaffera-Syndikat|Zafferas]] vermitteln nur.
-> - Der Anschlag war **schon passiert**, als die Nachricht kam. Laut Drakas Chronik habt ihr Lisbeth dabei gerettet. Siehe [[Lisbeth Lhaaz]].
+> - Der Anschlag war **schon passiert**, als die Nachricht kam. Laut Aellas Chronik habt ihr Lisbeth dabei gerettet. Siehe [[Lisbeth Lhaaz]].
 > - Zurück geht es nur mit den **Lhaaz-Schiffskarawanen**.

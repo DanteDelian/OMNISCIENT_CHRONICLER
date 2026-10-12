@@ -1,5 +1,9 @@
 {
-  "currency": { "gm": 17, "sm": 16, "km": 0 },
+  "currency": {
+    "gm": 17,
+    "sm": 16,
+    "km": 0
+  },
   "items": [
     {
       "id": "fokus-ring",
@@ -22,7 +26,7 @@
       "qty": 1,
       "magic": true,
       "desc": "1× pro Tag eine *Botschaft* über große Distanz, nur zwischen den beiden Trägern. Gefunden in einer Truhe im verborgenen Lagerraum unter dem verlassenen Haus bei den Tempelruinen. *Magie entdecken* zeigte Hellsicht und Teleportation.",
-      "note": "Plan: Draka bekommt einen (sicherer Kanal). Alternative: Tauschware für Saladin."
+      "note": "Plan: Aella bekommt einen (sicherer Kanal). Alternative: Tauschware für Saladin."
     },
     {
       "id": "dolch",
@@ -81,8 +85,7 @@
       "name": "Rationen",
       "group": "verbrauch",
       "qty": 13,
-      "desc": "",
-      "note": "Kampagnen-Log: 13. Charakterbögen (alt und Optimiert): 11. Bitte prüfen."
+      "desc": ""
     },
     {
       "id": "beeren",

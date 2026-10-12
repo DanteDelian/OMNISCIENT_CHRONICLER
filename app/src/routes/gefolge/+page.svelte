@@ -1,8 +1,9 @@
 <script lang="ts">
-	import { Bird, Ghost, Skull, Users, Plus, Minus, X, CircleCheck, CircleAlert, Info } from '@lucide/svelte';
+	import { Bird, Ghost, Skull, Users, Plus, Minus, X, CircleCheck, CircleAlert, Info, Trees } from '@lucide/svelte';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import StatBlock from '$lib/components/StatBlock.svelte';
 	import Callout from '$lib/components/Callout.svelte';
+	import Markdown from '$lib/components/Markdown.svelte';
 	import SourceChip from '$lib/components/SourceChip.svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { rolls } from '$lib/stores/rolls.svelte';
@@ -11,6 +12,8 @@
 	const s = $derived(campaign.data.state);
 	const cr = $derived(campaign.data.creatures);
 	const current = $derived(cr.familiars.find((f) => f.id === s.familiar.form));
+	const plan = $derived(cr.familiarPlan);
+	const gold = $derived(campaign.data.inventory.currency.gm);
 
 	function setForm(id: string) {
 		const f = cr.familiars.find((x) => x.id === id);
@@ -104,11 +107,43 @@
 			<div class="flex items-center gap-2"><Bird size={18} class="text-astral-2" /><h2 class="title-display text-3xl">Vertrauter</h2></div>
 			<p class="mt-1 text-sm text-ink-2">
 				Aktuell: <b class="text-ink">{current?.name}</b>. Ein Geist (Himmlisches Wesen, Feenwesen oder Unhold) in Tiergestalt. Kann nicht angreifen, aber helfen und
-				spähen. Gestaltwechsel = neues Wirken (1 Stunde, 10 GM).
+				spähen. Gestaltwechsel = neues Wirken (1 Stunde, als Ritual 1 Stunde 10 Minuten, 10 GM). Alle {cr.familiars.length} erlaubten Gestalten stehen unten.
 			</p>
 		</div>
 		<a class="chip" href="/zauber/vertrauten-finden" data-ref="spell:vertrauten-finden">Zauber: Vertrauten finden</a>
 	</div>
+
+	{#if plan}
+		<div class="panel panel-glow mb-4 p-5">
+			<div class="mb-1 flex flex-wrap items-center gap-2">
+				<Trees size={16} class="text-life" /><h3 class="font-semibold">{plan.title}</h3>
+				<span class="ml-auto text-xs text-ink-3">Gold: <b class="num text-ink-2">{gold} GM</b>{gold >= 10 ? ` · danach ${gold - 10} GM` : ' · reicht nicht!'}</span>
+			</div>
+			<Markdown src={plan.intro} class="prose-sm text-ink-2" />
+			<div class="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+				{#each plan.options as o (o.form)}
+					{@const f = cr.familiars.find((x) => x.id === o.form)}
+					<div class="sunken flex flex-col gap-2 p-4 {o.form === s.familiar.form ? 'ring-1 ring-astral/40' : ''}">
+						<div class="flex items-start justify-between gap-2">
+							<div class="min-w-0">
+								<div class="font-semibold">{o.label}</div>
+								<div class="text-xs text-ink-3">{f && !o.label.includes(f.name.replace(/\s*\(.*\)/, '')) ? `Werte: ${f.name} · ` : ''}RK {f?.ac} · {f?.hp} TP · {f?.speed}</div>
+							</div>
+							{#if o.dm}<span class="badge shrink-0" style="--c: var(--color-warn)">DM fragen</span>{/if}
+						</div>
+						<ul class="space-y-1 text-sm text-ink-2">
+							{#each o.pro as line (line)}<li class="flex gap-1.5"><Plus size={13} class="mt-[3px] shrink-0 text-life" /><Markdown src={line} inline /></li>{/each}
+							{#each o.con as line (line)}<li class="flex gap-1.5"><Minus size={13} class="mt-[3px] shrink-0 text-blood" /><Markdown src={line} inline /></li>{/each}
+						</ul>
+						<div class="mt-auto flex items-center gap-2 pt-1">
+							<a class="chip" href="#{o.form}">Wertblock</a>
+							{#if o.form === s.familiar.form}<span class="badge" style="--c: var(--color-astral)">aktuell</span>{:else}<button class="btn btn-xs" onclick={() => setForm(o.form)}>Beschwören</button>{/if}
+						</div>
+					</div>
+				{/each}
+			</div>
+		</div>
+	{/if}
 
 	<div class="mb-4 overflow-x-auto rounded-2xl border border-line">
 		<table class="w-full text-sm">
@@ -125,7 +160,7 @@
 						<td class="num px-3">{f.hp}</td>
 						<td class="px-3 text-ink-2">{f.speed}</td>
 						<td class="px-3 text-xs text-ink-2">{f.senses}</td>
-						<td class="px-3 text-xs text-ink-2">{f.verdict}</td>
+						<td class="px-3 text-xs text-ink-2"><Markdown src={f.verdict} inline /></td>
 						<td class="px-3 text-right">
 							{#if f.id === s.familiar.form}<span class="badge" style="--c: var(--color-astral)">aktuell</span>{:else}<button class="btn btn-xs" onclick={() => setForm(f.id)}>Wechseln</button>{/if}
 						</td>
@@ -191,7 +226,7 @@
 				{#each p.notes as n (n)}<li>{n}</li>{/each}
 			</ul>
 			<div class="mt-3 flex flex-wrap gap-2">
-				<a class="chip" href="/welt/draka-stormscale" data-ref="world:draka-stormscale">Welt-Eintrag</a>
+				<a class="chip" href="/welt/aella-rayann" data-ref="world:aella-rayann">Welt-Eintrag</a>
 				{#if p.source}<SourceChip id={p.source} />{/if}
 				<SourceChip id="kho-bogen" />
 			</div>

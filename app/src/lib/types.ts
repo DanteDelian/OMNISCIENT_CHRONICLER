@@ -141,7 +141,6 @@ export interface StatTrait {
 export interface Familiar {
 	id: string;
 	name: string;
-	current?: boolean;
 	size: string;
 	ac: number;
 	hp: number;
@@ -187,8 +186,18 @@ export interface PartyMember {
 	source?: string;
 }
 
+export interface FamiliarOption {
+	form: string;
+	label: string;
+	/** Nicht in der Liste des Zaubers: braucht die Zustimmung des DM. */
+	dm?: boolean;
+	pro: string[];
+	con: string[];
+}
+
 export interface Creatures {
 	familiars: Familiar[];
+	familiarPlan?: { title: string; intro: string; options: FamiliarOption[] };
 	servant: { id: string; name: string; ac: number; hp: number; speed: string; str: number; rules: string[] };
 	undead: UndeadBlock[];
 	party: PartyMember[];

@@ -101,6 +101,12 @@
 		</div>
 	{/if}
 
-	{#if verdict}<p class="mt-3 rounded-xl bg-astral/[0.07] px-3 py-2 text-[0.84rem] text-ink-2">{@html verdict.replace(/\*\*(.+?)\*\*/g, '<b class="text-ink">$1</b>')}</p>{/if}
-	{#if note}<p class="mt-2 rounded-xl bg-blood/[0.07] px-3 py-2 text-[0.8rem] text-ink-2"><b class="text-blood">Korrigiert:</b> {note.replace(/^Korrigiert:\s*/, '')}</p>{/if}
+	{#if verdict}<p class="mt-3 rounded-xl bg-astral/[0.07] px-3 py-2 text-[0.84rem] text-ink-2">{@html verdict.replace(/\*\*(.+?)\*\*/g, '<b class="text-ink">$1</b>').replace(/\*(.+?)\*/g, '<i>$1</i>')}</p>{/if}
+	{#if note}
+		{@const fix = /^Korrigiert:/.test(note)}
+		<p class="mt-2 rounded-xl px-3 py-2 text-[0.8rem] text-ink-2 {fix ? 'bg-blood/[0.07]' : 'bg-white/[0.04]'}">
+			<b class={fix ? 'text-blood' : 'text-ink'}>{fix ? 'Korrigiert:' : 'Hinweis:'}</b>
+			{note.replace(/^Korrigiert:\s*/, '')}
+		</p>
+	{/if}
 </article>

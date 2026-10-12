@@ -56,12 +56,12 @@ Konzentration brauchen: [[Netz]], [[Schutz vor Gut und Böse]], [[Magie entdecke
 Konzentration endet außerdem, wenn du **kampfunfähig** wirst, stirbst oder einen anderen Konzentrationszauber wirkst.
 
 > [!TIP] **Konzentration schützen**
-> Bleib hinter Draka, mindestens 9 m von Nahkämpfern entfernt. Nutze *Schild* bei Ergebnissen von 11 bis 15. Wirf keine zweite Konzentration „aus Versehen“.
+> Bleib hinter Aella, mindestens 9 m von Nahkämpfern entfernt. Nutze *Schild* bei Ergebnissen von 11 bis 15. Wirf keine zweite Konzentration „aus Versehen“.
 
 ## Der Kampfablauf
 
 1. **Eröffnung:** [[Netz]] auf die dichteste Gegnergruppe, bevor sie die Frontlinie erreicht. Achte auf Halt: Wände, Bäume oder einfach den Boden.
-2. **Kontrolle:** Festgehaltene sind leichte Beute. Draka greift mit Vorteil an, Skelett-Pfeile auch.
+2. **Kontrolle:** Festgehaltene sind leichte Beute. Aella greift mit Vorteil an, Skelett-Pfeile auch.
 3. **Schaden:** [[Eismesser]] auf Gruppen (Nachteil auf ihren GE-Rettungswurf), [[Totenglocke]] auf Verletzte (2W12). **Kein Feuer ins Netz.**
 4. **Reaktionen:** [[Gegenzauber]] gegen Kontroll- und Fluchtzauber, [[Schild]] gegen Treffer mit 11 bis 15.
 5. **Rückzug:** [[Sternenschritt]] 9 m weg, kein Zauber, kein Gegenzauber möglich.
@@ -71,8 +71,8 @@ Konzentration endet außerdem, wenn du **kampfunfähig** wirst, stirbst oder ein
 - **Netz → Eismesser:** Festgehaltene retten mit Nachteil gegen die Explosion.
 - **Netz → Skelett-Salve:** Alle Skelett-Pfeile gegen Festgehaltene mit Vorteil.
 - **Skelett-Pfeil → Totenglocke:** Das Ziel ist verletzt, die Totenglocke macht 2W12.
-- **Falke späht → Botschaft an Draka → koordinierter Zugriff.**
-- **Vertrauter überbringt Berührungszauber:** [[Schutz vor Gut und Böse]] auf Draka, ohne dass du nach vorn musst.
+- **Vertrauter späht → Botschaft an Aella → koordinierter Zugriff.**
+- **Vertrauter überbringt Berührungszauber:** [[Schutz vor Gut und Böse]] auf Aella, ohne dass du nach vorn musst.
 
 ## Gegnertypen
 
@@ -81,7 +81,7 @@ Konzentration endet außerdem, wenn du **kampfunfähig** wirst, stirbst oder ein
 | Zauberer (Society) | [[Gegenzauber]], [[Sengender Strahl]] (jeder Strahl ein Konzentrationswurf) | Sichtlinie verlieren, sonst kein Gegenzauber |
 | Nahkämpfer, Bestien | [[Netz]], [[Totenglocke]] (oft schwache WE) | Nahkampf. Mit RK 11 bist du dort verloren |
 | Teufel | [[Totenglocke]] (nekrotisch) | Feuer (meist immun), Kälte (meist resistent) |
-| Körperlose Untote | Gleißender Schaden (*Heilige Flamme*, falls Astrales Feuer), magische Angriffe | Totenglocke (oft immun) |
+| Körperlose Untote | [[Eismesser]] (der Stichschaden eines Zaubers gilt als magisch), magische Waffen | [[Totenglocke]] (meist immun), Feuer und Kälte (meist resistent oder immun) |
 | Skelette | Wucht (Stab!) | Stich- und Hiebwaffen sind normal, Wucht doppelt |
 | Unsichtbare | Flächenzauber (*Netz*, *Eismesser*-Explosion) | Gezielte Zauber ohne Sicht |
 

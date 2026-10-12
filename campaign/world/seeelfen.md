@@ -5,11 +5,11 @@ kind: fraktion
 group: kontakt
 tone: unknown
 status: Neu, kaum bekannt
-summary: Frederic Wellenstand (Diplomat) und Fridolin vom See, nur aus Drakas Notizen bekannt.
+summary: Frederic Wellenstand (Diplomat) und Fridolin vom See, nur aus Aellas Notizen bekannt.
 ---
 # Die Seeelfen
 
-Aus Drakas Notizen (Ende der Kampagnenzusammenfassung):
+Aus Aellas Notizen (Ende der Kampagnenzusammenfassung):
 
 - **Frederic Wellenstand**, Diplomat der Seeelfen
 - **Fridolin vom See**, Seeelf

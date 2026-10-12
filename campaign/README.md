@@ -26,7 +26,7 @@ Alles, was das Grimoire anzeigt, steht in diesen Dateien. Ändert man sie (von H
 - Aufgelöst wird über Namen und Aliasse von: Welt-Einträgen, Zaubern (deutsch und englisch), Merkmalen, Kreaturen,
   Quests, Gegenständen, Dokumenten (Titel und `aliases`) und Journal-Einträgen. Dazu kommen die Seiten
   `Echsen-Karte`/`Wüstenkarte`, `Zauberbuch`, `Gefolge` und `Regeln`.
-- Groß- und Kleinschreibung und Spitznamen in „…“ spielen keine Rolle (`[[Draka Stormscale]]` findet `Draka „Khoraa“ Stormscale`).
+- Groß- und Kleinschreibung und Spitznamen in „…“ spielen keine Rolle (`[[Aella Rayann]]` findet `Aella Rayann „Khoraa“ Stormscale`).
 - Unaufgelöste Verweise erscheinen gestrichelt. `npm run check:data` listet sie.
 
 ## Felder im Detail

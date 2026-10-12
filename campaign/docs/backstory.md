@@ -1,6 +1,6 @@
 ---
 title: Backstory
-subtitle: Valerius und Draka, von Oakhaven nach Xantus
+subtitle: Valerius und Draka (heute Aella), von Oakhaven nach Xantus
 icon: book-open
 order: 6
 group: Hintergrund
@@ -12,6 +12,8 @@ updated: 2025-02-23
 **Astralelf-Magier:** Valerius „Val“ Moonwhisper · **Dragonborn-Sturmherold:** Draka „Drake“ Stormscale
 
 *Dein Text vom 23.02.2025, gegliedert, Wortlaut erhalten.*
+
+> **Hinweis:** Die Gefährtin heißt heute **[[Aella Rayann]]**, wie in ihren eigenen Dokumenten. In dieser Backstory steht noch ihr ursprünglicher Name Draka.
 
 ## Gemeinsame Vergangenheit
 

@@ -1,47 +1,154 @@
 {
   "familiars": [
     {
-      "id": "falke",
-      "name": "Falke",
-      "current": true,
-      "size": "winzig",
-      "ac": 13,
-      "hp": 1,
-      "speed": "3 m, Fliegen 18 m",
-      "abilities": { "str": 5, "dex": 16, "con": 8, "int": 2, "wis": 14, "cha": 6 },
-      "skills": "Wahrnehmung +4",
-      "senses": "Passive Wahrnehmung 14",
-      "traits": [{ "name": "Scharfe Sicht", "text": "Vorteil auf Wahrnehmung, die auf Sicht beruht." }],
-      "verdict": "Der beste Späher bei Tag. Keine Dunkelsicht."
-    },
-    {
       "id": "eule",
       "name": "Eule",
       "size": "winzig",
       "ac": 11,
       "hp": 1,
       "speed": "1,5 m, Fliegen 18 m",
-      "abilities": { "str": 3, "dex": 13, "con": 8, "int": 2, "wis": 12, "cha": 7 },
+      "abilities": {
+        "str": 3,
+        "dex": 13,
+        "con": 8,
+        "int": 2,
+        "wis": 12,
+        "cha": 7
+      },
       "skills": "Wahrnehmung +3, Heimlichkeit +3",
       "senses": "Dunkelsicht 36 m, passive Wahrnehmung 13",
       "traits": [
-        { "name": "Vorbeiflug", "text": "Provoziert keine Gelegenheitsangriffe, wenn sie aus der Reichweite eines Feindes fliegt." },
-        { "name": "Scharfes Gehör und scharfe Sicht", "text": "Vorteil auf Wahrnehmung, die auf Gehör oder Sicht beruht." }
+        {
+          "name": "Vorbeiflug",
+          "text": "Provoziert keine Gelegenheitsangriffe, wenn sie aus der Reichweite eines Feindes fliegt."
+        },
+        {
+          "name": "Scharfes Gehör und scharfe Sicht",
+          "text": "Vorteil auf Wahrnehmung, die auf Gehör oder Sicht beruht."
+        }
       ],
       "verdict": "Der beste Kampfhelfer: anfliegen, *Helfen*, gefahrlos wegfliegen. Sieht nachts."
     },
     {
-      "id": "katze",
-      "name": "Katze",
+      "id": "falke",
+      "name": "Falke",
+      "size": "winzig",
+      "ac": 13,
+      "hp": 1,
+      "speed": "3 m, Fliegen 18 m",
+      "abilities": {
+        "str": 5,
+        "dex": 16,
+        "con": 8,
+        "int": 2,
+        "wis": 14,
+        "cha": 6
+      },
+      "skills": "Wahrnehmung +4",
+      "senses": "Passive Wahrnehmung 14",
+      "traits": [
+        {
+          "name": "Scharfe Sicht",
+          "text": "Vorteil auf Wahrnehmung, die auf Sicht beruht."
+        }
+      ],
+      "verdict": "Der beste Späher bei Tag. Keine Dunkelsicht. Valerius hatte schon einmal einen Falken."
+    },
+    {
+      "id": "rabe",
+      "name": "Rabe",
       "size": "winzig",
       "ac": 12,
-      "hp": 2,
-      "speed": "12 m, Klettern 9 m",
-      "abilities": { "str": 3, "dex": 15, "con": 10, "int": 3, "wis": 12, "cha": 7 },
-      "skills": "Wahrnehmung +3, Heimlichkeit +4",
+      "hp": 1,
+      "speed": "3 m, Fliegen 15 m",
+      "abilities": {
+        "str": 2,
+        "dex": 14,
+        "con": 8,
+        "int": 2,
+        "wis": 12,
+        "cha": 6
+      },
+      "skills": "Wahrnehmung +3",
       "senses": "Passive Wahrnehmung 13",
-      "traits": [{ "name": "Scharfer Geruchssinn", "text": "Vorteil auf Wahrnehmung, die auf Geruch beruht." }],
-      "verdict": "Unauffällig in Städten und Siedlungen."
+      "traits": [
+        {
+          "name": "Mimikry",
+          "text": "Ahmt einfache Geräusche nach, die er gehört hat: Flüstern, Babyschreien, Tierlaute. Wer sie hört, erkennt die Nachahmung mit Weisheit (Motiv erkennen) SG 10."
+        }
+      ],
+      "verdict": "Grundlage für einen Tukan oder Papagei (Aussehen mit dem DM klären). Fliegt, ahmt Stimmen nach.",
+      "note": "Tukan und Papagei stehen nicht in der Liste des Zaubers. Viele DMs erlauben die Werte des Raben mit anderem Aussehen."
+    },
+    {
+      "id": "echse",
+      "name": "Echse",
+      "size": "winzig",
+      "ac": 10,
+      "hp": 2,
+      "speed": "6 m, Klettern 6 m",
+      "abilities": {
+        "str": 2,
+        "dex": 11,
+        "con": 10,
+        "int": 1,
+        "wis": 8,
+        "cha": 3
+      },
+      "skills": "",
+      "senses": "Dunkelsicht 9 m, passive Wahrnehmung 9",
+      "traits": [],
+      "verdict": "Im Land der Echsenvölker völlig unauffällig. Klettert an Stämmen und Mauern."
+    },
+    {
+      "id": "frosch",
+      "name": "Frosch (Kröte)",
+      "size": "winzig",
+      "ac": 11,
+      "hp": 1,
+      "speed": "6 m, Schwimmen 6 m",
+      "abilities": {
+        "str": 1,
+        "dex": 13,
+        "con": 8,
+        "int": 1,
+        "wis": 8,
+        "cha": 3
+      },
+      "skills": "Wahrnehmung +1, Heimlichkeit +3",
+      "senses": "Dunkelsicht 9 m, passive Wahrnehmung 11",
+      "traits": [
+        {
+          "name": "Amphibisch",
+          "text": "Atmet Luft und Wasser."
+        },
+        {
+          "name": "Sprung aus dem Stand",
+          "text": "Weitsprung bis 3 m, Hochsprung bis 1,5 m, mit oder ohne Anlauf."
+        }
+      ],
+      "verdict": "Unsichtbar am Flussufer und im nassen Unterholz. Gut für Wasser und Land."
+    },
+    {
+      "id": "giftschlange",
+      "name": "Giftschlange",
+      "size": "winzig",
+      "ac": 13,
+      "hp": 2,
+      "speed": "9 m, Schwimmen 9 m",
+      "abilities": {
+        "str": 2,
+        "dex": 16,
+        "con": 11,
+        "int": 1,
+        "wis": 10,
+        "cha": 3
+      },
+      "skills": "",
+      "senses": "Blindsicht 3 m, passive Wahrnehmung 10",
+      "traits": [],
+      "verdict": "Schnell an Land und im Wasser, höchste RK der Liste. Kann als Vertrauter nicht beißen, schreckt aber ab.",
+      "note": "Als Tier hätte sie einen Giftbiss. Als Vertrauter kann sie nicht angreifen."
     },
     {
       "id": "spinne",
@@ -50,15 +157,161 @@
       "ac": 12,
       "hp": 1,
       "speed": "6 m, Klettern 6 m",
-      "abilities": { "str": 2, "dex": 14, "con": 8, "int": 1, "wis": 10, "cha": 2 },
+      "abilities": {
+        "str": 2,
+        "dex": 14,
+        "con": 8,
+        "int": 1,
+        "wis": 10,
+        "cha": 2
+      },
       "skills": "Heimlichkeit +4",
       "senses": "Dunkelsicht 9 m, passive Wahrnehmung 10",
       "traits": [
-        { "name": "Spinnenklettern", "text": "Klettert an schwierigen Flächen und kopfüber an Decken, ohne Wurf." },
-        { "name": "Netzgespür", "text": "Bei Kontakt mit einem Netz kennt sie den Standort jeder Kreatur, die es berührt." },
-        { "name": "Netzläufer", "text": "Ignoriert Bewegungseinschränkungen durch Netze. Passt zu *Netz*!" }
+        {
+          "name": "Spinnenklettern",
+          "text": "Klettert an schwierigen Flächen und kopfüber an Decken, ohne Wurf."
+        },
+        {
+          "name": "Netzgespür",
+          "text": "Bei Kontakt mit einem Netz kennt sie den Standort jeder Kreatur, die es berührt."
+        },
+        {
+          "name": "Netzläufer",
+          "text": "Ignoriert Bewegungseinschränkungen durch Netze. Passt zu *Netz*!"
+        }
       ],
       "verdict": "Spionage in Innenräumen, unsichtbar an der Decke."
+    },
+    {
+      "id": "fledermaus",
+      "name": "Fledermaus",
+      "size": "winzig",
+      "ac": 12,
+      "hp": 1,
+      "speed": "1,5 m, Fliegen 9 m",
+      "abilities": {
+        "str": 2,
+        "dex": 15,
+        "con": 8,
+        "int": 2,
+        "wis": 12,
+        "cha": 4
+      },
+      "skills": "",
+      "senses": "Blindsicht 18 m, passive Wahrnehmung 11",
+      "traits": [
+        {
+          "name": "Echolot",
+          "text": "Keine Blindsicht, solange sie taub ist."
+        },
+        {
+          "name": "Scharfes Gehör",
+          "text": "Vorteil auf Wahrnehmung, die auf Gehör beruht."
+        }
+      ],
+      "verdict": "Orientiert sich in völliger Dunkelheit, langsam im Flug.",
+      "note": "Korrigiert: Die Fledermaus hat Blindsicht, keine Dunkelsicht."
+    },
+    {
+      "id": "katze",
+      "name": "Katze",
+      "size": "winzig",
+      "ac": 12,
+      "hp": 2,
+      "speed": "12 m, Klettern 9 m",
+      "abilities": {
+        "str": 3,
+        "dex": 15,
+        "con": 10,
+        "int": 3,
+        "wis": 12,
+        "cha": 7
+      },
+      "skills": "Wahrnehmung +3, Heimlichkeit +4",
+      "senses": "Passive Wahrnehmung 13",
+      "traits": [
+        {
+          "name": "Scharfer Geruchssinn",
+          "text": "Vorteil auf Wahrnehmung, die auf Geruch beruht."
+        }
+      ],
+      "verdict": "Unauffällig in Städten und Siedlungen."
+    },
+    {
+      "id": "wiesel",
+      "name": "Wiesel",
+      "size": "winzig",
+      "ac": 13,
+      "hp": 1,
+      "speed": "9 m",
+      "abilities": {
+        "str": 3,
+        "dex": 16,
+        "con": 8,
+        "int": 2,
+        "wis": 12,
+        "cha": 3
+      },
+      "skills": "Wahrnehmung +3, Heimlichkeit +5",
+      "senses": "Passive Wahrnehmung 13",
+      "traits": [
+        {
+          "name": "Scharfes Gehör und scharfer Geruchssinn",
+          "text": "Vorteil auf Wahrnehmung, die auf Gehör oder Geruch beruht."
+        }
+      ],
+      "verdict": "Bester Schleicher an Land (Heimlichkeit +5), schnell, RK 13."
+    },
+    {
+      "id": "ratte",
+      "name": "Ratte",
+      "size": "winzig",
+      "ac": 10,
+      "hp": 1,
+      "speed": "6 m",
+      "abilities": {
+        "str": 2,
+        "dex": 11,
+        "con": 9,
+        "int": 2,
+        "wis": 10,
+        "cha": 4
+      },
+      "skills": "",
+      "senses": "Dunkelsicht 9 m, passive Wahrnehmung 10",
+      "traits": [
+        {
+          "name": "Scharfer Geruchssinn",
+          "text": "Vorteil auf Wahrnehmung, die auf Geruch beruht."
+        }
+      ],
+      "verdict": "Unauffällig in Lagern, Kellern und auf Schiffen."
+    },
+    {
+      "id": "krabbe",
+      "name": "Krabbe",
+      "size": "winzig",
+      "ac": 11,
+      "hp": 2,
+      "speed": "6 m, Schwimmen 6 m",
+      "abilities": {
+        "str": 2,
+        "dex": 11,
+        "con": 10,
+        "int": 1,
+        "wis": 8,
+        "cha": 2
+      },
+      "skills": "Heimlichkeit +2",
+      "senses": "Blindsicht 9 m, passive Wahrnehmung 9",
+      "traits": [
+        {
+          "name": "Amphibisch",
+          "text": "Atmet Luft und Wasser."
+        }
+      ],
+      "verdict": "Am Strand und im Hafen unauffällig. 9 m Blindsicht."
     },
     {
       "id": "tintenfisch",
@@ -67,13 +320,29 @@
       "ac": 12,
       "hp": 3,
       "speed": "1,5 m, Schwimmen 9 m",
-      "abilities": { "str": 4, "dex": 15, "con": 11, "int": 3, "wis": 10, "cha": 4 },
+      "abilities": {
+        "str": 4,
+        "dex": 15,
+        "con": 11,
+        "int": 3,
+        "wis": 10,
+        "cha": 4
+      },
       "skills": "Wahrnehmung +2, Heimlichkeit +4",
       "senses": "Dunkelsicht 9 m, passive Wahrnehmung 12",
       "traits": [
-        { "name": "Luft anhalten", "text": "Außerhalb des Wassers 30 Minuten." },
-        { "name": "Unterwassertarnung", "text": "Vorteil auf Heimlichkeit unter Wasser." },
-        { "name": "Tintenwolke", "text": "Unter Wasser: 1,5 m Radius komplett verschleiert für 1 Minute, danach Spurt als Bonusaktion. Lädt nach kurzer oder langer Rast." }
+        {
+          "name": "Luft anhalten",
+          "text": "Außerhalb des Wassers 30 Minuten."
+        },
+        {
+          "name": "Unterwassertarnung",
+          "text": "Vorteil auf Heimlichkeit unter Wasser."
+        },
+        {
+          "name": "Tintenwolke",
+          "text": "Unter Wasser: 1,5 m Radius komplett verschleiert für 1 Minute, danach Spurt als Bonusaktion. Lädt nach kurzer oder langer Rast."
+        }
       ],
       "verdict": "Für Unterwasser-Missionen, etwa beim Magischen Turm im See.",
       "note": "Korrigiert: Die Tintenwolke des normalen Oktopus hat 1,5 m Radius. Die 6 m im alten Dokument gehören zum Riesenkraken."
@@ -85,31 +354,52 @@
       "ac": 13,
       "hp": 1,
       "speed": "Schwimmen 12 m",
-      "abilities": { "str": 2, "dex": 16, "con": 9, "int": 1, "wis": 7, "cha": 2 },
+      "abilities": {
+        "str": 2,
+        "dex": 16,
+        "con": 9,
+        "int": 1,
+        "wis": 7,
+        "cha": 2
+      },
       "skills": "",
       "senses": "Dunkelsicht 18 m, passive Wahrnehmung 8",
       "traits": [
-        { "name": "Blutrausch", "text": "Vorteil auf Angriffe gegen verletzte Kreaturen. Als Vertrauter nutzlos, weil er nicht angreifen darf." },
-        { "name": "Wasseratmung", "text": "Atmet nur unter Wasser." }
+        {
+          "name": "Blutrausch",
+          "text": "Vorteil auf Angriffe gegen verletzte Kreaturen. Als Vertrauter nutzlos, weil er nicht angreifen darf."
+        },
+        {
+          "name": "Wasseratmung",
+          "text": "Atmet nur unter Wasser."
+        }
       ],
       "verdict": "Schnellster Schwimmer, sonst schwach."
     },
     {
-      "id": "fledermaus",
-      "name": "Fledermaus",
+      "id": "seepferdchen",
+      "name": "Seepferdchen",
       "size": "winzig",
-      "ac": 12,
+      "ac": 11,
       "hp": 1,
-      "speed": "1,5 m, Fliegen 9 m",
-      "abilities": { "str": 2, "dex": 15, "con": 8, "int": 2, "wis": 12, "cha": 4 },
-      "skills": "",
-      "senses": "Blindsicht 18 m, passive Wahrnehmung 11",
+      "speed": "0 m, Schwimmen 6 m",
+      "abilities": {
+        "str": 1,
+        "dex": 12,
+        "con": 8,
+        "int": 1,
+        "wis": 10,
+        "cha": 2
+      },
+      "skills": "Heimlichkeit +5",
+      "senses": "Passive Wahrnehmung 10",
       "traits": [
-        { "name": "Echolot", "text": "Keine Blindsicht, solange sie taub ist." },
-        { "name": "Scharfes Gehör", "text": "Vorteil auf Wahrnehmung, die auf Gehör beruht." }
+        {
+          "name": "Wasseratmung",
+          "text": "Kann nur unter Wasser atmen."
+        }
       ],
-      "verdict": "Orientiert sich in völliger Dunkelheit, langsam im Flug.",
-      "note": "Korrigiert: Die Fledermaus hat Blindsicht, keine Dunkelsicht."
+      "verdict": "Nur unter Wasser brauchbar, dort sehr heimlich."
     }
   ],
   "servant": {
@@ -136,15 +426,34 @@
       "hp": 13,
       "hpFormula": "2W8 + 4",
       "speed": "9 m",
-      "abilities": { "str": 10, "dex": 14, "con": 15, "int": 6, "wis": 8, "cha": 5 },
+      "abilities": {
+        "str": 10,
+        "dex": 14,
+        "con": 15,
+        "int": 6,
+        "wis": 8,
+        "cha": 5
+      },
       "vulnerable": "Wucht",
       "immune": "Gift · Erschöpfung, Vergiftet",
       "senses": "Dunkelsicht 18 m, passive Wahrnehmung 9",
       "languages": "Versteht die Sprachen seines früheren Lebens, spricht nicht",
       "cr": "1/4 (50 EP)",
       "actions": [
-        { "name": "Knochenschwert (Kurzschwert)", "bonus": 4, "damage": "1d6+2", "type": "Stich", "range": "1,5 m" },
-        { "name": "Knochenbogen (Kurzbogen)", "bonus": 4, "damage": "1d6+2", "type": "Stich", "range": "24/96 m" }
+        {
+          "name": "Knochenschwert (Kurzschwert)",
+          "bonus": 4,
+          "damage": "1d6+2",
+          "type": "Stich",
+          "range": "1,5 m"
+        },
+        {
+          "name": "Knochenbogen (Kurzbogen)",
+          "bonus": 4,
+          "damage": "1d6+2",
+          "type": "Stich",
+          "range": "24/96 m"
+        }
       ],
       "verdict": "Fernkampf-Artillerie aus der Deckung. Entsteht aus **Knochen**."
     },
@@ -156,24 +465,42 @@
       "hp": 22,
       "hpFormula": "3W8 + 9",
       "speed": "6 m",
-      "abilities": { "str": 13, "dex": 6, "con": 16, "int": 3, "wis": 6, "cha": 5 },
+      "abilities": {
+        "str": 13,
+        "dex": 6,
+        "con": 16,
+        "int": 3,
+        "wis": 6,
+        "cha": 5
+      },
       "saves": "WE +0",
       "immune": "Gift · Vergiftet",
       "senses": "Dunkelsicht 18 m, passive Wahrnehmung 8",
       "languages": "Versteht die Sprachen seines früheren Lebens, spricht nicht",
       "cr": "1/4 (50 EP)",
       "traits": [
-        { "name": "Untote Zähigkeit", "text": "Würde Schaden ihn auf 0 TP bringen, macht er einen KO-Rettungswurf gegen SG 5 + Schaden. Gelingt er, bleibt er bei 1 TP. Gilt nicht bei gleißendem Schaden oder kritischen Treffern." }
+        {
+          "name": "Untote Zähigkeit",
+          "text": "Würde Schaden ihn auf 0 TP bringen, macht er einen KO-Rettungswurf gegen SG 5 + Schaden. Gelingt er, bleibt er bei 1 TP. Gilt nicht bei gleißendem Schaden oder kritischen Treffern."
+        }
       ],
-      "actions": [{ "name": "Hieb", "bonus": 3, "damage": "1d6+1", "type": "Wucht", "range": "1,5 m" }],
+      "actions": [
+        {
+          "name": "Hieb",
+          "bonus": 3,
+          "damage": "1d6+1",
+          "type": "Wucht",
+          "range": "1,5 m"
+        }
+      ],
       "verdict": "Langsamer Trefferpunkte-Puffer. Entsteht aus einem **Leichnam**."
     }
   ],
   "party": [
     {
-      "id": "draka",
-      "name": "Draka „Khoraa“ Stormscale",
-      "altName": "In ihren eigenen Bögen: Aella Rayann „Khoraa“ Stormscale",
+      "id": "aella",
+      "name": "Aella Rayann „Khoraa“ Stormscale",
+      "altName": "In Valerius' Backstory noch Draka „Drake“ Stormscale",
       "role": "Bronzene Drachenblütige · Barbarin 5 (Pfad des Sturmherolds)",
       "ac": "16 (Halbplatte) · 18 mit Schild",
       "hp": 45,
@@ -187,5 +514,63 @@
       ],
       "source": "aella-overview"
     }
-  ]
+  ],
+  "familiarPlan": {
+    "title": "Nächste Beschwörung: Dschungel",
+    "intro": "Du willst in der nächsten Session neu beschwören. Gesucht ist eine Gestalt, die im Dschungel nicht auffällt. Neu wirken: als Ritual 1 Stunde 10 Minuten, **10 GM** Holzkohle, Weihrauch und Kräuter. Der bisherige Vertraute nimmt dabei einfach die neue Gestalt an.",
+    "options": [
+      {
+        "form": "rabe",
+        "label": "Tukan oder Papagei",
+        "dm": true,
+        "pro": [
+          "Fliegt 15 m und späht über das Blätterdach",
+          "Mimikry: Ein Papagei, der Stimmen nachahmt, ist im Dschungel normal",
+          "Bunte Vögel gehören dorthin"
+        ],
+        "con": [
+          "Keine Dunkelsicht",
+          "Nicht in der Liste des Zaubers, der DM muss zustimmen"
+        ]
+      },
+      {
+        "form": "echse",
+        "label": "Echse",
+        "pro": [
+          "Laut Zauber erlaubt",
+          "Im Land der Echsenvölker völlig unauffällig",
+          "Klettert, 9 m Dunkelsicht"
+        ],
+        "con": [
+          "Langsam (6 m)",
+          "Kann nicht fliegen"
+        ]
+      },
+      {
+        "form": "frosch",
+        "label": "Frosch",
+        "pro": [
+          "Laut Zauber erlaubt",
+          "Heimlichkeit +3, amphibisch",
+          "Ideal an Flüssen und Sümpfen"
+        ],
+        "con": [
+          "Langsam (6 m)",
+          "Kann nicht fliegen"
+        ]
+      },
+      {
+        "form": "eule",
+        "label": "Eule behalten",
+        "pro": [
+          "Bester Kampfhelfer (Vorbeiflug, *Helfen*)",
+          "36 m Dunkelsicht",
+          "Kostet nichts"
+        ],
+        "con": [
+          "Eulen fliegen meist nachts, am Tag fällt sie eher auf"
+        ]
+      }
+    ]
+  }
 }

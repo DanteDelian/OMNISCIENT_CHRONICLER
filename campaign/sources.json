@@ -74,7 +74,7 @@
     "status": "kanon",
     "group": "Hintergrund",
     "local": "/archiv/backstory",
-    "summary": "Oakhaven, die Zafferas, Draka und der Sprung nach Xantus."
+    "summary": "Oakhaven, die Zafferas, Aella und der Sprung nach Xantus."
   },
   {
     "id": "alchemie",
@@ -131,7 +131,7 @@
   },
   {
     "id": "aella-overview",
-    "title": "Aella Rayann Overview (Draka)",
+    "title": "Aella Rayann Overview (Aella)",
     "url": "https://docs.google.com/document/d/1SQZev924bjtDT_p_bWBY9eIquJsuKsa1XJsWorTmR5U/edit",
     "kind": "doc",
     "modified": "2025-11-15",
@@ -141,7 +141,7 @@
   },
   {
     "id": "kho-bogen",
-    "title": "Charakterbogen Kho. (Draka, Stufe 4)",
+    "title": "Charakterbogen Kho. (Aella, Stufe 4)",
     "url": "https://docs.google.com/document/d/1ctDrPA8gP7gOZbRO14dmlKRlHk4kNhyaAaK8eifG114/edit",
     "kind": "doc",
     "modified": "2025-10-05",

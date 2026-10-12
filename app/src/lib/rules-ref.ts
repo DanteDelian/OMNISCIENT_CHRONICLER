@@ -183,7 +183,7 @@ export const COMBAT_RULES: RuleItem[] = [
 export const VISION_RULES: RuleItem[] = [
 	{ name: 'Leicht verschleiert', text: 'Dämmerlicht, lockerer Nebel, Laub: Nachteil auf Wahrnehmung, die Sicht braucht.', valerius: 'Das Innere deines Netzes ist leicht verschleiert.' },
 	{ name: 'Komplett verschleiert', text: 'Dunkelheit, dichter Nebel: Wer hineinsieht, ist praktisch blind.' },
-	{ name: 'Dunkelsicht', text: 'Dämmerlicht wie helles Licht, Dunkelheit wie Dämmerlicht, aber nur in Grautönen.', valerius: 'Du hast 18 m Dunkelsicht. Dein Falke hat keine, die Eule 36 m.' }
+	{ name: 'Dunkelsicht', text: 'Dämmerlicht wie helles Licht, Dunkelheit wie Dämmerlicht, aber nur in Grautönen.', valerius: 'Du hast 18 m Dunkelsicht. Vertraute: Eule 36 m; Echse, Frosch, Ratte, Spinne 9 m; Fledermaus 18 m Blindsicht; Falke, Rabe, Katze, Wiesel keine.' }
 ];
 
 export const DEATH_RULES: RuleItem[] = [

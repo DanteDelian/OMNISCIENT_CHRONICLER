@@ -11,8 +11,8 @@ summary: Identitäts- und Papierfälscher, alter Kollege aus Zaffera-Zeiten. „
 
 **Identitäts- und Papierfälscher · alter Kollege aus Zaffera-Zeiten · Valerius' wichtigster Kontakt in der alten Welt.**
 
-- Verschaffte Valerius und [[Draka Stormscale|Draka]] die Tarnidentitäten der [[Die Donnergarde|Donnergarde]] und damit die Überfahrt nach [[Xantus]]. Treffpunkt war das [[Belovia und Mühlen-Inn|Mühlen-Inn]].
-- „Du schuldest mir was, ich melde mich.“ Draka sieht das wie ein Damoklesschwert über euch.
+- Verschaffte Valerius und [[Aella Rayann|Aella]] die Tarnidentitäten der [[Die Donnergarde|Donnergarde]] und damit die Überfahrt nach [[Xantus]]. Treffpunkt war das [[Belovia und Mühlen-Inn|Mühlen-Inn]].
+- „Du schuldest mir was, ich melde mich.“ Aella sieht das wie ein Damoklesschwert über euch.
 - **Telepathische Nachricht (später):** Der Tod der echten Donnergarde ist öffentlich, „wir hatten die Leichen eigentlich gut versteckt“. [[Lisbeth Lhaaz]] komme mit dem nächsten Schiff, der Graf habe über die Zafferas Söldner auf sie angesetzt. Die Nachricht kam **zu spät**: Ihr hattet Lisbeth schon gerettet.
 - Laut DM war die Nachricht reine Kollegialität. Magische Botschaften über Kontinente brauchen hochgradige Zauber oder Spruchrollen.
 

@@ -14,4 +14,4 @@ summary: Dschungelhügel und das Höhlensystem des roten Clans, von der Society 
 - **Hügelberg:** vom roten Clan als Aussichtspunkt genutzt.
 - **Zuflucht:** ein Höhlensystem in der Nähe mit teils überfluteten Tunneln, größeren Höhlen und einer **Magmakammer**, dem „Bossraum“.
 - Von der [[Sorcerer Society]] besetzt und **von der Gruppe befreit**. Der Society-Anführer entkam unsichtbar, den Raum hatte er schon geplündert.
-- Laut Drakas Notizen sind nur noch wenige Eier des Clans übrig, die Höhle ist aber wieder bewohnbar.
+- Laut Aellas Notizen sind nur noch wenige Eier des Clans übrig, die Höhle ist aber wieder bewohnbar.

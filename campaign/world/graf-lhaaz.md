@@ -13,5 +13,5 @@ summary: Oberhaupt des Hauses Lhaaz. Bestellte über die Zafferas den Tod seiner
 
 - Seine Familie wirkte an der ersten Expedition nach [[Xantus]] mit. Sein Bruder, ein **Baron**, hat dort die meiste Macht.
 - Er schickte seine Kinder [[Leon Lhaaz|Leon]] und [[Lula Lhaaz|Lula]] in die neue Stadt flussaufwärts, wo „etwas Besonderes“ entdeckt worden war und es Probleme gab. Dafür suchte er erfahrene, loyale Ritter als Schutz.
-- **Familienkonflikt:** Er ließ über die [[Zaffera-Syndikat|Zafferas]] Söldner anheuern, damit [[Lisbeth Lhaaz]] „verschwindet“. Ihr Schiff wurde von der eigenen Eskorte angegriffen. **Gescheitert:** Valerius und Draka retteten sie.
+- **Familienkonflikt:** Er ließ über die [[Zaffera-Syndikat|Zafferas]] Söldner anheuern, damit [[Lisbeth Lhaaz]] „verschwindet“. Ihr Schiff wurde von der eigenen Eskorte angegriffen. **Gescheitert:** Valerius und Aella retteten sie.
 - Dieser Konflikt ist ein **Hebel** für Valerius.

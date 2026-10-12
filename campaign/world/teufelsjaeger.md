@@ -13,4 +13,4 @@ Handschriftliche Notiz im Kampagnen-Log: **„die Nummer 2 der Teufelsjäger ges
 
 Mehr ist nicht notiert. Offen: Wer sind die Teufelsjäger, wer ist ihre Nummer 2, und wo wurde sie gesehen?
 
-*Möglicher Zusammenhang (Theorie):* Draka notierte über einen Gegner „kann Teufel beschwören (?)“.
+*Möglicher Zusammenhang (Theorie):* Aella notierte über einen Gegner „kann Teufel beschwören (?)“.

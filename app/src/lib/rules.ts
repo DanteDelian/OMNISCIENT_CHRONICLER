@@ -187,6 +187,33 @@ export function preparedCount(spells: Spell[]): number {
 	return spells.filter((s) => s.status === 'buch' && s.level > 0 && s.prepared).length;
 }
 
+/** Bekannte Zaubertricks eines Magiers (SHB 2014): 3, ab Stufe 4 vier, ab Stufe 10 fünf. */
+export function cantripsKnown(level: number): number {
+	return level >= 10 ? 5 : level >= 4 ? 4 : 3;
+}
+
+export type PickGroup = { maxGrade: number; total: number; used: number };
+
+/**
+ * Kostenlose Einträge im Zauberbuch: 6 auf Stufe 1, dann 2 pro Aufstieg, jeweils bis zum
+ * höchsten Grad, den der Magier auf der neuen Stufe wirken kann. Die Zauber im Buch belegen
+ * die Gruppen, höchster Grad zuerst und immer in die engste passende Gruppe.
+ */
+export function wizardPicks(level: number, gradesInBook: number[]): PickGroup[] {
+	const groups: PickGroup[] = [];
+	for (let l = 1; l <= level; l++) {
+		const maxGrade = Math.min(9, Math.ceil(l / 2));
+		const g = groups.find((x) => x.maxGrade === maxGrade);
+		if (g) g.total += 2;
+		else groups.push({ maxGrade, total: l === 1 ? 6 : 2, used: 0 });
+	}
+	for (const grade of [...gradesInBook].sort((a, b) => b - a)) {
+		const g = groups.find((x) => x.maxGrade >= grade && x.used < x.total);
+		if (g) g.used++;
+	}
+	return groups;
+}
+
 /** Kann der Zauber gerade gewirkt werden (vorbereitet, Ritual oder Zaubertrick)? */
 export function castable(sp: Spell): boolean {
 	if (sp.status !== 'buch') return false;
