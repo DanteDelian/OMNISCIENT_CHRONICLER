@@ -5,7 +5,7 @@
 	import TranceSelect from '$lib/components/TranceSelect.svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { rolls } from '$lib/stores/rolls.svelte';
-	import {
+	import { attackBonus,
 		ABILITIES,
 		ABILITY_SHORT,
 		ECONOMY_LABEL,
@@ -119,11 +119,10 @@
 				{#each SKILLS as k (k.key)}
 					{@const prof = skillProficient(c, s, k.key)}
 					<tr class="border-b border-line last:border-0">
-						<td class="py-1.5">{#if prof === 'fest'}<span class="text-astral">●</span>{:else if prof === 'trance'}<span class="text-gold">✦</span>{:else}<span class="text-ink-3">○</span>{/if}</td>
+						<td class="py-1.5">{#if prof === 'fest'}<span class="text-astral">●</span>{:else}<span class="text-ink-3">○</span>{/if}</td>
 						<td class="py-1.5 {prof ? 'text-ink' : 'text-ink-2'}">
 							{k.name}
 							{#if prof === 'fest'}<span class="block text-[0.65rem] text-ink-3">{c.skills[k.key]}</span>{/if}
-							{#if prof === 'trance'}<span class="block text-[0.65rem] text-gold">Astrale Trance (heute)</span>{/if}
 						</td>
 						<td class="py-1.5 text-xs text-ink-3">{ABILITY_SHORT[k.ability]}</td>
 						<td class="py-1.5 text-right">
@@ -146,7 +145,7 @@
 							<div class="font-medium">{a.name}</div>
 							<div class="text-xs text-ink-3">{a.range} · {a.props}</div>
 						</div>
-						<button class="btn btn-sm" onclick={() => rolls.check(`${a.name}: Angriff`, a.bonus)}>Angriff {fmtMod(a.bonus)}</button>
+						<button class="btn btn-sm" onclick={() => rolls.check(`${a.name}: Angriff`, attackBonus(c, s, a))}>Angriff {fmtMod(attackBonus(c, s, a))}</button>
 						<button class="btn btn-sm" onclick={() => rolls.damage(`${a.name}: Schaden`, a.damage)}><Dices size={13} />{diceDe(a.damage)} {a.damageType}</button>
 						{#if a.damageAlt}<button class="btn btn-sm" onclick={() => rolls.damage(`${a.name}: zweihändig`, a.damageAlt!)}>{diceDe(a.damageAlt)} zweihändig</button>{/if}
 					</div>

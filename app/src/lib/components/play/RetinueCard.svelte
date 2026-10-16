@@ -1,12 +1,14 @@
 <script lang="ts">
 	import { Bird, Ghost, Skull, Plus, Minus, X, CircleCheck, CircleAlert } from '@lucide/svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
-	import { addMinion, removeMinion } from '$lib/game';
+	import { FAMILIAR_MATERIAL, addMinion, removeMinion, summonFamiliar } from '$lib/game';
 
 	const s = $derived(campaign.data.state);
 	const cr = $derived(campaign.data.creatures);
 	const familiar = $derived(cr.familiars.find((f) => f.id === s.familiar.form) ?? cr.familiars[0]);
 	const partner = $derived(cr.party[0]);
+	const fallen = $derived(s.familiar.hp <= 0);
+	const material = $derived(campaign.data.inventory.items.find((i) => i.id === FAMILIAR_MATERIAL)?.qty ?? 0);
 
 	function minionHp(id: string, delta: number) {
 		campaign.change('state', (st) => {
@@ -36,13 +38,21 @@
 				<a href="/gefolge#{familiar?.id}" data-ref="creature:{familiar?.id}" class="hover:text-astral">{familiar?.name}</a>
 				<span class="text-xs text-ink-3">· Vertrauter</span>
 			</div>
-			<div class="text-xs text-ink-3">RK {familiar?.ac} · {s.familiar.hp}/{familiar?.hp} TP · {familiar?.speed}</div>
+			{#if fallen}
+				<div class="text-xs text-blood">Gefallen · neu beschwören: Ritual 1 Std. 10 Min. · Material {material}×</div>
+			{:else}
+				<div class="text-xs text-ink-3">RK {familiar?.ac} · {s.familiar.hp}/{familiar?.hp} TP · {familiar?.speed}</div>
+			{/if}
 		</div>
-		<button
-			class="chip {s.familiar.present ? 'chip-on' : ''}"
-			onclick={() => campaign.change('state', (st) => (st.familiar.present = !st.familiar.present))}
-			title="Aktion: in die Taschendimension schicken oder zurückrufen">{s.familiar.present ? 'Anwesend' : 'Taschendimension'}</button
-		>
+		{#if fallen}
+			<button class="btn btn-xs" onclick={() => summonFamiliar(s.familiar.form)} title="Vertrauten finden als Ritual gewirkt: gleiche Gestalt, verbraucht 1 Material. Andere Gestalt: Seite Gefolge.">Beschworen</button>
+		{:else}
+			<button
+				class="chip {s.familiar.present ? 'chip-on' : ''}"
+				onclick={() => campaign.change('state', (st) => (st.familiar.present = !st.familiar.present))}
+				title="Aktion: in die Taschendimension schicken oder zurückrufen">{s.familiar.present ? 'Anwesend' : 'Taschendimension'}</button
+			>
+		{/if}
 	</div>
 
 	<!-- Diener -->
@@ -83,7 +93,7 @@
 		</ul>
 	{:else}
 		<p class="rounded-lg border border-dashed border-line p-3 text-xs text-ink-3">
-			Noch keine Untoten. Ziel: das Schlachtfeld im Südosten. Aus Knochen werden Skelette (Kurzbogen +4, 1W6 + 2).
+			Noch keine Untoten eingetragen. Erweckte Skelette mit „Skelett“ hinzufügen, die Kontrolle hält 24 Stunden. Skelett: Kurzbogen +4, 1W6 + 2.
 		</p>
 	{/if}
 

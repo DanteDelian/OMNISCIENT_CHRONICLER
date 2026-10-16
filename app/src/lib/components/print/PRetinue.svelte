@@ -9,9 +9,11 @@
 	const cr = $derived(campaign.data.creatures);
 	const plan = $derived(cr.familiarPlan);
 	const current = $derived(cr.familiars.find((f) => f.id === s.familiar.form));
+	const fallen = $derived(s.familiar.hp <= 0);
+	const currentLabel = $derived(fallen ? `keiner (${current?.name ?? 'Vertrauter'} gefallen)` : (current?.name ?? '—'));
 </script>
 
-<PDoc id="gefolge" refs={['page:gefolge']} eyebrow="Gefolge" title="Vertraute, Untote, Diener" subtitle="Wertblöcke nach SRD 5.1 · Vertrauter aktuell: {current?.name ?? '—'}">
+<PDoc id="gefolge" refs={['page:gefolge']} eyebrow="Gefolge" title="Vertraute, Untote, Diener" subtitle="Wertblöcke nach SRD 5.1 · Vertrauter aktuell: {currentLabel}">
 	<h2 style="margin-top: 0">Deine Untoten</h2>
 	<div class="grid g2" style="gap: 4mm">
 		{#each cr.undead as u (u.id)}
@@ -63,7 +65,7 @@
 
 	<h2 class="page-break" style="margin-top: 0">Vertrauter</h2>
 	<p class="soft">
-		Aktuell: <b>{current?.name}</b>. Ein Geist (Himmlisches Wesen, Feenwesen oder Unhold) in Tiergestalt. Kann nicht angreifen, aber helfen, spähen und Berührungszauber
+		Aktuell: <b>{currentLabel}</b>. Ein Geist (Himmlisches Wesen, Feenwesen oder Unhold) in Tiergestalt. Kann nicht angreifen, aber helfen, spähen und Berührungszauber
 		überbringen. Telepathie bis 30 m. Neue Gestalt = neues Wirken (als Ritual 1 Stunde 10 Minuten, 10 GM).
 	</p>
 
@@ -73,7 +75,7 @@
 		<div class="grid g4" style="gap: 2.5mm; margin-top: 2mm">
 			{#each plan.options as o (o.form)}
 				{@const f = cr.familiars.find((x) => x.id === o.form)}
-				<div class="box small" style={o.form === s.familiar.form ? 'border-color: var(--p-accent)' : ''}>
+				<div class="box small" style={o.form === s.familiar.form && !fallen ? 'border-color: var(--p-accent)' : ''}>
 					<div class="spread"><b>{o.label}</b>{#if o.dm}<span class="pill" style="--c: var(--p-warn)">DM fragen</span>{/if}</div>
 					<div class="tiny muted">{f && !o.label.includes(f.name.replace(/\s*\(.*\)/, '')) ? `Werte: ${f.name} · ` : ''}RK {f?.ac} · {f?.hp} TP · {f?.speed}</div>
 					<ul style="margin-top: 1mm">
@@ -92,7 +94,7 @@
 		<tbody>
 			{#each cr.familiars as f (f.id)}
 				<tr>
-					<td><a href="#{printAnchor(`creature:${f.id}`)}"><b>{f.name}</b></a>{f.id === s.familiar.form ? ' ●' : ''}</td>
+					<td><a href="#{printAnchor(`creature:${f.id}`)}"><b>{f.name}</b></a>{f.id === s.familiar.form && !fallen ? ' ●' : ''}</td>
 					<td class="c num">{f.ac}</td>
 					<td class="c num">{f.hp}</td>
 					<td>{f.speed}</td>
@@ -121,7 +123,7 @@
 				traits={f.traits}
 				verdict={f.verdict}
 				note={f.note}
-				current={f.id === s.familiar.form}
+				current={f.id === s.familiar.form && !fallen}
 			/>
 		{/each}
 	</div>

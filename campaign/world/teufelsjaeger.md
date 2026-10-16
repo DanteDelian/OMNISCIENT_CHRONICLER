@@ -1,16 +1,19 @@
 ---
-name: Die Nummer 2 der Teufelsjäger
+name: Die Teufelsjäger
 aliases: [Teufelsjäger]
-kind: person
-group: bedrohung
+kind: fraktion
+group: kontakt
 tone: unknown
-status: Gesichtet
-summary: Laut handschriftlicher Notiz gesichtet. Sonst nichts bekannt.
+status: Kaum bekannt
+summary: Eine Organisation, deren Nummer 2 wohl Lucira ist. Sonst nichts bekannt.
 ---
-# Die Nummer 2 der Teufelsjäger
+# Die Teufelsjäger
 
-Handschriftliche Notiz im Kampagnen-Log: **„die Nummer 2 der Teufelsjäger gesichtet“**.
+**Eine Organisation, über die fast nichts bekannt ist.**
 
-Mehr ist nicht notiert. Offen: Wer sind die Teufelsjäger, wer ist ihre Nummer 2, und wo wurde sie gesehen?
+- Ihre **Nummer 2** ist laut dir wohl [[Lucira]], eine Tiefling-Hexenmeisterin. Echsenmenschen zu jagen, ist unter ihrer Würde.
+- Deine diktierte Notiz vom 12.07.2026: „die Nummer 2 der Teufelsjäger gesichtet“.
 
-*Möglicher Zusammenhang (Theorie):* Aella notierte über einen Gegner „kann Teufel beschwören (?)“.
+**Offen:** Wen jagen die Teufelsjäger, wer führt sie, und warum ist ihre Nummer 2 in Xantus? Siehe [[Lucira und die Teufelsjäger]].
+
+*Theorie:* Aella notierte über den Anführer der [[Sorcerer Society]] „kann Teufel beschwören (?)“. Vielleicht kreuzen sich hier die Wege.

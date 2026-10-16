@@ -19,3 +19,8 @@ summary: Uniformierte Magier, die alle Echsenmenschen ausrotten wollen. Ihr Anf�
 - Ein **Elf mit schuppenartiger Hautflechte**. Er beschwor zwei geflügelte Echsenkreaturen und teleportierte sich nach deren Niederlage **unsichtbar** davon. Seinen Bossraum, eine Magmakammer, hatte er schon geplündert.
 - *Theorie:* Aellas Notiz „komischer humanoider Echsentyp, sehr androgyn, kann Teufel beschwören (?)“ könnte dieselbe Person meinen.
 - *Gegenzauber* ist Valerius' Antwort, auch gegen die Flucht per Teleport.
+
+## Neu (Juli 2026)
+- Laut den Echsen wird die Society im **Osten und Nordosten** immer stärker, breitet sich aus und **erntet die Seelen** der Echsen anderer Stämme.
+- In der [[Die südliche Freistadt|Freistadt]] gibt es laut den Lhaaz vielleicht mächtige Leute oder Gruppen, die wissen, wie man mit der Society umgeht.
+- *Theorie:* Die X-Cluster im Osten der Echsen-Karte zeigen dieses Gebiet.

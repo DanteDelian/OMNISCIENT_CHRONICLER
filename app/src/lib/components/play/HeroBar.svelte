@@ -3,7 +3,7 @@
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { rolls } from '$lib/stores/rolls.svelte';
 	import { ui } from '$lib/stores/ui.svelte';
-	import { SKILLS, armorClass, fmtMod, initiative, passivePerception, spellAttack, spellDc } from '$lib/rules';
+	import { armorClass, fmtMod, initiative, passivePerception, spellAttack, spellDc } from '$lib/rules';
 
 	const c = $derived(campaign.data.character);
 	const s = $derived(campaign.data.state);
@@ -24,7 +24,6 @@
 		{ label: 'Pass. Wahrnehmung', value: String(passivePerception(c, s)), icon: Eye, hint: '10 + Wahrnehmung' },
 		{ label: 'Dunkelsicht', value: `${c.darkvision} m`, icon: Moon, hint: '60 Fuß' }
 	]);
-	const tranceSkill = $derived(SKILLS.find((k) => k.key === s.trance.skill)?.name ?? '');
 </script>
 
 <section class="panel panel-glow overflow-hidden p-5">
@@ -48,10 +47,10 @@
 
 		<div class="flex flex-wrap items-center gap-2">
 			<button class="chip {s.inspiration ? 'chip-on' : ''}" onclick={toggleInspiration}><Star size={13} />Inspiration{s.inspiration ? ' ✓' : ''}</button>
-			{#if tranceSkill || s.trance.tool}
-				<button class="chip" onclick={() => (ui.rest = 'lang')} title="Astrale Trance (bis zur nächsten langen Rast)">✦ {[tranceSkill, s.trance.tool].filter(Boolean).join(' · ')}</button>
+			{#if s.trance.tool}
+				<button class="chip" onclick={() => (ui.rest = 'lang')} title="Astrale Trance (bis zur nächsten langen Rast)">✦ {s.trance.tool}</button>
 			{:else}
-				<button class="chip !border-warn/40 !text-warn" onclick={() => (ui.rest = 'lang')} title="Nach der Trance eine Fertigkeit und ein Werkzeug wählen">✦ Trance-Übung wählen</button>
+				<button class="chip !border-warn/40 !text-warn" onclick={() => (ui.rest = 'lang')} title="Nach der Trance eine Waffe oder ein Werkzeug wählen">✦ Trance-Übung wählen</button>
 			{/if}
 			<button class="btn btn-sm" onclick={() => (ui.rest = 'kurz')}><Coffee size={14} />Kurze Rast</button>
 			<button class="btn btn-sm" onclick={() => (ui.rest = 'lang')}><Moon size={14} />Lange Rast</button>

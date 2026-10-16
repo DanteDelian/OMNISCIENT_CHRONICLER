@@ -39,7 +39,6 @@
 		<div class="eyebrow">Fertigkeiten</div>
 		<span class="flex items-center gap-3 text-[0.65rem] text-ink-3">
 			<span class="flex items-center gap-1"><span class="h-1.5 w-1.5 rounded-full bg-astral"></span>geübt</span>
-			<span class="flex items-center gap-1"><span class="text-gold">✦</span>Trance</span>
 		</span>
 	</div>
 	<ul class="grid grid-cols-1 gap-x-4 sm:grid-cols-2 lg:grid-cols-1">
@@ -50,10 +49,10 @@
 				<button
 					class="flex w-full items-center gap-2 rounded-lg px-1.5 py-[3px] text-left text-[0.83rem] transition hover:bg-white/[0.05]"
 					onclick={() => rolls.check(k.name, b)}
-					title={prof === 'fest' ? `Geübt: ${c.skills[k.key]}` : prof === 'trance' ? 'Geübt durch Astrale Trance (heute)' : 'Ungeübt'}
+					title={prof === 'fest' ? `Geübt: ${c.skills[k.key]}` : 'Ungeübt'}
 				>
 					<span class="w-2.5 text-center">
-						{#if prof === 'fest'}<span class="inline-block h-1.5 w-1.5 rounded-full bg-astral"></span>{:else if prof === 'trance'}<span class="text-[0.7rem] text-gold">✦</span>{:else}<span class="inline-block h-1.5 w-1.5 rounded-full border border-white/20"></span>{/if}
+						{#if prof === 'fest'}<span class="inline-block h-1.5 w-1.5 rounded-full bg-astral"></span>{:else}<span class="inline-block h-1.5 w-1.5 rounded-full border border-white/20"></span>{/if}
 					</span>
 					<span class="flex-1 truncate {prof ? 'text-ink' : 'text-ink-2'}">{k.name}</span>
 					<span class="text-[0.65rem] text-ink-3">{ABILITY_SHORT[k.ability]}</span>

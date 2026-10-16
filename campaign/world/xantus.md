@@ -16,3 +16,5 @@ summary: Wildnis, Ruinen, Reichtümer und Flüche. Eine ehemalige Sträflingskol
 - Neben der Baronsstadt entsteht flussaufwärts eine kleine Stadt, [[Die Siedlung]]. Dort wurde „etwas Besonderes“ entdeckt.
 - Die Lhaaz-Schiffskarawanen sind die einzige Verbindung zurück.
 - Für Valerius ist es das Land, auf dem sein **Imperium** entstehen soll.
+
+*Theorie (Juli 2026):* [[Leonidas Lhaaz|Graf Leonidas]], Leons Onkel mit eigener Stadt im Westen, ist der Baron. Die Baronsstadt wäre dann die [[Die belagerte Stadt im Westen|belagerte Stadt im Westen]].

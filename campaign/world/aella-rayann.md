@@ -17,9 +17,10 @@ summary: Bronzene Drachenblütige und Sturmherold, Valerius' Partnerin seit Oakh
 - Tarnidentität: **„Khoraa, die wandernde Dragonborn-Ritterin“** der [[Die Donnergarde|Donnergarde]], inzwischen aufgeflogen.
 - Beim Verhör durch [[Lisbeth Lhaaz]] versagten ihr die Worte. Das hat Lisbeths Verdacht bestätigt.
 - Sie träumt von einem Leben ohne ständige Gewalt und sieht mit Sorge, wie Valerius sich an seiner Macht berauscht. Sie versteht sich als sein Schild, vielleicht auch als sein Gewissen.
-- **Plan:** Sie bekommt einen der magischen Ohrringe (1× pro Tag *Botschaft* zwischen den Trägern).
+- **Plan:** Sie bekommt einen der magischen Ohrringe (1× pro Tag *Verständigung* zwischen den Trägern, Entfernung egal).
 - Ihre Notizen sind laut Patrick aktueller als Valerius' Kampagnen-Log.
 
 **Kampfwerte laut ihrem Bogen:** RK 16, mit Schild 18 · 45 TP · 12 m · Kampfrausch 3× · Sturmaura · Odem.
 
 Gemeinsame Geschichte: [[Backstory]]
+- **11.10.2026:** Sie war dabei, als drei Gefährten über Nacht verschwanden, und wartete mit dir und dem gefangenen Orc in [[Twee]]s winziger Hütte.

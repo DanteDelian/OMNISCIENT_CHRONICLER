@@ -199,6 +199,33 @@ export function longRest() {
 	save();
 }
 
+/** Material für ein Wirken von Vertrauten finden (Inventar-ID). */
+export const FAMILIAR_MATERIAL = 'vertrauten-material';
+
+/**
+ * Vertrauten finden neu wirken: neue Gestalt oder Ersatz für einen gefallenen Vertrauten.
+ * Verbraucht ein Material aus dem Inventar, falls vorhanden.
+ */
+export function summonFamiliar(form: string) {
+	const f = campaign.data.creatures.familiars.find((x) => x.id === form);
+	if (!f) return;
+	st().familiar = { form, present: true, hp: f.hp };
+	save();
+	const mat = campaign.data.inventory.items.find((i) => i.id === FAMILIAR_MATERIAL);
+	let note = 'Ritual: 1 Stunde 10 Minuten';
+	if (mat && mat.qty > 0) {
+		const left = mat.qty - 1;
+		campaign.change('inventory', (inv) => {
+			const m = inv.items.find((i) => i.id === FAMILIAR_MATERIAL);
+			if (m) m.qty = left;
+		});
+		note += ` · Material: noch ${left}`;
+	} else {
+		note += ' · Material für 10 GM nötig (keins im Inventar)';
+	}
+	rolls.event(`${f.name} beschworen`, note, 'info');
+}
+
 export function addMinion(kind: Minion['kind']) {
 	const block = campaign.data.creatures.undead.find((u) => u.id === kind);
 	const n = st().minions.filter((m) => m.kind === kind).length + 1;

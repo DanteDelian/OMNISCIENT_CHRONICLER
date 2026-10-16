@@ -165,7 +165,7 @@
       "**Wer dich beobachtet, merkt, dass du zauberst:** Du flüsterst und zeigst auf das Ziel (V, G). Den Inhalt hört nur das Ziel.",
       "**Die Antwort muss sofort kommen,** denn der Zauber hält nur 1 Runde.",
       "**Durch Wände nur unter Bedingungen:** Du musst das Ziel kennen und wissen, dass es hinter der Barriere ist.",
-      "**Für große Entfernungen** gibt es die magischen Ohrringe: 1× pro Tag, nur zwischen den beiden Trägern."
+      "**Für große Entfernungen** gibt es die magischen Ohrringe: 1× pro Tag *Verständigung* (bis zu 25 Wörter, Antwort sofort), nur zwischen den beiden Trägern."
     ],
     "uses": [
       "Unauffällige Koordination mit Aella bei Erkundungen, Infiltrationen und Verhandlungen, etwa mit Leon Lhaaz oder den Echsenmenschen.",
@@ -204,7 +204,7 @@
     "duration": "Unmittelbar",
     "source": "Spielerhandbuch 2014 (engl. S. 240) · SRD 5.1",
     "text": "Du erhältst die Dienste eines **Vertrauten**, eines Geistes, der eine Tiergestalt deiner Wahl annimmt: Fledermaus, Katze, Krabbe, Frosch (Kröte), **Falke**, Echse, Oktopus, **Eule**, Giftschlange, Fisch (Quipper), Ratte, Rabe, Seepferdchen, Spinne oder Wiesel. Er erscheint auf einem freien Feld in Reichweite und hat die Werte der gewählten Gestalt, ist aber ein **Himmlisches Wesen, Feenwesen oder Unhold** (deine Wahl) statt eines Tiers.\n\nDein Vertrauter handelt unabhängig von dir, gehorcht aber immer deinen Befehlen. Im Kampf würfelt er eigene Initiative und handelt in seinem eigenen Zug. **Ein Vertrauter kann nicht angreifen,** aber andere Aktionen normal ausführen.\n\nFällt der Vertraute auf 0 Trefferpunkte, verschwindet er und hinterlässt keinen Körper. Er erscheint wieder, wenn du diesen Zauber erneut wirkst.\n\nSolange er höchstens **30 m** entfernt ist, kannst du telepathisch mit ihm kommunizieren. Außerdem kannst du **als Aktion** bis zum Beginn deines nächsten Zuges durch seine Augen sehen und hören, was er hört, und nutzt dabei seine besonderen Sinne. In dieser Zeit bist du für deine eigenen Sinne taub und blind.\n\nAls Aktion kannst du deinen Vertrauten vorübergehend entlassen. Er verschwindet in eine Taschendimension und wartet dort auf deinen Ruf. Du kannst ihn auch für immer entlassen. Ist er vorübergehend entlassen, kannst du ihn als Aktion auf einem freien Feld in bis zu 9 m Entfernung wieder erscheinen lassen.\n\nDu kannst nicht mehr als einen Vertrauten gleichzeitig haben. Wirkst du den Zauber, während du schon einen hast, nimmt er stattdessen eine neue Gestalt aus der obigen Liste an.\n\nWenn du einen Zauber mit der Reichweite **Berührung** wirkst, kann dein Vertrauter ihn überbringen, als hätte er ihn gewirkt. Er muss höchstens 30 m von dir entfernt sein und **seine Reaktion** nutzen, um den Zauber beim Wirken zu überbringen. Verlangt der Zauber einen Angriffswurf, nutzt du deinen Angriffsmodifikator.",
-    "valerius": "Aktuell: **Eule** (RK 11, 1 TP, Fliegen 18 m, Dunkelsicht 36 m, Vorbeiflug). Vorher: Falke. Neue Gestalt für den Dschungel ist geplant. Telepathie und Überbringen bis **30 m**. Kosten pro Wirken: **10 GM**.",
+    "valerius": "Aktuell: **kein Vertrauter**. Die Eule wurde am 11.10.2026 beim Verfolgen des Orc-Schamanen getötet. Neu beschwören (Ritual, 1 Stunde 10 Minuten) mit dem Material der Kräuterfrau. Telepathie und Überbringen bis **30 m**. Kosten pro Wirken: **10 GM** Material.",
     "tips": [
       "**Helfen statt Angreifen:** Der Vertraute darf nicht angreifen, aber die Aktion *Helfen* nutzen. Der nächste Angriff von dir oder Aella gegen das Ziel hat Vorteil.",
       "**Durch seine Sinne sehen** kostet deine Aktion und macht dich bis zu deinem nächsten Zug blind und taub für deine eigene Umgebung. Also nicht mitten im Kampf.",
@@ -256,7 +256,7 @@
       "charakterbogen-alt",
       "kampagnen-log"
     ],
-    "summary": "Geist in Tiergestalt (aktuell: Eule). Späher, Helfer, überbringt Berührungszauber."
+    "summary": "Geist in Tiergestalt. Späher, Helfer, überbringt Berührungszauber."
   },
   {
     "id": "unsichtbarer-diener",
@@ -925,6 +925,33 @@
     "tips": [
       "**Mehrere Rollen in einer Stunde:** Das Aussehen lässt sich als Aktion erneut ändern.",
       "**Konzentration:** Ein Treffer kann die Verwandlung beenden. Bei Infiltrationen nicht in Kämpfe geraten."
+    ],
+    "docs": []
+  },
+  {
+    "id": "magie-bannen",
+    "name": "Magie bannen",
+    "en": "Dispel Magic",
+    "level": 3,
+    "school": "Bannzauber",
+    "status": "vorschlag",
+    "time": "1 Aktion",
+    "economy": "aktion",
+    "range": "36 m (120 Fuß)",
+    "target": "Eine Kreatur, ein Gegenstand oder ein magischer Effekt in Reichweite",
+    "components": "V, G",
+    "duration": "Unmittelbar",
+    "source": "Spielerhandbuch 2014 (engl. S. 234) · SRD 5.1",
+    "summary": "Beendet Zauber auf einer Kreatur, einem Gegenstand oder einem magischen Effekt: bis Grad 3 sicher, darüber mit einem Attributswurf.",
+    "text": "Wähle eine Kreatur, einen Gegenstand oder einen magischen Effekt in Reichweite. Jeder Zauber des **3. Grades oder niedriger** auf dem Ziel **endet**. Für jeden Zauber des **4. Grades oder höher** auf dem Ziel machst du einen **Attributswurf mit deinem Attribut zum Zauberwirken**. Der SG beträgt **10 + der Grad des Zaubers**. Bei einem Erfolg endet der Zauber.",
+    "higher": "Wirkst du diesen Zauber mit einem Platz des 4. Grades oder höher, endet jeder Zauber auf dem Ziel automatisch, dessen Grad höchstens dem Grad des verwendeten Platzes entspricht.",
+    "valerius": "Reichweite 36 m · Zauber bis Grad 3 enden sicher · darüber IN-Wurf **+4** gegen SG 10 + Grad (Grad 4: 55 %, Grad 5: 50 %, Grad 6: 45 %).",
+    "why": "**Gegen die Riesenrunen der Orcs:** *Magie entdecken* zeigte Erkenntnismagie. Ist das Mal ein Zaubereffekt, beendet *Magie bannen* es, bis Grad 3 sicher. Dann braucht ihr nicht jedes Mal Nita. Dazu beendet es Zauber der Sorcerer Society an Verbündeten und löst magische Fallen und Barrieren. Ab Stufe 6 lernst du 2 neue Zauber bis Grad 3.",
+    "slot": "Stufe 6 (einer der 2 neuen Zauber bis Grad 3)",
+    "tips": [
+      "**Ob das Runenmal ein Zauber ist, entscheidet der DM.** Ist es eher ein Fluch, hilft *Fluch brechen* (ebenfalls Grad 3).",
+      "**Beschworene Wesen:** Ein Wesen, das ein laufender Zauber herbeigerufen hat, ist ein magischer Effekt. Bis Grad 3 verschwindet es sofort.",
+      "**Abschreiben kostet den vollen Preis:** Bannzauber ist keine Beschwörung, also 150 GM und 6 Stunden pro Rolle."
     ],
     "docs": []
   }

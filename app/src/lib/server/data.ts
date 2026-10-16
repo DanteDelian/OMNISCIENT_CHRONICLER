@@ -29,7 +29,7 @@ const EMPTY_STATE: PlayState = {
 	conditions: [],
 	concentration: null,
 	shield: false,
-	trance: { skill: '', tool: '' },
+	trance: { tool: '' },
 	familiar: { form: 'eule', present: true, hp: 1 },
 	servant: false,
 	minions: [],

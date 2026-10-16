@@ -12,6 +12,8 @@ export interface Attack {
 	damageType: string;
 	range: string;
 	props?: string;
+	/** Waffenname, mit dem die Astrale Trance Übung gibt (dann + Übungsbonus) */
+	trance?: string;
 }
 
 export interface Feature {
@@ -82,7 +84,8 @@ export interface PlayState {
 	conditions: string[];
 	concentration: { spellId: string; name: string; since: number } | null;
 	shield: boolean;
-	trance: { skill: string; tool: string };
+	/** Astrale Trance: heute geübte Waffe oder Werkzeug (Hausregel: keine Fertigkeit) */
+	trance: { tool: string };
 	familiar: { form: string; present: boolean; hp: number };
 	servant: boolean;
 	minions: Minion[];

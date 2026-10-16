@@ -1,12 +1,69 @@
 [
   {
+    "id": "westen-belagerung",
+    "title": "Die Belagerung im Westen brechen",
+    "giver": "Leon Lhaaz und Graf Leonidas",
+    "status": "aktiv",
+    "urgent": true,
+    "kind": "Auftrag",
+    "next": "Mit Lucaz und der Verstärkung den Fluss weiter nach Norden zum Meer, dann die Küste entlang nach Westen. Unterwegs die Orcs gegen die Riesen gewinnen.",
+    "notes": "Riesen belagern die Stadt von [[Leonidas Lhaaz|Graf Leonidas]] im Westen, seine Frau hält dort die Stellung. Der Graf floh, um Leon zu warnen, und wurde in der Nacht vor Leons Stadt von drei Riesen gestellt. Man traut euch das zu: Ihr seid „Held der Echsenmenschen“ und „Riesenbezwinger, der Schlächter“. Den Wasserweg habt ihr außerhalb der Session per WhatsApp gewählt.",
+    "links": [
+      "Leonidas Lhaaz",
+      "Lucaz Lhaaz",
+      "Die Riesen",
+      "Die belagerte Stadt im Westen"
+    ]
+  },
+  {
+    "id": "orcs",
+    "title": "Die Orcs und die Riesenrunen",
+    "status": "aktiv",
+    "kind": "Bündnis",
+    "next": "Den befreiten Orc beim Wort nehmen: Er bürgt bei einem Orc-Stamm oder bei streunenden Orcs für euch. Ein Treffen vereinbaren.",
+    "reward": "Verbündete gegen die Riesen, später neue Bürger wie die Echsen",
+    "notes": "Die [[Die Riesen|Riesen]] versklaven Orc-Stämme: Wer gefasst wird, bekommt eine **Riesenrune** in die rechte Handfläche gebrannt. Das Mal lässt sich aufspüren, und die Riesen können zuhören, was in seiner Nähe gesagt wird, aber nicht ständig. *Magie entdecken* zeigt Erkenntnismagie. In *Leomunds winziger Hütte* ist es blockiert. [[Nita]] hat es beim Gefangenen gelöst.\n\n**Deine Linie:** Nicht alle Orcs befreien. Das Mal ortet und lauscht nur, im Kampf stört es nicht, und ohne Mal fehlt ihnen ein Grund, sich gegen die Riesen aufzulehnen. Erst gegen die Riesen einsetzen, dann eingliedern wie die Echsen.\n\nDer Orc-Schamane ist nach Nordwesten entkommen.",
+    "links": [
+      "Die Orcs",
+      "Die Riesen",
+      "Nita",
+      "Twee"
+    ]
+  },
+  {
+    "id": "dm-fragen",
+    "title": "Offene Fragen an den DM",
+    "status": "aktiv",
+    "urgent": true,
+    "kind": "Klärung",
+    "next": "Beim nächsten Spieltermin durchgehen und die Antworten hier eintragen.",
+    "notes": "1. **Fehlende Zauber:** Nach den Regeln hast du 4 freie Einträge im Zauberbuch (2 bis Grad 1, 2 bis Grad 2). Wurden sie nie gewählt? Darfst du sie nachtragen?\n2. **Frühere Skelette:** Hattest du vor Oktober 2026 schon erweckte Skelette (Arena, Haus)? In deinen Unterlagen steht nichts dazu. Wo sind die Knochen?\n3. **Die 3 Skelette vom Orc-Kampf:** schon erweckt oder nur Material? Laut Regeln werden aus Leichen Zombies, aus Knochen Skelette.\n4. **Heiltränke:** Reicht dein Alchemistenwerkzeug, um aus den 3 Heilkräutern Tränke zu brauen? Laut Xanathars braucht man Kräuterkundeausrüstung.\n5. **Riesenrune:** Ist das Mal ein Zauber (dann hilft *Magie bannen*, ab Stufe 6 lernbar) oder ein Fluch (*Fluch brechen*)?\n6. **Tukan als Vertrauter:** Werte des Raben mit dem Aussehen eines Tukans oder Papageis?\n7. **Ohrringe:** Wirkt *Verständigung* als Aktion, und gilt „pro Tag“ ab der langen Rast? Trägt Aella ihr Stück schon?\n8. **Astralelf:** Astrales Feuer gestrichen, Trance nur Waffe oder Werkzeug, Sternenschritt 1×. Gelten Dunkelsicht 18 m, Feenabstammung und Scharfe Sinne (Wahrnehmung) unverändert?\n9. **Täuschen:** Woher kommt die Übung? Ein Hintergrund gibt meist zwei Fertigkeiten.\n10. **Familie Lhaaz:** Ist Graf Leonidas der „Baron“ aus Cams Brief (Bruder des Grafen, Herr der ersten Stadt)? Und welcher Graf hat Lisbeths Tod bestellt?",
+    "links": [
+      "Prüfbericht"
+    ]
+  },
+  {
+    "id": "verschwundene",
+    "title": "Die verschwundenen Gefährten",
+    "status": "aktiv",
+    "kind": "Mysterium",
+    "next": "Herausfinden, was Fridolin, Lucira und die Fee in der Nacht vor dem 11.10.2026 fortgerissen hat. Spur: Crush Lu spürte mächtige Magie aus dem Turm im See.",
+    "notes": "Im Traum hast du gesehen, wie eine magische Kraft drei von euch sechs fortreißt, und konntest es nicht verhindern. [[Lisbeth Lhaaz|Lisbeth]] kennt die drei nicht mehr, ihr und [[Crush Lu]] erinnert euch. Im [[Der Magische Turm|Turm]] ist mehr Magie in den Mauern, die langsam abklingt. [[Baldum]] weiß von nichts.\n\n**Deine Idee:** die notierten Passagierzahlen der Schiffe prüfen. Weichen sie ab, wurde mehr verändert als nur Erinnerungen.\n\nLaut DM folgt dazu eine eigene Storyline (die Spieler waren verhindert).",
+    "links": [
+      "Fridolin vom See",
+      "Lucira",
+      "Die Fee",
+      "Der Magische Turm",
+      "Crush Lu"
+    ]
+  },
+  {
     "id": "neue-identitaet",
     "title": "Neue Identität nach der Donnergarde",
     "status": "aktiv",
-    "urgent": true,
     "kind": "Bedrohung",
     "next": "Vor Ankunft der nächsten Lhaaz-Schiffskarawane eine neue Tarnung oder einen neuen Plan haben.",
-    "notes": "Der Maskierte Mönchsmeister hat die versteckten Leichen der echten Donnergarde gefunden. Der Schwindel ist öffentlich. Bausteine: 3 Society-Uniformen, Verkleidungsausrüstung (25 GM), *Selbstverkleidung* als möglicher Zauber.",
+    "notes": "Der Maskierte Mönchsmeister hat die versteckten Leichen der echten Donnergarde gefunden. Der Schwindel ist öffentlich. Bausteine: 3 Society-Uniformen, Verkleidungsausrüstung (25 GM), *Selbstverkleidung* als möglicher Zauber.\n\n**Stand Oktober 2026:** Euer Ruf trägt inzwischen: „Held der Echsenmenschen“, „Riesenbezwinger, der Schlächter“. Lisbeth hält euch weiter für Hochstapler, ist aber milder gestimmt.",
     "links": [
       "Die Donnergarde",
       "Maskierter Mönchsmeister"
@@ -16,55 +73,68 @@
     "id": "lisbeth",
     "title": "Lisbeth Lhaaz misstraut euch",
     "status": "aktiv",
-    "urgent": true,
     "kind": "Bedrohung",
-    "next": "Einen Umgang mit Lisbeth finden, bevor die nächste Karawane die Nachricht vom Tod der echten Donnergarde bringt.",
-    "notes": "**Korrigiert:** Lisbeth lebt. Ihr habt sie aus dem Schiff gerettet, das von der eigenen Eskorte angegriffen wurde. Danach hat sie euch ins Kreuzverhör genommen und hält euch für Hochstapler. Aus Dankbarkeit lässt sie es vorerst ruhen. Cams Warnung, ihr Schiff werde nie ankommen, kam zu spät (vom DM bestätigt, von dir am 12.10.2026 noch einmal bestätigt). Hebel: Graf Lhaaz hat über die Zafferas ihren Tod bestellt.",
+    "next": "Ihr Vertrauen ausbauen. Lucira prüft euch in Lisbeths Auftrag.",
+    "notes": "**Korrigiert:** Lisbeth lebt. Ihr habt sie aus dem Schiff gerettet, das von der eigenen Eskorte angegriffen wurde. Danach hat sie euch ins Kreuzverhör genommen und hält euch für Hochstapler. Aus Dankbarkeit lässt sie es vorerst ruhen. Cams Warnung, ihr Schiff werde nie ankommen, kam zu spät (vom DM bestätigt, von dir am 12.10.2026 noch einmal bestätigt). Hebel: Graf Lhaaz hat über die Zafferas ihren Tod bestellt.\n\n**Juli 2026:** Eure Verdienste um die Echsen und die erledigten Aufträge haben Lisbeth milder gestimmt. Ihr bleibt unter Beobachtung: Sie hat [[Lucira]] geholt, um Leon zu unterstützen und euch zu prüfen.\n\n**11.10.2026:** Lisbeth erinnert sich nicht mehr an Fridolin, Lucira und die Fee.",
     "links": [
       "Lisbeth Lhaaz",
       "Graf Lhaaz",
-      "Cam Buckland"
+      "Cam Buckland",
+      "Lucira"
     ]
   },
   {
     "id": "boot-abfangen",
     "title": "Das kleine Boot abfangen",
-    "status": "aktiv",
-    "urgent": true,
+    "status": "erledigt",
     "kind": "Plan",
-    "next": "Die Besatzung täuschen, bestechen oder ausschalten: Kein kompromittierender Bericht darf die Basis verlassen.",
-    "notes": "Laut DM sollte das kleine Boot, das euch abholt, „heute oder morgen“ kommen. Dein Plan aus dem Kampagnen-Log.",
+    "next": "",
+    "notes": "Laut dir erledigt: Ihr habt es an Bord geschafft (Zeitpunkt nicht notiert). Ursprünglicher Plan: Die Besatzung durfte keinen kompromittierenden Bericht zurückbringen.",
     "links": []
   },
   {
     "id": "saladin",
     "title": "Saladin Bericht erstatten",
     "giver": "Saladin (Dschinn)",
-    "status": "aktiv",
-    "urgent": true,
+    "status": "erledigt",
     "kind": "Auftrag",
-    "next": "Zum Dschinn zurückkehren und erzählen, was ihr unter Wasser gesehen habt. Danach die Ohrring-Verhandlung eröffnen (Plan A: Himmlische Entführung, Plan B: untoter Offizier).",
-    "reward": "Verhandlungsziele: Nimmervoller Beutel, Perle der Macht, Schutzgegenstände",
+    "next": "",
+    "reward": "Folgeauftrag: ein Handelsposten in Freistadt, mit Lohn",
     "links": [
       "Saladin",
       "Der Magische Turm",
       "Einkaufs- und Verhandlungsliste"
+    ],
+    "notes": "Du warst als Fisch mit Tayas Schleimbert unter Wasser. Dort sahst du ein **großes Auge** in dunklem, trübem Wasser, und eine **steinerne Hand** zerquetschte deinen Fisch (*Theorie: ein Golem*). Saladin kennt den Bericht und war erfreut. Daraufhin gab er euch den nächsten Auftrag."
+  },
+  {
+    "id": "saladin-freistadt",
+    "title": "Ein Handelsposten für Saladin in Freistadt",
+    "giver": "Saladin (Dschinn)",
+    "status": "aktiv",
+    "kind": "Auftrag",
+    "next": "Einen Laden in der südlichen Freistadt **rechtmäßig** erwerben. Die Gruppe will die beste Lage, groß und prachtvoll, damit Saladins Rabatt größer wird.",
+    "reward": "Für dich: eine unendlich lange Schriftrolle zum Herstellen von Zauberrollen. Für die anderen: weitere Versprechen. Dazu Rabatt bei Saladin.",
+    "notes": "Saladin wird ungeduldig, ihr habt den Auftrag schon länger. In Freistadt gibt es laut den Lhaaz mächtige Leute oder Gruppen, die vielleicht wissen, wie man mit der [[Sorcerer Society]] umgeht. Die Gruppe zieht trotzdem zuerst nach Westen.",
+    "links": [
+      "Saladin",
+      "Die südliche Freistadt"
     ]
   },
   {
     "id": "lula",
     "title": "Lula aus der Geiselhaft befreien",
     "giver": "Leon Lhaaz",
-    "status": "aktiv",
-    "urgent": true,
+    "status": "erledigt",
     "kind": "Auftrag",
-    "next": "Einen Weg zum Echsen-Clan finden, der Lula festhält: Verhandlung (Nitas Tempel hebt Sprachbarrieren auf) oder Befreiung.",
+    "next": "",
     "reward": "Gunst des Hauses Lhaaz, Ehre der Donnergarde",
     "links": [
       "Lula Lhaaz",
       "Die Echsen-Allianz",
       "Nitas Tempel"
-    ]
+    ],
+    "notes": "Nach Friedens- und Bündnisgesprächen von [[Crush Lu]] und [[Zitherus]] mit Leon freigelassen (Juli 2026). Lula war schwer traumatisiert, sprach nicht und kreischte. [[Lucira]] las ihre Gedanken und half ihr. Was sie gesehen hat, wisst ihr nicht. Laut DM war das eigentlich eine verborgene Storyline für später. Lula ist auf dem Weg der Besserung."
   },
   {
     "id": "schutz-lhaaz",
@@ -76,17 +146,18 @@
     "links": [
       "Leon Lhaaz",
       "Die Siedlung"
-    ]
+    ],
+    "notes": "Lula ist frei (Juli 2026), Leon wächst in seine Rolle."
   },
   {
     "id": "kraeuterfrau",
     "title": "Kräuter für die Kräuterfrau",
     "giver": "Die Kräuterfrau",
-    "status": "aktiv",
+    "status": "erledigt",
     "kind": "Projekt",
-    "next": "Die 10 unbekannten Kräuter identifizieren. Damit beginnt die Alchemie-Lehre.",
-    "reward": "Alchemie-Ausbildung, Zugang zu Rezepten",
-    "notes": "Blocker: Alchemistenwerkzeug (50 GM).",
+    "next": "",
+    "reward": "Alchemistenwerkzeug (geschenkt), Grundsubstanzen, Material für bis zu 10× *Vertrauten finden*",
+    "notes": "Am 12.07.2026 im Laden der Kräuterfrau im oberen Ring abgegeben. Die 10 unbekannten Kräuter hast du laut Zählung noch.",
     "links": [
       "Kontakte der Festung",
       "Alchemie-Kompendium"
@@ -97,20 +168,21 @@
     "title": "3 Heiltränke aus den Heilkräutern",
     "status": "aktiv",
     "kind": "Projekt",
-    "next": "Herstellung mit dem DM klären. Laut Xanathars: Kräuterkundeausrüstung, 1 Tag pro Trank.",
+    "next": "Mit dem DM klären, ob das Alchemistenwerkzeug reicht. Laut Xanathars: Kräuterkundeausrüstung, 1 Tag und 25 GM pro Trank.",
     "reward": "3 × Heiltrank (2W4 + 2)",
     "links": [
       "Alchemie-Kompendium"
-    ]
+    ],
+    "notes": "Laut deiner Zählung vom 12.10.2026 hast du **3 Heilkräuter**."
   },
   {
     "id": "skelette",
-    "title": "Skelett-Gefolge: das Schlachtfeld im Südosten",
+    "title": "Skelett-Gefolge aufbauen",
     "status": "aktiv",
     "kind": "Projekt",
-    "next": "Zum Schlachtfeld (Echsen-Karte, gekreuzte Schwerter) reisen und aus humanoiden Knochen die ersten Skelette erschaffen.",
+    "next": "Klären, ob die 3 Skelette vom Orc-Kampf (11.10.2026) schon erweckt sind. Erweckte Untote alle 24 Stunden mit einem neuen Wirken unter Kontrolle halten.",
     "reward": "Loyales Gefolge ohne Verratsrisiko",
-    "notes": "Nur Überreste kleiner oder mittelgroßer Humanoider funktionieren. Aus Knochen werden Skelette, aus Leichen Zombies.",
+    "notes": "In deinen Unterlagen steht nicht, dass du vor Oktober 2026 schon Skelette erweckt hattest. Nur Überreste kleiner oder mittelgroßer Humanoider funktionieren: Aus Knochen werden Skelette, aus Leichen Zombies. Das Schlachtfeld im Südosten bleibt eine Quelle für Knochen.",
     "links": [
       "Schlachtfeld im Südosten",
       "Taktik-Handbuch"
@@ -121,8 +193,8 @@
     "title": "Ein neuer Vertrauter für den Dschungel",
     "status": "aktiv",
     "kind": "Projekt",
-    "next": "In der nächsten Session neu beschwören (als Ritual 1 Stunde 10 Minuten, 10 GM). Vorher mit dem DM klären, ob ein Tukan oder Papagei mit den Werten des Raben geht.",
-    "notes": "Aktuell: Eule, davor Falke. Gesucht ist eine Gestalt, die im Dschungel nicht auffällt. Optionen mit Vor- und Nachteilen stehen auf der Seite **Gefolge**.",
+    "next": "Nach der langen Rast neu beschwören (Ritual, 1 Stunde 10 Minuten). Material hast du von der Kräuterfrau. Tukan oder Papagei (Werte des Raben) mit dem DM klären.",
+    "notes": "Die **Eule**, die du am 11.10.2026 auf dem Boot beschworen hast, fand die Orcs. Beim Verfolgen des Schamanen wurde sie entdeckt und getötet. Optionen stehen auf der Seite **Gefolge**.",
     "links": [
       "Vertrauten finden",
       "Gefolge"
@@ -133,22 +205,24 @@
     "title": "Geheimes Kellerlabor",
     "status": "aktiv",
     "kind": "Projekt",
-    "next": "Den Keller unter dem zugewiesenen Haus ausbauen, für Alchemie und diskrete Operationen.",
+    "next": "Das Haus im oberen Ring fertig bauen lassen, dann den Keller planen.",
     "links": [
       "Die Siedlung"
-    ]
+    ],
+    "notes": "Der DM hat euer angefangenes Haus als Belohnung in den **oberen Ring** teleportiert. Bis es fertig ist, schlaft ihr im Gemeinschaftsquartier im unteren Ring."
   },
   {
     "id": "organisation",
     "title": "Die Organisation gründen",
     "status": "aktiv",
     "kind": "Lebensziel",
-    "next": "Langfristig eine eigene Machtbasis in Xantus aufbauen. Rekrutieren später in der südlichen Freistadt.",
+    "next": "Eine Infrastruktur in Leons Stadt aufbauen: Leute rekrutieren, die Aufgaben für dich erledigen.",
     "reward": "Ein Imperium",
     "links": [
       "Backstory",
       "Die südliche Freistadt"
-    ]
+    ],
+    "notes": "Dein Haus steht jetzt im oberen Ring. Euer Ruf: „Held der Echsenmenschen“, „Riesenbezwinger, der Schlächter“. Mögliche Bausteine: die Orcs nach dem Krieg gegen die Riesen, Freistadt als Rekrutierungsgebiet."
   },
   {
     "id": "zwei-seelen",
@@ -156,12 +230,26 @@
     "giver": "Crush Lu",
     "status": "aktiv",
     "kind": "Mysterium",
-    "next": "Herausfinden, was die „zwei Seelen“ bedeuten, die Crush Lu bei Taya gespürt hat, und was Schleimbert jetzt ist.",
-    "notes": "**Geklärt (12.10.2026):** Aellas Notizen sind aktueller als dein Log. Danach hat Crush Lu Taya wiederbelebt („Taya wiederbeleben ✔“). Offen bleibt, was die „zwei Seelen“ bedeuten. Kontext von dir folgt.",
+    "next": "Ruht: Taya und Schleimbert sind verschwunden.",
+    "notes": "**Geklärt (12.10.2026):** Aellas Notizen sind aktueller als dein Log. Danach hat Crush Lu Taya wiederbelebt („Taya wiederbeleben ✔“). Offen bleibt, was die „zwei Seelen“ bedeuten. Kontext von dir folgt.\n\n**Juli 2026:** Tayas Spielerin hat die Gruppe verlassen. Taya und Schleimbert sind jetzt NSC und erst einmal verschwunden.",
     "links": [
       "Taya",
       "Crush Lu",
       "Schleimbert"
+    ]
+  },
+  {
+    "id": "siegel-wesen",
+    "title": "Das Siegel und das Wesen",
+    "status": "geruecht",
+    "kind": "Mysterium",
+    "next": "Augen offen halten: Das Wesen will wissen, wenn andere an interessanten Orten forschen. Ihr trefft es wohl wieder.",
+    "notes": "Lucira las auf dem Riesenthron im [[Der Magische Turm|Turm]] ein Siegel und löste es dabei aus. Ihr landetet in einer Dimensionsblase bei einem gottähnlichen Wesen, das von dem Siegel nichts wusste. Danach war das Siegel inaktiv. Als blinder Passagier kam [[Die Fee|die Fee]] mit.",
+    "links": [
+      "Das Wesen hinter dem Siegel",
+      "Der Magische Turm",
+      "Lucira",
+      "Die Fee"
     ]
   },
   {
@@ -176,13 +264,15 @@
   },
   {
     "id": "teufelsjaeger",
-    "title": "Die Nummer 2 der Teufelsjäger",
+    "title": "Lucira und die Teufelsjäger",
     "status": "geruecht",
     "kind": "Mysterium",
-    "next": "Wer sind die Teufelsjäger, und warum ist ihre Nummer 2 hier?",
-    "notes": "Handschriftliche Notiz im Kampagnen-Log: „die Nummer 2 der Teufelsjäger gesichtet“. Sonst nichts bekannt.",
+    "next": "Wer sind die Teufelsjäger, und was prüft Lucira als ihre Nummer 2 für Lisbeth?",
+    "notes": "Diktierte Notiz vom 12.07.2026: „die Nummer 2 der Teufelsjäger gesichtet“. Laut dir ist **[[Lucira]]** wohl diese Nummer 2. Echsenmenschen zu jagen, ist unter ihrer Würde. Sie hat einen gebundenen Drachen namens Krümel. Seit dem 11.10.2026 ist sie verschwunden.",
     "links": [
-      "Die Nummer 2 der Teufelsjäger"
+      "Lucira",
+      "Die Teufelsjäger",
+      "Lisbeth Lhaaz"
     ]
   },
   {
@@ -190,10 +280,11 @@
     "title": "Gefahrenzonen der Echsen-Karte",
     "status": "geruecht",
     "kind": "Erkundung",
-    "next": "Die X-Markierungen im Osten und an der Nordroute aufklären. Die Art der Gefahr ist unbekannt.",
+    "next": "Bestätigen, dass die X im Osten die Society meinen, und die X an der Nordroute aufklären.",
     "links": [
       "Wüstenkarte"
-    ]
+    ],
+    "notes": "Laut den Echsen breitet sich die [[Sorcerer Society]] im Osten und Nordosten aus und erntet die Seelen der Echsen anderer Stämme. *Theorie:* Das ist die Gefahr hinter den X im Osten."
   },
   {
     "id": "bestien",
@@ -209,12 +300,15 @@
   {
     "id": "norden",
     "title": "Erkundung des Nordens",
-    "status": "geruecht",
+    "status": "aktiv",
     "kind": "Erkundung",
-    "next": "Die Herkunftsrichtung des Hügelriesen erkunden (aufgeschoben).",
+    "next": "Auf dem Wasserweg nach Westen den Norden aufklären: Orc-Holzfäller, versklavte Stämme, Riesen.",
     "links": [
-      "Wüstental im Westen"
-    ]
+      "Wüstental im Westen",
+      "Die Riesen",
+      "Die Orcs"
+    ],
+    "notes": "Neu (Oktober 2026): Im Norden gibt es wohl viel mehr Riesen verschiedener Art. Die Orcs schlagen am Fluss Holz und schicken es nach Norden. Der Orc-Schamane floh nach Nordwesten."
   },
   {
     "id": "zuflucht",
@@ -235,8 +329,9 @@
     "title": "Die magischen Ohrringe identifizieren",
     "status": "erledigt",
     "kind": "Projekt",
-    "reward": "Ohrring-Paar: 1× pro Tag Botschaft zwischen den Trägern",
-    "links": []
+    "reward": "Ohrring-Paar: 1× pro Tag *Verständigung* zwischen den Trägern",
+    "links": [],
+    "notes": "Erst als *Botschaft* notiert. Geklärt am 12.10.2026: Es ist *Verständigung* (Sending)."
   },
   {
     "id": "karte",
@@ -253,7 +348,7 @@
     "title": "Rote Echsenkrieger als Gefolgschaft",
     "status": "gescheitert",
     "kind": "Plan",
-    "notes": "Die ersten beiden Krieger sind geflohen, einer der neuen hat dich bestohlen. Als persönliche Gefolgschaft derzeit unzuverlässig.",
+    "notes": "Die ersten beiden Krieger sind geflohen, einer der neuen hat dich bestohlen. Als persönliche Gefolgschaft derzeit unzuverlässig. Seit Juli 2026 sind die Echsen über Leons Bündnis Verbündete der Stadt.",
     "links": [
       "Der rote Echsen-Clan"
     ]

@@ -510,14 +510,14 @@
         "Sturmaura (Meer): Blitz auf eine Kreatur in 3 m, GE-Rettungswurf",
         "Odem: 1,5 × 9 m Blitzlinie, GE-Rettungswurf SG 13, 2W6",
         "Zusätzlicher Angriff · Leichtsinniger Angriff · Gefahrensinn",
-        "Soll den zweiten magischen Ohrring bekommen"
+        "Soll den zweiten Ohrring bekommen: 1× pro Tag *Verständigung* zwischen euch"
       ],
       "source": "aella-overview"
     }
   ],
   "familiarPlan": {
     "title": "Nächste Beschwörung: Dschungel",
-    "intro": "Du willst in der nächsten Session neu beschwören. Gesucht ist eine Gestalt, die im Dschungel nicht auffällt. Neu wirken: als Ritual 1 Stunde 10 Minuten, **10 GM** Holzkohle, Weihrauch und Kräuter. Der bisherige Vertraute nimmt dabei einfach die neue Gestalt an.",
+    "intro": "Deine Eule wurde am 11.10.2026 beim Verfolgen des Orc-Schamanen entdeckt und getötet. Gesucht ist eine Gestalt, die im Dschungel nicht auffällt. Neu wirken: als Ritual 1 Stunde 10 Minuten, Material im Wert von **10 GM** (Holzkohle, Weihrauch, Kräuter). Einen Vorrat davon hast du von der Kräuterfrau.",
     "options": [
       {
         "form": "rabe",
@@ -561,14 +561,14 @@
       },
       {
         "form": "eule",
-        "label": "Eule behalten",
+        "label": "Wieder eine Eule",
         "pro": [
           "Bester Kampfhelfer (Vorbeiflug, *Helfen*)",
-          "36 m Dunkelsicht",
-          "Kostet nichts"
+          "36 m Dunkelsicht"
         ],
         "con": [
-          "Eulen fliegen meist nachts, am Tag fällt sie eher auf"
+          "Eulen fliegen meist nachts, am Tag fällt sie eher auf",
+          "Die letzte wurde beim Verfolgen des Schamanen entdeckt"
         ]
       }
     ]

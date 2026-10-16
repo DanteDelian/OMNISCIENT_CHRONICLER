@@ -79,6 +79,16 @@
       "damageType": "Wucht",
       "range": "1,5 m",
       "props": "Vielseitig: zweihändig 1W8 · Teil der Floshem-Tarnung"
+    },
+    {
+      "id": "kurzbogen",
+      "name": "Kurzbogen",
+      "bonus": 1,
+      "damage": "1d6+1",
+      "damageType": "Stich",
+      "range": "24/96 m (80/320 Fuß)",
+      "props": "12 Pfeile · Beute · mit Trance-Waffe Kurzbogen +4",
+      "trance": "Kurzbogen"
     }
   ],
   "features": [
@@ -88,11 +98,12 @@
       "source": "Astralelf",
       "economy": "bonus",
       "uses": {
-        "max": 3,
+        "max": 1,
         "reset": "long"
       },
       "summary": "Bonusaktion: bis 9 m zu einem sichtbaren freien Ort teleportieren.",
-      "text": "Als **Bonusaktion** teleportierst du dich bis zu **9 m (30 ft)** an einen freien Ort, den du sehen kannst. So oft pro langer Rast, wie dein Übungsbonus beträgt (**3×**).\n\nKein Zauber: keine Komponenten, kein Zauberplatz, **kann nicht gegengezaubert werden**."
+      "text": "Als **Bonusaktion** teleportierst du dich bis zu **9 m (30 ft)** an einen freien Ort, den du sehen kannst. **1× pro langer Rast** (Entscheidung eures DM; laut Spelljammer so oft, wie dein Übungsbonus beträgt).\n\nKein Zauber: keine Komponenten, kein Zauberplatz, **kann nicht gegengezaubert werden**.",
+      "note": "Geklärt am 12.10.2026: Der DM gibt dir 1 Ladung pro langer Rast. Den Zauber *Nebelschritt* hast du nicht."
     },
     {
       "id": "arkane-erholung",
@@ -108,16 +119,16 @@
     },
     {
       "id": "ohrring",
-      "name": "Ohrring-Botschaft",
+      "name": "Ohrringe der Verständigung",
       "source": "Magische Ohrringe",
       "economy": "aktion",
       "uses": {
         "max": 1,
         "reset": "long"
       },
-      "summary": "1× pro Tag eine Botschaft über große Distanz, nur zwischen den beiden Trägern.",
-      "text": "Das Ohrring-Paar erlaubt **1× pro Tag** eine magische *Botschaft* über große Entfernung, aber **nur zwischen den beiden Trägern**. Der zweite Ohrring ist für Aella gedacht. Die genaue Aktionsart weiß der DM.",
-      "note": "Das Zurücksetzen „pro Tag“ ist hier an die lange Rast gekoppelt."
+      "summary": "1× pro Tag *Verständigung*: bis zu 25 Wörter an den Träger des anderen Ohrrings, Antwort sofort, Entfernung egal.",
+      "text": "Das Ohrring-Paar ist mit dem Zauber ***Verständigung*** belegt (engl. *Sending*, Grad 3, Hervorrufung) und lässt sich **1× pro Tag** nutzen. Jeder Träger braucht eines der beiden Stücke.\n\n**Wirkung (Spielerhandbuch 2014 / SRD 5.1):** Du sendest eine Nachricht von **höchstens 25 Wörtern** an den Träger des anderen Ohrrings. Er hört sie in seinem Kopf, erkennt dich als Absender und kann **sofort auf dieselbe Weise antworten**. Die Entfernung spielt keine Rolle. Ist der Empfänger auf einer anderen Existenzebene, kommt die Nachricht mit 5 % Wahrscheinlichkeit nicht an.\n\nAls Zauber: Zeitaufwand 1 Aktion, Wirkungsdauer 1 Runde. Ob das bei den Ohrringen genauso gilt, entscheidet der DM. Der zweite Ohrring ist für Aella gedacht.",
+      "note": "Geklärt am 12.10.2026: Die Ohrringe tragen *Verständigung*, nicht *Botschaft*. „Pro Tag“ ist hier an die lange Rast gekoppelt."
     },
     {
       "id": "geringe-beschwoerung",
@@ -133,9 +144,9 @@
       "name": "Astrale Trance",
       "source": "Astralelf",
       "economy": "passiv",
-      "summary": "Kein Schlaf, lange Rast in 4 Stunden. Danach täglich: 1 Fertigkeit + 1 Waffe oder Werkzeug.",
-      "text": "Du brauchst keinen Schlaf, und **Magie kann dich nicht einschläfern**. Eine lange Rast schaffst du in **4 Stunden** Trance, bei Bewusstsein.\n\nNach jeder Trance erhältst du bis zum Ende deiner nächsten langen Rast Übung in **einer Fertigkeit** und mit **einer Waffe oder einem Werkzeug** deiner Wahl.",
-      "note": "Korrigiert: Der Optimiert-Bogen nennt nur Waffe oder Werkzeug, die **Fertigkeit** fehlt dort. Die tägliche Wahl stellst du auf dem Spieltisch ein."
+      "summary": "Kein Schlaf, lange Rast in 4 Stunden. Danach täglich Übung mit 1 Waffe oder 1 Werkzeug.",
+      "text": "Du brauchst keinen Schlaf, und **Magie kann dich nicht einschläfern**. Eine lange Rast schaffst du in **4 Stunden** Trance, bei Bewusstsein.\n\nNach jeder Trance erhältst du bis zum Ende deiner nächsten langen Rast Übung mit **einer Waffe oder einem Werkzeug** deiner Wahl.",
+      "note": "Hausregel eures DM (12.10.2026): **keine Fertigkeit**. Laut Spelljammer käme eine Fertigkeit dazu. Die tägliche Wahl stellst du auf dem Spieltisch ein."
     },
     {
       "id": "feenabstammung",

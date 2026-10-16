@@ -16,3 +16,8 @@ summary: Echsenmenschen im Krieg mit der Sorcerer Society. Handeln mit Tränken.
 - Die Gruppe befreite ihre unterirdische Zuflucht ([[Hügelberg und Zuflucht]]). Laut Aellas Notizen sind nur noch wenige ihrer Eier übrig, die Höhle ist aber wieder bewohnbar.
 - **Unzuverlässig:** Einer der neuen Krieger **stahl Valerius' Spruchrolle *Botschaft***.
 - Als persönliche Gefolgschaft ungeeignet, daher Plan B: Skelette.
+
+## Seit Juli 2026
+- [[Crush Lu]] verhandelte mit Leon. Die Echsen dürfen sich in Leons Stadt eingliedern und lagern vorerst in Zelten vor dem unteren Ring.
+- Laut den Echsen wird die [[Sorcerer Society]] im Osten und Nordosten stärker und erntet die Seelen der Echsen anderer Stämme.
+- Ihre frühere Höhle am Fluss nennst du inzwischen „ehemalig“. Nördlich davon schlagen Orcs Holz. Siehe [[Die Orcs]].

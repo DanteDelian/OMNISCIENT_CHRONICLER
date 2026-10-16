@@ -1,15 +1,18 @@
 ---
 name: Nita
 kind: person
-group: gruppe
+group: kontakt
 tone: ally
-status: Gruppenmitglied · Priesterin
-summary: Priesterin in der Siedlung. Ihr Tempel hebt Sprachbarrieren auf.
+status: NSC · Priesterin in Leons Stadt
+summary: Klerikerin und Priesterin in Leons Stadt. Vermittelt zwischen Echsen und Menschen und hat das Runenmal eines Orcs gelöst.
 ---
 # Nita
 
-**Gruppenmitglied · Priesterin in der Siedlung.**
+**Klerikerin · Priesterin in [[Die Siedlung|Leons Stadt]] · seit Juli 2026 NSC.**
 
-- In Aellas Notizen „die Priesterin in der Siedlung“: eine zentrale Figur für Verständigung und Frieden, vielleicht eine moralische Autorität, die Valerius' Plänen im Weg stehen könnte.
-- Ihr Tempel ([[Nitas Tempel]]) hebt Sprachbarrieren auf. Das macht ihn zum Ort für jede Verhandlung, etwa mit den Echsen-Clans.
-- Laut deinen Notizen arbeitet sie mit Visionen und Kräutern.
+- Ihre Spielerin hat die Gruppe verlassen. Nita ist jetzt eine Nichtspielerfigur.
+- Als Priesterin der Stadt **schlichtet** sie zwischen Echsenmenschen und Menschen, betreut die Eingliederung der Echsen, greift notfalls ein und erfüllt ihre übrigen Priesterpflichten.
+- Gewann in der Arena von [[Leon Lhaaz]] einen Wettstreit gegen [[Twee]].
+- **11.10.2026:** Kam mit Twee, [[Lucaz Lhaaz|Lucaz]] und Verstärkung an den Fluss und **löste das Runenmal** des gefangenen Orcs. Sie bleibt in der Stadt, weil sie die Echsen eingliedern muss. Siehe [[Die Orcs und die Riesenrunen]].
+- Ihr Tempel ([[Nitas Tempel]]) hebt Sprachbarrieren auf. Laut deinen Notizen arbeitet sie mit Visionen und Kräutern.
+- In Aellas Notizen: eine zentrale Figur für Verständigung und Frieden, vielleicht eine moralische Autorität, die Valerius' Plänen im Weg stehen könnte.

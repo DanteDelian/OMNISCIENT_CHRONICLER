@@ -15,3 +15,7 @@ summary: Perlmuttfarbene Echsenfrau, mächtige Klerikerin oder Magierin des rote
 - Gab der Gruppe den Auftrag, die **Zuflucht** ([[Hügelberg und Zuflucht]]) zu befreien. Erfüllt.
 
 **Offene Fäden:** Was genau hat sie in Taya gespürt? Was weiß sie über die Society?
+
+## Seit Juli 2026
+- Führte mit [[Zitherus]] die Friedens- und Bündnisgespräche mit [[Leon Lhaaz|Leon]]. Danach kam [[Lula Lhaaz|Lula]] frei, und die Echsen dürfen sich in Leons Stadt eingliedern.
+- **11.10.2026:** Spürte nachts etwas Mächtiges, das wohl vom [[Der Magische Turm|Turm im See]] ausging, und eilte zu euch. Sie erinnert sich, anders als Lisbeth, an die drei verschwundenen Gefährten. Siehe [[Die verschwundenen Gefährten]].

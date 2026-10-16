@@ -3,9 +3,9 @@ name: Lisbeth Lhaaz
 aliases: [Lisbeth, Lizbeth, Tantchen Lisbeth]
 kind: person
 group: lhaaz
-tone: enemy
-status: Lebt (bestätigt), misstrauisch
-summary: Tante von Leon und Lula. Von euch aus dem Meer gerettet, hält euch für Hochstapler.
+tone: neutral
+status: Lebt, milder gestimmt, beobachtet euch
+summary: Tante von Leon und Lula. Von euch gerettet, hält euch für Hochstapler, ist inzwischen aber milder gestimmt.
 ---
 # Lisbeth Lhaaz („Tantchen Lisbeth“)
 
@@ -22,3 +22,8 @@ summary: Tante von Leon und Lula. Von euch aus dem Meer gerettet, hält euch fü
 - Aella hält sie für die wahre Matriarchin der Familie. Sie respektiert Stärke und Taten, nicht Worte.
 - Sie weiß wohl nicht, dass ihr eigener Verwandter, der [[Graf Lhaaz|Graf]], ihren Tod bestellt hat. Ein möglicher Hebel.
 - Mit der nächsten Schiffskarawane erreicht die Nachricht vom Tod der echten Donnergarde auch Xantus.
+
+## Seit Juli 2026
+- Eure Verdienste um die Echsen und die erledigten Aufträge haben sie **milder gestimmt**. Ihr bleibt aber unter Beobachtung.
+- Sie hat [[Lucira]] geholt, um Leon zu unterstützen und wohl euch zu prüfen.
+- **11.10.2026:** Lisbeth **erinnert sich nicht mehr** an [[Fridolin vom See|Fridolin]], Lucira und [[Die Fee|die Fee]]. Ihr habt sie gewarnt und gebeten durchzuzählen. Siehe [[Die verschwundenen Gefährten]].

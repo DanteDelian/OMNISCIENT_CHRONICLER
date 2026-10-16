@@ -8,7 +8,7 @@
 	import { ui } from '$lib/stores/ui.svelte';
 	import { useFeature } from '$lib/game';
 	import { ACTIONS } from '$lib/rules-ref';
-	import { SCHOOL_COLOR, castable, diceDe, featureLeft, fmtMod, spellAttack, spellDc } from '$lib/rules';
+	import { attackBonus, SCHOOL_COLOR, castable, diceDe, featureLeft, fmtMod, spellAttack, spellDc } from '$lib/rules';
 	import type { Attack, Feature, Spell } from '$lib/types';
 
 	type Tab = 'aktion' | 'bonus' | 'reaktion' | 'lang' | 'standard';
@@ -161,7 +161,7 @@
 							{/if}
 							<CastButton spell={r.spell} size="xs" />
 						{:else if r.attack}
-							<button class="btn btn-xs" onclick={() => rolls.check(`${r.attack!.name}: Angriff`, r.attack!.bonus)}>{fmtMod(r.attack.bonus)}</button>
+							<button class="btn btn-xs" onclick={() => rolls.check(`${r.attack!.name}: Angriff`, attackBonus(c, s, r.attack!))}>{fmtMod(attackBonus(c, s, r.attack))}</button>
 							<button class="btn btn-xs" onclick={() => rolls.damage(`${r.attack!.name}: Schaden`, r.attack!.damage)}><Dices size={11} />{diceDe(r.attack.damage)}</button>
 							{#if r.attack.damageAlt}<button class="btn btn-xs" onclick={() => rolls.damage(`${r.attack!.name}: zweihändig`, r.attack!.damageAlt!)} title="zweihändig">{diceDe(r.attack.damageAlt)}</button>{/if}
 						{:else if r.feature?.uses}

@@ -502,19 +502,19 @@
   {
     "id": "j13-notizen",
     "order": 130,
-    "chapter": "Kapitel 6",
+    "chapter": "Kapitel 7",
     "title": "Notizen vom Spieltisch",
     "type": "notiz",
     "date": "2026-07-12",
-    "dateMode": "spaetestens",
-    "dateLabel": "spätestens 12.07.2026",
-    "dateBasis": "Handschriftliche Notizen im Kampagnen-Log, letzte Änderung 12.07.2026.",
+    "dateMode": "exakt",
+    "dateLabel": "12.07.2026",
+    "dateBasis": "Laut dir am Spieltisch diktiert, in der Session vom 12.07.2026 (schlecht aufgenommen).",
     "ingame": "",
     "places": [],
     "people": [
-      "Die Nummer 2 der Teufelsjäger"
+      "Lucira"
     ],
-    "summary": "Drei handschriftliche Notizen, noch nicht eingeordnet.",
+    "summary": "Drei diktierte Notizen aus der ersten Session mit den neuen Gefährten.",
     "events": [
       "„wollte die neuen Kollegen testen auf ihre Fähigkeiten und wollte deswegen nicht zu stark unterstützen“",
       "„das wir die echsen mission gefailt sind“",
@@ -527,10 +527,286 @@
       }
     ],
     "notes": [
-      "Wer sind die „neuen Kollegen“? Welche „Echsen-Mission“ ist gescheitert? Bitte ergänzen."
+      "Geklärt: Die „neuen Kollegen“ sind die neuen Gefährten (Fridolin, Lucira, Twee, die Fee). Die „Nummer 2 der Teufelsjäger“ ist wohl [[Lucira]].",
+      "Offen: Welche „Echsen-Mission“ ist gescheitert?"
     ],
     "sources": [
       "kampagnen-log"
+    ]
+  },
+  {
+    "id": "j14-neue-gefaehrten",
+    "order": 140,
+    "chapter": "Kapitel 7",
+    "title": "Neue Gefährten und das Siegel im Turm",
+    "type": "session",
+    "date": "2026-07-12",
+    "dateMode": "exakt",
+    "dateLabel": "12.07.2026",
+    "dateBasis": "Laut deinem Bericht vom 12.10.2026: die erste Session mit den neuen Leuten.",
+    "ingame": "Ein Tag in Leons Stadt und im Turm im See, Nachtruhe im Gemeinschaftsquartier",
+    "places": [
+      "Die Siedlung",
+      "Der Magische Turm"
+    ],
+    "people": [
+      "Fridolin vom See",
+      "Lucira",
+      "Twee",
+      "Die Fee",
+      "Baldum",
+      "Das Wesen hinter dem Siegel",
+      "Saladin",
+      "Kontakte der Festung",
+      "Nita",
+      "Taya",
+      "Schleimbert"
+    ],
+    "summary": "Neue Gefährten stoßen dazu. Im Turm löst Lucira ein Siegel aus, ihr sprecht mit einem gottähnlichen Wesen und bringt eine Fee mit. Saladin bietet einen neuen Handel an, die Kräuterfrau beschenkt dich.",
+    "events": [
+      "**Neue Runde am Tisch:** Zwei Spieler haben die Gruppe verlassen. [[Nita]], [[Taya]] und [[Schleimbert]] sind jetzt NSC. Nita wirkt als Priesterin in Leons Stadt: Sie schlichtet zwischen Echsen und Menschen, greift notfalls ein und erfüllt ihre übrigen Priesterpflichten. Taya und Schleimbert sind erst einmal verschwunden.",
+      "**Neue Gefährten:** [[Fridolin vom See|Fridolin]], Seeelf, Paladin und reisender Botschafter, kam mit einem älteren Seeelfen-Magier, um Beziehungen zu Leon aufzubauen. [[Lucira]], Tiefling-Hexenmeisterin, liest alle Sprachen, Schriften und sogar Gedanken. [[Lisbeth Lhaaz|Lisbeth]] hat sie geholt, um Leon zu unterstützen und wohl euch zu prüfen.",
+      "[[Twee]], ein Satyr-Barde, kannte euch schon, war aber selten dabei. Er stammt aus dem Süden, sammelt Geschichten und verlor einst in Leons Arena einen Wettstreit gegen Nita.",
+      "Die Neuen bekommen ähnliche Aufträge wie ihr: den Turm untersuchen, Leon helfen, den Kontinent zu beherrschen und die Stadt sicherer zu machen, Leons Schwester befreien.",
+      "Du und Aella führt die Gruppe zum [[Der Magische Turm|Turm]], den ihr schon kennt. Alles scheint unverändert. Ganz oben steht ein **riesenhafter Thron**. Dort trefft ihr [[Baldum]], einen Goblin, Techniker und Gelehrten.",
+      "Lucira entdeckt auf dem Thron ein **Siegel** und löst es beim Lesen aus. Ihr werdet in eine fremde **Dimensionsblase** gerissen und sprecht mit einem [[Das Wesen hinter dem Siegel|gottähnlichen Wesen]]. Es wusste nichts von dem Siegel und will künftig wissen, wenn andere an interessanten Orten forschen. Das Siegel ist seitdem inaktiv.",
+      "Ein **blinder Passagier** kommt mit zurück: [[Die Fee|eine Fee]]. Sie bleibt bei der Gruppe, damit seid ihr zu sechst. Ihr Atem riecht nach Alkohol, obwohl sie angeblich nicht trinkt (*Theorie: ein Fluch*).",
+      "Beim Abstieg wartet [[Saladin]]. Er kennt euren Bericht von unter Wasser und ist erfreut. Ihr verhandelt: Für einen **rechtmäßig erworbenen Handelsposten in Freistadt** bietet er dir eine **unendlich lange Schriftrolle** zum Herstellen von Zauberrollen, den anderen andere Dinge. Die Gruppe will die beste Lage, groß und prachtvoll, damit der Rabatt größer wird.",
+      "Im oberen Ring gebt ihr die Quest der [[Kontakte der Festung|Kräuterfrau]] ab. Du bekommst ein **Alchemistenwerkzeug** geschenkt, dazu Grundsubstanzen für den Anfang und Material für bis zu **10× *Vertrauten finden***.",
+      "Euer angefangenes Haus hat der DM als Belohnung in den **oberen Ring** teleportiert. Weil es noch nicht fertig ist, schlaft ihr im **Gemeinschaftsquartier** im unteren Ring, das inzwischen eine Holzpalisade hat."
+    ],
+    "loot": [
+      "Alchemistenwerkzeug (Geschenk der Kräuterfrau)",
+      "Alchemie-Grundsubstanzen",
+      "Material für bis zu 10× Vertrauten finden"
+    ],
+    "quests": [
+      {
+        "ref": "kraeuterfrau",
+        "change": "erledigt"
+      },
+      {
+        "ref": "saladin",
+        "change": "erledigt"
+      },
+      {
+        "ref": "saladin-freistadt",
+        "change": "neu"
+      },
+      {
+        "ref": "siegel-wesen",
+        "change": "neu"
+      },
+      {
+        "ref": "kellerlabor",
+        "change": "Haus in den oberen Ring versetzt"
+      }
+    ],
+    "notes": [
+      "Was das gottähnliche Wesen sonst sagte, weißt du nicht mehr.",
+      "Deine diktierten Notizen vom Spieltisch stehen im Eintrag „Notizen vom Spieltisch“."
+    ],
+    "sources": [
+      "review-sessions"
+    ]
+  },
+  {
+    "id": "j15-riesen-in-der-nacht",
+    "order": 150,
+    "chapter": "Kapitel 7",
+    "title": "Riesen in der Nacht",
+    "type": "session",
+    "date": "2026-07-12",
+    "dateMode": "zeitraum",
+    "dateLabel": "12.07.2026 oder Folgesession",
+    "dateBasis": "Dein Bericht umfasst laut dir zwei Sessions. Ob diese Nacht noch zur Session vom 12.07.2026 gehört, ist offen.",
+    "ingame": "Die Nacht nach dem Turm, vor Leons Stadt",
+    "places": [
+      "Die Siedlung"
+    ],
+    "people": [
+      "Leonidas Lhaaz",
+      "Lucaz Lhaaz",
+      "Lisa Lhaaz",
+      "Lucira"
+    ],
+    "summary": "Ihr rettet Graf Leonidas Lhaaz und seine Kinder vor drei Riesen. Der Graf ist aus seiner belagerten Stadt im Westen geflohen.",
+    "events": [
+      "Rufe wecken euch im Gemeinschaftsquartier. Ein Soldat bittet um Hilfe: Riesen greifen seinen Herrn an. Ihr fürchtet eine Falle, lauft aber sofort mit.",
+      "Es stimmt: **[[Leonidas Lhaaz|Graf Leonidas Lhaaz]]**, Titel „Schwert des Königs“ und Onkel von Leon, kämpft mit seinen Kindern **[[Lucaz Lhaaz|Lucaz]]** (Schwert und Schild) und **[[Lisa Lhaaz|Lisa]]** (wohl Magierin) und einigen Soldaten gegen **drei [[Die Riesen|Riesen]]**: zwei kleinere Gebirgsriesen, einer davon schon gefallen, und einen großen **Eisriesen**.",
+      "Ihr gewinnt den Kampf heroisch und ohne große Verluste.",
+      "Bei der Rast erklärt der Graf: Er ist aus seiner [[Die belagerte Stadt im Westen|belagerten Stadt im Westen]] geflohen. Seine Frau hält dort die Stellung. Er will Leon warnen und Hilfe holen.",
+      "Das große Schwert eines Riesen ist zu schwer zum Mitnehmen. [[Lucira]] liest zwei Runen darauf: **schützen** und **schneiden**.",
+      "Lucira ist wohl die **Nummer 2 der [[Die Teufelsjäger|Teufelsjäger]]**. Echsenmenschen zu jagen, ist unter ihrer Würde. Sie hat einen gebundenen Drachen namens **Krümel**."
+    ],
+    "encounters": [
+      "2 Gebirgsriesen (einer fiel vor eurer Ankunft)",
+      "1 Eisriese"
+    ],
+    "loot": [
+      "Beute von den Riesen (Einzelheiten nicht notiert)"
+    ],
+    "quests": [
+      {
+        "ref": "teufelsjaeger",
+        "change": "Lucira ist wohl die Nummer 2"
+      }
+    ],
+    "sources": [
+      "review-sessions"
+    ]
+  },
+  {
+    "id": "j16-lohn-und-buendnis",
+    "order": 160,
+    "chapter": "Kapitel 7",
+    "title": "Lohn, Bündnis und die Wahl des Weges",
+    "type": "session",
+    "date": "2026-07-12",
+    "dateMode": "zeitraum",
+    "dateLabel": "12.07.2026 oder Folgesession",
+    "dateBasis": "Zweite Session deines Berichts, Datum nicht notiert. Die Wegwahl fiel danach per WhatsApp.",
+    "ingame": "Zurück in Leons Stadt",
+    "places": [
+      "Die Siedlung",
+      "Die südliche Freistadt",
+      "Die belagerte Stadt im Westen"
+    ],
+    "people": [
+      "Leon Lhaaz",
+      "Lisbeth Lhaaz",
+      "Crush Lu",
+      "Zitherus",
+      "Lula Lhaaz",
+      "Lucira",
+      "Saladin"
+    ],
+    "summary": "Lohn und Bündnis in Leons Stadt: Lula ist frei, die Echsen dürfen sich eingliedern. Die Gruppe wählt den Westen über den Wasserweg.",
+    "events": [
+      "Ihr reist rasch zurück nach **[[Die Siedlung|Dehubden]]**, Leons Stadt, zum Gespräch mit [[Leon Lhaaz|Leon]] und [[Lisbeth Lhaaz|Tante Lisbeth]].",
+      "Viel Gold als Lohn. Du hast jetzt insgesamt **47 GM und 16 SM**.",
+      "Am Tag zuvor führten [[Crush Lu]] und [[Zitherus]] mit Leon Friedens- und Bündnisgespräche. Leon setzte sich diplomatisch durch und wächst in seine Rolle.",
+      "Die Echsenmenschen dürfen sich eingliedern, lagern aber erst einmal in neuen Zelten vor dem unteren Ring. Sie wollten tiefer verwurzelt sein, auch in den höheren Ringen. Das lehnte Leon vorerst ab.",
+      "**[[Lula Lhaaz|Lula]] ist frei.** Sie ist schwer traumatisiert, spricht nicht und kreischt. [[Lucira]] liest ihre Gedanken und hilft ihr. Was Lula gesehen hat, wisst ihr nicht. Der DM: Das war eigentlich eine verborgene Storyline für später. Lula ist auf dem Weg der Besserung.",
+      "Eure Verdienste um die Echsen und die erledigten Aufträge stimmen Lisbeth milder. Ihr bleibt unter Beobachtung.",
+      "**Lage:** Im Osten und Nordosten wird die [[Sorcerer Society]] laut den Echsen stärker, breitet sich aus und erntet die Seelen der Echsen anderer Stämme. Im Westen belagern Riesen die Stadt von [[Leonidas Lhaaz|Leonidas]]. Im Süden wartet [[Die südliche Freistadt|Freistadt]]: [[Saladin]] wird ungeduldig, und dort gibt es vielleicht mächtige Leute oder Gruppen, die wissen, wie man mit der Society umgeht.",
+      "Die Gruppe wählt den **Westen**. Zur Wahl standen Dschungel und Wüste zu Fuß oder zu Pferd oder der Wasserweg: den Fluss nach Norden zum Meer, dann die Küste entlang nach Westen. Per WhatsApp entschieden: der **Wasserweg**."
+    ],
+    "loot": [
+      "Gold als Lohn (jetzt insgesamt 47 GM, 16 SM)"
+    ],
+    "quests": [
+      {
+        "ref": "lula",
+        "change": "erledigt"
+      },
+      {
+        "ref": "lisbeth",
+        "change": "milder gestimmt"
+      },
+      {
+        "ref": "westen-belagerung",
+        "change": "neu"
+      },
+      {
+        "ref": "gefahrenzonen",
+        "change": "Society im Osten"
+      }
+    ],
+    "sources": [
+      "review-sessions"
+    ]
+  },
+  {
+    "id": "j17-die-verschwundenen",
+    "order": 170,
+    "chapter": "Kapitel 8",
+    "title": "Die Verschwundenen und die Orcs am Fluss",
+    "type": "session",
+    "date": "2026-10-11",
+    "dateMode": "exakt",
+    "dateLabel": "11.10.2026",
+    "dateBasis": "Laut deinem Bericht vom 12.10.2026: „die jetzige Session gestern, der 11.10.2026“.",
+    "ingame": "Die Nacht vor der Abreise bis zur ersten Etappe auf dem Fluss",
+    "places": [
+      "Die Siedlung",
+      "Der Magische Turm",
+      "Hügelberg und Zuflucht"
+    ],
+    "people": [
+      "Aella Rayann",
+      "Twee",
+      "Crush Lu",
+      "Lisbeth Lhaaz",
+      "Baldum",
+      "Lucaz Lhaaz",
+      "Nita",
+      "Fridolin vom See",
+      "Lucira",
+      "Die Fee",
+      "Die Orcs"
+    ],
+    "summary": "Drei Gefährten verschwinden über Nacht, Lisbeth erinnert sich nicht an sie. Auf dem Fluss überfallt ihr ein Orc-Holzfällerlager, befragt einen versklavten Orc und gewinnt ihn als Fürsprecher.",
+    "events": [
+      "In der Nacht vor der Abreise träumt jeder etwas anderes. Du träumst, wie eine magische Kraft drei von euch sechs fortreißt. Deine Zauber können es nicht verhindern.",
+      "Beim Erwachen fehlen **[[Fridolin vom See|Fridolin]], [[Lucira]] und [[Die Fee|die Fee]]**, magisch verschwunden. [[Crush Lu]] kommt herein: Sie hat etwas Mächtiges gespürt, es kam wohl aus dem [[Der Magische Turm|Turm im See]].",
+      "Du willst Leon per *[[Botschaft]]* informieren. Weil er nicht folgen kann, geht ihr zur Villa.",
+      "**[[Lisbeth Lhaaz|Lisbeth]] kennt die drei nicht (mehr).** Ihr und Crush Lu erinnert euch. Ihr warnt die Lhaaz und bittet sie durchzuzählen. *Deine Idee: prüfen, ob die notierten Passagierzahlen der Schiffe noch stimmen.*",
+      "Im Turm weiß [[Baldum]] von nichts. Oben am inaktiven Siegel spürt ihr mehr Magie in den Mauern, die langsam abklingt. Ihr kommt nicht weiter und brecht auf.",
+      "[[Lucaz Lhaaz|Lucaz]], Sohn von Leonidas, wird euch zugeteilt, um die Belagerung der Riesen zu beenden. Euer Ruf: **Held der Echsenmenschen** und **Riesenbezwinger, der Schlächter**.",
+      "Auf dem Boot bittest du um weiteres Material für *[[Vertrauten finden]]* und beschwörst während der Fahrt eine **[[Eule]]**. Sie späht für euch. Idee für das nächste Mal: etwas Unauffälligeres wie ein Tukan.",
+      "Auf Höhe der früheren Echsenhöhle von Crush Lu, dort, wo ihr damals nach Westen in die Wüste zum Tempel der [[Die Elefantenhominoiden|Loxodons]] zogt: links eine kleine Insel, rechts 15 m hohe Flusswände. Am linken Ufer sind auffällig viele Dschungelbäume gefällt, mehr als Menschen in 2 Tagen schaffen würden.",
+      "Deine Eule entdeckt **[[Die Orcs|Orcs]]**, die Holz schlagen und an vielen Stellen stapeln, dazu einen **Orc-Schamanen**. Die übrigen sind leicht bekleidet und tragen rostige Waffen. Das Holz geht nach Norden.",
+      "Du überzeugst die Gruppe anzugreifen: Lässt man sie gewähren, gefährden sie euren Flusszugang und die Versorgungslinien. Ihr tötet **10 Orcs** und nehmt **einen gefangen**. Der Schamane flieht nach Nordwesten. Deine Eule folgt ihm, wird entdeckt und **getötet**.",
+      "Der Gefangene berichtet: Die [[Die Riesen|Riesen]] versklaven Orc-Stämme und brennen jedem Gefangenen eine **Riesenrune** in die rechte Handfläche. Noch sind nicht alle Stämme unterworfen. Das Mal lässt sich aufspüren, und die Riesen können zuhören, was in seiner Nähe gesagt wird, aber nicht ständig.",
+      "*[[Magie entdecken]]* zeigt: Das Mal ist Erkenntnismagie. Lösen kannst du es nicht. Deine Idee: [[Twee]] wirkt *Leomunds winzige Hütte*, darin ist das Mal blockiert. Dort erzählt der Orc alles.",
+      "Sein Angebot: Löst ihr das Mal, bürgt er bei einem Orc-Stamm oder bei streunenden Orcs für euch.",
+      "Ihr fahrt ein Stück zurück, weil die Orcs wohl den nördlichen Flussabschnitt überwachen. Du, Aella und der Orc wartet in einer zweiten Hütte, Twee fährt mit Lucaz zurück, um [[Nita]] und Verstärkung zu holen. Du arbeitest mit dem Alchemistenwerkzeug, ihr macht eine kurze Rast.",
+      "Twee und Lucaz kehren mit Nita und Verstärkung zurück. Du hattest Lucaz überzeugt: Ohne Verstärkung schneidet man euch ab, bevor ihr den Norden und die Stadt befreit. Nita löst das Mal des Orcs.",
+      "Nita bleibt in der Stadt, sie muss die Echsen eingliedern. Deine Linie: Nicht alle Orcs befreien. Das Mal ortet und lauscht nur, im Kampf stört es nicht, und ohne Mal fehlt den Orcs ein Grund, sich gegen die Riesen aufzulehnen. Erst gegen die Riesen, später eingliedern wie die Echsen.",
+      "Ende der Session: Ihr bereitet die lange Rast vor."
+    ],
+    "encounters": [
+      "10 Orcs (getötet)",
+      "1 Orc (gefangen, Mal von Nita gelöst)",
+      "Orc-Schamane (nach Nordwesten geflohen)"
+    ],
+    "loot": [
+      "3 Skelette (laut dir „als Beute“, ob schon erweckt, ist offen)",
+      "Kurzbogen mit 12 Pfeilen",
+      "Rostige Äxte und Dolche der Orcs"
+    ],
+    "lost": [
+      "Eule (Vertrauter), beim Verfolgen des Schamanen getötet",
+      "1× Material für Vertrauten finden"
+    ],
+    "quests": [
+      {
+        "ref": "verschwundene",
+        "change": "neu"
+      },
+      {
+        "ref": "westen-belagerung",
+        "change": "aufgebrochen"
+      },
+      {
+        "ref": "orcs",
+        "change": "neu"
+      },
+      {
+        "ref": "vertrauter-dschungel",
+        "change": "Eule getötet"
+      },
+      {
+        "ref": "norden",
+        "change": "neue Erkenntnisse"
+      }
+    ],
+    "notes": [
+      "Am Tisch waren nur du, Aella und Twee. Für die drei Verschwundenen plant der DM eine eigene Storyline."
+    ],
+    "sources": [
+      "review-sessions"
     ]
   }
 ]

@@ -18,7 +18,7 @@
 </script>
 
 <PDoc id="karte" refs={['page:karte']} eyebrow="Karte" title={map.title} subtitle="Nummern auf der Karte entsprechen der Liste darunter.">
-	<div class="map avoid" style="width: 136mm; margin: 0 auto">
+	<div class="map avoid" style="width: 120mm; margin: 0 auto">
 		<PImg name={map.image} alt={map.title} />
 		{#each map.pins as p, i (p.id)}
 			<span class="pin" style="left: {p.x}%; top: {p.y}%; --c: {KINDS[p.kind]?.color}">{i + 1}</span>

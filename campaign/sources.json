@@ -148,5 +148,16 @@
     "status": "veraltet",
     "group": "Gefährtin",
     "summary": "Älterer Bogen der Gefährtin (Stufe 4)."
+  },
+  {
+    "id": "review-sessions",
+    "title": "Chaotisches Review der letzten Sessions",
+    "url": "https://docs.google.com/document/d/14CzpArp4su6Nx7YZVzBw5SYuLv02NCqtT6yZRUiCzxA/edit",
+    "kind": "doc",
+    "modified": "2026-10-12",
+    "status": "kanon",
+    "group": "Kampagne",
+    "local": "/archiv/sessionbericht-2026",
+    "summary": "Dein Bericht über die Sessions vom 12.07.2026 (plus Folgesession) und 11.10.2026, abgelegt im Ordner Kho. Im Chat ergänzt um die DM-Entscheidungen zu Trance und Sternenschritt und um Quest-Stände."
   }
 ]

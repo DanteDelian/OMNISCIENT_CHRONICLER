@@ -4,11 +4,11 @@ subtitle: Was falsch war, was korrigiert wurde und was noch offen ist
 icon: shield-check
 order: 1
 group: Prüfung
-updated: 2026-10-12
+updated: 2026-10-16
 ---
 # Prüfbericht
 
-**Stand: 12. Oktober 2026.** Abgeglichen wurden die 12 Dateien im Drive-Ordner *Valerius*, die 2 Dokumente der Gefährtin (Ordner *Kho*), das alte Grimoire auf GitHub und die D&D-5e-Regeln (Spielerhandbuch 2014, Xanathars Ratgeber für alles, Spelljammer für den Astralelfen). Deine Antworten vom 12.10.2026 sind eingearbeitet.
+**Stand: 16. Oktober 2026.** Abgeglichen wurden die 12 Dateien im Drive-Ordner *Valerius*, die 3 Dokumente im Ordner *Kho* (darunter dein Sessionbericht vom 12.10.2026), das alte Grimoire auf GitHub und die D&D-5e-Regeln (Spielerhandbuch 2014, Xanathars Ratgeber für alles, Spelljammer für den Astralelfen). Deine Antworten vom 12.10.2026 und dein [[Sessionbericht Juli bis Oktober 2026|Sessionbericht]] sind eingearbeitet.
 
 > **Gemini-Entwürfe:** Die beiden „Optimiert“-Dokumente vom 10.10.2026 waren Vorschläge von Gemini und sind **nicht übernommen**. Ihre vier neuen Zauber (Nebelwolke, Spiegelbilder, Gedanken wahrnehmen, Fliegen) stehen nicht im Grimoire. Gemini hat auch in deinen älteren Dokumenten mitgeschrieben. Daher stammen viele der Fehler unten.
 
@@ -18,6 +18,7 @@ updated: 2026-10-12
 - **Regeln:** Nebelschritt ist nicht „immer vorbereitet“ und steht laut dir auch nicht im Buch. Die [[Astrale Trance]] gibt täglich zusätzlich eine **Fertigkeit**. Die [[Dunkelsicht]] fehlte. Den Zaubertrick des Astralelfen (Astrales Feuer) hat Valerius laut DM **nicht**. Das Erneuern von *Tote erwecken* dauert **1 Minute**.
 - **Zauberbuch:** Nach den Regeln sind **4 Einträge frei** (2 bis Grad 1, 2 bis Grad 2). [[Botschaft]] ist ein Zaubertrick, damit sind alle 4 Zaubertricks belegt. Vorschläge stehen im Zauberbuch.
 - **Kampagne:** **[[Lisbeth Lhaaz]] lebt.** Ihr habt sie gerettet. Die alten Notizen hielten sie für erledigt. Die Gefährtin heißt **[[Aella Rayann]]**. [[Taya]] ist laut Aellas aktuelleren Notizen wiederbelebt.
+- **DM-Entscheidungen (12.10.2026):** Die [[Astrale Trance]] gibt nur Waffe oder Werkzeug, keine Fertigkeit. [[Sternenschritt]] hast du 1× pro langer Rast. Die Ohrringe tragen *Verständigung*, nicht *Botschaft*.
 - **Lücken:** Ereignisse und Personen aus Aellas Dokument fehlten (Lisbeths Rettung, das Verhör, die Seeelfen), ebenso deine handschriftlichen Notizen (Nummer 2 der Teufelsjäger).
 
 ## A · Valerius' Werte
@@ -34,9 +35,10 @@ updated: 2026-10-12
 | Klassenname | „Zauberer“ | **Magier** | Im deutschen D&D ist der Wizard der *Magier*, „Zauberer“ ist der Sorcerer. Auch Cams Brief sagt „Magier“. |
 | Dunkelsicht | fehlte | **18 m** | Astralelf |
 | Astrales Feuer | fehlte | **nicht vorhanden** | Laut Spelljammer bekäme ein Astralelf einen Zaubertrick (Licht, Tanzende Lichter oder Heilige Flamme). Euer DM sagt: Valerius hat ihn nicht (12.10.2026). |
-| Astrale Trance | nur Schlaf-Ersatz | **+1 Fertigkeit, +1 Waffe oder Werkzeug** | täglich nach der Trance, bis zur nächsten langen Rast |
+| Astrale Trance | nur Schlaf-Ersatz | **+1 Waffe oder Werkzeug** | täglich nach der Trance. Spelljammer gäbe zusätzlich eine Fertigkeit, euer DM nicht (12.10.2026) |
+| Sternenschritt | 3× (Übungsbonus) | **1×** pro langer Rast | Entscheidung eures DM (12.10.2026) |
 
-**Bestätigt richtig:** alle Attributswerte, Übungsbonus +3, RK 11, Initiative +1, Bewegung 9 m, Zauber-SG 15, Zauberangriff +7, Plätze 4/3/2, RW Intelligenz +7, Arkane Kunde +7, Täuschen +4, Dolch +4 (1W4 + 1), Kampfstab +3 (1W6, zweihändig 1W8), Sternenschritt 3×, Arkane Erholung (3 Grade), Geld 17 GM und 16 SM, 13 Rationen.
+**Bestätigt richtig:** alle Attributswerte, Übungsbonus +3, RK 11, Initiative +1, Bewegung 9 m, Zauber-SG 15, Zauberangriff +7, Plätze 4/3/2, RW Intelligenz +7, Arkane Kunde +7, Täuschen +4, Dolch +4 (1W4 + 1), Kampfstab +3 (1W6, zweihändig 1W8), Arkane Erholung (3 Grade), 13 Rationen. Geld laut deiner Angabe jetzt **47 GM und 16 SM**.
 
 ## B · Zauber und Regeln
 
@@ -72,17 +74,21 @@ updated: 2026-10-12
 8. **Erfundene Details entfernt:** Seltenheiten und Gewichte der Gegenstände, der EP-Stand (6.500), der Hintergrund „Zaffera-Zögling aus Oakhaven“, „eingestimmt“ bei den Ohrringen, „Waffengift“.
 9. **Die Gefährtin heißt [[Aella Rayann]],** wie in ihren eigenen Dokumenten. „Khoraa“ war ihre Tarnidentität in der Donnergarde. In deiner Backstory heißt sie noch Draka.
 10. **[[Taya]]:** Laut deinem Log scheiterte die Wiederbelebung, laut Aellas Notizen gelang sie („Taya wiederbeleben ✔“). Aellas Notizen sind aktueller (deine Angabe). Taya gilt damit als wiederbelebt. Wie es weiterging, trägst du noch nach.
-11. **Vertrauter:** zuletzt eine **Eule**, davor ein Falke. Für den Dschungel planst du in der nächsten Session eine neue Gestalt.
+11. **Vertrauter:** zuletzt eine **Eule**, davor ein Falke. Die Eule wurde am 11.10.2026 vom Orc-Schamanen getötet.
+12. **Ohrringe:** Sie tragen ***Verständigung*** (Sending), nicht *Botschaft*: bis zu 25 Wörter, Antwort sofort, Entfernung egal. Jeder Träger braucht ein Stück.
+13. **Familie Lhaaz:** Das Kampagnen-Log nennt Leon und Lula die Kinder des [[Graf Lhaaz|Grafen]], der Lisbeths Tod bestellte. Seit Juli 2026 kennt ihr [[Leonidas Lhaaz|Graf Leonidas]], Leons Onkel. *Theorie:* Er ist der „Baron“ aus Cams Brief. Offen.
+14. **Skelette:** In keinem deiner Dokumente steht, dass du vor Oktober 2026 Skelette erweckt hast. Das Log endet beim Plan, auf dem Schlachtfeld im Südosten Knochen zu holen.
+15. **Die Notizen vom Spieltisch** stammen aus der Session vom 12.07.2026. Die „neuen Kollegen“ sind die neuen Gefährten, die „Nummer 2 der Teufelsjäger“ ist wohl [[Lucira]].
 
 ## D · Offene Fragen
 
-1. **Freie Zauberbuch-Einträge:** Wurden die 4 fehlenden Zauber nie gewählt? Wenn doch: welche?
-2. **Rassenmerkmale:** Laut DM fehlt Astrales Feuer. Gilt der Rest des Astralelfen (Dunkelsicht 18 m, Feenabstammung, Scharfe Sinne, Sternenschritt, Astrale Trance)?
-3. **Täuschen:** Woher kommt die Übung? Ein Hintergrund gibt meist zwei Fertigkeiten. Fehlt eine?
-4. **Tukan als Vertrauter:** Erlaubt der DM die Werte des Raben mit dem Aussehen eines Tukans oder Papageis?
-5. **[[Taya]]:** Wie ging es nach dem Ritual weiter? Was bedeuten die „zwei Seelen“?
-6. **Wer sind die „neuen Kollegen“** aus deiner Notiz, und welche „Echsen-Mission“ ist gescheitert?
-7. **Sitzungsdaten:** Die Daten im Journal sind aus Dokument-Zeitstempeln abgeleitet. Kennst du die echten Termine?
+Die Fragen an den DM stehen gebündelt in der Quest **[[Offene Fragen an den DM]]**: fehlende Zauber, frühere und neue Skelette, Heiltränke, Riesenrune, Tukan, Ohrringe, Rassenmerkmale, Täuschen, Familie Lhaaz.
+
+**Für dich:**
+1. Wann war die zweite Session zwischen dem 12.07. und dem 11.10.2026, und wo endete die Session vom 12.07.?
+2. Schreibweisen: „Twee“, „Dehubden“, Name der Fee.
+3. Welche „Echsen-Mission“ ist laut deiner Notiz vom 12.07.2026 gescheitert?
+4. Sind die 3 Skelette vom Orc-Kampf schon erweckt?
 
 ### Geklärt am 12. Oktober 2026
 - **Astrales Feuer:** hat Valerius nicht (DM).
@@ -93,19 +99,24 @@ updated: 2026-10-12
 - **Vertrauter:** zuletzt Eule, davor Falke.
 - **Rationen:** 13.
 - **Lisbeth:** lebt.
+- **Sitzungsdaten:** 12.07.2026 (erste Session mit den neuen Gefährten) und 11.10.2026. Die Session dazwischen ist nicht datiert.
+- **Ohrringe:** *Verständigung*, 1× pro Tag.
+- **Astrale Trance:** nur Waffe oder Werkzeug (DM).
+- **Sternenschritt:** 1× pro langer Rast (DM).
 
 ## E · Empfehlungen
 
 1. **RK 11 ist dein größtes Risiko.** [[Magierrüstung]] in einen freien Grad-1-Eintrag: RK 14 für 8 Stunden, mit *Schild* 19.
 2. **Identität:** [[Selbstverkleidung]] (Grad 1) für schnelle Tarnung, [[Gestalt verändern]] (Grad 2) für eine Tarnung, die auch Berührung übersteht.
-3. **Astrale Trance jeden Tag nutzen.** Fertigkeit zum Beispiel Heimlichkeit (+4) für die Unsichtbare Hand oder Überzeugen (+4) für Lisbeth und Leon. Werkzeug zum Beispiel Kräuterkundeausrüstung (Heiltränke), Alchemistenwerkzeug (Lehre) oder Verkleidungsausrüstung (Identität).
+3. **Astrale Trance jeden Tag nutzen.** Waffe: der erbeutete **Kurzbogen** (Angriff +4 statt +1, 24/96 m). Werkzeug: Alchemistenwerkzeug (Alchemie-Lehre), Kräuterkundeausrüstung (Heiltränke, das Set fehlt dir noch) oder Verkleidungsausrüstung (Identität).
 4. **Konzentration ist dein Engpass.** *Netz*, *Schutz vor Gut und Böse* und *Magie entdecken* schließen sich gegenseitig aus, und dein KO-Rettungswurf ist nur +3. Zauber ohne Konzentration ([[Magierrüstung]], [[Unsichtbares sehen]], [[Tote erwecken]]) laufen parallel.
 5. **Deine Bonusaktion ist überbucht.** Sternenschritt, Untote befehligen und Diener befehligen konkurrieren. Plane pro Runde eins davon.
 6. **[[Schild]] nur bei einem Angriffsergebnis von 11 bis 15** wirken, sonst die Reaktion für *Gegenzauber* aufheben.
-7. **Vertrauter für den Dschungel:** [[Echse]] oder [[Frosch (Kröte)|Frosch]] fallen nicht auf und sind laut Zauber erlaubt. Ein Tukan oder Papagei mit den Werten des [[Rabe|Raben]] braucht die Zustimmung des DM. Die [[Eule]] bleibt der beste Kampfhelfer. Neu beschwören kostet 10 GM und 1 Stunde (als Ritual 1 Stunde 10 Minuten).
+7. **Vertrauter für den Dschungel** (die Eule ist tot): [[Echse]] oder [[Frosch (Kröte)|Frosch]] fallen nicht auf und sind laut Zauber erlaubt. Ein Tukan oder Papagei mit den Werten des [[Rabe|Raben]] braucht die Zustimmung des DM. Die [[Eule]] bleibt der beste Kampfhelfer. Neu beschwören kostet 10 GM und 1 Stunde (als Ritual 1 Stunde 10 Minuten).
 8. **Zwei Vorbereitungsplätze sind frei** (7 von 9). Rituale (*Vertrauten finden*, *Unsichtbarer Diener*, *Magie entdecken*) musst du nicht vorbereiten. Neue Zauber aus den freien Einträgen passen also direkt hinein.
 9. **Lisbeth als Chance (Theorie):** Sie weiß vermutlich nicht, dass der Graf ihren Tod bestellt hat. Und dass ihr sie gerettet habt, ist euer Kapital.
-10. **Ab Stufe 6:** Gutartiges Versetzen und zwei neue Zauber bis Grad 3.
+10. **Ab Stufe 6:** Gutartiges Versetzen und zwei neue Zauber bis Grad 3. Kandidat: [[Magie bannen]] gegen die Riesenrunen der Orcs und gegen Society-Zauber.
+11. **Sternenschritt ist jetzt knapp** (1×). Halte ihn für die Flucht aus dem Nahkampf zurück, nicht für Positionswechsel.
 
 ## F · Hinweise zu Aellas Bogen (für ihre Spielerin)
 

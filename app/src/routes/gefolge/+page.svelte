@@ -6,23 +6,18 @@
 	import Markdown from '$lib/components/Markdown.svelte';
 	import SourceChip from '$lib/components/SourceChip.svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
-	import { rolls } from '$lib/stores/rolls.svelte';
-	import { addMinion, removeMinion } from '$lib/game';
+	import { FAMILIAR_MATERIAL, addMinion, removeMinion, summonFamiliar } from '$lib/game';
 
 	const s = $derived(campaign.data.state);
 	const cr = $derived(campaign.data.creatures);
 	const current = $derived(cr.familiars.find((f) => f.id === s.familiar.form));
+	/** Bei 0 TP ist der Vertraute verschwunden, bis Valerius den Zauber neu wirkt. */
+	const fallen = $derived(s.familiar.hp <= 0);
+	const material = $derived(campaign.data.inventory.items.find((i) => i.id === FAMILIAR_MATERIAL)?.qty ?? 0);
 	const plan = $derived(cr.familiarPlan);
 	const gold = $derived(campaign.data.inventory.currency.gm);
 
-	function setForm(id: string) {
-		const f = cr.familiars.find((x) => x.id === id);
-		campaign.change('state', (st) => {
-			st.familiar.form = id;
-			st.familiar.hp = f?.hp ?? 1;
-		});
-		rolls.event('Neue Gestalt', `${f?.name}: Neues Wirken von Vertrauten finden (1 Stunde, 10 GM)`, 'info');
-	}
+	const setForm = (id: string) => summonFamiliar(id);
 
 	function minion(id: string, fn: (m: (typeof s.minions)[number]) => void) {
 		campaign.change('state', (st) => {
@@ -106,7 +101,7 @@
 		<div>
 			<div class="flex items-center gap-2"><Bird size={18} class="text-astral-2" /><h2 class="title-display text-3xl">Vertrauter</h2></div>
 			<p class="mt-1 text-sm text-ink-2">
-				Aktuell: <b class="text-ink">{current?.name}</b>. Ein Geist (Himmlisches Wesen, Feenwesen oder Unhold) in Tiergestalt. Kann nicht angreifen, aber helfen und
+				Aktuell: {#if fallen}<b class="text-blood">keiner</b> ({current?.name} gefallen, neu beschwören){:else}<b class="text-ink">{current?.name}</b>{/if}. Material für {material}× im Inventar. Ein Geist (Himmlisches Wesen, Feenwesen oder Unhold) in Tiergestalt. Kann nicht angreifen, aber helfen und
 				spähen. Gestaltwechsel = neues Wirken (1 Stunde, als Ritual 1 Stunde 10 Minuten, 10 GM). Alle {cr.familiars.length} erlaubten Gestalten stehen unten.
 			</p>
 		</div>
@@ -123,7 +118,7 @@
 			<div class="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
 				{#each plan.options as o (o.form)}
 					{@const f = cr.familiars.find((x) => x.id === o.form)}
-					<div class="sunken flex flex-col gap-2 p-4 {o.form === s.familiar.form ? 'ring-1 ring-astral/40' : ''}">
+					<div class="sunken flex flex-col gap-2 p-4 {o.form === s.familiar.form && !fallen ? 'ring-1 ring-astral/40' : ''}">
 						<div class="flex items-start justify-between gap-2">
 							<div class="min-w-0">
 								<div class="font-semibold">{o.label}</div>
@@ -137,7 +132,7 @@
 						</ul>
 						<div class="mt-auto flex items-center gap-2 pt-1">
 							<a class="chip" href="#{o.form}">Wertblock</a>
-							{#if o.form === s.familiar.form}<span class="badge" style="--c: var(--color-astral)">aktuell</span>{:else}<button class="btn btn-xs" onclick={() => setForm(o.form)}>Beschwören</button>{/if}
+							{#if o.form === s.familiar.form && !fallen}<span class="badge" style="--c: var(--color-astral)">aktuell</span>{:else}<button class="btn btn-xs" onclick={() => setForm(o.form)}>Beschwören</button>{/if}
 						</div>
 					</div>
 				{/each}
@@ -154,7 +149,7 @@
 			</thead>
 			<tbody>
 				{#each cr.familiars as f (f.id)}
-					<tr class="border-t border-line {f.id === s.familiar.form ? 'bg-astral/[0.07]' : ''}">
+					<tr class="border-t border-line {f.id === s.familiar.form && !fallen ? 'bg-astral/[0.07]' : ''}">
 						<td class="px-4 py-2.5 font-medium"><a href="#{f.id}" class="hover:text-astral">{f.name}</a></td>
 						<td class="num px-3">{f.ac}</td>
 						<td class="num px-3">{f.hp}</td>
@@ -162,7 +157,7 @@
 						<td class="px-3 text-xs text-ink-2">{f.senses}</td>
 						<td class="px-3 text-xs text-ink-2"><Markdown src={f.verdict} inline /></td>
 						<td class="px-3 text-right">
-							{#if f.id === s.familiar.form}<span class="badge" style="--c: var(--color-astral)">aktuell</span>{:else}<button class="btn btn-xs" onclick={() => setForm(f.id)}>Wechseln</button>{/if}
+							{#if f.id === s.familiar.form && !fallen}<span class="badge" style="--c: var(--color-astral)">aktuell</span>{:else}<button class="btn btn-xs" onclick={() => setForm(f.id)}>{fallen ? 'Beschwören' : 'Wechseln'}</button>{/if}
 						</td>
 					</tr>
 				{/each}
@@ -187,7 +182,7 @@
 				traits={f.traits}
 				verdict={f.verdict}
 				note={f.note}
-				highlight={f.id === s.familiar.form}
+				highlight={f.id === s.familiar.form && !fallen}
 			/>
 		{/each}
 	</div>

@@ -1,6 +1,6 @@
 ---
 name: Wüstental im Westen
-aliases: [Wüstental, Tempelruinen, Handelsposten-Ruine, verlassenes Haus]
+aliases: [Wüstental, Tempelruinen, Handelsposten-Ruine, verlassenes Haus, Wüste im Westen]
 kind: ort
 group: ort
 tone: neutral
@@ -17,3 +17,5 @@ summary: Handelsposten-Ruine, Hügelriese, verlassenes Haus über den Tempelruin
 - Am Morgen entdeckte der Falke eine Karawane oder Patrouille aus dem Süden. Die beiden Echsenkrieger flohen in den Dschungel.
 - **Der Tempel selbst:** kurz untersucht, nichts von Wert.
 - Im Norden liegt unerforschtes Gebiet, aus dem der Riese kam.
+
+*Theorie (Oktober 2026):* Die Tempelruinen gehören zum Tempel der [[Die Elefantenhominoiden|Loxodons]], den du in der Wüste im Westen verortest. In derselben Gegend liegt die [[Die belagerte Stadt im Westen|Stadt von Graf Leonidas]].

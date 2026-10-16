@@ -1,6 +1,6 @@
 {
   "currency": {
-    "gm": 17,
+    "gm": 47,
     "sm": 16,
     "km": 0
   },
@@ -25,8 +25,8 @@
       "group": "koerper",
       "qty": 1,
       "magic": true,
-      "desc": "1× pro Tag eine *Botschaft* über große Distanz, nur zwischen den beiden Trägern. Gefunden in einer Truhe im verborgenen Lagerraum unter dem verlassenen Haus bei den Tempelruinen. *Magie entdecken* zeigte Hellsicht und Teleportation.",
-      "note": "Plan: Aella bekommt einen (sicherer Kanal). Alternative: Tauschware für Saladin."
+      "desc": "Ein Paar, mit dem Zauber *Verständigung* belegt: 1× pro Tag eine Nachricht von bis zu 25 Wörtern an den Träger des anderen Stücks, Antwort sofort, Entfernung egal. Gefunden in einer Truhe im verborgenen Lagerraum unter dem verlassenen Haus bei den Tempelruinen.",
+      "note": "Jeder Träger braucht ein Stück. Plan: Aella bekommt eines. Ob sie es schon trägt, ist nicht notiert."
     },
     {
       "id": "dolch",
@@ -43,11 +43,25 @@
       "desc": "Kampfstab: +3 · 1W6 Wucht, zweihändig 1W8. Teil der Floshem-Tarnung."
     },
     {
+      "id": "kurzbogen",
+      "name": "Kurzbogen",
+      "group": "koerper",
+      "qty": 1,
+      "desc": "Beute aus dem Orc-Kampf am Fluss (11.10.2026). 24/96 m, 1W6 Stich. Ohne Übung Angriff +1, mit der Astralen Trance (Waffe: Kurzbogen) **+4**."
+    },
+    {
       "id": "gelehrten-ausruestung",
       "name": "Gelehrten-Ausrüstung",
       "group": "koerper",
       "qty": 1,
       "desc": "Tinte, Schreibfedern, kleines Messer, Pergament."
+    },
+    {
+      "id": "alchemistenwerkzeug",
+      "name": "Alchemistenwerkzeug",
+      "group": "koerper",
+      "qty": 1,
+      "desc": "Geschenk der [[Kontakte der Festung|Kräuterfrau]] beim Abschluss ihrer Quest (12.07.2026). Am 11.10.2026 in der winzigen Hütte zum ersten Mal benutzt."
     },
     {
       "id": "rucksack",
@@ -74,11 +88,35 @@
       "desc": "Heilt **2W4 + 2** TP. Trinken kostet eine Aktion. Beute aus der Zuflucht des roten Clans."
     },
     {
+      "id": "vertrauten-material",
+      "name": "Material für Vertrauten finden",
+      "group": "verbrauch",
+      "qty": 9,
+      "desc": "Holzkohle, Weihrauch und Kräuter für je ein Wirken (Wert 10 GM, verbrennt in einem Messingbecken). Von der Kräuterfrau: bis zu 10.",
+      "note": "1 für die Eule am 11.10.2026 abgezogen. Du hast vor der Abfahrt nach mehr gefragt. Ob du etwas bekommen hast, ist offen."
+    },
+    {
+      "id": "alchemie-substanzen",
+      "name": "Alchemie-Grundsubstanzen",
+      "group": "verbrauch",
+      "qty": 1,
+      "desc": "Hilfreiche Substanzen für den Anfang, zusammen mit dem Alchemistenwerkzeug von der Kräuterfrau.",
+      "note": "Welche genau, ist nicht notiert."
+    },
+    {
+      "id": "pfeile",
+      "name": "Pfeile",
+      "group": "verbrauch",
+      "qty": 12,
+      "desc": "Für den Kurzbogen. Beute aus dem Orc-Kampf."
+    },
+    {
       "id": "gift",
       "name": "Gift (Portion)",
       "group": "verbrauch",
-      "qty": 2,
-      "desc": "Art und Wirkung sind nicht notiert, beim DM erfragen."
+      "qty": 3,
+      "desc": "Art und Wirkung sind nicht notiert, beim DM erfragen.",
+      "note": "Laut deiner Zählung vom 12.10.2026: 3 Portionen."
     },
     {
       "id": "rationen",
@@ -92,22 +130,23 @@
       "name": "Diverse Beeren",
       "group": "verbrauch",
       "qty": 1,
-      "desc": "Unterwegs gesammelt."
+      "desc": "Unterwegs gesammelt.",
+      "note": "Bei deiner Zählung am 12.10.2026 nicht genannt. Noch da?"
     },
     {
       "id": "unbekannte-kraeuter",
       "name": "Unbekannte Kräuter",
       "group": "verbrauch",
       "qty": 10,
-      "desc": "Für die Quest der Kräuterfrau identifizieren, die Eintrittskarte in die Alchemie-Lehre."
+      "desc": "Noch nicht identifiziert. Die Quest der Kräuterfrau ist abgegeben, die 10 Kräuter hast du laut Zählung vom 12.10.2026 aber noch."
     },
     {
       "id": "heilkraeuter",
       "name": "Heilkräuter",
       "group": "verbrauch",
-      "qty": 1,
-      "desc": "Reichen für **3 Heiltränke**. Beute aus der Zuflucht.",
-      "note": "Regel-Tipp: Laut Xanathars braut man Heiltränke mit der Kräuterkundeausrüstung (5 GM), nicht mit dem Alchemistenwerkzeug. Die Werkzeugübung holst du dir über die Astrale Trance."
+      "qty": 3,
+      "desc": "Beute aus der Zuflucht. Laut deiner Zählung vom 12.10.2026: 3 Stück.",
+      "note": "Regel-Tipp: Laut Xanathars braut man Heiltränke mit der Kräuterkundeausrüstung (5 GM), nicht mit dem Alchemistenwerkzeug. Ob dein Alchemistenwerkzeug reicht, mit dem DM klären."
     },
     {
       "id": "society-dolche",
@@ -122,6 +161,14 @@
       "group": "beute",
       "qty": 3,
       "desc": "Echte Uniformen der Sorcerer Society, wertvoll für Infiltration und eine neue Identität. Mit Verkleidungsausrüstung anpassbar."
+    },
+    {
+      "id": "orc-waffen",
+      "name": "Rostige Orc-Äxte und -Dolche",
+      "group": "beute",
+      "qty": 1,
+      "desc": "Beute aus dem Orc-Kampf am Fluss (11.10.2026). Schlechter Zustand.",
+      "note": "Anzahl nicht notiert."
     },
     {
       "id": "lhaaz-schriftstueck",
@@ -150,7 +197,7 @@
       "group": "gelagert",
       "qty": 1,
       "desc": "Liegt neben der Haus-Baustelle in der Siedlung. Reagenzien für Alchemie und Nekromantie.",
-      "note": "*Tote erwecken* wirkt nur auf Überreste kleiner oder mittelgroßer Humanoider. Ob dieser Kadaver taugt, entscheidet der DM."
+      "note": "*Tote erwecken* wirkt nur auf Überreste kleiner oder mittelgroßer Humanoider. Ob dieser Kadaver taugt, entscheidet der DM. Seit der DM euer angefangenes Haus in den oberen Ring teleportiert hat, ist offen, wo der Kadaver liegt."
     },
     {
       "id": "rolle-botschaft",
@@ -175,7 +222,7 @@
       "price": 5,
       "priority": "vorschlag",
       "phase": "jetzt",
-      "why": "Regel-Tipp: Damit braut man laut Xanathars Heiltränke. Mit den Heilkräutern und der Astralen Trance sofort nutzbar. Mit dem DM klären."
+      "why": "Für Heiltränke aus deinen 3 Heilkräutern (Xanathars: Kräuterkundeausrüstung). Erst mit dem DM klären, ob dein Alchemistenwerkzeug reicht."
     },
     {
       "id": "alchemistenwerkzeug",
@@ -183,7 +230,8 @@
       "price": 50,
       "priority": "kritisch",
       "phase": "nach-saladin",
-      "why": "Quest-Blocker für die Alchemie-Lehre bei der Kräuterfrau."
+      "why": "**Erledigt:** Geschenk der Kräuterfrau (12.07.2026). Quest-Blocker für die Alchemie-Lehre bei der Kräuterfrau.",
+      "done": true
     },
     {
       "id": "verkleidung",
@@ -244,6 +292,14 @@
       "priority": "saladin",
       "phase": "saladin",
       "why": "+1 auf Zauber-SG und Zauberangriff (*Netz* SG 16), +1 Grad bei der Arkanen Erholung. Den Gegenzauber-Wurf verbessert er **nicht**."
+    },
+    {
+      "id": "unendliche-schriftrolle",
+      "name": "Unendliche Schriftrolle",
+      "priceText": "Lohn für den Handelsposten",
+      "priority": "saladin",
+      "phase": "saladin",
+      "why": "Saladins Angebot (12.07.2026): eine unendlich lange Schriftrolle, um Zauberrollen herzustellen. Gegenleistung: ein rechtmäßig erworbener Handelsposten in Freistadt."
     }
   ]
 }

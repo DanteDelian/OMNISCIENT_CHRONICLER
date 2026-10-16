@@ -22,15 +22,14 @@
   "concentration": null,
   "shield": false,
   "trance": {
-    "skill": "",
-    "tool": ""
+    "tool": "Alchemistenwerkzeug"
   },
   "familiar": {
     "form": "eule",
-    "present": true,
-    "hp": 1
+    "present": false,
+    "hp": 0
   },
   "servant": false,
   "minions": [],
-  "updatedAt": 0
+  "updatedAt": 1791797831559
 }

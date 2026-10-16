@@ -1,5 +1,5 @@
 /** D&D-5e-Rechenlogik für Valerius (Spielerhandbuch 2014). Läuft auf Client und Server. */
-import type { Ability, Character, PlayState, Spell } from './types';
+import type { Ability, Attack, Character, PlayState, Spell } from './types';
 
 export const ABILITIES: { key: Ability; short: string; name: string }[] = [
 	{ key: 'str', short: 'ST', name: 'Stärke' },
@@ -94,10 +94,9 @@ export function saveBonus(c: Character, a: Ability): number {
 	return abilityMod(c, a) + (c.saves.includes(a) ? c.proficiencyBonus : 0);
 }
 
-export function skillProficient(c: Character, s: PlayState | null, key: string): 'fest' | 'trance' | null {
-	if (c.skills[key]) return 'fest';
-	if (s?.trance?.skill === key) return 'trance';
-	return null;
+/** Übung in einer Fertigkeit. Die Astrale Trance gibt laut Hausregel eures DM keine Fertigkeit. */
+export function skillProficient(c: Character, _s: PlayState | null, key: string): 'fest' | null {
+	return c.skills[key] ? 'fest' : null;
 }
 
 export function skillBonus(c: Character, s: PlayState | null, key: string): number {
@@ -108,6 +107,11 @@ export function skillBonus(c: Character, s: PlayState | null, key: string): numb
 
 export function passivePerception(c: Character, s: PlayState | null): number {
 	return 10 + skillBonus(c, s, 'perception');
+}
+
+/** Angriffsbonus einer Waffe: plus Übungsbonus, wenn die Astrale Trance heute genau diese Waffe gibt. */
+export function attackBonus(c: Character, s: PlayState | null, a: Attack): number {
+	return a.bonus + (a.trance && s?.trance?.tool === a.trance ? c.proficiencyBonus : 0);
 }
 
 export function spellDc(c: Character): number {

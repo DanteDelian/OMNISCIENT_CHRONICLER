@@ -11,6 +11,7 @@
 	const book = $derived(campaign.data.spells.filter(castable));
 	const limited = $derived(c.features.filter((f) => f.uses && !f.upcoming));
 	const familiar = $derived(cr.familiars.find((f) => f.id === s.familiar.form));
+	const fallen = $derived(s.familiar.hp <= 0);
 	const potion = $derived(inv.items.find((i) => i.id === 'heiltrank'));
 	const qty = (id: string) => inv.items.find((i) => i.id === id)?.qty ?? 0;
 
@@ -71,16 +72,15 @@
 			<div style="margin-top: 2mm">Zauber <span class="write" style="width: 62mm"></span></div>
 		</div>
 		<div class="box">
-			<h3 style="margin: 0">Astrale Trance heute</h3>
-			<div class="small" style="margin-top: 1.6mm">Fertigkeit <span class="write" style="width: 52mm"></span></div>
-			<div class="small" style="margin-top: 1.4mm">Werkzeug / Waffe <span class="write" style="width: 43mm"></span></div>
+			<div class="spread"><h3 style="margin: 0">Astrale Trance heute</h3><span class="tiny muted">Hausregel: keine Fertigkeit</span></div>
+			<div class="small" style="margin-top: 2mm">Waffe oder Werkzeug <span class="write" style="width: 46mm"></span></div>
 		</div>
 	</div>
 
 	<div class="box" style="margin-top: 2.5mm">
 		<div class="spread">
 			<h3 style="margin: 0">Gefolge</h3>
-			<span class="small">Vertrauter: <b>{familiar?.name ?? '—'}</b> <span class="muted">(RK {familiar?.ac}, {familiar?.hp} TP)</span> · neue Gestalt <span class="write" style="width: 26mm"></span></span>
+			<span class="small">Vertrauter: {#if fallen}<b>keiner</b> <span class="muted">({familiar?.name} gefallen)</span>{:else}<b>{familiar?.name ?? '—'}</b> <span class="muted">(RK {familiar?.ac}, {familiar?.hp} TP)</span>{/if} · neue Gestalt <span class="write" style="width: 26mm"></span></span>
 		</div>
 		<div class="small" style="margin-top: 1.4mm">Unsichtbarer Diener aktiv bis <span class="write" style="width: 22mm; min-width: 0"></span> <span class="muted tiny">(1 Stunde, Befehl = Bonusaktion)</span></div>
 		<table style="margin-top: 1.6mm">
