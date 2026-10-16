@@ -59,7 +59,8 @@ async function findServer() {
 	const candidates = arg('url') ? [arg('url')] : ['http://localhost:5173', `http://localhost:${env.PORT || 3000}`];
 	for (const url of candidates) {
 		try {
-			const res = await fetch(`${url.replace(/\/$/, '')}/api/health`, { signal: AbortSignal.timeout(2500) });
+			// Großzügig: Der erste Aufruf nach dem Start eines Dev-Servers kompiliert erst.
+			const res = await fetch(`${url.replace(/\/$/, '')}/api/health`, { signal: AbortSignal.timeout(15000) });
 			if (res.ok) return url.replace(/\/$/, '');
 		} catch {
 			/* nächster Kandidat */
