@@ -11,8 +11,6 @@ summary: Satyr-Barde aus dem Süden, sammelt Geschichten. Wirkt Leomunds winzige
 
 **Satyr · Barde · Einheimischer aus dem Süden.**
 
-> Name laut dir „Twee oder so“. Bitte die Schreibweise prüfen.
-
 - Kannte euch schon vorher, war aber nur selten bei den Sessions dabei.
 - Will **Geschichten sammeln**.
 - Verlor in der Arena von [[Leon Lhaaz]] einen Wettstreit gegen [[Nita]].

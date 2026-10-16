@@ -9,7 +9,7 @@ summary: Blinder Passagier aus der Dimension hinter dem Siegel. Riecht nach Alko
 ---
 # Die Fee
 
-**Gefährtin seit dem 12.07.2026 · Name nicht notiert.**
+**Gefährtin seit dem 12.07.2026 · heißt vorerst einfach „die Fee“, bis ihr Name bekannt ist.**
 
 - Kam als **blinder Passagier** mit, als [[Lucira]] das Siegel im [[Der Magische Turm|Turm]] auslöste. Sie blieb auch nach dem Verlassen der Dimension bei der Gruppe.
 - Ihr Atem **riecht nach Alkohol**, obwohl sie sagt, sie trinke keinen. *Theorie: ein Fluch.*

@@ -93,7 +93,7 @@
       "group": "verbrauch",
       "qty": 9,
       "desc": "Holzkohle, Weihrauch und Kräuter für je ein Wirken (Wert 10 GM, verbrennt in einem Messingbecken). Von der Kräuterfrau: bis zu 10.",
-      "note": "1 für die Eule am 11.10.2026 abgezogen. Du hast vor der Abfahrt nach mehr gefragt. Ob du etwas bekommen hast, ist offen."
+      "note": "1 für die Eule am 11.10.2026 verbraucht. Bestand von dir bestätigt (16.10.2026)."
     },
     {
       "id": "alchemie-substanzen",
@@ -190,6 +190,14 @@
       "group": "plot",
       "qty": 1,
       "desc": "Aufklärungskarte der Echsenmenschen: Lhaaz-Turm als Ziel (X), Schlachtfeld (gekreuzte Schwerter) im Südosten, Bestien-Lager, Gefahrenzonen. Siehe **Karte**."
+    },
+    {
+      "id": "orc-skelette",
+      "name": "Skelette aus dem Orc-Kampf",
+      "group": "gelagert",
+      "qty": 3,
+      "desc": "Beute vom 11.10.2026, eingelagert auf eurem Boot. Das Boot war mit Twee und Lucaz in der Stadt und ist mit der Verstärkung wieder bei euch.",
+      "note": "Material für *Tote erwecken*: Orcs sind mittelgroße Humanoide, aus Knochen werden Skelette. Ein Wirken mit Grad 3 erweckt 1 Skelett. Mit beiden Grad-3-Plätzen und der Arkanen Erholung schaffst du alle 3 an einem Tag, hast dann aber keinen Gegenzauber mehr."
     },
     {
       "id": "kadaver",

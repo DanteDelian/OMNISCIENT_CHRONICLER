@@ -5,13 +5,11 @@ kind: ort
 group: ort
 tone: neutral
 status: Operationsbasis, wächst
-summary: Leons Stadt flussaufwärts (laut dir „Dehubden“), mit oberem und unterem Ring, Villa, Arena und Valerius' Haus.
+summary: Dehubden, Leons Stadt flussaufwärts, mit oberem und unterem Ring, Villa, Arena und Valerius' Haus.
 ---
 # Die Siedlung (Dehubden)
 
 **Valerius' Operationsbasis: die Lhaaz-Stadt flussaufwärts, angeführt von [[Leon Lhaaz]].**
-
-> Name laut dir „Dehubden“. Bitte die Schreibweise prüfen.
 
 ## Aufbau (Stand Oktober 2026)
 - **Oberer Ring:** der Laden der [[Kontakte der Festung|Kräuterfrau]] und **euer Haus**. Der DM hat das angefangene Haus als Belohnung hierher teleportiert. Es ist noch nicht fertig.

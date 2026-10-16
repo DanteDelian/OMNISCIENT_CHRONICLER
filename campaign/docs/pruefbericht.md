@@ -84,11 +84,13 @@ updated: 2026-10-16
 
 Die Fragen an den DM stehen gebündelt in der Quest **[[Offene Fragen an den DM]]**: fehlende Zauber, frühere und neue Skelette, Heiltränke, Riesenrune, Tukan, Ohrringe, Rassenmerkmale, Täuschen, Familie Lhaaz.
 
-**Für dich:**
-1. Wann war die zweite Session zwischen dem 12.07. und dem 11.10.2026, und wo endete die Session vom 12.07.?
-2. Schreibweisen: „Twee“, „Dehubden“, Name der Fee.
-3. Welche „Echsen-Mission“ ist laut deiner Notiz vom 12.07.2026 gescheitert?
-4. Sind die 3 Skelette vom Orc-Kampf schon erweckt?
+**Für dich:** Welche „Echsen-Mission“ ist laut deiner Notiz vom 12.07.2026 gescheitert?
+
+### Geklärt am 16. Oktober 2026
+- **Sitzungsgrenze:** Die Session zwischen dem 12.07. und dem 11.10.2026 bleibt undatiert, so gewollt.
+- **Schreibweisen:** Twee und Dehubden stimmen. Die Fee heißt vorerst „die Fee“.
+- **Skelette:** Die 3 aus dem Orc-Kampf lagern auf dem Boot, noch nicht erweckt.
+- **Material für *Vertrauten finden*:** 9, kein weiteres bekommen.
 
 ### Geklärt am 12. Oktober 2026
 - **Astrales Feuer:** hat Valerius nicht (DM).

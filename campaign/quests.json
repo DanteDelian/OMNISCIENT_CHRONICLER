@@ -37,7 +37,7 @@
     "urgent": true,
     "kind": "Klärung",
     "next": "Beim nächsten Spieltermin durchgehen und die Antworten hier eintragen.",
-    "notes": "1. **Fehlende Zauber:** Nach den Regeln hast du 4 freie Einträge im Zauberbuch (2 bis Grad 1, 2 bis Grad 2). Wurden sie nie gewählt? Darfst du sie nachtragen?\n2. **Frühere Skelette:** Hattest du vor Oktober 2026 schon erweckte Skelette (Arena, Haus)? In deinen Unterlagen steht nichts dazu. Wo sind die Knochen?\n3. **Die 3 Skelette vom Orc-Kampf:** schon erweckt oder nur Material? Laut Regeln werden aus Leichen Zombies, aus Knochen Skelette.\n4. **Heiltränke:** Reicht dein Alchemistenwerkzeug, um aus den 3 Heilkräutern Tränke zu brauen? Laut Xanathars braucht man Kräuterkundeausrüstung.\n5. **Riesenrune:** Ist das Mal ein Zauber (dann hilft *Magie bannen*, ab Stufe 6 lernbar) oder ein Fluch (*Fluch brechen*)?\n6. **Tukan als Vertrauter:** Werte des Raben mit dem Aussehen eines Tukans oder Papageis?\n7. **Ohrringe:** Wirkt *Verständigung* als Aktion, und gilt „pro Tag“ ab der langen Rast? Trägt Aella ihr Stück schon?\n8. **Astralelf:** Astrales Feuer gestrichen, Trance nur Waffe oder Werkzeug, Sternenschritt 1×. Gelten Dunkelsicht 18 m, Feenabstammung und Scharfe Sinne (Wahrnehmung) unverändert?\n9. **Täuschen:** Woher kommt die Übung? Ein Hintergrund gibt meist zwei Fertigkeiten.\n10. **Familie Lhaaz:** Ist Graf Leonidas der „Baron“ aus Cams Brief (Bruder des Grafen, Herr der ersten Stadt)? Und welcher Graf hat Lisbeths Tod bestellt?",
+    "notes": "1. **Fehlende Zauber:** Nach den Regeln hast du 4 freie Einträge im Zauberbuch (2 bis Grad 1, 2 bis Grad 2). Wurden sie nie gewählt? Darfst du sie nachtragen?\n2. **Frühere Skelette:** Hattest du vor Oktober 2026 schon erweckte Skelette (Arena, Haus)? In deinen Unterlagen steht nichts dazu. Wo sind die Knochen?\n3. **Heiltränke:** Reicht dein Alchemistenwerkzeug, um aus den 3 Heilkräutern Tränke zu brauen? Laut Xanathars braucht man Kräuterkundeausrüstung.\n4. **Riesenrune:** Ist das Mal ein Zauber (dann hilft *Magie bannen*, ab Stufe 6 lernbar) oder ein Fluch (*Fluch brechen*)?\n5. **Tukan als Vertrauter:** Werte des Raben mit dem Aussehen eines Tukans oder Papageis?\n6. **Ohrringe:** Wirkt *Verständigung* als Aktion, und gilt „pro Tag“ ab der langen Rast? Trägt Aella ihr Stück schon?\n7. **Astralelf:** Astrales Feuer gestrichen, Trance nur Waffe oder Werkzeug, Sternenschritt 1×. Gelten Dunkelsicht 18 m, Feenabstammung und Scharfe Sinne (Wahrnehmung) unverändert?\n8. **Täuschen:** Woher kommt die Übung? Ein Hintergrund gibt meist zwei Fertigkeiten.\n9. **Familie Lhaaz:** Ist Graf Leonidas der „Baron“ aus Cams Brief (Bruder des Grafen, Herr der ersten Stadt)? Und welcher Graf hat Lisbeths Tod bestellt?",
     "links": [
       "Prüfbericht"
     ]
@@ -180,9 +180,9 @@
     "title": "Skelett-Gefolge aufbauen",
     "status": "aktiv",
     "kind": "Projekt",
-    "next": "Klären, ob die 3 Skelette vom Orc-Kampf (11.10.2026) schon erweckt sind. Erweckte Untote alle 24 Stunden mit einem neuen Wirken unter Kontrolle halten.",
+    "next": "Die 3 Skelette vom Boot mit *Tote erwecken* zum Leben bringen: 1 Skelett pro Wirken mit Grad 3. Danach alle 24 Stunden die Kontrolle erneuern.",
     "reward": "Loyales Gefolge ohne Verratsrisiko",
-    "notes": "In deinen Unterlagen steht nicht, dass du vor Oktober 2026 schon Skelette erweckt hattest. Nur Überreste kleiner oder mittelgroßer Humanoider funktionieren: Aus Knochen werden Skelette, aus Leichen Zombies. Das Schlachtfeld im Südosten bleibt eine Quelle für Knochen.",
+    "notes": "Die 3 Skelette aus dem Orc-Kampf (11.10.2026) lagern auf eurem Boot. Orcs sind mittelgroße Humanoide, also geeignet. In deinen Unterlagen steht nicht, dass du vor Oktober 2026 schon Skelette erweckt hattest (Frage an den DM). Das Schlachtfeld im Südosten bleibt eine Quelle für weitere Knochen.",
     "links": [
       "Schlachtfeld im Südosten",
       "Taktik-Handbuch"

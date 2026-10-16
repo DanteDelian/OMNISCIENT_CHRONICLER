@@ -17,7 +17,7 @@ updated: 2026-10-12
 
 ## Was du nach der langen Rast brauchst
 - **Neuer Vertrauter:** Die Eule ist tot. Neu beschwören (Ritual, Material von der Kräuterfrau). Optionen unter **Gefolge**.
-- **Die 3 Skelette** vom Orc-Kampf: Sind sie schon erweckt, läuft die 24-Stunden-Kontrolle.
+- **Die 3 Skelette** vom Orc-Kampf lagern auf eurem Boot. Erwecken: 1 pro Wirken mit Grad 3, danach alle 24 Stunden erneuern.
 - **Astrale Trance:** Waffe oder Werkzeug wählen. Für den Fernkampf zum Beispiel den erbeuteten **Kurzbogen** (Angriff dann +4).
 - **Ohrringe:** 1× pro Tag *Verständigung* mit Aella, falls sie ihr Stück trägt.
 
