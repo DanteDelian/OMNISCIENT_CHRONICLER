@@ -9,7 +9,7 @@ summary: Schwester des Erzherzogs und von Leonidas, Tante von Leon und Lula. Von
 ---
 # Lisbeth Lhaaz („Tantchen Lisbeth“)
 
-**Schwester des [[Erzherzog Lhaaz|Erzherzogs]] und von [[Leonidas Lhaaz|Graf Leonidas]] · Tante von [[Leon Lhaaz|Leon]] und [[Lula Lhaaz|Lula]] · scharfsinnig, erfahren, misstrauisch.**
+**Schwester des [[Erzherzog Lhaaz|Erzherzogs]] und von [[Leonidas Lhaaz|Graf Leonidas]] · Tante von [[Leon Lhaaz|Leon]], [[Lula Lhaaz|Lula]], [[Lucaz Lhaaz|Lucaz]] und [[Lisa Lhaaz|Lisa]] · scharfsinnig, erfahren, misstrauisch.**
 
 ## Was passiert ist
 - Ihr Schiff, das Verstärkung für die Lhaaz bringen sollte, wurde **von der eigenen Eskorte angegriffen**. Valerius leitete die Rettung, gemeinsam mit Aella zog er die Überlebenden aus dem Wasser. Darunter war Lisbeth.

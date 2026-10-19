@@ -9,7 +9,7 @@ summary: Sohn von Graf Leonidas, Schwertkämpfer mit Schild. Euch zugeteilt, um 
 ---
 # Lucaz Lhaaz
 
-**Sohn von [[Leonidas Lhaaz|Graf Leonidas]] · Schwertkämpfer mit Schild · Vetter von [[Leon Lhaaz|Leon]].**
+**Sohn von [[Leonidas Lhaaz|Graf Leonidas]] · Schwertkämpfer mit Schild · Vetter von [[Leon Lhaaz|Leon]] · Neffe von [[Lisbeth Lhaaz|Lisbeth]].**
 
 - Kämpfte mit seinem Vater und seiner Schwester [[Lisa Lhaaz|Lisa]] gegen drei Riesen, bis die Gruppe eingriff.
 - Wurde euch am 11.10.2026 zugeteilt, um die Belagerung seiner Heimatstadt zu beenden.

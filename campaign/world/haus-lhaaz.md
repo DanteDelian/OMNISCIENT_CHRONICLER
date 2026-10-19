@@ -29,6 +29,6 @@ Dank Küstenlage und eigener Schiffe wirkte die Familie an der **ersten Expediti
 
 **Schiffskarawanen:** Die Lhaaz-Schiffskarawanen sind die einzige Verbindung zurück in die alte Welt.
 
-*Theorie:* Das Schriftstück mit dem Lhaaz-Wappen stammt von dem Attentäter, der Lula angriff. Noch ein Hinweis auf Intrigen innerhalb der Familie?
+Das Schriftstück mit dem Lhaaz-Wappen stammt von dem Attentäter, der Lula angriff. *Theorie:* noch ein Hinweis auf Intrigen innerhalb der Familie.
 
 *Theorie:* Leonidas ist der „Baron“ aus Cams Brief, denn der ist ebenfalls ein Bruder von Leons Vater. Du nennst Leonidas allerdings Graf. Siehe [[Offene Fragen an den DM]].
