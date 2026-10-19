@@ -44,7 +44,7 @@ updated: 2026-10-16
 1. **Fundament in Dehubden (jetzt):** Haus fertigstellen lassen, Kellerlabor planen, Lehrling über die Kräuterfrau anwerben. Erste Tränke brauen und verkaufen, das bringt Geld und einen Grund, Leute zu beschäftigen.
 2. **Das Netz (nach der Belagerung):** drei bis fünf Informanten im unteren Ring, am Hafen und im Echsenlager. Feste Treffzeiten, Nachrichten nur über Mittelsleute. Der Ruf als Riesenbezwinger öffnet die Türen der Soldaten.
 3. **Freistadt (Saladins Laden):** Der Handelsposten wird legale Fassade und Umschlagplatz. Laut Aella ist Freistadt ein „Schmelztiegel voller Söldner, Diebe und Ausgestoßener“: ideales Rekrutierungsgebiet.
-4. **Macht (langfristig):** Orcs nach dem Krieg eingliedern, wie du es schon planst. Die Echsen als Verbündete halten. Den Konflikt im [[Haus Lhaaz]] als Hebel nutzen: Der Graf ließ Lisbeths Schiff überfallen.
+4. **Macht (langfristig):** Orcs nach dem Krieg eingliedern, wie du es schon planst. Die Echsen als Verbündete halten. Den Konflikt im [[Haus Lhaaz]] als Hebel nutzen: „Graf Lhaaz“ ließ Lisbeths Schiff überfallen, wohl einer ihrer eigenen Brüder (offen).
 
 ## Regeln für die Hand
 

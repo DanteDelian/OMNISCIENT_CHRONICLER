@@ -87,7 +87,7 @@ Konzentration endet außerdem, wenn du **kampfunfähig** wirst, stirbst oder ein
 
 ## Riesen-Briefing: die Belagerung im Westen
 
-*Werte nach SRD 5.1 (Monsterhandbuch), Chancen gerechnet gegen deinen Zauber-SG 15 und Angriff +7. Ob die „Gebirgsriesen“ Hügel- oder Steinriesen sind, siehst du am Tisch: Hügelriesen tragen Keulen und sind einfältig, Steinriesen sind grau, verschmelzen mit Fels und schlagen auf 4,5 m zu.*
+*Werte nach SRD 5.1 (Monsterhandbuch), Chancen gerechnet gegen deinen Zauber-SG 15 und Angriff +7. Der DM skaliert seine Gegner und verrät keine Werte: Nimm die Zahlen als Richtwerte, nicht als Tatsachen. Ob die „Gebirgsriesen“ Hügel- oder Steinriesen sind, siehst du am Tisch: Hügelriesen tragen Keulen und sind einfältig, Steinriesen sind grau, verschmelzen mit Fels und schlagen auf 4,5 m zu.*
 
 ### Die Gegner
 
@@ -142,7 +142,7 @@ Der Eisriese entspricht dem **Frostriesen** des Monsterhandbuchs.
 - **Der befreite Orc** kennt Lager, Wege und Gewohnheiten der Riesen. Frag ihn aus, bevor ihr die Stadt erreicht.
 - **Holz als Waffe.** Die Orcs stapeln am Fluss große Mengen Holz für die Riesen. Ein Feuer dort trifft ihren Nachschub, ohne dass ihr einen Riesen angreifen müsst.
 - **Twees *Verlangsamen*:** Ein verlangsamter Riese schlägt nur noch einmal pro Zug zu. Sprich dich mit Twee ab: sein *Verlangsamen*, dein *Netz*.
-- **Ab Stufe 6:** Mit *Gutartiges Versetzen* tauschst du per Aktion den Platz mit Aella. Sie steht sofort an der Front, du bist aus der Gefahr. Mit *[[Schneesturm]]* stürzen Riesen ins Eis. Siehe [[Stufe-6-Planer]].
+- **Ab Stufe 6:** Mit *Gutartiges Versetzen* tauschst du per Aktion den Platz mit Aella. Sie steht sofort an der Front, du bist aus der Gefahr. Mit *[[Hypnotisches Muster]]* fällt eine ganze Gruppe Riesen aus, mit *[[Flutwelle]]* liegen sie am Boden. Siehe [[Stufe-6-Planer]].
 - **Nicht vergessen:** *Person festhalten* wirkt nicht gegen Riesen, nur gegen Humanoide wie die Orcs.
 
 ## Tote erwecken: Logistik

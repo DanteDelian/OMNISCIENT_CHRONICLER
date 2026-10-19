@@ -4,7 +4,7 @@ aliases: [Fridolin]
 kind: person
 group: gruppe
 tone: ally
-status: Gefährte · verschwunden seit 11.10.2026
+status: Gefährte · am 11.10.2026 nicht dabei
 summary: Seeelf, Paladin und reisender Botschafter. Kam mit einem älteren Seeelfen-Magier, um Beziehungen zu Leon aufzubauen.
 ---
 # Fridolin vom See

@@ -4,7 +4,7 @@ aliases: [Fee]
 kind: person
 group: gruppe
 tone: unknown
-status: Gefährtin · verschwunden seit 11.10.2026
+status: Gefährtin · am 11.10.2026 nicht dabei
 summary: Blinder Passagier aus der Dimension hinter dem Siegel. Riecht nach Alkohol, obwohl sie angeblich nicht trinkt.
 ---
 # Die Fee

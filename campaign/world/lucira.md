@@ -4,7 +4,7 @@ aliases: [Die Nummer 2 der Teufelsjäger, Nummer 2 der Teufelsjäger]
 kind: person
 group: gruppe
 tone: neutral
-status: Gefährtin · Lisbeths Prüferin · verschwunden seit 11.10.2026
+status: Gefährtin · Lisbeths Prüferin · am 11.10.2026 nicht dabei
 summary: Tiefling-Hexenmeisterin, liest alle Sprachen, Schriften und Gedanken. Von Lisbeth geholt, wohl die Nummer 2 der Teufelsjäger.
 ---
 # Lucira

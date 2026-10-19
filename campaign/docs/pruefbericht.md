@@ -73,7 +73,7 @@ updated: 2026-10-19
 7. **Neue Personen:** Frederic Wellenstand und Fridolin vom See ([[Die Seeelfen|Seeelfen]]), der [[Kontakte der Festung|Paladin]], die [[Die Nummer 2 der Teufelsjäger|Nummer 2 der Teufelsjäger]] und die [[Die Echsen-Allianz|Echsen-Allianz]] (Lulas Geiselnehmer, getrennt vom roten Clan).
 8. **Erfundene Details entfernt:** Seltenheiten und Gewichte der Gegenstände, der EP-Stand (6.500), der Hintergrund „Zaffera-Zögling aus Oakhaven“, „eingestimmt“ bei den Ohrringen, „Waffengift“.
 9. **Die Gefährtin heißt [[Aella Rayann]],** wie in ihren eigenen Dokumenten. „Khoraa“ war ihre Tarnidentität in der Donnergarde. In deiner Backstory heißt sie noch Draka.
-10. **[[Taya]]:** Laut deinem Log scheiterte die Wiederbelebung, laut Aellas Notizen gelang sie („Taya wiederbeleben ✔“). Aellas Notizen sind aktueller (deine Angabe). Taya gilt damit als wiederbelebt. Wie es weiterging, trägst du noch nach.
+10. **[[Taya]]:** Laut deinem Log scheiterte die Wiederbelebung, laut Aellas Notizen gelang sie („Taya wiederbeleben ✔“). Aellas Notizen sind aktueller (deine Angabe). Taya gilt damit als wiederbelebt. Danach ist sie verschwunden (laut dir, 19.10.2026).
 11. **Vertrauter:** zuletzt eine **Eule**, davor ein Falke. Die Eule wurde am 11.10.2026 vom Orc-Schamanen getötet.
 12. **Ohrringe:** Sie tragen ***Verständigung*** (Sending), nicht *Botschaft*: bis zu 25 Wörter, Antwort sofort, Entfernung egal. Jeder Träger braucht ein Stück.
 13. **Familie Lhaaz:** Das Kampagnen-Log nennt Leon und Lula die Kinder des Grafen, der Lisbeths Tod bestellte. Laut dir (19.10.2026) ist Leons Vater aber der **[[Erzherzog Lhaaz|Erzherzog]]**, und Leonidas und Lisbeth sind seine Geschwister. Der Eintrag „Graf Lhaaz“ heißt deshalb jetzt „Erzherzog Lhaaz“. Den Titel „Graf“ aus Cams Brief lasse ich als Widerspruch im Journal stehen. **Offen:** Wer der „Graf Lhaaz“ ist, der Lisbeths Tod bestellt hat, und ob [[Leonidas Lhaaz|Leonidas]] der „Baron“ aus Cams Brief ist (*Theorie*).
@@ -84,10 +84,12 @@ updated: 2026-10-19
 
 Die Fragen an den DM stehen gebündelt in der Quest **[[Offene Fragen an den DM]]**: fehlende Zauber, frühere und neue Skelette, Heiltränke, Riesenrune, Tukan, Ohrringe, Rassenmerkmale, Täuschen, Familie Lhaaz.
 
-**Für dich:** Welche „Echsen-Mission“ ist laut deiner Notiz vom 12.07.2026 gescheitert?
-
 ### Geklärt am 19. Oktober 2026
 - **Familie Lhaaz:** Leons Vater ist der Erzherzog. Leonidas ist sein Bruder, Lisbeth seine Schwester und damit auch die Schwester von Leonidas.
+- **Echsen-Mission:** Ihr solltet die Echsen befrieden. Das scheiterte zunächst, deshalb wurde Lula als Geisel gehalten. Inzwischen gelöst.
+- **Taya:** nach der Wiederbelebung verschwunden. Am Tisch hatte sich die Runde damals teilweise aufgelöst.
+- **Riesenrune:** ein Fluch (DM). Dagegen hilft [[Fluch brechen]], nicht *Magie bannen*.
+- **Gegnerwerte:** Der DM skaliert seine Gegner und verrät keine Werte. Die SRD-Zahlen im Grimoire sind Richtwerte.
 
 ### Geklärt am 16. Oktober 2026
 - **Sitzungsgrenze:** Die Session zwischen dem 12.07. und dem 11.10.2026 bleibt undatiert, so gewollt.
@@ -113,14 +115,14 @@ Die Fragen an den DM stehen gebündelt in der Quest **[[Offene Fragen an den DM]
 
 1. **RK 11 ist dein größtes Risiko.** [[Magierrüstung]] in einen freien Grad-1-Eintrag: RK 14 für 8 Stunden, mit *Schild* 19.
 2. **Identität:** [[Selbstverkleidung]] (Grad 1) für schnelle Tarnung, [[Gestalt verändern]] (Grad 2) für eine Tarnung, die auch Berührung übersteht.
-3. **Astrale Trance jeden Tag nutzen.** Waffe: der erbeutete **Kurzbogen** (Angriff +4 statt +1, 24/96 m). Werkzeug: Alchemistenwerkzeug (Alchemie-Lehre), Kräuterkundeausrüstung (Heiltränke, das Set fehlt dir noch) oder Verkleidungsausrüstung (Identität).
+3. **Astrale Trance jeden Tag nutzen, meist für ein Werkzeug.** Das **Alchemistenwerkzeug** (ohne Trance hast du damit keine Übung), an Brautagen die Kräuterkundeausrüstung (Heiltränke, das Set fehlt dir noch) oder die Verkleidungsausrüstung (Identität). Der erbeutete **Kurzbogen** (Angriff +4 statt +1, 24/96 m) lohnt sich nur jenseits der 18 m von *Totenglocke*, die im Schnitt mehr Schaden macht.
 4. **Konzentration ist dein Engpass.** *Netz*, *Schutz vor Gut und Böse* und *Magie entdecken* schließen sich gegenseitig aus, und dein KO-Rettungswurf ist nur +3. Zauber ohne Konzentration ([[Magierrüstung]], [[Unsichtbares sehen]], [[Tote erwecken]]) laufen parallel.
 5. **Deine Bonusaktion ist überbucht.** Sternenschritt, Untote befehligen und Diener befehligen konkurrieren. Plane pro Runde eins davon.
 6. **[[Schild]] nur bei einem Angriffsergebnis von 11 bis 15** wirken, sonst die Reaktion für *Gegenzauber* aufheben.
 7. **Vertrauter für den Dschungel** (die Eule ist tot): [[Echse]] oder [[Frosch (Kröte)|Frosch]] fallen nicht auf und sind laut Zauber erlaubt. Ein Tukan oder Papagei mit den Werten des [[Rabe|Raben]] braucht die Zustimmung des DM. Die [[Eule]] bleibt der beste Kampfhelfer. Neu beschwören kostet 10 GM und 1 Stunde (als Ritual 1 Stunde 10 Minuten).
 8. **Zwei Vorbereitungsplätze sind frei** (7 von 9). Rituale (*Vertrauten finden*, *Unsichtbarer Diener*, *Magie entdecken*) musst du nicht vorbereiten. Neue Zauber aus den freien Einträgen passen also direkt hinein.
-9. **Lisbeth als Chance (Theorie):** Sie weiß vermutlich nicht, dass der Graf ihren Tod bestellt hat. Und dass ihr sie gerettet habt, ist euer Kapital.
-10. **Ab Stufe 6:** Gutartiges Versetzen und zwei neue Zauber bis Grad 3. Kandidat: [[Magie bannen]] gegen die Riesenrunen der Orcs und gegen Society-Zauber.
+9. **Lisbeth als Chance (Theorie):** Sie weiß vermutlich nicht, dass „Graf Lhaaz“, wohl einer ihrer eigenen Brüder, ihren Tod bestellt hat. Und dass ihr sie gerettet habt, ist euer Kapital.
+10. **Dein Zauberplan** (Schaden, Kontrolle, Beschwörung) im [[Stufe-6-Planer]]: *Magierrüstung*, *Nebelwolke*, *Spiegelbilder* und *Flammenkugel* für die 4 fehlenden Einträge, *Hypnotisches Muster* und *Flutwelle* auf Stufe 6. Gegen die Riesenrunen hilft [[Fluch brechen]], denn laut DM sind sie ein Fluch.
 11. **Sternenschritt ist jetzt knapp** (1×). Halte ihn für die Flucht aus dem Nahkampf zurück, nicht für Positionswechsel.
 
 ## F · Hinweise zu Aellas Bogen (für ihre Spielerin)

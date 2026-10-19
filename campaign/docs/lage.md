@@ -13,12 +13,12 @@ updated: 2026-10-12
 ## Wo ihr steht
 - **Auftrag:** mit dem Boot den Fluss nach Norden zum Meer, dann die Küste entlang nach Westen. Ziel: die [[Die belagerte Stadt im Westen|belagerte Stadt]] von [[Leonidas Lhaaz|Graf Leonidas]] befreien. Siehe [[Die Belagerung im Westen brechen]].
 - **Dabei:** du, [[Aella Rayann|Aella]], [[Twee]], [[Lucaz Lhaaz|Lucaz]], Verstärkung aus der Stadt und ein Orc, dessen Runenmal [[Nita]] gelöst hat. Er will bei einem Orc-Stamm für euch bürgen. Nita ist zurück in der Stadt.
-- **Verschwunden:** [[Fridolin vom See|Fridolin]], [[Lucira]] und [[Die Fee|die Fee]]. Lisbeth erinnert sich nicht mehr an sie. Siehe [[Die verschwundenen Gefährten]].
+- **Diesmal nicht dabei:** [[Fridolin vom See|Fridolin]], [[Lucira]] und [[Die Fee|die Fee]], weil ihre Spieler verhindert waren. Ihr spielt in wechselnder Besetzung, mindestens zu dritt. Im Spiel verschwanden die drei über Nacht, und Lisbeth erinnert sich nicht mehr an sie. Siehe [[Die verschwundenen Gefährten]].
 
 ## Was du nach der langen Rast brauchst
 - **Neuer Vertrauter:** Die Eule ist tot. Neu beschwören (Ritual, Material von der Kräuterfrau). Optionen unter **Gefolge**.
 - **Die 3 Skelette** vom Orc-Kampf lagern auf eurem Boot. Erwecken: 1 pro Wirken mit Grad 3, danach alle 24 Stunden erneuern.
-- **Astrale Trance:** Waffe oder Werkzeug wählen. Für den Fernkampf zum Beispiel den erbeuteten **Kurzbogen** (Angriff dann +4).
+- **Astrale Trance:** Waffe oder Werkzeug wählen. Meist lohnt ein Werkzeug: das **Alchemistenwerkzeug**, denn ohne Trance hast du damit keine Übung, an Brautagen die Kräuterkundeausrüstung für Heiltränke. Der **Kurzbogen** (Angriff +4) lohnt sich nur jenseits der 18 m von *Totenglocke*.
 - **Ohrringe:** 1× pro Tag *Verständigung* mit Aella, falls sie ihr Stück trägt.
 
 ## Die Lage in Xantus

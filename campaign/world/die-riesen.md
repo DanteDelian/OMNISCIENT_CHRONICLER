@@ -18,6 +18,6 @@ summary: Riesen verschiedener Art im Norden und Westen. Belagern die Stadt von G
 
 ## Runen
 - Auf dem großen Schwert eines Riesen las [[Lucira]] zwei Zauberrunen: **schützen** und **schneiden**. Das Schwert war zu schwer zum Mitnehmen.
-- Die Riesen **versklaven Orc-Stämme** und brennen jedem Gefangenen eine **Riesenrune** in die rechte Handfläche. Das Mal lässt sich aufspüren, und die Riesen können zuhören, was in seiner Nähe gesagt wird, aber nicht ständig. Es ist Erkenntnismagie. Siehe [[Die Orcs]].
+- Die Riesen **versklaven Orc-Stämme** und brennen jedem Gefangenen eine **Riesenrune** in die rechte Handfläche. Laut DM ist das Mal ein Fluch. Es lässt sich aufspüren, und die Riesen können zuhören, was in seiner Nähe gesagt wird, aber nicht ständig. Es ist Erkenntnismagie. Siehe [[Die Orcs]].
 
 *Regel-Hinweis:* Ein Eisriese entspricht wohl dem **Frostriesen** des Monsterhandbuchs (immun gegen Kälte). Dein *Netz* fängt ihn leicht (GE-Rettung −1: zu 75 % gefangen), er reißt sich aber mit einer Aktion zu 60 % los (ST +6 gegen SG 15). *Totenglocke* wirkt gut (WE-Rettung +3: 55 % Fehlschlag), die Kälte von *Eismesser* verpufft.

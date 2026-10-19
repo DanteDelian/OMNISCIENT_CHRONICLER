@@ -22,12 +22,13 @@
     "kind": "Bündnis",
     "next": "Den befreiten Orc beim Wort nehmen: Er bürgt bei einem Orc-Stamm oder bei streunenden Orcs für euch. Ein Treffen vereinbaren.",
     "reward": "Verbündete gegen die Riesen, später neue Bürger wie die Echsen",
-    "notes": "Die [[Die Riesen|Riesen]] versklaven Orc-Stämme: Wer gefasst wird, bekommt eine **Riesenrune** in die rechte Handfläche gebrannt. Das Mal lässt sich aufspüren, und die Riesen können zuhören, was in seiner Nähe gesagt wird, aber nicht ständig. *Magie entdecken* zeigt Erkenntnismagie. In *Leomunds winziger Hütte* ist es blockiert. [[Nita]] hat es beim Gefangenen gelöst.\n\n**Deine Linie:** Nicht alle Orcs befreien. Das Mal ortet und lauscht nur, im Kampf stört es nicht, und ohne Mal fehlt ihnen ein Grund, sich gegen die Riesen aufzulehnen. Erst gegen die Riesen einsetzen, dann eingliedern wie die Echsen.\n\nDer Orc-Schamane ist nach Nordwesten entkommen.",
+    "notes": "Die [[Die Riesen|Riesen]] versklaven Orc-Stämme: Wer gefasst wird, bekommt eine **Riesenrune** in die rechte Handfläche gebrannt. Das Mal lässt sich aufspüren, und die Riesen können zuhören, was in seiner Nähe gesagt wird, aber nicht ständig. *Magie entdecken* zeigt Erkenntnismagie. In *Leomunds winziger Hütte* ist es blockiert. [[Nita]] hat es beim Gefangenen gelöst. **Laut DM ist das Mal ein Fluch** (19.10.2026): [[Fluch brechen]] beendet es.\n\n**Deine Linie:** Nicht alle Orcs befreien. Das Mal ortet und lauscht nur, im Kampf stört es nicht, und ohne Mal fehlt ihnen ein Grund, sich gegen die Riesen aufzulehnen. Erst gegen die Riesen einsetzen, dann eingliedern wie die Echsen.\n\nDer Orc-Schamane ist nach Nordwesten entkommen.",
     "links": [
       "Die Orcs",
       "Die Riesen",
       "Nita",
-      "Twee"
+      "Twee",
+      "Fluch brechen"
     ]
   },
   {
@@ -37,7 +38,7 @@
     "urgent": true,
     "kind": "Klärung",
     "next": "Beim nächsten Spieltermin durchgehen und die Antworten hier eintragen.",
-    "notes": "1. **Fehlende Zauber:** Nach den Regeln hast du 4 freie Einträge im Zauberbuch (2 bis Grad 1, 2 bis Grad 2). Wurden sie nie gewählt? Darfst du sie nachtragen?\n2. **Frühere Skelette:** Hattest du vor Oktober 2026 schon erweckte Skelette (Arena, Haus)? In deinen Unterlagen steht nichts dazu. Wo sind die Knochen?\n3. **Heiltränke:** Reicht dein Alchemistenwerkzeug, um aus den 3 Heilkräutern Tränke zu brauen? Laut Xanathars braucht man Kräuterkundeausrüstung.\n4. **Riesenrune:** Ist das Mal ein Zauber (dann hilft *Magie bannen*, ab Stufe 6 lernbar) oder ein Fluch (*Fluch brechen*)?\n5. **Tukan als Vertrauter:** Werte des Raben mit dem Aussehen eines Tukans oder Papageis?\n6. **Ohrringe:** Wirkt *Verständigung* als Aktion, und gilt „pro Tag“ ab der langen Rast? Trägt Aella ihr Stück schon?\n7. **Astralelf:** Astrales Feuer gestrichen, Trance nur Waffe oder Werkzeug, Sternenschritt 1×. Gelten Dunkelsicht 18 m, Feenabstammung und Scharfe Sinne (Wahrnehmung) unverändert?\n8. **Täuschen:** Woher kommt die Übung? Ein Hintergrund gibt meist zwei Fertigkeiten.\n9. **Familie Lhaaz:** Geklärt (19.10.2026): Leons Vater ist der Erzherzog, Leonidas und Lisbeth sind seine Geschwister. **Offen:** Wer ist der „Graf Lhaaz“, der Lisbeths Tod bestellt hat? Cams erster Brief nennt Leons Vater so, die Warnung nennt den Erzherzog und den Grafen getrennt, und Leonidas trägt den Titel Graf. Und ist Leonidas der „Baron“ aus Cams Brief? Siehe [[Haus Lhaaz]].\n10. **Tashas Kessel:** Sind Zauber daraus erlaubt, etwa *Feenwesen beschwören* (Fokus 300 GM)? Wichtig für die Wahl auf Stufe 6, siehe [[Stufe-6-Planer]].",
+    "notes": "Die Fragen stehen jetzt gebündelt auf der [[Rätselwand]]: offen, geklärt, mit Platz für die Antworten. Zum Ausdrucken gibt es das Blatt „Fragen an den DM“ in der Druckfassung.",
     "links": [
       "Prüfbericht"
     ]
@@ -48,7 +49,7 @@
     "status": "aktiv",
     "kind": "Mysterium",
     "next": "Herausfinden, was Fridolin, Lucira und die Fee in der Nacht vor dem 11.10.2026 fortgerissen hat. Spur: Crush Lu spürte mächtige Magie aus dem Turm im See.",
-    "notes": "Im Traum hast du gesehen, wie eine magische Kraft drei von euch sechs fortreißt, und konntest es nicht verhindern. [[Lisbeth Lhaaz|Lisbeth]] kennt die drei nicht mehr, ihr und [[Crush Lu]] erinnert euch. Im [[Der Magische Turm|Turm]] ist mehr Magie in den Mauern, die langsam abklingt. [[Baldum]] weiß von nichts.\n\n**Deine Idee:** die notierten Passagierzahlen der Schiffe prüfen. Weichen sie ab, wurde mehr verändert als nur Erinnerungen.\n\nLaut DM folgt dazu eine eigene Storyline (die Spieler waren verhindert).",
+    "notes": "Im Traum hast du gesehen, wie eine magische Kraft drei von euch sechs fortreißt, und konntest es nicht verhindern. [[Lisbeth Lhaaz|Lisbeth]] kennt die drei nicht mehr, ihr und [[Crush Lu]] erinnert euch. Im [[Der Magische Turm|Turm]] ist mehr Magie in den Mauern, die langsam abklingt. [[Baldum]] weiß von nichts.\n\n**Deine Idee:** die notierten Passagierzahlen der Schiffe prüfen. Weichen sie ab, wurde mehr verändert als nur Erinnerungen.\n\nLaut DM folgt dazu eine eigene Storyline (die Spieler waren verhindert).\n\n**Am Tisch (laut dir, 19.10.2026):** Die drei fehlten nur in dieser Session. Ihr spielt in wechselnder Besetzung, mindestens zu dritt.",
     "links": [
       "Fridolin vom See",
       "Lucira",
@@ -134,7 +135,7 @@
       "Die Echsen-Allianz",
       "Nitas Tempel"
     ],
-    "notes": "Nach Friedens- und Bündnisgesprächen von [[Crush Lu]] und [[Zitherus]] mit Leon freigelassen (Juli 2026). Lula war schwer traumatisiert, sprach nicht und kreischte. [[Lucira]] las ihre Gedanken und half ihr. Was sie gesehen hat, wisst ihr nicht. Laut DM war das eigentlich eine verborgene Storyline für später. Lula ist auf dem Weg der Besserung."
+    "notes": "Nach Friedens- und Bündnisgesprächen von [[Crush Lu]] und [[Zitherus]] mit Leon freigelassen (Juli 2026). Lula war schwer traumatisiert, sprach nicht und kreischte. [[Lucira]] las ihre Gedanken und half ihr. Was sie gesehen hat, wisst ihr nicht. Laut DM war das eigentlich eine verborgene Storyline für später. Lula ist auf dem Weg der Besserung.\n\n**Hintergrund (laut dir, 19.10.2026):** Ihr solltet die Echsen befrieden. Das scheiterte zunächst, deshalb wurde Lula als Geisel gehalten."
   },
   {
     "id": "schutz-lhaaz",
@@ -168,7 +169,7 @@
     "title": "3 Heiltränke aus den Heilkräutern",
     "status": "aktiv",
     "kind": "Projekt",
-    "next": "Mit dem DM klären, ob das Alchemistenwerkzeug reicht. Laut Xanathars: Kräuterkundeausrüstung, 1 Tag und 25 GM pro Trank.",
+    "next": "Mit dem DM klären, ob das Alchemistenwerkzeug reicht. Laut Xanathars: Kräuterkundeausrüstung (5 GM), 1 Tag und 25 GM pro Trank. Die Übung gibt dir die Astrale Trance.",
     "reward": "3 × Heiltrank (2W4 + 2)",
     "links": [
       "Alchemie-Kompendium"
@@ -182,7 +183,7 @@
     "kind": "Projekt",
     "next": "Die 3 Skelette vom Boot mit *Tote erwecken* zum Leben bringen: 1 Skelett pro Wirken mit Grad 3. Danach alle 24 Stunden die Kontrolle erneuern.",
     "reward": "Loyales Gefolge ohne Verratsrisiko",
-    "notes": "Die 3 Skelette aus dem Orc-Kampf (11.10.2026) lagern auf eurem Boot. Orcs sind mittelgroße Humanoide, also geeignet. In deinen Unterlagen steht nicht, dass du vor Oktober 2026 schon Skelette erweckt hattest (Frage an den DM). Das Schlachtfeld im Südosten bleibt eine Quelle für weitere Knochen.",
+    "notes": "Die 3 Skelette aus dem Orc-Kampf (11.10.2026) lagern auf eurem Boot. Orcs sind mittelgroße Humanoide, also geeignet. In deinen Unterlagen steht nicht, dass du vor Oktober 2026 schon Skelette erweckt hattest (Frage an den DM). Das Schlachtfeld im Südosten bleibt eine Quelle für weitere Knochen.\n\n**Vorschlag (19.10.2026):** Erst kurz vor der Schlacht erwecken. Die Kontrolle hält 24 Stunden, danach kostet jeder Tag einen Grad-3-Platz, und ohne Erneuerung gehorchen sie nicht mehr, auf einem vollen Boot ein Risiko. Und es sind Orc-Knochen: Der befreite Orc, der für euch bürgen soll, sollte seine Leute nicht als Diener sehen. Die Society-Uniformen lieber für deine eigene Tarnung aufheben.",
     "links": [
       "Schlachtfeld im Südosten",
       "Taktik-Handbuch"

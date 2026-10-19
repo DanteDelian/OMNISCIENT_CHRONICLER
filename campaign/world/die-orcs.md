@@ -20,6 +20,7 @@ summary: Orc-Stämme, die von den Riesen mit Runenmalen versklavt werden. Ein be
 - Gefangene Orcs bekommen eine **Riesenrune** in die rechte Handfläche gebrannt. Noch sind nicht alle Stämme unterworfen, die Riesen arbeiten daran.
 - Das Mal lässt sich **aufspüren**, und die Riesen können **zuhören**, was in seiner Nähe gesagt wird, aber nicht ständig.
 - *Magie entdecken* zeigt **Erkenntnismagie**. In *Leomunds winziger Hütte* ist es blockiert. [[Nita]] konnte es beim Gefangenen lösen.
+- **Laut DM ein Fluch** (19.10.2026). Dagegen hilft [[Fluch brechen]], nicht [[Magie bannen]].
 
 ## Der befreite Orc
 - Er erzählte alles, als das Mal blockiert war, und will bei einem **Orc-Stamm oder streunenden Orcs** für euch bürgen.

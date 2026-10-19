@@ -762,6 +762,99 @@
     "card": "**Reaktion**, wenn du siehst, wie eine Kreatur in 18 m einen Zauber wirkt. Zauber **bis Grad 3** scheitern automatisch. Bei höheren: **IN-Wurf gegen SG 10 + Grad**, bei Erfolg scheitern sie. Höhere Grade: Zauber bis zum Grad deines Platzes scheitern automatisch."
   },
   {
+    "id": "nebelwolke",
+    "name": "Nebelwolke",
+    "en": "Fog Cloud",
+    "level": 1,
+    "school": "Beschwörung",
+    "status": "vorschlag",
+    "pick": true,
+    "concentration": true,
+    "time": "1 Aktion",
+    "economy": "aktion",
+    "range": "36 m (120 Fuß)",
+    "area": "Kugel mit 6 m Radius",
+    "components": "V, G",
+    "duration": "Konzentration, bis zu 1 Stunde",
+    "source": "Spielerhandbuch 2014 (engl. S. 243) · SRD 5.1",
+    "summary": "Eine Nebelkugel mit 6 m Radius, in der niemand etwas sieht.",
+    "text": "Du erschaffst eine **Nebelkugel mit 6 m (20 Fuß) Radius** um einen Punkt in Reichweite. Die Kugel breitet sich um Ecken aus, und ihr Bereich ist **komplett verschleiert**. Sie hält für die Wirkungsdauer oder bis ein Wind von mindestens mäßiger Stärke (ab etwa 16 km/h) sie verweht.",
+    "higher": "Mit einem Platz des 2. Grades oder höher wächst der Radius um **6 m (20 Fuß)** pro Grad über dem 1.",
+    "valerius": "36 m · Kugel mit 6 m Radius (mit Grad 2: 12 m) · bis 1 Stunde · Konzentration. Darin könnt ihr euch verstecken, dann müssen Schützen und Felswerfer raten, wo ihr steht.",
+    "why": "**Gegen Schützen und Felswerfer:** Was im Nebel steht, sieht niemand. Zauber, die ein sichtbares Ziel brauchen, gehen hinein gar nicht, und wer sich darin versteckt, muss erst gefunden werden. Zugleich deckt der Nebel deinen Rückzug aus dem Nahkampf. **Als Beschwörung** lädt er *Gutartiges Versetzen* auf und kostet beim Abschreiben die Hälfte.",
+    "slot": "einer der fehlenden Einträge bis Grad 1",
+    "tips": [
+      "**Zwischen euch und die Schützen legen,** nicht auf eure Nahkämpfer: Im Nebel sieht auch Aella nichts.",
+      "**Konzentration:** nicht zusammen mit *Netz*. Gegen Schützen der Nebel, gegen anstürmende Gegner das Netz."
+    ],
+    "docs": []
+  },
+  {
+    "id": "spiegelbilder",
+    "name": "Spiegelbilder",
+    "en": "Mirror Image",
+    "level": 2,
+    "school": "Illusion",
+    "status": "vorschlag",
+    "pick": true,
+    "time": "1 Aktion",
+    "economy": "aktion",
+    "range": "Selbst",
+    "components": "V, G",
+    "duration": "1 Minute",
+    "source": "Spielerhandbuch 2014 (engl. S. 260) · SRD 5.1",
+    "summary": "Drei Doppelgänger lenken Angriffe gegen dich ab, ohne Konzentration.",
+    "text": "**Drei illusorische Doppelgänger** von dir erscheinen in deinem Feld. Bis der Zauber endet, bewegen sie sich mit dir und ahmen deine Handlungen nach. Dabei wechseln sie ständig die Position, sodass niemand verfolgen kann, welches Bild echt ist. Mit deiner Aktion kannst du die Doppelgänger auflösen.\n\nJedes Mal, wenn eine Kreatur dich während der Wirkungsdauer mit einem Angriff anvisiert, würfelst du einen W20, um zu bestimmen, ob der Angriff stattdessen einen Doppelgänger anvisiert. Bei **drei Doppelgängern** brauchst du dafür eine **6 oder mehr**, bei **zwei** eine **8 oder mehr**, bei **einem** eine **11 oder mehr**.\n\nEin Doppelgänger hat **RK 10 + deinen Geschicklichkeitsmodifikator**. Trifft ein Angriff einen Doppelgänger, wird er zerstört. Ein Doppelgänger kann nur durch einen Angriff zerstört werden, der ihn trifft, alle anderen Schäden und Effekte ignoriert er. Der Zauber endet, wenn alle drei Doppelgänger zerstört sind.\n\nEine Kreatur ist nicht betroffen, wenn sie nicht sehen kann, wenn sie sich auf andere Sinne als die Sicht verlässt, etwa Blindsicht, oder wenn sie Illusionen als falsch erkennt, etwa durch Wahrsicht.",
+    "valerius": "**Keine Konzentration**, läuft neben *Netz* oder *Hypnotisches Muster*. Bei 3, 2 und 1 Abbild lenkst du einen Angriff zu 75, 65 und 50 % auf ein Abbild. Abbilder haben RK 11.",
+    "why": "**Dein Schutz im Nahkampf:** Wer dich angreift, trifft meist ein Abbild. Zusammen mit [[Magierrüstung]] (RK 14) und [[Schild]] (RK 19) wirst du zum zähesten Ziel der Gruppe, und das ganz ohne Konzentration. Gerade wenn kein Nahkämpfer am Tisch ist, rettet dich das.",
+    "slot": "einer der fehlenden Einträge bis Grad 2",
+    "tips": [
+      "**Vor dem Nahkampf wirken:** Es hält eine Minute, also meist den ganzen Kampf.",
+      "**Wirkt nicht** gegen Wesen mit Blindsicht oder Wahrsicht und gegen Blinde."
+    ],
+    "docs": []
+  },
+  {
+    "id": "flammenkugel",
+    "name": "Flammenkugel",
+    "en": "Flaming Sphere",
+    "level": 2,
+    "school": "Beschwörung",
+    "status": "vorschlag",
+    "pick": true,
+    "concentration": true,
+    "time": "1 Aktion",
+    "economy": "aktion",
+    "range": "18 m (60 Fuß)",
+    "area": "Kugel mit 1,5 m Durchmesser",
+    "components": "V, G, M (ein Stückchen Talg, eine Prise Schwefel und etwas Eisenpulver)",
+    "duration": "Konzentration, bis zu 1 Minute",
+    "save": "GE",
+    "damage": "2W6 Feuer",
+    "rolls": [
+      {
+        "label": "Schaden",
+        "expr": "2d6"
+      },
+      {
+        "label": "Mit Grad 3",
+        "expr": "3d6"
+      }
+    ],
+    "source": "Spielerhandbuch 2014 (engl. S. 242) · SRD 5.1",
+    "summary": "Eine Feuerkugel, die du jede Runde per Bonusaktion in Gegner rammst.",
+    "text": "Eine **Feuerkugel mit 1,5 m (5 Fuß) Durchmesser** erscheint auf einem freien Feld deiner Wahl in Reichweite und bleibt für die Wirkungsdauer. Jede Kreatur, die ihren Zug **innerhalb von 1,5 m** um die Kugel beendet, macht einen **Geschicklichkeitsrettungswurf**: bei Misserfolg **2W6 Feuerschaden**, bei Erfolg die Hälfte.\n\nAls **Bonusaktion** kannst du die Kugel bis zu **9 m (30 Fuß)** bewegen. Rammst du damit eine Kreatur, macht sie den Rettungswurf gegen den Schaden der Kugel, und die Kugel hält in diesem Zug an. Du kannst sie über Hindernisse bis 1,5 m Höhe lenken und über Gruben bis 3 m Breite springen lassen. Die Kugel entzündet brennbare Gegenstände, die niemand trägt oder hält, und spendet in 6 m Umkreis helles Licht und weitere 6 m dämmriges Licht.",
+    "higher": "Mit einem Platz des 3. Grades oder höher steigt der Schaden um **1W6** pro Grad über dem 2.",
+    "valerius": "SG **15** · Bonusaktion: 9 m bewegen und rammen, 2W6 Feuer (Ø 7) · deine Aktion bleibt frei, etwa für *Totenglocke*. Mit Grad 3: 3W6.",
+    "why": "**Beschwörer-Schaden jede Runde:** Mit der Bonusaktion rammst du einen Gegner, mit der Aktion wirkst du *Totenglocke* obendrauf. Wer neben der Kugel steht, brennt, also halten Gegner Abstand: ein Stück Kontrolle. **Als Beschwörung** lädt sie *Gutartiges Versetzen* auf.",
+    "slot": "einer der fehlenden Einträge bis Grad 2",
+    "tips": [
+      "**Nicht neben eure Leute parken:** Wer seinen Zug neben der Kugel beendet, brennt, auch Aella.",
+      "**Stark gegen Orcs, schwach gegen Riesen:** 2W6 sind für einen Orc viel, für einen Riesen mit über 100 TP wenig."
+    ],
+    "docs": []
+  },
+  {
     "id": "magierruestung",
     "name": "Magierrüstung",
     "en": "Mage Armor",
@@ -779,12 +872,13 @@
     "text": "Du berührst eine bereitwillige Kreatur, die keine Rüstung trägt, und eine schützende magische Kraft umgibt sie, bis der Zauber endet. Die Basis-RK des Ziels wird **13 + sein Geschicklichkeitsmodifikator**. Der Zauber endet, wenn das Ziel eine Rüstung anlegt oder du ihn als Aktion beendest.",
     "valerius": "Deine RK steigt von **11 auf 14**, mit *Schild* auf **19**. 8 Stunden, keine Konzentration.",
     "why": "**Deine RK von 11 ist dein größtes Risiko.** Ein normaler Gegner mit +5 trifft dich zu 75 %, mit Magierrüstung nur noch zu 60 %. Ein Grad-1-Platz am Morgen hält den ganzen Abenteuertag. Kein anderer Grad-1-Zauber bringt dir so viel Überleben.",
-    "slot": "jeden freien Eintrag (bis Grad 1 oder bis Grad 2)",
+    "slot": "einer der fehlenden Einträge bis Grad 1",
     "tips": [
       "**Morgens wirken:** 8 Stunden decken fast jeden Abenteuertag ab.",
       "**Läuft neben allem:** keine Konzentration, also parallel zu *Netz*."
     ],
-    "docs": []
+    "docs": [],
+    "pick": true
   },
   {
     "id": "selbstverkleidung",
@@ -803,7 +897,7 @@
     "text": "Du lässt dich selbst, samt Kleidung, Rüstung, Waffen und anderer Gegenstände, die du bei dir trägst, anders aussehen, bis der Zauber endet oder du ihn als Aktion beendest. Du kannst bis zu **30 cm** kleiner oder größer erscheinen und dünn, dick oder etwas dazwischen wirken. Deinen **Körperbau** kannst du nicht ändern, du brauchst also eine Gestalt mit derselben grundlegenden Anordnung der Gliedmaßen. Ansonsten bestimmst du das Ausmaß der Illusion.\n\nDie Veränderungen halten **keiner körperlichen Überprüfung** stand. Fügst du deiner Kleidung einen Hut hinzu, gehen Gegenstände durch ihn hindurch, und wer ihn berührt, fühlt nichts oder nur deinen Kopf und dein Haar. Erscheinst du dünner, stößt die Hand einer Person, die dich berühren will, scheinbar noch in der Luft gegen dich.\n\nUm zu erkennen, dass du verkleidet bist, kann eine Kreatur ihre Aktion nutzen, um dein Aussehen zu untersuchen, und muss einen **Intelligenzwurf (Nachforschung) gegen deinen Zauber-SG** schaffen.",
     "valerius": "Durchschauen: IN (Nachforschung) gegen **SG 15** · 1 Stunde · keine Konzentration",
     "why": "**Die direkte Antwort auf die aufgeflogene Donnergarde.** Jederzeit ein anderes Gesicht, zum Beispiel passend zu den drei Society-Uniformen. Keine Konzentration, also kein Konflikt mit *Netz*. Als Illusion kein Rabatt beim Kopieren, als freier Stufenaufstiegs-Zauber aber kostenlos.",
-    "slot": "jeden freien Eintrag (bis Grad 1 oder bis Grad 2)",
+    "slot": "jeden fehlenden Eintrag (bis Grad 1 oder bis Grad 2)",
     "tips": [
       "**Nicht anfassen lassen:** Wer dich berührt, kann die Illusion bemerken. Händeschütteln und Umarmungen vermeiden.",
       "**Verkleidungsausrüstung dazu:** Echte Requisiten plus Illusion sind am überzeugendsten."
@@ -828,7 +922,7 @@
     "text": "Dieser Zauber erschafft eine kreisförmige, waagerechte Kraftfläche mit **90 cm Durchmesser** und 2,5 cm Dicke. Sie schwebt 90 cm über dem Boden auf einem freien Feld deiner Wahl in Reichweite, das du sehen kannst. Die Scheibe bleibt für die Wirkungsdauer bestehen und trägt **bis zu 500 Pfund** (rund 225 kg). Wird mehr Gewicht daraufgelegt, endet der Zauber, und alles darauf fällt zu Boden.\n\nDie Scheibe bewegt sich nicht, solange du höchstens 6 m von ihr entfernt bist. Entfernst du dich weiter, folgt sie dir und bleibt in 6 m Abstand. Sie überwindet unebenes Gelände, Treppen, Hänge und Ähnliches, aber **keinen Höhenunterschied von 3 m oder mehr**. Sie kann also keine 3 m tiefe Grube überqueren und eine solche auch nicht verlassen, wenn sie darin erschaffen wurde.\n\nEntfernst du dich mehr als 30 m von der Scheibe, meist weil sie einem Hindernis nicht folgen kann, endet der Zauber.",
     "valerius": "Ritual: kein Zauberplatz · 225 kg Traglast · 1 Stunde",
     "why": "**Logistik für deine Nekromantie:** Knochen und Leichen vom Schlachtfeld transportieren, Beute und Alchemie-Zutaten bergen. Als Ritual kostet sie dich nie einen Zauberplatz. Als Beschwörung passt sie zu deiner Schule.",
-    "slot": "jeden freien Eintrag (bis Grad 1 oder bis Grad 2)",
+    "slot": "jeden fehlenden Eintrag (bis Grad 1 oder bis Grad 2)",
     "tips": [
       "**Als Ritual ohne Vorbereitung:** wie *Unsichtbarer Diener* jederzeit verfügbar, wenn du 10 Minuten Zeit hast."
     ],
@@ -861,7 +955,7 @@
     "higher": "+1W8 Schall pro Grad über dem 1.",
     "valerius": "SG **15** · **2W8** (Ø 9) · Stoß 3 m",
     "why": "**Dein Notfallknopf, wenn Nahkämpfer dich erreichen.** Mit RK 11 bist du im Nahkampf verloren. Die Woge stößt alle in deiner Nähe 3 m weg, sogar **in dein Netz hinein**: Wer es betritt, muss sofort retten.",
-    "slot": "jeden freien Eintrag (bis Grad 1 oder bis Grad 2)",
+    "slot": "jeden fehlenden Eintrag (bis Grad 1 oder bis Grad 2)",
     "tips": [
       "**Ins Netz stoßen:** Gegner, die du in dein *Netz* stößt, müssen beim Betreten einen GE-Rettungswurf machen.",
       "**Laut:** 90 m weit hörbar. Nichts für die Unsichtbare Hand bei Infiltrationen."
@@ -943,6 +1037,136 @@
     "docs": []
   },
   {
+    "id": "hypnotisches-muster",
+    "name": "Hypnotisches Muster",
+    "en": "Hypnotic Pattern",
+    "level": 3,
+    "school": "Illusion",
+    "status": "vorschlag",
+    "pick": true,
+    "concentration": true,
+    "time": "1 Aktion",
+    "economy": "aktion",
+    "range": "36 m (120 Fuß)",
+    "area": "9-m-Würfel (6 × 6 Felder)",
+    "components": "G, M (ein glühendes Räucherstäbchen oder ein Kristallfläschchen mit phosphoreszierendem Material)",
+    "duration": "Konzentration, bis zu 1 Minute",
+    "save": "WE",
+    "source": "Spielerhandbuch 2014 (engl. S. 252) · SRD 5.1",
+    "summary": "Ein Farbmuster: Wer es sieht und scheitert, steht still und ist kampfunfähig.",
+    "text": "Du erschaffst ein sich windendes Farbmuster, das in einem **Würfel mit 9 m (30 Fuß) Kantenlänge** in Reichweite durch die Luft wirbelt. Es erscheint einen Augenblick lang und verschwindet. Jede Kreatur im Bereich, die das Muster **sieht**, macht einen **Weisheitsrettungswurf**. Bei einem Misserfolg ist sie für die Wirkungsdauer **bezaubert**. Solange sie so bezaubert ist, ist sie **kampfunfähig** und hat **Bewegungsrate 0**.\n\nDer Zauber endet für eine betroffene Kreatur, wenn sie **Schaden erleidet** oder jemand anderes seine **Aktion** nutzt, um sie aus der Starre zu rütteln.",
+    "valerius": "SG **15** · 36 m · 9-m-Würfel · bis 1 Minute · Konzentration. Fallen aus: Hügelriesen 75 %, Eisriesen 55 %, Steinriesen 50 %, Orcs 70 %.",
+    "why": "**Die stärkste Kontrolle bis Grad 3:** Eine ganze Gruppe steht still, bis jemand sie weckt. Ihr erledigt die Übrigen und nehmt euch die Gebannten danach einzeln vor. Wirkt auf fast alles, auch auf Riesen, und braucht keine Mitspieler, um zu wirken. **Eure Leute:** Wer im Würfel steht und das Muster sieht, ist ebenfalls betroffen. Leg ihn auf Gegner, die noch nicht im Nahkampf mit euch stehen.",
+    "slot": "Stufe 6 (einer der 2 neuen Zauber bis Grad 3)",
+    "tips": [
+      "**Nicht draufhauen:** Schaden weckt die Gebannten. Erst die anderen erledigen, dann einen nach dem anderen wecken und bekämpfen.",
+      "**Eigene Leute wecken:** Ist doch jemand von euch betroffen, rüttelt ihn eine Aktion wach.",
+      "**Konzentration:** nicht zusammen mit *Netz*. Gegen Gruppen das Muster, gegen anstürmende Einzelne das Netz."
+    ],
+    "docs": []
+  },
+  {
+    "id": "flutwelle",
+    "name": "Flutwelle",
+    "en": "Tidal Wave",
+    "level": 3,
+    "school": "Beschwörung",
+    "status": "vorschlag",
+    "pick": true,
+    "time": "1 Aktion",
+    "economy": "aktion",
+    "range": "36 m (120 Fuß)",
+    "area": "bis 9 m lang, 3 m breit, 3 m hoch",
+    "components": "V, G, M (ein Tropfen Wasser)",
+    "duration": "Unmittelbar",
+    "save": "GE",
+    "damage": "4W8 Wucht",
+    "rolls": [
+      {
+        "label": "Schaden",
+        "expr": "4d8"
+      }
+    ],
+    "source": "Xanathars Ratgeber für alles (engl. S. 168)",
+    "summary": "Eine herbeigerufene Welle: 4W8 Wucht und umgestoßen, keine Konzentration.",
+    "text": "Du rufst eine Welle herbei, die auf einen Bereich in Reichweite niedergeht: höchstens **9 m lang, 3 m breit und 3 m hoch** (30 × 10 × 10 Fuß). Jede Kreatur darin macht einen **Geschicklichkeitsrettungswurf**. Scheitert sie, erleidet sie **4W8 Wuchtschaden** und **liegt am Boden**. Gelingt er, erleidet sie den halben Schaden und bleibt stehen.\n\nDanach fließt das Wasser in alle Richtungen über den Boden, löscht ungeschützte Flammen im Bereich und bis 9 m darum herum und verschwindet.",
+    "valerius": "SG **15** · 36 m · schmales Rechteck · **keine Konzentration**. 4W8 Wucht (Ø 18) und liegend: Eis- und Hügelriesen zu 75 %, Steinriesen zu 45 %, Orcs zu 65 %.",
+    "why": "**Schaden und Kontrolle in einem, als Beschwörung:** Wer scheitert, liegt. Aufstehen kostet die halbe Bewegung, und eure Nahkämpfer greifen Liegende mit Vorteil an. Das schmale Rechteck legst du an euren Leuten vorbei. Keine Konzentration, also zusammen mit *Netz* oder *Hypnotisches Muster*. **Als Beschwörung** lädt sie *Gutartiges Versetzen* auf.",
+    "slot": "Stufe 6 (einer der 2 neuen Zauber bis Grad 3)",
+    "tips": [
+      "**Weniger Schaden als Blitz** (Ø 18 statt 28), dafür liegen die Getroffenen.",
+      "**Fernkampf auf Liegende hat Nachteil:** Deine Skelette und dein *Sengender Strahl* zielen lieber auf Stehende.",
+      "**Aus Xanathars Ratgeber,** wie dein *Eismesser*. Das Buch ist an eurem Tisch also im Spiel."
+    ],
+    "docs": []
+  },
+  {
+    "id": "blitz",
+    "name": "Blitz",
+    "en": "Lightning Bolt",
+    "level": 3,
+    "school": "Hervorrufung",
+    "status": "vorschlag",
+    "time": "1 Aktion",
+    "economy": "aktion",
+    "range": "Selbst (Linie von 30 m)",
+    "area": "Linie 30 m lang, 1,5 m breit",
+    "components": "V, G, M (ein Stück Fell und ein Stab aus Bernstein, Kristall oder Glas)",
+    "duration": "Unmittelbar",
+    "save": "GE",
+    "damage": "8W6 Blitz",
+    "rolls": [
+      {
+        "label": "Schaden",
+        "expr": "8d6"
+      }
+    ],
+    "source": "Spielerhandbuch 2014 (engl. S. 255) · SRD 5.1",
+    "summary": "Eine Blitzlinie von 30 m: 8W6 Blitzschaden für alle darin.",
+    "text": "Ein Blitzstrahl, der eine **30 m (100 Fuß) lange und 1,5 m (5 Fuß) breite Linie** bildet, schießt in eine Richtung deiner Wahl von dir aus. Jede Kreatur in der Linie macht einen **Geschicklichkeitsrettungswurf**: bei Misserfolg **8W6 Blitzschaden**, bei Erfolg die Hälfte. Der Blitz entzündet brennbare Gegenstände im Bereich, die niemand trägt oder hält.",
+    "higher": "Mit einem Platz des 4. Grades oder höher steigt der Schaden um **1W6** pro Grad über dem 3.",
+    "valerius": "SG **15** · Linie 30 m ab dir · 8W6 Blitz (Ø 28). Gegen Eis- und Hügelriesen im Schnitt etwa 24 pro Riese in der Linie.",
+    "why": "**Die Alternative mit mehr Schaden:** Die Linie lässt sich an euren Nahkämpfern vorbeiziehen, und Aella ist als bronzene Drachenblütige ohnehin resistent gegen Blitz. Keine Beschwörung, also kein Aufladen von *Gutartiges Versetzen*.",
+    "slot": "Stufe 6 (einer der 2 neuen Zauber bis Grad 3)",
+    "tips": [
+      "**Ausrichten:** Stell dich so, dass mehrere Gegner hintereinander stehen, etwa an einem Tor oder einer Gasse."
+    ],
+    "docs": []
+  },
+  {
+    "id": "feuerball",
+    "name": "Feuerball",
+    "en": "Fireball",
+    "level": 3,
+    "school": "Hervorrufung",
+    "status": "vorschlag",
+    "time": "1 Aktion",
+    "economy": "aktion",
+    "range": "45 m (150 Fuß)",
+    "area": "Kugel mit 6 m Radius",
+    "components": "V, G, M (ein Kügelchen aus Fledermausguano und Schwefel)",
+    "duration": "Unmittelbar",
+    "save": "GE",
+    "damage": "8W6 Feuer",
+    "rolls": [
+      {
+        "label": "Schaden",
+        "expr": "8d6"
+      }
+    ],
+    "source": "Spielerhandbuch 2014 (engl. S. 241) · SRD 5.1",
+    "summary": "Eine Feuerexplosion mit 6 m Radius: 8W6 Feuerschaden.",
+    "text": "Ein heller Streif schießt von deinem Finger zu einem Punkt deiner Wahl in Reichweite und erblüht dort mit leisem Grollen zu einer Feuerexplosion. Jede Kreatur in einer **Kugel mit 6 m (20 Fuß) Radius** um diesen Punkt macht einen **Geschicklichkeitsrettungswurf**: bei Misserfolg **8W6 Feuerschaden**, bei Erfolg die Hälfte. Das Feuer breitet sich um Ecken aus und entzündet brennbare Gegenstände im Bereich, die niemand trägt oder hält.",
+    "higher": "Mit einem Platz des 4. Grades oder höher steigt der Schaden um **1W6** pro Grad über dem 3.",
+    "valerius": "SG **15** · 45 m · Kugel mit 6 m Radius · 8W6 Feuer (Ø 28).",
+    "why": "**Die größte Fläche:** Gegen dichte Gruppen wie einen Orc-Trupp der stärkste Schaden bis Grad 3. **Aber:** Er trifft alles in der Kugel, auch eure Nahkämpfer. Nur auf Gruppen, bei denen keiner von euch steht.",
+    "slot": "Stufe 6 (einer der 2 neuen Zauber bis Grad 3)",
+    "tips": [
+      "**Holz brennt:** Die Holzstapel der Orcs am Fluss gehen sofort in Flammen auf."
+    ],
+    "docs": []
+  },
+  {
     "id": "schneesturm",
     "name": "Schneesturm",
     "en": "Sleet Storm",
@@ -990,8 +1214,8 @@
     "text": "Wähle einen **Humanoiden** in Reichweite, den du sehen kannst. Das Ziel muss einen **Weisheitsrettungswurf** bestehen, sonst ist es für die Wirkungsdauer **gelähmt**. Am Ende jedes seiner Züge kann das Ziel einen weiteren Weisheitsrettungswurf ablegen. Bei einem Erfolg endet der Zauber für es.\n\n**Gelähmt:** Die Kreatur ist kampfunfähig, kann sich weder bewegen noch sprechen und scheitert automatisch an Stärke- und Geschicklichkeitsrettungswürfen. Angriffe gegen sie haben Vorteil, und **jeder Treffer eines Angreifers innerhalb von 1,5 m ist ein kritischer Treffer**.",
     "higher": "Wirkst du diesen Zauber mit einem Platz des 3. Grades oder höher, kannst du für jeden Grad über dem zweiten einen weiteren Humanoiden als Ziel wählen. Die Ziele dürfen beim Wirken höchstens 9 m voneinander entfernt sein.",
     "valerius": "SG **15** · 18 m · mit Grad 3 zwei Ziele · Konzentration. Orcs bleiben zu 70 % gelähmt stehen, Society-Magier zu etwa 50 %. **Wirkt nicht gegen Riesen:** Sie sind Riesen, keine Humanoiden.",
-    "why": "**Mit zwei Frontkämpfern verheerend:** Jeder Treffer von Fridolin oder Aella aus 1,5 m ist automatisch kritisch, beim Paladin samt doppelter Smite-Würfel. Und du **fängst Gegner lebend**: den Orc-Schamanen, einen Society-Magier, den Dieb deiner Botschaft-Rolle. Passt zu deinem Plan, Orcs zu gewinnen statt zu töten.",
-    "slot": "Stufe 6 (geht auch als Grad 2) oder einer der freien Einträge bis Grad 2",
+    "why": "**Mit Nahkämpfern verheerend:** Jeder Treffer aus 1,5 m gegen den Gelähmten ist automatisch kritisch, beim Paladin samt doppelter Smite-Würfel. Und du **fängst Gegner lebend**: den Orc-Schamanen, einen Society-Magier, einen Dieb. **Aber:** Nur Humanoide, keine Riesen, und ohne Nahkämpfer am Tisch nutzt du die Lähmung allein weniger. Darum steht es im Plan hinter *Flammenkugel*.",
+    "slot": "Stufe 6 (geht auch als Grad 2) oder einer der fehlenden Einträge bis Grad 2",
     "tips": [
       "**Gefesselt statt getötet:** Ein Gelähmter lässt sich in Ruhe fesseln. Danach in Twees Hütte verhören.",
       "**Nur Humanoide:** Orcs, Menschen, Elfen, Echsenmenschen ja. Riesen, Bestien und Untote nein."
@@ -1026,6 +1250,7 @@
     "why": "**Die Flucht aus der Reichweite eines Riesen**, sogar mit Aella. Dein *Sternenschritt* reicht nur 9 m und geht 1× pro Rast. **Beschwörung:** Als Beschwörer schreibst du ihn zum halben Preis ab, und ab Stufe 6 lädt er *Gutartiges Versetzen* wieder auf.",
     "slot": "Stufe 6 (einer der 2 neuen Zauber bis Grad 3)",
     "tips": [
+      "**Trifft auch Freunde:** Der Donner trifft jede Kreatur bis 3 m um deinen Startpunkt, also auch Nahkämpfer neben dir. Nur den Gefährten, den du mitnimmst, nicht.",
       "**Schaden ist Nebensache:** Riesen haben hohe KO-Rettungswürfe. Zähl auf den Teleport, nicht auf den Knall.",
       "**Aus Xanathars Ratgeber,** wie deine *Totenglocke* und dein *Eismesser*. Das Buch ist an eurem Tisch also im Spiel."
     ],
@@ -1048,7 +1273,7 @@
     "text": "Kurz von silbrigem Nebel umhüllt, **teleportierst du dich bis zu 9 m** an einen freien Ort, den du sehen kannst.",
     "valerius": "Bonusaktion · 9 m · nur verbal, also auch mit vollen Händen oder gefesselt wirkbar.",
     "why": "**Dein zweiter Notausgang:** Der DM gibt dir nur einen *Sternenschritt* pro Rast. *Nebelschritt* ist die klassische Flucht des Magiers, als Bonusaktion. Als Beschwörung lädt er ab Stufe 6 *Gutartiges Versetzen* auf und kostet beim Abschreiben nur 50 GM.",
-    "slot": "einer der freien Einträge bis Grad 2 oder Stufe 6",
+    "slot": "einer der fehlenden Einträge bis Grad 2 oder Stufe 6",
     "tips": [
       "**Bonusaktions-Regel:** Nach *Nebelschritt* darfst du im selben Zug mit deiner Aktion nur noch einen Zaubertrick wirken. *Sternenschritt* hat diese Einschränkung nicht.",
       "**Nicht verwechseln:** Deine alten Bögen nannten Nebelschritt „immer vorbereitet“. Das war falsch, du hast ihn bisher nicht. Hier ist er ein Vorschlag."
@@ -1126,7 +1351,7 @@
     "summary": "Ein Verbündeter wird schneller: doppelte Bewegung, +2 RK, Vorteil auf GE-Rettung, eine Zusatzaktion. Danach eine Runde Lähmung.",
     "text": "Wähle eine bereitwillige Kreatur in Reichweite, die du sehen kannst. Bis der Zauber endet, **verdoppelt sich ihre Bewegungsrate**, sie erhält **+2 auf die RK**, hat **Vorteil auf Geschicklichkeitsrettungswürfe** und erhält in jedem ihrer Züge **eine zusätzliche Aktion**. Diese Aktion kann sie nur für Angriff (nur ein Waffenangriff), Spurt, Rückzug, Verstecken oder Gegenstand benutzen.\n\nEndet der Zauber, kann sich das Ziel bis nach seinem nächsten Zug nicht bewegen und keine Aktionen ausführen, weil eine Welle der Lethargie über es hinwegrollt.",
     "valerius": "Auf Aella: +2 RK, doppelte Bewegung, ein zusätzlicher Waffenangriff pro Runde · Konzentration mit KO +3.",
-    "why": "**Macht Aella zur Riesenbrecherin:** Mit Kampfrausch (Resistenz) und *Hast* (+2 RK, Zusatzangriff) hält sie einen Riesen am längsten auf und teilt am meisten aus. **Risiko:** Bricht deine Konzentration, steht sie eine ganze Runde still. Konkurriert mit *Netz* um deine Konzentration.",
+    "why": "**Ein Support-Zauber,** also nicht dein Profil. **Macht Aella zur Riesenbrecherin:** Mit Kampfrausch (Resistenz) und *Hast* (+2 RK, Zusatzangriff) hält sie einen Riesen am längsten auf und teilt am meisten aus. **Risiko:** Bricht deine Konzentration, steht sie eine ganze Runde still. Konkurriert mit *Netz* um deine Konzentration.",
     "slot": "Stufe 6 (einer der 2 neuen Zauber bis Grad 3)",
     "tips": [
       "**Erst Netz, dann Hast?** Beides gleichzeitig geht nicht. Gegen einen einzelnen großen Gegner ist *Hast* auf Aella oft stärker.",
@@ -1203,12 +1428,38 @@
     "text": "Wähle eine Kreatur, einen Gegenstand oder einen magischen Effekt in Reichweite. Jeder Zauber des **3. Grades oder niedriger** auf dem Ziel **endet**. Für jeden Zauber des **4. Grades oder höher** auf dem Ziel machst du einen **Attributswurf mit deinem Attribut zum Zauberwirken**. Der SG beträgt **10 + der Grad des Zaubers**. Bei einem Erfolg endet der Zauber.",
     "higher": "Wirkst du diesen Zauber mit einem Platz des 4. Grades oder höher, endet jeder Zauber auf dem Ziel automatisch, dessen Grad höchstens dem Grad des verwendeten Platzes entspricht.",
     "valerius": "Reichweite 36 m · Zauber bis Grad 3 enden sicher · darüber IN-Wurf **+4** gegen SG 10 + Grad (Grad 4: 55 %, Grad 5: 50 %, Grad 6: 45 %).",
-    "why": "**Nützlich, aber kein Muss:** Twee (Barde) und Lucira (Hexenmeisterin) haben *Magie bannen* auf ihrer Zauberliste, das Runenmal des Orcs hat Nita gelöst, und dein eigener Plan ist, nicht alle Orcs zu befreien. Bleibt als Allzweckwaffe gegen Society-Zauber, Flüche aus Zaubern und magische Fallen.",
+    "why": "**Nützlich, aber kein Muss:** Twee (Barde) und Lucira (Hexenmeisterin) haben *Magie bannen* auf ihrer Zauberliste. **Gegen das Runenmal hilft es nicht:** Laut DM ist es ein Fluch, dafür gibt es [[Fluch brechen]]. Bleibt als Allzweckwaffe gegen Society-Zauber, Flüche aus Zaubern und magische Fallen.",
     "slot": "Stufe 6 (einer der 2 neuen Zauber bis Grad 3)",
     "tips": [
-      "**Ob das Runenmal ein Zauber ist, entscheidet der DM.** Ist es eher ein Fluch, hilft *Fluch brechen* (ebenfalls Grad 3).",
+      "**Das Runenmal ist laut DM ein Fluch** (19.10.2026). Dagegen hilft [[Fluch brechen]] (ebenfalls Grad 3), nicht *Magie bannen*.",
       "**Beschworene Wesen:** Ein Wesen, das ein laufender Zauber herbeigerufen hat, ist ein magischer Effekt. Bis Grad 3 verschwindet es sofort.",
       "**Abschreiben kostet den vollen Preis:** Bannzauber ist keine Beschwörung, also 150 GM und 6 Stunden pro Rolle."
+    ],
+    "docs": []
+  },
+  {
+    "id": "fluch-brechen",
+    "name": "Fluch brechen",
+    "en": "Remove Curse",
+    "level": 3,
+    "school": "Bannzauber",
+    "status": "vorschlag",
+    "time": "1 Aktion",
+    "economy": "aktion",
+    "range": "Berührung",
+    "target": "Eine Kreatur oder ein Gegenstand",
+    "components": "V, G",
+    "duration": "Unmittelbar",
+    "source": "Spielerhandbuch 2014 (engl. S. 271) · SRD 5.1",
+    "summary": "Beendet mit einer Berührung alle Flüche auf einer Kreatur oder einem Gegenstand.",
+    "text": "Bei deiner Berührung **enden alle Flüche**, die auf **einer Kreatur oder einem Gegenstand** liegen. Ist der Gegenstand ein verfluchter magischer Gegenstand, bleibt sein Fluch bestehen, aber der Zauber bricht die Einstimmung seines Besitzers auf den Gegenstand, sodass er ihn ablegen oder wegwerfen kann.",
+    "valerius": "Berührung · 1 Aktion · ein Ziel pro Wirken. Das Runenmal ist laut DM ein Fluch: Ein Wirken befreit einen Orc vom Mal.",
+    "why": "**Gezielt befreien statt alle:** Das Runenmal der Riesen ist laut DM ein Fluch, und *Fluch brechen* beendet es mit einer Berührung. Das passt zu deiner Linie, nicht alle Orcs zu befreien: Du entscheidest, wen, etwa einen Häuptling, der seinen Stamm mitbringt. Unterwegs kann das sonst niemand: [[Nita]] (Klerikerin) bleibt in der Stadt, [[Lucira]] (Hexenmeisterin) kann es nur, wenn sie dabei ist, und Barden wie [[Twee]] haben den Zauber nicht auf ihrer Liste.",
+    "slot": "Stufe 6 (einer der 2 neuen Zauber bis Grad 3)",
+    "tips": [
+      "**Kein Beschwörungszauber:** lädt *Gutartiges Versetzen* nicht auf, und Abschreiben kostet den vollen Preis (150 GM, 6 Stunden pro Rolle).",
+      "**Wen zuerst?** Wer frei ist, kann nicht mehr belauscht werden. Mit einem befreiten Häuptling oder Schamanen könnt ihr offen reden, in der Nähe eines markierten Orcs hören die Riesen womöglich mit.",
+      "**Die Fee:** Ihr Atem riecht nach Alkohol, *Theorie:* ein Fluch. Kehrt sie zurück, könnte *Fluch brechen* das prüfen."
     ],
     "docs": []
   }
