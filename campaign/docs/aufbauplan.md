@@ -23,8 +23,7 @@ updated: 2026-10-16
 | 47 GM, 16 SM | Startkapital |
 | Ruf: „Held der Echsenmenschen“, „Riesenbezwinger, der Schlächter“ | Türöffner bei Leon, den Echsen und den Soldaten |
 | Ohrringe der Verständigung | sicherer Kanal zu Aella, über jede Entfernung |
-| 3 Society-Uniformen | Tarnung für Spione |
-| Untote (3 Skelette auf dem Boot) | Wachen und Arbeiter ohne Verratsrisiko |
+| Untote (3 Skelette auf dem Boot), vermummt in Gewändern aus Society-Uniformen und Orc-Kleidung | Wachen und Arbeiter ohne Verratsrisiko, die niemand auf den ersten Blick erkennt |
 | Kontakte: Kräuterfrau, der Gnom, der Jäger, [[Saladin]], [[Crush Lu]], [[Leon Lhaaz|Leon]] | Wissen, Handel, Schutz |
 | Saladins künftiger Laden in [[Die südliche Freistadt|Freistadt]] | legale Fassade, Umschlagplatz, Rabatt |
 
@@ -37,7 +36,7 @@ updated: 2026-10-16
 | Kurier | Nachrichten zwischen den Ringen und nach Freistadt | Bootsleute, Soldaten | Bote: 2 KM pro Meile |
 | Händler | Saladins Laden führen | in Freistadt anwerben | gelernt 2 GM pro Tag |
 | Muskeln | Schutz und Arbeit | Untote sofort, [[Die Orcs|Orcs]] nach dem Krieg gegen die Riesen | Untote: nur Zauberplätze |
-| Spion | Pläne der [[Sorcerer Society]] | Society-Uniformen und *Selbstverkleidung* | hohes Risiko |
+| Spion | Pläne der [[Sorcerer Society]] | *Selbstverkleidung* und Verkleidungsausrüstung | hohes Risiko |
 
 ## Vier Phasen
 

@@ -28,7 +28,7 @@
     "id": "heiltraenke",
     "to": "dm",
     "topic": "Heiltränke",
-    "question": "Reicht dein Alchemistenwerkzeug, um aus den 3 Heilkräutern Tränke zu brauen? Laut Xanathars braucht man die Kräuterkundeausrüstung (5 GM), die Übung gibt dir die Astrale Trance für einen Tag.",
+    "question": "Nach den Regeln braut man Heiltränke mit der Kräuterkundeausrüstung (5 GM). Das Alchemistenwerkzeug ist für Säure, Alchemistenfeuer, Gegengift, Öl, Parfüm und Seife. Lässt du Heiltränke auch mit dem Alchemistenwerkzeug zu?",
     "status": "offen",
     "links": [
       "3 Heiltränke aus den Heilkräutern",
@@ -54,6 +54,17 @@
     "question": "Hattest du vor Oktober 2026 schon erweckte Skelette (Arena, Haus)? In deinen Unterlagen steht nichts dazu. Wo sind die Knochen?",
     "status": "offen",
     "links": [
+      "Skelett-Gefolge aufbauen"
+    ]
+  },
+  {
+    "id": "skelett-ruestung",
+    "to": "dm",
+    "topic": "Rüstung der Skelette",
+    "question": "Zählen die zusammengeschneiderten Gewänder als Rüstungsfetzen (RK 13), oder haben deine Skelette ohne Rüstung RK 12?",
+    "status": "offen",
+    "links": [
+      "Skelett",
       "Skelett-Gefolge aufbauen"
     ]
   },

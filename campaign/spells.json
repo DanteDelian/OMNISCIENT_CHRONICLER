@@ -1090,8 +1090,8 @@
     "source": "Xanathars Ratgeber für alles (engl. S. 168)",
     "summary": "Eine herbeigerufene Welle: 4W8 Wucht und umgestoßen, keine Konzentration.",
     "text": "Du rufst eine Welle herbei, die auf einen Bereich in Reichweite niedergeht: höchstens **9 m lang, 3 m breit und 3 m hoch** (30 × 10 × 10 Fuß). Jede Kreatur darin macht einen **Geschicklichkeitsrettungswurf**. Scheitert sie, erleidet sie **4W8 Wuchtschaden** und **liegt am Boden**. Gelingt er, erleidet sie den halben Schaden und bleibt stehen.\n\nDanach fließt das Wasser in alle Richtungen über den Boden, löscht ungeschützte Flammen im Bereich und bis 9 m darum herum und verschwindet.",
-    "valerius": "SG **15** · 36 m · schmales Rechteck · **keine Konzentration**. 4W8 Wucht (Ø 18) und liegend: Eis- und Hügelriesen zu 75 %, Steinriesen zu 45 %, Orcs zu 65 %.",
-    "why": "**Schaden und Kontrolle in einem, als Beschwörung:** Wer scheitert, liegt. Aufstehen kostet die halbe Bewegung, und eure Nahkämpfer greifen Liegende mit Vorteil an. Das schmale Rechteck legst du an euren Leuten vorbei. Keine Konzentration, also zusammen mit *Netz* oder *Hypnotisches Muster*. **Als Beschwörung** lädt sie *Gutartiges Versetzen* auf.",
+    "valerius": "SG **15** · Ort frei in 36 m, Größe wählst du selbst bis 9 × 3 × 3 m · **keine Konzentration**. 4W8 Wucht (Ø 18) und liegend: Eis- und Hügelriesen zu 75 %, Steinriesen zu 45 %, Orcs zu 65 %.",
+    "why": "**Schaden und Kontrolle in einem, als Beschwörung:** Wer scheitert, liegt. Aufstehen kostet die halbe Bewegung, und eure Nahkämpfer greifen Liegende mit Vorteil an. **Kein Kegel aus dir heraus:** Du legst die Welle frei in 36 m hin und machst sie so klein, wie du willst, also genau zwischen eure Leute. Keine Konzentration, also zusammen mit *Netz* oder *Hypnotisches Muster*. **Als Beschwörung** lädt sie *Gutartiges Versetzen* auf.",
     "slot": "Stufe 6 (einer der 2 neuen Zauber bis Grad 3)",
     "tips": [
       "**Weniger Schaden als Blitz** (Ø 18 statt 28), dafür liegen die Getroffenen.",
@@ -1126,7 +1126,7 @@
     "text": "Ein Blitzstrahl, der eine **30 m (100 Fuß) lange und 1,5 m (5 Fuß) breite Linie** bildet, schießt in eine Richtung deiner Wahl von dir aus. Jede Kreatur in der Linie macht einen **Geschicklichkeitsrettungswurf**: bei Misserfolg **8W6 Blitzschaden**, bei Erfolg die Hälfte. Der Blitz entzündet brennbare Gegenstände im Bereich, die niemand trägt oder hält.",
     "higher": "Mit einem Platz des 4. Grades oder höher steigt der Schaden um **1W6** pro Grad über dem 3.",
     "valerius": "SG **15** · Linie 30 m ab dir · 8W6 Blitz (Ø 28). Gegen Eis- und Hügelriesen im Schnitt etwa 24 pro Riese in der Linie.",
-    "why": "**Die Alternative mit mehr Schaden:** Die Linie lässt sich an euren Nahkämpfern vorbeiziehen, und Aella ist als bronzene Drachenblütige ohnehin resistent gegen Blitz. Keine Beschwörung, also kein Aufladen von *Gutartiges Versetzen*.",
+    "why": "**Die Alternative mit mehr Schaden:** Ø 28 statt 18. Der Blitz schießt aber als 30-m-Linie von dir aus los und trifft alles darin. Aella ist als bronzene Drachenblütige immerhin resistent. Keine Beschwörung, also kein Aufladen von *Gutartiges Versetzen*.",
     "slot": "Stufe 6 (einer der 2 neuen Zauber bis Grad 3)",
     "tips": [
       "**Ausrichten:** Stell dich so, dass mehrere Gegner hintereinander stehen, etwa an einem Tor oder einer Gasse."

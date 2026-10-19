@@ -90,6 +90,8 @@ Die Fragen an den DM stehen gebündelt in der Quest **[[Offene Fragen an den DM]
 - **Taya:** nach der Wiederbelebung verschwunden. Am Tisch hatte sich die Runde damals teilweise aufgelöst.
 - **Riesenrune:** ein Fluch (DM). Dagegen hilft [[Fluch brechen]], nicht *Magie bannen*.
 - **Gegnerwerte:** Der DM skaliert seine Gegner und verrät keine Werte. Die SRD-Zahlen im Grimoire sind Richtwerte.
+- **Skelette (DM):** Sie tragen nur, was du ihnen gibst. Der Kurzbogen ist für ein Skelett. Du hast sie mit Gewändern aus den Society-Uniformen und Orc-Kleidung vermummt.
+- **Zauberplan:** von dir bestätigt (*Magierrüstung*, *Nebelwolke*, *Spiegelbilder*, *Flammenkugel*, auf Stufe 6 *Hypnotisches Muster* und *Flutwelle*).
 
 ### Geklärt am 16. Oktober 2026
 - **Sitzungsgrenze:** Die Session zwischen dem 12.07. und dem 11.10.2026 bleibt undatiert, so gewollt.
@@ -115,7 +117,7 @@ Die Fragen an den DM stehen gebündelt in der Quest **[[Offene Fragen an den DM]
 
 1. **RK 11 ist dein größtes Risiko.** [[Magierrüstung]] in einen freien Grad-1-Eintrag: RK 14 für 8 Stunden, mit *Schild* 19.
 2. **Identität:** [[Selbstverkleidung]] (Grad 1) für schnelle Tarnung, [[Gestalt verändern]] (Grad 2) für eine Tarnung, die auch Berührung übersteht.
-3. **Astrale Trance jeden Tag nutzen, meist für ein Werkzeug.** Das **Alchemistenwerkzeug** (ohne Trance hast du damit keine Übung), an Brautagen die Kräuterkundeausrüstung (Heiltränke, das Set fehlt dir noch) oder die Verkleidungsausrüstung (Identität). Der erbeutete **Kurzbogen** (Angriff +4 statt +1, 24/96 m) lohnt sich nur jenseits der 18 m von *Totenglocke*, die im Schnitt mehr Schaden macht.
+3. **Astrale Trance jeden Tag nutzen, meist für ein Werkzeug.** Das **Alchemistenwerkzeug** (ohne Trance hast du damit keine Übung), an Brautagen die Kräuterkundeausrüstung (Heiltränke, das Set fehlt dir noch) oder die Verkleidungsausrüstung (Identität). Den erbeuteten **Kurzbogen** bekommt eines deiner Skelette.
 4. **Konzentration ist dein Engpass.** *Netz*, *Schutz vor Gut und Böse* und *Magie entdecken* schließen sich gegenseitig aus, und dein KO-Rettungswurf ist nur +3. Zauber ohne Konzentration ([[Magierrüstung]], [[Unsichtbares sehen]], [[Tote erwecken]]) laufen parallel.
 5. **Deine Bonusaktion ist überbucht.** Sternenschritt, Untote befehligen und Diener befehligen konkurrieren. Plane pro Runde eins davon.
 6. **[[Schild]] nur bei einem Angriffsergebnis von 11 bis 15** wirken, sonst die Reaktion für *Gegenzauber* aufheben.

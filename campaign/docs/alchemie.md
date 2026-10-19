@@ -22,7 +22,7 @@ Dieses Buch ist der Beginn deines Aufstiegs. Während andere ihre Macht aus alte
 **Reinigung:** [[Unsichtbarer Diener]] und [[Taschenspielerei]] halten Labor und Werkzeug makellos. Das spart Zeit und sorgt für reinere Ergebnisse.
 
 > [!RULE] **Regelhinweis (Xanathars Ratgeber für alles)**
-> Heiltränke braut man offiziell mit der **Kräuterkundeausrüstung** (5 GM): Heiltrank in **1 Tag** für **25 GM**. Mit der [[Astrale Trance|Astralen Trance]] erhältst du die nötige Werkzeugübung für einen Tag. Die „schnellen Regeln“ unten stammen aus deinem Dokument. Welche gelten, entscheidet euer DM.
+> Heiltränke braut man offiziell mit der **Kräuterkundeausrüstung** (5 GM): Heiltrank in **1 Tag** für **25 GM**. Das **Alchemistenwerkzeug** ist für Säure, Alchemistenfeuer, Gegengift, Öl, Parfüm und Seife: laut Xanathars eine Dosis pro langer Rast aus Rohstoffen im halben Wert. Mit der [[Astrale Trance|Astralen Trance]] erhältst du die nötige Werkzeugübung für einen Tag. Die „schnellen Regeln“ unten stammen aus deinem Dokument. Welche gelten, entscheidet euer DM.
 
 ## Kapitel 2 · Das Rezeptbuch
 

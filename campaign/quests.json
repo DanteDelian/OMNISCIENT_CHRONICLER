@@ -37,7 +37,7 @@
     "status": "aktiv",
     "urgent": true,
     "kind": "Klärung",
-    "next": "Beim nächsten Spieltermin durchgehen und die Antworten hier eintragen.",
+    "next": "Beim nächsten Spieltermin auf der Rätselwand durchgehen und die Antworten dort abhaken.",
     "notes": "Die Fragen stehen jetzt gebündelt auf der [[Rätselwand]]: offen, geklärt, mit Platz für die Antworten. Zum Ausdrucken gibt es das Blatt „Fragen an den DM“ in der Druckfassung.",
     "links": [
       "Prüfbericht"
@@ -64,7 +64,7 @@
     "status": "aktiv",
     "kind": "Bedrohung",
     "next": "Vor Ankunft der nächsten Lhaaz-Schiffskarawane eine neue Tarnung oder einen neuen Plan haben.",
-    "notes": "Der Maskierte Mönchsmeister hat die versteckten Leichen der echten Donnergarde gefunden. Der Schwindel ist öffentlich. Bausteine: 3 Society-Uniformen, Verkleidungsausrüstung (25 GM), *Selbstverkleidung* als möglicher Zauber.\n\n**Stand Oktober 2026:** Euer Ruf trägt inzwischen: „Held der Echsenmenschen“, „Riesenbezwinger, der Schlächter“. Lisbeth hält euch weiter für Hochstapler, ist aber milder gestimmt.",
+    "notes": "Der Maskierte Mönchsmeister hat die versteckten Leichen der echten Donnergarde gefunden. Der Schwindel ist öffentlich. Bausteine: Verkleidungsausrüstung (25 GM) und *Selbstverkleidung* als möglicher Zauber. Die 3 Society-Uniformen stecken inzwischen in den Vermummungen deiner Skelette.\n\n**Stand Oktober 2026:** Euer Ruf trägt inzwischen: „Held der Echsenmenschen“, „Riesenbezwinger, der Schlächter“. Lisbeth hält euch weiter für Hochstapler, ist aber milder gestimmt.",
     "links": [
       "Die Donnergarde",
       "Maskierter Mönchsmeister"
@@ -183,8 +183,9 @@
     "kind": "Projekt",
     "next": "Die 3 Skelette vom Boot mit *Tote erwecken* zum Leben bringen: 1 Skelett pro Wirken mit Grad 3. Danach alle 24 Stunden die Kontrolle erneuern.",
     "reward": "Loyales Gefolge ohne Verratsrisiko",
-    "notes": "Die 3 Skelette aus dem Orc-Kampf (11.10.2026) lagern auf eurem Boot. Orcs sind mittelgroße Humanoide, also geeignet. In deinen Unterlagen steht nicht, dass du vor Oktober 2026 schon Skelette erweckt hattest (Frage an den DM). Das Schlachtfeld im Südosten bleibt eine Quelle für weitere Knochen.\n\n**Vorschlag (19.10.2026):** Erst kurz vor der Schlacht erwecken. Die Kontrolle hält 24 Stunden, danach kostet jeder Tag einen Grad-3-Platz, und ohne Erneuerung gehorchen sie nicht mehr, auf einem vollen Boot ein Risiko. Und es sind Orc-Knochen: Der befreite Orc, der für euch bürgen soll, sollte seine Leute nicht als Diener sehen. Die Society-Uniformen lieber für deine eigene Tarnung aufheben.",
+    "notes": "Die 3 Skelette aus dem Orc-Kampf (11.10.2026) lagern auf eurem Boot. Orcs sind mittelgroße Humanoide, also geeignet. In deinen Unterlagen steht nicht, dass du vor Oktober 2026 schon Skelette erweckt hattest (Frage an den DM). Das Schlachtfeld im Südosten bleibt eine Quelle für weitere Knochen.\n\n**Dein Plan (19.10.2026):** stumme, vermummte Diener in Gewändern aus den Society-Uniformen und Orc-Kleidung, damit eure Leute und Fremde nicht gleich sehen, was sie sind. Das hilft auch beim befreiten Orc: Er muss nicht erkennen, wessen Knochen das sind.\n\n**Ausrüstung (DM):** Sie tragen nur, was du ihnen gibst. Der Kurzbogen mit 12 Pfeilen ist für eines gedacht. *Vorschlag* für die anderen beiden: die 3 Society-Dolche, versteckt unter dem Gewand (+4, 1W4 + 2, Wurf 6/18 m).\n\n**Vorschlag zum Zeitpunkt:** Erst kurz vor der Schlacht erwecken. Die Kontrolle hält 24 Stunden, danach kostet jeder Tag einen Grad-3-Platz, und ohne Erneuerung gehorchen sie nicht mehr.",
     "links": [
+      "Skelett",
       "Schlachtfeld im Südosten",
       "Taktik-Handbuch"
     ]

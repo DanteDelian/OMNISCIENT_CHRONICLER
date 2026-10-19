@@ -422,7 +422,7 @@
       "name": "Skelett",
       "type": "Mittelgroßer Untoter",
       "ac": 13,
-      "acNote": "Rüstungsfetzen",
+      "acNote": "Rüstungsfetzen. Ohne Rüstung wohl 12 (10 + GE), Frage an den DM",
       "hp": 13,
       "hpFormula": "2W8 + 4",
       "speed": "9 m",
@@ -441,21 +441,35 @@
       "cr": "1/4 (50 EP)",
       "actions": [
         {
-          "name": "Knochenschwert (Kurzschwert)",
+          "name": "Kurzbogen (wenn ausgerüstet)",
+          "bonus": 4,
+          "damage": "1d6+2",
+          "type": "Stich",
+          "range": "24/96 m"
+        },
+        {
+          "name": "Dolch (wenn ausgerüstet)",
+          "bonus": 4,
+          "damage": "1d4+2",
+          "type": "Stich",
+          "range": "1,5 m · Wurf 6/18 m"
+        },
+        {
+          "name": "Kurzschwert (wenn ausgerüstet)",
           "bonus": 4,
           "damage": "1d6+2",
           "type": "Stich",
           "range": "1,5 m"
         },
         {
-          "name": "Knochenbogen (Kurzbogen)",
-          "bonus": 4,
-          "damage": "1d6+2",
-          "type": "Stich",
-          "range": "24/96 m"
+          "name": "Waffenlos",
+          "bonus": 2,
+          "damage": "1",
+          "type": "Wucht",
+          "range": "1,5 m"
         }
       ],
-      "verdict": "Fernkampf-Artillerie aus der Deckung. Entsteht aus **Knochen**."
+      "verdict": "Fernkampf-Artillerie aus der Deckung. Entsteht aus **Knochen**. **Laut DM** tragen deine Skelette nur, was du ihnen gibst: Waffen, Rüstung, Kleidung."
     },
     {
       "id": "zombie",

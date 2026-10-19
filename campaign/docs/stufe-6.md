@@ -20,6 +20,8 @@ updated: 2026-10-19
 
 ## Dein Plan: sechs Zauber
 
+*Von dir bestätigt am 19.10.2026.*
+
 | Wann | Zauber | Grad | Konz. | Wofür | Trifft eure Leute? |
 | :-- | :-- | :-: | :-: | :-- | :-- |
 | Fehlender Eintrag | [[Magierrüstung]] | 1 | | RK 14 für 8 Stunden, mit *Schild* 19 | nein |
@@ -27,7 +29,7 @@ updated: 2026-10-19
 | Fehlender Eintrag | [[Spiegelbilder]] | 2 | | Drei Abbilder fangen Angriffe ab | nein |
 | Fehlender Eintrag | [[Flammenkugel]] ★ | 2 | ● | Jede Runde 2W6 per Bonusaktion, hält Gegner auf Abstand | nur wer neben ihr steht |
 | Stufe 6 | [[Hypnotisches Muster]] | 3 | ● | Ganze Gruppen fallen aus, auch Riesen | nur wer im Würfel steht |
-| Stufe 6 | [[Flutwelle]] ★ | 3 | | 4W8 und liegend, ohne Konzentration | lenkbar, schmales Rechteck |
+| Stufe 6 | [[Flutwelle]] ★ | 3 | | 4W8 und liegend, ohne Konzentration | nein: Ort und Größe legst du fest |
 
 ★ = Beschwörung: lädt *Gutartiges Versetzen* auf, halber Abschreibpreis, ab Stufe 10 unzerbrechliche Konzentration.
 
@@ -53,7 +55,7 @@ updated: 2026-10-19
 
 | Zauber | Grad | Konz. | Wofür | Trifft eure Leute? |
 | :-- | :-: | :-: | :-- | :-- |
-| [[Blitz]] | 3 | | 8W6 in einer Linie (Ø 28). Statt *Flutwelle*, wenn du mehr Schaden willst | lenkbar, Aella ist resistent |
+| [[Blitz]] | 3 | | 8W6 in einer 30-m-Linie aus dir heraus (Ø 28). Mehr Schaden als *Flutwelle*, aber schwerer zu lenken | ja, wer in der Linie steht. Aella ist resistent |
 | [[Feuerball]] | 3 | | 8W6 in 6 m Radius, gegen dichte Gruppen | ja, alles in der Kugel |
 | [[Schneesturm]] ★ | 3 | ● | Riesen stürzen und kommen kaum voran. Statt *Muster* bei einer Belagerung auf Abstand | ja, 12 m Radius |
 | [[Stinkende Wolke]] ★ | 3 | ● | Trupps verlieren ihre Aktion, die Sicht ist blockiert | ja, 6 m Radius |
@@ -67,6 +69,8 @@ updated: 2026-10-19
 **Nützlich, aber nicht dein Profil:** [[Hast]] (Support), [[Wasseratmung]], [[Hellsehen]], [[Magie bannen]], [[Selbstverkleidung]], [[Unsichtbares sehen]]. Alle stehen mit vollem Regeltext im Zauberbuch. Nicht dabei: *Leomunds winzige Hütte* und *Verlangsamen*, die hat Twee schon.
 
 ## Deine Fragen
+
+**Kommt die *Flutwelle* aus dir heraus?** Nein. Du legst sie irgendwo in 36 m hin und bestimmst die Größe selbst, bis 9 m lang, 3 m breit und 3 m hoch. Du kannst sie also genau zwischen eure Leute setzen. *Blitz* dagegen schießt als 30-m-Linie von dir aus los. Darum passt die *Flutwelle* besser zu dir, auch wenn sie weniger Schaden macht (Ø 18 statt 28).
 
 **Was stärkt dich im Nahkampf?** *Magierrüstung*, *Spiegelbilder* und *Schild* zusammen, dazu *Gutartiges Versetzen*, um wegzuteleportieren. *Totenglocke* bleibt dein bester Zaubertrick im Nahkampf: Sie verlangt einen Rettungswurf statt eines Angriffswurfs, also hast du keinen Nachteil, wenn ein Gegner neben dir steht.
 

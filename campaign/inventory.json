@@ -47,7 +47,7 @@
       "name": "Kurzbogen",
       "group": "koerper",
       "qty": 1,
-      "desc": "Beute aus dem Orc-Kampf am Fluss (11.10.2026). 24/96 m, 1W6 Stich. Ohne Übung Angriff +1, mit der Astralen Trance (Waffe: Kurzbogen) **+4**."
+      "desc": "Beute aus dem Orc-Kampf am Fluss (11.10.2026). 24/96 m, 1W6 Stich. **Für ein Skelett:** Laut DM tragen deine Untoten nur, was du ihnen gibst. Ein Skelett schießt damit +4 für 1W6 + 2."
     },
     {
       "id": "gelehrten-ausruestung",
@@ -108,7 +108,7 @@
       "name": "Pfeile",
       "group": "verbrauch",
       "qty": 12,
-      "desc": "Für den Kurzbogen. Beute aus dem Orc-Kampf."
+      "desc": "Für den Kurzbogen deines Skeletts. Beute aus dem Orc-Kampf."
     },
     {
       "id": "gift",
@@ -153,14 +153,15 @@
       "name": "Dolch (Society-Beute)",
       "group": "beute",
       "qty": 3,
-      "desc": "Von den drei Magiern der Sorcerer Society."
+      "desc": "Von den drei Magiern der Sorcerer Society. *Vorschlag:* je einen für die zwei Skelette ohne Bogen (+4, 1W4 + 2, Wurf 6/18 m), versteckt unter dem Gewand."
     },
     {
       "id": "society-uniformen",
-      "name": "Sorcerer-Society-Uniform",
-      "group": "beute",
+      "name": "Vermummungen für die Skelette",
+      "group": "gelagert",
       "qty": 3,
-      "desc": "Echte Uniformen der Sorcerer Society, wertvoll für Infiltration und eine neue Identität. Mit Verkleidungsausrüstung anpassbar."
+      "desc": "Aus den 3 Society-Uniformen und Kleidung der Orcs zusammengeschneidert (laut dir, 19.10.2026): Kapuzengewänder, in denen deine Skelette als stumme Diener durchgehen.",
+      "note": "Achte darauf, dass keine Abzeichen der Society sichtbar bleiben. Wer sie erkennt, hält euch sonst für Society-Leute."
     },
     {
       "id": "orc-waffen",
@@ -196,7 +197,7 @@
       "name": "Skelette aus dem Orc-Kampf",
       "group": "gelagert",
       "qty": 3,
-      "desc": "Beute vom 11.10.2026, eingelagert auf eurem Boot. Das Boot war mit Twee und Lucaz in der Stadt und ist mit der Verstärkung wieder bei euch.",
+      "desc": "Beute vom 11.10.2026, eingelagert auf eurem Boot. Das Boot war mit Twee und Lucaz in der Stadt und ist mit der Verstärkung wieder bei euch. **Dein Plan:** stumme, vermummte Diener, die niemand auf den ersten Blick erkennt. Laut DM tragen sie nur, was du ihnen gibst: Der Kurzbogen ist für eines gedacht, *Vorschlag* für die anderen beiden sind die Society-Dolche.",
       "note": "Material für *Tote erwecken*: Orcs sind mittelgroße Humanoide, aus Knochen werden Skelette. Ein Wirken mit Grad 3 erweckt 1 Skelett. Mit beiden Grad-3-Plätzen und der Arkanen Erholung schaffst du alle 3 an einem Tag, hast dann aber keinen Gegenzauber mehr."
     },
     {
@@ -247,7 +248,7 @@
       "price": 25,
       "priority": "hoch",
       "phase": "nach-saladin",
-      "why": "Neue Identität, Society-Uniformen anpassen, Skelette mit Umhängen und Masken tarnen."
+      "why": "Neue Identität und feinere Tarnung. Die Skelette hast du schon selbst vermummt."
     },
     {
       "id": "kalligraphie",

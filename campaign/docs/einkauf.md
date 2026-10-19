@@ -24,8 +24,8 @@ updated: 2025-11-16
 
 | Priorität | Gegenstand | Kosten | Nutzen |
 | :-- | :-- | :-- | :-- |
-| **Kritisch** | Alchemistenwerkzeug | 50 GM | Blocker für die Alchemie-Lehre bei der Kräuterfrau |
-| Hoch | Verkleidungsausrüstung | 25 GM | Neue Identität, Society-Uniformen anpassen, **Skelette mit Umhängen und Masken tarnen** |
+| ~~Kritisch~~ | Alchemistenwerkzeug | 50 GM | **Erledigt:** Geschenk der Kräuterfrau (12.07.2026) |
+| Hoch | Verkleidungsausrüstung | 25 GM | Neue Identität und feinere Tarnung. Die Skelette hast du schon selbst vermummt |
 | Hoch | Spruchrollen-Herstellung | 10 GM Kalligraphenwerkzeug + Material | Material je Rolle: Grad 1 **25 GM**, Grad 2 **250 GM**, Grad 3 **500 GM** (Xanathars) |
 | Mittel | Spruchrolle *Leomunds winzige Hütte* | 250–500 GM + 150 GM Abschreiben | Ritual-Verteidigung: Gruppe und Untote rasten sicher |
 

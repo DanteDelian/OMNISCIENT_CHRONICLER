@@ -79,16 +79,6 @@
       "damageType": "Wucht",
       "range": "1,5 m",
       "props": "Vielseitig: zweihändig 1W8 · Teil der Floshem-Tarnung"
-    },
-    {
-      "id": "kurzbogen",
-      "name": "Kurzbogen",
-      "bonus": 1,
-      "damage": "1d6+1",
-      "damageType": "Stich",
-      "range": "24/96 m (80/320 Fuß)",
-      "props": "12 Pfeile · Beute · mit Trance-Waffe Kurzbogen +4",
-      "trance": "Kurzbogen"
     }
   ],
   "features": [
@@ -103,7 +93,8 @@
       },
       "summary": "Bonusaktion: bis 9 m zu einem sichtbaren freien Ort teleportieren.",
       "text": "Als **Bonusaktion** teleportierst du dich bis zu **9 m (30 ft)** an einen freien Ort, den du sehen kannst. **1× pro langer Rast** (Entscheidung eures DM; laut Spelljammer so oft, wie dein Übungsbonus beträgt).\n\nKein Zauber: keine Komponenten, kein Zauberplatz, **kann nicht gegengezaubert werden**.",
-      "note": "Geklärt am 12.10.2026: Der DM gibt dir 1 Ladung pro langer Rast. Den Zauber *Nebelschritt* hast du nicht."
+      "note": "Geklärt am 12.10.2026: Der DM gibt dir 1 Ladung pro langer Rast. Den Zauber *Nebelschritt* hast du nicht.",
+      "en": "Starlight Step"
     },
     {
       "id": "arkane-erholung",
@@ -115,7 +106,8 @@
         "reset": "long"
       },
       "summary": "1× pro Tag nach einer kurzen Rast: Plätze mit zusammen höchstens 3 Graden zurück.",
-      "text": "**Einmal pro Tag**, wenn du eine **kurze Rast** beendest, erhältst du verbrauchte Zauberplätze zurück, deren Grade zusammen höchstens **3** ergeben (die Hälfte deiner Stufe, aufgerundet). Zum Beispiel 1 × Grad 3 oder 1 × Grad 2 + 1 × Grad 1."
+      "text": "**Einmal pro Tag**, wenn du eine **kurze Rast** beendest, erhältst du verbrauchte Zauberplätze zurück, deren Grade zusammen höchstens **3** ergeben (die Hälfte deiner Stufe, aufgerundet). Zum Beispiel 1 × Grad 3 oder 1 × Grad 2 + 1 × Grad 1.",
+      "en": "Arcane Recovery"
     },
     {
       "id": "ohrring",
@@ -137,7 +129,8 @@
       "economy": "aktion",
       "summary": "Aktion: einen nichtmagischen Gegenstand (≤ 90 cm, ≤ 5 kg) für 1 Stunde erschaffen.",
       "text": "Als **Aktion** erschaffst du in deiner Hand oder auf dem Boden in 3 m einen unbelebten Gegenstand: höchstens **90 cm** Kantenlänge und **5 kg (10 Pfund)**, in der Form eines nichtmagischen Gegenstands, den du schon gesehen hast. Er ist **sichtbar magisch** und leuchtet schwach (1,5 m). Er verschwindet nach **1 Stunde**, wenn er Schaden nimmt oder wenn du das Merkmal erneut nutzt.",
-      "note": "Achtung für die Unsichtbare Hand: Das Objekt leuchtet und ist klar als magisch erkennbar."
+      "note": "Achtung für die Unsichtbare Hand: Das Objekt leuchtet und ist klar als magisch erkennbar.",
+      "en": "Minor Conjuration"
     },
     {
       "id": "astrale-trance",
@@ -146,7 +139,8 @@
       "economy": "passiv",
       "summary": "Kein Schlaf, lange Rast in 4 Stunden. Danach täglich Übung mit 1 Waffe oder 1 Werkzeug.",
       "text": "Du brauchst keinen Schlaf, und **Magie kann dich nicht einschläfern**. Eine lange Rast schaffst du in **4 Stunden** Trance, bei Bewusstsein.\n\nNach jeder Trance erhältst du bis zum Ende deiner nächsten langen Rast Übung mit **einer Waffe oder einem Werkzeug** deiner Wahl.",
-      "note": "Hausregel eures DM (12.10.2026): **keine Fertigkeit**. Laut Spelljammer käme eine Fertigkeit dazu. Die tägliche Wahl stellst du auf dem Spieltisch ein."
+      "note": "Hausregel eures DM (12.10.2026): **keine Fertigkeit**. Laut Spelljammer käme eine Fertigkeit dazu. Die tägliche Wahl stellst du auf dem Spieltisch ein.",
+      "en": "Astral Trance"
     },
     {
       "id": "feenabstammung",
@@ -155,7 +149,8 @@
       "economy": "passiv",
       "summary": "Vorteil auf Rettungswürfe gegen Bezauberung.",
       "text": "Du hast **Vorteil** auf Rettungswürfe, um den Zustand *Bezaubert* zu vermeiden oder zu beenden.",
-      "note": "„Magie kann dich nicht einschläfern“ gehört beim Astralelfen zur Astralen Trance. Die Wirkung ist dieselbe."
+      "note": "„Magie kann dich nicht einschläfern“ gehört beim Astralelfen zur Astralen Trance. Die Wirkung ist dieselbe.",
+      "en": "Fey Ancestry"
     },
     {
       "id": "scharfe-sinne",
@@ -163,7 +158,8 @@
       "source": "Astralelf",
       "economy": "passiv",
       "summary": "Übung in Wahrnehmung.",
-      "text": "Du bist in **Wahrnehmung** geübt."
+      "text": "Du bist in **Wahrnehmung** geübt.",
+      "en": "Keen Senses"
     },
     {
       "id": "dunkelsicht",
@@ -172,7 +168,8 @@
       "economy": "passiv",
       "summary": "18 m: Dämmerlicht wie hell, Dunkelheit wie dämmrig (nur Grautöne).",
       "text": "Im Umkreis von **18 m (60 ft)** siehst du dämmriges Licht wie helles und Dunkelheit wie dämmriges Licht, allerdings nur in Grautönen.",
-      "note": "Fehlte auf allen Bögen."
+      "note": "Fehlte auf allen Bögen.",
+      "en": "Darkvision"
     },
     {
       "id": "ritualzauberei",
@@ -180,7 +177,8 @@
       "source": "Magier",
       "economy": "passiv",
       "summary": "Ritualzauber aus dem Buch ohne Vorbereitung wirken (+10 Minuten, kein Platz).",
-      "text": "Zauber mit dem Ritual-Merkmal, die in deinem Zauberbuch stehen, kannst du als Ritual wirken, **ohne sie vorzubereiten**. Die Wirkzeit verlängert sich um 10 Minuten, ein Zauberplatz wird nicht verbraucht: *Vertrauten finden*, *Unsichtbarer Diener*, *Magie entdecken*."
+      "text": "Zauber mit dem Ritual-Merkmal, die in deinem Zauberbuch stehen, kannst du als Ritual wirken, **ohne sie vorzubereiten**. Die Wirkzeit verlängert sich um 10 Minuten, ein Zauberplatz wird nicht verbraucht: *Vertrauten finden*, *Unsichtbarer Diener*, *Magie entdecken*.",
+      "en": "Ritual Casting"
     },
     {
       "id": "gelehrter-der-beschwoerung",
@@ -188,7 +186,8 @@
       "source": "Schule der Beschwörung",
       "economy": "passiv",
       "summary": "Beschwörungszauber kopieren: halbe Kosten und Zeit (25 GM und 1 Stunde pro Grad).",
-      "text": "Gold und Zeit, um einen **Beschwörungszauber** in dein Zauberbuch zu kopieren, sind **halbiert**: 25 GM und 1 Stunde pro Grad statt 50 GM und 2 Stunden."
+      "text": "Gold und Zeit, um einen **Beschwörungszauber** in dein Zauberbuch zu kopieren, sind **halbiert**: 25 GM und 1 Stunde pro Grad statt 50 GM und 2 Stunden.",
+      "en": "Conjuration Savant"
     },
     {
       "id": "gutartiges-versetzen",
@@ -197,7 +196,8 @@
       "economy": "aktion",
       "upcoming": true,
       "summary": "Ausblick: Aktion, bis 9 m teleportieren oder Platz mit einem Verbündeten tauschen.",
-      "text": "Ab **Stufe 6**: Als Aktion teleportierst du dich bis zu 9 m an einen freien Ort oder tauschst den Platz mit einer bereitwilligen kleinen oder mittelgroßen Kreatur. Danach erst wieder nach einer langen Rast oder sobald du einen Beschwörungszauber ab Grad 1 wirkst."
+      "text": "Ab **Stufe 6**: Als Aktion teleportierst du dich bis zu 9 m an einen freien Ort oder tauschst den Platz mit einer bereitwilligen kleinen oder mittelgroßen Kreatur. Danach erst wieder nach einer langen Rast oder sobald du einen Beschwörungszauber ab Grad 1 wirkst.",
+      "en": "Benign Transposition"
     }
   ],
   "goal": "Eine eigene Organisation gründen und zur dominierenden Macht von Xantus aufsteigen. Nicht länger Handlanger der Zafferas sein, sondern selbst herrschen.",

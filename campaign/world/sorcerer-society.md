@@ -12,7 +12,7 @@ summary: Uniformierte Magier, die alle Echsenmenschen ausrotten wollen. Ihr Anf�
 **Feindliche Magier-Organisation · Ziel: die Ausrottung aller Echsenmenschen.**
 
 - Uniformierte Magier, vermutlich Menschen oder Elfen, organisiert und gefährlich.
-- Drei ihrer Magier griffen [[Crush Lu]] an und wurden von Valerius' *Netz* festgesetzt. Beute: 3 Dolche und **3 Uniformen**, wertvoll für Infiltration.
+- Drei ihrer Magier griffen [[Crush Lu]] an und wurden von Valerius' *Netz* festgesetzt. Beute: 3 Dolche und **3 Uniformen**. Die Uniformen stecken heute in den Vermummungen deiner Skelette.
 - Sie besetzten die Zuflucht des roten Clans ([[Hügelberg und Zuflucht]]), die Gruppe eroberte sie zurück.
 
 ## Der Anführer
