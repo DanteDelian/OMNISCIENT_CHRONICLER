@@ -22,6 +22,7 @@ export const PRINT_PARTS: PrintPart[] = [
 	{ id: 'gefolge', label: 'Gefolge', hint: 'Vertraute, Untote, Diener, Aella', group: 'Am Tisch' },
 	{ id: 'regeln', label: 'Regel-Spickzettel', hint: 'Zustände, Aktionen, Konzentration, Rasten', group: 'Am Tisch' },
 	{ id: 'fragen', label: 'Fragen an den DM', hint: 'Zum Abhaken, mit Platz für Antworten', group: 'Am Tisch' },
+	{ id: 'begriffe', label: 'Begriffe Deutsch – Englisch', hint: 'Für den Denglisch-DM, 1 Seite', group: 'Am Tisch' },
 	{ id: 'inventar', label: 'Inventar', hint: 'Besitz, Geld, Wunschliste', group: 'Kampagne' },
 	{ id: 'quests', label: 'Quests', hint: 'Aktiv, Gerüchte, erledigt', group: 'Kampagne' },
 	{ id: 'raetsel', label: 'Rätselwand', hint: 'Theorien, Widersprüche, Mysterien', group: 'Kampagne' },

@@ -19,6 +19,8 @@ export interface Attack {
 export interface Feature {
 	id: string;
 	name: string;
+	/** Englischer Name, wie der DM ihn nennt */
+	en?: string;
 	source: string;
 	economy: Economy;
 	uses?: { max: number; reset: 'long' | 'short' };

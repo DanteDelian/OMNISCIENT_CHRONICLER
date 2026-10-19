@@ -34,7 +34,7 @@
 			{#each page as sp (sp.id)}
 				<article class="spell-card" style="--c: {SCHOOL_PRINT[sp.school] ?? 'var(--p-accent)'}">
 					<div class="card-name">{sp.name}</div>
-					<div class="card-grade">{sp.level === 0 ? 'Zaubertrick' : `Grad ${sp.level}`} · {sp.school}</div>
+					<div class="card-grade"><span>{sp.level === 0 ? 'Zaubertrick' : `Grad ${sp.level}`} · {sp.school}</span><span class="card-en">{sp.en}</span></div>
 					<dl class="card-meta">
 						<dt>Zeit</dt><dd>{sp.time}</dd>
 						<dt>Reichweite</dt><dd>{sp.range}</dd>

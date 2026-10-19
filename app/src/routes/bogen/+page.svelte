@@ -26,16 +26,16 @@
 	const s = $derived(campaign.data.state);
 
 	const combat = $derived([
-		['Rüstungsklasse', String(c.ac.base), c.ac.formula],
-		['Trefferpunkte', String(c.hp.max), `Trefferwürfel ${c.level}W${c.hp.hitDie}`],
-		['Initiative', fmtMod(initiative(c)), 'GE-Modifikator'],
-		['Bewegung', `${c.speed} m`, '30 Fuß'],
-		['Übungsbonus', fmtMod(c.proficiencyBonus), `Stufe ${c.level}`],
-		['Zauber-SG', String(spellDc(c)), '8 + ÜB + IN'],
-		['Zauberangriff', fmtMod(spellAttack(c)), 'ÜB + IN'],
-		['Vorbereitbar', String(c.spellcasting.preparedMax), 'IN-Modifikator + Stufe'],
-		['Passive Wahrnehmung', String(passivePerception(c, s)), '10 + Wahrnehmung'],
-		['Dunkelsicht', `${c.darkvision} m`, '60 Fuß']
+		['Rüstungsklasse', String(c.ac.base), c.ac.formula, 'Armor Class'],
+		['Trefferpunkte', String(c.hp.max), `Trefferwürfel ${c.level}W${c.hp.hitDie}`, 'Hit Points'],
+		['Initiative', fmtMod(initiative(c)), 'GE-Modifikator', 'Initiative'],
+		['Bewegung', `${c.speed} m`, '30 Fuß', 'Speed'],
+		['Übungsbonus', fmtMod(c.proficiencyBonus), `Stufe ${c.level}`, 'Proficiency Bonus'],
+		['Zauber-SG', String(spellDc(c)), '8 + ÜB + IN', 'Spell Save DC'],
+		['Zauberangriff', fmtMod(spellAttack(c)), 'ÜB + IN', 'Spell Attack'],
+		['Vorbereitbar', String(c.spellcasting.preparedMax), 'IN-Modifikator + Stufe', 'Prepared Spells'],
+		['Passive Wahrnehmung', String(passivePerception(c, s)), '10 + Wahrnehmung', 'Passive Perception'],
+		['Dunkelsicht', `${c.darkvision} m`, '60 Fuß', 'Darkvision']
 	]);
 
 	const featureGroups = $derived(
@@ -75,33 +75,35 @@
 
 	<!-- Attribute -->
 	<section class="panel p-5 xl:col-span-2">
-		<div class="eyebrow mb-3">Attribute und Rettungswürfe</div>
+		<div class="eyebrow mb-3">Attribute und Rettungswürfe · Abilities and Saving Throws</div>
 		<div class="grid grid-cols-3 gap-2 md:grid-cols-6">
 			{#each ABILITIES as a (a.key)}
 				{@const prof = c.saves.includes(a.key)}
 				<div class="rounded-2xl border p-3 text-center {prof ? 'border-astral/40 bg-astral/[0.06]' : 'border-line bg-white/[0.02]'}">
 					<div class="text-xs text-ink-3">{a.name}</div>
-					<button class="num mt-1 text-3xl font-semibold hover:text-astral" onclick={() => rolls.check(`${a.name}-Wurf`, abilityMod(c, a.key))} title="Attributswurf würfeln">
+					<div class="text-[0.62rem] tracking-wider text-ink-3 uppercase opacity-70">{a.en}</div>
+					<button class="num mt-1 text-3xl font-semibold hover:text-astral" onclick={() => rolls.check(`${a.name}-Wurf (${a.enShort} Check)`, abilityMod(c, a.key))} title="Attributswurf würfeln">
 						{fmtMod(abilityMod(c, a.key))}
 					</button>
 					<div class="num text-sm text-ink-3">Wert {c.abilities[a.key]}</div>
-					<button class="mt-2 w-full rounded-lg bg-white/[0.04] py-1 text-xs hover:bg-white/[0.08]" onclick={() => rolls.check(`Rettungswurf ${a.name}`, saveBonus(c, a.key))}>
+					<button class="mt-2 w-full rounded-lg bg-white/[0.04] py-1 text-xs hover:bg-white/[0.08]" onclick={() => rolls.check(`Rettungswurf ${a.name} (${a.enShort} Save)`, saveBonus(c, a.key))}>
 						RW <b class="num">{fmtMod(saveBonus(c, a.key))}</b>{prof ? ' ●' : ''}
 					</button>
 				</div>
 			{/each}
 		</div>
-		<p class="mt-3 text-xs text-ink-3">● = geübt. Weisheit 8 ergibt −1, nicht −2 wie in den alten Bögen.</p>
+		<p class="mt-3 text-xs text-ink-3">RW = Rettungswurf (Saving Throw). ● = geübt (proficient). Weisheit 8 ergibt −1, nicht −2 wie in den alten Bögen.</p>
 	</section>
 
 	<!-- Kampfwerte -->
 	<section class="panel p-5 xl:col-span-2">
 		<div class="eyebrow mb-3">Kampf und Magie</div>
 		<div class="grid grid-cols-2 gap-2 sm:grid-cols-5">
-			{#each combat as [label, value, hint] (label)}
+			{#each combat as [label, value, hint, en] (label)}
 				<div class="sunken p-3">
 					<div class="num text-2xl font-semibold">{value}</div>
 					<div class="text-xs text-ink-2">{label}</div>
+					<div class="text-[0.65rem] text-ink-3 italic">{en}</div>
 					<div class="text-[0.65rem] text-ink-3">{hint}</div>
 				</div>
 			{/each}
@@ -113,7 +115,7 @@
 <div class="mt-4 grid gap-4 xl:grid-cols-3">
 	<!-- Fertigkeiten -->
 	<section class="panel p-5">
-		<div class="eyebrow mb-3">Fertigkeiten</div>
+		<div class="eyebrow mb-3">Fertigkeiten · Skills</div>
 		<table class="w-full text-sm">
 			<tbody>
 				{#each SKILLS as k (k.key)}
@@ -121,12 +123,12 @@
 					<tr class="border-b border-line last:border-0">
 						<td class="py-1.5">{#if prof === 'fest'}<span class="text-astral">●</span>{:else}<span class="text-ink-3">○</span>{/if}</td>
 						<td class="py-1.5 {prof ? 'text-ink' : 'text-ink-2'}">
-							{k.name}
+							{k.name} <span class="text-xs text-ink-3">{k.en}</span>
 							{#if prof === 'fest'}<span class="block text-[0.65rem] text-ink-3">{c.skills[k.key]}</span>{/if}
 						</td>
 						<td class="py-1.5 text-xs text-ink-3">{ABILITY_SHORT[k.ability]}</td>
 						<td class="py-1.5 text-right">
-							<button class="num rounded-md px-1.5 font-medium hover:bg-white/10" onclick={() => rolls.check(k.name, skillBonus(c, s, k.key))}>{fmtMod(skillBonus(c, s, k.key))}</button>
+							<button class="num rounded-md px-1.5 font-medium hover:bg-white/10" onclick={() => rolls.check(`${k.name} (${k.en})`, skillBonus(c, s, k.key))}>{fmtMod(skillBonus(c, s, k.key))}</button>
 						</td>
 					</tr>
 				{/each}
@@ -183,7 +185,7 @@
 					{#each g.list as f (f.id)}
 						<article id={f.id} class="panel scroll-mt-24 p-4 {f.upcoming ? 'opacity-70' : ''}">
 							<div class="flex flex-wrap items-center gap-2">
-								<h3 class="text-base font-semibold">{f.name}</h3>
+								<h3 class="text-base font-semibold">{f.name}{#if f.en} <span class="text-sm font-normal text-ink-3 italic">{f.en}</span>{/if}</h3>
 								<span class="badge">{ECONOMY_LABEL[f.economy] ?? f.economy}</span>
 								{#if f.uses}<span class="badge" style="--c: var(--color-gold)">{f.uses.max}× pro {f.uses.reset === 'long' ? 'langer Rast' : 'kurzer Rast'}</span>{/if}
 								{#if f.upcoming}<span class="badge" style="--c: var(--color-astral-2)">Ausblick</span>{/if}

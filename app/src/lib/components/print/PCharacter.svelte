@@ -31,7 +31,6 @@
 	const features = $derived(c.features.filter((f) => !f.upcoming));
 	const upcoming = $derived(c.features.filter((f) => f.upcoming));
 	const skillCols = $derived([SKILLS.slice(0, 9), SKILLS.slice(9)]);
-	const short = (a: string) => ABILITIES.find((x) => x.key === a)?.short ?? '';
 </script>
 
 <PDoc id="bogen" compact eyebrow="Charakterbogen" title={c.name} subtitle="{c.race} · {c.className} {c.level} · {c.subclass} · {c.alignment}{c.player ? ` · Spieler: ${c.player}` : ''}">
@@ -66,13 +65,13 @@
 		<div class="stat"><div class="v">{c.darkvision} m</div><div class="l">Dunkelsicht</div><div class="s">Grautöne</div></div>
 	</div>
 
-	<h2 style="margin-top: 2.6mm; font-size: 15pt">Attribute und Rettungswürfe</h2>
+	<h2 style="margin-top: 2.6mm; font-size: 15pt">Attribute und Rettungswürfe <span class="count">RW = Saving Throw</span></h2>
 	<div class="grid g6" style="gap: 2.2mm">
 		{#each ABILITIES as a (a.key)}
 			<div class="stat">
 				<div class="l" style="margin: 0 0 0.6mm">{a.name}</div>
 				<div class="v">{fmtMod(abilityMod(c, a.key))}</div>
-				<div class="s">Wert {c.abilities[a.key]}</div>
+				<div class="s">Wert {c.abilities[a.key]} · {a.enShort}</div>
 				<div class="small" style="margin-top: 0.8mm; border-top: 0.4pt solid var(--p-line); padding-top: 0.6mm">
 					<span class="dot" style="width: 2.4mm; height: 2.4mm; vertical-align: -0.2mm; {c.saves.includes(a.key) ? 'background: var(--p-ink)' : ''}"></span>
 					RW <b class="num">{fmtMod(saveBonus(c, a.key))}</b>
@@ -83,7 +82,7 @@
 
 	<div class="grid" style="grid-template-columns: 1.6fr 1fr; gap: 6mm; align-items: start">
 		<div>
-			<h2 style="margin-top: 2.6mm; font-size: 15pt">Fertigkeiten</h2>
+			<h2 style="margin-top: 2.6mm; font-size: 15pt">Fertigkeiten <span class="count">Skills</span></h2>
 			<div class="grid g2" style="gap: 0 5mm">
 				{#each skillCols as col, ci (ci)}
 					<div>
@@ -91,7 +90,7 @@
 							<div class="spread small" style="border-bottom: 0.4pt solid var(--p-line); padding: 0.6mm 0">
 								<span>
 									<span class="dot" style="width: 2.4mm; height: 2.4mm; vertical-align: -0.2mm; {c.skills[sk.key] ? 'background: var(--p-ink)' : ''}"></span>
-									{sk.name} <span class="tiny muted">{short(sk.ability)}</span>
+									{sk.name} <i class="tiny muted">{sk.en}</i>
 								</span>
 								<b class="num">{fmtMod(skillBonus(c, null, sk.key))}</b>
 							</div>
@@ -141,7 +140,7 @@
 	<div class="cols-2" style="font-size: 8.8pt">
 		{#each features as f (f.id)}
 			<div class="avoid" id={printAnchor(`feature:${f.id}`)} style="margin-bottom: 2.4mm">
-				<h3 style="margin-top: 0">{f.name}</h3>
+				<h3 style="margin-top: 0">{f.name}{#if f.en} <i class="tiny muted" style="font-family: var(--font-sans); font-weight: 400">{f.en}</i>{/if}</h3>
 				<div class="tiny muted" style="margin-bottom: 1mm">
 					{f.source} · {ECONOMY_LABEL[f.economy] ?? f.economy}{#if f.uses}
 						· {f.uses.max}× pro {f.uses.reset === 'long' ? 'langer' : 'kurzer'} Rast <span class="boxes" style="margin-left: 1mm">{#each Array(f.uses.max) as _, i (i)}<span class="cb" style="width: 2.8mm; height: 2.8mm"></span>{/each}</span>{/if}

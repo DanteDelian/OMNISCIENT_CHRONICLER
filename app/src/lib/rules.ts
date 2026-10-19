@@ -1,13 +1,14 @@
 /** D&D-5e-Rechenlogik für Valerius (Spielerhandbuch 2014). Läuft auf Client und Server. */
 import type { Ability, Attack, Character, PlayState, Spell } from './types';
 
-export const ABILITIES: { key: Ability; short: string; name: string }[] = [
-	{ key: 'str', short: 'ST', name: 'Stärke' },
-	{ key: 'dex', short: 'GE', name: 'Geschicklichkeit' },
-	{ key: 'con', short: 'KO', name: 'Konstitution' },
-	{ key: 'int', short: 'IN', name: 'Intelligenz' },
-	{ key: 'wis', short: 'WE', name: 'Weisheit' },
-	{ key: 'cha', short: 'CH', name: 'Charisma' }
+/** Attribute, dazu die englischen Begriffe: Der DM fragt gern auf Englisch nach Würfen. */
+export const ABILITIES: { key: Ability; short: string; name: string; en: string; enShort: string }[] = [
+	{ key: 'str', short: 'ST', name: 'Stärke', en: 'Strength', enShort: 'STR' },
+	{ key: 'dex', short: 'GE', name: 'Geschicklichkeit', en: 'Dexterity', enShort: 'DEX' },
+	{ key: 'con', short: 'KO', name: 'Konstitution', en: 'Constitution', enShort: 'CON' },
+	{ key: 'int', short: 'IN', name: 'Intelligenz', en: 'Intelligence', enShort: 'INT' },
+	{ key: 'wis', short: 'WE', name: 'Weisheit', en: 'Wisdom', enShort: 'WIS' },
+	{ key: 'cha', short: 'CH', name: 'Charisma', en: 'Charisma', enShort: 'CHA' }
 ];
 
 export const ABILITY_SHORT: Record<Ability, string> = {
@@ -19,26 +20,26 @@ export const ABILITY_SHORT: Record<Ability, string> = {
 	cha: 'CH'
 };
 
-/** Fertigkeiten mit den Begriffen aus Patricks Bögen. */
-export const SKILLS: { key: string; name: string; ability: Ability }[] = [
-	{ key: 'acrobatics', name: 'Akrobatik', ability: 'dex' },
-	{ key: 'arcana', name: 'Arkane Kunde', ability: 'int' },
-	{ key: 'athletics', name: 'Athletik', ability: 'str' },
-	{ key: 'performance', name: 'Auftreten', ability: 'cha' },
-	{ key: 'intimidation', name: 'Einschüchtern', ability: 'cha' },
-	{ key: 'sleight', name: 'Fingerfertigkeit', ability: 'dex' },
-	{ key: 'history', name: 'Geschichte', ability: 'int' },
-	{ key: 'medicine', name: 'Heilkunde', ability: 'wis' },
-	{ key: 'stealth', name: 'Heimlichkeit', ability: 'dex' },
-	{ key: 'insight', name: 'Menschenkenntnis', ability: 'wis' },
-	{ key: 'investigation', name: 'Nachforschung', ability: 'int' },
-	{ key: 'nature', name: 'Naturkunde', ability: 'int' },
-	{ key: 'religion', name: 'Religion', ability: 'int' },
-	{ key: 'deception', name: 'Täuschen', ability: 'cha' },
-	{ key: 'animal', name: 'Tierhandhabung', ability: 'wis' },
-	{ key: 'survival', name: 'Überlebenskunst', ability: 'wis' },
-	{ key: 'persuasion', name: 'Überzeugen', ability: 'cha' },
-	{ key: 'perception', name: 'Wahrnehmung', ability: 'wis' }
+/** Fertigkeiten mit den Begriffen aus Patricks Bögen, dazu der englische Name. */
+export const SKILLS: { key: string; name: string; en: string; ability: Ability }[] = [
+	{ key: 'acrobatics', name: 'Akrobatik', en: 'Acrobatics', ability: 'dex' },
+	{ key: 'arcana', name: 'Arkane Kunde', en: 'Arcana', ability: 'int' },
+	{ key: 'athletics', name: 'Athletik', en: 'Athletics', ability: 'str' },
+	{ key: 'performance', name: 'Auftreten', en: 'Performance', ability: 'cha' },
+	{ key: 'intimidation', name: 'Einschüchtern', en: 'Intimidation', ability: 'cha' },
+	{ key: 'sleight', name: 'Fingerfertigkeit', en: 'Sleight of Hand', ability: 'dex' },
+	{ key: 'history', name: 'Geschichte', en: 'History', ability: 'int' },
+	{ key: 'medicine', name: 'Heilkunde', en: 'Medicine', ability: 'wis' },
+	{ key: 'stealth', name: 'Heimlichkeit', en: 'Stealth', ability: 'dex' },
+	{ key: 'insight', name: 'Menschenkenntnis', en: 'Insight', ability: 'wis' },
+	{ key: 'investigation', name: 'Nachforschung', en: 'Investigation', ability: 'int' },
+	{ key: 'nature', name: 'Naturkunde', en: 'Nature', ability: 'int' },
+	{ key: 'religion', name: 'Religion', en: 'Religion', ability: 'int' },
+	{ key: 'deception', name: 'Täuschen', en: 'Deception', ability: 'cha' },
+	{ key: 'animal', name: 'Tierhandhabung', en: 'Animal Handling', ability: 'wis' },
+	{ key: 'survival', name: 'Überlebenskunst', en: 'Survival', ability: 'wis' },
+	{ key: 'persuasion', name: 'Überzeugen', en: 'Persuasion', ability: 'cha' },
+	{ key: 'perception', name: 'Wahrnehmung', en: 'Perception', ability: 'wis' }
 ];
 
 /** Werkzeuge und Waffen, die für die tägliche Astrale Trance sinnvoll sind. */
@@ -66,6 +67,27 @@ export const SCHOOL_COLOR: Record<string, string> = {
 	Illusion: 'var(--color-s-ill)',
 	Nekromantie: 'var(--color-s-nekro)',
 	Verwandlung: 'var(--color-s-verw)'
+};
+
+export const SCHOOL_EN: Record<string, string> = {
+	Bannzauber: 'Abjuration',
+	Beschwörung: 'Conjuration',
+	Erkenntnismagie: 'Divination',
+	Verzauberung: 'Enchantment',
+	Hervorrufung: 'Evocation',
+	Illusion: 'Illusion',
+	Nekromantie: 'Necromancy',
+	Verwandlung: 'Transmutation'
+};
+
+export const ECONOMY_EN: Record<string, string> = {
+	aktion: 'Action',
+	bonus: 'Bonus Action',
+	reaktion: 'Reaction',
+	minute: '1 Minute',
+	stunde: '1 Hour',
+	passiv: 'Passive',
+	rast: 'Rest'
 };
 
 export const ECONOMY_LABEL: Record<string, string> = {

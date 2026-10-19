@@ -37,7 +37,8 @@ const JOBS = [
 	{ file: '12-zauberkarten.pdf', teil: 'zauberkarten' },
 	{ file: '13-fragen-an-den-dm.pdf', teil: 'fragen' },
 	{ file: '14-raetselwand.pdf', teil: 'raetsel' },
-	{ file: '15-netzwerk.pdf', teil: 'netzwerk' }
+	{ file: '15-netzwerk.pdf', teil: 'netzwerk' },
+	{ file: '16-begriffe-deutsch-englisch.pdf', teil: 'begriffe' }
 ];
 
 // ---------- Argumente und .env ----------

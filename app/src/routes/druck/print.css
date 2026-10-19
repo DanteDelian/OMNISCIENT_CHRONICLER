@@ -808,6 +808,9 @@ html:has(.druck) body {
 	line-height: 1.05;
 }
 .druck .card-grade {
+	display: flex;
+	justify-content: space-between;
+	gap: 2mm;
 	margin-top: 0.6mm;
 	color: var(--c);
 	font-size: 6pt;
@@ -941,4 +944,41 @@ html:has(.druck) body {
 }
 .druck .nowrap {
 	white-space: nowrap;
+}
+
+/* ---------- Englische Begriffe ---------- */
+.druck .card-en {
+	color: var(--p-ink-3);
+	font-size: 6.4pt;
+	font-weight: 500;
+	font-style: italic;
+	letter-spacing: 0;
+	text-transform: none;
+	white-space: nowrap;
+}
+.druck .gloss {
+	font-size: 7.6pt;
+	line-height: 1.38;
+}
+.druck .gloss-group {
+	break-inside: avoid;
+	margin-bottom: 2.6mm;
+}
+.druck .gloss-group .label {
+	margin-bottom: 0.6mm;
+}
+.druck .gloss-row {
+	display: flex;
+	justify-content: space-between;
+	gap: 2mm;
+	border-bottom: 0.3pt solid var(--p-line);
+}
+.druck .gloss-row > * {
+	min-width: 0;
+}
+.druck .gloss-row i {
+	color: var(--p-ink-2);
+	text-align: right;
+	/* Kursive Buchstaben ragen rechts etwas über, am Seitenrand würden sie abgeschnitten. */
+	padding-right: 1mm;
 }

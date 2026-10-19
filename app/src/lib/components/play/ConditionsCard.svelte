@@ -22,7 +22,7 @@
 			<button
 				class="chip {on ? '!border-blood/60 !bg-blood/15 !text-ink' : ''}"
 				onclick={() => toggleCondition(cond.id)}
-				title={cond.effects.join('\n') + (cond.valerius ? `\n\nFür Valerius: ${cond.valerius}` : '')}>{cond.name}</button
+				title={(cond.en ? `${cond.en}\n\n` : '') + cond.effects.join('\n') + (cond.valerius ? `\n\nFür Valerius: ${cond.valerius}` : '')}>{cond.name}</button
 			>
 		{/each}
 	</div>
@@ -31,7 +31,7 @@
 		<div class="mt-3 space-y-2">
 			{#each active as cond (cond.id)}
 				<div class="rounded-xl border border-blood/30 bg-blood/[0.06] p-3">
-					<div class="text-sm font-semibold">{cond.name}</div>
+					<div class="text-sm font-semibold">{cond.name}{#if cond.en} <span class="font-normal text-ink-3 italic">{cond.en}</span>{/if}</div>
 					<ul class="mt-1 space-y-0.5 text-xs text-ink-2">
 						{#each cond.effects as e (e)}<li>• {e}</li>{/each}
 					</ul>

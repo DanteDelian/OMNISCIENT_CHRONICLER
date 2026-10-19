@@ -19,6 +19,7 @@
 	import PArchiveDoc from '$lib/components/print/PArchiveDoc.svelte';
 	import PSources from '$lib/components/print/PSources.svelte';
 	import PQuestions from '$lib/components/print/PQuestions.svelte';
+	import PGlossary from '$lib/components/print/PGlossary.svelte';
 	import PMysteries from '$lib/components/print/PMysteries.svelte';
 	import PNetwork from '$lib/components/print/PNetwork.svelte';
 
@@ -40,7 +41,7 @@
 
 	const PRESETS: { label: string; ids: string[] | null }[] = [
 		{ label: 'Alles', ids: null },
-		{ label: 'Für den Spieltisch', ids: ['deckblatt', 'bogen', 'spielbogen', 'zauber', 'zauberkarten', 'gefolge', 'regeln', 'fragen'] },
+		{ label: 'Für den Spieltisch', ids: ['deckblatt', 'bogen', 'spielbogen', 'zauber', 'zauberkarten', 'gefolge', 'regeln', 'begriffe', 'fragen'] },
 		{ label: 'Kampagne', ids: ['quests', 'raetsel', 'journal', 'welt', 'netzwerk', 'karte'] },
 		{ label: 'Archiv', ids: ['archiv'] },
 		{ label: 'Nichts', ids: [] }
@@ -103,6 +104,8 @@
 			<PRetinue />
 		{:else if p.id === 'regeln'}
 			<PRules />
+		{:else if p.id === 'begriffe'}
+			<PGlossary />
 		{:else if p.id === 'fragen'}
 			<PQuestions />
 		{:else if p.id === 'raetsel'}
