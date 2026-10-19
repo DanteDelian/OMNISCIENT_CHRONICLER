@@ -5,22 +5,22 @@ kind: person
 group: lhaaz
 tone: neutral
 status: Lebt, milder gestimmt, beobachtet euch
-summary: Tante von Leon und Lula. Von euch gerettet, hält euch für Hochstapler, ist inzwischen aber milder gestimmt.
+summary: Schwester des Erzherzogs und von Leonidas, Tante von Leon und Lula. Von euch gerettet, hält euch für Hochstapler, ist inzwischen aber milder gestimmt.
 ---
 # Lisbeth Lhaaz („Tantchen Lisbeth“)
 
-**Schwester des Erzherzogs · Tante von Leon und Lula · scharfsinnig, erfahren, misstrauisch.**
+**Schwester des [[Erzherzog Lhaaz|Erzherzogs]] und von [[Leonidas Lhaaz|Graf Leonidas]] · Tante von [[Leon Lhaaz|Leon]] und [[Lula Lhaaz|Lula]] · scharfsinnig, erfahren, misstrauisch.**
 
 ## Was passiert ist
 - Ihr Schiff, das Verstärkung für die Lhaaz bringen sollte, wurde **von der eigenen Eskorte angegriffen**. Valerius leitete die Rettung, gemeinsam mit Aella zog er die Überlebenden aus dem Wasser. Darunter war Lisbeth.
 - Danach nahm sie die beiden ins **Kreuzverhör** und warf ihnen offen vor, Hochstapler zu sein. Valerius redete sich heraus, Aella fehlten die Worte. Aus Dankbarkeit für die Rettung lässt Lisbeth die Sache vorerst ruhen, beobachtet euch aber mit Argusaugen.
-- [[Cam Buckland]]s telepathische Warnung, Graf Lhaaz habe über die Zafferas ihren Tod bestellt und ihr Schiff werde „nie ankommen“, **kam zu spät**. Der DM bestätigt: Der Anschlag war schon passiert.
+- [[Cam Buckland]]s telepathische Warnung, „Graf Lhaaz“ habe über die Zafferas ihren Tod bestellt und ihr Schiff werde „nie ankommen“, **kam zu spät**. Der DM bestätigt: Der Anschlag war schon passiert.
 
 > **Korrektur gegenüber den alten Notizen:** Dort hieß es, das „Problem Lisbeth“ löse sich von selbst. Das stimmt nicht. Lisbeth lebt (von dir am 12.10.2026 bestätigt) und ist eine der gefährlichsten Personen für eure Tarnung.
 
 ## Einschätzung
 - Aella hält sie für die wahre Matriarchin der Familie. Sie respektiert Stärke und Taten, nicht Worte.
-- Sie weiß wohl nicht, dass ihr eigener Verwandter, der [[Graf Lhaaz|Graf]], ihren Tod bestellt hat. Ein möglicher Hebel.
+- Wer der „Graf Lhaaz“ aus Cams Warnung ist, ist offen: ihr Bruder, der [[Erzherzog Lhaaz|Erzherzog]], ihr Bruder Leonidas oder ein Dritter. *Theorie:* Einer ihrer Brüder wollte sie tot sehen, und sie weiß es wohl nicht. Ein möglicher Hebel.
 - Mit der nächsten Schiffskarawane erreicht die Nachricht vom Tod der echten Donnergarde auch Xantus.
 
 ## Seit Juli 2026

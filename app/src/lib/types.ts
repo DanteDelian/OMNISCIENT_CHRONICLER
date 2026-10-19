@@ -370,6 +370,8 @@ export interface TreeEdge {
 	from: string[];
 	to: string[];
 	label?: string;
+	/** Gestrichelt: vermutet oder offen */
+	uncertain?: boolean;
 }
 
 export interface FamilyTree {

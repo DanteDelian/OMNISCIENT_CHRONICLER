@@ -4,11 +4,11 @@ subtitle: Was falsch war, was korrigiert wurde und was noch offen ist
 icon: shield-check
 order: 1
 group: Prüfung
-updated: 2026-10-16
+updated: 2026-10-19
 ---
 # Prüfbericht
 
-**Stand: 16. Oktober 2026.** Abgeglichen wurden die 12 Dateien im Drive-Ordner *Valerius*, die 3 Dokumente im Ordner *Kho* (darunter dein Sessionbericht vom 12.10.2026), das alte Grimoire auf GitHub und die D&D-5e-Regeln (Spielerhandbuch 2014, Xanathars Ratgeber für alles, Spelljammer für den Astralelfen). Deine Antworten vom 12.10.2026 und dein [[Sessionbericht Juli bis Oktober 2026|Sessionbericht]] sind eingearbeitet.
+**Stand: 19. Oktober 2026.** Abgeglichen wurden die 12 Dateien im Drive-Ordner *Valerius*, die 3 Dokumente im Ordner *Kho* (darunter dein Sessionbericht vom 12.10.2026), das alte Grimoire auf GitHub und die D&D-5e-Regeln (Spielerhandbuch 2014, Xanathars Ratgeber für alles, Spelljammer für den Astralelfen). Deine Antworten vom 12.10.2026 und dein [[Sessionbericht Juli bis Oktober 2026|Sessionbericht]] sind eingearbeitet.
 
 > **Gemini-Entwürfe:** Die beiden „Optimiert“-Dokumente vom 10.10.2026 waren Vorschläge von Gemini und sind **nicht übernommen**. Ihre vier neuen Zauber (Nebelwolke, Spiegelbilder, Gedanken wahrnehmen, Fliegen) stehen nicht im Grimoire. Gemini hat auch in deinen älteren Dokumenten mitgeschrieben. Daher stammen viele der Fehler unten.
 
@@ -65,7 +65,7 @@ updated: 2026-10-16
 ## C · Kampagnen-Fakten
 
 1. **[[Lisbeth Lhaaz]] lebt.** Im alten Grimoire und im Kampagnen-Log stand: „Ihr Schiff wird nie ankommen, das Problem löst sich von selbst.“ Laut der Chronik deiner Gefährtin wurde ihr Schiff aber von der eigenen Eskorte angegriffen, und ihr habt sie gerettet. Danach hat sie euch verhört und hält euch für Hochstapler. Der DM bestätigt, dass Cams Nachricht zu spät kam. Du: „es ist ja schon passiert“. DM: „Ja die Nachricht kommt zu spät“. Am 12.10.2026 hast du es noch einmal bestätigt. Lisbeth ist also eine aktive Bedrohung, und zugleich ein Hebel, weil ihr eigener Verwandter sie tot sehen wollte.
-2. **[[Graf Lhaaz]]' „Schwägerin(?)“** war eine Vermutung des alten Grimoires und ist gestrichen. Laut deinen Notizen ist Lisbeth die Schwester des Erzherzogs und die Tante von Leon und Lula.
+2. **Lisbeth als „Schwägerin(?)“ des Grafen** war eine Vermutung des alten Grimoires und ist gestrichen. Lisbeth ist die Schwester des [[Erzherzog Lhaaz|Erzherzogs]] und von [[Leonidas Lhaaz|Leonidas]] und die Tante von Leon und Lula (von dir am 19.10.2026 bestätigt).
 3. **Das Lhaaz-Schriftstück** stammt vom **Attentäter**, der Lula angriff. Im alten Grimoire fehlte das.
 4. **Valerius und Aella** überlebten den Echsen-Hinterhalt, nicht Valerius allein (Kampagnen-Log gegen Aellas Chronik).
 5. **Ergänzte Ereignisse:** die Rettung auf See, Lisbeths Verhör, 40 Stunden Landgang, die Spuren des roten Echsenkriegers, die zwei überlebenden Echsenkrieger im Kampf gegen den Riesen, der Weg zur Abholstelle (Lisbeths Eskorte) und Aellas Notizen (Bericht an die Echsen, nur noch wenige Eier, Höhle wieder bewohnbar).
@@ -76,7 +76,7 @@ updated: 2026-10-16
 10. **[[Taya]]:** Laut deinem Log scheiterte die Wiederbelebung, laut Aellas Notizen gelang sie („Taya wiederbeleben ✔“). Aellas Notizen sind aktueller (deine Angabe). Taya gilt damit als wiederbelebt. Wie es weiterging, trägst du noch nach.
 11. **Vertrauter:** zuletzt eine **Eule**, davor ein Falke. Die Eule wurde am 11.10.2026 vom Orc-Schamanen getötet.
 12. **Ohrringe:** Sie tragen ***Verständigung*** (Sending), nicht *Botschaft*: bis zu 25 Wörter, Antwort sofort, Entfernung egal. Jeder Träger braucht ein Stück.
-13. **Familie Lhaaz:** Das Kampagnen-Log nennt Leon und Lula die Kinder des [[Graf Lhaaz|Grafen]], der Lisbeths Tod bestellte. Seit Juli 2026 kennt ihr [[Leonidas Lhaaz|Graf Leonidas]], Leons Onkel. *Theorie:* Er ist der „Baron“ aus Cams Brief. Offen.
+13. **Familie Lhaaz:** Das Kampagnen-Log nennt Leon und Lula die Kinder des Grafen, der Lisbeths Tod bestellte. Laut dir (19.10.2026) ist Leons Vater aber der **[[Erzherzog Lhaaz|Erzherzog]]**, und Leonidas und Lisbeth sind seine Geschwister. Der Eintrag „Graf Lhaaz“ heißt deshalb jetzt „Erzherzog Lhaaz“. Den Titel „Graf“ aus Cams Brief lasse ich als Widerspruch im Journal stehen. **Offen:** Wer der „Graf Lhaaz“ ist, der Lisbeths Tod bestellt hat, und ob [[Leonidas Lhaaz|Leonidas]] der „Baron“ aus Cams Brief ist (*Theorie*).
 14. **Skelette:** In keinem deiner Dokumente steht, dass du vor Oktober 2026 Skelette erweckt hast. Das Log endet beim Plan, auf dem Schlachtfeld im Südosten Knochen zu holen.
 15. **Die Notizen vom Spieltisch** stammen aus der Session vom 12.07.2026. Die „neuen Kollegen“ sind die neuen Gefährten, die „Nummer 2 der Teufelsjäger“ ist wohl [[Lucira]].
 
@@ -85,6 +85,9 @@ updated: 2026-10-16
 Die Fragen an den DM stehen gebündelt in der Quest **[[Offene Fragen an den DM]]**: fehlende Zauber, frühere und neue Skelette, Heiltränke, Riesenrune, Tukan, Ohrringe, Rassenmerkmale, Täuschen, Familie Lhaaz.
 
 **Für dich:** Welche „Echsen-Mission“ ist laut deiner Notiz vom 12.07.2026 gescheitert?
+
+### Geklärt am 19. Oktober 2026
+- **Familie Lhaaz:** Leons Vater ist der Erzherzog. Leonidas ist sein Bruder, Lisbeth seine Schwester und damit auch die Schwester von Leonidas.
 
 ### Geklärt am 16. Oktober 2026
 - **Sitzungsgrenze:** Die Session zwischen dem 12.07. und dem 11.10.2026 bleibt undatiert, so gewollt.

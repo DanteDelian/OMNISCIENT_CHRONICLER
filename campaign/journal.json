@@ -46,6 +46,9 @@
       "nachrichten-dm",
       "backstory",
       "kampagnen-log"
+    ],
+    "contradictions": [
+      "Cams Brief nennt Leons Vater „Graf Lhaaz“. Laut dir (19.10.2026) ist Leons Vater der [[Erzherzog Lhaaz|Erzherzog]], und [[Leonidas Lhaaz|Leonidas]] und [[Lisbeth Lhaaz|Lisbeth]] sind seine Geschwister."
     ]
   },
   {
@@ -421,6 +424,9 @@
     "sources": [
       "nachrichten-dm",
       "kampagnen-log"
+    ],
+    "contradictions": [
+      "Die Warnung nennt Lisbeth „die Schwester des Erzherzogs“ und den Auftraggeber „Graf Lhaaz“ getrennt. Laut dir ist Leons Vater der Erzherzog, den Cams erster Brief „Graf Lhaaz“ nennt. Wer den Anschlag bestellt hat, ist damit offen: der [[Erzherzog Lhaaz|Erzherzog]], [[Leonidas Lhaaz|Graf Leonidas]] oder ein Dritter."
     ]
   },
   {

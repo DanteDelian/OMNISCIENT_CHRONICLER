@@ -11,7 +11,7 @@ summary: Die Stadt von Graf Leonidas Lhaaz im Westen. Seine Frau hält die Stell
 
 **Die Stadt von [[Leonidas Lhaaz|Graf Leonidas Lhaaz]] · Name nicht notiert.**
 
-- Wird von [[Die Riesen|Riesen]] belagert. Die **Frau des Grafen** hält die Stellung.
+- Wird von [[Die Riesen|Riesen]] belagert. Die **Frau von Graf Leonidas** hält die Stellung. Ihr Name ist nicht notiert.
 - Liegt laut dir im Westen, in der Wüste, wie auch der Tempel der [[Die Elefantenhominoiden|Loxodons]].
 - **Euer Weg (Oktober 2026):** mit dem Boot den Fluss nach Norden zum Meer, dann die Küste entlang nach Westen. Unterwegs liegen Orc-Lager und Riesengebiet. Siehe [[Die Belagerung im Westen brechen]].
 

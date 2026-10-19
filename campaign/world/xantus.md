@@ -12,9 +12,9 @@ summary: Wildnis, Ruinen, Reichtümer und Flüche. Eine ehemalige Sträflingskol
 **Der neue Kontinent: unberührte Wildnis, vergessene Ruinen, angeblich unermessliche Reichtümer.**
 
 - Früher wurden Gefangene hierher gebracht. Daraus entstanden **gefährliche Flüche und Geister**.
-- Das [[Haus Lhaaz]] wirkte an der ersten Expedition mit. Der **Baron**, Bruder des Grafen, hat hier die meiste Macht und herrscht über die erste Stadt.
+- Das [[Haus Lhaaz]] wirkte an der ersten Expedition mit. Der **Baron**, laut Cams Brief ein Bruder von Leons Vater, hat hier die meiste Macht und herrscht über die erste Stadt.
 - Neben der Baronsstadt entsteht flussaufwärts eine kleine Stadt, [[Die Siedlung]]. Dort wurde „etwas Besonderes“ entdeckt.
 - Die Lhaaz-Schiffskarawanen sind die einzige Verbindung zurück.
 - Für Valerius ist es das Land, auf dem sein **Imperium** entstehen soll.
 
-*Theorie (Juli 2026):* [[Leonidas Lhaaz|Graf Leonidas]], Leons Onkel mit eigener Stadt im Westen, ist der Baron. Die Baronsstadt wäre dann die [[Die belagerte Stadt im Westen|belagerte Stadt im Westen]].
+*Theorie:* [[Leonidas Lhaaz|Graf Leonidas]], der Bruder von Leons Vater mit eigener Stadt im Westen, ist der Baron. Die Baronsstadt wäre dann die [[Die belagerte Stadt im Westen|belagerte Stadt im Westen]].

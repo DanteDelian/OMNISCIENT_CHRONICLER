@@ -30,6 +30,7 @@
 	interface Line {
 		kind: TreeEdge['kind'];
 		d: string;
+		dashed: boolean;
 		label?: string;
 		lx: number;
 		ly: number;
@@ -46,20 +47,26 @@
 			const bus = rowTop(from[0]) + NODE_H + (ROW - NODE_H) / 2;
 			const xs = [x, ...to.map(center)];
 			const drops = to.map((c) => `M${center(c)} ${bus}V${rowTop(c)}`).join('');
-			return { kind: e.kind, d: `M${x} ${start}V${bus}M${Math.min(...xs)} ${bus}H${Math.max(...xs)}${drops}`, lx: 0, ly: 0 };
+			const d = `M${x} ${start}V${bus}M${Math.min(...xs)} ${bus}H${Math.max(...xs)}${drops}`;
+			return { kind: e.kind, d, dashed: !!e.uncertain, lx: 0, ly: 0 };
 		}
 		const [a, b] = [from[0], to[0]];
+		const dashed = e.kind === 'theorie' || !!e.uncertain;
 		if (e.kind === 'feindschaft') {
+			// Bogen über den Kästen. Leicht versetzte Enden, damit Pfeile von beiden Seiten nicht aufeinanderliegen.
+			const dir = Math.sign(center(b) - center(a)) || 1;
+			const x1 = center(a) + 12 * dir;
+			const x2 = center(b) - 12 * dir;
 			const y = rowTop(a);
-			const mx = (center(a) + center(b)) / 2;
-			return { kind: e.kind, d: `M${center(a)} ${y}Q${mx} ${y - ARC} ${center(b)} ${y - 3}`, label: e.label, lx: mx, ly: y - ARC / 2 - 8 };
+			const mx = (x1 + x2) / 2;
+			return { kind: e.kind, d: `M${x1} ${y}Q${mx} ${y - ARC} ${x2} ${y - 3}`, dashed, label: e.label, lx: mx, ly: y - ARC / 2 - 8 };
 		}
 		const [l, r] = a.x < b.x ? [a, b] : [b, a];
 		const x1 = left(l) + NODE_W;
 		const x2 = left(r);
 		const y = rowTop(l) + NODE_H / 2;
 		const d = e.kind === 'ehe' ? `M${x1} ${y - 2.5}H${x2}M${x1} ${y + 2.5}H${x2}` : `M${x1} ${y}H${x2}`;
-		return { kind: e.kind, d, label: e.label, lx: (x1 + x2) / 2, ly: rowTop(l) - 7 };
+		return { kind: e.kind, d, dashed, label: e.label, lx: (x1 + x2) / 2, ly: rowTop(l) - 7 };
 	}
 
 	const lines = $derived(tree.edges.map(draw).filter((l) => !!l));
@@ -94,7 +101,7 @@
 		<path
 			d={l.d}
 			class="t-line"
-			class:t-theory={l.kind === 'theorie'}
+			class:t-theory={l.dashed}
 			class:t-hostile={l.kind === 'feindschaft'}
 			marker-end={l.kind === 'feindschaft' ? `url(#${arrow})` : undefined}
 		/>

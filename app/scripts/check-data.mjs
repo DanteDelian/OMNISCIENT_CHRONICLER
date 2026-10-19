@@ -107,7 +107,7 @@ for (const q of d.quests) {
 }
 for (const j of d.journal) {
 	for (const n of [...(j.people ?? []), ...(j.places ?? [])]) ref(`journal.json ${j.id}`, n);
-	for (const t of [...j.events, ...(j.notes ?? [])]) links(`journal.json ${j.id}`, t);
+	for (const t of [...j.events, ...(j.notes ?? []), ...(j.contradictions ?? [])]) links(`journal.json ${j.id}`, t);
 	for (const s of j.sources ?? []) source(`journal.json ${j.id}`, s);
 	for (const q of j.quests ?? []) if (!questIds.has(q.ref)) errors.push(`journal.json ${j.id}: Quest „${q.ref}“ gibt es nicht`);
 	if (!j.dateLabel) warnings.push(`journal.json ${j.id}: ohne dateLabel`);

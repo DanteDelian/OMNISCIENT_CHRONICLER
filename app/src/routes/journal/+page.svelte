@@ -269,7 +269,7 @@
 
 				{#each j.contradictions ?? [] as c (c)}
 					<div class="mt-3 flex items-start gap-2 rounded-xl border border-warn/30 bg-warn/[0.06] px-3 py-2 text-xs text-ink-2">
-						<TriangleAlert size={13} class="mt-0.5 shrink-0 text-warn" />{c}
+						<TriangleAlert size={13} class="mt-0.5 shrink-0 text-warn" /><Markdown src={c} inline />
 					</div>
 				{/each}
 

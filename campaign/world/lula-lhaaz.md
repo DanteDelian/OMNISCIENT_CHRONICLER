@@ -5,11 +5,11 @@ kind: person
 group: lhaaz
 tone: neutral
 status: Frei, traumatisiert, auf dem Weg der Besserung
-summary: Tochter des Grafen, Schwester von Leon. Nach den Friedensgesprächen freigelassen, schwer traumatisiert.
+summary: Tochter des Erzherzogs, Schwester von Leon. Nach den Friedensgesprächen freigelassen, schwer traumatisiert.
 ---
 # Lula Lhaaz
 
-**Tochter des [[Graf Lhaaz|Grafen]] · Schwester von [[Leon Lhaaz]] · seit Juli 2026 frei.**
+**Tochter des [[Erzherzog Lhaaz|Erzherzogs]] · Schwester von [[Leon Lhaaz]] · seit Juli 2026 frei.**
 
 - Cam beschrieb sie als „naives Kind“. Sein Tipp: „Erzählt ihr Heldengeschichten, und sie sieht euch als Retter.“
 - Ein **Attentäter** griff sie an. Bei ihm fand Valerius das Schriftstück mit dem Lhaaz-Wappen.

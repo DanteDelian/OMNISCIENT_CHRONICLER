@@ -84,9 +84,9 @@ Pflicht: `id, name, en, level (0 = Zaubertrick), school, status, time, economy, 
 `trees[{id, world, title, note, nodes[], edges[]}]`. `world` ist der Slug des Welt-Eintrags, auf dessen Seite der Baum steht.
 - `nodes[{id, label, ref, sub, x, y, tone, uncertain}]`: `x` ist die Spalte (halbe Werte erlaubt), `y` die Generation (0 oben).
   `ref` verlinkt auf einen Welt-Eintrag, `sub` trennt Zeilen mit „ · “ (je höchstens etwa 22 Zeichen, längere werden schmaler gesetzt), `uncertain` zeichnet den Kasten gestrichelt.
-- `edges[{kind, from[], to[], label}]` mit `kind` aus `eltern` (from = Eltern, to = Kinder), `geschwister`, `ehe`,
+- `edges[{kind, from[], to[], label, uncertain}]` mit `kind` aus `eltern` (from = Eltern, to = Kinder), `geschwister`, `ehe`,
   `theorie` (gestrichelt: offen oder vermutet) und `feindschaft` (roter Bogen mit Pfeil). Außer `eltern` verbinden alle
-  Arten genau zwei Personen derselben Generation.
+  Arten genau zwei Personen derselben Generation. `uncertain: true` zeichnet jede Linie gestrichelt, etwa eine vermutete Feindschaft.
 - Nur Belegtes durchziehen. Vermutungen als `theorie` und im `note` als *Theorie* kennzeichnen.
 
 ### sources.json
