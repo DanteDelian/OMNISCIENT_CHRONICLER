@@ -13,6 +13,7 @@
 	const s = $derived(campaign.data.state);
 	const hpPct = $derived(Math.max(0, Math.min(1, s.hp / c.hp.max)));
 	const quests = $derived(campaign.data.quests.filter((q) => q.status === 'aktiv' && q.urgent).length);
+	const questions = $derived(campaign.data.fragen.filter((q) => q.status === 'offen').length);
 	const isMac = typeof navigator !== 'undefined' && /Mac/.test(navigator.platform);
 </script>
 
@@ -77,6 +78,7 @@
 								<it.icon size={17} class={on ? 'text-astral' : 'text-ink-3 group-hover:text-ink-2'} />
 								<span class="flex-1">{it.label}</span>
 								{#if it.href === '/quests' && quests}<span class="badge" style="--c: var(--color-warn)">{quests}</span>{/if}
+								{#if it.href === '/raetsel' && questions}<span class="badge" style="--c: var(--color-astral)" title="Offene Fragen">{questions}</span>{/if}
 							</a>
 						</li>
 					{/each}

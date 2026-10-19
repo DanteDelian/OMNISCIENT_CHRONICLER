@@ -10,7 +10,9 @@ const SHAPE: Record<WritableFile, 'object' | 'array'> = {
 	quests: 'array',
 	spells: 'array',
 	journal: 'array',
-	map: 'object'
+	map: 'object',
+	fragen: 'array',
+	netzwerk: 'object'
 };
 
 export const PUT: RequestHandler = async ({ params, request, url }) => {
@@ -28,6 +30,7 @@ export const PUT: RequestHandler = async ({ params, request, url }) => {
 	}
 	if (file === 'inventory' && !Array.isArray((body as { items?: unknown }).items)) error(400, 'inventory.items fehlt');
 	if (file === 'map' && !Array.isArray((body as { pins?: unknown }).pins)) error(400, 'map.pins fehlt');
+	if (file === 'netzwerk' && !Array.isArray((body as { agents?: unknown }).agents)) error(400, 'netzwerk.agents fehlt');
 	writeJson(`${file}.json`, body, request.headers.get('x-client-id') ?? url.searchParams.get('client') ?? undefined);
 	return json({ ok: true });
 };

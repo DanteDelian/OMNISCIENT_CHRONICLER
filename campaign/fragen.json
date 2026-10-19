@@ -1,0 +1,150 @@
+[
+  {
+    "id": "freie-eintraege",
+    "to": "dm",
+    "topic": "Fehlende Zauber",
+    "question": "Nach den Regeln hast du 4 freie Einträge im Zauberbuch (2 bis Grad 1, 2 bis Grad 2). Wurden sie nie gewählt? Darfst du sie nachtragen? Dein Plan: *Magierrüstung*, *Nebelwolke*, *Spiegelbilder* und *Flammenkugel*.",
+    "status": "offen",
+    "links": [
+      "Stufe-6-Planer",
+      "Magierrüstung",
+      "Nebelwolke",
+      "Spiegelbilder",
+      "Flammenkugel"
+    ]
+  },
+  {
+    "id": "tashas-kessel",
+    "to": "dm",
+    "topic": "Tashas Kessel",
+    "question": "Sind Zauber daraus erlaubt, etwa *Feenwesen beschwören* (Fokus 300 GM)? Wichtig für die Wahl auf Stufe 6.",
+    "status": "offen",
+    "links": [
+      "Stufe-6-Planer",
+      "Feenwesen beschwören"
+    ]
+  },
+  {
+    "id": "heiltraenke",
+    "to": "dm",
+    "topic": "Heiltränke",
+    "question": "Reicht dein Alchemistenwerkzeug, um aus den 3 Heilkräutern Tränke zu brauen? Laut Xanathars braucht man die Kräuterkundeausrüstung (5 GM), die Übung gibt dir die Astrale Trance für einen Tag.",
+    "status": "offen",
+    "links": [
+      "3 Heiltränke aus den Heilkräutern",
+      "Alchemie-Kompendium"
+    ]
+  },
+  {
+    "id": "graf-lhaaz",
+    "to": "dm",
+    "topic": "Familie Lhaaz",
+    "question": "Wer ist der „Graf Lhaaz“, der Lisbeths Tod bestellt hat: der Erzherzog, Leonidas oder ein Dritter? Und ist Leonidas der „Baron“ aus Cams Brief?",
+    "status": "offen",
+    "links": [
+      "Erzherzog Lhaaz",
+      "Leonidas Lhaaz",
+      "Lisbeth Lhaaz"
+    ]
+  },
+  {
+    "id": "fruehere-skelette",
+    "to": "dm",
+    "topic": "Frühere Skelette",
+    "question": "Hattest du vor Oktober 2026 schon erweckte Skelette (Arena, Haus)? In deinen Unterlagen steht nichts dazu. Wo sind die Knochen?",
+    "status": "offen",
+    "links": [
+      "Skelett-Gefolge aufbauen"
+    ]
+  },
+  {
+    "id": "tukan",
+    "to": "dm",
+    "topic": "Tukan als Vertrauter",
+    "question": "Werte des Raben mit dem Aussehen eines Tukans oder Papageis?",
+    "status": "offen",
+    "links": [
+      "Ein neuer Vertrauter für den Dschungel"
+    ]
+  },
+  {
+    "id": "ohrringe",
+    "to": "dm",
+    "topic": "Ohrringe",
+    "question": "Wirkt *Verständigung* als Aktion, und gilt „pro Tag“ ab der langen Rast? Trägt Aella ihr Stück schon?",
+    "status": "offen"
+  },
+  {
+    "id": "astralelf",
+    "to": "dm",
+    "topic": "Astralelf",
+    "question": "Astrales Feuer gestrichen, Trance nur Waffe oder Werkzeug, Sternenschritt 1×. Gelten Dunkelsicht 18 m, Feenabstammung und Scharfe Sinne (Wahrnehmung) unverändert?",
+    "status": "offen"
+  },
+  {
+    "id": "taeuschen",
+    "to": "dm",
+    "topic": "Täuschen",
+    "question": "Woher kommt die Übung? Ein Hintergrund gibt meist zwei Fertigkeiten.",
+    "status": "offen"
+  },
+  {
+    "id": "fee",
+    "to": "tisch",
+    "topic": "Die Fee",
+    "question": "Wie heißt sie, und welche Klasse spielt sie?",
+    "status": "offen",
+    "links": [
+      "Die Fee"
+    ]
+  },
+  {
+    "id": "riesenrune",
+    "to": "dm",
+    "topic": "Riesenrune",
+    "question": "Ist das Mal ein Zauber oder ein Fluch?",
+    "status": "geklaert",
+    "answer": "Ein Fluch. Dagegen hilft [[Fluch brechen]], nicht *Magie bannen*.",
+    "answered": "2026-10-19",
+    "links": [
+      "Die Orcs",
+      "Fluch brechen"
+    ]
+  },
+  {
+    "id": "lisbeth-verwandtschaft",
+    "to": "dm",
+    "topic": "Lisbeths Verwandtschaft",
+    "question": "Wie ist Lisbeth mit dem Grafen verwandt?",
+    "status": "geklaert",
+    "answer": "Lisbeth ist die Schwester von Leonidas und vom Erzherzog, Leons Vater (laut dir).",
+    "answered": "2026-10-19",
+    "links": [
+      "Haus Lhaaz"
+    ]
+  },
+  {
+    "id": "echsen-mission",
+    "to": "dich",
+    "topic": "Echsen-Mission",
+    "question": "Welche „Echsen-Mission“ ist laut deiner Notiz vom 12.07.2026 gescheitert?",
+    "status": "geklaert",
+    "answer": "Der Auftrag, die Echsen zu befrieden. Er scheiterte zunächst, deshalb wurde Lula als Geisel gehalten. Inzwischen gelöst.",
+    "answered": "2026-10-19",
+    "links": [
+      "Lula aus der Geiselhaft befreien"
+    ]
+  },
+  {
+    "id": "taya",
+    "to": "dich",
+    "topic": "Taya",
+    "question": "Wie ging es mit Taya nach der Wiederbelebung weiter?",
+    "status": "geklaert",
+    "answer": "Sie ist verschwunden. Am Tisch hatte sich die Runde damals teilweise aufgelöst.",
+    "answered": "2026-10-19",
+    "links": [
+      "Taya"
+    ]
+  }
+]

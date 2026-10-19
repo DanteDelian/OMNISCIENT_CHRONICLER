@@ -10,8 +10,10 @@ import type {
 	Inventory,
 	JournalEntry,
 	MapData,
+	Network,
 	PlayState,
 	Quest,
+	Question,
 	Source,
 	Spell,
 	WorldEntry
@@ -95,7 +97,9 @@ export function loadCampaign(): CampaignData {
 		sources: readJson<Source[]>('sources.json', []),
 		docs: loadDocs(),
 		world: loadWorld(),
-		trees: readJson<{ trees: FamilyTree[] }>('stammbaum.json', { trees: [] }).trees ?? []
+		trees: readJson<{ trees: FamilyTree[] }>('stammbaum.json', { trees: [] }).trees ?? [],
+		fragen: readJson<Question[]>('fragen.json', []),
+		netzwerk: { roles: [], agents: [], ...readJson<Partial<Network>>('netzwerk.json', {}) }
 	};
 	const index = buildIndex(base);
 	const data: CampaignData = { ...base, index, backlinks: buildBacklinks(base, index) };

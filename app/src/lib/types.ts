@@ -136,6 +136,8 @@ export interface Spell {
 	docs?: string[];
 	/** Kurzregeln für die Zauberkarte im Druck (Volltext steht in text) */
 	card?: string;
+	/** Vorschlag, den der Stufe-6-Planer empfiehlt */
+	pick?: boolean;
 }
 
 export interface StatTrait {
@@ -384,8 +386,58 @@ export interface FamilyTree {
 	edges: TreeEdge[];
 }
 
+/** Offene Frage (campaign/fragen.json), erscheint auf der Rätselwand. */
+export interface Question {
+	id: string;
+	/** An wen: den DM, Mitspieler am Tisch oder dich selbst */
+	to: 'dm' | 'tisch' | 'dich';
+	topic: string;
+	question: string;
+	status: 'offen' | 'geklaert';
+	answer?: string;
+	/** Datum der Antwort (JJJJ-MM-TT) */
+	answered?: string;
+	links?: string[];
+}
+
+/** Rolle in der Unsichtbaren Hand (aus dem Aufbauplan). */
+export interface NetworkRole {
+	id: string;
+	label: string;
+	task: string;
+	where: string;
+	cost: string;
+}
+
+export interface Agent {
+	id: string;
+	name: string;
+	/** ID einer Rolle aus netzwerk.json */
+	role: string;
+	status: 'kandidat' | 'aktiv' | 'ruhend' | 'verloren';
+	/** Treue 0 bis 5 */
+	loyalty: number;
+	place?: string;
+	/** Lohn in Silber pro Tag */
+	wage?: number;
+	/** Was die Person über dich weiß */
+	knows?: string;
+	/** Name eines Welt-Eintrags, falls es einen gibt */
+	ref?: string;
+	since?: string;
+	notes?: string;
+}
+
+/** Die Unsichtbare Hand (campaign/netzwerk.json) */
+export interface Network {
+	roles: NetworkRole[];
+	agents: Agent[];
+}
+
 export interface CampaignData {
 	trees: FamilyTree[];
+	fragen: Question[];
+	netzwerk: Network;
 	character: Character;
 	state: PlayState;
 	spells: Spell[];
@@ -402,5 +454,5 @@ export interface CampaignData {
 }
 
 /** Dateien, die die App zurückschreiben darf. */
-export const WRITABLE = ['state', 'inventory', 'quests', 'spells', 'journal', 'map'] as const;
+export const WRITABLE = ['state', 'inventory', 'quests', 'spells', 'journal', 'map', 'fragen', 'netzwerk'] as const;
 export type WritableFile = (typeof WRITABLE)[number];

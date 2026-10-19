@@ -21,10 +21,13 @@ export const PRINT_PARTS: PrintPart[] = [
 	{ id: 'zauberkarten', label: 'Zauberkarten zum Ausschneiden', hint: 'Spielkartenformat, 9 pro Seite', group: 'Am Tisch' },
 	{ id: 'gefolge', label: 'Gefolge', hint: 'Vertraute, Untote, Diener, Aella', group: 'Am Tisch' },
 	{ id: 'regeln', label: 'Regel-Spickzettel', hint: 'Zustände, Aktionen, Konzentration, Rasten', group: 'Am Tisch' },
+	{ id: 'fragen', label: 'Fragen an den DM', hint: 'Zum Abhaken, mit Platz für Antworten', group: 'Am Tisch' },
 	{ id: 'inventar', label: 'Inventar', hint: 'Besitz, Geld, Wunschliste', group: 'Kampagne' },
 	{ id: 'quests', label: 'Quests', hint: 'Aktiv, Gerüchte, erledigt', group: 'Kampagne' },
+	{ id: 'raetsel', label: 'Rätselwand', hint: 'Theorien, Widersprüche, Mysterien', group: 'Kampagne' },
 	{ id: 'journal', label: 'Journal', hint: 'Datierte Chronik und Notizseite', group: 'Kampagne' },
 	{ id: 'welt', label: 'Welt', hint: 'Personen, Fraktionen, Orte', group: 'Kampagne' },
+	{ id: 'netzwerk', label: 'Die Unsichtbare Hand', hint: 'Rollen und Leute, zum Ergänzen', group: 'Kampagne' },
 	{ id: 'karte', label: 'Echsen-Karte', hint: 'Karte mit nummerierten Markierungen', group: 'Kampagne' },
 	{ id: 'quellen', label: 'Quellenverzeichnis', hint: 'Alle Originale mit Bewertung', group: 'Archiv' }
 ];

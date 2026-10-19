@@ -8,6 +8,8 @@ import {
 	Flag,
 	Globe,
 	Map as MapIcon,
+	Puzzle,
+	Hand,
 	Library,
 	Scale,
 	Printer
@@ -29,8 +31,10 @@ export const NAV = [
 		items: [
 			{ href: '/journal', label: 'Journal', icon: NotebookPen, key: '6' },
 			{ href: '/quests', label: 'Quests', icon: Flag, key: '7' },
+			{ href: '/raetsel', label: 'Rätselwand', icon: Puzzle, key: '' },
 			{ href: '/welt', label: 'Welt', icon: Globe, key: '8' },
-			{ href: '/karte', label: 'Karte', icon: MapIcon, key: '9' }
+			{ href: '/karte', label: 'Karte', icon: MapIcon, key: '9' },
+			{ href: '/netzwerk', label: 'Netzwerk', icon: Hand, key: '' }
 		]
 	},
 	{

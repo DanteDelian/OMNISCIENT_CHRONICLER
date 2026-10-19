@@ -5,6 +5,7 @@
  * - jeder [[Verweis]] und jeder Personen-/Ortsname löst sich auf
  * - Quellen-IDs (sources.json) und Quest-IDs existieren
  * - Stammbäume (stammbaum.json) verbinden nur vorhandene Personen
+ * - Fragen (fragen.json) und Netzwerk (netzwerk.json) sind vollständig
  * Aufruf: npm run check:data   (Exit-Code 1 bei Fehlern)
  */
 import fs from 'node:fs';
@@ -52,6 +53,8 @@ const d = {
 	map: json('map.json') ?? { pins: [] },
 	sources: json('sources.json') ?? [],
 	trees: json('stammbaum.json')?.trees ?? [],
+	fragen: json('fragen.json') ?? [],
+	netzwerk: { roles: [], agents: [], ...(json('netzwerk.json') ?? {}) },
 	docs: mdDir('docs', (slug, data, body) => ({ slug, title: String(data.title ?? slug), subtitle: data.subtitle, aliases: asArray(data.aliases), order: data.order ?? 99, group: data.group ?? '', body })),
 	world: mdDir('world', (slug, data, body) => ({
 		slug,
@@ -142,6 +145,36 @@ for (const t of d.trees) {
 	links(where, t.note);
 }
 
+// Fragen an den DM, an den Tisch und an dich
+const fragenIds = new Set();
+for (const q of d.fragen) {
+	const where = `fragen.json ${q.id ?? '?'}`;
+	for (const k of ['id', 'to', 'topic', 'question', 'status']) if (!q[k]) errors.push(`${where}: ohne „${k}“`);
+	if (fragenIds.has(q.id)) errors.push(`${where}: doppelte ID`);
+	fragenIds.add(q.id);
+	if (!['dm', 'tisch', 'dich'].includes(q.to)) errors.push(`${where}: to muss dm, tisch oder dich sein`);
+	if (!['offen', 'geklaert'].includes(q.status)) errors.push(`${where}: status muss offen oder geklaert sein`);
+	if (q.status === 'geklaert' && !q.answer) warnings.push(`${where}: geklärt, aber ohne Antwort`);
+	for (const l of q.links ?? []) ref(where, l);
+	links(where, `${q.question ?? ''} ${q.answer ?? ''}`);
+}
+
+// Netzwerk der Unsichtbaren Hand
+const roleIds = new Set(d.netzwerk.roles.map((r) => r.id));
+for (const r of d.netzwerk.roles) links(`netzwerk.json Rolle ${r.id}`, `${r.task} ${r.where} ${r.cost}`);
+const agentIds = new Set();
+for (const a of d.netzwerk.agents) {
+	const where = `netzwerk.json ${a.id ?? '?'}`;
+	if (!a.id || !a.name) errors.push(`${where}: ohne id oder name`);
+	if (agentIds.has(a.id)) errors.push(`${where}: doppelte ID`);
+	agentIds.add(a.id);
+	if (!roleIds.has(a.role)) errors.push(`${where}: Rolle „${a.role}“ gibt es nicht`);
+	if (!['kandidat', 'aktiv', 'ruhend', 'verloren'].includes(a.status)) errors.push(`${where}: unbekannter Status „${a.status}“`);
+	if (!(a.loyalty >= 0 && a.loyalty <= 5)) errors.push(`${where}: Treue muss zwischen 0 und 5 liegen`);
+	if (a.ref) ref(where, a.ref);
+	links(where, `${a.knows ?? ''} ${a.notes ?? ''}`);
+}
+
 // Zustand plausibel?
 const s = d.state;
 if (s && d.character) {
@@ -153,7 +186,7 @@ if (s && d.character) {
 const prepared = d.spells.filter((x) => x.status === 'buch' && x.level > 0 && x.prepared).length;
 if (prepared > d.character.spellcasting.preparedMax) warnings.push(`spells.json: ${prepared} vorbereitet, erlaubt sind ${d.character.spellcasting.preparedMax}`);
 
-console.log(`Index: ${index.length} Einträge · Zauber ${d.spells.length} · Welt ${d.world.length} · Dokumente ${d.docs.length} · Journal ${d.journal.length} · Quests ${d.quests.length} · Stammbäume ${d.trees.length}`);
+console.log(`Index: ${index.length} Einträge · Zauber ${d.spells.length} · Welt ${d.world.length} · Dokumente ${d.docs.length} · Journal ${d.journal.length} · Quests ${d.quests.length} · Stammbäume ${d.trees.length} · Fragen ${d.fragen.length} · Netzwerk ${d.netzwerk.agents.length}`);
 for (const w of warnings) console.log(`  Hinweis: ${w}`);
 for (const e of errors) console.log(`  FEHLER:  ${e}`);
 console.log(errors.length ? `\n${errors.length} Fehler gefunden.` : '\nAlles konsistent.');

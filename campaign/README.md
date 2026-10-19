@@ -17,6 +17,8 @@ Alles, was das Grimoire anzeigt, steht in diesen Dateien. Ändert man sie (von H
 | `map.json` | Kartenbild und Markierungen | ja |
 | `sources.json` | Originale in Google Drive mit Link, Stand und Bewertung | nein |
 | `stammbaum.json` | Stammbäume (Haus Lhaaz), erscheinen auf der Welt-Seite des Hauses, bei jeder Person darin und im Druck | nein |
+| `fragen.json` | Offene und geklärte Fragen an den DM, an den Tisch und an dich (Seite Rätselwand) | ja |
+| `netzwerk.json` | Die Unsichtbare Hand: Rollen und Leute mit Treue, Lohn und Wissen (Seite Netzwerk) | ja |
 | `docs/*.md` | Archiv-Dokumente (Prüfbericht, Lage, Taktik, DM-Nachrichten, Backstory, Alchemie, Einkauf) | nein |
 | `world/*.md` | Personen, Fraktionen, Orte | nein |
 | `assets/` | Bilder, abrufbar unter `/api/assets/<datei>` | nein |
@@ -71,6 +73,7 @@ Pflicht: `id, name, en, level (0 = Zaubertrick), school, status, time, economy, 
 - `economy`: `aktion | bonus | reaktion | minute | stunde` (steuert die Aktionsliste am Spieltisch)
 - optional: `prepared, ritual, concentration, trigger, target, area, attack, save, damage, rolls[{label, expr}], source,
   valerius, higher, tips[], uses[], rulings[], synergies[{with, text}], conflicts[{with, text}], corrections[{doc, text}], note, docs[]`
+- `card`: Kurzregeln für die Zauberkarte im Druck · `pick: true`: Empfehlung des Stufe-6-Planers (steht bei den Vorschlägen vorn)
 - Würfelausdrücke in `rolls`: `2d8`, `1d20+4` (Anzeige wird automatisch zu 2W8).
 
 ### quests.json
@@ -88,6 +91,19 @@ Pflicht: `id, name, en, level (0 = Zaubertrick), school, status, time, economy, 
   `theorie` (gestrichelt: offen oder vermutet) und `feindschaft` (roter Bogen mit Pfeil). Außer `eltern` verbinden alle
   Arten genau zwei Personen derselben Generation. `uncertain: true` zeichnet jede Linie gestrichelt, etwa eine vermutete Feindschaft.
 - Nur Belegtes durchziehen. Vermutungen als `theorie` und im `note` als *Theorie* kennzeichnen.
+
+### fragen.json
+`[{id, to, topic, question, status, answer, answered, links[]}]` mit `to` aus `dm | tisch | dich` und `status` aus
+`offen | geklaert`. `answered` ist das Datum der Antwort (`JJJJ-MM-TT`). Die App schreibt die Datei, wenn du am Tisch abhakst.
+
+### netzwerk.json
+`{roles[{id, label, task, where, cost}], agents[{id, name, role, status, loyalty, place, wage, knows, ref, since, notes}]}`.
+`role` ist die ID einer Rolle, `status` aus `kandidat | aktiv | ruhend | verloren`, `loyalty` 0 bis 5, `wage` in Silber pro Tag,
+`knows` hält fest, was die Person über dich weiß, `ref` verweist auf einen Welt-Eintrag.
+
+### Rätselwand (automatisch)
+Die Seite sammelt alles, was in Texten als `*Theorie:*`, `*Theorie (Datum):*`, Liste unter `*Theorien:*` oder `**Offen:**`
+markiert ist, dazu die Widersprüche im Journal und die Quests der Art „Mysterium“.
 
 ### sources.json
 `id, title, url, kind (doc | bild), modified, status (kanon | referenz | teilweise | veraltet | gemini), group, local, summary`.

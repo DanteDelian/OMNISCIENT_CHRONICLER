@@ -28,6 +28,13 @@ Schema der Daten: **`campaign/README.md`**. Technik: **`docs/ARCHITECTURE.md`**.
   Patrick will sie nur als Vorschläge, nicht als Fakten.
 - Drive-Dateien **nie ohne Rückfrage** ändern.
 
+### Fragen, Rätselwand und Netzwerk
+- Offene Fragen an den DM, an den Tisch und an Patrick stehen in `fragen.json` (Seite **Rätselwand**). Patrick hakt sie
+  am Tisch ab und trägt Antworten ein. Geklärte Antworten in die Einträge einarbeiten und im Prüfbericht unter
+  „Geklärt am …“ festhalten. Neue offene Punkte als Frage anlegen, nicht nur im Fließtext.
+- Theorien im Text immer als `*Theorie:*`, offene Punkte als `**Offen:**` markieren: Die Rätselwand sammelt sie automatisch.
+- Leute der Unsichtbaren Hand stehen in `netzwerk.json` (Rollen aus dem Aufbauplan, Agenten mit Treue und Wissen).
+
 ### Stufenaufstieg
 `character.json` (Stufe, Übungsbonus, TP-Maximum: Patrick fragen, ob gewürfelt wird, Plätze, neue Merkmale),
 neue Zauber in `spells.json` mit `status: "buch"`, Journal-Eintrag mit `level`. Ein Magier bekommt pro Stufe

@@ -1,0 +1,47 @@
+{
+  "roles": [
+    {
+      "id": "lehrling",
+      "label": "Lehrling",
+      "task": "Laborarbeit, Botengänge, Alchemie",
+      "where": "über die [[Kontakte der Festung|Kräuterfrau]], wie schon geplant",
+      "cost": "ungelernt 2 SM pro Tag"
+    },
+    {
+      "id": "augen",
+      "label": "Augen und Ohren",
+      "task": "Gerüchte sammeln",
+      "where": "Gemeinschaftsquartier, Hafen, Echsenlager vor dem unteren Ring",
+      "cost": "2 SM pro Tag oder Gefälligkeiten"
+    },
+    {
+      "id": "kurier",
+      "label": "Kurier",
+      "task": "Nachrichten zwischen den Ringen und nach Freistadt",
+      "where": "Bootsleute, Soldaten",
+      "cost": "Bote: 2 KM pro Meile"
+    },
+    {
+      "id": "haendler",
+      "label": "Händler",
+      "task": "[[Saladin]]s Laden führen",
+      "where": "in [[Die südliche Freistadt|Freistadt]] anwerben",
+      "cost": "gelernt 2 GM pro Tag"
+    },
+    {
+      "id": "muskeln",
+      "label": "Muskeln",
+      "task": "Schutz und Arbeit",
+      "where": "Untote sofort, [[Die Orcs|Orcs]] nach dem Krieg gegen die Riesen",
+      "cost": "Untote: nur Zauberplätze"
+    },
+    {
+      "id": "spion",
+      "label": "Spion",
+      "task": "Pläne der [[Sorcerer Society]]",
+      "where": "Society-Uniformen und *Selbstverkleidung*",
+      "cost": "hohes Risiko"
+    }
+  ],
+  "agents": []
+}

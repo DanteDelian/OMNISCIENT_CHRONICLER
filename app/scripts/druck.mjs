@@ -34,7 +34,10 @@ const JOBS = [
 	{ file: '09-welt.pdf', teil: 'welt' },
 	{ file: '10-karte.pdf', teil: 'karte' },
 	{ file: '11-archiv.pdf', teil: 'archiv' },
-	{ file: '12-zauberkarten.pdf', teil: 'zauberkarten' }
+	{ file: '12-zauberkarten.pdf', teil: 'zauberkarten' },
+	{ file: '13-fragen-an-den-dm.pdf', teil: 'fragen' },
+	{ file: '14-raetselwand.pdf', teil: 'raetsel' },
+	{ file: '15-netzwerk.pdf', teil: 'netzwerk' }
 ];
 
 // ---------- Argumente und .env ----------

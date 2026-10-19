@@ -18,6 +18,9 @@
 	import PMap from '$lib/components/print/PMap.svelte';
 	import PArchiveDoc from '$lib/components/print/PArchiveDoc.svelte';
 	import PSources from '$lib/components/print/PSources.svelte';
+	import PQuestions from '$lib/components/print/PQuestions.svelte';
+	import PMysteries from '$lib/components/print/PMysteries.svelte';
+	import PNetwork from '$lib/components/print/PNetwork.svelte';
 
 	const docs = $derived([...campaign.data.docs].sort((a, b) => a.order - b.order));
 	const parts = $derived<PrintPart[]>([
@@ -37,8 +40,8 @@
 
 	const PRESETS: { label: string; ids: string[] | null }[] = [
 		{ label: 'Alles', ids: null },
-		{ label: 'Für den Spieltisch', ids: ['deckblatt', 'bogen', 'spielbogen', 'zauber', 'zauberkarten', 'gefolge', 'regeln'] },
-		{ label: 'Kampagne', ids: ['quests', 'journal', 'welt', 'karte'] },
+		{ label: 'Für den Spieltisch', ids: ['deckblatt', 'bogen', 'spielbogen', 'zauber', 'zauberkarten', 'gefolge', 'regeln', 'fragen'] },
+		{ label: 'Kampagne', ids: ['quests', 'raetsel', 'journal', 'welt', 'netzwerk', 'karte'] },
 		{ label: 'Archiv', ids: ['archiv'] },
 		{ label: 'Nichts', ids: [] }
 	];
@@ -100,6 +103,12 @@
 			<PRetinue />
 		{:else if p.id === 'regeln'}
 			<PRules />
+		{:else if p.id === 'fragen'}
+			<PQuestions />
+		{:else if p.id === 'raetsel'}
+			<PMysteries />
+		{:else if p.id === 'netzwerk'}
+			<PNetwork />
 		{:else if p.id === 'inventar'}
 			<PInventory />
 		{:else if p.id === 'quests'}

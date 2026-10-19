@@ -900,3 +900,45 @@ html:has(.druck) body {
 	--tree-line: #8b879a;
 	--tree-hostile: var(--p-blood);
 }
+
+/* ---------- Fragen an den DM ---------- */
+.druck .question {
+	margin-bottom: 3.4mm;
+}
+.druck .q-head {
+	display: flex;
+	align-items: baseline;
+	gap: 2mm;
+	font-size: 9.6pt;
+}
+.druck .q-text {
+	margin: 0.4mm 0 0 5.4mm;
+	line-height: 1.4;
+}
+.druck .q-lines {
+	height: 14mm;
+	margin-left: 5.4mm;
+}
+
+/* ---------- Rätselwand ---------- */
+.druck .clue-group {
+	margin-bottom: 3mm;
+}
+.druck .clue {
+	margin: 0.6mm 0 0;
+	line-height: 1.4;
+}
+.druck .clue .tag {
+	font-size: 6.2pt;
+	font-weight: 600;
+	margin-right: 0.8mm;
+	vertical-align: 0.2mm;
+}
+
+/* ---------- Netzwerk ---------- */
+.druck table.people tr.blank td {
+	height: 7.2mm;
+}
+.druck .nowrap {
+	white-space: nowrap;
+}

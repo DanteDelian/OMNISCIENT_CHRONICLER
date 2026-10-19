@@ -49,7 +49,8 @@ const KIND_ORDER: Record<string, number> = {
 	Gegenstand: 8,
 	Dokument: 9,
 	Journal: 10,
-	Seite: 11
+	Seite: 11,
+	Agent: 12
 };
 
 export function kindRank(kind: string): number {
@@ -116,11 +117,19 @@ export function buildIndex(d: IndexInput): RefEntry[] {
 	for (const j of d.journal) {
 		push({ key: `journal:${j.id}`, title: j.title, kind: 'Journal', summary: j.summary ?? '', href: `/journal#${j.id}`, names: [j.title], meta: j.dateLabel });
 	}
+	for (const a of d.netzwerk?.agents ?? []) {
+		// Leute mit Welt-Eintrag verweisen dorthin.
+		if (a.ref) continue;
+		const role = d.netzwerk.roles.find((r) => r.id === a.role)?.label ?? a.role;
+		push({ key: `agent:${a.id}`, title: a.name, kind: 'Agent', summary: [role, a.place].filter(Boolean).join(' · '), href: `/netzwerk#${a.id}`, names: [a.name] });
+	}
 	// Feste Seiten
 	push({ key: 'page:karte', title: 'Echsen-Karte', kind: 'Seite', summary: d.map.note, href: '/karte', names: ['Echsen-Karte', 'Wüstenkarte', 'Karte', 'Echsenkarte'] });
 	push({ key: 'page:zauber', title: 'Zauberbuch', kind: 'Seite', summary: 'Alle Zauber mit vollständigen Regeln', href: '/zauber', names: ['Zauberbuch'] });
 	push({ key: 'page:gefolge', title: 'Gefolge', kind: 'Seite', summary: 'Vertrauter, Diener, Untote, Gefährtin', href: '/gefolge', names: ['Gefolge', 'Vertraute und Diener', 'Vertraute & Diener'] });
 	push({ key: 'page:regeln', title: 'Regeln', kind: 'Seite', summary: 'Zustände, Aktionen, Konzentration, Rasten', href: '/regeln', names: ['Regeln'] });
+	push({ key: 'page:raetsel', title: 'Rätselwand', kind: 'Seite', summary: 'Theorien, offene Fragen, Widersprüche und Mysterien', href: '/raetsel', names: ['Rätselwand', 'Offene Fragen', 'Fragen an den DM'] });
+	push({ key: 'page:netzwerk', title: 'Netzwerk', kind: 'Seite', summary: 'Die Leute der Unsichtbaren Hand', href: '/netzwerk', names: ['Netzwerk', 'Netzwerk der Hand'] });
 	return out;
 }
 

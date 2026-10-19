@@ -54,7 +54,7 @@
 	{/if}
 	{#if sp.why}
 		<div class="for-val">
-			<div class="label">Warum dieser Zauber{sp.slot ? ` · passt in ${sp.slot}` : ''}</div>
+			<div class="label">{sp.pick ? 'Empfehlung · ' : ''}Warum dieser Zauber{sp.slot ? ` · passt in ${sp.slot}` : ''}</div>
 			<PMd src={sp.why} />
 		</div>
 	{/if}
