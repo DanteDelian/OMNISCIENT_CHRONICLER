@@ -1,0 +1,5 @@
+# Einheitliche Zeilenenden: LF im Repository und beim Auschecken.
+# Windows-Batchdateien brauchen CRLF.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
