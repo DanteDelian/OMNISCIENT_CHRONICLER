@@ -134,6 +134,8 @@ export interface Spell {
 	corrections?: { doc: string; text: string }[];
 	note?: string;
 	docs?: string[];
+	/** Kurzregeln für die Zauberkarte im Druck (Volltext steht in text) */
+	card?: string;
 }
 
 export interface StatTrait {
@@ -348,7 +350,40 @@ export interface Backlink {
 	href: string;
 }
 
+/** Stammbaum (campaign/stammbaum.json): Personen im Raster, Beziehungen als Linien. */
+export interface TreeNode {
+	id: string;
+	label: string;
+	/** Name eines Welt-Eintrags, auf den der Kasten verlinkt */
+	ref?: string;
+	sub?: string;
+	/** Spalte (auch halbe) und Zeile (Generation) */
+	x: number;
+	y: number;
+	tone?: WorldEntry['tone'];
+	uncertain?: boolean;
+}
+
+export interface TreeEdge {
+	/** eltern: from = Eltern, to = Kinder · geschwister/ehe/theorie: zwei Kästen · feindschaft: Bogen mit Pfeil */
+	kind: 'eltern' | 'geschwister' | 'ehe' | 'theorie' | 'feindschaft';
+	from: string[];
+	to: string[];
+	label?: string;
+}
+
+export interface FamilyTree {
+	id: string;
+	/** Slug des Welt-Eintrags, auf dessen Seite der Baum erscheint */
+	world: string;
+	title: string;
+	note?: string;
+	nodes: TreeNode[];
+	edges: TreeEdge[];
+}
+
 export interface CampaignData {
+	trees: FamilyTree[];
 	character: Character;
 	state: PlayState;
 	spells: Spell[];

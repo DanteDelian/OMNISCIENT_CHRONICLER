@@ -16,6 +16,7 @@ Alles, was das Grimoire anzeigt, steht in diesen Dateien. Ändert man sie (von H
 | `journal.json` | Chronik: datierte Einträge (Sessions, Nachrichten, Planung, Notizen) | ja |
 | `map.json` | Kartenbild und Markierungen | ja |
 | `sources.json` | Originale in Google Drive mit Link, Stand und Bewertung | nein |
+| `stammbaum.json` | Stammbäume (Haus Lhaaz), erscheinen auf der Welt-Seite des Hauses, bei jeder Person darin und im Druck | nein |
 | `docs/*.md` | Archiv-Dokumente (Prüfbericht, Lage, Taktik, DM-Nachrichten, Backstory, Alchemie, Einkauf) | nein |
 | `world/*.md` | Personen, Fraktionen, Orte | nein |
 | `assets/` | Bilder, abrufbar unter `/api/assets/<datei>` | nein |
@@ -78,6 +79,15 @@ Pflicht: `id, name, en, level (0 = Zaubertrick), school, status, time, economy, 
 ### inventory.json
 `currency {gm, sm, km}`, `items[{id, name, group, qty, desc, note, magic, heal}]` mit `group` aus
 `koerper | verbrauch | beute | plot | gelagert | verloren`, dazu `wishlist[{id, name, price, priceText, priority, phase, why, done}]`.
+
+### stammbaum.json
+`trees[{id, world, title, note, nodes[], edges[]}]`. `world` ist der Slug des Welt-Eintrags, auf dessen Seite der Baum steht.
+- `nodes[{id, label, ref, sub, x, y, tone, uncertain}]`: `x` ist die Spalte (halbe Werte erlaubt), `y` die Generation (0 oben).
+  `ref` verlinkt auf einen Welt-Eintrag, `sub` trennt Zeilen mit „ · “ (je höchstens etwa 22 Zeichen, längere werden schmaler gesetzt), `uncertain` zeichnet den Kasten gestrichelt.
+- `edges[{kind, from[], to[], label}]` mit `kind` aus `eltern` (from = Eltern, to = Kinder), `geschwister`, `ehe`,
+  `theorie` (gestrichelt: offen oder vermutet) und `feindschaft` (roter Bogen mit Pfeil). Außer `eltern` verbinden alle
+  Arten genau zwei Personen derselben Generation.
+- Nur Belegtes durchziehen. Vermutungen als `theorie` und im `note` als *Theorie* kennzeichnen.
 
 ### sources.json
 `id, title, url, kind (doc | bild), modified, status (kanon | referenz | teilweise | veraltet | gemini), group, local, summary`.

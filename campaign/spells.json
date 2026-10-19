@@ -52,7 +52,8 @@
     "docs": [
       "zauber-von-val",
       "charakterbogen-alt"
-    ]
+    ],
+    "card": "Eine Kreatur in Reichweite, die du siehst, macht einen **WE-Rettungswurf**. Bei einem Fehlschlag **2W8 nekrotisch**, ist sie schon verletzt **2W12**. Bei Erfolg kein Schaden."
   },
   {
     "id": "geringfuegige-illusion",
@@ -102,7 +103,8 @@
     "docs": [
       "zauber-von-val",
       "charakterbogen-alt"
-    ]
+    ],
+    "card": "Ein **Ton** (Flüstern bis Schrei, dauerhaft oder in Abständen) **oder das Bild** eines Gegenstands bis 1,5-m-Würfel, 1 Minute lang. Das Bild macht keinen Ton, kein Licht, keinen Geruch. Wer es berührt, durchschaut es. Mit einer Aktion und **IN (Nachforschung) gegen deinen SG** erkennt man die Illusion."
   },
   {
     "id": "taschenspielerei",
@@ -144,7 +146,8 @@
       "zauber-von-val",
       "charakterbogen-alt",
       "alchemie"
-    ]
+    ],
+    "card": "Ein kleiner Trick nach Wahl: harmloser Sinneseffekt (Funken, Windhauch, Musik, Geruch) · Kerze, Fackel oder Lagerfeuer an oder aus · Gegenstand bis 30 Liter säubern oder beschmutzen · bis 30 Liter Material kühlen, wärmen oder würzen (1 Std.) · Farbe, Zeichen oder Symbol (1 Std.) · Tand oder Trugbild in der Hand bis zum Ende deines nächsten Zuges. Bis zu **3 Effekte** gleichzeitig."
   },
   {
     "id": "botschaft",
@@ -186,7 +189,8 @@
       "zauber-von-val",
       "charakterbogen-alt",
       "kampagnen-log"
-    ]
+    ],
+    "card": "Du zeigst auf eine Kreatur und **flüsterst eine Nachricht**. Nur sie hört sie und kann **flüsternd antworten**, nur du hörst die Antwort. Um Ecken und durch Hindernisse nur, wenn du das Ziel kennst und weißt, dass es dahinter ist. Blockiert von Stille, 30 cm Stein, 2,5 cm Metall, Blei oder 90 cm Holz oder Erde."
   },
   {
     "id": "vertrauten-finden",
@@ -256,7 +260,8 @@
       "charakterbogen-alt",
       "kampagnen-log"
     ],
-    "summary": "Geist in Tiergestalt. Späher, Helfer, überbringt Berührungszauber."
+    "summary": "Geist in Tiergestalt. Späher, Helfer, überbringt Berührungszauber.",
+    "card": "**Ritual.** Ein Geist in Tiergestalt dient dir. Eigene Initiative, **kann nicht angreifen**. Telepathie bis 30 m. Per **Aktion** nimmst du durch seine Sinne wahr (selbst dann blind und taub). Per Aktion in die Taschendimension und zurück (9 m). Überbringt deine **Berührungszauber** mit seiner Reaktion. Bei 0 TP verschwindet er bis zum nächsten Wirken."
   },
   {
     "id": "unsichtbarer-diener",
@@ -316,7 +321,8 @@
       "beschworene-wesen",
       "alchemie",
       "charakterbogen-alt"
-    ]
+    ],
+    "card": "**Ritual.** Eine unsichtbare, formlose Kraft: RK 10, 1 TP, ST 2, kann nicht angreifen. **Bonusaktion:** Befehl, sie bewegt sich bis 4,5 m und hantiert mit einem Gegenstand (holen, putzen, flicken, Feuer schüren, servieren). Endet bei 0 TP oder wenn sie mehr als 18 m von dir entfernt ist."
   },
   {
     "id": "schutz-vor-gut-und-boese",
@@ -360,7 +366,8 @@
     "docs": [
       "zauber-von-val",
       "charakterbogen-alt"
-    ]
+    ],
+    "card": "Eine bereitwillige Kreatur, die du berührst, ist geschützt vor **Aberrationen, Himmlischen, Elementaren, Feenwesen, Unholden und Untoten**: Ihre Angriffe haben **Nachteil**, und sie können das Ziel **nicht bezaubern, verängstigen oder besetzen**. Ist es schon betroffen, hat es Vorteil auf neue Rettungswürfe dagegen. Material wird verbraucht."
   },
   {
     "id": "magie-entdecken",
@@ -401,7 +408,8 @@
       "zauber-von-val",
       "kampagnen-log",
       "charakterbogen-alt"
-    ]
+    ],
+    "card": "**Ritual.** Du spürst Magie im Umkreis von 9 m. Per Aktion siehst du eine schwache Aura um sichtbare magische Kreaturen oder Gegenstände und erfährst ihre **Schule**. Durchdringt die meisten Barrieren, aber nicht 30 cm Stein, 2,5 cm Metall, Blei oder 90 cm Holz oder Erde."
   },
   {
     "id": "eismesser",
@@ -454,7 +462,8 @@
     "docs": [
       "zauber-von-val",
       "charakterbogen-alt"
-    ]
+    ],
+    "card": "**Fernkampf-Zauberangriff** auf ein Ziel: Treffer **1W10 Stich**. Danach explodiert der Splitter, ob Treffer oder nicht: Das Ziel und alle in 1,5 m machen einen **GE-Rettungswurf**, sonst **2W6 Kälte**. Höhere Grade: +1W6 Kälte pro Grad."
   },
   {
     "id": "schild",
@@ -489,7 +498,8 @@
     "docs": [
       "zauber-von-val",
       "charakterbogen-alt"
-    ]
+    ],
+    "card": "**Reaktion**, wenn du von einem Angriff getroffen wirst oder Ziel von *Magisches Geschoss* bist. Du erhältst **+5 RK** bis zum Beginn deines nächsten Zuges, auch gegen den auslösenden Angriff, und nimmst keinen Schaden durch *Magisches Geschoss*."
   },
   {
     "id": "netz",
@@ -569,7 +579,8 @@
       "zauber-von-val",
       "kampagnen-log",
       "charakterbogen-alt"
-    ]
+    ],
+    "card": "Klebrige Netze füllen einen **6-m-Würfel**: schwieriges Gelände, leicht verschleiert. Sie brauchen Halt zwischen zwei festen Flächen oder liegen 1,5 m hoch auf dem Boden, sonst fallen sie zusammen. Wer seinen Zug darin beginnt oder es betritt, macht einen **GE-Rettungswurf**, sonst **festgesetzt**. Befreien: Aktion, **ST-Wurf gegen deinen SG**. Feuer verbrennt das Netz (2W4 Feuer für Kreaturen darin)."
   },
   {
     "id": "sengender-strahl",
@@ -616,7 +627,8 @@
     "docs": [
       "zauber-von-val",
       "charakterbogen-alt"
-    ]
+    ],
+    "card": "**Drei Strahlen**, auf ein oder mehrere Ziele verteilt. Jeder ist ein **Fernkampf-Zauberangriff** und macht bei Treffer **2W6 Feuer**. Höhere Grade: +1 Strahl pro Grad über 2."
   },
   {
     "id": "tote-erwecken",
@@ -693,7 +705,8 @@
       "beschworene-wesen",
       "kampagnen-log",
       "einkaufsliste"
-    ]
+    ],
+    "card": "**Knochen** werden zum **Skelett**, eine **Leiche** zum **Zombie** (nur kleine oder mittelgroße Humanoide). **Bonusaktion:** ein Befehl an alle deine Untoten in 18 m. Ohne Befehl verteidigen sie sich nur. Sie gehorchen **24 Stunden**, dann neu wirken: Ein Wirken erneuert die Kontrolle über **bis zu 4** Untote. Höhere Grade: 2 Untote mehr pro Grad."
   },
   {
     "id": "gegenzauber",
@@ -745,7 +758,8 @@
       "zauber-von-val",
       "kampagnen-log",
       "charakterbogen-alt"
-    ]
+    ],
+    "card": "**Reaktion**, wenn du siehst, wie eine Kreatur in 18 m einen Zauber wirkt. Zauber **bis Grad 3** scheitern automatisch. Bei höheren: **IN-Wurf gegen SG 10 + Grad**, bei Erfolg scheitern sie. Höhere Grade: Zauber bis zum Grad deines Platzes scheitern automatisch."
   },
   {
     "id": "magierruestung",
@@ -929,6 +943,249 @@
     "docs": []
   },
   {
+    "id": "schneesturm",
+    "name": "Schneesturm",
+    "en": "Sleet Storm",
+    "level": 3,
+    "school": "Beschwörung",
+    "status": "vorschlag",
+    "concentration": true,
+    "time": "1 Aktion",
+    "economy": "aktion",
+    "range": "45 m (150 Fuß)",
+    "area": "Zylinder mit 12 m Radius und 6 m Höhe",
+    "components": "V, G, M (eine Prise Staub und ein paar Tropfen Wasser)",
+    "duration": "Konzentration, bis zu 1 Minute",
+    "save": "GE, sonst liegend · KO für Konzentration",
+    "source": "Spielerhandbuch 2014 (engl. S. 276) · SRD 5.1",
+    "summary": "Eisregen in einem riesigen Zylinder: komplett verschleiert, schwieriges Gelände, Kreaturen stürzen, Zauberwirker verlieren die Konzentration.",
+    "text": "Bis der Zauber endet, fallen **gefrierender Regen und Graupel** in einem 6 m hohen **Zylinder mit 12 m Radius** um einen Punkt deiner Wahl in Reichweite. Der Bereich ist **komplett verschleiert**, und offene Flammen darin erlöschen.\n\nDer Boden im Bereich ist mit glattem Eis bedeckt und gilt als **schwieriges Gelände**. Betritt eine Kreatur den Bereich zum ersten Mal in einem Zug oder beginnt sie ihren Zug dort, muss sie einen **Geschicklichkeitsrettungswurf** ablegen. Bei einem Fehlschlag **fällt sie hin**.\n\nBeginnt eine Kreatur ihren Zug im Bereich und **konzentriert sie sich auf einen Zauber**, muss sie einen Konstitutionsrettungswurf gegen deinen Zauberrettungswurf-SG bestehen, sonst **verliert sie die Konzentration**.",
+    "valerius": "SG **15** · 45 m · 12 m Radius · Konzentration. Eis- und Hügelriesen stürzen zu 75 %, Steinriesen zu 45 %, Orcs zu 65 %.",
+    "why": "**Der Beschwörer-Zauber für die Belagerung:** Riesen stürzen und kommen im Eis kaum voran, denn Aufstehen kostet die halbe Bewegung, dazu kommt das schwierige Gelände. Liegende Riesen bekommen von Aella und Fridolin Angriffe mit Vorteil. Zauberwirker darin verlieren leicht die Konzentration, ideal gegen den Orc-Schamanen und Society-Magier. **Als Beschwörung** lädt er ab Stufe 6 *Gutartiges Versetzen* auf, kostet beim Abschreiben die Hälfte, und ab Stufe 10 kann Schaden deine Konzentration darauf nicht mehr brechen.",
+    "slot": "Stufe 6 (einer der 2 neuen Zauber bis Grad 3)",
+    "tips": [
+      "**Eigene Leute raus:** Wer drin steht, sieht nichts und rutscht, auch Aella. Leg den Sturm auf die Riesen, nicht auf eure Linie.",
+      "**Fernkampf leidet:** Im Sturm sieht niemand, und auf liegende Ziele haben Fernkampfangriffe Nachteil. Deine Skelette schießen besser auf Gegner außerhalb.",
+      "**Löscht Feuer:** Fackeln, Brandpfeile und brennende Holzstapel gehen aus."
+    ],
+    "docs": []
+  },
+  {
+    "id": "person-festhalten",
+    "name": "Person festhalten",
+    "en": "Hold Person",
+    "level": 2,
+    "school": "Verzauberung",
+    "status": "vorschlag",
+    "concentration": true,
+    "time": "1 Aktion",
+    "economy": "aktion",
+    "range": "18 m (60 Fuß)",
+    "target": "Ein Humanoider, den du sehen kannst",
+    "components": "V, G, M (ein kleines, gerades Stück Eisen)",
+    "duration": "Konzentration, bis zu 1 Minute",
+    "save": "WE, Wiederholung am Ende jedes Zuges",
+    "source": "Spielerhandbuch 2014 (engl. S. 251) · SRD 5.1",
+    "summary": "Ein Humanoider ist bei misslungenem WE-Rettungswurf gelähmt. Treffer aus 1,5 m sind automatisch kritisch.",
+    "text": "Wähle einen **Humanoiden** in Reichweite, den du sehen kannst. Das Ziel muss einen **Weisheitsrettungswurf** bestehen, sonst ist es für die Wirkungsdauer **gelähmt**. Am Ende jedes seiner Züge kann das Ziel einen weiteren Weisheitsrettungswurf ablegen. Bei einem Erfolg endet der Zauber für es.\n\n**Gelähmt:** Die Kreatur ist kampfunfähig, kann sich weder bewegen noch sprechen und scheitert automatisch an Stärke- und Geschicklichkeitsrettungswürfen. Angriffe gegen sie haben Vorteil, und **jeder Treffer eines Angreifers innerhalb von 1,5 m ist ein kritischer Treffer**.",
+    "higher": "Wirkst du diesen Zauber mit einem Platz des 3. Grades oder höher, kannst du für jeden Grad über dem zweiten einen weiteren Humanoiden als Ziel wählen. Die Ziele dürfen beim Wirken höchstens 9 m voneinander entfernt sein.",
+    "valerius": "SG **15** · 18 m · mit Grad 3 zwei Ziele · Konzentration. Orcs bleiben zu 70 % gelähmt stehen, Society-Magier zu etwa 50 %. **Wirkt nicht gegen Riesen:** Sie sind Riesen, keine Humanoiden.",
+    "why": "**Mit zwei Frontkämpfern verheerend:** Jeder Treffer von Fridolin oder Aella aus 1,5 m ist automatisch kritisch, beim Paladin samt doppelter Smite-Würfel. Und du **fängst Gegner lebend**: den Orc-Schamanen, einen Society-Magier, den Dieb deiner Botschaft-Rolle. Passt zu deinem Plan, Orcs zu gewinnen statt zu töten.",
+    "slot": "Stufe 6 (geht auch als Grad 2) oder einer der freien Einträge bis Grad 2",
+    "tips": [
+      "**Gefesselt statt getötet:** Ein Gelähmter lässt sich in Ruhe fesseln. Danach in Twees Hütte verhören.",
+      "**Nur Humanoide:** Orcs, Menschen, Elfen, Echsenmenschen ja. Riesen, Bestien und Untote nein."
+    ],
+    "docs": []
+  },
+  {
+    "id": "donnerschritt",
+    "name": "Donnerschritt",
+    "en": "Thunder Step",
+    "level": 3,
+    "school": "Beschwörung",
+    "status": "vorschlag",
+    "time": "1 Aktion",
+    "economy": "aktion",
+    "range": "27 m (90 Fuß)",
+    "components": "V",
+    "duration": "Unmittelbar",
+    "save": "KO, halber Schaden bei Erfolg",
+    "damage": "3W10 Schall am Ausgangspunkt",
+    "rolls": [
+      {
+        "label": "Schall",
+        "expr": "3d10"
+      }
+    ],
+    "source": "Xanathars Ratgeber für alles (engl. S. 168), in eigenen Worten",
+    "summary": "Teleport bis 27 m, auf Wunsch mit einem Gefährten. Wo du verschwindest, knallt es: 3W10 Schall im Umkreis von 3 m.",
+    "text": "Du teleportierst dich an einen freien Ort in Reichweite, den du sehen kannst. Im Moment deines Verschwindens kracht ein **Donnerschlag**: Jede Kreatur bis **3 m** um den Ort, den du verlassen hast, macht einen **Konstitutionsrettungswurf**. Bei einem Fehlschlag erleidet sie **3W10 Schallschaden**, bei einem Erfolg die Hälfte. Der Knall ist bis 90 m weit zu hören.\n\nGegenstände nimmst du mit, solange sie deine Traglast nicht übersteigen. Außerdem kannst du **eine bereitwillige Kreatur** deiner Größe oder kleiner mitnehmen, samt ihrer Ausrüstung bis zu ihrer Traglast. Sie muss beim Wirken höchstens 1,5 m von dir entfernt sein und erscheint auf einem freien Platz höchstens 1,5 m neben deinem Ziel. Gibt es dort keinen freien Platz, bleibt sie zurück.",
+    "higher": "Wirkst du diesen Zauber mit einem Platz des 4. Grades oder höher, steigt der Schaden um 1W10 für jeden Grad über dem dritten.",
+    "valerius": "27 m Teleport · 3W10 Schall (Ø 16,5), KO-Rettung SG 15 · nimmt Aella mit · nur verbal, also auch gefesselt wirkbar.",
+    "why": "**Die Flucht aus der Reichweite eines Riesen**, sogar mit Aella. Dein *Sternenschritt* reicht nur 9 m und geht 1× pro Rast. **Beschwörung:** Als Beschwörer schreibst du ihn zum halben Preis ab, und ab Stufe 6 lädt er *Gutartiges Versetzen* wieder auf.",
+    "slot": "Stufe 6 (einer der 2 neuen Zauber bis Grad 3)",
+    "tips": [
+      "**Schaden ist Nebensache:** Riesen haben hohe KO-Rettungswürfe. Zähl auf den Teleport, nicht auf den Knall.",
+      "**Aus Xanathars Ratgeber,** wie deine *Totenglocke* und dein *Eismesser*. Das Buch ist an eurem Tisch also im Spiel."
+    ],
+    "docs": []
+  },
+  {
+    "id": "nebelschritt",
+    "name": "Nebelschritt",
+    "en": "Misty Step",
+    "level": 2,
+    "school": "Beschwörung",
+    "status": "vorschlag",
+    "time": "1 Bonusaktion",
+    "economy": "bonus",
+    "range": "Selbst",
+    "components": "V",
+    "duration": "Unmittelbar",
+    "source": "Spielerhandbuch 2014 (engl. S. 260) · SRD 5.1",
+    "summary": "Bonusaktion: bis 9 m teleportieren, nur verbal.",
+    "text": "Kurz von silbrigem Nebel umhüllt, **teleportierst du dich bis zu 9 m** an einen freien Ort, den du sehen kannst.",
+    "valerius": "Bonusaktion · 9 m · nur verbal, also auch mit vollen Händen oder gefesselt wirkbar.",
+    "why": "**Dein zweiter Notausgang:** Der DM gibt dir nur einen *Sternenschritt* pro Rast. *Nebelschritt* ist die klassische Flucht des Magiers, als Bonusaktion. Als Beschwörung lädt er ab Stufe 6 *Gutartiges Versetzen* auf und kostet beim Abschreiben nur 50 GM.",
+    "slot": "einer der freien Einträge bis Grad 2 oder Stufe 6",
+    "tips": [
+      "**Bonusaktions-Regel:** Nach *Nebelschritt* darfst du im selben Zug mit deiner Aktion nur noch einen Zaubertrick wirken. *Sternenschritt* hat diese Einschränkung nicht.",
+      "**Nicht verwechseln:** Deine alten Bögen nannten Nebelschritt „immer vorbereitet“. Das war falsch, du hast ihn bisher nicht. Hier ist er ein Vorschlag."
+    ],
+    "docs": []
+  },
+  {
+    "id": "feenwesen-beschwoeren",
+    "name": "Feenwesen beschwören",
+    "en": "Summon Fey",
+    "level": 3,
+    "school": "Beschwörung",
+    "status": "vorschlag",
+    "concentration": true,
+    "time": "1 Aktion",
+    "economy": "aktion",
+    "range": "27 m (90 Fuß)",
+    "components": "V, G, M (eine vergoldete Blume im Wert von mindestens 300 GM)",
+    "duration": "Konzentration, bis zu 1 Stunde",
+    "source": "Tashas Kessel voller Allem und Spielerhandbuch 2024, in eigenen Worten",
+    "summary": "Ein Feengeist kämpft für dich: teleportiert jede Runde, greift an und bezaubert, verwirrt oder trifft härter, je nach Stimmung.",
+    "text": "Du rufst einen **Feengeist** herbei, der auf einem freien Platz in Reichweite erscheint, den du sehen kannst. Beim Wirken wählst du eine Stimmung: **zornig**, **heiter** oder **listig**. Sie bestimmt eine seiner Fähigkeiten. Der Geist verschwindet bei 0 TP oder wenn der Zauber endet.\n\nEr ist dir und deinen Gefährten verbündet. Im Kampf handelt er direkt nach dir. Er gehorcht deinen gesprochenen Befehlen, ohne dass du dafür eine Aktion brauchst. Ohne Befehl weicht er aus und hält sich aus der Gefahr.\n\n**Feengeist** (kleines Feenwesen): RK 12 + Grad des Zaubers · TP 30, plus 10 für jeden Grad über dem dritten · Bewegung 12 m · ST 13, GE 16, KO 14, IN 14, WE 11, CH 16 · immun gegen Bezauberung · Dunkelsicht 18 m · versteht deine Sprachen.\n\n- **Angriffe:** halb so viele wie der Grad des Zaubers, abgerundet. **Kurzschwert:** Nahkampfangriff mit deinem Zauberangriffsbonus, Reichweite 1,5 m, Treffer 1W6 + 3 + Grad des Zaubers Stich plus 1W6 Energie.\n- **Feenschritt (Bonusaktion):** Er teleportiert sich bis zu 9 m an einen freien Ort, den er sieht. Danach je nach Stimmung: *zornig* Vorteil auf seinen nächsten Angriff in diesem Zug, *heiter* eine Kreatur im Umkreis von 3 m muss einen WE-Rettungswurf gegen deinen SG bestehen oder ist 1 Minute lang von dir und ihm bezaubert (endet bei Schaden), *listig* magische Dunkelheit in einem 3-m-Würfel neben ihm bis zum Ende seines nächsten Zuges.",
+    "higher": "Mit einem Platz höheren Grades steigen RK, Trefferpunkte, Schaden und die Zahl der Angriffe, wie im Wertblock angegeben.",
+    "valerius": "Grad 3: RK 15, 30 TP, Kurzschwert **+7**, 1W6 + 6 Stich und 1W6 Energie (Ø 13), 9 m Teleport pro Runde · Konzentration bis 1 Stunde · Fokus **300 GM**, wird nicht verbraucht.",
+    "why": "**Der stärkste Beschwörer-Zauber bis Grad 3:** ein eigener Kämpfer, der jede Runde teleportiert und Gegner flankiert. Bleibt eine ganze Stunde, also die ganze Schlacht. **Aber:** Der Fokus kostet 300 GM, du hast 47. Und er stammt aus Tashas Kessel beziehungsweise dem Spielerhandbuch 2024: vorher klären, ob euer DM ihn erlaubt.",
+    "slot": "Stufe 6 (einer der 2 neuen Zauber bis Grad 3)",
+    "tips": [
+      "**Heiter** für Kontrolle (bezaubern), **zornig** für Schaden, **listig** für Flucht und Verwirrung.",
+      "**Vor dem Kampf rufen:** Mit 1 Stunde Wirkungsdauer steht er schon bereit, wenn es losgeht."
+    ],
+    "docs": []
+  },
+  {
+    "id": "stinkende-wolke",
+    "name": "Stinkende Wolke",
+    "en": "Stinking Cloud",
+    "level": 3,
+    "school": "Beschwörung",
+    "status": "vorschlag",
+    "concentration": true,
+    "time": "1 Aktion",
+    "economy": "aktion",
+    "range": "27 m (90 Fuß)",
+    "area": "Kugel mit 6 m Radius",
+    "components": "V, G, M (ein faules Ei oder einige Blätter Stinkkohl)",
+    "duration": "Konzentration, bis zu 1 Minute",
+    "save": "KO, sonst Aktion verloren",
+    "source": "Spielerhandbuch 2014 (engl. S. 278) · SRD 5.1",
+    "summary": "Giftgaswolke mit 6 m Radius: Wer drin ist, verliert bei misslungenem KO-Rettungswurf seine Aktion. Stark verschleiert.",
+    "text": "Du erschaffst eine **Kugel mit 6 m Radius** aus gelbem, Übelkeit erregendem Gas um einen Punkt in Reichweite. Die Wolke breitet sich um Ecken aus, und ihr Bereich ist **komplett verschleiert**. Sie hängt für die Wirkungsdauer in der Luft.\n\nJede Kreatur, die sich zu Beginn ihres Zuges vollständig in der Wolke befindet, muss einen **Konstitutionsrettungswurf gegen Gift** ablegen. Bei einem Fehlschlag **verbringt sie ihre Aktion in diesem Zug mit Würgen und Taumeln**. Kreaturen, die nicht atmen müssen oder gegen Gift immun sind, bestehen diesen Rettungswurf automatisch.\n\nMäßiger Wind (mindestens 15 km/h) verweht die Wolke nach 4 Runden, starker Wind (mindestens 30 km/h) nach 1 Runde.",
+    "valerius": "SG **15** · 27 m · Konzentration. Orcs verlieren zu 55 % ihre Aktion, Eisriesen nur zu 30 %.",
+    "why": "**Beschwörung** (halber Abschreibpreis, lädt ab Stufe 6 *Gutartiges Versetzen* auf). Gegen Orc-Trupps und Society-Magier stark. **Deine Skelette sind immun gegen Gift** und kämpfen in der Wolke ungestört weiter.",
+    "slot": "Stufe 6 (einer der 2 neuen Zauber bis Grad 3)",
+    "tips": [
+      "**Gegen Riesen schwach:** Ihre KO-Rettungswürfe sind zu gut.",
+      "**Komplett verschleiert:** Auch deine Skelette sehen drinnen nichts. Gegner, die nichts sehen, greifen aber ebenso blind an."
+    ],
+    "docs": []
+  },
+  {
+    "id": "hast",
+    "name": "Hast",
+    "en": "Haste",
+    "level": 3,
+    "school": "Verwandlung",
+    "status": "vorschlag",
+    "concentration": true,
+    "time": "1 Aktion",
+    "economy": "aktion",
+    "range": "9 m (30 Fuß)",
+    "target": "Eine bereitwillige Kreatur, die du sehen kannst",
+    "components": "V, G, M (ein Span Süßholzwurzel)",
+    "duration": "Konzentration, bis zu 1 Minute",
+    "source": "Spielerhandbuch 2014 (engl. S. 250) · SRD 5.1",
+    "summary": "Ein Verbündeter wird schneller: doppelte Bewegung, +2 RK, Vorteil auf GE-Rettung, eine Zusatzaktion. Danach eine Runde Lähmung.",
+    "text": "Wähle eine bereitwillige Kreatur in Reichweite, die du sehen kannst. Bis der Zauber endet, **verdoppelt sich ihre Bewegungsrate**, sie erhält **+2 auf die RK**, hat **Vorteil auf Geschicklichkeitsrettungswürfe** und erhält in jedem ihrer Züge **eine zusätzliche Aktion**. Diese Aktion kann sie nur für Angriff (nur ein Waffenangriff), Spurt, Rückzug, Verstecken oder Gegenstand benutzen.\n\nEndet der Zauber, kann sich das Ziel bis nach seinem nächsten Zug nicht bewegen und keine Aktionen ausführen, weil eine Welle der Lethargie über es hinwegrollt.",
+    "valerius": "Auf Aella: +2 RK, doppelte Bewegung, ein zusätzlicher Waffenangriff pro Runde · Konzentration mit KO +3.",
+    "why": "**Macht Aella zur Riesenbrecherin:** Mit Kampfrausch (Resistenz) und *Hast* (+2 RK, Zusatzangriff) hält sie einen Riesen am längsten auf und teilt am meisten aus. **Risiko:** Bricht deine Konzentration, steht sie eine ganze Runde still. Konkurriert mit *Netz* um deine Konzentration.",
+    "slot": "Stufe 6 (einer der 2 neuen Zauber bis Grad 3)",
+    "tips": [
+      "**Erst Netz, dann Hast?** Beides gleichzeitig geht nicht. Gegen einen einzelnen großen Gegner ist *Hast* auf Aella oft stärker.",
+      "**Bleib weit weg:** Ein Felswurf bricht deine Konzentration zu 50 %, dann fällt Aella eine Runde aus."
+    ],
+    "docs": []
+  },
+  {
+    "id": "wasseratmung",
+    "name": "Wasseratmung",
+    "en": "Water Breathing",
+    "level": 3,
+    "school": "Verwandlung",
+    "status": "vorschlag",
+    "ritual": true,
+    "time": "1 Aktion",
+    "economy": "aktion",
+    "range": "9 m (30 Fuß)",
+    "target": "Bis zu zehn bereitwillige Kreaturen, die du sehen kannst",
+    "components": "V, G, M (ein kurzes Schilfrohr oder Strohhalm)",
+    "duration": "24 Stunden",
+    "source": "Spielerhandbuch 2014 (engl. S. 287) · SRD 5.1",
+    "summary": "Bis zu zehn Gefährten atmen 24 Stunden lang unter Wasser. Als Ritual ohne Zauberplatz.",
+    "text": "Bis zu **zehn bereitwillige Kreaturen** in Reichweite, die du sehen kannst, können bis zum Ende des Zaubers **unter Wasser atmen**. Die betroffenen Kreaturen behalten auch ihre normale Atmung.",
+    "valerius": "Als **Ritual** 10 Minuten länger, kein Platz und keine Vorbereitung · zehn Gefährten · 24 Stunden.",
+    "why": "**Aus eurer Geschichte:** Unter Wasser liegt das **große Auge**, eine steinerne Hand hat deinen Fisch zerquetscht (*Theorie: ein Golem*). Bisher kennst du den Ort nur durch die Augen eines Vertrauten. Dazu der Turm im See, die Fahrt die Küste entlang und Lisbeths Schiffbruch. Als Ritual kostet er dich nie einen Platz.",
+    "slot": "Stufe 6 (einer der 2 neuen Zauber bis Grad 3)",
+    "tips": [
+      "**Keine Schwimmbewegung:** Du atmest, schwimmst aber weiter mit halber Geschwindigkeit. Rüstung und Schweres ziehen nach unten.",
+      "**Dunkles Wasser:** Deine Dunkelsicht reicht 18 m, Aella und die anderen brauchen Licht."
+    ],
+    "docs": []
+  },
+  {
+    "id": "hellsehen",
+    "name": "Hellsehen",
+    "en": "Clairvoyance",
+    "level": 3,
+    "school": "Erkenntnismagie",
+    "status": "vorschlag",
+    "concentration": true,
+    "time": "10 Minuten",
+    "economy": "minute",
+    "range": "1,6 km (1 Meile)",
+    "components": "V, G, M (ein Fokus im Wert von mindestens 100 GM: ein juwelenbesetztes Horn zum Hören oder ein Glasauge zum Sehen)",
+    "duration": "Konzentration, bis zu 10 Minuten",
+    "source": "Spielerhandbuch 2014 (engl. S. 222) · SRD 5.1",
+    "summary": "Ein unsichtbarer Sensor bis 1,6 km entfernt: Du siehst oder hörst dort, als wärst du selbst vor Ort.",
+    "text": "Du erschaffst einen **unsichtbaren Sensor** in Reichweite, an einem Ort, der dir vertraut ist (den du besucht oder gesehen hast), oder an einem offensichtlichen Ort, der dir fremd ist, etwa hinter einer Tür, um eine Ecke oder in einem Hain. Der Sensor bleibt für die Wirkungsdauer an seinem Platz und kann weder angegriffen noch anderweitig beeinflusst werden.\n\nBeim Wirken wählst du **Sehen oder Hören**. Du nutzt diesen Sinn durch den Sensor, als wärst du an seinem Platz. Mit deiner Aktion kannst du zwischen Sehen und Hören wechseln.\n\nEine Kreatur, die den Sensor sehen kann (etwa durch *Unsichtbares sehen* oder Wahrsicht), sieht eine leuchtende, nicht greifbare Kugel von der Größe deiner Faust.",
+    "valerius": "1,6 km · 10 Minuten Konzentration · Fokus für **100 GM** nötig (wird nicht verbraucht, du hast 47 GM).",
+    "why": "**Aus eurer Geschichte:** Deine Eule wurde beim Spähen getötet. Mit *Hellsehen* spähst du das Lager der Riesen und die belagerte Stadt aus, ohne einen Vertrauten zu riskieren. Und du kannst in den Turm im See schauen, aus dem die Magie in der Nacht der Verschwundenen kam.",
+    "slot": "Stufe 6 (einer der 2 neuen Zauber bis Grad 3)",
+    "tips": [
+      "**Erst den Fokus kaufen:** 100 GM für Glasauge oder Horn. Ohne Fokus kein Zauber.",
+      "**Kombiniert mit dem Vertrauten:** Der Vertraute erkundet, wo ein Fremder hinkommt; *Hellsehen* dort, wo es für ihn zu gefährlich ist."
+    ],
+    "docs": []
+  },
+  {
     "id": "magie-bannen",
     "name": "Magie bannen",
     "en": "Dispel Magic",
@@ -946,7 +1203,7 @@
     "text": "Wähle eine Kreatur, einen Gegenstand oder einen magischen Effekt in Reichweite. Jeder Zauber des **3. Grades oder niedriger** auf dem Ziel **endet**. Für jeden Zauber des **4. Grades oder höher** auf dem Ziel machst du einen **Attributswurf mit deinem Attribut zum Zauberwirken**. Der SG beträgt **10 + der Grad des Zaubers**. Bei einem Erfolg endet der Zauber.",
     "higher": "Wirkst du diesen Zauber mit einem Platz des 4. Grades oder höher, endet jeder Zauber auf dem Ziel automatisch, dessen Grad höchstens dem Grad des verwendeten Platzes entspricht.",
     "valerius": "Reichweite 36 m · Zauber bis Grad 3 enden sicher · darüber IN-Wurf **+4** gegen SG 10 + Grad (Grad 4: 55 %, Grad 5: 50 %, Grad 6: 45 %).",
-    "why": "**Gegen die Riesenrunen der Orcs:** *Magie entdecken* zeigte Erkenntnismagie. Ist das Mal ein Zaubereffekt, beendet *Magie bannen* es, bis Grad 3 sicher. Dann braucht ihr nicht jedes Mal Nita. Dazu beendet es Zauber der Sorcerer Society an Verbündeten und löst magische Fallen und Barrieren. Ab Stufe 6 lernst du 2 neue Zauber bis Grad 3.",
+    "why": "**Nützlich, aber kein Muss:** Twee (Barde) und Lucira (Hexenmeisterin) haben *Magie bannen* auf ihrer Zauberliste, das Runenmal des Orcs hat Nita gelöst, und dein eigener Plan ist, nicht alle Orcs zu befreien. Bleibt als Allzweckwaffe gegen Society-Zauber, Flüche aus Zaubern und magische Fallen.",
     "slot": "Stufe 6 (einer der 2 neuen Zauber bis Grad 3)",
     "tips": [
       "**Ob das Runenmal ein Zauber ist, entscheidet der DM.** Ist es eher ein Fluch, hilft *Fluch brechen* (ebenfalls Grad 3).",

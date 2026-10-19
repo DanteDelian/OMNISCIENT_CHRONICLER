@@ -5,7 +5,7 @@ icon: swords
 order: 4
 group: Zauber & Taktik
 aliases: [Taktik, Zauber-Taktiken, Taktikhandbuch]
-updated: 2026-10-11
+updated: 2026-10-16
 ---
 # Taktik-Handbuch
 
@@ -30,7 +30,7 @@ updated: 2026-10-11
 | Typ | Optionen | Achtung |
 | :-- | :-- | :-- |
 | **Aktion** | [[Netz]], [[Sengender Strahl]], [[Eismesser]], [[Totenglocke]], [[Geringfügige Illusion]], [[Botschaft]], Geringe Beschwörung, Dolch oder Stab, Spurt, Rückzug, Ausweichen, Helfen, Verstecken, Vorbereiten | Nur **ein** Zauber mit Platz pro Zug, siehe unten |
-| **Bonusaktion** | [[Sternenschritt]] (3×), Untote befehligen ([[Tote erwecken]]), [[Unsichtbarer Diener]] befehligen | **Alle drei konkurrieren.** Pro Runde nur eins |
+| **Bonusaktion** | [[Sternenschritt]] (1×), Untote befehligen ([[Tote erwecken]]), [[Unsichtbarer Diener]] befehligen | **Alle drei konkurrieren.** Pro Runde nur eins |
 | **Reaktion** | [[Schild]], [[Gegenzauber]], Gelegenheitsangriff | **Eine pro Runde.** Schild *oder* Gegenzauber |
 | **Bewegung** | 9 m, aufteilbar vor und nach der Aktion | Schwieriges Gelände (*Netz*) kostet doppelt |
 | **Freie Interaktion** | einen Gegenstand ziehen, eine Tür öffnen | einmal pro Zug |
@@ -85,6 +85,66 @@ Konzentration endet außerdem, wenn du **kampfunfähig** wirst, stirbst oder ein
 | Skelette | Wucht (Stab!) | Stich- und Hiebwaffen sind normal, Wucht doppelt |
 | Unsichtbare | Flächenzauber (*Netz*, *Eismesser*-Explosion) | Gezielte Zauber ohne Sicht |
 
+## Riesen-Briefing: die Belagerung im Westen
+
+*Werte nach SRD 5.1 (Monsterhandbuch), Chancen gerechnet gegen deinen Zauber-SG 15 und Angriff +7. Ob die „Gebirgsriesen“ Hügel- oder Steinriesen sind, siehst du am Tisch: Hügelriesen tragen Keulen und sind einfältig, Steinriesen sind grau, verschmelzen mit Fels und schlagen auf 4,5 m zu.*
+
+### Die Gegner
+
+| | Eisriese | Hügelriese | Steinriese | Orc |
+| :-- | :-: | :-: | :-: | :-: |
+| RK · TP | 15 · 138 | 13 · 105 | 17 · 126 | 13 · 15 |
+| Bewegung | 12 m | 12 m | 12 m | 9 m + Ansturm |
+| Nahkampf | 2× Axt +9, je 25 | 2× Keule +8, je 18 | 2× Keule +9, je 19 | Axt +5, 9 |
+| Reichweite | 3 m | 3 m | **4,5 m** | 1,5 m |
+| Fernkampf | Fels +9, 28, 18/72 m | Fels +8, 21, 18/72 m | Fels +9, 28, 18/72 m | Speer +5, 6, 9/36 m |
+| Besonderes | immun gegen Kälte, keine Dunkelsicht | keine Dunkelsicht | Dunkelsicht 18 m, Tarnung im Fels | rennt als Bonusaktion auf dich zu |
+
+Der Eisriese entspricht dem **Frostriesen** des Monsterhandbuchs.
+
+### Deine Chancen
+
+| | Eisriese | Hügelriese | Steinriese | Orc |
+| :-- | :-: | :-: | :-: | :-: |
+| [[Netz]] hält fest (GE-Rettung) | 75 % | 75 % | 45 % | 65 % |
+| … reißt sich pro Aktion los | 60 % (mit Athletik 75 %) | 55 % | 90 % | 45 % |
+| [[Totenglocke]] wirkt (WE-Rettung) | 55 % | 75 % | 50 % | 70 % |
+| [[Sengender Strahl]], Ø Schaden | 15 | 17 | 13 | 17 |
+| [[Eismesser]] | nur der Stich, Kälte verpufft | voll | voll | voll |
+| Skelett-Pfeil trifft (Ziel im Netz) | 50 % (75 %) | 60 % (84 %) | 40 % (64 %) | 60 % (84 %) |
+
+### Was sie dir antun (RK 11, in Klammern mit [[Schild]] RK 16)
+
+| | trifft dich | Ø Schaden pro Zug | Konzentration hält |
+| :-- | :-: | :-: | :-: |
+| Eisriese, Nahkampf | 95 % (70 %) | 48 (35) | 60 % je Treffer |
+| Eisriese, Fels | 95 % (70 %) | 27 (20) | 50 % |
+| Hügelriese, Nahkampf | 90 % (65 %) | 32 (23) | 70 % je Treffer |
+| Orc, Axt | 75 % (50 %) | 7 (5) | 70 % |
+
+> [!WARNING] Ein Zug im Nahkampf reicht
+> Ein Eisriese bringt dich mit seinen zwei Axthieben im Schnitt von 36 auf 0 TP. Halte **mehr als 15 m** Abstand: 12 m Bewegung plus 3 m Reichweite. Dann braucht er eine volle Runde, um an dich heranzukommen. Beim Steinriesen sind es 16,5 m.
+
+### Sieben Regeln gegen Riesen
+
+1. **Abstand und Deckung.** Hinter Zinnen oder Mauern hast du Dreivierteldeckung (+5): RK 16, mit *Schild* 21. Ein Fels trifft dich dann nur noch zu 70 % beziehungsweise 45 %.
+2. **Netz zuerst.** Ein gefangener Riese hat Bewegungsrate 0. Seine Angriffe und Felswürfe haben Nachteil, Angriffe gegen ihn Vorteil. Leg es zwischen die Riesen und eure Linie. *Feuer verbrennt das Netz.*
+3. **Engstellen nutzen.** Ein Riese braucht 4,5 × 4,5 m. Durch Tore und Gassen unter 3 m Breite muss er sich zwängen: Nachteil auf Angriffe und GE-Rettungswürfe. Ein *Netz* dort hält einen Eisriesen zu 94 %.
+4. **Schild gegen Riesen, nicht gegen Orcs.** Gegen einen Riesen senkt *Schild* die Trefferchance von 95 auf 70 %. Gegen einen Orc lohnt der Platz kaum.
+5. **Gegenzauber nur für Zauberer.** Riesen zaubern nicht. Heb deine Reaktion für *Schild* auf, außer der Orc-Schamane taucht wieder auf.
+6. **Skelette außer Reichweite.** Jeder Treffer eines Riesen zerstört ein Skelett (13 TP, Wucht zählt doppelt). Lass sie verteilt aus der Deckung schießen.
+7. **Aella vorn, du hinten.** Im Kampfrausch hat sie Resistenz gegen Hieb, Stich und Wucht und hält einen Riesen am längsten aus. [[Sternenschritt]] (1×) sparst du für die Flucht auf.
+
+### Ideen für die Belagerung
+
+- **Falsche Fährten über die Runenmale.** Die Riesen hören über die Male versklavter Orcs mit. Erzählt in der Nähe eines markierten Orcs gezielt Falsches über Angriffszeit, Richtung und Truppenstärke. Eure echten Pläne besprecht ihr nur in *Leomunds winziger Hütte*, die Twee wirken kann.
+- **Nachts spähen.** Eis- und Hügelriesen haben keine Dunkelsicht. Ein Vertrauter mit Dunkelsicht, etwa wieder eine [[Eule]] mit 36 m, zählt nachts Riesen und Wachen, und du siehst per Aktion durch seine Augen.
+- **Der befreite Orc** kennt Lager, Wege und Gewohnheiten der Riesen. Frag ihn aus, bevor ihr die Stadt erreicht.
+- **Holz als Waffe.** Die Orcs stapeln am Fluss große Mengen Holz für die Riesen. Ein Feuer dort trifft ihren Nachschub, ohne dass ihr einen Riesen angreifen müsst.
+- **Twees *Verlangsamen*:** Ein verlangsamter Riese schlägt nur noch einmal pro Zug zu. Sprich dich mit Twee ab: sein *Verlangsamen*, dein *Netz*.
+- **Ab Stufe 6:** Mit *Gutartiges Versetzen* tauschst du per Aktion den Platz mit Aella. Sie steht sofort an der Front, du bist aus der Gefahr. Mit *[[Schneesturm]]* stürzen Riesen ins Eis. Siehe [[Stufe-6-Planer]].
+- **Nicht vergessen:** *Person festhalten* wirkt nicht gegen Riesen, nur gegen Humanoide wie die Orcs.
+
 ## Tote erwecken: Logistik
 
 | Plätze Grad 3 | Untote, die du dauerhaft hältst | Rest |
@@ -95,7 +155,7 @@ Konzentration endet außerdem, wenn du **kampfunfähig** wirst, stirbst oder ein
 - **Aufbau:** Jeder neue Untote kostet einen Grad-3-Platz und 1 Minute. 4 Skelette brauchen also 4 Wirkungen über mehrere Tage, während du die vorhandenen weiter erneuerst.
 - **Erneuern:** 1 Minute, alle Untoten höchstens 3 m entfernt, vor Ablauf der 24 Stunden.
 - **Arkane Erholung** kann einen Grad-3-Platz zurückholen (1× pro Tag).
-- **Rohstoff:** nur humanoide Knochen (Skelette) oder Leichen (Zombies). Ziel: das Schlachtfeld im Südosten.
+- **Rohstoff:** nur humanoide Knochen (Skelette) oder Leichen (Zombies). Vorrat: 3 Orc-Skelette auf dem Boot. Weitere Knochen: das Schlachtfeld im Südosten.
 
 ## Positionierung
 

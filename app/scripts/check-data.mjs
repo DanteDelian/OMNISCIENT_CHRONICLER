@@ -4,6 +4,7 @@
  * - gültiges JSON und Pflichtfelder
  * - jeder [[Verweis]] und jeder Personen-/Ortsname löst sich auf
  * - Quellen-IDs (sources.json) und Quest-IDs existieren
+ * - Stammbäume (stammbaum.json) verbinden nur vorhandene Personen
  * Aufruf: npm run check:data   (Exit-Code 1 bei Fehlern)
  */
 import fs from 'node:fs';
@@ -50,6 +51,7 @@ const d = {
 	journal: json('journal.json') ?? [],
 	map: json('map.json') ?? { pins: [] },
 	sources: json('sources.json') ?? [],
+	trees: json('stammbaum.json')?.trees ?? [],
 	docs: mdDir('docs', (slug, data, body) => ({ slug, title: String(data.title ?? slug), subtitle: data.subtitle, aliases: asArray(data.aliases), order: data.order ?? 99, group: data.group ?? '', body })),
 	world: mdDir('world', (slug, data, body) => ({
 		slug,
@@ -120,6 +122,26 @@ for (const it of d.inventory.items) links(`inventory.json ${it.id}`, `${it.desc}
 for (const p of d.map.pins) if (p.link) ref(`map.json ${p.id}`, p.link);
 for (const p of d.creatures.party ?? []) if (p.source) source(`creatures.json ${p.id}`, p.source);
 
+// Stammbäume
+for (const t of d.trees) {
+	const where = `stammbaum.json ${t.id}`;
+	if (!d.world.some((w) => w.slug === t.world)) errors.push(`${where}: Welt-Eintrag „${t.world}“ fehlt`);
+	const nodes = new Map();
+	for (const n of t.nodes ?? []) {
+		if (nodes.has(n.id)) errors.push(`${where}: doppelte Person ${n.id}`);
+		nodes.set(n.id, n);
+		if (n.ref) ref(`${where} ${n.id}`, n.ref);
+	}
+	for (const e of t.edges ?? []) {
+		const ids = [...(e.from ?? []), ...(e.to ?? [])];
+		for (const id of ids) if (!nodes.has(id)) errors.push(`${where}: Linie (${e.kind}) kennt „${id}“ nicht`);
+		if (e.kind === 'eltern') continue;
+		if (e.from?.length !== 1 || e.to?.length !== 1) errors.push(`${where}: Linie (${e.kind}) verbindet genau zwei Personen`);
+		else if (nodes.get(e.from[0])?.y !== nodes.get(e.to[0])?.y) warnings.push(`${where}: Linie (${e.kind}) zwischen verschiedenen Generationen wird schief gezeichnet`);
+	}
+	links(where, t.note);
+}
+
 // Zustand plausibel?
 const s = d.state;
 if (s && d.character) {
@@ -131,7 +153,7 @@ if (s && d.character) {
 const prepared = d.spells.filter((x) => x.status === 'buch' && x.level > 0 && x.prepared).length;
 if (prepared > d.character.spellcasting.preparedMax) warnings.push(`spells.json: ${prepared} vorbereitet, erlaubt sind ${d.character.spellcasting.preparedMax}`);
 
-console.log(`Index: ${index.length} Einträge · Zauber ${d.spells.length} · Welt ${d.world.length} · Dokumente ${d.docs.length} · Journal ${d.journal.length} · Quests ${d.quests.length}`);
+console.log(`Index: ${index.length} Einträge · Zauber ${d.spells.length} · Welt ${d.world.length} · Dokumente ${d.docs.length} · Journal ${d.journal.length} · Quests ${d.quests.length} · Stammbäume ${d.trees.length}`);
 for (const w of warnings) console.log(`  Hinweis: ${w}`);
 for (const e of errors) console.log(`  FEHLER:  ${e}`);
 console.log(errors.length ? `\n${errors.length} Fehler gefunden.` : '\nAlles konsistent.');

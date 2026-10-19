@@ -18,6 +18,7 @@ export const PRINT_PARTS: PrintPart[] = [
 	{ id: 'bogen', label: 'Charakterbogen', hint: 'Werte, Fertigkeiten, Merkmale', group: 'Am Tisch' },
 	{ id: 'spielbogen', label: 'Sitzungsbogen zum Abhaken', hint: 'TP, Plätze, Kräfte, Untote, Notizen', group: 'Am Tisch' },
 	{ id: 'zauber', label: 'Zauberbuch', hint: 'Alle Zauber mit vollem Regeltext', group: 'Am Tisch' },
+	{ id: 'zauberkarten', label: 'Zauberkarten zum Ausschneiden', hint: 'Spielkartenformat, 9 pro Seite', group: 'Am Tisch' },
 	{ id: 'gefolge', label: 'Gefolge', hint: 'Vertraute, Untote, Diener, Aella', group: 'Am Tisch' },
 	{ id: 'regeln', label: 'Regel-Spickzettel', hint: 'Zustände, Aktionen, Konzentration, Rasten', group: 'Am Tisch' },
 	{ id: 'inventar', label: 'Inventar', hint: 'Besitz, Geld, Wunschliste', group: 'Kampagne' },

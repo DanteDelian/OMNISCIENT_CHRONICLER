@@ -4,7 +4,7 @@
 	import Markdown from '$lib/components/Markdown.svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { normalizeName } from '$lib/refs';
-	import { TONE, KIND_LABEL } from './tone';
+	import { TONE, KIND_LABEL } from '$lib/tone';
 
 	let kind = $state<'alle' | 'person' | 'fraktion' | 'ort'>('alle');
 	let q = $state('');

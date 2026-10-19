@@ -1,0 +1,30 @@
+{
+  "trees": [
+    {
+      "id": "lhaaz",
+      "world": "haus-lhaaz",
+      "title": "Stammbaum Haus Lhaaz",
+      "note": "Durchgezogen: belegt · gestrichelt: offen oder Theorie · rot: Feindschaft. Lisbeth ist Schwester eines Erzherzogs und Tante von Leon und Lula. Wie sie mit dem Grafen verwandt ist, ist offen. *Theorie:* Leonidas ist der Baron aus Cams Brief. Dann ist auch offen, welcher Graf Lisbeths Tod bestellt hat. Siehe [[Offene Fragen an den DM]].",
+      "nodes": [
+        { "id": "lisbeth", "label": "Lisbeth Lhaaz", "ref": "Lisbeth Lhaaz", "sub": "„Tantchen Lisbeth“ · Schwester des Erzherzogs", "x": 0, "y": 0, "tone": "neutral" },
+        { "id": "graf", "label": "Graf Lhaaz", "ref": "Graf Lhaaz", "sub": "Oberhaupt der Familie · in der alten Welt", "x": 1, "y": 0, "tone": "enemy" },
+        { "id": "baron", "label": "Der Baron", "sub": "Bruder des Grafen · Herr der ersten Stadt", "x": 2, "y": 0, "tone": "unknown", "uncertain": true },
+        { "id": "leonidas", "label": "Graf Leonidas", "ref": "Leonidas Lhaaz", "sub": "Leons Onkel · „Schwert des Königs“", "x": 3, "y": 0, "tone": "ally" },
+        { "id": "frau", "label": "Leonidas’ Frau", "sub": "Name unbekannt · hält die belagerte Stadt", "x": 4, "y": 0, "tone": "unknown" },
+        { "id": "leon", "label": "Leon Lhaaz", "ref": "Leon Lhaaz", "sub": "führt Dehubden", "x": 0.5, "y": 1, "tone": "neutral" },
+        { "id": "lula", "label": "Lula Lhaaz", "ref": "Lula Lhaaz", "sub": "frei seit Juli 2026", "x": 1.5, "y": 1, "tone": "neutral" },
+        { "id": "lucaz", "label": "Lucaz Lhaaz", "ref": "Lucaz Lhaaz", "sub": "Schwertkämpfer · reist mit euch", "x": 2.5, "y": 1, "tone": "ally" },
+        { "id": "lisa", "label": "Lisa Lhaaz", "ref": "Lisa Lhaaz", "sub": "wohl Magierin", "x": 3.5, "y": 1, "tone": "ally" }
+      ],
+      "edges": [
+        { "kind": "theorie", "from": ["lisbeth"], "to": ["graf"], "label": "Tante seiner Kinder" },
+        { "kind": "geschwister", "from": ["graf"], "to": ["baron"], "label": "Brüder" },
+        { "kind": "theorie", "from": ["baron"], "to": ["leonidas"], "label": "dieselbe Person?" },
+        { "kind": "ehe", "from": ["leonidas"], "to": ["frau"] },
+        { "kind": "feindschaft", "from": ["graf"], "to": ["lisbeth"], "label": "bestellte ihren Tod" },
+        { "kind": "eltern", "from": ["graf"], "to": ["leon", "lula"] },
+        { "kind": "eltern", "from": ["leonidas"], "to": ["lucaz", "lisa"] }
+      ]
+    }
+  ]
+}

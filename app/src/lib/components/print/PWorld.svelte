@@ -1,12 +1,14 @@
 <script lang="ts">
 	import PDoc from './PDoc.svelte';
 	import PMd from './PMd.svelte';
+	import FamilyTree from '../FamilyTree.svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { printAnchor } from '$lib/markdown';
 	import { TONE_PRINT, WORLD_GROUPS } from '$lib/print';
 
 	const world = $derived(campaign.data.world);
 	const backlinks = $derived(campaign.data.backlinks);
+	const trees = $derived(campaign.data.trees);
 	const KIND: Record<string, string> = { person: 'Person', fraktion: 'Fraktion', ort: 'Ort' };
 
 	/** Der erste #-Titel im Text wiederholt nur den Namen. */
@@ -18,6 +20,12 @@
 		{@const list = world.filter((w) => w.group === g.id).sort((a, b) => (a.kind === b.kind ? a.name.localeCompare(b.name, 'de') : a.kind.localeCompare(b.kind)))}
 		{#if list.length}
 			<h2>{g.label} <span class="count">{list.length}</span></h2>
+			{#each trees.filter((t) => world.find((w) => w.slug === t.world)?.group === g.id) as tree (tree.id)}
+				<figure class="tree-fig avoid">
+					<FamilyTree {tree} print />
+					<figcaption class="tiny soft"><b>{tree.title}.</b> <PMd src={tree.note ?? ''} inline /></figcaption>
+				</figure>
+			{/each}
 			<div class="cols-2">
 				{#each list as w (w.slug)}
 					{@const tone = TONE_PRINT[w.tone]}

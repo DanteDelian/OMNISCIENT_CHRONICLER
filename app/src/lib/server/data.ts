@@ -6,6 +6,7 @@ import type {
 	Character,
 	Creatures,
 	DocFile,
+	FamilyTree,
 	Inventory,
 	JournalEntry,
 	MapData,
@@ -93,7 +94,8 @@ export function loadCampaign(): CampaignData {
 		map: readJson<MapData>('map.json', { image: '', title: 'Karte', note: '', pins: [] }),
 		sources: readJson<Source[]>('sources.json', []),
 		docs: loadDocs(),
-		world: loadWorld()
+		world: loadWorld(),
+		trees: readJson<{ trees: FamilyTree[] }>('stammbaum.json', { trees: [] }).trees ?? []
 	};
 	const index = buildIndex(base);
 	const data: CampaignData = { ...base, index, backlinks: buildBacklinks(base, index) };

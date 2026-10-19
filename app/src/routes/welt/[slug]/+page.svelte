@@ -2,8 +2,10 @@
 	import { page } from '$app/state';
 	import { ArrowLeft, NotebookPen, Flag, Link2, Tag } from '@lucide/svelte';
 	import Markdown from '$lib/components/Markdown.svelte';
+	import FamilyTree from '$lib/components/FamilyTree.svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
-	import { TONE, KIND_LABEL } from '../tone';
+	import { TONE, KIND_LABEL } from '$lib/tone';
+	import type { FamilyTree as Tree } from '$lib/types';
 
 	const w = $derived(campaign.data.world.find((x) => x.slug === page.params.slug));
 	const links = $derived(w ? (campaign.data.backlinks[`world:${w.slug}`] ?? []) : []);
@@ -11,15 +13,35 @@
 	const quests = $derived(links.filter((l) => l.kind === 'Quest'));
 	const others = $derived(links.filter((l) => l.kind !== 'Journal' && l.kind !== 'Quest'));
 	const journalEntries = $derived(journal.map((l) => campaign.data.journal.find((j) => `journal:${j.id}` === l.key)).filter((j) => !!j));
+	/** Stammbäume: der eigene (auf der Seite des Hauses) und jeder, in dem dieser Eintrag vorkommt. */
+	const trees = $derived(
+		w ? campaign.data.trees.filter((t) => t.world === w.slug || t.nodes.some((n) => n.ref && campaign.resolve(n.ref)?.key === `world:${w.slug}`)) : []
+	);
 </script>
 
 <svelte:head><title>{w?.name ?? 'Welt'} · Valerius</title></svelte:head>
+
+{#snippet treePanel(tree: Tree, own: boolean)}
+	{@const house = campaign.data.world.find((x) => x.slug === tree.world)}
+	<section class="panel p-5 lg:p-6 {own ? 'mb-6' : 'mt-6'}">
+		<div class="mb-4 flex flex-wrap items-center gap-x-4 gap-y-2">
+			<h2 class="title-display mr-auto text-2xl">{tree.title}</h2>
+			<span class="flex flex-wrap items-center gap-3 text-xs text-ink-3">
+				{#each Object.entries(TONE) as [k, t] (k)}<span class="flex items-center gap-1"><span class="h-2 w-2 rounded-full" style="background: {t.color}"></span>{t.label}</span>{/each}
+			</span>
+			{#if !own && house}<a class="text-xs text-ink-2 hover:text-ink" href="/welt/{house.slug}">{house.name} →</a>{/if}
+		</div>
+		<div class="overflow-x-auto"><div class="min-w-[680px]"><FamilyTree {tree} highlight={own ? undefined : w?.slug} /></div></div>
+		{#if tree.note}<p class="mt-4 text-xs leading-relaxed text-ink-3"><Markdown src={tree.note} inline /></p>{/if}
+	</section>
+{/snippet}
 
 <div class="mx-auto max-w-6xl">
 	<a class="btn btn-sm btn-ghost mb-5" href="/welt"><ArrowLeft size={14} />Welt</a>
 
 	{#if w}
 		{@const t = TONE[w.tone]}
+		{#each trees.filter((x) => x.world === w.slug) as tree (tree.id)}{@render treePanel(tree, true)}{/each}
 		<div class="grid gap-6 lg:grid-cols-[1fr_320px]">
 			<article class="panel p-6 lg:p-8">
 				<div class="mb-3 flex flex-wrap items-center gap-2">
@@ -71,6 +93,7 @@
 				{/if}
 			</aside>
 		</div>
+		{#each trees.filter((x) => x.world !== w.slug) as tree (tree.id)}{@render treePanel(tree, false)}{/each}
 	{:else}
 		<div class="panel p-10 text-center text-ink-2">Kein Eintrag gefunden.</div>
 	{/if}

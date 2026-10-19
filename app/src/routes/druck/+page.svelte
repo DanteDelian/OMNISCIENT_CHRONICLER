@@ -8,6 +8,7 @@
 	import PCharacter from '$lib/components/print/PCharacter.svelte';
 	import PTracker from '$lib/components/print/PTracker.svelte';
 	import PSpells from '$lib/components/print/PSpells.svelte';
+	import PSpellCards from '$lib/components/print/PSpellCards.svelte';
 	import PRetinue from '$lib/components/print/PRetinue.svelte';
 	import PRules from '$lib/components/print/PRules.svelte';
 	import PInventory from '$lib/components/print/PInventory.svelte';
@@ -36,7 +37,7 @@
 
 	const PRESETS: { label: string; ids: string[] | null }[] = [
 		{ label: 'Alles', ids: null },
-		{ label: 'Für den Spieltisch', ids: ['deckblatt', 'bogen', 'spielbogen', 'zauber', 'gefolge', 'regeln'] },
+		{ label: 'Für den Spieltisch', ids: ['deckblatt', 'bogen', 'spielbogen', 'zauber', 'zauberkarten', 'gefolge', 'regeln'] },
 		{ label: 'Kampagne', ids: ['quests', 'journal', 'welt', 'karte'] },
 		{ label: 'Archiv', ids: ['archiv'] },
 		{ label: 'Nichts', ids: [] }
@@ -93,6 +94,8 @@
 			<PTracker />
 		{:else if p.id === 'zauber'}
 			<PSpells />
+		{:else if p.id === 'zauberkarten'}
+			<PSpellCards />
 		{:else if p.id === 'gefolge'}
 			<PRetinue />
 		{:else if p.id === 'regeln'}

@@ -33,7 +33,8 @@ const JOBS = [
 	{ file: '08-journal.pdf', teil: 'journal' },
 	{ file: '09-welt.pdf', teil: 'welt' },
 	{ file: '10-karte.pdf', teil: 'karte' },
-	{ file: '11-archiv.pdf', teil: 'archiv' }
+	{ file: '11-archiv.pdf', teil: 'archiv' },
+	{ file: '12-zauberkarten.pdf', teil: 'zauberkarten' }
 ];
 
 // ---------- Argumente und .env ----------

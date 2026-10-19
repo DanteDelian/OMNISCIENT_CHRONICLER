@@ -10,6 +10,8 @@
 	const all = $derived(campaign.data.spells);
 	const book = $derived(all.filter((s) => s.status === 'buch').sort((a, b) => a.level - b.level || a.name.localeCompare(b.name, 'de')));
 	const proposals = $derived(all.filter((s) => s.status === 'vorschlag'));
+	const freeProposals = $derived(proposals.filter((s) => !s.slot?.startsWith('Stufe 6')));
+	const levelSixProposals = $derived(proposals.filter((s) => s.slot?.startsWith('Stufe 6')));
 	const picks = $derived(wizardPicks(c.level, book.filter((s) => s.level > 0).map((s) => s.level)));
 	const free = $derived(picks.reduce((n, g) => n + g.total - g.used, 0));
 	const prepared = $derived(book.filter((s) => s.level > 0 && s.prepared).length);
@@ -59,14 +61,22 @@
 		</div>
 	{/each}
 
-	{#if proposals.length}
-		<h2 class="page-break" style="margin-top: 0">Vorschläge für die freien Einträge <span class="count">{proposals.length}</span></h2>
+	{#if freeProposals.length}
+		<h2 class="page-break" style="margin-top: 0">Vorschläge für die freien Einträge <span class="count">{freeProposals.length}</span></h2>
 		<p class="soft">
 			Nicht im Buch. Ein Magier der Stufe {c.level} hat {picks.reduce((n, g) => n + g.total, 0)} kostenlose Einträge, {free} davon sind frei. Jeder Vorschlag mit Begründung und vollem
 			Regeltext. Abschreiben aus Rollen kostet 50 GM und 2 Stunden pro Grad, als Beschwörer bei Beschwörungszaubern die Hälfte.
 		</p>
 		<div class="cols-2">
-			{#each proposals as sp (sp.id)}<PSpell spell={sp} />{/each}
+			{#each freeProposals as sp (sp.id)}<PSpell spell={sp} />{/each}
+		</div>
+	{/if}
+
+	{#if levelSixProposals.length}
+		<h2 class="page-break" style="margin-top: 0">Vorschläge für Stufe 6 <span class="count">{levelSixProposals.length}</span></h2>
+		<p class="soft">Auf Stufe 6 kommen 2 neue Zauber bis Grad 3 ins Buch. Vergleich und Empfehlung stehen im Stufe-6-Planer im Archiv.</p>
+		<div class="cols-2">
+			{#each levelSixProposals as sp (sp.id)}<PSpell spell={sp} />{/each}
 		</div>
 	{/if}
 </PDoc>

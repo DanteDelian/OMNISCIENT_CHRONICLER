@@ -19,6 +19,13 @@
 	const book = $derived(all.filter((x) => x.status === 'buch'));
 	const unclear = $derived(all.filter((x) => x.status === 'frage'));
 	const proposals = $derived(all.filter((x) => x.status === 'vorschlag'));
+	/** Vorschläge nach Ziel: freie Einträge jetzt oder neue Zauber auf Stufe 6 */
+	const proposalGroups = $derived(
+		[
+			{ id: 'frei', title: 'für die freien Einträge', hint: 'falls der DM sie dir gibt', list: proposals.filter((x) => !x.slot?.startsWith('Stufe 6')) },
+			{ id: 'stufe6', title: 'für Stufe 6', hint: '2 neue Zauber bis Grad 3, siehe Stufe-6-Planer im Archiv', list: proposals.filter((x) => x.slot?.startsWith('Stufe 6')) }
+		].filter((g) => g.list.length)
+	);
 	const prepared = $derived(preparedCount(all));
 	const leveledInBook = $derived(book.filter((x) => x.level > 0).length);
 	const cantripCount = $derived(book.filter((x) => x.level === 0).length);
@@ -175,13 +182,18 @@
 		</div>
 	{/if}
 
-	<div class="mt-6 mb-3 flex items-center gap-2"><Sparkle size={16} class="text-life" /><h3 class="font-semibold">Meine Vorschläge für die freien Plätze</h3><span class="text-xs text-ink-3">· nicht im Buch, mit Begründung und vollen Regeln</span></div>
-	<div class="grid gap-3 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-		{#each proposals as sp (sp.id)}
-			<div class="flex flex-col gap-2">
-				<SpellCard spell={sp} />
-				{#if sp.slot}<span class="px-1 text-xs text-ink-3">passt in: <b class="text-ink-2">{sp.slot}</b></span>{/if}
-			</div>
-		{/each}
-	</div>
+	{#each proposalGroups as g (g.id)}
+		<div class="mt-6 mb-3 flex flex-wrap items-center gap-2">
+			<Sparkle size={16} class="text-life" /><h3 class="font-semibold">Vorschläge {g.title}</h3>
+			<span class="text-xs text-ink-3">· {g.hint} · nicht im Buch, mit Begründung und vollen Regeln</span>
+		</div>
+		<div class="grid gap-3 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+			{#each g.list as sp (sp.id)}
+				<div class="flex flex-col gap-2">
+					<SpellCard spell={sp} />
+					{#if sp.slot}<span class="px-1 text-xs text-ink-3">passt in: <b class="text-ink-2">{sp.slot}</b></span>{/if}
+				</div>
+			{/each}
+		</div>
+	{/each}
 </section>
