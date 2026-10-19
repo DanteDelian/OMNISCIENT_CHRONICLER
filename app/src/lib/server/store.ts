@@ -48,7 +48,8 @@ export function readJson<T>(rel: string, fallback: T): T {
 
 export function readText(rel: string): string {
 	const p = abs(rel);
-	return fs.existsSync(p) ? fs.readFileSync(p, 'utf-8') : '';
+	// Git checkt unter Windows mit CRLF aus. Die Markdown-Verarbeitung erwartet LF.
+	return fs.existsSync(p) ? fs.readFileSync(p, 'utf-8').replace(/\r\n?/g, '\n') : '';
 }
 
 export function listFiles(relDir: string, ext: string): string[] {
