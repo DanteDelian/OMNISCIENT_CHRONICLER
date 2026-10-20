@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Plus, Pencil, Trash2, Check, RotateCcw, Printer, Search, TriangleAlert, Sparkles } from '@lucide/svelte';
+	import { Plus, Pencil, Trash2, Check, RotateCcw, Printer, Search, TriangleAlert, Sparkles, CircleHelp, Lightbulb } from '@lucide/svelte';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import Markdown from '$lib/components/Markdown.svelte';
 	import RefChip from '$lib/components/RefChip.svelte';
@@ -19,6 +19,12 @@
 	const contradictions = $derived(campaign.data.journal.flatMap((j) => (j.contradictions ?? []).map((text) => ({ text, entry: j }))));
 	const clues = $derived(collectClues(campaign.data));
 	const sources = $derived(new Set(clues.map((c) => c.source.key)).size);
+	const tiles = $derived([
+		{ id: 'fragen', label: 'Offene Fragen', value: open.length, hint: `${open.filter((q) => q.to === 'dm').length} an den DM`, icon: CircleHelp, color: 'var(--color-astral)' },
+		{ id: 'theorien', label: 'Theorien', value: clues.filter((c) => c.kind === 'theorie').length, hint: `dazu ${clues.filter((c) => c.kind === 'offen').length} offene Punkte`, icon: Lightbulb, color: 'var(--color-astral-2)' },
+		{ id: 'widersprueche', label: 'Widersprüche', value: contradictions.length, hint: 'aus dem Journal', icon: TriangleAlert, color: 'var(--color-warn)' },
+		{ id: 'mysterien', label: 'Mysterien', value: mysteries.length, hint: 'laufende Quests', icon: Sparkles, color: 'var(--color-life)' }
+	]);
 
 	let filter = $state('');
 	const groups = $derived.by(() => {
@@ -101,7 +107,7 @@
 <PageHeader
 	eyebrow="Kampagne"
 	title="Rätselwand"
-	subtitle="{open.length} offene Fragen · {clues.length} Theorien und offene Punkte · {contradictions.length} Widersprüche · {mysteries.length} Mysterien. Was in den Einträgen als Theorie oder offen markiert ist, erscheint hier von selbst."
+	subtitle="Was noch offen ist, an einem Ort. Theorien und offene Punkte aus den Einträgen erscheinen hier von selbst."
 >
 	{#snippet actions()}
 		<a class="btn" href="/druck?teil=fragen"><Printer size={15} />Fragen drucken</a>
@@ -109,8 +115,18 @@
 	{/snippet}
 </PageHeader>
 
+<div class="mb-8 grid grid-cols-2 gap-3 lg:grid-cols-4">
+	{#each tiles as t (t.id)}
+		<a href="#{t.id}" class="panel panel-hover p-4">
+			<div class="eyebrow flex items-center gap-1.5"><t.icon size={12} style="color: {t.color}" />{t.label}</div>
+			<div class="num mt-1 text-2xl text-ink">{t.value}</div>
+			<div class="text-xs text-ink-3">{t.hint}</div>
+		</a>
+	{/each}
+</div>
+
 <div class="grid gap-6 xl:grid-cols-[1fr_380px]">
-	<section>
+	<section id="fragen" class="scroll-mt-24">
 		<h2 class="title-display mb-1 text-2xl">Offene Fragen</h2>
 		<p class="mb-4 text-sm text-ink-3">Am Tisch abhaken und die Antwort gleich eintragen.</p>
 
@@ -196,8 +212,8 @@
 	</section>
 
 	<aside class="space-y-4">
-		<section class="panel p-4">
-			<div class="mb-3 flex items-center gap-2 text-sm font-medium"><Sparkles size={14} class="text-astral" />Mysterien <span class="text-ink-3">· {mysteries.length}</span></div>
+		<section id="mysterien" class="panel scroll-mt-24 p-4">
+			<div class="mb-3 flex items-center gap-2 text-sm font-medium"><Sparkles size={14} class="text-life" />Mysterien <span class="text-ink-3">· {mysteries.length}</span></div>
 			<ul class="space-y-3">
 				{#each mysteries as q (q.id)}
 					<li>
@@ -210,7 +226,7 @@
 			</ul>
 		</section>
 
-		<section class="panel p-4">
+		<section id="widersprueche" class="panel scroll-mt-24 p-4">
 			<div class="mb-3 flex items-center gap-2 text-sm font-medium"><TriangleAlert size={14} class="text-warn" />Widersprüche <span class="text-ink-3">· {contradictions.length}</span></div>
 			<ul class="space-y-3">
 				{#each contradictions as c, i (i)}
@@ -228,7 +244,7 @@
 	</aside>
 </div>
 
-<section class="mt-10">
+<section id="theorien" class="mt-10 scroll-mt-24">
 	<div class="mb-4 flex flex-wrap items-end justify-between gap-3">
 		<div>
 			<h2 class="title-display text-2xl">Theorien und offene Punkte</h2>

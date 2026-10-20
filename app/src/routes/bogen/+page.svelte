@@ -185,7 +185,7 @@
 					{#each g.list as f (f.id)}
 						<article id={f.id} class="panel scroll-mt-24 p-4 {f.upcoming ? 'opacity-70' : ''}">
 							<div class="flex flex-wrap items-center gap-2">
-								<h3 class="text-base font-semibold">{f.name}{#if f.en} <span class="text-sm font-normal text-ink-3 italic">{f.en}</span>{/if}</h3>
+								<h3 class="text-base font-semibold">{f.name}{#if f.en}{' '}<span class="text-sm font-normal text-ink-3 italic">{f.en}</span>{/if}</h3>
 								<span class="badge">{ECONOMY_LABEL[f.economy] ?? f.economy}</span>
 								{#if f.uses}<span class="badge" style="--c: var(--color-gold)">{f.uses.max}× pro {f.uses.reset === 'long' ? 'langer Rast' : 'kurzer Rast'}</span>{/if}
 								{#if f.upcoming}<span class="badge" style="--c: var(--color-astral-2)">Ausblick</span>{/if}

@@ -72,6 +72,8 @@ export interface Minion {
 	maxHp: number;
 	renewed: boolean;
 	note?: string;
+	/** Waffe, die das Grimoire beim Erwecken zuteilt (siehe loadout im Wertblock) */
+	gear?: string;
 }
 
 export interface PlayState {
@@ -180,6 +182,8 @@ export interface UndeadBlock {
 	cr: string;
 	traits?: StatTrait[];
 	actions: { name: string; bonus: number; damage: string; type: string; range: string }[];
+	/** Ausrüstung in der Reihenfolge des Erweckens: Gegenstand und passende Aktion */
+	loadout?: { item: string; action: string }[];
 	verdict: string;
 }
 
@@ -234,6 +238,12 @@ export interface WishItem {
 	phase: 'jetzt' | 'nach-saladin' | 'saladin';
 	why: string;
 	done?: boolean;
+	/** Menge beim Kauf (Pfeile: 20) */
+	qty?: number;
+	/** Wohin der Kauf im Inventar wandert */
+	group?: ItemGroup;
+	/** ID eines vorhandenen Gegenstands, dessen Menge sich beim Kauf erhöht */
+	stack?: string;
 }
 
 export interface Inventory {

@@ -14,12 +14,12 @@
 
 <label class="block">
 	<span class="mb-1 block text-xs text-ink-3">Waffe oder Werkzeug</span>
-	<input class="input" list="trance-tools" value={s.trance.tool} onchange={(e) => set(e.currentTarget.value)} placeholder="z. B. Kurzbogen oder Alchemistenwerkzeug" />
+	<input class="input" list="trance-tools" value={s.trance.tool} onchange={(e) => set(e.currentTarget.value)} placeholder="z. B. Alchemistenwerkzeug" />
 	<datalist id="trance-tools">
 		{#each TRANCE_TOOLS as t (t)}<option value={t}></option>{/each}
 	</datalist>
 </label>
 <p class="mt-2 text-xs text-ink-3">
-	Hausregel eures DM: nur Waffe oder Werkzeug, keine Fertigkeit. Tipps: Kurzbogen (deine Beute, Angriff dann +4), Alchemistenwerkzeug für die Alchemie-Lehre,
-	Kräuterkundeausrüstung für Heiltränke, Verkleidungsausrüstung für eine neue Identität.
+	Hausregel eures DM: nur Waffe oder Werkzeug, keine Fertigkeit. Tipps: Alchemistenwerkzeug für die Alchemie (ohne Trance hast du damit keine Übung),
+	Kräuterkundeausrüstung für Heiltränke, Verkleidungsausrüstung für eine neue Identität. Den Kurzbogen trägt eines deiner Skelette.
 </p>

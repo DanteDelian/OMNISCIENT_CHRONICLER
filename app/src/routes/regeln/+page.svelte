@@ -42,7 +42,7 @@
 	<div class="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
 		{#each CONDITIONS as c (c.id)}
 			<article class="panel p-4">
-				<h3 class="font-semibold">{c.name}{#if c.en} <span class="text-sm font-normal text-ink-3 italic">{c.en}</span>{/if}</h3>
+				<h3 class="font-semibold">{c.name}{#if c.en}{' '}<span class="text-sm font-normal text-ink-3 italic">{c.en}</span>{/if}</h3>
 				<ul class="prose-grim prose-sm mt-2">
 					{#each c.effects as e (e)}<li>{e}</li>{/each}
 				</ul>
@@ -65,7 +65,7 @@
 		<div class="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
 			{#each s.items as it (it.name)}
 				<article class="panel p-4">
-					<h3 class="font-semibold">{it.name}{#if it.en && it.en !== it.name} <span class="text-sm font-normal text-ink-3 italic">{it.en}</span>{/if}</h3>
+					<h3 class="font-semibold">{it.name}{#if it.en && it.en !== it.name}{' '}<span class="text-sm font-normal text-ink-3 italic">{it.en}</span>{/if}</h3>
 					<p class="mt-1.5 text-sm leading-relaxed text-ink-2">{it.text}</p>
 					{#if it.valerius}<p class="mt-2 rounded-lg bg-astral/[0.08] px-3 py-1.5 text-xs text-ink-2"><b class="text-astral">Für Valerius:</b> {it.valerius}</p>{/if}
 				</article>

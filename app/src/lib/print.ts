@@ -62,9 +62,9 @@ export const PRIO: Record<WishItem['priority'], string> = {
 };
 
 export const PHASE: Record<WishItem['phase'], string> = {
-	jetzt: 'Jetzt',
-	'nach-saladin': 'Nach Saladin',
-	saladin: 'Saladin-Plan'
+	jetzt: 'Jetzt kaufen',
+	'nach-saladin': 'Wenn Geld da ist',
+	saladin: 'Von Saladin'
 };
 
 export const QUEST_STATUS: Record<QuestStatus, string> = {

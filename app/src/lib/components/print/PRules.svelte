@@ -18,7 +18,7 @@
 	<div class="cols-2">
 		{#each CONDITIONS as cond (cond.id)}
 			<div class="avoid" style="margin-bottom: 2.4mm">
-				<b>{cond.name}</b>{#if cond.en} <i class="tiny muted">{cond.en}</i>{/if}
+				<b>{cond.name}</b>{#if cond.en}{' '}<i class="tiny muted">{cond.en}</i>{/if}
 				<ul class="bullets small" style="margin-bottom: 0.6mm">{#each cond.effects as e (e)}<li><PMd src={e} inline /></li>{/each}</ul>
 				{#if cond.valerius}<div class="for-val small" style="margin: 0.6mm 0 0"><PMd src={cond.valerius} inline /></div>{/if}
 			</div>
@@ -34,7 +34,7 @@
 		<div class="cols-2">
 			{#each g.items as r (r.name)}
 				<div class="avoid" style="margin-bottom: 2.2mm">
-					<b>{r.name}</b>{#if r.en && r.en !== r.name} <i class="tiny muted">{r.en}</i>{/if}<b>.</b> <span class="small"><PMd src={r.text} inline /></span>
+					<b>{r.name}</b>{#if r.en && r.en !== r.name}{' '}<i class="tiny muted">{r.en}</i>{/if}<b>.</b> <span class="small"><PMd src={r.text} inline /></span>
 					{#if r.valerius}<div class="for-val small" style="margin: 0.8mm 0 0"><PMd src={r.valerius} inline /></div>{/if}
 				</div>
 			{/each}

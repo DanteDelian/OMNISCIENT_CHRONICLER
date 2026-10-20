@@ -22,6 +22,23 @@
 		{ id: 'verloren', label: 'Verloren oder gestohlen', hint: 'Noch offen' }
 	];
 
+	const PHASES: { id: WishItem['phase']; label: string; hint: string }[] = [
+		{ id: 'jetzt', label: 'Jetzt kaufen', hint: 'beim nächsten Händler' },
+		{ id: 'nach-saladin', label: 'Wenn Geld da ist', hint: 'nach dem Handel mit Saladin' },
+		{ id: 'saladin', label: 'Von Saladin', hint: 'Verhandlungsziele' }
+	];
+	const PRIO_ORDER: WishItem['priority'][] = ['kritisch', 'hoch', 'mittel', 'vorschlag', 'saladin'];
+	/** Offene zuerst, dann nach Priorität */
+	const wishes = (phase: WishItem['phase']) =>
+		inv.wishlist
+			.filter((w) => w.phase === phase)
+			.sort((a, b) => Number(!!a.done) - Number(!!b.done) || PRIO_ORDER.indexOf(a.priority) - PRIO_ORDER.indexOf(b.priority));
+	const target = (w: WishItem) => {
+		const stack = w.stack ? inv.items.find((x) => x.id === w.stack) : undefined;
+		if (stack) return `zu „${stack.name}“ (dann ${stack.qty + (w.qty ?? 1)})`;
+		return `unter „${GROUPS.find((g) => g.id === (w.group ?? 'koerper'))?.label}“`;
+	};
+
 	const PRIO: Record<WishItem['priority'], { label: string; color: string }> = {
 		kritisch: { label: 'Kritisch', color: 'var(--color-blood)' },
 		hoch: { label: 'Hoch', color: 'var(--color-warn)' },
@@ -110,7 +127,7 @@
 	// ---------- Wunschliste ----------
 	let buying = $state<WishItem | null>(null);
 	function buy(w: WishItem) {
-		const priceKm = (w.price ?? 0) * 100;
+		const priceKm = Math.round((w.price ?? 0) * 100);
 		const cur = inv.currency;
 		let km = cur.gm * 100 + cur.sm * 10 + cur.km - priceKm;
 		if (km < 0) return;
@@ -121,9 +138,12 @@
 			i.currency.km = km - i.currency.sm * 10;
 			const wi = i.wishlist.find((x) => x.id === w.id);
 			if (wi) wi.done = true;
-			i.items.push({ id: uid('item'), name: w.name, group: 'koerper', qty: 1, desc: w.why });
+			// Pfeile, Rationen, Tränke: zum vorhandenen Stapel, sonst als neuer Gegenstand
+			const stack = w.stack ? i.items.find((x) => x.id === w.stack) : undefined;
+			if (stack) stack.qty += w.qty ?? 1;
+			else i.items.push({ id: uid('item'), name: w.name, group: w.group ?? 'koerper', qty: w.qty ?? 1, desc: w.why });
 		});
-		rolls.event('Gekauft', `${w.name} für ${w.price} GM`, 'good');
+		rolls.event('Gekauft', `${w.name} für ${fmtGold(w.price ?? 0)} GM`, 'good');
 		buying = null;
 	}
 	function toggleDone(w: WishItem) {
@@ -172,7 +192,7 @@
 		</div>
 		<div class="mt-3 flex flex-wrap gap-2">
 			<input class="input num !h-9 w-20" type="number" min="0" placeholder="0" bind:value={txAmount} aria-label="Betrag" />
-			<select class="input !h-9 w-20" bind:value={txUnit} aria-label="Münze">
+			<select class="input !h-9 w-[5.5rem]" bind:value={txUnit} aria-label="Münze">
 				<option value="gm">GM</option><option value="sm">SM</option><option value="km">KM</option>
 			</select>
 			<button class="btn btn-danger btn-sm !h-9 flex-1" onclick={() => transaction(-1)}>Ausgeben</button>
@@ -181,40 +201,55 @@
 		<p class="mt-2 text-[0.7rem] text-ink-3">1 GM = 10 SM = 100 KM. Beim Ausgeben wird automatisch gewechselt.</p>
 	</section>
 
-	<!-- Wunschliste -->
+	<!-- Einkaufszettel -->
 	<section class="panel p-5 xl:col-span-2">
-		<div class="mb-3 flex items-center justify-between">
-			<div class="flex items-center gap-2"><ShoppingBag size={17} class="text-astral" /><h2 class="font-semibold">Wunschliste</h2></div>
-			<a class="text-xs text-ink-3 hover:text-ink" href="/archiv/einkauf">Ganze Liste und Strategie →</a>
+		<div class="flex items-center justify-between">
+			<div class="flex items-center gap-2"><ShoppingBag size={17} class="text-astral" /><h2 class="font-semibold">Einkaufszettel</h2></div>
+			<a class="text-xs text-ink-3 hover:text-ink" href="/archiv/einkauf">Strategie und Verhandlung →</a>
 		</div>
-		<div class="grid gap-2 md:grid-cols-2">
-			{#each inv.wishlist as w (w.id)}
-				{@const affordable = w.price !== undefined && w.price <= total}
-				<div class="rounded-xl border border-line bg-white/[0.02] p-3 {w.done ? 'opacity-50' : ''}">
-					<div class="flex items-start justify-between gap-2">
-						<div class="min-w-0">
-							<div class="flex flex-wrap items-center gap-1.5">
-								<span class="text-sm font-medium {w.done ? 'line-through' : ''}">{w.name}</span>
-								<span class="badge" style="--c: {PRIO[w.priority].color}">{PRIO[w.priority].label}</span>
-							</div>
-							<p class="mt-1 text-xs leading-relaxed text-ink-2">{w.why}</p>
-						</div>
-						<div class="shrink-0 text-right">
-							{#if w.price !== undefined}
-								<div class="num text-sm font-semibold">{w.priceText ?? `${w.price} GM`}</div>
-								<div class="text-[0.65rem] {affordable ? 'text-life' : 'text-ink-3'}">{affordable ? 'leistbar' : `fehlen ${fmtGold(w.price - total)} GM`}</div>
-							{:else}
-								<Gem size={14} class="text-gold" />
-							{/if}
-						</div>
-					</div>
-					<div class="mt-2 flex justify-end gap-1.5">
-						{#if !w.done && affordable && w.priority !== 'saladin'}<button class="btn btn-xs btn-primary" onclick={() => (buying = w)}>Kaufen</button>{/if}
-						<button class="btn btn-xs" onclick={() => toggleDone(w)}><Check size={11} />{w.done ? 'Wieder offen' : 'Erledigt'}</button>
-					</div>
+		{#each PHASES as ph (ph.id)}
+			{@const list = wishes(ph.id)}
+			{@const sum = list.filter((w) => !w.done).reduce((n, w) => n + (w.price ?? 0), 0)}
+			{#if list.length}
+				<div class="mt-5 mb-2 flex flex-wrap items-baseline justify-between gap-x-3">
+					<div class="eyebrow">{ph.label} <span class="tracking-normal normal-case">· {ph.hint}</span></div>
+					{#if sum > 0}
+						<span class="num text-xs {ph.id === 'jetzt' && sum > total ? 'text-warn' : 'text-ink-3'}">
+							offen {fmtGold(sum)} GM{ph.id === 'jetzt' ? ` · im Beutel ${fmtGold(total)} GM` : ''}
+						</span>
+					{/if}
 				</div>
-			{/each}
-		</div>
+				<div class="grid gap-2 md:grid-cols-2">
+					{#each list as w (w.id)}
+						{@const affordable = w.price !== undefined && w.price <= total}
+						<div class="flex flex-col rounded-xl border border-line bg-white/[0.02] p-3 {w.done ? 'opacity-50' : ''}">
+							<div class="flex items-start gap-3">
+								<div class="min-w-0 flex-1">
+									<div class="flex flex-wrap items-center gap-1.5">
+										<span class="text-sm font-medium {w.done ? 'line-through' : ''}">{w.name}</span>
+										<span class="badge" style="--c: {PRIO[w.priority].color}">{PRIO[w.priority].label}</span>
+									</div>
+									<p class="mt-1 text-xs leading-relaxed text-ink-2"><Markdown src={w.why} inline /></p>
+								</div>
+								<div class="max-w-[42%] shrink-0 text-right">
+									{#if w.price !== undefined}
+										<div class="num text-sm font-semibold">{w.priceText ?? `${fmtGold(w.price)} GM`}</div>
+										{#if !w.done}<div class="text-[0.65rem] {affordable ? 'text-life' : 'text-ink-3'}">{affordable ? 'leistbar' : `fehlen ${fmtGold(w.price - total)} GM`}</div>{/if}
+									{:else}
+										<Gem size={14} class="ml-auto text-gold" />
+										{#if w.priceText}<div class="mt-1 text-[0.65rem] text-ink-3">{w.priceText}</div>{/if}
+									{/if}
+								</div>
+							</div>
+							<div class="mt-auto flex justify-end gap-1.5 pt-2">
+								{#if !w.done && affordable && w.priority !== 'saladin'}<button class="btn btn-xs btn-primary" onclick={() => (buying = w)}>Kaufen</button>{/if}
+								<button class="btn btn-xs" onclick={() => toggleDone(w)}><Check size={11} />{w.done ? 'Wieder offen' : 'Erledigt'}</button>
+							</div>
+						</div>
+					{/each}
+				</div>
+			{/if}
+		{/each}
 	</section>
 </div>
 
@@ -301,8 +336,8 @@
 	{/snippet}
 </Modal>
 
-<Modal open={!!buying} title="Kaufen?" subtitle={buying ? `${buying.name} für ${buying.price} GM` : ''} onclose={() => (buying = null)}>
-	<p class="text-sm text-ink-2">Das Geld wird abgezogen (danach {fmtGold(total - (buying?.price ?? 0))} GM) und der Gegenstand landet unter „Am Körper“.</p>
+<Modal open={!!buying} title="Kaufen?" subtitle={buying ? `${buying.name} für ${buying.priceText ?? `${fmtGold(buying.price ?? 0)} GM`}` : ''} onclose={() => (buying = null)}>
+	<p class="text-sm text-ink-2">Das Geld wird abgezogen (danach {fmtGold(total - (buying?.price ?? 0))} GM), der Kauf landet {buying ? target(buying) : ''}.</p>
 	{#snippet footer()}
 		<button class="btn" onclick={() => (buying = null)}>Abbrechen</button>
 		<button class="btn btn-primary" onclick={() => buying && buy(buying)}>Kaufen</button>

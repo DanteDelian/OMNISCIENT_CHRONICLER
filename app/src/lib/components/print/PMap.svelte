@@ -32,7 +32,7 @@
 		{#each map.pins as p, i (p.id)}
 			<div class="avoid small" style="margin-bottom: 2mm; line-height: 1.38">
 				<b class="num" style="color: {KINDS[p.kind]?.color}">{i + 1}</b>
-				<b>{p.label}</b>{#if p.uncertain} <span class="muted">(unsicher)</span>{/if}
+				<b>{p.label}</b>{#if p.uncertain}{' '}<span class="muted">(unsicher)</span>{/if}
 				<span class="tiny muted">· {KINDS[p.kind]?.label}</span>
 				<div class="soft"><PMd src={p.text} inline /></div>
 				{#if p.link}<div class="tiny">→ <PMd src={`[[${p.link}]]`} inline /></div>{/if}

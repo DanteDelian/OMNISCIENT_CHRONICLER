@@ -140,7 +140,7 @@
 	<div class="cols-2" style="font-size: 8.8pt">
 		{#each features as f (f.id)}
 			<div class="avoid" id={printAnchor(`feature:${f.id}`)} style="margin-bottom: 2.4mm">
-				<h3 style="margin-top: 0">{f.name}{#if f.en} <i class="tiny muted" style="font-family: var(--font-sans); font-weight: 400">{f.en}</i>{/if}</h3>
+				<h3 style="margin-top: 0">{f.name}{#if f.en}{' '}<i class="tiny muted" style="font-family: var(--font-sans); font-weight: 400">{f.en}</i>{/if}</h3>
 				<div class="tiny muted" style="margin-bottom: 1mm">
 					{f.source} · {ECONOMY_LABEL[f.economy] ?? f.economy}{#if f.uses}
 						· {f.uses.max}× pro {f.uses.reset === 'long' ? 'langer' : 'kurzer'} Rast <span class="boxes" style="margin-left: 1mm">{#each Array(f.uses.max) as _, i (i)}<span class="cb" style="width: 2.8mm; height: 2.8mm"></span>{/each}</span>{/if}

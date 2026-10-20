@@ -5,10 +5,11 @@
 	import { printAnchor } from '$lib/markdown';
 	import { diceDe } from '$lib/rules';
 	import { ITEM_GROUPS, PHASE, PRIO } from '$lib/print';
+	import { fmtGold } from '$lib/format';
 
 	const inv = $derived(campaign.data.inventory);
 	const total = $derived(inv.currency.gm + inv.currency.sm / 10 + inv.currency.km / 100);
-	const phases = $derived([...new Set(inv.wishlist.map((w) => w.phase))]);
+	const phases = $derived((['jetzt', 'nach-saladin', 'saladin'] as const).filter((ph) => inv.wishlist.some((w) => w.phase === ph)));
 </script>
 
 <PDoc id="inventar" eyebrow="Inventar" title="Besitz und Pläne" subtitle="Alles, was Valerius trägt, lagert, verloren hat und noch kaufen will.">
@@ -28,7 +29,7 @@
 				<tbody>
 					{#each items as it (it.id)}
 						<tr id={printAnchor(`item:${it.id}`)}>
-							<td><b>{it.name}</b>{#if it.magic} <span class="pill" style="--c: var(--p-accent)">magisch</span>{/if}</td>
+							<td><b>{it.name}</b>{#if it.magic}{' '}<span class="pill" style="--c: var(--p-accent)">magisch</span>{/if}</td>
 							<td class="c num">{it.qty}</td>
 							<td>
 								{#if it.desc}<PMd src={it.desc} inline />{/if}
@@ -43,18 +44,18 @@
 	{/each}
 
 	{#if inv.wishlist.length}
-		<h2 class="avoid">Wunschliste <span class="count">{inv.wishlist.length} Einträge</span></h2>
+		<h2 class="avoid">Einkaufszettel <span class="count">{inv.wishlist.filter((w) => !w.done).length} offen · im Beutel {fmtGold(total)} GM</span></h2>
 		{#each phases as ph (ph)}
 			<h4>{PHASE[ph] ?? ph}</h4>
 			<table>
 				<thead><tr><th style="width: 5mm"></th><th style="width: 30%">Gegenstand</th><th style="width: 12%">Priorität</th><th class="r" style="width: 12%">Preis</th><th>Warum</th></tr></thead>
 				<tbody>
-					{#each inv.wishlist.filter((w) => w.phase === ph) as w (w.id)}
+					{#each inv.wishlist.filter((w) => w.phase === ph).sort((a, b) => Number(!!a.done) - Number(!!b.done)) as w (w.id)}
 						<tr>
 							<td><span class="cb" style="width: 2.8mm; height: 2.8mm; {w.done ? 'background: var(--p-ink)' : ''}"></span></td>
-							<td><b>{w.name}</b></td>
+							<td><b>{w.name}</b>{#if w.qty && w.qty > 1}{' '}<span class="tiny muted">× {w.qty}</span>{/if}</td>
 							<td>{PRIO[w.priority] ?? w.priority}</td>
-							<td class="r num">{w.priceText ?? (w.price != null ? `${w.price} GM` : '–')}</td>
+							<td class="r num">{w.priceText ?? (w.price != null ? `${fmtGold(w.price)} GM` : '–')}</td>
 							<td class="small"><PMd src={w.why} inline /></td>
 						</tr>
 					{/each}

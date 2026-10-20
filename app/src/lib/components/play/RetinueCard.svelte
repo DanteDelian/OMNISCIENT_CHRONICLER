@@ -80,8 +80,11 @@
 					<button onclick={() => renew(m.id)} title={m.renewed ? 'Kontrolle erneuert' : 'Kontrolle erneuern! (1 Minute, Grad-3-Platz für bis zu 4)'}>
 						{#if m.renewed}<CircleCheck size={15} class="text-life" />{:else}<CircleAlert size={15} class="text-warn" />{/if}
 					</button>
-					<span class="min-w-0 flex-1 truncate text-sm">{m.name}</span>
-					<div class="h-1.5 w-16 overflow-hidden rounded-full bg-white/[0.06]">
+					<span class="min-w-0 flex-1">
+						<span class="block truncate text-sm">{m.name}</span>
+						{#if m.gear}<span class="block truncate text-[0.68rem] text-ink-3" title={m.gear}>{m.gear}</span>{/if}
+					</span>
+					<div class="h-1.5 w-12 overflow-hidden rounded-full bg-white/[0.06]">
 						<div class="h-full rounded-full bg-s-nekro" style="width: {(m.hp / m.maxHp) * 100}%"></div>
 					</div>
 					<span class="num w-11 text-right text-xs">{m.hp}/{m.maxHp}</span>
@@ -93,7 +96,7 @@
 		</ul>
 	{:else}
 		<p class="rounded-lg border border-dashed border-line p-3 text-xs text-ink-3">
-			Noch keine Untoten eingetragen. Erweckte Skelette mit „Skelett“ hinzufügen, die Kontrolle hält 24 Stunden. Skelett: Kurzbogen +4, 1W6 + 2.
+			Noch keine Untoten eingetragen. Erweckte Skelette mit „Skelett“ hinzufügen, die Kontrolle hält 24 Stunden. Beim Erwecken bekommen sie ihre Waffen: erst den Kurzbogen, dann die Society-Dolche.
 		</p>
 	{/if}
 

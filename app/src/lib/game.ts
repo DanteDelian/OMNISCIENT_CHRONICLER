@@ -228,14 +228,21 @@ export function summonFamiliar(form: string) {
 
 export function addMinion(kind: Minion['kind']) {
 	const block = campaign.data.creatures.undead.find((u) => u.id === kind);
-	const n = st().minions.filter((m) => m.kind === kind).length + 1;
+	const same = st().minions.filter((m) => m.kind === kind);
+	// Die nächste Waffe aus der Ausrüstung, die noch kein anderer Untoter trägt
+	const free = [...(block?.loadout ?? [])];
+	for (const m of same) {
+		const i = free.findIndex((l) => l.item === m.gear);
+		if (i >= 0) free.splice(i, 1);
+	}
 	st().minions.push({
 		id: uid(kind),
 		kind,
-		name: `${block?.name ?? kind} ${n}`,
+		name: `${block?.name ?? kind} ${same.length + 1}`,
 		hp: block?.hp ?? 10,
 		maxHp: block?.hp ?? 10,
-		renewed: true
+		renewed: true,
+		gear: free[0]?.item
 	});
 	save();
 }

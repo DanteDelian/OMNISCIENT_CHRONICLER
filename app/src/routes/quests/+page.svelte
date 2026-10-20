@@ -133,7 +133,7 @@
 								<ul class="space-y-0.5 text-xs">
 									{#each hist as h (h.entry.id + h.change)}
 										<li class="flex gap-2">
-											<span class="num w-24 shrink-0 text-ink-3">{h.entry.date ? h.entry.dateLabel.replace('spätestens ', '≤ ') : h.entry.dateLabel}</span>
+											<span class="num shrink-0 whitespace-nowrap text-ink-3">{h.entry.date ? h.entry.dateLabel.replace('spätestens ', '≤ ') : h.entry.dateLabel}</span>
 											<a class="truncate text-ink-2 hover:text-astral" href="/journal#{h.entry.id}" data-ref="journal:{h.entry.id}"><b class="text-ink">{h.change}</b> · {h.entry.title}</a>
 										</li>
 									{/each}

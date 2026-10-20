@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Bird, Ghost, Skull, Users, Plus, Minus, X, CircleCheck, CircleAlert, Info, Trees } from '@lucide/svelte';
+	import { Bird, Ghost, Skull, Users, Plus, Minus, X, CircleCheck, CircleAlert, Info, Trees, Swords } from '@lucide/svelte';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import StatBlock from '$lib/components/StatBlock.svelte';
 	import Callout from '$lib/components/Callout.svelte';
@@ -7,6 +7,7 @@
 	import SourceChip from '$lib/components/SourceChip.svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { FAMILIAR_MATERIAL, addMinion, removeMinion, summonFamiliar } from '$lib/game';
+	import { diceDe, fmtMod } from '$lib/rules';
 
 	const s = $derived(campaign.data.state);
 	const cr = $derived(campaign.data.creatures);
@@ -47,20 +48,34 @@
 	{#if s.minions.length}
 		<div class="grid gap-2 md:grid-cols-2 xl:grid-cols-3">
 			{#each s.minions as m (m.id)}
-				<div class="sunken flex items-center gap-3 p-3">
-					<button onclick={() => minion(m.id, (x) => (x.renewed = !x.renewed))} title={m.renewed ? 'Kontrolle erneuert' : 'Kontrolle läuft aus! Erneuern: 1 Minute, Grad-3-Platz für bis zu 4'}>
-						{#if m.renewed}<CircleCheck size={18} class="text-life" />{:else}<CircleAlert size={18} class="text-warn" />{/if}
-					</button>
-					<input class="min-w-0 flex-1 bg-transparent text-sm font-medium outline-none" value={m.name} onchange={(e) => minion(m.id, (x) => (x.name = e.currentTarget.value))} aria-label="Name" />
-					<span class="num text-sm">{m.hp}/{m.maxHp}</span>
-					<button class="icon-btn !h-7 !w-7" onclick={() => minion(m.id, (x) => (x.hp = Math.max(0, x.hp - 1)))} aria-label="−1 TP"><Minus size={13} /></button>
-					<button class="icon-btn !h-7 !w-7" onclick={() => minion(m.id, (x) => (x.hp = Math.min(x.maxHp, x.hp + 1)))} aria-label="+1 TP"><Plus size={13} /></button>
-					<button class="icon-btn !h-7 !w-7" onclick={() => removeMinion(m.id)} aria-label="Entfernen"><X size={13} /></button>
+				{@const block = cr.undead.find((u) => u.id === m.kind)}
+				{@const act = block?.actions.find((a) => a.name === block.loadout?.find((l) => l.item === m.gear)?.action)}
+				<div class="sunken p-3">
+					<div class="flex items-center gap-3">
+						<button onclick={() => minion(m.id, (x) => (x.renewed = !x.renewed))} title={m.renewed ? 'Kontrolle erneuert' : 'Kontrolle läuft aus! Erneuern: 1 Minute, Grad-3-Platz für bis zu 4'}>
+							{#if m.renewed}<CircleCheck size={18} class="text-life" />{:else}<CircleAlert size={18} class="text-warn" />{/if}
+						</button>
+						<input class="min-w-0 flex-1 bg-transparent text-sm font-medium outline-none" value={m.name} onchange={(e) => minion(m.id, (x) => (x.name = e.currentTarget.value))} aria-label="Name" />
+						<span class="num text-sm">{m.hp}/{m.maxHp}</span>
+						<button class="icon-btn !h-7 !w-7" onclick={() => minion(m.id, (x) => (x.hp = Math.max(0, x.hp - 1)))} aria-label="−1 TP"><Minus size={13} /></button>
+						<button class="icon-btn !h-7 !w-7" onclick={() => minion(m.id, (x) => (x.hp = Math.min(x.maxHp, x.hp + 1)))} aria-label="+1 TP"><Plus size={13} /></button>
+						<button class="icon-btn !h-7 !w-7" onclick={() => removeMinion(m.id)} aria-label="Entfernen"><X size={13} /></button>
+					</div>
+					{#if block?.loadout?.length}
+						<div class="mt-2 flex items-center gap-2 border-t border-line pt-2 text-xs text-ink-3">
+							<Swords size={12} class="shrink-0" />
+							<select class="min-w-0 flex-1 truncate bg-transparent outline-none" value={m.gear ?? ''} onchange={(e) => minion(m.id, (x) => (x.gear = e.currentTarget.value || undefined))} aria-label="Waffe">
+								{#each [...new Set(block.loadout.map((l) => l.item))] as item (item)}<option value={item}>{item}</option>{/each}
+								<option value="">ohne Waffe</option>
+							</select>
+							{#if act}<span class="num shrink-0 text-ink-2">{fmtMod(act.bonus)} · {diceDe(act.damage)} {act.type}</span>{/if}
+						</div>
+					{/if}
 				</div>
 			{/each}
 		</div>
 	{:else}
-		<p class="text-sm text-ink-3">Noch keine Untoten erschaffen. Nach jeder langen Rast markiert das Grimoire sie als „Kontrolle erneuern“.</p>
+		<p class="text-sm text-ink-3">Noch keine Untoten erschaffen. Beim Erwecken bekommen sie ihre Waffen: erst den Kurzbogen, dann die beiden Society-Dolche. Nach jeder langen Rast markiert das Grimoire sie als „Kontrolle erneuern“.</p>
 	{/if}
 	<div class="mt-4 grid gap-3 md:grid-cols-3">
 		<Callout type="rule" title="24-Stunden-Kontrolle">Vor Ablauf erneut wirken (1 Minute, alle in 3 m). Ein Grad-3-Platz hält bis zu 4 Untote. Verfallene Untote sind frei und meist feindlich.</Callout>

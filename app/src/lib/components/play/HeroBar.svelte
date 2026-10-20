@@ -16,13 +16,13 @@
 	}
 
 	const stats = $derived([
-		{ label: 'Initiative', value: fmtMod(initiative(c)), icon: Zap, onclick: () => rolls.check('Initiative', initiative(c)), hint: 'Klicken = würfeln' },
-		{ label: 'Bewegung', value: `${c.speed} m`, icon: Footprints, hint: '30 Fuß' },
-		{ label: 'Übungsbonus', value: fmtMod(c.proficiencyBonus), icon: Star, hint: 'Übungsbonus' },
-		{ label: 'Zauber-SG', value: String(spellDc(c)), icon: Target, hint: '8 + ÜB + IN' },
-		{ label: 'Zauberangriff', value: fmtMod(spellAttack(c)), icon: Sparkles, onclick: () => rolls.check('Zauberangriff', spellAttack(c)), hint: 'Klicken = würfeln' },
-		{ label: 'Pass. Wahrnehmung', value: String(passivePerception(c, s)), icon: Eye, hint: '10 + Wahrnehmung' },
-		{ label: 'Dunkelsicht', value: `${c.darkvision} m`, icon: Moon, hint: '60 Fuß' }
+		{ label: 'Initiative', value: fmtMod(initiative(c)), icon: Zap, onclick: () => rolls.check('Initiative', initiative(c)), hint: 'Initiative · Klicken = würfeln' },
+		{ label: 'Bewegung', value: `${c.speed} m`, icon: Footprints, hint: 'Speed · 30 Fuß' },
+		{ label: 'Übungsbonus', value: fmtMod(c.proficiencyBonus), icon: Star, hint: 'Proficiency Bonus' },
+		{ label: 'Zauber-SG', value: String(spellDc(c)), icon: Target, hint: 'Spell Save DC · 8 + ÜB + IN' },
+		{ label: 'Zauberangriff', value: fmtMod(spellAttack(c)), icon: Sparkles, onclick: () => rolls.check('Zauberangriff (Spell Attack)', spellAttack(c)), hint: 'Spell Attack · Klicken = würfeln' },
+		{ label: 'Pass. Wahrnehmung', value: String(passivePerception(c, s)), icon: Eye, hint: 'Passive Perception · 10 + Wahrnehmung' },
+		{ label: 'Dunkelsicht', value: `${c.darkvision} m`, icon: Moon, hint: 'Darkvision · 60 Fuß' }
 	]);
 </script>
 
@@ -64,7 +64,7 @@
 				? 'border-astral-2/60 bg-astral-2/10'
 				: 'border-line-2 bg-white/[0.03] hover:border-white/20'}"
 			onclick={toggleShield}
-			title="Klicken: Schild an/aus (+5 RK bis zu deinem nächsten Zug)"
+			title="Armor Class · Klicken: Schild an/aus (+5 RK bis zu deinem nächsten Zug)"
 		>
 			<Shield size={15} class={s.shield ? 'text-astral-2' : 'text-ink-3'} />
 			<span class="num mt-0.5 text-[1.7rem] leading-tight font-semibold">{armorClass(c, s)}</span>
