@@ -15,7 +15,7 @@ updated: 2026-10-16
 
 | Wert | Zahl | Hinweis |
 | :-- | :-- | :-- |
-| Rüstungsklasse | **11** | mit *Schild* 16 |
+| Rüstungsklasse | **11** | mit *Schild* 16. Mit *Magierrüstung* (Plan) 14, mit *Schild* 19 |
 | Trefferpunkte | **36** | Trefferwürfel 5 × W6 (je W6 + 3, Ø 6,5) |
 | Initiative | **+1** | |
 | Bewegung | **9 m** | Sternenschritt +9 m Teleport |
@@ -56,21 +56,22 @@ Konzentration brauchen: [[Netz]], [[Schutz vor Gut und Böse]], [[Magie entdecke
 Konzentration endet außerdem, wenn du **kampfunfähig** wirst, stirbst oder einen anderen Konzentrationszauber wirkst.
 
 > [!TIP] **Konzentration schützen**
-> Bleib hinter Aella, mindestens 9 m von Nahkämpfern entfernt. Nutze *Schild* bei Ergebnissen von 11 bis 15. Wirf keine zweite Konzentration „aus Versehen“.
+> Bleib hinter Aella, mindestens 9 m von Nahkämpfern entfernt. Nutze *Schild* bei Ergebnissen von 11 bis 15 (mit *Magierrüstung* 14 bis 18). Wirf keine zweite Konzentration „aus Versehen“.
 
 ## Der Kampfablauf
 
 1. **Eröffnung:** [[Netz]] auf die dichteste Gegnergruppe, bevor sie die Frontlinie erreicht. Achte auf Halt: Wände, Bäume oder einfach den Boden.
-2. **Kontrolle:** Festgehaltene sind leichte Beute. Aella greift mit Vorteil an, Skelett-Pfeile auch.
+2. **Kontrolle:** Festgehaltene sind leichte Beute. Aella greift mit Vorteil an, deine Skelette auch.
 3. **Schaden:** [[Eismesser]] auf Gruppen (Nachteil auf ihren GE-Rettungswurf), [[Totenglocke]] auf Verletzte (2W12). **Kein Feuer ins Netz.**
-4. **Reaktionen:** [[Gegenzauber]] gegen Kontroll- und Fluchtzauber, [[Schild]] gegen Treffer mit 11 bis 15.
+4. **Reaktionen:** [[Gegenzauber]] gegen Kontroll- und Fluchtzauber, [[Schild]] gegen Treffer mit 11 bis 15 (mit *Magierrüstung* 14 bis 18).
 5. **Rückzug:** [[Sternenschritt]] 9 m weg, kein Zauber, kein Gegenzauber möglich.
 
 ## Kombos
 
 - **Netz → Eismesser:** Festgehaltene retten mit Nachteil gegen die Explosion.
-- **Netz → Skelett-Salve:** Alle Skelett-Pfeile gegen Festgehaltene mit Vorteil.
-- **Skelett-Pfeil → Totenglocke:** Das Ziel ist verletzt, die Totenglocke macht 2W12.
+- **Netz → Skelette:** Pfeil und Dolche gegen Festgehaltene mit Vorteil.
+- **Skelett trifft → Totenglocke:** Das Ziel ist verletzt, die Totenglocke macht 2W12.
+- **Dolch-Skelette als Leibwache:** Die beiden mit den Society-Dolchen bleiben neben dir. Wer dich im Nahkampf angreift, steht neben ihnen. Ein geworfener Dolch ist weg, bis jemand ihn aufhebt.
 - **Vertrauter späht → Botschaft an Aella → koordinierter Zugriff.**
 - **Vertrauter überbringt Berührungszauber:** [[Schutz vor Gut und Böse]] auf Aella, ohne dass du nach vorn musst.
 
@@ -111,7 +112,7 @@ Der Eisriese entspricht dem **Frostriesen** des Monsterhandbuchs.
 | [[Totenglocke]] wirkt (WE-Rettung) | 55 % | 75 % | 50 % | 70 % |
 | [[Sengender Strahl]], Ø Schaden | 15 | 17 | 13 | 17 |
 | [[Eismesser]] | nur der Stich, Kälte verpufft | voll | voll | voll |
-| Skelett-Pfeil trifft (Ziel im Netz) | 50 % (75 %) | 60 % (84 %) | 40 % (64 %) | 60 % (84 %) |
+| Skelett trifft mit Bogen oder Dolch (Ziel im Netz) | 50 % (75 %) | 60 % (84 %) | 40 % (64 %) | 60 % (84 %) |
 
 ### Was sie dir antun (RK 11, in Klammern mit [[Schild]] RK 16)
 
@@ -132,7 +133,7 @@ Der Eisriese entspricht dem **Frostriesen** des Monsterhandbuchs.
 3. **Engstellen nutzen.** Ein Riese braucht 4,5 × 4,5 m. Durch Tore und Gassen unter 3 m Breite muss er sich zwängen: Nachteil auf Angriffe und GE-Rettungswürfe. Ein *Netz* dort hält einen Eisriesen zu 94 %.
 4. **Schild gegen Riesen, nicht gegen Orcs.** Gegen einen Riesen senkt *Schild* die Trefferchance von 95 auf 70 %. Gegen einen Orc lohnt der Platz kaum.
 5. **Gegenzauber nur für Zauberer.** Riesen zaubern nicht. Heb deine Reaktion für *Schild* auf, außer der Orc-Schamane taucht wieder auf.
-6. **Skelette außer Reichweite.** Jeder Treffer eines Riesen zerstört ein Skelett (13 TP, Wucht zählt doppelt). Lass sie verteilt aus der Deckung schießen.
+6. **Skelette außer Reichweite.** Jeder Treffer eines Riesen zerstört ein Skelett (13 TP, Wucht zählt doppelt). Der Bogenschütze schießt aus der Deckung, die Dolch-Skelette bleiben als Leibwache bei dir und gehen nicht an die Riesen heran.
 7. **Aella vorn, du hinten.** Im Kampfrausch hat sie Resistenz gegen Hieb, Stich und Wucht und hält einen Riesen am längsten aus. [[Sternenschritt]] (1×) sparst du für die Flucht auf.
 
 ### Ideen für die Belagerung

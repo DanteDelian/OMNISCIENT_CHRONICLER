@@ -17,7 +17,7 @@ updated: 2026-10-19
 
 ## Was du nach der langen Rast brauchst
 - **Neuer Vertrauter:** Die Eule ist tot. Neu beschwören (Ritual, Material von der Kräuterfrau). Optionen unter **Gefolge**.
-- **Die 3 Skelette** vom Orc-Kampf lagern auf eurem Boot, vermummt als stumme Diener (Gewänder aus den Society-Uniformen und Orc-Kleidung). Laut DM tragen sie nur, was du ihnen gibst: Der Kurzbogen ist für eines, für die anderen bieten sich die Society-Dolche an. Erwecken: 1 pro Wirken mit Grad 3, danach alle 24 Stunden erneuern.
+- **Die 3 Skelette** vom Orc-Kampf lagern auf eurem Boot, vermummt als stumme Diener (Gewänder aus den Society-Uniformen und Orc-Kleidung). Laut DM tragen sie nur, was du ihnen gibst: Eines bekommt den Kurzbogen, die anderen beiden je einen Society-Dolch. Erwecken: 1 pro Wirken mit Grad 3, danach alle 24 Stunden erneuern.
 - **Astrale Trance:** Waffe oder Werkzeug wählen. Meist lohnt ein Werkzeug: das **Alchemistenwerkzeug**, denn ohne Trance hast du damit keine Übung, an Brautagen die Kräuterkundeausrüstung für Heiltränke. Den Kurzbogen bekommt ein Skelett.
 - **Ohrringe:** 1× pro Tag *Verständigung* mit Aella, falls sie ihr Stück trägt.
 - **Zauberplan:** *Magierrüstung*, *Nebelwolke*, *Spiegelbilder* und *Flammenkugel* für die 4 fehlenden Einträge, sobald der DM sie freigibt. Auf Stufe 6 *Hypnotisches Muster* und *Flutwelle*. Siehe [[Stufe-6-Planer]].

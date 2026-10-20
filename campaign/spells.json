@@ -42,7 +42,7 @@
     "synergies": [
       {
         "with": "Skelett",
-        "text": "Ein Skelett-Pfeil verletzt das Ziel, danach trifft deine Totenglocke mit dem W12."
+        "text": "Ein Treffer deiner Skelette verletzt das Ziel, danach trifft deine Totenglocke mit dem W12."
       },
       {
         "with": "Aella Rayann",
@@ -539,7 +539,7 @@
     "uses": [
       "Gegnergruppen festsetzen, bevor sie die Frontlinie erreichen.",
       "Rückzug sichern: Netz in einen Korridor oder zwischen Bäume legen.",
-      "Zusammen mit Skeletten: Die Pfeile treffen Festgehaltene mit Vorteil."
+      "Zusammen mit Skeletten: Pfeil und Dolche treffen Festgehaltene mit Vorteil."
     ],
     "rulings": [
       "Festgehalten durch Netz ist kein Zauber-Zustand. Ein Gegner kann sich mit seiner Aktion befreien, bleibt aber im schwierigen Gelände.",
@@ -558,7 +558,7 @@
       },
       {
         "with": "Skelett",
-        "text": "Skelett-Pfeile auf Festgehaltene haben Vorteil."
+        "text": "Deine Skelette greifen Festgehaltene mit Vorteil an, mit Bogen wie mit Dolch."
       },
       {
         "with": "Spinne",
@@ -647,10 +647,10 @@
     "source": "Spielerhandbuch 2014 (engl. S. 212) · SRD 5.1",
     "text": "Dieser Zauber erschafft einen untoten Diener. Wähle einen Knochenhaufen oder den Leichnam eines **mittelgroßen oder kleinen Humanoiden** in Reichweite. Dein Zauber erfüllt das Ziel mit einer widerwärtigen Nachahmung des Lebens und erhebt es als Untoten: aus **Knochen** wird ein **Skelett**, aus einem **Leichnam** ein **Zombie**. Die Werte hat der DM.\n\nIn jedem deiner Züge kannst du **als Bonusaktion** jeder Kreatur, die du mit diesem Zauber erschaffen hast und die höchstens **18 m** entfernt ist, gedanklich einen Befehl erteilen. Kontrollierst du mehrere, kannst du einigen oder allen gleichzeitig befehlen, dann aber jedem denselben Befehl. Du bestimmst, welche Aktion die Kreatur in ihrem nächsten Zug ausführt und wohin sie sich bewegt, oder gibst einen allgemeinen Befehl, etwa einen bestimmten Raum oder Gang zu bewachen. Ohne Befehl verteidigt sich die Kreatur nur gegen feindliche Kreaturen. Einen erhaltenen Befehl befolgt sie, bis die Aufgabe erledigt ist.\n\nDie Kreatur steht **24 Stunden** unter deiner Kontrolle, danach gehorcht sie keinem Befehl mehr. Um die Kontrolle um weitere 24 Stunden zu verlängern, musst du den Zauber erneut auf die Kreatur wirken, bevor die aktuellen 24 Stunden enden. So genutzt **erneuert der Zauber deine Kontrolle über bis zu vier** Kreaturen, die du mit diesem Zauber erschaffen hast, statt eine neue zu erschaffen.",
     "higher": "Mit einem Platz ab Grad 4 erschaffst du **pro Grad über dem 3. zwei zusätzliche Untote** oder erneuerst die Kontrolle über zwei weitere. Jede Kreatur muss aus einem anderen Leichnam oder Knochenhaufen stammen.",
-    "valerius": "Grad 3: 1 neuer Untoter **oder** Kontrolle über bis zu **4** erneuern · Befehl: **Bonusaktion**, 18 m · Skelett: RK 13, 13 TP, Kurzbogen +4, 1W6 + 2",
+    "valerius": "Grad 3: 1 neuer Untoter **oder** Kontrolle über bis zu **4** erneuern · Befehl: **Bonusaktion**, 18 m · Skelett: RK 13, 13 TP, Waffe laut DM nur, was du ihm gibst: Kurzbogen +4 (1W6 + 2) oder Dolch +4 (1W4 + 2)",
     "tips": [
       "**Ein Investitionszauber, kein Kampfzauber:** 1 Minute Wirkzeit, also vor dem Kampf wirken.",
-      "**Skelette sind besser als Zombies:** Ihr Kurzbogen (24/96 m) macht sie zur mobilen Artillerie aus der Deckung. Zombies sind langsame Trefferpunkte-Säcke.",
+      "**Skelette sind besser als Zombies:** Mit Bogen werden sie zur Artillerie aus der Deckung, mit Dolch zur stummen Leibwache. Laut DM tragen sie nur, was du ihnen gibst. Zombies sind langsame Trefferpunkte-Säcke.",
       "**Ein Befehl für alle:** Eine Bonusaktion steuert alle Untoten gleichzeitig, aber nur mit demselben Befehl. Allgemeine Befehle wie „Bewacht diesen Gang“ laufen ohne weitere Bonusaktionen.",
       "**Kontrolle nie verfallen lassen:** Nach 24 Stunden sind es freie Untote, und die sind meist feindlich. Der Gefolge-Bereich im Grimoire erinnert dich daran.",
       "**Erneuern dauert 1 Minute:** Am besten morgens in Ruhe. Die Untoten müssen dabei höchstens 3 m entfernt sein. Mit beiden Grad-3-Plätzen hältst du bis zu 8 Untote, hast dann aber keinen *Gegenzauber* mehr.",
@@ -683,11 +683,11 @@
     "synergies": [
       {
         "with": "Netz",
-        "text": "Skelett-Pfeile auf Festgehaltene haben Vorteil."
+        "text": "Deine Skelette greifen Festgehaltene mit Vorteil an, mit Bogen wie mit Dolch."
       },
       {
         "with": "Totenglocke",
-        "text": "Pfeile verletzen das Ziel, danach trifft die Totenglocke mit dem W12."
+        "text": "Treffer deiner Skelette verletzen das Ziel, danach trifft die Totenglocke mit dem W12."
       }
     ],
     "conflicts": [

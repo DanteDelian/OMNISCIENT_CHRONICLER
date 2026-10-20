@@ -153,7 +153,7 @@
       "name": "Dolch (Society-Beute)",
       "group": "beute",
       "qty": 3,
-      "desc": "Von den drei Magiern der Sorcerer Society. *Vorschlag:* je einen für die zwei Skelette ohne Bogen (+4, 1W4 + 2, Wurf 6/18 m), versteckt unter dem Gewand."
+      "desc": "Von den drei Magiern der Sorcerer Society. **Für deine Skelette** (laut dir, 19.10.2026): Zwei bekommen beim Erwecken je einen Dolch (+4, 1W4 + 2, Wurf 6/18 m), versteckt unter dem Gewand. Der dritte bleibt in Reserve."
     },
     {
       "id": "society-uniformen",
@@ -197,7 +197,7 @@
       "name": "Skelette aus dem Orc-Kampf",
       "group": "gelagert",
       "qty": 3,
-      "desc": "Beute vom 11.10.2026, eingelagert auf eurem Boot. Das Boot war mit Twee und Lucaz in der Stadt und ist mit der Verstärkung wieder bei euch. **Dein Plan:** stumme, vermummte Diener, die niemand auf den ersten Blick erkennt. Laut DM tragen sie nur, was du ihnen gibst: Der Kurzbogen ist für eines gedacht, *Vorschlag* für die anderen beiden sind die Society-Dolche.",
+      "desc": "Beute vom 11.10.2026, eingelagert auf eurem Boot. Das Boot war mit Twee und Lucaz in der Stadt und ist mit der Verstärkung wieder bei euch. **Dein Plan:** stumme, vermummte Diener, die niemand auf den ersten Blick erkennt. Laut DM tragen sie nur, was du ihnen gibst: Eines bekommt den Kurzbogen, die anderen beiden je einen Society-Dolch. Das Grimoire teilt die Waffen beim Erwecken zu.",
       "note": "Material für *Tote erwecken*: Orcs sind mittelgroße Humanoide, aus Knochen werden Skelette. Ein Wirken mit Grad 3 erweckt 1 Skelett. Mit beiden Grad-3-Plätzen und der Arkanen Erholung schaffst du alle 3 an einem Tag, hast dann aber keinen Gegenzauber mehr."
     },
     {
@@ -218,6 +218,59 @@
   ],
   "wishlist": [
     {
+      "id": "pfeile-40",
+      "name": "Pfeile",
+      "price": 2,
+      "qty": 40,
+      "stack": "pfeile",
+      "group": "verbrauch",
+      "priority": "hoch",
+      "phase": "jetzt",
+      "why": "Dein Bogen-Skelett hat nur 12 Pfeile, mit einem zweiten Schützen reicht das keinen Kampf. 20 Pfeile kosten 1 GM. Nach dem Kampf lässt sich die Hälfte der verschossenen wieder einsammeln."
+    },
+    {
+      "id": "koecher",
+      "name": "Köcher",
+      "price": 2,
+      "qty": 2,
+      "group": "gelagert",
+      "priority": "hoch",
+      "phase": "jetzt",
+      "why": "Einer pro Bogen-Skelett, je 1 GM. Ein Köcher fasst 20 Pfeile."
+    },
+    {
+      "id": "kurzbogen-2",
+      "name": "Kurzbogen für ein Dolch-Skelett",
+      "price": 25,
+      "qty": 1,
+      "stack": "kurzbogen",
+      "priority": "mittel",
+      "phase": "jetzt",
+      "why": "Dann schießt ein zweites Skelett aus der Deckung (+4, 1W6 + 2), sein Dolch bleibt für den Nahkampf. Später ein dritter. *Alternative:* leichte Armbrust zum selben Preis, 1W8 statt 1W6, braucht aber Bolzen. Ob Skelette sie führen dürfen, entscheidet der DM."
+    },
+    {
+      "id": "rationen-10",
+      "name": "Rationen",
+      "price": 5,
+      "qty": 10,
+      "stack": "rationen",
+      "group": "verbrauch",
+      "priority": "vorschlag",
+      "phase": "jetzt",
+      "why": "Du hast 13. Die Fahrt nach Norden und die Küste entlang nach Westen kann länger dauern. 10 Tage für 5 GM."
+    },
+    {
+      "id": "oel",
+      "name": "Öl in Flaschen",
+      "price": 0.5,
+      "priceText": "5 SM",
+      "qty": 5,
+      "group": "verbrauch",
+      "priority": "vorschlag",
+      "phase": "jetzt",
+      "why": "Billiger Brandbeschleuniger für die Holzstapel der Orcs, Fallen und Barrikaden. Ausgegossen und entzündet brennt es 2 Runden und macht 5 Feuerschaden."
+    },
+    {
       "id": "gute-kleidung",
       "name": "Gute Kleidung",
       "price": 15,
@@ -232,6 +285,34 @@
       "priority": "vorschlag",
       "phase": "jetzt",
       "why": "Für Heiltränke aus deinen 3 Heilkräutern (Xanathars: Kräuterkundeausrüstung). Erst mit dem DM klären, ob dein Alchemistenwerkzeug reicht."
+    },
+    {
+      "id": "heiltrank-kauf",
+      "name": "Heiltrank",
+      "price": 50,
+      "qty": 1,
+      "stack": "heiltrank",
+      "group": "verbrauch",
+      "priority": "hoch",
+      "phase": "nach-saladin",
+      "why": "Du hast 2. Jeder heilt 2W4 + 2 (Ø 7). Günstiger selbst gebraut, falls der DM die Kräuterkunde zulässt (25 GM pro Trank)."
+    },
+    {
+      "id": "rolle-magierruestung",
+      "name": "Spruchrolle: Magierrüstung",
+      "price": 100,
+      "priceText": "ca. 50–100 GM + 50 GM Abschreiben",
+      "priority": "vorschlag",
+      "phase": "nach-saladin",
+      "why": "Nur falls der DM die 4 fehlenden Einträge nicht gibt: RK 14 statt 11, dein wichtigstes Upgrade."
+    },
+    {
+      "id": "fokus-feenwesen",
+      "name": "Fokus für Feenwesen beschwören",
+      "price": 300,
+      "priority": "vorschlag",
+      "phase": "nach-saladin",
+      "why": "Eine vergoldete Blume für *Feenwesen beschwören*, wird nicht verbraucht. Nur sinnvoll, wenn der DM Tashas Kessel erlaubt."
     },
     {
       "id": "alchemistenwerkzeug",
@@ -257,15 +338,6 @@
       "priority": "hoch",
       "phase": "nach-saladin",
       "why": "Für Spruchrollen. Material je Rolle laut Xanathars: Grad 1 25 GM, Grad 2 250 GM, Grad 3 500 GM."
-    },
-    {
-      "id": "rolle-huette",
-      "name": "Spruchrolle: Leomunds winzige Hütte",
-      "price": 400,
-      "priceText": "250–500 GM + 150 GM Kopieren",
-      "priority": "mittel",
-      "phase": "nach-saladin",
-      "why": "Ritual-Verteidigung: Gruppe und Untote rasten sicher."
     },
     {
       "id": "nimmervoller-beutel",

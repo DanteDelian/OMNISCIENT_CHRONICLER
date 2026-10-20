@@ -422,7 +422,7 @@
       "name": "Skelett",
       "type": "Mittelgroßer Untoter",
       "ac": 13,
-      "acNote": "Rüstungsfetzen. Ohne Rüstung wohl 12 (10 + GE), Frage an den DM",
+      "acNote": "Rüstungsfetzen, ohne Rüstung 12",
       "hp": 13,
       "hpFormula": "2W8 + 4",
       "speed": "9 m",
@@ -467,6 +467,20 @@
           "damage": "1",
           "type": "Wucht",
           "range": "1,5 m"
+        }
+      ],
+      "loadout": [
+        {
+          "item": "Kurzbogen mit 12 Pfeilen",
+          "action": "Kurzbogen (wenn ausgerüstet)"
+        },
+        {
+          "item": "Society-Dolch",
+          "action": "Dolch (wenn ausgerüstet)"
+        },
+        {
+          "item": "Society-Dolch",
+          "action": "Dolch (wenn ausgerüstet)"
         }
       ],
       "verdict": "Fernkampf-Artillerie aus der Deckung. Entsteht aus **Knochen**. **Laut DM** tragen deine Skelette nur, was du ihnen gibst: Waffen, Rüstung, Kleidung."

@@ -82,7 +82,7 @@ updated: 2026-10-19
 
 ## D · Offene Fragen
 
-Die Fragen an den DM stehen gebündelt in der Quest **[[Offene Fragen an den DM]]**: fehlende Zauber, frühere und neue Skelette, Heiltränke, Riesenrune, Tukan, Ohrringe, Rassenmerkmale, Täuschen, Familie Lhaaz.
+Die offenen Fragen stehen gebündelt auf der **[[Rätselwand]]** und als Druckblatt „Fragen an den DM“: fehlende Zauber, Tashas Kessel, Heiltränke, Familie Lhaaz, frühere Skelette, Rüstung der Skelette, Tukan, Ohrringe, Rassenmerkmale, Täuschen und der Name der Fee.
 
 ### Geklärt am 19. Oktober 2026
 - **Familie Lhaaz:** Leons Vater ist der Erzherzog. Leonidas ist sein Bruder, Lisbeth seine Schwester und damit auch die Schwester von Leonidas.
@@ -90,7 +90,7 @@ Die Fragen an den DM stehen gebündelt in der Quest **[[Offene Fragen an den DM]
 - **Taya:** nach der Wiederbelebung verschwunden. Am Tisch hatte sich die Runde damals teilweise aufgelöst.
 - **Riesenrune:** ein Fluch (DM). Dagegen hilft [[Fluch brechen]], nicht *Magie bannen*.
 - **Gegnerwerte:** Der DM skaliert seine Gegner und verrät keine Werte. Die SRD-Zahlen im Grimoire sind Richtwerte.
-- **Skelette (DM):** Sie tragen nur, was du ihnen gibst. Der Kurzbogen ist für ein Skelett. Du hast sie mit Gewändern aus den Society-Uniformen und Orc-Kleidung vermummt.
+- **Skelette (DM):** Sie tragen nur, was du ihnen gibst. Eines bekommt den Kurzbogen, zwei je einen Society-Dolch. Du hast sie mit Gewändern aus den Society-Uniformen und Orc-Kleidung vermummt.
 - **Zauberplan:** von dir bestätigt (*Magierrüstung*, *Nebelwolke*, *Spiegelbilder*, *Flammenkugel*, auf Stufe 6 *Hypnotisches Muster* und *Flutwelle*).
 
 ### Geklärt am 16. Oktober 2026
@@ -116,13 +116,13 @@ Die Fragen an den DM stehen gebündelt in der Quest **[[Offene Fragen an den DM]
 ## E · Empfehlungen
 
 1. **RK 11 ist dein größtes Risiko.** [[Magierrüstung]] in einen freien Grad-1-Eintrag: RK 14 für 8 Stunden, mit *Schild* 19.
-2. **Identität:** [[Selbstverkleidung]] (Grad 1) für schnelle Tarnung, [[Gestalt verändern]] (Grad 2) für eine Tarnung, die auch Berührung übersteht.
+2. **Identität:** [[Selbstverkleidung]] (Grad 1) für schnelle Tarnung, [[Gestalt verändern]] (Grad 2) für eine Tarnung, die auch Berührung übersteht. In die fehlenden Einträge passen sie nicht mehr, dort steht dein Kampfplan. Also später über Spruchrollen oder ab Stufe 7.
 3. **Astrale Trance jeden Tag nutzen, meist für ein Werkzeug.** Das **Alchemistenwerkzeug** (ohne Trance hast du damit keine Übung), an Brautagen die Kräuterkundeausrüstung (Heiltränke, das Set fehlt dir noch) oder die Verkleidungsausrüstung (Identität). Den erbeuteten **Kurzbogen** bekommt eines deiner Skelette.
-4. **Konzentration ist dein Engpass.** *Netz*, *Schutz vor Gut und Böse* und *Magie entdecken* schließen sich gegenseitig aus, und dein KO-Rettungswurf ist nur +3. Zauber ohne Konzentration ([[Magierrüstung]], [[Unsichtbares sehen]], [[Tote erwecken]]) laufen parallel.
-5. **Deine Bonusaktion ist überbucht.** Sternenschritt, Untote befehligen und Diener befehligen konkurrieren. Plane pro Runde eins davon.
-6. **[[Schild]] nur bei einem Angriffsergebnis von 11 bis 15** wirken, sonst die Reaktion für *Gegenzauber* aufheben.
+4. **Konzentration ist dein Engpass.** *Netz*, *Schutz vor Gut und Böse*, *Magie entdecken* und aus dem Plan *Nebelwolke*, *Flammenkugel* und *Hypnotisches Muster* schließen sich gegenseitig aus, und dein KO-Rettungswurf ist nur +3. Zauber ohne Konzentration ([[Magierrüstung]], [[Spiegelbilder]], [[Flutwelle]], [[Tote erwecken]]) laufen parallel.
+5. **Deine Bonusaktion ist überbucht.** Sternenschritt, Untote befehligen, Diener befehligen und später die *Flammenkugel* bewegen konkurrieren. Plane pro Runde eins davon.
+6. **[[Schild]] nur bei einem Angriffsergebnis von 11 bis 15** wirken (mit *Magierrüstung* 14 bis 18), sonst die Reaktion für *Gegenzauber* aufheben.
 7. **Vertrauter für den Dschungel** (die Eule ist tot): [[Echse]] oder [[Frosch (Kröte)|Frosch]] fallen nicht auf und sind laut Zauber erlaubt. Ein Tukan oder Papagei mit den Werten des [[Rabe|Raben]] braucht die Zustimmung des DM. Die [[Eule]] bleibt der beste Kampfhelfer. Neu beschwören kostet 10 GM und 1 Stunde (als Ritual 1 Stunde 10 Minuten).
-8. **Zwei Vorbereitungsplätze sind frei** (7 von 9). Rituale (*Vertrauten finden*, *Unsichtbarer Diener*, *Magie entdecken*) musst du nicht vorbereiten. Neue Zauber aus den freien Einträgen passen also direkt hinein.
+8. **Die Vorbereitung wird knapp.** 7 von 9 Plätzen sind belegt, mit dem Zauberplan kommen 4 Zauber dazu. Fest vorbereiten: *Magierrüstung* und *Spiegelbilder*, dazu je nach Tag *Nebelwolke* oder *Flammenkugel* statt *Schutz vor Gut und Böse*. Rituale (*Vertrauten finden*, *Unsichtbarer Diener*, *Magie entdecken*) musst du nicht vorbereiten. Auf Stufe 6 hast du 10 Plätze.
 9. **Lisbeth als Chance (Theorie):** Sie weiß vermutlich nicht, dass „Graf Lhaaz“, wohl einer ihrer eigenen Brüder, ihren Tod bestellt hat. Und dass ihr sie gerettet habt, ist euer Kapital.
 10. **Dein Zauberplan** (Schaden, Kontrolle, Beschwörung) im [[Stufe-6-Planer]]: *Magierrüstung*, *Nebelwolke*, *Spiegelbilder* und *Flammenkugel* für die 4 fehlenden Einträge, *Hypnotisches Muster* und *Flutwelle* auf Stufe 6. Gegen die Riesenrunen hilft [[Fluch brechen]], denn laut DM sind sie ein Fluch.
 11. **Sternenschritt ist jetzt knapp** (1×). Halte ihn für die Flucht aus dem Nahkampf zurück, nicht für Positionswechsel.
