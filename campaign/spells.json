@@ -104,7 +104,7 @@
       "zauber-von-val",
       "charakterbogen-alt"
     ],
-    "card": "Ein **Ton** (Flüstern bis Schrei, dauerhaft oder in Abständen) **oder das Bild** eines Gegenstands bis 1,5-m-Würfel, 1 Minute lang. Das Bild macht keinen Ton, kein Licht, keinen Geruch. Wer es berührt, durchschaut es. Mit einer Aktion und **IN (Nachforschung) gegen deinen SG** erkennt man die Illusion."
+    "card": "Ein **Ton** (Flüstern bis Schrei, dauerhaft oder in Abständen) **oder das Bild** eines Gegenstands bis 1,5-m-Würfel, 1 Minute lang. Das Bild macht keinen Ton, kein Licht, keinen Geruch. Wer es berührt, durchschaut es. Mit einer Aktion und **IN (Nachforschung) gegen deinen SG** erkennt man die Illusion und sieht sie danach nur noch schwach. Endet als Aktion oder wenn du den Zauber neu wirkst."
   },
   {
     "id": "taschenspielerei",
@@ -147,7 +147,7 @@
       "charakterbogen-alt",
       "alchemie"
     ],
-    "card": "Ein kleiner Trick nach Wahl: harmloser Sinneseffekt (Funken, Windhauch, Musik, Geruch) · Kerze, Fackel oder Lagerfeuer an oder aus · Gegenstand bis 30 Liter säubern oder beschmutzen · bis 30 Liter Material kühlen, wärmen oder würzen (1 Std.) · Farbe, Zeichen oder Symbol (1 Std.) · Tand oder Trugbild in der Hand bis zum Ende deines nächsten Zuges. Bis zu **3 Effekte** gleichzeitig."
+    "card": "Ein kleiner Trick nach Wahl: harmloser Sinneseffekt (Funken, Windhauch, Musik, Geruch) · Kerze, Fackel oder Lagerfeuer an oder aus · Gegenstand bis 30 Liter säubern oder beschmutzen · bis 30 Liter Material kühlen, wärmen oder würzen (1 Std.) · Farbe, Zeichen oder Symbol (1 Std.) · Tand oder Trugbild in der Hand bis zum Ende deines nächsten Zuges. Bis zu **3 anhaltende Effekte** gleichzeitig, jeden beendest du als Aktion."
   },
   {
     "id": "botschaft",
@@ -163,7 +163,7 @@
     "components": "V, G, M (ein kurzes Stück Kupferdraht)",
     "duration": "1 Runde",
     "source": "Spielerhandbuch 2014 (engl. S. 259) · SRD 5.1",
-    "text": "Du zeigst mit dem Finger auf eine Kreatur in Reichweite und flüsterst eine Nachricht. Das Ziel, und nur das Ziel, hört die Nachricht und kann **flüsternd antworten**. Nur du hörst die Antwort.\n\nDu kannst den Zauber **durch feste Objekte** wirken, wenn du mit dem Ziel vertraut bist und weißt, dass es sich hinter der Barriere befindet. Magische Stille, 30 cm Stein, 2,5 cm gewöhnliches Metall, eine dünne Bleischicht oder 90 cm Holz oder Erde blockieren den Zauber. Er muss keiner geraden Linie folgen und kann frei um Ecken und durch Öffnungen wandern.",
+    "text": "Du zeigst mit dem Finger auf eine Kreatur in Reichweite und flüsterst eine Nachricht. Das Ziel, und nur das Ziel, hört die Nachricht und kann **flüsternd antworten**. Nur du hörst die Antwort.\n\nDu kannst den Zauber **durch feste Objekte** wirken, wenn du mit dem Ziel vertraut bist und weißt, dass es sich hinter der Barriere befindet. Magische Stille, 30 cm Stein, 2,5 cm gewöhnliches Metall, eine dünne Bleischicht oder 90 cm Holz blockieren den Zauber. Er muss keiner geraden Linie folgen und kann frei um Ecken und durch Öffnungen wandern.",
     "tips": [
       "**Wer dich beobachtet, merkt, dass du zauberst:** Du flüsterst und zeigst auf das Ziel (V, G). Den Inhalt hört nur das Ziel.",
       "**Die Antwort muss sofort kommen,** denn der Zauber hält nur 1 Runde.",
@@ -190,7 +190,7 @@
       "charakterbogen-alt",
       "kampagnen-log"
     ],
-    "card": "Du zeigst auf eine Kreatur und **flüsterst eine Nachricht**. Nur sie hört sie und kann **flüsternd antworten**, nur du hörst die Antwort. Um Ecken und durch Hindernisse nur, wenn du das Ziel kennst und weißt, dass es dahinter ist. Blockiert von Stille, 30 cm Stein, 2,5 cm Metall, Blei oder 90 cm Holz oder Erde."
+    "card": "Du zeigst auf eine Kreatur und **flüsterst eine Nachricht**. Nur sie hört sie und kann **flüsternd antworten**, nur du hörst die Antwort. Der Zauber wandert frei um Ecken und durch Öffnungen. **Durch feste Hindernisse** nur, wenn du das Ziel kennst und weißt, dass es dahinter ist. Blockiert von magischer Stille, 30 cm Stein, 2,5 cm Metall, dünnem Blei oder 90 cm Holz."
   },
   {
     "id": "vertrauten-finden",
@@ -261,7 +261,7 @@
       "kampagnen-log"
     ],
     "summary": "Geist in Tiergestalt. Späher, Helfer, überbringt Berührungszauber.",
-    "card": "**Ritual.** Ein Geist in Tiergestalt dient dir. Eigene Initiative, **kann nicht angreifen**. Telepathie bis 30 m. Per **Aktion** nimmst du durch seine Sinne wahr (selbst dann blind und taub). Per Aktion in die Taschendimension und zurück (9 m). Überbringt deine **Berührungszauber** mit seiner Reaktion. Bei 0 TP verschwindet er bis zum nächsten Wirken."
+    "card": "**Ritual.** Ein Geist in Tiergestalt (Himmlisches Wesen, Feenwesen oder Unhold) dient dir. Eigene Initiative, gehorcht dir, **kann nicht angreifen**. Telepathie bis 30 m. Per **Aktion** nimmst du durch seine Sinne wahr (selbst dann blind und taub). Per Aktion in die Taschendimension und zurück (9 m). Überbringt deine **Berührungszauber** bis 30 m mit seiner Reaktion. Bei 0 TP verschwindet er bis zum nächsten Wirken. Nur einer zugleich: Neu wirken gibt ihm eine neue Gestalt."
   },
   {
     "id": "unsichtbarer-diener",
@@ -282,7 +282,7 @@
     "valerius": "RK 10 · 1 TP · ST 2 · Befehl = **Bonusaktion** · höchstens 18 m von dir",
     "tips": [
       "**Ein Befehl, viele Runden:** Er arbeitet eine Aufgabe selbstständig ab, etwa „Trag die Kisten ins Lager“. Du musst nicht jede Runde neu befehlen.",
-      "**Als Ritual kostenlos:** 10 Minuten vorbereiten, kein Zauberplatz. Ideal vor jeder Erkundung.",
+      "**Als Ritual kostenlos:** 10 Minuten länger, kein Zauberplatz, keine Vorbereitung nötig. Ideal vor jeder Erkundung.",
       "**Fallen auslösen:** Türen öffnen, Hebel umlegen, an Seilen ziehen. Ob er schwer genug für eine Druckplatte ist, entscheidet der DM.",
       "**Unsichtbar ist nicht unverwundbar:** Gegner müssen ihn erst finden, ein Treffer reicht aber.",
       "**Nicht zu weit weg schicken:** über 18 m von dir endet der Zauber."
@@ -367,7 +367,7 @@
       "zauber-von-val",
       "charakterbogen-alt"
     ],
-    "card": "Eine bereitwillige Kreatur, die du berührst, ist geschützt vor **Aberrationen, Himmlischen, Elementaren, Feenwesen, Unholden und Untoten**: Ihre Angriffe haben **Nachteil**, und sie können das Ziel **nicht bezaubern, verängstigen oder besetzen**. Ist es schon betroffen, hat es Vorteil auf neue Rettungswürfe dagegen. Material wird verbraucht."
+    "card": "Eine bereitwillige Kreatur, die du berührst, ist geschützt vor **Aberrationen, Himmlischen, Elementaren, Feenwesen, Unholden und Untoten**: Ihre Angriffe haben **Nachteil**, und das Ziel kann von ihnen **nicht bezaubert, verängstigt oder besessen** werden. Ist es schon betroffen, hat es Vorteil auf neue Rettungswürfe dagegen. Material wird verbraucht."
   },
   {
     "id": "magie-entdecken",
@@ -580,7 +580,7 @@
       "kampagnen-log",
       "charakterbogen-alt"
     ],
-    "card": "Klebrige Netze füllen einen **6-m-Würfel**: schwieriges Gelände, leicht verschleiert. Sie brauchen Halt zwischen zwei festen Flächen oder liegen 1,5 m hoch auf dem Boden, sonst fallen sie zusammen. Wer seinen Zug darin beginnt oder es betritt, macht einen **GE-Rettungswurf**, sonst **festgesetzt**. Befreien: Aktion, **ST-Wurf gegen deinen SG**. Feuer verbrennt das Netz (2W4 Feuer für Kreaturen darin)."
+    "card": "Klebrige Netze füllen einen **6-m-Würfel**: schwieriges Gelände, leicht verschleiert. Ohne Halt zwischen zwei festen Flächen und ohne Auflage auf Boden, Wand oder Decke fallen sie zu Beginn deines nächsten Zuges zusammen. Aufgelegt sind sie 1,5 m dick. Wer seinen Zug darin beginnt oder sie betritt, macht einen **GE-Rettungswurf**, sonst ist er **festgehalten**, solange er darin bleibt. Befreien: Aktion, **ST-Wurf gegen deinen SG**. Feuer verbrennt jeden 1,5-m-Würfel in 1 Runde: 2W4 Feuer für alle, die ihren Zug darin beginnen."
   },
   {
     "id": "sengender-strahl",
@@ -611,7 +611,7 @@
     "source": "Spielerhandbuch 2014 (engl. S. 273) · SRD 5.1",
     "text": "Du erschaffst **drei Feuerstrahlen** und schleuderst sie auf Ziele in Reichweite. Du kannst sie auf ein Ziel oder auf mehrere richten. Mach für jeden Strahl einen **Fernkampf-Zauberangriff**. Bei einem Treffer erleidet das Ziel **2W6 Feuerschaden**.",
     "higher": "Mit einem Platz ab Grad 3 erschaffst du **pro Grad über dem 2. einen zusätzlichen Strahl**.",
-    "valerius": "Je Strahl **+7**, **2W6** (Ø 7) · alle drei: Ø 21, max. 36 · gegen RK 13 im Schnitt etwa 15,8 · Grad 3: 4 Strahlen",
+    "valerius": "Je Strahl **+7**, **2W6** (Ø 7) · alle drei: Ø 21, max. 36 · gegen RK 13 im Schnitt etwa 17 (mit kritischen Treffern) · Grad 3: 4 Strahlen",
     "tips": [
       "**Konzentration knacken:** Jeder getroffene Strahl erzwingt einen eigenen Konzentrationswurf. Drei Strahlen auf einen feindlichen Zauberer heißt drei Chancen, seinen Zauber zu brechen.",
       "**Nutzlos gegen Teufel:** Die meisten Teufel sind gegen Feuer immun. Dann lieber *Totenglocke*.",
@@ -812,7 +812,8 @@
       "**Vor dem Nahkampf wirken:** Es hält eine Minute, also meist den ganzen Kampf.",
       "**Wirkt nicht** gegen Wesen mit Blindsicht oder Wahrsicht und gegen Blinde."
     ],
-    "docs": []
+    "docs": [],
+    "card": "**Drei Abbilder** von dir, 1 Minute. Wirst du angegriffen, würfle einen W20: Bei 3 Abbildern trifft der Angriff mit **6+** ein Abbild, bei 2 mit **8+**, bei 1 mit **11+**. Ein Abbild hat RK 10 + deinen GE-Mod. und vergeht, wenn ein Angriff es trifft. Andere Schäden und Effekte ignoriert es. Endet, wenn alle drei weg sind, oder als Aktion. Wirkungslos gegen Kreaturen, die nicht sehen, Blindsicht nutzen oder Illusionen durchschauen."
   },
   {
     "id": "flammenkugel",
@@ -852,7 +853,8 @@
       "**Nicht neben eure Leute parken:** Wer seinen Zug neben der Kugel beendet, brennt, auch Aella.",
       "**Stark gegen Orcs, schwach gegen Riesen:** 2W6 sind für einen Orc viel, für einen Riesen mit über 100 TP wenig."
     ],
-    "docs": []
+    "docs": [],
+    "card": "Eine **Feuerkugel** (1,5 m Durchmesser) auf einem freien Feld. Wer seinen Zug **in 1,5 m** um sie beendet, macht einen **GE-Rettungswurf**: **2W6 Feuer**, bei Erfolg die Hälfte. **Bonusaktion:** bis 9 m bewegen. Rammst du eine Kreatur, macht sie den Rettungswurf, und die Kugel hält an. Springt über Hindernisse bis 1,5 m und Gruben bis 3 m. Entzündet lose Brennbares, Licht 6 m hell und 6 m dämmrig. Höhere Grade: +1W6 pro Grad über 2."
   },
   {
     "id": "magierruestung",
@@ -952,7 +954,7 @@
     ],
     "source": "Spielerhandbuch 2014 (engl. S. 282) · SRD 5.1",
     "text": "Eine Welle donnernder Kraft fegt von dir aus. Jede Kreatur in einem **4,5-m-Würfel**, der von dir ausgeht, muss einen **Konstitutionsrettungswurf** machen. Misslingt er, erleidet sie **2W8 Schallschaden** und wird **3 m von dir weggestoßen**. Gelingt er, erleidet sie den halben Schaden und wird nicht gestoßen.\n\nAußerdem werden nicht befestigte Gegenstände, die sich vollständig im Bereich befinden, automatisch 3 m von dir weggestoßen, und der Zauber erzeugt einen donnernden Knall, der bis zu **90 m** weit zu hören ist.",
-    "higher": "+1W8 Schall pro Grad über dem 1.",
+    "higher": "Mit einem Platz ab Grad 2 steigt der Schaden um **1W8** pro Grad über dem 1.",
     "valerius": "SG **15** · **2W8** (Ø 9) · Stoß 3 m",
     "why": "**Dein Notfallknopf, wenn Nahkämpfer dich erreichen.** Mit RK 11 bist du im Nahkampf verloren. Die Woge stößt alle in deiner Nähe 3 m weg, sogar **in dein Netz hinein**: Wer es betritt, muss sofort retten.",
     "slot": "jeden fehlenden Eintrag (bis Grad 1 oder bis Grad 2)",
@@ -1026,7 +1028,7 @@
     "components": "V, G",
     "duration": "Konzentration, bis zu 1 Stunde",
     "source": "Spielerhandbuch 2014 (engl. S. 211) · SRD 5.1",
-    "text": "Du nimmst eine andere Gestalt an. Wähle beim Wirken eine der folgenden Optionen. Ihre Wirkung hält bis zum Ende des Zaubers. Solange er andauert, kannst du eine Option als Aktion beenden und stattdessen die Vorteile einer anderen erhalten.\n\n**Anpassung an Wasser:** Dir wachsen Kiemen und Schwimmhäute zwischen den Fingern. Du kannst **unter Wasser atmen** und erhältst eine **Schwimmbewegung** in Höhe deiner normalen Bewegungsrate.\n\n**Aussehen verändern:** Du bestimmst dein Aussehen, einschließlich Größe, Gewicht, Gesichtszügen, Stimme, Haarlänge, Färbung und besonderer Merkmale. Du kannst wie ein Angehöriger eines anderen Volkes aussehen, deine Werte ändern sich aber nicht. Du kannst nicht wie eine Kreatur anderer Größenkategorie erscheinen, und deine Grundform bleibt gleich. Während der Wirkungsdauer kannst du dein Aussehen als Aktion erneut verändern.\n\n**Natürliche Waffen:** Dir wachsen Klauen, Reißzähne, Stacheln, Hörner oder eine andere natürliche Waffe deiner Wahl. Deine waffenlosen Angriffe verursachen **1W6** Wucht-, Stich- oder Hiebschaden, passend zur Waffe, und du bist darin geübt. Die natürliche Waffe ist magisch und gibt **+1** auf Angriff und Schaden.",
+    "text": "Du nimmst eine andere Gestalt an. Wähle beim Wirken eine der folgenden Optionen. Ihre Wirkung hält bis zum Ende des Zaubers. Solange er andauert, kannst du eine Option als Aktion beenden und stattdessen die Vorteile einer anderen erhalten.\n\n**Anpassung an Wasser:** Dir wachsen Kiemen und Schwimmhäute zwischen den Fingern. Du kannst **unter Wasser atmen** und erhältst eine **Schwimmbewegung** in Höhe deiner normalen Bewegungsrate.\n\n**Aussehen verändern:** Du bestimmst dein Aussehen, einschließlich Größe, Gewicht, Gesichtszügen, Stimme, Haarlänge, Färbung und besonderer Merkmale. Du kannst wie ein Angehöriger eines anderen Volkes aussehen, deine Werte ändern sich aber nicht. Du kannst nicht wie eine Kreatur anderer Größenkategorie erscheinen, und deine Grundform bleibt gleich: Gehst du auf zwei Beinen, kannst du mit diesem Zauber zum Beispiel nicht vierbeinig werden. Während der Wirkungsdauer kannst du dein Aussehen als Aktion erneut verändern.\n\n**Natürliche Waffen:** Dir wachsen Klauen, Reißzähne, Stacheln, Hörner oder eine andere natürliche Waffe deiner Wahl. Deine waffenlosen Angriffe verursachen **1W6** Wucht-, Stich- oder Hiebschaden, passend zur Waffe, und du bist darin geübt. Die natürliche Waffe ist magisch und gibt **+1** auf Angriff und Schaden.",
     "valerius": "Bis zu 1 Stunde · Konzentration",
     "why": "**Echte Verwandlung statt Illusion:** Anders als *Selbstverkleidung* hält sie Berührung und genauer Prüfung stand, ideal für eine dauerhafte neue Identität vor Lisbeth. Dazu **Wasseratmung und Schwimmen** für die Unterwasser-Mission und den Magischen Turm im See.",
     "slot": "einen freien Eintrag bis Grad 2",
@@ -1063,7 +1065,8 @@
       "**Eigene Leute wecken:** Ist doch jemand von euch betroffen, rüttelt ihn eine Aktion wach.",
       "**Konzentration:** nicht zusammen mit *Netz*. Gegen Gruppen das Muster, gegen anstürmende Einzelne das Netz."
     ],
-    "docs": []
+    "docs": [],
+    "card": "Ein Farbmuster wirbelt in einem **9-m-Würfel** und verschwindet. Jede Kreatur darin, die es **sieht**, macht einen **WE-Rettungswurf**, sonst ist sie für die Wirkungsdauer **bezaubert**: **kampfunfähig**, Bewegungsrate 0. Es endet für sie, wenn sie **Schaden** erleidet oder jemand anderes sie mit einer Aktion aus der Starre rüttelt."
   },
   {
     "id": "flutwelle",
@@ -1098,7 +1101,8 @@
       "**Fernkampf auf Liegende hat Nachteil:** Deine Skelette und dein *Sengender Strahl* zielen lieber auf Stehende.",
       "**Aus Xanathars Ratgeber,** wie dein *Eismesser*. Das Buch ist an eurem Tisch also im Spiel."
     ],
-    "docs": []
+    "docs": [],
+    "card": "Eine Welle stürzt auf einen Bereich in Reichweite, bis **9 m lang, 3 m breit und 3 m hoch**, die Größe wählst du. Jede Kreatur darin macht einen **GE-Rettungswurf**: **4W8 Wucht** und **liegend**, bei Erfolg die Hälfte und kein Sturz. Danach fließt das Wasser ab, löscht ungeschützte Flammen im Bereich und bis 9 m darum und verschwindet."
   },
   {
     "id": "blitz",
@@ -1211,7 +1215,7 @@
     "save": "WE, Wiederholung am Ende jedes Zuges",
     "source": "Spielerhandbuch 2014 (engl. S. 251) · SRD 5.1",
     "summary": "Ein Humanoider ist bei misslungenem WE-Rettungswurf gelähmt. Treffer aus 1,5 m sind automatisch kritisch.",
-    "text": "Wähle einen **Humanoiden** in Reichweite, den du sehen kannst. Das Ziel muss einen **Weisheitsrettungswurf** bestehen, sonst ist es für die Wirkungsdauer **gelähmt**. Am Ende jedes seiner Züge kann das Ziel einen weiteren Weisheitsrettungswurf ablegen. Bei einem Erfolg endet der Zauber für es.\n\n**Gelähmt:** Die Kreatur ist kampfunfähig, kann sich weder bewegen noch sprechen und scheitert automatisch an Stärke- und Geschicklichkeitsrettungswürfen. Angriffe gegen sie haben Vorteil, und **jeder Treffer eines Angreifers innerhalb von 1,5 m ist ein kritischer Treffer**.",
+    "text": "Wähle einen **Humanoiden** in Reichweite, den du sehen kannst. Das Ziel muss einen **Weisheitsrettungswurf** bestehen, sonst ist es für die Wirkungsdauer **gelähmt**. Am Ende jedes seiner Züge kann das Ziel einen weiteren Weisheitsrettungswurf ablegen. Bei einem Erfolg endet der Zauber für es.",
     "higher": "Wirkst du diesen Zauber mit einem Platz des 3. Grades oder höher, kannst du für jeden Grad über dem zweiten einen weiteren Humanoiden als Ziel wählen. Die Ziele dürfen beim Wirken höchstens 9 m voneinander entfernt sein.",
     "valerius": "SG **15** · 18 m · mit Grad 3 zwei Ziele · Konzentration. Orcs bleiben zu 70 % gelähmt stehen, Society-Magier zu etwa 50 %. **Wirkt nicht gegen Riesen:** Sie sind Riesen, keine Humanoiden.",
     "why": "**Mit Nahkämpfern verheerend:** Jeder Treffer aus 1,5 m gegen den Gelähmten ist automatisch kritisch, beim Paladin samt doppelter Smite-Würfel. Und du **fängst Gegner lebend**: den Orc-Schamanen, einen Society-Magier, einen Dieb. **Aber:** Nur Humanoide, keine Riesen, und ohne Nahkämpfer am Tisch nutzt du die Lähmung allein weniger. Darum steht es im Plan hinter *Flammenkugel*.",
@@ -1220,7 +1224,11 @@
       "**Gefesselt statt getötet:** Ein Gelähmter lässt sich in Ruhe fesseln. Danach in Twees Hütte verhören.",
       "**Nur Humanoide:** Orcs, Menschen, Elfen, Echsenmenschen ja. Riesen, Bestien und Untote nein."
     ],
-    "docs": []
+    "docs": [],
+    "rulings": [
+      "**Gelähmt** heißt: kampfunfähig, keine Bewegung, keine Sprache, Stärke- und Geschicklichkeitsrettungswürfe scheitern automatisch. Angriffe gegen das Ziel haben Vorteil, und **jeder Treffer aus höchstens 1,5 m ist ein kritischer Treffer**.",
+      "Der Rettungswurf am Ende jedes Zuges gilt für jedes Ziel einzeln."
+    ]
   },
   {
     "id": "donnerschritt",
@@ -1293,10 +1301,10 @@
     "range": "27 m (90 Fuß)",
     "components": "V, G, M (eine vergoldete Blume im Wert von mindestens 300 GM)",
     "duration": "Konzentration, bis zu 1 Stunde",
-    "source": "Tashas Kessel voller Allem und Spielerhandbuch 2024, in eigenen Worten",
+    "source": "Tashas Kessel voller Allem, in eigenen Worten. Das Spielerhandbuch 2024 enthält eine überarbeitete Fassung.",
     "summary": "Ein Feengeist kämpft für dich: teleportiert jede Runde, greift an und bezaubert, verwirrt oder trifft härter, je nach Stimmung.",
-    "text": "Du rufst einen **Feengeist** herbei, der auf einem freien Platz in Reichweite erscheint, den du sehen kannst. Beim Wirken wählst du eine Stimmung: **zornig**, **heiter** oder **listig**. Sie bestimmt eine seiner Fähigkeiten. Der Geist verschwindet bei 0 TP oder wenn der Zauber endet.\n\nEr ist dir und deinen Gefährten verbündet. Im Kampf handelt er direkt nach dir. Er gehorcht deinen gesprochenen Befehlen, ohne dass du dafür eine Aktion brauchst. Ohne Befehl weicht er aus und hält sich aus der Gefahr.\n\n**Feengeist** (kleines Feenwesen): RK 12 + Grad des Zaubers · TP 30, plus 10 für jeden Grad über dem dritten · Bewegung 12 m · ST 13, GE 16, KO 14, IN 14, WE 11, CH 16 · immun gegen Bezauberung · Dunkelsicht 18 m · versteht deine Sprachen.\n\n- **Angriffe:** halb so viele wie der Grad des Zaubers, abgerundet. **Kurzschwert:** Nahkampfangriff mit deinem Zauberangriffsbonus, Reichweite 1,5 m, Treffer 1W6 + 3 + Grad des Zaubers Stich plus 1W6 Energie.\n- **Feenschritt (Bonusaktion):** Er teleportiert sich bis zu 9 m an einen freien Ort, den er sieht. Danach je nach Stimmung: *zornig* Vorteil auf seinen nächsten Angriff in diesem Zug, *heiter* eine Kreatur im Umkreis von 3 m muss einen WE-Rettungswurf gegen deinen SG bestehen oder ist 1 Minute lang von dir und ihm bezaubert (endet bei Schaden), *listig* magische Dunkelheit in einem 3-m-Würfel neben ihm bis zum Ende seines nächsten Zuges.",
-    "higher": "Mit einem Platz höheren Grades steigen RK, Trefferpunkte, Schaden und die Zahl der Angriffe, wie im Wertblock angegeben.",
+    "text": "Du rufst einen **Feengeist** herbei. Er erscheint auf einem freien Platz in Reichweite, den du sehen kannst, und nimmt eine körperliche Gestalt mit dem Wertblock unten an. Beim Wirken wählst du eine Stimmung: **zornig**, **heiter** oder **listig**. Der Geist sieht aus wie ein Feenwesen deiner Wahl, dem man diese Stimmung ansieht, und sie bestimmt eine seiner Fähigkeiten. Er verschwindet bei 0 TP oder wenn der Zauber endet.\n\nEr ist dir und deinen Gefährten verbündet. Im Kampf teilt er deine Initiative, handelt aber direkt nach dir. Er gehorcht deinen gesprochenen Befehlen, ohne dass du dafür eine Aktion brauchst. Gibst du keinen Befehl, nutzt er die Aktion **Ausweichen** und bewegt sich aus der Gefahr.\n\n**Feengeist** (kleines Feenwesen): RK 12 + Grad des Zaubers (natürliche Rüstung) · TP 30, plus 10 für jeden Grad über dem dritten · Bewegung 12 m · ST 13, GE 16, KO 14, IN 14, WE 11, CH 16 · immun gegen den Zustand Bezaubert · Dunkelsicht 18 m, passive Wahrnehmung 10 · spricht Sylvanisch und versteht deine Sprachen · Übungsbonus wie deiner.\n\n- **Mehrfachangriff:** so viele Angriffe wie der halbe Grad des Zaubers, abgerundet.\n- **Kurzschwert:** Nahkampf-Waffenangriff mit deinem Zauberangriffsbonus, Reichweite 1,5 m, ein Ziel. Treffer: 1W6 + 3 + Grad des Zaubers Stichschaden plus 1W6 Energieschaden.\n- **Feenschritt (Bonusaktion):** Der Geist teleportiert sich magisch bis zu 9 m an einen freien Ort, den er sehen kann. Danach wirkt je nach Stimmung: *zornig*: Vorteil auf seinen nächsten Angriffswurf bis zum Ende dieses Zuges. *heiter*: Eine Kreatur, die er in 3 m sieht, macht einen Weisheitsrettungswurf gegen deinen Zauber-SG, sonst ist sie 1 Minute lang von dir und ihm bezaubert oder bis sie Schaden erleidet. *listig*: Er füllt einen 3-m-Würfel in höchstens 1,5 m Abstand mit magischer Dunkelheit, die bis zum Ende seines nächsten Zuges hält.",
+    "higher": "Mit einem Platz ab Grad 4 setzt du überall im Wertblock, wo der Grad des Zaubers steht, den höheren Grad ein.",
     "valerius": "Grad 3: RK 15, 30 TP, Kurzschwert **+7**, 1W6 + 6 Stich und 1W6 Energie (Ø 13), 9 m Teleport pro Runde · Konzentration bis 1 Stunde · Fokus **300 GM**, wird nicht verbraucht.",
     "why": "**Der stärkste Beschwörer-Zauber bis Grad 3:** ein eigener Kämpfer, der jede Runde teleportiert und Gegner flankiert. Bleibt eine ganze Stunde, also die ganze Schlacht. **Aber:** Der Fokus kostet 300 GM, du hast 47. Und er stammt aus Tashas Kessel beziehungsweise dem Spielerhandbuch 2024: vorher klären, ob euer DM ihn erlaubt.",
     "slot": "Stufe 6 (einer der 2 neuen Zauber bis Grad 3)",
@@ -1322,8 +1330,8 @@
     "duration": "Konzentration, bis zu 1 Minute",
     "save": "KO, sonst Aktion verloren",
     "source": "Spielerhandbuch 2014 (engl. S. 278) · SRD 5.1",
-    "summary": "Giftgaswolke mit 6 m Radius: Wer drin ist, verliert bei misslungenem KO-Rettungswurf seine Aktion. Stark verschleiert.",
-    "text": "Du erschaffst eine **Kugel mit 6 m Radius** aus gelbem, Übelkeit erregendem Gas um einen Punkt in Reichweite. Die Wolke breitet sich um Ecken aus, und ihr Bereich ist **komplett verschleiert**. Sie hängt für die Wirkungsdauer in der Luft.\n\nJede Kreatur, die sich zu Beginn ihres Zuges vollständig in der Wolke befindet, muss einen **Konstitutionsrettungswurf gegen Gift** ablegen. Bei einem Fehlschlag **verbringt sie ihre Aktion in diesem Zug mit Würgen und Taumeln**. Kreaturen, die nicht atmen müssen oder gegen Gift immun sind, bestehen diesen Rettungswurf automatisch.\n\nMäßiger Wind (mindestens 15 km/h) verweht die Wolke nach 4 Runden, starker Wind (mindestens 30 km/h) nach 1 Runde.",
+    "summary": "Giftgaswolke mit 6 m Radius: Wer drin ist, verliert bei misslungenem KO-Rettungswurf seine Aktion. Komplett verschleiert.",
+    "text": "Du erschaffst eine **Kugel mit 6 m Radius** aus gelbem, Übelkeit erregendem Gas um einen Punkt in Reichweite. Die Wolke breitet sich um Ecken aus, und ihr Bereich ist **komplett verschleiert**. Sie hängt für die Wirkungsdauer in der Luft.\n\nJede Kreatur, die sich zu Beginn ihres Zuges vollständig in der Wolke befindet, muss einen **Konstitutionsrettungswurf gegen Gift** ablegen. Bei einem Fehlschlag **verbringt sie ihre Aktion in diesem Zug mit Würgen und Taumeln**. Kreaturen, die nicht atmen müssen oder gegen Gift immun sind, bestehen diesen Rettungswurf automatisch.\n\nMäßiger Wind (mindestens 16 km/h) verweht die Wolke nach 4 Runden, starker Wind (mindestens 32 km/h) nach 1 Runde.",
     "valerius": "SG **15** · 27 m · Konzentration. Orcs verlieren zu 55 % ihre Aktion, Eisriesen nur zu 30 %.",
     "why": "**Beschwörung** (halber Abschreibpreis, lädt ab Stufe 6 *Gutartiges Versetzen* auf). Gegen Orc-Trupps und Society-Magier stark. **Deine Skelette sind immun gegen Gift** und kämpfen in der Wolke ungestört weiter.",
     "slot": "Stufe 6 (einer der 2 neuen Zauber bis Grad 3)",

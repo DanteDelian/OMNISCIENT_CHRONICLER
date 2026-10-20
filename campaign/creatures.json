@@ -336,6 +336,10 @@
           "text": "Außerhalb des Wassers 30 Minuten."
         },
         {
+          "name": "Wasseratmung",
+          "text": "Atmet nur unter Wasser."
+        },
+        {
           "name": "Unterwassertarnung",
           "text": "Vorteil auf Heimlichkeit unter Wasser."
         },

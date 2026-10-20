@@ -4,11 +4,11 @@ subtitle: Was falsch war, was korrigiert wurde und was noch offen ist
 icon: shield-check
 order: 1
 group: Prüfung
-updated: 2026-10-19
+updated: 2026-10-20
 ---
 # Prüfbericht
 
-**Stand: 19. Oktober 2026.** Abgeglichen wurden die 12 Dateien im Drive-Ordner *Valerius*, die 3 Dokumente im Ordner *Kho* (darunter dein Sessionbericht vom 12.10.2026), das alte Grimoire auf GitHub und die D&D-5e-Regeln (Spielerhandbuch 2014, Xanathars Ratgeber für alles, Spelljammer für den Astralelfen). Deine Antworten vom 12.10.2026 und dein [[Sessionbericht Juli bis Oktober 2026|Sessionbericht]] sind eingearbeitet.
+**Stand: 20. Oktober 2026.** Abgeglichen wurden die 12 Dateien im Drive-Ordner *Valerius*, die 3 Dokumente im Ordner *Kho* (darunter dein Sessionbericht vom 12.10.2026), das alte Grimoire auf GitHub und die D&D-5e-Regeln (Spielerhandbuch 2014, Xanathars Ratgeber für alles, Spelljammer für den Astralelfen). Deine Antworten vom 12.10.2026 und dein [[Sessionbericht Juli bis Oktober 2026|Sessionbericht]] sind eingearbeitet.
 
 > **Gemini-Entwürfe:** Die beiden „Optimiert“-Dokumente vom 10.10.2026 waren Vorschläge von Gemini und sind **nicht übernommen**. Ihre vier neuen Zauber (Nebelwolke, Spiegelbilder, Gedanken wahrnehmen, Fliegen) stehen nicht im Grimoire. Gemini hat auch in deinen älteren Dokumenten mitgeschrieben. Daher stammen viele der Fehler unten.
 
@@ -56,6 +56,13 @@ updated: 2026-10-19
 12. **Heiltränke brauen (Xanathars):** mit **Kräuterkundeausrüstung** (5 GM), nicht mit Alchemistenwerkzeug. 1 Tag und 25 GM pro Trank. Hat euer DM eigene „schnelle Regeln“, gelten die.
 13. **[[Magie entdecken]] zeigt Schulen.** „Teleportation“ ist keine Schule, Teleport-Zauber gehören zur Beschwörung. Vermutlich also Erkenntnismagie und Beschwörung, oder der DM hat es so formuliert.
 14. **[[Botschaft]] ist ein Zaubertrick** (Spielerhandbuch 2014 und 2024). Kurz stand im Raum, dass euer DM ihn als Grad-1-Zauber handhabt. Am 12.10.2026 geklärt: Zaubertrick.
+15. **Vollständigkeitsprüfung am 20.10.2026.** Alle 39 Zaubertexte, die Merkmale, die Vertrauten und die Regelreferenz sind Satz für Satz mit dem Spielerhandbuch 2014, Xanathars, Tashas Kessel und Spelljammer abgeglichen. Gekürzt war nichts Wesentliches, ergänzt oder berichtigt wurde:
+    - **[[Botschaft]]:** Blockiert wird der Zauber von 90 cm **Holz**. „Oder Erde“ gilt nur bei [[Magie entdecken]]. Um Ecken wandert er frei, nur durch feste Hindernisse gelten die Bedingungen.
+    - **Merkmale:** [[Arkane Erholung]] holt keine Plätze ab Grad 6 zurück. [[Ritualzauberei|Rituale]] gehen nicht auf höheren Graden. Bei [[Gutartiges Versetzen (ab Stufe 6)|Gutartiges Versetzen]] muss der Zielort sichtbar sein. Die [[Geringe Beschwörung]] erscheint auf einem freien Feld, das du siehst, und gibt dämmriges Licht. Bei der [[Dunkelsicht]] sind nur in der Dunkelheit alle Farben grau.
+    - **Vorschläge:** [[Feenwesen beschwören]] (ohne Befehl nutzt der Geist die Aktion *Ausweichen*, er spricht Sylvanisch), [[Person festhalten]] (Zustand Gelähmt vom Zaubertext getrennt), [[Stinkende Wolke]] (Wind ab 16 und 32 km/h), [[Gestalt verändern]] (Beispiel zur Grundform), [[Donnerwoge]] (höhere Grade).
+    - **[[Tintenfisch]]:** Die Wasseratmung fehlte.
+    - **Regelreferenz:** Ausweichen, Helfen, Verstecken, Vorbereiten, Materialkomponenten, Gelegenheitsangriff bei Teleport, Deckung, kritische Treffer, Packen und Stoßen, Sofortiger Tod, Stabilisieren und lange Rast sind jetzt vollständig.
+    - **Zauberkarten im Druck:** Nichts wird mehr abgeschnitten. Lange Texte haben eigene Kurzregeln, sonst wird die Schrift kleiner. Die sechs Empfehlungen haben schon fertige Karten.
 
 ### Nur in den Gemini-Entwürfen (zur Info)
 - *Gedanken wahrnehmen*: Tieferes Sondieren ist ein **WE**-Rettungswurf, nicht IN.

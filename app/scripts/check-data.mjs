@@ -185,6 +185,11 @@ if (s && d.character) {
 }
 const prepared = d.spells.filter((x) => x.status === 'buch' && x.level > 0 && x.prepared).length;
 if (prepared > d.character.spellcasting.preparedMax) warnings.push(`spells.json: ${prepared} vorbereitet, erlaubt sind ${d.character.spellcasting.preparedMax}`);
+// Zauberkarten im Druck: Lange Regeltexte brauchen eigene Kurzregeln (card), sonst wird die Schrift winzig
+for (const s of d.spells.filter((x) => x.status === 'buch' && !x.card)) {
+	const plain = s.text.replace(/\*|\[\[(?:[^\]|]*\|)?|\]\]/g, '');
+	if (plain.length > 650) warnings.push(`spells.json ${s.id}: langer Regeltext ohne „card“ für die Zauberkarte`);
+}
 
 console.log(`Index: ${index.length} Einträge · Zauber ${d.spells.length} · Welt ${d.world.length} · Dokumente ${d.docs.length} · Journal ${d.journal.length} · Quests ${d.quests.length} · Stammbäume ${d.trees.length} · Fragen ${d.fragen.length} · Netzwerk ${d.netzwerk.agents.length}`);
 for (const w of warnings) console.log(`  Hinweis: ${w}`);

@@ -106,7 +106,7 @@
         "reset": "long"
       },
       "summary": "1× pro Tag nach einer kurzen Rast: Plätze mit zusammen höchstens 3 Graden zurück.",
-      "text": "**Einmal pro Tag**, wenn du eine **kurze Rast** beendest, erhältst du verbrauchte Zauberplätze zurück, deren Grade zusammen höchstens **3** ergeben (die Hälfte deiner Stufe, aufgerundet). Zum Beispiel 1 × Grad 3 oder 1 × Grad 2 + 1 × Grad 1.",
+      "text": "Du gewinnst einen Teil deiner magischen Kraft zurück, indem du in deinem Zauberbuch studierst. **Einmal pro Tag**, wenn du eine **kurze Rast** beendest, wählst du verbrauchte Zauberplätze, deren Grade zusammen höchstens **3** ergeben (die Hälfte deiner Stufe, aufgerundet). Kein Platz darf Grad 6 oder höher haben. Zum Beispiel 1 × Grad 3, 1 × Grad 2 + 1 × Grad 1 oder 3 × Grad 1.",
       "en": "Arcane Recovery"
     },
     {
@@ -119,7 +119,7 @@
         "reset": "long"
       },
       "summary": "1× pro Tag *Verständigung*: bis zu 25 Wörter an den Träger des anderen Ohrrings, Antwort sofort, Entfernung egal.",
-      "text": "Das Ohrring-Paar ist mit dem Zauber ***Verständigung*** belegt (engl. *Sending*, Grad 3, Hervorrufung) und lässt sich **1× pro Tag** nutzen. Jeder Träger braucht eines der beiden Stücke.\n\n**Wirkung (Spielerhandbuch 2014 / SRD 5.1):** Du sendest eine Nachricht von **höchstens 25 Wörtern** an den Träger des anderen Ohrrings. Er hört sie in seinem Kopf, erkennt dich als Absender und kann **sofort auf dieselbe Weise antworten**. Die Entfernung spielt keine Rolle. Ist der Empfänger auf einer anderen Existenzebene, kommt die Nachricht mit 5 % Wahrscheinlichkeit nicht an.\n\nAls Zauber: Zeitaufwand 1 Aktion, Wirkungsdauer 1 Runde. Ob das bei den Ohrringen genauso gilt, entscheidet der DM. Der zweite Ohrring ist für Aella gedacht.",
+      "text": "Das Ohrring-Paar ist mit dem Zauber ***Verständigung*** belegt (engl. *Sending*, Grad 3, Hervorrufung) und lässt sich **1× pro Tag** nutzen. Jeder Träger braucht eines der beiden Stücke.\n\n**Wirkung (Spielerhandbuch 2014 / SRD 5.1):** Du sendest eine Nachricht von **höchstens 25 Wörtern** an den Träger des anderen Ohrrings. Er hört sie in seinem Kopf, erkennt dich als Absender, wenn er dich kennt, und kann **sofort auf dieselbe Weise antworten**. Jede Kreatur mit einer Intelligenz von mindestens 1 versteht, was du meinst. Die Entfernung spielt keine Rolle. Ist der Empfänger auf einer anderen Existenzebene, kommt die Nachricht mit 5 % Wahrscheinlichkeit nicht an.\n\nAls Zauber: Zeitaufwand 1 Aktion, Wirkungsdauer 1 Runde. Ob das bei den Ohrringen genauso gilt, entscheidet der DM. Der zweite Ohrring ist für Aella gedacht.",
       "note": "Geklärt am 12.10.2026: Die Ohrringe tragen *Verständigung*, nicht *Botschaft*. „Pro Tag“ ist hier an die lange Rast gekoppelt."
     },
     {
@@ -128,7 +128,7 @@
       "source": "Schule der Beschwörung",
       "economy": "aktion",
       "summary": "Aktion: einen nichtmagischen Gegenstand (≤ 90 cm, ≤ 5 kg) für 1 Stunde erschaffen.",
-      "text": "Als **Aktion** erschaffst du in deiner Hand oder auf dem Boden in 3 m einen unbelebten Gegenstand: höchstens **90 cm** Kantenlänge und **5 kg (10 Pfund)**, in der Form eines nichtmagischen Gegenstands, den du schon gesehen hast. Er ist **sichtbar magisch** und leuchtet schwach (1,5 m). Er verschwindet nach **1 Stunde**, wenn er Schaden nimmt oder wenn du das Merkmal erneut nutzt.",
+      "text": "Als **Aktion** beschwörst du einen unbelebten Gegenstand in deine Hand oder auf den Boden, auf ein freies Feld in höchstens **3 m**, das du sehen kannst. Er misst höchstens **90 cm** an jeder Seite, wiegt höchstens **5 kg (10 Pfund)** und hat die Form eines nichtmagischen Gegenstands, den du schon gesehen hast. Er ist **sichtbar magisch** und verbreitet im Umkreis von 1,5 m dämmriges Licht. Er verschwindet nach **1 Stunde**, wenn er Schaden erleidet oder wenn du das Merkmal erneut nutzt.",
       "note": "Achtung für die Unsichtbare Hand: Das Objekt leuchtet und ist klar als magisch erkennbar.",
       "en": "Minor Conjuration"
     },
@@ -138,7 +138,7 @@
       "source": "Astralelf",
       "economy": "passiv",
       "summary": "Kein Schlaf, lange Rast in 4 Stunden. Danach täglich Übung mit 1 Waffe oder 1 Werkzeug.",
-      "text": "Du brauchst keinen Schlaf, und **Magie kann dich nicht einschläfern**. Eine lange Rast schaffst du in **4 Stunden** Trance, bei Bewusstsein.\n\nNach jeder Trance erhältst du bis zum Ende deiner nächsten langen Rast Übung mit **einer Waffe oder einem Werkzeug** deiner Wahl.",
+      "text": "Du brauchst keinen Schlaf, und **Magie kann dich nicht einschläfern**. Eine lange Rast schaffst du in **4 Stunden** Trance, bei Bewusstsein.\n\nNach jeder Trance erhältst du bis zum Ende deiner nächsten langen Rast Übung mit **einer Waffe oder einem Werkzeug** deiner Wahl aus dem Spielerhandbuch.",
       "note": "Hausregel eures DM (12.10.2026): **keine Fertigkeit**. Laut Spelljammer käme eine Fertigkeit dazu. Die tägliche Wahl stellst du auf dem Spieltisch ein.",
       "en": "Astral Trance"
     },
@@ -166,8 +166,8 @@
       "name": "Dunkelsicht",
       "source": "Astralelf",
       "economy": "passiv",
-      "summary": "18 m: Dämmerlicht wie hell, Dunkelheit wie dämmrig (nur Grautöne).",
-      "text": "Im Umkreis von **18 m (60 ft)** siehst du dämmriges Licht wie helles und Dunkelheit wie dämmriges Licht, allerdings nur in Grautönen.",
+      "summary": "18 m: Dämmerlicht wie hell, Dunkelheit wie dämmrig (dort nur Grautöne).",
+      "text": "Im Umkreis von **18 m (60 ft)** siehst du dämmriges Licht wie helles und Dunkelheit wie dämmriges Licht. In der Dunkelheit erkennst du Farben nur als Grautöne.",
       "note": "Fehlte auf allen Bögen.",
       "en": "Darkvision"
     },
@@ -177,7 +177,7 @@
       "source": "Magier",
       "economy": "passiv",
       "summary": "Ritualzauber aus dem Buch ohne Vorbereitung wirken (+10 Minuten, kein Platz).",
-      "text": "Zauber mit dem Ritual-Merkmal, die in deinem Zauberbuch stehen, kannst du als Ritual wirken, **ohne sie vorzubereiten**. Die Wirkzeit verlängert sich um 10 Minuten, ein Zauberplatz wird nicht verbraucht: *Vertrauten finden*, *Unsichtbarer Diener*, *Magie entdecken*.",
+      "text": "Zauber mit dem Ritual-Merkmal, die in deinem Zauberbuch stehen, kannst du als Ritual wirken, **ohne sie vorzubereiten**. Die Wirkzeit verlängert sich um 10 Minuten, ein Zauberplatz wird nicht verbraucht, darum geht ein Ritual auch nicht auf einem höheren Grad: *Vertrauten finden*, *Unsichtbarer Diener*, *Magie entdecken*.",
       "en": "Ritual Casting"
     },
     {
@@ -196,7 +196,7 @@
       "economy": "aktion",
       "upcoming": true,
       "summary": "Ausblick: Aktion, bis 9 m teleportieren oder Platz mit einem Verbündeten tauschen.",
-      "text": "Ab **Stufe 6**: Als Aktion teleportierst du dich bis zu 9 m an einen freien Ort oder tauschst den Platz mit einer bereitwilligen kleinen oder mittelgroßen Kreatur. Danach erst wieder nach einer langen Rast oder sobald du einen Beschwörungszauber ab Grad 1 wirkst.",
+      "text": "Ab **Stufe 6**: Als **Aktion** teleportierst du dich bis zu **9 m** an einen freien Ort, den du sehen kannst. Stattdessen kannst du auch einen Ort in dieser Reichweite wählen, an dem eine **kleine oder mittelgroße Kreatur** steht. Ist sie bereit, teleportiert ihr beide und tauscht die Plätze. Danach geht es erst wieder, wenn du eine lange Rast beendest **oder einen Beschwörungszauber ab Grad 1 wirkst**.",
       "en": "Benign Transposition"
     }
   ],
