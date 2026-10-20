@@ -3,6 +3,7 @@
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { TRANCE_TOOLS } from '$lib/rules';
 	import { ui } from '$lib/stores/ui.svelte';
+	import { page } from '$app/state';
 
 	const s = $derived(campaign.data.state);
 
@@ -23,5 +24,5 @@
 <p class="mt-2 text-xs leading-relaxed text-ink-3">
 	Hausregel eures DM: nur Waffe oder Werkzeug, keine Fertigkeit. Die Übung hält bis zum Ende deiner nächsten langen Rast. Tipps: Alchemistenwerkzeug für
 	Alchemistenfeuer und Säure, Kräuterkundeausrüstung für Heiltränke, Holzschnitzwerkzeug für bis zu 20 Pfeile pro Rast, Verkleidungsausrüstung für eine neue
-	Identität. Mehr in der <a class="text-astral hover:underline" href="/werkstatt" onclick={() => (ui.rest = null)}>Werkstatt</a>.
+	Identität.{#if page.url.pathname !== '/werkstatt'}{' '}Mehr in der <a class="text-astral hover:underline" href="/werkstatt" onclick={() => (ui.rest = null)}>Werkstatt</a>.{/if}
 </p>

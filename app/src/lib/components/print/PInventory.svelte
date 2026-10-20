@@ -79,12 +79,12 @@
 
 	<h2 class="avoid">Werkstatt <span class="count">eine Herstellung pro langer Rast · Übung aus der Astralen Trance</span></h2>
 	<table>
-		<thead><tr><th style="width: 18%">Erzeugnis</th><th style="width: 19%">Werkzeug</th><th style="width: 11%">Zeit</th><th class="r" style="width: 10%">Zutaten</th><th class="r" style="width: 10%">Wert</th><th>Regeln</th></tr></thead>
+		<thead><tr><th style="width: 13%">Erzeugnis</th><th style="width: 15%">Werkzeug</th><th style="width: 9%">Zeit</th><th class="r" style="width: 8%">Zutaten</th><th class="r" style="width: 7%">Wert</th><th>Regeln</th></tr></thead>
 		<tbody>
 			{#each RECIPES as r (r.id)}
 				<tr>
 					<td><b>{r.name}</b>{#if r.yield > 1}{' '}<span class="tiny muted">bis {r.yield}</span>{/if}</td>
-					<td>{r.tool}</td>
+					<td style="hyphens: auto">{r.tool}</td>
 					<td>{r.time === 'tag' ? '1 Tag Arbeit' : 'lange Rast'}</td>
 					<td class="r num">{price(r.cost)}</td>
 					<td class="r num">{price(r.value * r.yield)}</td>
