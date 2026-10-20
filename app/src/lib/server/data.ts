@@ -11,6 +11,7 @@ import type {
 	JournalEntry,
 	MapData,
 	Network,
+	SpellSets,
 	PlayState,
 	Quest,
 	Question,
@@ -99,7 +100,8 @@ export function loadCampaign(): CampaignData {
 		world: loadWorld(),
 		trees: readJson<{ trees: FamilyTree[] }>('stammbaum.json', { trees: [] }).trees ?? [],
 		fragen: readJson<Question[]>('fragen.json', []),
-		netzwerk: { roles: [], agents: [], ...readJson<Partial<Network>>('netzwerk.json', {}) }
+		netzwerk: { roles: [], agents: [], ...readJson<Partial<Network>>('netzwerk.json', {}) },
+		zaubersets: { sets: [], ...readJson<Partial<SpellSets>>('zaubersets.json', {}) }
 	};
 	const index = buildIndex(base);
 	const data: CampaignData = { ...base, index, backlinks: buildBacklinks(base, index) };

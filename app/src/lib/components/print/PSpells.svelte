@@ -5,6 +5,7 @@
 	import { cantripsKnown, fmtMod, slotTotals, spellAttack, spellDc, wizardPicks } from '$lib/rules';
 	import { printAnchor } from '$lib/markdown';
 	import { SCHOOL_PRINT } from '$lib/print';
+	import { planSet } from '$lib/sets';
 
 	const c = $derived(campaign.data.character);
 	const all = $derived(campaign.data.spells);
@@ -16,6 +17,7 @@
 	const free = $derived(picks.reduce((n, g) => n + g.total - g.used, 0));
 	const prepared = $derived(book.filter((s) => s.level > 0 && s.prepared).length);
 	const levels = $derived([...new Set(book.map((s) => s.level))]);
+	const sets = $derived(campaign.data.zaubersets.sets.map((set) => ({ set, plan: planSet(set, all, c.spellcasting.preparedMax) })));
 </script>
 
 <PDoc id="zauber" refs={['page:zauber']} eyebrow="Zauberbuch" title="Valerius' Grimoire" subtitle="Alle Zauber im Buch mit vollständigem Regeltext (Spielerhandbuch 2014 / SRD 5.1), deinen Werten, Tipps und Korrekturen.">
@@ -50,6 +52,23 @@
 		</tbody>
 	</table>
 	<p class="tiny muted" style="margin-top: 1mm">K = Konzentration · R = Ritual (als Magier ohne Vorbereitung direkt aus dem Buch, +10 Minuten) · ZT = Zaubertrick</p>
+
+	{#if sets.length}
+		<h2>Zauber-Sets für den Tag</h2>
+		<p class="soft">Vorbereitet wird von oben, bis die Grenze von {c.spellcasting.preparedMax} erreicht ist: nach einer langen Rast, 1 Minute Studium pro Grad. Rituale und Zaubertricks brauchen keine Vorbereitung. <i>Kursiv</i> = noch nicht im Buch (Plan).</p>
+		<table>
+			<thead><tr><th style="width: 24%">Set</th><th>Vorbereitet heute</th><th style="width: 22%">Später, sobald im Buch</th></tr></thead>
+			<tbody>
+				{#each sets as { set, plan } (set.id)}
+					<tr>
+						<td><b>{set.name}</b><div class="tiny muted">{set.when}</div></td>
+						<td>{plan.prepare.map((s) => s.name).join(', ')}<div class="tiny muted">{plan.prepare.length} Zauber · {plan.minutes} Min.{plan.over.length ? ` · heute nicht: ${plan.over.map((s) => s.name).join(', ')}` : ''}</div></td>
+						<td><i>{plan.notInBook.map((s) => s.name).join(', ') || '–'}</i></td>
+					</tr>
+				{/each}
+			</tbody>
+		</table>
+	{/if}
 
 	{#each levels as lvl, i (lvl)}
 		<h2 class={i === 0 ? 'page-break' : ''} style={i === 0 ? 'margin-top: 0' : ''}>

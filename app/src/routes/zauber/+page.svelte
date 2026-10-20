@@ -3,6 +3,7 @@
 	import { Search, BookOpen, Sparkle, CircleHelp } from '@lucide/svelte';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import SpellCard from '$lib/components/SpellCard.svelte';
+	import SpellSets from '$lib/components/SpellSets.svelte';
 	import Pips from '$lib/components/Pips.svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { toggleSlot } from '$lib/game';
@@ -106,6 +107,8 @@
 		<div class="text-xs text-ink-3">Zauber ab Grad 1 · {freeTotal} frei · dazu {cantripCount}/{cantripMax} Zaubertricks</div>
 	</div>
 </div>
+
+<div class="mt-4"><SpellSets /></div>
 
 <div class="mt-6 mb-4 flex flex-wrap items-center gap-2">
 	{#each FILTERS as f (f.id)}

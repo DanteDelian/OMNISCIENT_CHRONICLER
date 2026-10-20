@@ -19,6 +19,7 @@ Alles, was das Grimoire anzeigt, steht in diesen Dateien. Ändert man sie (von H
 | `stammbaum.json` | Stammbäume (Haus Lhaaz), erscheinen auf der Welt-Seite des Hauses, bei jeder Person darin und im Druck | nein |
 | `fragen.json` | Offene und geklärte Fragen an den DM, an den Tisch und an dich (Seite Rätselwand) | ja |
 | `netzwerk.json` | Die Unsichtbare Hand: Rollen und Leute mit Treue, Lohn und Wissen (Seite Netzwerk) | ja |
+| `zaubersets.json` | Zauber-Sets für den Tag: Prioritätenlisten zum Vorbereiten (Zauberbuch, Dialog Lange Rast, Druck) | ja |
 | `docs/*.md` | Archiv-Dokumente (Prüfbericht, Lage, Taktik, DM-Nachrichten, Backstory, Alchemie, Einkauf) | nein |
 | `world/*.md` | Personen, Fraktionen, Orte | nein |
 | `assets/` | Bilder, abrufbar unter `/api/assets/<datei>` | nein |
@@ -100,6 +101,12 @@ Pflicht: `id, name, en, level (0 = Zaubertrick), school, status, time, economy, 
 `{roles[{id, label, task, where, cost}], agents[{id, name, role, status, loyalty, place, wage, knows, ref, since, notes}]}`.
 `role` ist die ID einer Rolle, `status` aus `kandidat | aktiv | ruhend | verloren`, `loyalty` 0 bis 5, `wage` in Silber pro Tag,
 `knows` hält fest, was die Person über dich weiß, `ref` verweist auf einen Welt-Eintrag.
+
+### zaubersets.json
+`{sets[{id, name, icon, when, spells[], tip}]}`. `spells` sind Zauber-IDs **nach Priorität**: Beim Anwenden werden die
+ersten Zauber aus dem Buch vorbereitet, bis die Grenze (IN-Modifikator + Stufe) erreicht ist. Vorschläge, die noch nicht im
+Buch stehen, zählen nicht und erscheinen als Plan. Rituale und Zaubertricks gehören nicht hinein, sie brauchen keine
+Vorbereitung. `icon` aus `ship | castle | wand | building | swords | moon`. Das zuletzt gewählte Set steht in `state.json` als `spellSet`.
 
 ### Rätselwand (automatisch)
 Die Seite sammelt alles, was in Texten als `*Theorie:*`, `*Theorie (Datum):*`, Liste unter `*Theorien:*` oder `**Offen:**`

@@ -69,6 +69,17 @@
     ]
   },
   {
+    "id": "skelett-befehl",
+    "to": "dm",
+    "topic": "Befehle an die Skelette",
+    "question": "Reicht ein allgemeiner Befehl vor dem Kampf, etwa „Schützt mich“ oder „Greift jeden an, der im Netz festhängt“, damit die Skelette ohne Bonusaktion kämpfen? Die Regel nennt als Beispiel „Bewacht diesen Raum“. Dann bliebe deine Bonusaktion frei für Sternenschritt oder die Flammenkugel.",
+    "status": "offen",
+    "links": [
+      "Tote erwecken",
+      "Taktik-Handbuch"
+    ]
+  },
+  {
     "id": "tukan",
     "to": "dm",
     "topic": "Tukan als Vertrauter",

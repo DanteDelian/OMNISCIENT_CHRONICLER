@@ -5,7 +5,7 @@ icon: book-open
 order: 5
 group: Zauber & Taktik
 aliases: [Stufe 6, Stufenaufstieg, Planer Stufe 6, Zauberplan]
-updated: 2026-10-19
+updated: 2026-10-20
 ---
 # Stufe-6-Planer
 
@@ -98,6 +98,8 @@ updated: 2026-10-19
 | Schulmerkmal | | **[[Gutartiges Versetzen (ab Stufe 6)|Gutartiges Versetzen]]** |
 
 Der dritte Grad-3-Platz ist der größte Gewinn: *Gegenzauber*, *Tote erwecken* und ein neuer Grad-3-Zauber passen dann in denselben Tag.
+
+**Vorbereiten:** Mit dem Plan stehen auf Stufe 6 **13 Zauber** ab Grad 1 im Buch, die du vorbereiten musst, und du bereitest **10** vor. Die drei Rituale (*Vertrauten finden*, *Unsichtbarer Diener*, *Magie entdecken*) zählen nicht mit: Als Magier wirkst du sie aus dem Buch, ohne sie vorzubereiten. Welche 10 es heute sind, wählst du morgens mit einem [[Zauber-Sets|Zauber-Set]]: *Unterwegs*, *Belagerung und Riesen*, *Zauberer, Teufel, Geister* oder *Stadt und Floshem*. Auf Stufe 5 sind es mit den vier Einträgen 11 Zauber auf 9 Plätzen.
 
 ## Gutartiges Versetzen
 

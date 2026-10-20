@@ -4,6 +4,7 @@
 	import Modal from './Modal.svelte';
 	import Pips from './Pips.svelte';
 	import TranceSelect from './TranceSelect.svelte';
+	import SpellSets from './SpellSets.svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { ui } from '$lib/stores/ui.svelte';
 	import { arcaneRecovery, longRest, spendHitDie } from '$lib/game';
@@ -95,7 +96,7 @@
 	<div class="space-y-4 text-sm">
 		<ul class="prose-grim prose-sm">
 			<li>Trefferpunkte auf <b>{c.hp.max}</b>, temporäre TP auf 0, Todesrettungswürfe zurückgesetzt</li>
-			<li>Alle Zauberplätze, Sternenschritt (3×), Arkane Erholung und die Ohrring-Botschaft zurück</li>
+			<li>Alle Zauberplätze, Sternenschritt, Arkane Erholung und die Ohrring-Botschaft zurück</li>
 			<li>Trefferwürfel: +{Math.max(1, Math.floor(c.level / 2))} (jetzt {hitDiceLeft(c, s)}/{c.level})</li>
 			<li>Konzentration, Schild und Unsichtbarer Diener enden. Erschöpfung −1, falls vorhanden.</li>
 			{#if s.minions.length}<li class="text-warn">Untote: Die 24 Stunden laufen weiter. Kontrolle erneuern nicht vergessen (1 Minute, Grad-3-Platz für bis zu 4).</li>{/if}
@@ -103,6 +104,11 @@
 		<div class="sunken p-4">
 			<div class="mb-2 font-medium">Astrale Trance: Übung für heute</div>
 			<TranceSelect />
+		</div>
+		<div class="sunken p-4">
+			<div class="mb-1 font-medium">Zauber für den neuen Tag</div>
+			<p class="mb-2 text-xs text-ink-3">Ein Klick bereitet das Set vor. Rituale brauchst du nicht vorzubereiten. Bearbeiten im <a class="text-astral hover:underline" href="/zauber" onclick={close}>Zauberbuch</a>.</p>
+			<SpellSets compact />
 		</div>
 	</div>
 	{#snippet footer()}

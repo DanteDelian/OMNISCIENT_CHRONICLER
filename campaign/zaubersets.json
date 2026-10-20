@@ -1,0 +1,92 @@
+{
+  "sets": [
+    {
+      "id": "unterwegs",
+      "name": "Unterwegs",
+      "icon": "ship",
+      "when": "Reise, Wildnis, Boot: Ein Überfall ist möglich, aber nicht geplant.",
+      "spells": [
+        "tote-erwecken",
+        "netz",
+        "magierruestung",
+        "schild",
+        "gegenzauber",
+        "spiegelbilder",
+        "hypnotisches-muster",
+        "nebelwolke",
+        "sengender-strahl",
+        "flutwelle",
+        "eismesser",
+        "flammenkugel",
+        "schutz-vor-gut-und-boese"
+      ],
+      "tip": "Die Rituale laufen ohne Vorbereitung: [[Vertrauten finden]] zum Vorausspähen, [[Magie entdecken]] vor Truhen und Türen, [[Unsichtbarer Diener]] fürs Lager. Morgens *Magierrüstung* wirken, sie hält 8 Stunden."
+    },
+    {
+      "id": "belagerung",
+      "name": "Belagerung und Riesen",
+      "icon": "castle",
+      "when": "Die Stadt im Westen, Riesen und Orc-Trupps: Abstand, Deckung, Kontrolle.",
+      "spells": [
+        "netz",
+        "hypnotisches-muster",
+        "nebelwolke",
+        "magierruestung",
+        "schild",
+        "spiegelbilder",
+        "flutwelle",
+        "tote-erwecken",
+        "gegenzauber",
+        "sengender-strahl",
+        "flammenkugel",
+        "eismesser",
+        "schutz-vor-gut-und-boese"
+      ],
+      "tip": "Mehr als 15 m Abstand zu jedem Riesen. *Nebelwolke* gegen Felswürfe, *Netz* in Engstellen. *Gegenzauber* nur für den Orc-Schamanen, sonst ist deine Reaktion für *Schild* da. Mehr im Riesen-Briefing im [[Taktik-Handbuch]]."
+    },
+    {
+      "id": "zauberer",
+      "name": "Zauberer, Teufel, Geister",
+      "icon": "wand",
+      "when": "Sorcerer Society, Kultisten, Teufelsjäger, Spuk: Gegner, die zaubern oder nicht von dieser Welt sind.",
+      "spells": [
+        "gegenzauber",
+        "schutz-vor-gut-und-boese",
+        "tote-erwecken",
+        "netz",
+        "magierruestung",
+        "schild",
+        "spiegelbilder",
+        "sengender-strahl",
+        "hypnotisches-muster",
+        "eismesser",
+        "nebelwolke",
+        "flutwelle",
+        "flammenkugel"
+      ],
+      "tip": "*Gegenzauber* für Kontroll- und Fluchtzauber aufheben, nicht für Schaden. *Schutz vor Gut und Böse* auf Aella gegen Teufel, Untote und Feenwesen. Jeder Strahl von *Sengender Strahl* zwingt einen Zauberer zu einem eigenen Konzentrationswurf. *Eismesser* braucht keine Stimme und geht auch in magischer Stille."
+    },
+    {
+      "id": "stadt",
+      "name": "Stadt und Floshem",
+      "icon": "building",
+      "when": "Siedlung, Hof, Verhandlungen: unauffällig bleiben, nichts anzünden, lebend fangen.",
+      "spells": [
+        "tote-erwecken",
+        "gegenzauber",
+        "netz",
+        "nebelwolke",
+        "spiegelbilder",
+        "magierruestung",
+        "schild",
+        "hypnotisches-muster",
+        "schutz-vor-gut-und-boese",
+        "eismesser",
+        "flutwelle",
+        "sengender-strahl",
+        "flammenkugel"
+      ],
+      "tip": "Kein Feuer zwischen Häusern. *Netz* und später *Hypnotisches Muster* fangen lebend und machen keinen Schaden. *Nebelwolke* und *Spiegelbilder* sind dein Weg hinaus. Denk daran: Wer dich zaubern sieht oder hört, weiß, dass du zauberst."
+    }
+  ]
+}

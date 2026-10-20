@@ -93,6 +93,8 @@ export interface PlayState {
 	familiar: { form: string; present: boolean; hp: number };
 	servant: boolean;
 	minions: Minion[];
+	/** Zuletzt gewähltes Zauber-Set (zaubersets.json) */
+	spellSet?: string;
 	updatedAt: number;
 }
 
@@ -446,10 +448,29 @@ export interface Network {
 	agents: Agent[];
 }
 
+/** Zauber-Set für den Tag (campaign/zaubersets.json) */
+export interface SpellSet {
+	id: string;
+	name: string;
+	/** Symbol: swords, castle, wand, building, ship, moon */
+	icon?: string;
+	/** Wann das Set passt */
+	when: string;
+	/** Zauber-IDs nach Priorität: Vorbereitet werden die ersten aus dem Buch, bis die Grenze erreicht ist */
+	spells: string[];
+	/** Tipp für den Tag (Markdown) */
+	tip?: string;
+}
+
+export interface SpellSets {
+	sets: SpellSet[];
+}
+
 export interface CampaignData {
 	trees: FamilyTree[];
 	fragen: Question[];
 	netzwerk: Network;
+	zaubersets: SpellSets;
 	character: Character;
 	state: PlayState;
 	spells: Spell[];
@@ -466,5 +487,5 @@ export interface CampaignData {
 }
 
 /** Dateien, die die App zurückschreiben darf. */
-export const WRITABLE = ['state', 'inventory', 'quests', 'spells', 'journal', 'map', 'fragen', 'netzwerk'] as const;
+export const WRITABLE = ['state', 'inventory', 'quests', 'spells', 'journal', 'map', 'fragen', 'netzwerk', 'zaubersets'] as const;
 export type WritableFile = (typeof WRITABLE)[number];

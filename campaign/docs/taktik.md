@@ -1,15 +1,15 @@
 ---
 title: Taktik-Handbuch
-subtitle: Aktionen, Konzentration, Kombos und Zahlen für den Kampf
+subtitle: Wie du kämpfst, Runde für Runde, mit Aktionen, Konzentration, Kombos und Zahlen
 icon: swords
 order: 4
 group: Zauber & Taktik
 aliases: [Taktik, Zauber-Taktiken, Taktikhandbuch]
-updated: 2026-10-16
+updated: 2026-10-20
 ---
 # Taktik-Handbuch
 
-*Alles für den Kampf, nach den korrigierten Regeln. Die Werte gelten für Valerius auf Stufe 5.*
+*Alles für den Kampf, nach den korrigierten Regeln. Die Werte gelten für Valerius auf Stufe 5. „Plan“ heißt: Der Zauber steht im [[Stufe-6-Planer]] und ist noch nicht im Buch.*
 
 ## Deine Zahlen auf einen Blick
 
@@ -25,12 +25,60 @@ updated: 2026-10-16
 | Passive Wahrnehmung | **12** | |
 | Dunkelsicht | **18 m** | |
 
+## So kämpfst du
+
+**Deine Rolle:** Du bist Kontrolle mit Gefolge. Du entscheidest, wie viele Gegner überhaupt mitkämpfen, deine Skelette und Gefährten erledigen den Rest. Schaden machst du nebenbei.
+
+### Fünf Grundregeln
+
+1. **Kontrolle zuerst.** Deine erste Aktion legt fest, wie der Kampf läuft: [[Netz]] auf die Gruppe, ab Stufe 6 [[Hypnotisches Muster]]. Schaden kommt danach.
+2. **Eine Konzentration, bewusst gewählt.** *Netz*, *Schutz vor Gut und Böse* und mit dem Plan *Nebelwolke*, *Flammenkugel* und *Hypnotisches Muster* schließen sich gegenseitig aus. Wirf keine zweite aus Versehen.
+3. **Überleben ohne Konzentration.** *Magierrüstung* (Plan) am Morgen, [[Spiegelbilder]] (Plan) kurz vor dem Kampf, [[Schild]] als Reaktion. Alle drei laufen neben jeder Kontrolle.
+4. **Deine Bonusaktion gehört den Skeletten.** Ein Befehl pro Runde gilt für alle Untoten. *Sternenschritt* und die *Flammenkugel* (Plan) brauchen dieselbe Bonusaktion. Gib den Skeletten vor dem Kampf einen allgemeinen Befehl, dann bist du freier. Wie weit so ein Befehl reicht, entscheidet der DM (siehe [[Rätselwand]]).
+5. **Deine Reaktion: Schild oder Gegenzauber.** Gegen Zauberer hebst du sie für [[Gegenzauber]] auf, gegen Orcs, Bestien und Riesen für *Schild*.
+
+### Vor dem Kampf
+
+- **Morgens:** das passende Zauber-Set vorbereiten (im [[Zauberbuch]] oder im Dialog „Lange Rast“) und *Magierrüstung* wirken (Plan, hält 8 Stunden, RK 14).
+- **Skelette:** Kontrolle erneuert? Waffen verteilt? Das Bogen-Skelett sucht Deckung, die zwei Dolch-Skelette bleiben neben dir.
+- **Augen voraus:** Der [[Vertrauten finden|Vertraute]] späht, du siehst per Aktion durch seine Augen. Rituale wie *Unsichtbarer Diener* und *Magie entdecken* kosten keinen Platz und keine Vorbereitung.
+- **Kommt der Kampf sicher,** wirkst du *Spiegelbilder* (Plan) vorher: Sie halten 1 Minute, also 10 Runden.
+- **Aufstellung:** 9 bis 18 m hinter der Front, mit Deckung. Von dort erreichst du mit *Netz*, *Eismesser*, *Totenglocke* und *Gegenzauber* das Feld.
+
+### Runde für Runde
+
+| Lage | Aktion | Bonusaktion | Reaktion |
+| :-- | :-- | :-- | :-- |
+| **Runde 1** | *Netz* auf die Gruppe, bevor sie die Front erreicht. Ab Stufe 6 *Hypnotisches Muster* | Skelette: auf die Festgehaltenen | *Schild* bei Treffern mit 11 bis 15 (mit *Magierrüstung* 14 bis 18) |
+| **Runde 2 und später** | [[Totenglocke]] auf Verletzte (2W12), [[Eismesser]] in die Gruppe im Netz, [[Sengender Strahl]] auf Ziele außerhalb des Netzes | Skelette | *Gegenzauber* gegen Kontroll- und Fluchtzauber |
+| **Einer steht vor dir** | *Spiegelbilder* (Plan), oder erst weg und dann zaubern | [[Sternenschritt]] 9 m weg, löst keinen Gelegenheitsangriff aus | *Schild* |
+| **Schützen beschießen euch** | *Nebelwolke* (Plan) zwischen euch und sie. Achtung: beendet dein *Netz* | Skelette | *Schild* |
+| **Das Netz ist zerrissen** | neu kontrollieren oder *Flammenkugel* (Plan) an den Rand des Getümmels | Kugel bewegen *oder* Skelette | wie oben |
+| **Es kippt** | Rückzug: *Nebelwolke* oder *Spiegelbilder*, dann weg | *Sternenschritt* | *Schild* |
+
+> [!TIP] Wer gerade festhängt, liegt oder gebannt ist
+> - **Festgehalten (Netz):** Alle greifen mit Vorteil an, auch das Bogen-Skelett. Feuer brennt das Netz weg, darum *Sengender Strahl* nur auf Ziele außerhalb.
+> - **Liegend ([[Flutwelle]], Plan):** Nahkämpfer in 1,5 m haben Vorteil, **Fernkämpfer Nachteil**. Das Bogen-Skelett schießt dann lieber auf ein anderes Ziel.
+> - **Gebannt (*Hypnotisches Muster*, Plan):** Jeder Schaden weckt das Ziel. Erst die anderen erledigen, die Gebannten zuletzt, oder in Ruhe fesseln.
+
+### Deine Plätze an einem Kampftag
+
+Auf Stufe 5 hast du 4 / 3 / 2 Plätze. So reichen sie für zwei bis drei Kämpfe:
+
+| Grad | Plätze | Wofür |
+| :-: | :-: | :-- |
+| 1 | 4 | *Magierrüstung* am Morgen (Plan), 2 × *Schild*, 1 × *Nebelwolke* (Plan) oder *Eismesser* |
+| 2 | 3 | 2 × *Netz*, 1 × *Spiegelbilder* (Plan) oder *Sengender Strahl* |
+| 3 | 2 | 1 × *Tote erwecken* (Kontrolle erneuern), 1 × *Gegenzauber* |
+
+Nach einer kurzen Rast holt die [[Arkane Erholung]] 1 × Grad 3 oder Grad 2 + Grad 1 zurück. Zaubertricks kosten nichts: *Totenglocke* ist dein tägliches Brot. Auf Stufe 6 kommt ein dritter Grad-3-Platz dazu, für *Hypnotisches Muster* oder *Flutwelle*.
+
 ## Aktionsökonomie: Was du pro Runde tun kannst
 
 | Typ | Optionen | Achtung |
 | :-- | :-- | :-- |
-| **Aktion** | [[Netz]], [[Sengender Strahl]], [[Eismesser]], [[Totenglocke]], [[Geringfügige Illusion]], [[Botschaft]], Geringe Beschwörung, Dolch oder Stab, Spurt, Rückzug, Ausweichen, Helfen, Verstecken, Vorbereiten | Nur **ein** Zauber mit Platz pro Zug, siehe unten |
-| **Bonusaktion** | [[Sternenschritt]] (1×), Untote befehligen ([[Tote erwecken]]), [[Unsichtbarer Diener]] befehligen | **Alle drei konkurrieren.** Pro Runde nur eins |
+| **Aktion** | [[Netz]], [[Sengender Strahl]], [[Eismesser]], [[Totenglocke]], [[Geringfügige Illusion]], [[Botschaft]], Geringe Beschwörung, Dolch oder Stab, Spurt, Rückzug, Ausweichen, Helfen, Verstecken, Vorbereiten. Plan: *Spiegelbilder*, *Nebelwolke*, *Flammenkugel*, *Magierrüstung*, ab Stufe 6 *Hypnotisches Muster*, *Flutwelle*, *Gutartiges Versetzen* | Nur **ein** Zauber mit Platz pro Zug, siehe unten |
+| **Bonusaktion** | [[Sternenschritt]] (1×), Untote befehligen ([[Tote erwecken]]), [[Unsichtbarer Diener]] befehligen. Plan: *Flammenkugel* bewegen | **Alle konkurrieren.** Pro Runde nur eins |
 | **Reaktion** | [[Schild]], [[Gegenzauber]], Gelegenheitsangriff | **Eine pro Runde.** Schild *oder* Gegenzauber |
 | **Bewegung** | 9 m, aufteilbar vor und nach der Aktion | Schwieriges Gelände (*Netz*) kostet doppelt |
 | **Freie Interaktion** | einen Gegenstand ziehen, eine Tür öffnen | einmal pro Zug |
@@ -40,7 +88,7 @@ updated: 2026-10-16
 
 ## Konzentration: dein Engpass
 
-Konzentration brauchen: [[Netz]], [[Schutz vor Gut und Böse]], [[Magie entdecken]]. Du kannst immer nur **einen** dieser Zauber gleichzeitig halten.
+Konzentration brauchen: [[Netz]], [[Schutz vor Gut und Böse]], [[Magie entdecken]], mit dem Plan auch [[Nebelwolke]], [[Flammenkugel]] und ab Stufe 6 [[Hypnotisches Muster]]. Du kannst immer nur **einen** dieser Zauber gleichzeitig halten. Ohne Konzentration laufen *Magierrüstung*, *Spiegelbilder*, *Schild*, *Tote erwecken* und *Flutwelle*.
 
 **Konzentrationswurf:** Nimmst du Schaden, machst du einen **KO-Rettungswurf**. Der SG ist **10 oder die Hälfte des Schadens**, je nachdem, was höher ist, und zwar **pro Schadensquelle** einzeln.
 
@@ -58,14 +106,6 @@ Konzentration endet außerdem, wenn du **kampfunfähig** wirst, stirbst oder ein
 > [!TIP] **Konzentration schützen**
 > Bleib hinter Aella, mindestens 9 m von Nahkämpfern entfernt. Nutze *Schild* bei Ergebnissen von 11 bis 15 (mit *Magierrüstung* 14 bis 18). Wirf keine zweite Konzentration „aus Versehen“.
 
-## Der Kampfablauf
-
-1. **Eröffnung:** [[Netz]] auf die dichteste Gegnergruppe, bevor sie die Frontlinie erreicht. Achte auf Halt: Wände, Bäume oder einfach den Boden.
-2. **Kontrolle:** Festgehaltene sind leichte Beute. Aella greift mit Vorteil an, deine Skelette auch.
-3. **Schaden:** [[Eismesser]] auf Gruppen (Nachteil auf ihren GE-Rettungswurf), [[Totenglocke]] auf Verletzte (2W12). **Kein Feuer ins Netz.**
-4. **Reaktionen:** [[Gegenzauber]] gegen Kontroll- und Fluchtzauber, [[Schild]] gegen Treffer mit 11 bis 15 (mit *Magierrüstung* 14 bis 18).
-5. **Rückzug:** [[Sternenschritt]] 9 m weg, kein Zauber, kein Gegenzauber möglich.
-
 ## Kombos
 
 - **Netz → Eismesser:** Festgehaltene retten mit Nachteil gegen die Explosion.
@@ -74,6 +114,9 @@ Konzentration endet außerdem, wenn du **kampfunfähig** wirst, stirbst oder ein
 - **Dolch-Skelette als Leibwache:** Die beiden mit den Society-Dolchen bleiben neben dir. Wer dich im Nahkampf angreift, steht neben ihnen. Ein geworfener Dolch ist weg, bis jemand ihn aufhebt.
 - **Vertrauter späht → Botschaft an Aella → koordinierter Zugriff.**
 - **Vertrauter überbringt Berührungszauber:** [[Schutz vor Gut und Böse]] auf Aella, ohne dass du nach vorn musst.
+- **Netz → Flutwelle (Plan, Stufe 6):** Wer im Netz festhängt, rettet mit Nachteil gegen die Welle und liegt danach. Die Welle ist Wasser, kein Feuer: Nach den Regeln bleibt das Netz.
+- **Spiegelbilder + Netz (Plan):** Die Abbilder brauchen keine Konzentration. Dein Netz hält, während anfangs drei von vier Angriffen ins Leere gehen.
+- **Hypnotisches Muster → Netz (Plan, Stufe 6):** Beide brauchen Konzentration. Erst bannen und die Übrigen erledigen. Bist du so weit, legst du das Netz über die Gebannten: Das Muster endet, aber sie stehen schon im Netz und retten zu Beginn ihres Zuges gegen das Festhalten.
 
 ## Gegnertypen
 
@@ -160,11 +203,11 @@ Der Eisriese entspricht dem **Frostriesen** des Monsterhandbuchs.
 
 ## Positionierung
 
-- **18 m:** Reichweite von *Netz*, *Gegenzauber*, *Eismesser* und *Totenglocke*. Nah genug bleiben.
-- **36 m:** *Sengender Strahl* und *Botschaft*.
+- **18 m:** Reichweite von *Netz*, *Gegenzauber*, *Eismesser*, *Totenglocke* und *Flammenkugel* (Plan). Nah genug bleiben.
+- **36 m:** *Sengender Strahl* und *Botschaft*, mit dem Plan auch *Nebelwolke*, *Hypnotisches Muster* und *Flutwelle*.
 - **9 m Abstand** zu Nahkämpfern: eine Bewegung und ein Sternenschritt entfernt.
 
 ## Rasten
 
 - **Kurze Rast (mindestens 1 Stunde):** Trefferwürfel ausgeben (je W6 + 3) und 1× pro Tag *Arkane Erholung* (Plätze bis zusammen 3 Grade).
-- **Lange Rast (4 Stunden Trance):** alle TP, alle Plätze, Sternenschritt, Ohrring, die Hälfte der Trefferwürfel (2). Danach die neue Trance-Übung wählen.
+- **Lange Rast (4 Stunden Trance):** alle TP, alle Plätze, Sternenschritt, Ohrring, die Hälfte der Trefferwürfel (2). Danach die neue Trance-Übung wählen und neu vorbereiten: 1 Minute Studium pro Grad jedes Zaubers. Rituale und Zaubertricks brauchen keine Vorbereitung.

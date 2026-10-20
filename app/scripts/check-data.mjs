@@ -55,6 +55,7 @@ const d = {
 	trees: json('stammbaum.json')?.trees ?? [],
 	fragen: json('fragen.json') ?? [],
 	netzwerk: { roles: [], agents: [], ...(json('netzwerk.json') ?? {}) },
+	zaubersets: { sets: [], ...(json('zaubersets.json') ?? {}) },
 	docs: mdDir('docs', (slug, data, body) => ({ slug, title: String(data.title ?? slug), subtitle: data.subtitle, aliases: asArray(data.aliases), order: data.order ?? 99, group: data.group ?? '', body })),
 	world: mdDir('world', (slug, data, body) => ({
 		slug,
@@ -175,6 +176,23 @@ for (const a of d.netzwerk.agents) {
 	links(where, `${a.knows ?? ''} ${a.notes ?? ''}`);
 }
 
+// Zauber-Sets für den Tag
+const setIds = new Set();
+for (const z of d.zaubersets.sets) {
+	const where = `zaubersets.json ${z.id ?? '?'}`;
+	if (!z.id || !z.name) errors.push(`${where}: ohne id oder name`);
+	if (setIds.has(z.id)) errors.push(`${where}: doppelte ID`);
+	setIds.add(z.id);
+	if (!Array.isArray(z.spells)) errors.push(`${where}: spells fehlt`);
+	for (const id of z.spells ?? []) {
+		const sp = d.spells.find((x) => x.id === id);
+		if (!sp) errors.push(`${where}: Zauber „${id}“ gibt es nicht`);
+		else if (sp.level === 0) warnings.push(`${where}: Zaubertrick „${sp.name}“ braucht keine Vorbereitung`);
+	}
+	if (new Set(z.spells).size !== (z.spells ?? []).length) errors.push(`${where}: Zauber doppelt`);
+	links(where, z.tip ?? '');
+}
+
 // Zustand plausibel?
 const s = d.state;
 if (s && d.character) {
@@ -191,7 +209,7 @@ for (const s of d.spells.filter((x) => x.status === 'buch' && !x.card)) {
 	if (plain.length > 650) warnings.push(`spells.json ${s.id}: langer Regeltext ohne „card“ für die Zauberkarte`);
 }
 
-console.log(`Index: ${index.length} Einträge · Zauber ${d.spells.length} · Welt ${d.world.length} · Dokumente ${d.docs.length} · Journal ${d.journal.length} · Quests ${d.quests.length} · Stammbäume ${d.trees.length} · Fragen ${d.fragen.length} · Netzwerk ${d.netzwerk.agents.length}`);
+console.log(`Index: ${index.length} Einträge · Zauber ${d.spells.length} · Welt ${d.world.length} · Dokumente ${d.docs.length} · Journal ${d.journal.length} · Quests ${d.quests.length} · Stammbäume ${d.trees.length} · Fragen ${d.fragen.length} · Netzwerk ${d.netzwerk.agents.length} · Zauber-Sets ${d.zaubersets.sets.length}`);
 for (const w of warnings) console.log(`  Hinweis: ${w}`);
 for (const e of errors) console.log(`  FEHLER:  ${e}`);
 console.log(errors.length ? `\n${errors.length} Fehler gefunden.` : '\nAlles konsistent.');

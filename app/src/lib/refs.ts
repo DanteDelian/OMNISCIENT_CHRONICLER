@@ -125,7 +125,7 @@ export function buildIndex(d: IndexInput): RefEntry[] {
 	}
 	// Feste Seiten
 	push({ key: 'page:karte', title: 'Echsen-Karte', kind: 'Seite', summary: d.map.note, href: '/karte', names: ['Echsen-Karte', 'Wüstenkarte', 'Karte', 'Echsenkarte'] });
-	push({ key: 'page:zauber', title: 'Zauberbuch', kind: 'Seite', summary: 'Alle Zauber mit vollständigen Regeln', href: '/zauber', names: ['Zauberbuch'] });
+	push({ key: 'page:zauber', title: 'Zauberbuch', kind: 'Seite', summary: 'Alle Zauber mit vollständigen Regeln', href: '/zauber', names: ['Zauberbuch', 'Zauber-Sets'] });
 	push({ key: 'page:gefolge', title: 'Gefolge', kind: 'Seite', summary: 'Vertrauter, Diener, Untote, Gefährtin', href: '/gefolge', names: ['Gefolge', 'Vertraute und Diener', 'Vertraute & Diener'] });
 	push({ key: 'page:regeln', title: 'Regeln', kind: 'Seite', summary: 'Zustände, Aktionen, Konzentration, Rasten', href: '/regeln', names: ['Regeln'] });
 	push({ key: 'page:raetsel', title: 'Rätselwand', kind: 'Seite', summary: 'Theorien, offene Fragen, Widersprüche und Mysterien', href: '/raetsel', names: ['Rätselwand', 'Offene Fragen', 'Fragen an den DM'] });

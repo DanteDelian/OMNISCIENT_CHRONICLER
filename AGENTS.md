@@ -38,7 +38,8 @@ Schema der Daten: **`campaign/README.md`**. Technik: **`docs/ARCHITECTURE.md`**.
 ### Stufenaufstieg
 `character.json` (Stufe, Übungsbonus, TP-Maximum: Patrick fragen, ob gewürfelt wird, Plätze, neue Merkmale),
 neue Zauber in `spells.json` mit `status: "buch"`, Journal-Eintrag mit `level`. Ein Magier bekommt pro Stufe
-2 Zauber kostenlos ins Buch.
+2 Zauber kostenlos ins Buch. Neue Zauber in die Zauber-Sets (`zaubersets.json`) einsortieren, Rituale nicht:
+Sie brauchen keine Vorbereitung.
 
 ## Inhaltliche Regeln
 
