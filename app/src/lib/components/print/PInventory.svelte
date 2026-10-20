@@ -5,17 +5,11 @@
 	import { printAnchor } from '$lib/markdown';
 	import { diceDe } from '$lib/rules';
 	import { ITEM_GROUPS, PHASE, PRIO } from '$lib/print';
-	import { fmtGold } from '$lib/format';
+	import { fmtCoins, fmtGold } from '$lib/format';
 	import { RECIPES } from '$lib/werkstatt';
 
 	const WAY_LABEL: Record<string, string> = { herstellen: 'herstellen', erfragen: 'erfragen', klauen: 'klauen', erbeuten: 'erbeuten' };
-	/** Preis lesbar: unter 1 GM in Silber oder Kupfer */
-	function price(gm: number): string {
-		if (gm === 0) return 'Holz';
-		if (gm >= 1) return `${fmtGold(gm)} GM`;
-		if (gm >= 0.1 && Math.round(gm * 100) % 10 === 0) return `${Math.round(gm * 10)} SM`;
-		return `${Math.round(gm * 100)} KM`;
-	}
+	const price = (gm: number) => fmtCoins(gm, 'Holz');
 
 	const inv = $derived(campaign.data.inventory);
 	const total = $derived(inv.currency.gm + inv.currency.sm / 10 + inv.currency.km / 100);

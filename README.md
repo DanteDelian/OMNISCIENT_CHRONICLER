@@ -10,16 +10,20 @@ gebaut und auch auf Tablet und Handy nutzbar.
 | :-- | :-- |
 | **Spieltisch** | TP mit Schaden und Heilen, temporäre TP, Todesrettung · Zauberplätze und Kräfte zum Abhaken · „Was kann ich tun?“ nach Aktion, Bonusaktion und Reaktion · Wirken verbraucht Plätze und setzt Konzentration · Konzentrationsprobe erscheint automatisch nach Schaden · Proben und Rettungswürfe per Klick · Zustände mit Regeltext · Gefolge · Lage und Schnellnotiz |
 | **Charakterbogen** | Alle Werte, Fertigkeiten mit Herkunft der Übung, Angriffe, Merkmale, Astrale Trance. Druckbar |
-| **Zauberbuch** | Vollständige Regeltexte, deine Werte, Trefferrechner, Tipps, Einsatzideen, Synergien und Konflikte, Korrekturen mit Quelle. Vorbereitung (x/9), freie Plätze, Vorschläge |
-| **Gefolge** | Untote mit Live-TP und 24-Stunden-Kontrolle, alle Vertrauten-Gestalten, Unsichtbarer Diener, Aella, Dschungel-Plan für den nächsten Vertrauten |
-| **Inventar** | Geldbeutel mit Wechseln, Gegenstände (Heiltrank trinken heilt direkt), Wunschliste mit „leistbar“ |
+| **Zauberbuch** | Vollständige Regeltexte, deine Werte, Trefferrechner, Tipps, Einsatzideen, Synergien und Konflikte, Korrekturen mit Quelle. Zauber-Sets für den Tag (Vorbereitung per Klick), freie Plätze, Vorschläge |
+| **Gefolge** | Untote mit Live-TP, Waffen und Erneuern der 24-Stunden-Kontrolle, alle Vertrauten-Gestalten, Unsichtbarer Diener, Aella, Dschungel-Plan für den nächsten Vertrauten |
+| **Inventar** | Geldbeutel mit Wechseln, Gegenstände (Heiltrank trinken heilt direkt), Einkaufszettel mit „leistbar“ und Wegen ohne Gold |
+| **Werkstatt** | Was Valerius selbst herstellt (Alchemie, Heiltränke, Pfeile), Vorräte, Kosten und was es der Unsichtbaren Hand bringt |
 | **Journal** | Datierte Chronik mit Orten, Personen, Beute, Gegnern, Quest-Änderungen, Widersprüchen und Quellen |
 | **Quests** | Dringend, aktiv, Gerüchte, erledigt, gescheitert, jeweils mit Verlauf aus dem Journal |
-| **Welt** | 32 Personen, Fraktionen und Orte mit Rückverweisen |
+| **Rätselwand** | Offene Fragen an den DM zum Abhaken, Theorien, Widersprüche und Mysterien aus allen Texten |
+| **Welt** | Personen, Fraktionen und Orte mit Stammbaum und Rückverweisen |
 | **Karte** | Echsen-Karte mit Zoom, gedeuteten und ungedeuteten Markierungen, eigene Markierungen per Klick |
+| **Netzwerk** | Die Unsichtbare Hand: Rollen, Leute mit Treue, Lohn und Wissen |
+| **Wer weiß was?** | Floshems Ruf, Valerius' Geheimnisse und wer sie kennt oder ahnt, als Tabelle zum Anklicken |
 | **Archiv** | Prüfbericht, Taktik-Handbuch, DM-Nachrichten, Backstory, Alchemie, Einkauf und alle Drive-Originale mit Bewertung |
-| **Regeln** | Zustände, Aktionen, Zauberwirken, Deckung, Licht, Todesrettung, Rasten, jeweils mit Bezug zu Valerius |
-| **Druckfassung** | Alle Dokumente als helles A4-Layout zum Ausdrucken: Deckblatt, Charakterbogen, Sitzungsbogen zum Abhaken, Zauberbuch im Regelbuch-Stil, Gefolge, Regeln, Inventar, Quests, Journal, Welt, Karte, Archiv. Teile frei wählbar, PDFs per Befehl |
+| **Regeln** | Zustände, Aktionen, Zauberwirken, Deckung, Licht, Todesrettung, Rasten, jeweils mit Bezug zu Valerius, dazu alle Fachbegriffe Deutsch–Englisch |
+| **Druckfassung** | Alle Dokumente als helles A4-Layout zum Ausdrucken: Deckblatt, Charakterbogen, Sitzungsbogen zum Abhaken, Zauberbuch im Regelbuch-Stil, Zauberkarten, Gefolge, Regeln, Begriffe, Fragen an den DM, Inventar mit Werkstatt, Quests, Rätselwand, Journal, Welt, Netzwerk, Wer weiß was?, Karte, Archiv. Teile frei wählbar, PDFs per Befehl |
 
 Überall: **Suche mit Strg+K** (oder `/`), **Vorschaukarten** beim Überfahren von Verweisen, **Würfelschale** mit `D`,
 Ziffern `1` bis `0` springen zu den Bereichen.
@@ -48,7 +52,8 @@ Im Druckdialog Kopf- und Fußzeilen ausschalten, die Seitenzahlen setzt die Druc
 ## Daten
 
 Alles liegt lesbar in [`campaign/`](campaign/README.md) (JSON und Markdown) und ist per Git versioniert.
-Die App schreibt nur den Spielstand, das Inventar, Quests, Journal, Karte und die Vorbereitung der Zauber zurück.
+Die App schreibt nur den Spielstand, das Inventar, Quests, Journal, Karte, die Vorbereitung der Zauber, Fragen,
+Netzwerk, Zauber-Sets und Geheimnisse zurück.
 Ändert Claude Code eine Datei, aktualisieren sich alle offenen Geräte sofort.
 
 **Nach einer Session:** Erzähl Claude Code, was passiert ist. Claude legt einen datierten Journal-Eintrag an,
@@ -63,5 +68,5 @@ im Journal.
 ---
 
 Regelinhalte teilweise nach dem System Reference Document 5.1 von Wizards of the Coast LLC (CC BY 4.0), in eigener
-deutscher Fassung. Toll the Dead und Ice Knife stammen aus Xanathars Ratgeber für alles und sind in eigenen Worten
-zusammengefasst.
+deutscher Fassung. Toll the Dead, Ice Knife, Tidal Wave und Thunder Step stammen aus Xanathars Ratgeber für alles,
+Summon Fey aus Tashas Kessel voller Allem. Sie sind in eigenen Worten zusammengefasst.

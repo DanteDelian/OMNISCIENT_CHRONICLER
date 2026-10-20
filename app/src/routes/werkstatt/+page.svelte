@@ -6,7 +6,7 @@
 	import TranceSelect from '$lib/components/TranceSelect.svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { RECIPES, craft, stock, trained, usedThisRest, type Recipe } from '$lib/werkstatt';
-	import { fmtGold, goldValue } from '$lib/format';
+	import { fmtCoins, fmtGold, goldValue } from '$lib/format';
 
 	const s = $derived(campaign.data.state);
 	const items = $derived(campaign.data.inventory.items);
@@ -15,13 +15,8 @@
 
 	/** Werkzeug im Gepäck? */
 	const owned = (r: Recipe) => items.some((i) => i.group !== 'verloren' && i.name.toLowerCase().includes(r.tool.toLowerCase()));
-	/** Preise lesbar: unter 1 GM in Silber oder Kupfer */
-	function price(gm: number): string {
-		if (gm === 0) return 'Holz';
-		if (gm >= 1) return `${fmtGold(gm)} GM`;
-		if (gm >= 0.1 && Math.round(gm * 100) % 10 === 0) return `${Math.round(gm * 10)} SM`;
-		return `${Math.round(gm * 100)} KM`;
-	}
+	/** Zutaten für Pfeile: das Holz, das du findest */
+	const price = (gm: number) => fmtCoins(gm, 'Holz');
 	const timeLabel = (r: Recipe) => (r.time === 'tag' ? '1 Tag Arbeit' : 'in einer langen Rast');
 	const stockIds = ['alchemistenfeuer', 'saeure', 'gegengift', 'oel', 'heiltrank', 'pfeile'];
 

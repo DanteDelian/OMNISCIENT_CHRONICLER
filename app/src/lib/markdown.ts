@@ -55,6 +55,12 @@ export function renderInline(src: string, resolve?: Resolver): string {
 }
 
 /** Sprungmarke eines Index-Eintrags in der Druckfassung (PDF-interne Verweise). */
+/** Den Inhalt eines „## Abschnitts“ aus einem Markdown-Dokument holen (bis zum nächsten „## “). */
+export function mdSection(md: string | undefined, heading: string): string {
+	const m = md?.match(new RegExp(`^## ${heading}\\n([\\s\\S]*?)(?=^## |$(?![\\s\\S]))`, 'm'));
+	return m?.[1].trim() ?? '';
+}
+
 export function printAnchor(key: string): string {
 	return 'ref-' + key.replace(/[^a-z0-9]+/gi, '-');
 }

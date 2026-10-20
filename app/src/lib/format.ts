@@ -38,6 +38,14 @@ export function fmtGold(n: number): string {
 	return n.toLocaleString('de-DE', { minimumFractionDigits: n % 1 ? 1 : 0, maximumFractionDigits: 2 });
 }
 
+/** Betrag in GM lesbar: ab 1 GM in Gold, darunter in Silber oder Kupfer. `zero` ersetzt einen Betrag von 0. */
+export function fmtCoins(gm: number, zero = '0 GM'): string {
+	if (gm === 0) return zero;
+	if (gm >= 1) return `${fmtGold(gm)} GM`;
+	if (gm >= 0.1 && Math.round(gm * 100) % 10 === 0) return `${Math.round(gm * 10)} SM`;
+	return `${Math.round(gm * 100)} KM`;
+}
+
 export function uid(prefix = 'id'): string {
 	return `${prefix}-${Math.random().toString(36).slice(2, 8)}`;
 }

@@ -5,6 +5,7 @@
 import { campaign } from '$lib/stores/campaign.svelte';
 import { rolls } from '$lib/stores/rolls.svelte';
 import { fmtGold } from '$lib/format';
+import { pay } from '$lib/game';
 import type { Item, PlayState } from '$lib/types';
 
 export interface Recipe {
@@ -168,20 +169,6 @@ export function usedThisRest(s: PlayState): boolean {
 /** Hat Valerius heute Übung mit dem Werkzeug (Astrale Trance)? */
 export function trained(s: PlayState, r: Recipe): boolean {
 	return s.trance.tool.trim().toLowerCase() === r.tool.toLowerCase();
-}
-
-/** Gold abziehen, in Kupfer gerechnet. Gibt false zurück, wenn das Geld nicht reicht. */
-export function pay(gm: number): boolean {
-	const cur = campaign.data.inventory.currency;
-	let km = cur.gm * 100 + cur.sm * 10 + cur.km - Math.round(gm * 100);
-	if (km < 0) return false;
-	campaign.change('inventory', (inv) => {
-		inv.currency.gm = Math.floor(km / 100);
-		km -= inv.currency.gm * 100;
-		inv.currency.sm = Math.floor(km / 10);
-		inv.currency.km = km - inv.currency.sm * 10;
-	});
-	return true;
 }
 
 /** Herstellen: Zutaten bezahlen (oder aus dem Vorrat), Erzeugnis ins Inventar, Rast-Zyklus markieren. */

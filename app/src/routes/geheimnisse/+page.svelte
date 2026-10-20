@@ -6,6 +6,7 @@
 	import Modal from '$lib/components/Modal.svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { uid } from '$lib/format';
+	import { markOf, shortName as short, witnesses } from '$lib/secrets';
 	import type { Secret, SecretWitness } from '$lib/types';
 
 	const STATUS: Record<Secret['status'], { label: string; hint: string; color: string; icon: typeof ShieldCheck }> = {
@@ -17,33 +18,8 @@
 	const g = $derived(campaign.data.geheimnisse);
 	const secrets = $derived(g.secrets);
 
-	/** Kurzname für die Tabellenköpfe */
-	const SHORT: Record<string, string> = { 'Zaffera-Syndikat': 'Zafferas', 'Maskierter Mönchsmeister': 'Mönchsmeister' };
-	function short(who: string): string {
-		if (SHORT[who]) return SHORT[who];
-		if (/^[„"]/.test(who)) return who;
-		const entry = campaign.resolve(who);
-		return entry?.kind === 'Person' ? who.split(' ')[0] : who;
-	}
-
 	/** Alle Mitwisser, wer am meisten weiß zuerst */
-	const people = $derived.by(() => {
-		const score = new Map<string, number>();
-		for (const s of secrets) {
-			for (const w of s.knownBy) score.set(w.who, (score.get(w.who) ?? 0) + 2);
-			for (const w of s.suspects) score.set(w.who, (score.get(w.who) ?? 0) + 1);
-		}
-		return [...score.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'de')).map(([who]) => who);
-	});
-
-	type Mark = 'weiss' | 'ahnt' | null;
-	function markOf(s: Secret, who: string): { mark: Mark; how?: string } {
-		const k = s.knownBy.find((w) => w.who === who);
-		if (k) return { mark: 'weiss', how: k.how };
-		const a = s.suspects.find((w) => w.who === who);
-		if (a) return { mark: 'ahnt', how: a.how };
-		return { mark: null };
-	}
+	const people = $derived(witnesses(secrets));
 	/** Klick in der Tabelle: nichts → ahnt → weiß → nichts. Die Begründung bleibt beim Wechsel erhalten. */
 	function cycle(s: Secret, who: string) {
 		campaign.change('geheimnisse', (d) => {

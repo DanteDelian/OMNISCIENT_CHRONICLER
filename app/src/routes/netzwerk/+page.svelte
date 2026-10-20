@@ -6,6 +6,7 @@
 	import Modal from '$lib/components/Modal.svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { fmtGold, goldValue, uid } from '$lib/format';
+	import { mdSection } from '$lib/markdown';
 	import type { Agent } from '$lib/types';
 
 	const STATUS: { id: Agent['status']; label: string; one: string; color: string }[] = [
@@ -22,13 +23,8 @@
 	const weekly = $derived((active.reduce((s, a) => s + (a.wage ?? 0), 0) * 7) / 10);
 	const gold = $derived(goldValue(campaign.data.inventory.currency));
 	const plan = $derived(campaign.data.docs.find((d) => d.slug === 'aufbauplan'));
-	const rules = $derived(section(plan?.body, 'Regeln für die Hand'));
+	const rules = $derived(mdSection(plan?.body, 'Regeln für die Hand'));
 
-	/** Einen „## Abschnitt“ aus einem Dokument holen. */
-	function section(md: string | undefined, heading: string): string {
-		const m = md?.match(new RegExp(`^## ${heading}\\n([\\s\\S]*?)(?=^## |$(?![\\s\\S]))`, 'm'));
-		return m?.[1].trim() ?? '';
-	}
 	const roleLabel = (id: string) => net.roles.find((r) => r.id === id)?.label ?? id;
 	const fmtWage = (sm: number) => (sm % 10 === 0 ? `${sm / 10} GM` : `${sm} SM`) + ' pro Tag';
 

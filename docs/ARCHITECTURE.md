@@ -14,8 +14,9 @@ Browser (ssr = false): campaign-Store → Seiten und Bausteine
 
 - **Eine Datenquelle:** `campaign/`. Der Server liest alle Dateien, baut daraus den Verweis-Index und die
   Rückverweise (`lib/refs.ts`) und liefert alles in einem Rutsch (`lib/server/data.ts`, gecacht bis zur nächsten Änderung).
-- **Schreiben:** Die App schreibt nur `state`, `inventory`, `quests`, `spells`, `journal` und `map`
-  (`/api/save/[file]`, prüft die Grundstruktur, schreibt atomar über eine temporäre Datei).
+- **Schreiben:** Die App schreibt nur `state`, `inventory`, `quests`, `spells`, `journal`, `map`, `fragen`, `netzwerk`,
+  `zaubersets` und `geheimnisse` (`WRITABLE` in `lib/types.ts`, `/api/save/[file]` prüft die Grundstruktur und schreibt
+  atomar über eine temporäre Datei).
 - **Live:** `fs.watch` (rekursiv) meldet externe Änderungen, eigene Schreibvorgänge melden sich selbst.
   Jede Meldung geht per Server-Sent Events an alle Browser. Die laden über `invalidate('app:campaign')` neu und
   behalten dabei ungespeicherte lokale Änderungen. Ein Browser ignoriert das Echo seiner eigenen Speicherungen (Client-ID).
@@ -33,13 +34,20 @@ app/src/
     rules-ref.ts          Regel-Referenz (Zustände, Aktionen, Zauberwirken, Deckung, Licht, Tod, Rasten)
     refs.ts               Verweis-Index, Namensauflösung, Rückverweise (läuft auch im Prüfskript)
     markdown.ts           Markdown → HTML mit [[Verweisen]] und Hinweiskästen
-    game.ts               Spielaktionen: Schaden, Heilen, Wirken, Konzentration, Rasten, Untote
+    game.ts               Spielaktionen: Schaden, Heilen, Wirken, Konzentration, Rasten, Untote erneuern, Bezahlen
+    sets.ts               Zauber-Sets: Prioritätenliste → Vorbereitung bis zur Grenze, Studierzeit
+    werkstatt.ts          Rezepte (Spielerhandbuch, Xanathars), Herstellen, eine Herstellung pro langer Rast
+    raetsel.ts            Rätselwand: *Theorie:* und **Offen:** aus allen Texten sammeln
+    secrets.ts            Wer weiß was?: Mitwisser ordnen, Kurznamen, Markierungen
+    terms.ts              Deutsch–Englisch-Glossar aus Regeln, Fertigkeiten und Merkmalen
+    tone.ts               Farben für Freund, Feind und Unbekannt
     journal.ts            Schnellnotizen und neue Journal-Einträge
     stores/               campaign (Daten + Speichern), live (SSE), rolls (Würfel), ui (Dialoge)
     server/               store (Dateien, Watcher), data (laden + Index), auth (PIN)
     components/           Bausteine; play/ = Karten des Spieltischs; print/ = Teile der Druckfassung
     print.ts              Teile, Beschriftungen und Papierfarben der Druckfassung
-  routes/                 Seiten: / bogen zauber gefolge inventar quests journal welt karte archiv regeln druck login
+  routes/                 Seiten: / bogen zauber gefolge inventar werkstatt journal quests raetsel welt karte netzwerk
+                          geheimnisse archiv regeln druck login
                           api/: save, stream, assets, health
 app/scripts/check-data.mjs  Konsistenzprüfung der Kampagnendaten (npm run check:data)
 app/scripts/druck.mjs       PDFs der Druckfassung über Edge/Chrome ohne Fenster (npm run druck)

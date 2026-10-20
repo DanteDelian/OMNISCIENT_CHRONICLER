@@ -200,6 +200,23 @@ export function longRest() {
 	save();
 }
 
+/**
+ * Bezahlen: Betrag in GM abziehen, in Kupfer gerechnet, danach möglichst große Münzen behalten.
+ * Gibt false zurück, wenn das Geld nicht reicht.
+ */
+export function pay(gm: number): boolean {
+	const cur = campaign.data.inventory.currency;
+	let km = cur.gm * 100 + cur.sm * 10 + cur.km - Math.round(gm * 100);
+	if (km < 0) return false;
+	campaign.change('inventory', (inv) => {
+		inv.currency.gm = Math.floor(km / 100);
+		km -= inv.currency.gm * 100;
+		inv.currency.sm = Math.floor(km / 10);
+		inv.currency.km = km - inv.currency.sm * 10;
+	});
+	return true;
+}
+
 /** Material für ein Wirken von Vertrauten finden (Inventar-ID). */
 export const FAMILIAR_MATERIAL = 'vertrauten-material';
 

@@ -3,6 +3,7 @@
 	import PDoc from './PDoc.svelte';
 	import PMd from './PMd.svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
+	import { shortName as short, witnesses } from '$lib/secrets';
 	import type { Secret } from '$lib/types';
 
 	const STATUS: Record<Secret['status'], { label: string; color: string }> = {
@@ -11,21 +12,7 @@
 		aufgeflogen: { label: 'Aufgeflogen', color: 'var(--p-blood)' }
 	};
 	const g = $derived(campaign.data.geheimnisse);
-	/** Kurz und mit weichem Trennstrich, damit die Spalten schmal bleiben */
-	const SHORT: Record<string, string> = { 'Zaffera-Syndikat': 'Zafferas', 'Maskierter Mönchsmeister': 'Mönchs\u00admeister' };
-	function short(who: string): string {
-		if (SHORT[who]) return SHORT[who];
-		if (/^[„"]/.test(who)) return who;
-		return campaign.resolve(who)?.kind === 'Person' ? who.split(' ')[0] : who;
-	}
-	const people = $derived.by(() => {
-		const score = new Map<string, number>();
-		for (const s of g.secrets) {
-			for (const w of s.knownBy) score.set(w.who, (score.get(w.who) ?? 0) + 2);
-			for (const w of s.suspects) score.set(w.who, (score.get(w.who) ?? 0) + 1);
-		}
-		return [...score.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'de')).map(([who]) => who);
-	});
+	const people = $derived(witnesses(g.secrets));
 	const mark = (s: Secret, who: string) => (s.knownBy.some((w) => w.who === who) ? '●' : s.suspects.some((w) => w.who === who) ? '○' : '');
 </script>
 

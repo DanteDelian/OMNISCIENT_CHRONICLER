@@ -5,7 +5,7 @@
 	import Modal from '$lib/components/Modal.svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { rolls } from '$lib/stores/rolls.svelte';
-	import { heal } from '$lib/game';
+	import { heal, pay } from '$lib/game';
 	import { fmtGold, goldValue, uid } from '$lib/format';
 	import { diceDe } from '$lib/rules';
 	import type { Item, ItemGroup, WishItem, WishWay } from '$lib/types';
@@ -69,25 +69,15 @@
 	let txUnit = $state<'gm' | 'sm' | 'km'>('gm');
 	function transaction(sign: 1 | -1) {
 		if (!txAmount) return;
-		const inKm = txAmount * (txUnit === 'gm' ? 100 : txUnit === 'sm' ? 10 : 1) * sign;
-		const cur = inv.currency;
-		let km = cur.gm * 100 + cur.sm * 10 + cur.km + inKm;
-		if (km < 0) {
-			rolls.event('Nicht genug Geld', `Dir fehlen ${fmtGold(-km / 100)} GM`, 'bad');
+		const amount = txAmount;
+		const gm = amount / (txUnit === 'gm' ? 1 : txUnit === 'sm' ? 10 : 100);
+		if (sign > 0) {
+			campaign.change('inventory', (i) => (i.currency[txUnit] += amount));
+		} else if (!pay(gm)) {
+			rolls.event('Nicht genug Geld', `Dir fehlen ${fmtGold(gm - total)} GM`, 'bad');
 			return;
 		}
-		campaign.change('inventory', (i) => {
-			if (sign > 0) {
-				i.currency[txUnit] += txAmount!;
-			} else {
-				// Ausgeben: in Kupfer rechnen und möglichst große Münzen behalten.
-				i.currency.gm = Math.floor(km / 100);
-				km -= i.currency.gm * 100;
-				i.currency.sm = Math.floor(km / 10);
-				i.currency.km = km - i.currency.sm * 10;
-			}
-		});
-		rolls.event(sign > 0 ? 'Einnahme' : 'Ausgabe', `${txAmount} ${txUnit.toUpperCase()}`, sign > 0 ? 'good' : 'info');
+		rolls.event(sign > 0 ? 'Einnahme' : 'Ausgabe', `${amount} ${txUnit.toUpperCase()}`, sign > 0 ? 'good' : 'info');
 		txAmount = null;
 	}
 
@@ -138,15 +128,8 @@
 	// ---------- Wunschliste ----------
 	let buying = $state<WishItem | null>(null);
 	function buy(w: WishItem) {
-		const priceKm = Math.round((w.price ?? 0) * 100);
-		const cur = inv.currency;
-		let km = cur.gm * 100 + cur.sm * 10 + cur.km - priceKm;
-		if (km < 0) return;
+		if (!pay(w.price ?? 0)) return;
 		campaign.change('inventory', (i) => {
-			i.currency.gm = Math.floor(km / 100);
-			km -= i.currency.gm * 100;
-			i.currency.sm = Math.floor(km / 10);
-			i.currency.km = km - i.currency.sm * 10;
 			const wi = i.wishlist.find((x) => x.id === w.id);
 			if (wi) wi.done = true;
 			// Pfeile, Rationen, Tränke: zum vorhandenen Stapel, sonst als neuer Gegenstand

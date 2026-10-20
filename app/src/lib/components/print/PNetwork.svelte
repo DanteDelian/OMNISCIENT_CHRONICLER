@@ -2,13 +2,13 @@
 	import PDoc from './PDoc.svelte';
 	import PMd from './PMd.svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
-	import { printAnchor } from '$lib/markdown';
+	import { mdSection, printAnchor } from '$lib/markdown';
 	import type { Agent } from '$lib/types';
 
 	const STATUS: Record<Agent['status'], string> = { aktiv: 'Aktiv', kandidat: 'Kandidat', ruhend: 'Ruhend', verloren: 'Verloren' };
 	const net = $derived(campaign.data.netzwerk);
 	const plan = $derived(campaign.data.docs.find((d) => d.slug === 'aufbauplan'));
-	const rules = $derived(plan?.body.match(/^## Regeln für die Hand\n([\s\S]*?)(?=^## |$(?![\s\S]))/m)?.[1].trim() ?? '');
+	const rules = $derived(mdSection(plan?.body, 'Regeln für die Hand'));
 	const roleLabel = (id: string) => net.roles.find((r) => r.id === id)?.label ?? id;
 	const wage = (sm: number | undefined) => (!sm ? '' : sm % 10 === 0 ? `${sm / 10} GM/Tag` : `${sm} SM/Tag`);
 	/** Leere Zeilen zum Ergänzen mit der Hand */
