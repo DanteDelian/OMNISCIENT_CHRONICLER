@@ -80,6 +80,16 @@
     ]
   },
   {
+    "id": "verfallene-untote",
+    "to": "dm",
+    "topic": "Verfallene Untote",
+    "question": "Was tun deine Untoten, wenn die Kontrolle doch einmal verfällt? Laut Zaubertext gehorchen sie nach 24 Stunden nur nicht mehr. Greifen sie dich an, wandern sie davon oder stehen sie still?",
+    "status": "offen",
+    "links": [
+      "Tote erwecken"
+    ]
+  },
+  {
     "id": "tukan",
     "to": "dm",
     "topic": "Tukan als Vertrauter",

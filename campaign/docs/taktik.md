@@ -189,16 +189,39 @@ Der Eisriese entspricht dem **Frostriesen** des Monsterhandbuchs.
 - **Ab Stufe 6:** Mit *Gutartiges Versetzen* tauschst du per Aktion den Platz mit Aella. Sie steht sofort an der Front, du bist aus der Gefahr. Mit *[[Hypnotisches Muster]]* fällt eine ganze Gruppe Riesen aus, mit *[[Flutwelle]]* liegen sie am Boden. Siehe [[Stufe-6-Planer]].
 - **Nicht vergessen:** *Person festhalten* wirkt nicht gegen Riesen, nur gegen Humanoide wie die Orcs.
 
-## Tote erwecken: Logistik
+## Tote erwecken: klug erneuern
 
-| Plätze Grad 3 | Untote, die du dauerhaft hältst | Rest |
-| :-- | :-- | :-- |
-| 1 | bis zu 4 | 1 Platz für *Gegenzauber* |
-| 2 | bis zu 8 | kein *Gegenzauber* mehr |
+**Kurz:** Das Erneuern kostet dich **einen** Grad-3-Platz pro Tag, nicht alle. Ein Wirken hält bis zu 4 Untote weitere 24 Stunden. Mit dem Abend-Trick kostet es dich praktisch nichts.
 
-- **Aufbau:** Jeder neue Untote kostet einen Grad-3-Platz und 1 Minute. 4 Skelette brauchen also 4 Wirkungen über mehrere Tage, während du die vorhandenen weiter erneuerst.
-- **Erneuern:** 1 Minute, alle Untoten höchstens 3 m entfernt, vor Ablauf der 24 Stunden.
-- **Arkane Erholung** kann einen Grad-3-Platz zurückholen (1× pro Tag).
+**Die Regel:** Die Kontrolle hält 24 Stunden **ab dem Wirken**, nicht ab einer Rast. Erneuern darfst du jederzeit vorher: 1 Minute Wirkzeit, alle Untoten höchstens 3 m entfernt.
+
+| Platz | erneuert | oder erweckt neu |
+| :-- | :-: | :-: |
+| Grad 3 | bis zu 4 | 1 |
+| Grad 4 (ab Stufe 7) | bis zu 6 | 3 |
+| Grad 5 (ab Stufe 9) | bis zu 8 | 5 |
+
+### Der Abend-Trick
+
+1. **Tagsüber** hast du alle Grad-3-Plätze für *Gegenzauber*, neue Untote und ab Stufe 6 für *Hypnotisches Muster* und *Flutwelle*.
+2. **Abends, kurz vor der langen Rast,** erneuerst du mit einem Grad-3-Platz, den du nicht mehr brauchst. Die Rast gibt ihn dir sofort zurück.
+3. **Deine Untoten gehorchen dann bis zum nächsten Abend.** Du wiederholst das jeden Abend, immer bevor 24 Stunden seit dem letzten Mal vergangen sind.
+
+Das Grimoire hilft dabei: Der Dialog „Lange Rast“ erinnert dich, und der Knopf „Erneuern“ auf der Gefolge-Seite und am Spieltisch verbraucht den Platz.
+
+### Wenn abends kein Grad-3-Platz übrig ist
+
+- **Arkane Erholung:** Nach einer kurzen Rast holst du einmal am Tag Plätze bis zusammen 3 Grade zurück, also genau einen Grad-3-Platz. An Kampftagen ist sie deine Versicherung für die Untoten. Hast du abends noch einen Grad-3-Platz, holst du mit ihr lieber *Netz* und *Schild* zurück.
+- **Vorausplanen:** Weißt du morgens schon, dass ein harter Tag kommt, halte einen Grad-3-Platz zurück.
+- **Notfalls morgens:** Klappt es abends nicht, erneuerst du gleich nach der Rast, spätestens 24 Stunden nach dem letzten Mal. Dann kostet es einen Platz dieses Tages.
+- **Nie verfallen lassen:** Danach gehorchen sie nicht mehr, und was sie dann tun, entscheidet der DM (Frage auf der [[Rätselwand]]). Brauchst du sie nicht mehr, zerstöre sie, solange sie noch gehorchen.
+
+### Wie viele Untote?
+
+- **Höchstens 4 bis Stufe 6.** So viele hält ein Grad-3-Platz. Ein fünfter Untoter kostet dich jeden Tag einen zweiten Platz. Ab Stufe 7 hält ein Grad-4-Platz 6.
+- **Du bist kein Nekromant.** Nekromanten bekommen ab Stufe 6 ein Merkmal (Undead Thralls), das pro Wirken einen Untoten mehr erweckt und sie stärker macht. Als Beschwörer bekommst du das nicht. Eine kleine, gut ausgerüstete Leibwache ist für dich klüger als ein Heer.
+- **Aufbau mit den 3 Orc-Skeletten vom Boot:** Jedes neue Skelett kostet einen eigenen Grad-3-Platz und gehorcht 24 Stunden ab dem Erwecken. Erwecke sie also auch abends, dann laufen alle im selben Rhythmus: am ersten Abend zwei Skelette mit beiden Plätzen, am zweiten Abend erneuern und das dritte erwecken.
+- **Perle der Macht** (Wunsch an Saladin): holt einmal am Tag einen Platz bis Grad 3 zurück. Damit ist das Erneuern immer gedeckt.
 - **Rohstoff:** nur humanoide Knochen (Skelette) oder Leichen (Zombies). Vorrat: 3 Orc-Skelette auf dem Boot. Weitere Knochen: das Schlachtfeld im Südosten.
 
 ## Positionierung

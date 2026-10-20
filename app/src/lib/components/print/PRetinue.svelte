@@ -47,8 +47,9 @@
 			/>
 		{/each}
 	</div>
-	<div class="grid g3" style="gap: 3mm; margin-top: 3mm">
-		<div class="callout callout-rule"><div class="callout-title" data-label="Regel">24-Stunden-Kontrolle</div><p class="small">Vor Ablauf erneut wirken (1 Minute, alle in 3 m). Ein Grad-3-Platz hält bis zu 4 Untote. Verfallene Untote sind frei und meist feindlich.</p></div>
+	<div class="grid g2" style="gap: 3mm; margin-top: 3mm">
+		<div class="callout callout-rule"><div class="callout-title" data-label="Regel">24 Stunden ab dem Wirken</div><p class="small">Die Kontrolle hält 24 Stunden ab dem Wirken, nicht ab einer Rast. Erneuern darfst du jederzeit vorher: 1 Minute, alle in 3 m, ein Grad-3-Platz für bis zu 4 Untote (Grad 4: 6). Verfällt sie, gehorchen sie nicht mehr. Was sie dann tun, entscheidet der DM.</p></div>
+		<div class="callout callout-tip"><div class="callout-title" data-label="Tipp">Abends erneuern</div><p class="small">Erneuere kurz vor der langen Rast mit einem Grad-3-Platz, den du nicht mehr brauchst: Die Rast gibt ihn gleich zurück. Tagsüber bleiben dir alle Grad-3-Plätze. Keiner mehr frei? Nach einer kurzen Rast holt die Arkane Erholung einen zurück.</p></div>
 		<div class="callout callout-tip"><div class="callout-title" data-label="Tipp">Ein Befehl für alle</div><p class="small">Eine Bonusaktion steuert alle Untoten in 18 m mit demselben Befehl. Allgemeine Befehle laufen ohne weitere Bonusaktionen.</p></div>
 		<div class="callout callout-warning"><div class="callout-title" data-label="Achtung">Nur Humanoide</div><p class="small">Knochen werden zum Skelett, Leichen zum Zombie, immer von kleinen oder mittelgroßen Humanoiden.</p></div>
 	</div>

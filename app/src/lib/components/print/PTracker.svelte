@@ -97,7 +97,7 @@
 				{/each}
 			</tbody>
 		</table>
-		<p class="tiny muted" style="margin: 1mm 0 0">Skelett RK 13, 13 TP, Kurzbogen +4 (1W6 + 2), Dolch +4 (1W4 + 2) · Zombie RK 8, 22 TP · Erneuern: 1 Minute, Grad-3-Platz für bis zu 4.</p>
+		<p class="tiny muted" style="margin: 1mm 0 0">Skelett RK 13, 13 TP, Kurzbogen +4 (1W6 + 2), Dolch +4 (1W4 + 2) · Zombie RK 8, 22 TP · Erneuern: 1 Minute, Grad-3-Platz für bis zu 4, am klügsten abends vor der Rast.</p>
 	</div>
 
 	<div class="grid" style="grid-template-columns: 1.6fr 1fr; gap: 4mm; margin-top: 2.5mm">

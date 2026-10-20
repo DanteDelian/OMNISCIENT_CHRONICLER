@@ -865,9 +865,9 @@ html:has(.druck) body {
 .druck .retinue-img img {
 	display: block;
 	width: 100%;
-	height: 62mm;
+	height: 70mm;
 	object-fit: cover;
-	object-position: 50% 42%;
+	object-position: 50% 22%;
 	border-radius: 2mm;
 }
 .druck .retinue-img figcaption {

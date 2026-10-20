@@ -1,19 +1,23 @@
 <script lang="ts">
 	/** Kurze und lange Rast mit Trefferwürfeln, Arkaner Erholung und Trance-Wahl. */
-	import { Moon, Coffee, Dices, Sparkles } from '@lucide/svelte';
+	import { Moon, Coffee, Dices, Sparkles, Skull } from '@lucide/svelte';
 	import Modal from './Modal.svelte';
 	import Pips from './Pips.svelte';
 	import TranceSelect from './TranceSelect.svelte';
 	import SpellSets from './SpellSets.svelte';
+	import RenewMinions from './RenewMinions.svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { ui } from '$lib/stores/ui.svelte';
 	import { arcaneRecovery, longRest, spendHitDie } from '$lib/game';
-	import { featureLeft, hitDiceLeft, slotTotals } from '$lib/rules';
+	import { featureLeft, hitDiceLeft, lowestFreeSlot, slotTotals } from '$lib/rules';
 
 	const c = $derived(campaign.data.character);
 	const s = $derived(campaign.data.state);
 	const recoveryLeft = $derived(featureLeft(c, s, 'arkane-erholung'));
 	const budget = $derived(Math.ceil(c.level / 2));
+	/** Untote, die heute noch erneuert werden müssen, und ob dafür ein Grad-3-Platz frei ist */
+	const openMinions = $derived(s.minions.filter((m) => !m.renewed).length);
+	const free3 = $derived(lowestFreeSlot(c, s, 3));
 
 	let picked = $state<number[]>([]);
 	let healed = $state<number[]>([]);
@@ -65,6 +69,9 @@
 				<p class="text-sm text-ink-3">Heute schon genutzt. Wieder verfügbar nach der nächsten langen Rast.</p>
 			{:else}
 				<p class="mb-3 text-sm text-ink-2">Wähle verbrauchte Plätze, zusammen höchstens <b class="text-ink">{budget} Grade</b>. Gewählt: <b class="num text-ink">{pickedSum}</b></p>
+				{#if openMinions && free3 === null}
+					<p class="mb-3 rounded-lg bg-s-nekro/10 px-3 py-2 text-xs text-ink-2"><Skull size={12} class="mr-1 inline text-s-nekro" />Deine Untoten brauchen heute noch einen Grad-3-Platz. Hol ihn hier zurück, wenn du ihn nicht für etwas anderes brauchst.</p>
+				{/if}
 				<div class="flex flex-wrap gap-2">
 					{#each slotTotals(c) as sl (sl.level)}
 						{#each Array.from({ length: Math.max(0, usedOf(sl.level)) }) as _, i (i)}
@@ -99,8 +106,25 @@
 			<li>Alle Zauberplätze, Sternenschritt, Arkane Erholung und die Ohrring-Botschaft zurück</li>
 			<li>Trefferwürfel: +{Math.max(1, Math.floor(c.level / 2))} (jetzt {hitDiceLeft(c, s)}/{c.level})</li>
 			<li>Konzentration, Schild und Unsichtbarer Diener enden. Erschöpfung −1, falls vorhanden.</li>
-			{#if s.minions.length}<li class="text-warn">Untote: Die 24 Stunden laufen weiter. Kontrolle erneuern nicht vergessen (1 Minute, Grad-3-Platz für bis zu 4).</li>{/if}
 		</ul>
+		{#if s.minions.length}
+			<div class="sunken p-4">
+				<div class="mb-1 flex items-center gap-2 font-medium"><Skull size={15} class="text-s-nekro" />Untote vor der Rast erneuern</div>
+				{#if openMinions}
+					<p class="mb-2 text-xs leading-relaxed text-ink-2">
+						Jetzt ist der beste Moment: Die Rast gibt dir den Platz gleich zurück, und deine Untoten gehorchen 24 Stunden ab jetzt. {openMinions} von {s.minions.length} noch nicht erneuert.
+					</p>
+					{#if free3 === null}
+						<p class="mb-2 text-xs text-warn">
+							{recoveryLeft > 0 ? 'Kein Grad-3-Platz frei: Mach zuerst eine kurze Rast, die Arkane Erholung holt einen zurück.' : 'Kein Grad-3-Platz und keine Arkane Erholung mehr: Die Kontrolle hält nur bis 24 Stunden nach dem letzten Erneuern. Plane morgen früh einen Grad-3-Platz dafür ein.'}
+						</p>
+					{/if}
+				{:else}
+					<p class="mb-2 text-xs text-ink-2">Heute schon erneuert. Hast du morgens erneuert, kannst du jetzt mit einem übrigen Platz noch einmal: Dann gehorchen sie bis morgen Abend.</p>
+				{/if}
+				<RenewMinions />
+			</div>
+		{/if}
 		<div class="sunken p-4">
 			<div class="mb-2 font-medium">Astrale Trance: Übung für heute</div>
 			<TranceSelect />

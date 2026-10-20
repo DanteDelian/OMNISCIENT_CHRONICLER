@@ -2,6 +2,7 @@
 	import { Bird, Ghost, Skull, Plus, Minus, X, CircleCheck, CircleAlert } from '@lucide/svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { FAMILIAR_MATERIAL, addMinion, removeMinion, summonFamiliar } from '$lib/game';
+	import RenewMinions from '$lib/components/RenewMinions.svelte';
 
 	const s = $derived(campaign.data.state);
 	const cr = $derived(campaign.data.creatures);
@@ -74,10 +75,11 @@
 		</div>
 	</div>
 	{#if s.minions.length}
+		{#if s.minions.some((m) => !m.renewed)}<div class="mb-2 flex justify-end"><RenewMinions size="xs" /></div>{/if}
 		<ul class="space-y-1.5">
 			{#each s.minions as m (m.id)}
 				<li class="flex items-center gap-2 rounded-lg bg-white/[0.02] px-2 py-1.5">
-					<button onclick={() => renew(m.id)} title={m.renewed ? 'Kontrolle erneuert' : 'Kontrolle erneuern! (1 Minute, Grad-3-Platz für bis zu 4)'}>
+					<button onclick={() => renew(m.id)} title={m.renewed ? 'Heute erneuert: gehorcht 24 Stunden ab dem Erneuern' : 'Noch erneuern, spätestens 24 Stunden nach dem letzten Mal. Am klügsten abends vor der langen Rast mit einem Platz, den du nicht mehr brauchst'}>
 						{#if m.renewed}<CircleCheck size={15} class="text-life" />{:else}<CircleAlert size={15} class="text-warn" />{/if}
 					</button>
 					<span class="min-w-0 flex-1">

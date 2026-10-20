@@ -248,6 +248,31 @@ export function addMinion(kind: Minion['kind']) {
 	save();
 }
 
+/** Wie viele Untote ein Wirken von Tote erwecken erneuert: 4 mit Grad 3, je Grad darüber 2 mehr. */
+export function renewCapacity(slotLevel: number): number {
+	return slotLevel < 3 ? 0 : 4 + 2 * (slotLevel - 3);
+}
+
+/**
+ * Tote erwecken zum Erneuern wirken: Die Kontrolle hält 24 Stunden ab jetzt.
+ * Verbraucht einen Platz ab Grad 3 und erneuert die noch offenen Untoten zuerst.
+ */
+export function renewMinions(slotLevel: number) {
+	const s = st();
+	if (slotLevel < 3 || slotsLeft(ch(), s, slotLevel) <= 0) {
+		rolls.event('Kein Platz frei', 'Erneuern braucht einen Platz ab Grad 3', 'bad');
+		return false;
+	}
+	const chosen = [...s.minions].sort((a, b) => Number(a.renewed) - Number(b.renewed)).slice(0, renewCapacity(slotLevel));
+	if (!chosen.length) return false;
+	s.slotsUsed[String(slotLevel)] = (s.slotsUsed[String(slotLevel)] ?? 0) + 1;
+	for (const m of chosen) m.renewed = true;
+	const open = s.minions.filter((m) => !m.renewed).length;
+	rolls.event('Untote erneuert', `${chosen.length} gehorchen 24 Stunden ab jetzt · Grad ${slotLevel}${open ? ` · ${open} noch offen` : ''}`, 'good');
+	save();
+	return true;
+}
+
 export function removeMinion(id: string) {
 	st().minions = st().minions.filter((m) => m.id !== id);
 	save();

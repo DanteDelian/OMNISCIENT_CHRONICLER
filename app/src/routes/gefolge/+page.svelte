@@ -5,6 +5,7 @@
 	import Callout from '$lib/components/Callout.svelte';
 	import Markdown from '$lib/components/Markdown.svelte';
 	import SourceChip from '$lib/components/SourceChip.svelte';
+	import RenewMinions from '$lib/components/RenewMinions.svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { FAMILIAR_MATERIAL, addMinion, removeMinion, summonFamiliar } from '$lib/game';
 	import { diceDe, fmtMod } from '$lib/rules';
@@ -39,7 +40,7 @@
 {#if cr.retinueImage}
 	{@const img = cr.retinueImage}
 	<figure class="panel relative mb-6 overflow-hidden">
-		<img src="/api/assets/{img.file}" alt={img.title} class="h-56 w-full object-cover object-[50%_42%] sm:h-72" />
+		<img src="/api/assets/{img.file}" alt={img.title} class="h-60 w-full object-cover object-[50%_20%] sm:h-80" />
 		<figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/55 to-transparent px-5 pt-12 pb-4">
 			<div class="title-display text-2xl text-white sm:text-3xl">{img.title}</div>
 			<p class="mt-1 max-w-2xl text-sm leading-relaxed text-white/80">{img.caption}</p>
@@ -52,7 +53,8 @@
 <section class="panel panel-glow mb-6 p-5">
 	<div class="mb-4 flex flex-wrap items-center justify-between gap-3">
 		<div class="flex items-center gap-2"><Skull size={18} class="text-s-nekro" /><h2 class="title-display text-3xl">Deine Untoten</h2></div>
-		<div class="flex gap-2">
+		<div class="flex flex-wrap gap-2">
+			<RenewMinions />
 			<button class="btn btn-sm" onclick={() => addMinion('skelett')}><Plus size={13} />Skelett</button>
 			<button class="btn btn-sm" onclick={() => addMinion('zombie')}><Plus size={13} />Zombie</button>
 		</div>
@@ -64,7 +66,7 @@
 				{@const act = block?.actions.find((a) => a.name === block.loadout?.find((l) => l.item === m.gear)?.action)}
 				<div class="sunken p-3">
 					<div class="flex items-center gap-3">
-						<button onclick={() => minion(m.id, (x) => (x.renewed = !x.renewed))} title={m.renewed ? 'Kontrolle erneuert' : 'Kontrolle läuft aus! Erneuern: 1 Minute, Grad-3-Platz für bis zu 4'}>
+						<button onclick={() => minion(m.id, (x) => (x.renewed = !x.renewed))} title={m.renewed ? 'Heute erneuert: gehorcht 24 Stunden ab dem Erneuern' : 'Noch erneuern, spätestens 24 Stunden nach dem letzten Mal. Am klügsten abends vor der langen Rast mit einem Platz, den du nicht mehr brauchst'}>
 							{#if m.renewed}<CircleCheck size={18} class="text-life" />{:else}<CircleAlert size={18} class="text-warn" />{/if}
 						</button>
 						<input class="min-w-0 flex-1 bg-transparent text-sm font-medium outline-none" value={m.name} onchange={(e) => minion(m.id, (x) => (x.name = e.currentTarget.value))} aria-label="Name" />
@@ -87,10 +89,11 @@
 			{/each}
 		</div>
 	{:else}
-		<p class="text-sm text-ink-3">Noch keine Untoten erschaffen. Beim Erwecken bekommen sie ihre Waffen: erst den Kurzbogen, dann die beiden Society-Dolche. Nach jeder langen Rast markiert das Grimoire sie als „Kontrolle erneuern“.</p>
+		<p class="text-sm text-ink-3">Noch keine Untoten erschaffen. Beim Erwecken bekommen sie ihre Waffen: erst den Kurzbogen, dann die beiden Society-Dolche. Nach jeder langen Rast markiert das Grimoire sie als „noch erneuern“.</p>
 	{/if}
-	<div class="mt-4 grid gap-3 md:grid-cols-3">
-		<Callout type="rule" title="24-Stunden-Kontrolle">Vor Ablauf erneut wirken (1 Minute, alle in 3 m). Ein Grad-3-Platz hält bis zu 4 Untote. Verfallene Untote sind frei und meist feindlich.</Callout>
+	<div class="mt-4 grid gap-3 md:grid-cols-2 2xl:grid-cols-4">
+		<Callout type="rule" title="24 Stunden ab dem Wirken">Die Kontrolle hält 24 Stunden ab dem Wirken, nicht ab einer Rast. Erneuern darfst du jederzeit vorher: 1 Minute, alle in 3 m, ein Grad-3-Platz für bis zu 4 Untote (Grad 4: 6). Verfällt sie, gehorchen sie nicht mehr. Was sie dann tun, entscheidet der DM.</Callout>
+		<Callout type="tip" title="Abends erneuern">Erneuere kurz vor der langen Rast mit einem Grad-3-Platz, den du nicht mehr brauchst: Die Rast gibt ihn gleich zurück. Tagsüber bleiben dir alle Grad-3-Plätze. Keiner mehr frei? Nach einer kurzen Rast holt die Arkane Erholung einen zurück. <a class="text-astral hover:underline" href="/archiv/taktik#tote-erwecken-klug-erneuern">Mehr im Taktik-Handbuch</a></Callout>
 		<Callout type="tip" title="Ein Befehl für alle">Eine Bonusaktion steuert alle Untoten in 18 m mit demselben Befehl. Allgemeine Befehle („Bewacht den Gang“) laufen ohne weitere Bonusaktionen.</Callout>
 		<Callout type="warning" title="Nur Humanoide">Knochen werden zum Skelett, Leichen zum Zombie, immer von kleinen oder mittelgroßen Humanoiden. Tierkadaver gehen nicht.</Callout>
 	</div>
