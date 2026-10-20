@@ -5,7 +5,7 @@ icon: shopping-bag
 order: 8
 group: Pläne
 aliases: [Einkaufsliste, Einkaufsliste Valerius, Einkaufs- & Verhandlungsliste, Verhandlungsliste]
-updated: 2026-10-19
+updated: 2026-10-20
 ---
 # Einkaufs- und Verhandlungsliste
 
@@ -14,7 +14,7 @@ updated: 2026-10-19
 > [!NOTE] Stand Oktober 2026
 > Im Beutel: 47 GM, 16 SM. Neu auf dem Zettel: **Pfeile** (40 für 2 GM) und **Köcher** für deine Bogen-Skelette, ein **zweiter Kurzbogen** (25 GM), **Rationen** für die Reise, **Öl** als Brandbeschleuniger. Später: ein **Heiltrank**, die Spruchrolle *Magierrüstung* (nur falls der DM die fehlenden Einträge nicht gibt) und der Fokus für *Feenwesen beschwören* (nur mit Tashas Kessel).
 
-**Budget bei normalen Händlern: 17 GM, 16 SM.**
+**Budget heute: 47 GM, 16 SM.** Im November 2025 waren es 17 GM, 16 SM. Was du ohne Gold bekommst, steht im Einkaufszettel bei „Wie?“ und in der [[Werkstatt]].
 
 ## Phase 1 · Sofort leistbar
 

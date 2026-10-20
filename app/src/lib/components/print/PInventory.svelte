@@ -6,6 +6,16 @@
 	import { diceDe } from '$lib/rules';
 	import { ITEM_GROUPS, PHASE, PRIO } from '$lib/print';
 	import { fmtGold } from '$lib/format';
+	import { RECIPES } from '$lib/werkstatt';
+
+	const WAY_LABEL: Record<string, string> = { herstellen: 'herstellen', erfragen: 'erfragen', klauen: 'klauen', erbeuten: 'erbeuten' };
+	/** Preis lesbar: unter 1 GM in Silber oder Kupfer */
+	function price(gm: number): string {
+		if (gm === 0) return 'Holz';
+		if (gm >= 1) return `${fmtGold(gm)} GM`;
+		if (gm >= 0.1 && Math.round(gm * 100) % 10 === 0) return `${Math.round(gm * 10)} SM`;
+		return `${Math.round(gm * 100)} KM`;
+	}
 
 	const inv = $derived(campaign.data.inventory);
 	const total = $derived(inv.currency.gm + inv.currency.sm / 10 + inv.currency.km / 100);
@@ -56,11 +66,35 @@
 							<td><b>{w.name}</b>{#if w.qty && w.qty > 1}{' '}<span class="tiny muted">× {w.qty}</span>{/if}</td>
 							<td>{PRIO[w.priority] ?? w.priority}</td>
 							<td class="r num">{w.priceText ?? (w.price != null ? `${fmtGold(w.price)} GM` : '–')}</td>
-							<td class="small"><PMd src={w.why} inline /></td>
+							<td class="small">
+								<PMd src={w.why} inline />
+								{#if w.ways?.length && !w.done}<div class="tiny" style="margin-top: 0.6mm"><b>Ohne Gold:</b> {w.ways.map((x) => WAY_LABEL[x] ?? x).join(', ')}{#if w.how}{' '}· <PMd src={w.how} inline />{/if}</div>{/if}
+							</td>
 						</tr>
 					{/each}
 				</tbody>
 			</table>
 		{/each}
 	{/if}
+
+	<h2 class="avoid">Werkstatt <span class="count">eine Herstellung pro langer Rast · Übung aus der Astralen Trance</span></h2>
+	<table>
+		<thead><tr><th style="width: 18%">Erzeugnis</th><th style="width: 19%">Werkzeug</th><th style="width: 11%">Zeit</th><th class="r" style="width: 10%">Zutaten</th><th class="r" style="width: 10%">Wert</th><th>Regeln</th></tr></thead>
+		<tbody>
+			{#each RECIPES as r (r.id)}
+				<tr>
+					<td><b>{r.name}</b>{#if r.yield > 1}{' '}<span class="tiny muted">bis {r.yield}</span>{/if}</td>
+					<td>{r.tool}</td>
+					<td>{r.time === 'tag' ? '1 Tag Arbeit' : 'lange Rast'}</td>
+					<td class="r num">{price(r.cost)}</td>
+					<td class="r num">{price(r.value * r.yield)}</td>
+					<td class="small"><PMd src={r.rules.replaceAll('\n\n', ' ')} inline /></td>
+				</tr>
+			{/each}
+		</tbody>
+	</table>
+	<p class="tiny muted" style="margin-top: 1mm">
+		Alchemie nach Xanathars: eine Dosis pro langer Rast, Rohstoffe zum halben Marktpreis. Heiltränke: Kräuterkundeausrüstung, 1 Tag und 25 GM. Pfeile: Holzschnitzwerkzeug,
+		bis zu 20 pro langer Rast. Händler zahlen meist die Hälfte (Spielerhandbuch), Gewinn bringt nur der Verkauf zum vollen Preis.
+	</p>
 </PDoc>

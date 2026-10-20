@@ -195,6 +195,7 @@ export function longRest() {
 	s.shield = false;
 	s.servant = false;
 	for (const m of s.minions) m.renewed = false;
+	s.lastLongRest = Date.now();
 	rolls.event('Lange Rast', 'TP, Plätze, Sternenschritt und Ohrring sind zurück. Trance-Übung neu wählen!', 'good');
 	save();
 }

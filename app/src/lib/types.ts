@@ -95,6 +95,10 @@ export interface PlayState {
 	minions: Minion[];
 	/** Zuletzt gewähltes Zauber-Set (zaubersets.json) */
 	spellSet?: string;
+	/** Letzte Herstellung in der Werkstatt (eine pro langer Rast) */
+	workshop?: { at: number; item: string };
+	/** Zeitpunkt der letzten langen Rast */
+	lastLongRest?: number;
 	updatedAt: number;
 }
 
@@ -246,7 +250,13 @@ export interface WishItem {
 	group?: ItemGroup;
 	/** ID eines vorhandenen Gegenstands, dessen Menge sich beim Kauf erhöht */
 	stack?: string;
+	/** Wege ohne Gold: selbst herstellen, erfragen, klauen, erbeuten */
+	ways?: WishWay[];
+	/** Wie das geht (Markdown) */
+	how?: string;
 }
+
+export type WishWay = 'herstellen' | 'erfragen' | 'klauen' | 'erbeuten';
 
 export interface Inventory {
 	currency: { gm: number; sm: number; km: number };

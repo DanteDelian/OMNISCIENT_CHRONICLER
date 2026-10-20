@@ -595,8 +595,10 @@
 		transform: none;
 	}
 }
+/* backwards statt both: Nach dem Einblenden bleibt kein transform stehen. Sonst wäre .rise der Bezugsrahmen
+   für position: fixed, und Dialoge lägen nach dem Scrollen außerhalb des Bildschirms. */
 .rise {
-	animation: rise 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+	animation: rise 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
 }
 @keyframes pulse-ring {
 	0% {

@@ -5,7 +5,7 @@ icon: lightbulb
 order: 10
 group: Pläne
 aliases: [Ideen, Brainstorming, Ideenliste]
-updated: 2026-10-19
+updated: 2026-10-20
 ---
 # Ideen für die nächsten Sessions
 
@@ -18,6 +18,22 @@ updated: 2026-10-19
 - **Skelette als stille Nachtwache.** Erweckt schlafen sie nicht und sehen 18 m im Dunkeln. Das kostet aber jeden Tag einen Grad-3-Platz, lohnt sich also erst, wenn ihr in Feindgebiet rastet.
 - **Alchemie in der Trance.** Mit dem Alchemistenwerkzeug machst du pro langer Rast eine Dosis Säure oder Alchemistenfeuer, aus Rohstoffen zum halben Preis (Xanathars). Ob deine Grundsubstanzen dafür reichen, entscheidet der DM.
 - **Pfeile und Köcher kaufen**, sobald ihr an einem Händler vorbeikommt. Siehe Einkaufszettel im Inventar.
+
+## Geld für die Hand
+
+- **Die Werkstatt jeden Tag nutzen.** Ein Alchemistenfeuer pro langer Rast oder ein Heiltrank pro Arbeitstag bringt zum vollen Preis je 25 GM. Abnehmer: Saladins Laden, Stammkunden der Hand oder eine Stadt im Krieg, die Feuer und Heiltränke braucht. Siehe [[Werkstatt]].
+- **Die Belohnung vorher aushandeln.** Hilft ihr der belagerten Stadt, könnt ihr etwas verlangen: Gold, Handelsrechte, ein Lager oder ein Haus für die Hand. Nach dem Sieg ist eure Verhandlungsmacht kleiner.
+- **Der Ruf als Kapital.** Floshem ist ein Mystiker: Niemand weiß, was um ihn herum geschieht, aber als Held der Echsen und Riesen-Schlächter kann es nur Gutes sein (laut dir). Wer ihn um Rat, Schutz oder einen Gefallen bittet, zahlt in Gold oder in Gefälligkeiten. Die vermummten, stummen Diener passen genau in dieses Bild.
+- **Beute verwerten.** Die rostigen Orc-Äxte bringen beim Händler wenig, als Metall oder als Ausrüstung für Verbündete vielleicht mehr.
+
+## Beschaffen ohne Gold
+
+- **Erfragen:** Die Kräuterfrau (Kräuterkundeausrüstung), die Verstärkung aus der Stadt (Köcher, Proviant), Leon (gute Kleidung). Ein Held, der freundlich fragt, bekommt oft mehr als ein Kunde.
+- **Herstellen:** Pfeile mit Holzschnitzwerkzeug (1 GM, bis zu 20 pro langer Rast), Alchemie mit deinem Werkzeug, Heiltränke mit Kräuterkunde. Die Trance gibt dir jeden Tag die passende Übung.
+- **Klauen, aber bei Feinden:** Pfeile, Köcher und Proviant aus Orc-Lagern. Dein Vertrauter trägt Kleines, der [[Unsichtbarer Diener|Unsichtbare Diener]] öffnet Kisten und trägt bis zu 13 kg, aber was er trägt, sieht man. In Fingerfertigkeit bist du nicht geübt (+1), lass also lieber die Diener arbeiten.
+- **Einsammeln:** Nach jedem Kampf findest du in 1 Minute die Hälfte der verschossenen Pfeile wieder.
+
+Welche Einträge auf dem Einkaufszettel ohne Gold gehen, steht dort bei „Wie?“.
 
 ## Die Orcs gewinnen
 

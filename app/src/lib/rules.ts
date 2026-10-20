@@ -51,6 +51,8 @@ export const TRANCE_TOOLS = [
 	'Diebeswerkzeug',
 	'Fälscherausrüstung',
 	'Kalligraphenwerkzeug',
+	'Holzschnitzwerkzeug',
+	'Lederwerkzeug',
 	'Navigationswerkzeug',
 	'Leichte Armbrust',
 	'Kurzbogen',

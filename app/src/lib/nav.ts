@@ -4,6 +4,7 @@ import {
 	Sparkles,
 	Skull,
 	Backpack,
+	FlaskConical,
 	NotebookPen,
 	Flag,
 	Globe,
@@ -23,7 +24,8 @@ export const NAV = [
 			{ href: '/bogen', label: 'Charakterbogen', icon: IdCard, key: '2' },
 			{ href: '/zauber', label: 'Zauberbuch', icon: Sparkles, key: '3' },
 			{ href: '/gefolge', label: 'Gefolge', icon: Skull, key: '4' },
-			{ href: '/inventar', label: 'Inventar', icon: Backpack, key: '5' }
+			{ href: '/inventar', label: 'Inventar', icon: Backpack, key: '5' },
+			{ href: '/werkstatt', label: 'Werkstatt', icon: FlaskConical, key: '' }
 		]
 	},
 	{

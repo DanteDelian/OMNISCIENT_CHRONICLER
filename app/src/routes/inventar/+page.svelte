@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Coins, Plus, Minus, Pencil, Trash2, FlaskConical, ShoppingBag, Check, Gem } from '@lucide/svelte';
+	import { Coins, Plus, Minus, Pencil, Trash2, FlaskConical, ShoppingBag, Check, Gem, Hammer, MessageCircle, Hand, Swords } from '@lucide/svelte';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import Markdown from '$lib/components/Markdown.svelte';
 	import Modal from '$lib/components/Modal.svelte';
@@ -8,7 +8,7 @@
 	import { heal } from '$lib/game';
 	import { fmtGold, goldValue, uid } from '$lib/format';
 	import { diceDe } from '$lib/rules';
-	import type { Item, ItemGroup, WishItem } from '$lib/types';
+	import type { Item, ItemGroup, WishItem, WishWay } from '$lib/types';
 
 	const inv = $derived(campaign.data.inventory);
 	const total = $derived(goldValue(inv.currency));
@@ -38,6 +38,17 @@
 		if (stack) return `zu „${stack.name}“ (dann ${stack.qty + (w.qty ?? 1)})`;
 		return `unter „${GROUPS.find((g) => g.id === (w.group ?? 'koerper'))?.label}“`;
 	};
+
+	/** Wege ohne Gold */
+	const WAYS: Record<WishWay, { label: string; icon: typeof Hammer; color: string }> = {
+		herstellen: { label: 'Herstellen', icon: Hammer, color: 'var(--color-life)' },
+		erfragen: { label: 'Erfragen', icon: MessageCircle, color: 'var(--color-astral-2)' },
+		klauen: { label: 'Klauen', icon: Hand, color: 'var(--color-warn)' },
+		erbeuten: { label: 'Erbeuten', icon: Swords, color: 'var(--color-blood)' }
+	};
+	/** Offene Wünsche, die auch ohne Gold gehen */
+	const free = $derived(inv.wishlist.filter((w) => !w.done && w.ways?.length && w.priority !== 'saladin'));
+	const freeSum = $derived(free.reduce((n, w) => n + (w.price ?? 0), 0));
 
 	const PRIO: Record<WishItem['priority'], { label: string; color: string }> = {
 		kritisch: { label: 'Kritisch', color: 'var(--color-blood)' },
@@ -207,6 +218,12 @@
 			<div class="flex items-center gap-2"><ShoppingBag size={17} class="text-astral" /><h2 class="font-semibold">Einkaufszettel</h2></div>
 			<a class="text-xs text-ink-3 hover:text-ink" href="/archiv/einkauf">Strategie und Verhandlung →</a>
 		</div>
+		{#if free.length}
+			<p class="mt-2 text-xs leading-relaxed text-ink-3">
+				<b class="text-ink-2">{free.length} Wünsche gehen auch ohne Gold</b> (zusammen {fmtGold(freeSum)} GM): selbst herstellen, erfragen, klauen oder erbeuten.
+				Klick auf „Wie?“ bei einem Eintrag. Am meisten bringt die <a class="text-astral hover:underline" href="/werkstatt">Werkstatt</a>.
+			</p>
+		{/if}
 		{#each PHASES as ph (ph.id)}
 			{@const list = wishes(ph.id)}
 			{@const sum = list.filter((w) => !w.done).reduce((n, w) => n + (w.price ?? 0), 0)}
@@ -230,6 +247,18 @@
 										<span class="badge" style="--c: {PRIO[w.priority].color}">{PRIO[w.priority].label}</span>
 									</div>
 									<p class="mt-1 text-xs leading-relaxed text-ink-2"><Markdown src={w.why} inline /></p>
+									{#if w.ways?.length && !w.done}
+										<details class="group mt-2">
+											<summary class="flex cursor-pointer list-none flex-wrap items-center gap-1 [&::-webkit-details-marker]:hidden">
+												{#each w.ways as way (way)}
+													{@const W = WAYS[way]}
+													<span class="badge" style="--c: {W.color}"><W.icon size={10} />{W.label}</span>
+												{/each}
+												{#if w.how}<span class="ml-1 text-[0.68rem] text-ink-3 underline decoration-dotted group-open:hidden">Wie?</span>{/if}
+											</summary>
+											{#if w.how}<div class="mt-1.5 rounded-lg border-l-2 border-life/40 bg-white/[0.02] px-2.5 py-1.5 text-xs leading-relaxed text-ink-2"><Markdown src={w.how} inline /></div>{/if}
+										</details>
+									{/if}
 								</div>
 								<div class="max-w-[42%] shrink-0 text-right">
 									{#if w.price !== undefined}

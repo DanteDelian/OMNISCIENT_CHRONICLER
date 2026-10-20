@@ -129,6 +129,7 @@ export function buildIndex(d: IndexInput): RefEntry[] {
 	push({ key: 'page:gefolge', title: 'Gefolge', kind: 'Seite', summary: 'Vertrauter, Diener, Untote, Gefährtin', href: '/gefolge', names: ['Gefolge', 'Vertraute und Diener', 'Vertraute & Diener'] });
 	push({ key: 'page:regeln', title: 'Regeln', kind: 'Seite', summary: 'Zustände, Aktionen, Konzentration, Rasten', href: '/regeln', names: ['Regeln'] });
 	push({ key: 'page:raetsel', title: 'Rätselwand', kind: 'Seite', summary: 'Theorien, offene Fragen, Widersprüche und Mysterien', href: '/raetsel', names: ['Rätselwand', 'Offene Fragen', 'Fragen an den DM'] });
+	push({ key: 'page:werkstatt', title: 'Werkstatt', kind: 'Seite', summary: 'Herstellen, Vorräte, Kosten und Erlös', href: '/werkstatt', names: ['Werkstatt', 'Alchemie-Werkstatt'] });
 	push({ key: 'page:netzwerk', title: 'Netzwerk', kind: 'Seite', summary: 'Die Leute der Unsichtbaren Hand', href: '/netzwerk', names: ['Netzwerk', 'Netzwerk der Hand'] });
 	return out;
 }

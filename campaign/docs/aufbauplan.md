@@ -5,7 +5,7 @@ icon: compass
 order: 9
 group: Pläne
 aliases: [Die Unsichtbare Hand, Unsichtbare Hand, Aufbauplan, Organisation]
-updated: 2026-10-16
+updated: 2026-10-20
 ---
 # Aufbauplan der Unsichtbaren Hand
 
@@ -38,6 +38,20 @@ updated: 2026-10-16
 | Muskeln | Schutz und Arbeit | Untote sofort, [[Die Orcs|Orcs]] nach dem Krieg gegen die Riesen | Untote: nur Zauberplätze |
 | Spion | Pläne der [[Sorcerer Society]] | *Selbstverkleidung* und Verkleidungsausrüstung | hohes Risiko |
 
+## Geld
+
+Eine Organisation kostet laufend: Ein ungelernter Helfer bekommt 2 SM pro Tag, ein gelernter 2 GM (Spielerhandbuch). Was die Leute im [[Netzwerk]] pro Woche kosten, rechnet die Seite Netzwerk aus.
+
+| Quelle | Was sie bringt | Haken |
+| :-- | :-- | :-- |
+| [[Werkstatt]] | Alchemistenfeuer oder Heiltrank, zum vollen Preis je 25 GM Gewinn pro Tag | Händler zahlen nur die Hälfte, dann bleibt nichts. Abnehmer zum vollen Preis findet ihr erst mit Laden oder Stammkunden |
+| Belohnungen | Gold, Rechte oder ein Haus von der belagerten Stadt, von Leon, von den Echsen | vorher aushandeln |
+| Floshems Ruf | Mystiker, Held der Echsen und Riesen-Schlächter: Bitten um Rat und Schutz, bezahlt in Gold oder Gefälligkeiten | Ein Ruf lässt sich schnell verspielen |
+| Beute | Waffen und Ausrüstung besiegter Feinde | bringt beim Händler die Hälfte |
+| Saladins Laden | legale Einnahmen in Freistadt | erst nach dem Handel mit Saladin |
+
+**Sparen statt ausgeben:** Vieles auf dem Einkaufszettel lässt sich erfragen, herstellen oder bei Feinden erbeuten. Siehe [[Ideen für die nächsten Sessions|Ideen]].
+
 ## Vier Phasen
 
 1. **Fundament in Dehubden (jetzt):** Haus fertigstellen lassen, Kellerlabor planen, Lehrling über die Kräuterfrau anwerben. Erste Tränke brauen und verkaufen, das bringt Geld und einen Grund, Leute zu beschäftigen.
@@ -65,6 +79,8 @@ updated: 2026-10-16
 - [ ] Beim DM nachfragen, wie weit das Haus im oberen Ring ist
 - [ ] Lehrling über die Kräuterfrau anwerben
 - [ ] Mit dem DM klären, was du mit dem Alchemistenwerkzeug herstellen darfst
+- [ ] Holzschnitzwerkzeug (1 GM) besorgen: bis zu 20 Pfeile pro langer Rast für die Bogen-Skelette
+- [ ] Vor der Schlacht um die Stadt eine Belohnung aushandeln
 - [ ] Einen ersten Informanten im unteren Ring gewinnen
 - [ ] Lage und Preis für Saladins Laden in Freistadt erkunden
 

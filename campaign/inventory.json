@@ -226,7 +226,13 @@
       "group": "verbrauch",
       "priority": "hoch",
       "phase": "jetzt",
-      "why": "Dein Bogen-Skelett hat nur 12 Pfeile, mit einem zweiten Schützen reicht das keinen Kampf. 20 Pfeile kosten 1 GM. Nach dem Kampf lässt sich die Hälfte der verschossenen wieder einsammeln."
+      "why": "Dein Bogen-Skelett hat nur 12 Pfeile, mit einem zweiten Schützen reicht das keinen Kampf. 20 Pfeile kosten 1 GM. Nach dem Kampf lässt sich die Hälfte der verschossenen wieder einsammeln.",
+      "ways": [
+        "herstellen",
+        "erbeuten",
+        "klauen"
+      ],
+      "how": "**Herstellen:** Mit Holzschnitzwerkzeug (1 GM) und Übung aus der Trance schnitzt du laut Xanathars in einer langen Rast bis zu 20 Pfeile, in einer kurzen bis zu 5. Holz musst du haben, die Orcs stapeln genug davon. **Einsammeln:** Nach jedem Kampf findest du in 1 Minute die Hälfte der verschossenen Pfeile wieder. **Klauen:** einen vollen Köcher aus einem Orc-Lager. Holen kann ihn dein Vertrauter oder der Unsichtbare Diener, aber was der Diener trägt, bleibt sichtbar."
     },
     {
       "id": "koecher",
@@ -236,7 +242,12 @@
       "group": "gelagert",
       "priority": "hoch",
       "phase": "jetzt",
-      "why": "Einer pro Bogen-Skelett, je 1 GM. Ein Köcher fasst 20 Pfeile."
+      "why": "Einer pro Bogen-Skelett, je 1 GM. Ein Köcher fasst 20 Pfeile.",
+      "ways": [
+        "erbeuten",
+        "erfragen"
+      ],
+      "how": "Gefallene Schützen tragen einen. Oder du fragst die Verstärkung aus der Stadt: Für den Helden der Echsen findet sich ein alter Köcher."
     },
     {
       "id": "kurzbogen-2",
@@ -246,7 +257,13 @@
       "stack": "kurzbogen",
       "priority": "mittel",
       "phase": "jetzt",
-      "why": "Dann schießt ein zweites Skelett aus der Deckung (+4, 1W6 + 2), sein Dolch bleibt für den Nahkampf. Später ein dritter. *Alternative:* leichte Armbrust zum selben Preis, 1W8 statt 1W6, braucht aber Bolzen. Ob Skelette sie führen dürfen, entscheidet der DM."
+      "why": "Dann schießt ein zweites Skelett aus der Deckung (+4, 1W6 + 2), sein Dolch bleibt für den Nahkampf. Später ein dritter. *Alternative:* leichte Armbrust zum selben Preis, 1W8 statt 1W6, braucht aber Bolzen. Ob Skelette sie führen dürfen, entscheidet der DM.",
+      "ways": [
+        "erbeuten",
+        "erfragen",
+        "herstellen"
+      ],
+      "how": "Den ersten Bogen hast du von den Orcs am Fluss. Beim nächsten Orc-Trupp auf Bögen achten. **Herstellen** geht nach dem Spielerhandbuch auch, vermutlich mit Holzschnitzwerkzeug (DM fragen): 5 GM Fortschritt pro Arbeitstag, also 5 Tage und 12,5 GM Material, und jeden Tag dieselbe Trance-Übung."
     },
     {
       "id": "rationen-10",
@@ -257,7 +274,11 @@
       "group": "verbrauch",
       "priority": "vorschlag",
       "phase": "jetzt",
-      "why": "Du hast 13. Die Fahrt nach Norden und die Küste entlang nach Westen kann länger dauern. 10 Tage für 5 GM."
+      "why": "Du hast 13. Die Fahrt nach Norden und die Küste entlang nach Westen kann länger dauern. 10 Tage für 5 GM.",
+      "ways": [
+        "erfragen"
+      ],
+      "how": "Die Echsen und die Stadt verdanken dir viel. Ein Sack Proviant als Dank ist kein großer Wunsch."
     },
     {
       "id": "oel",
@@ -268,7 +289,12 @@
       "group": "verbrauch",
       "priority": "vorschlag",
       "phase": "jetzt",
-      "why": "Billiger Brandbeschleuniger für die Holzstapel der Orcs, Fallen und Barrikaden. Ausgegossen und entzündet brennt es 2 Runden und macht 5 Feuerschaden."
+      "why": "Billiger Brandbeschleuniger für die Holzstapel der Orcs, Fallen und Barrikaden. Ausgegossen und entzündet brennt es 2 Runden und macht 5 Feuerschaden.",
+      "ways": [
+        "herstellen",
+        "erfragen"
+      ],
+      "how": "**Herstellen:** Alchemistenwerkzeug, 1 Flasche pro langer Rast für 5 KM Zutaten (Xanathars). Kaufen ist schneller. **Erfragen:** Lampenöl hat jedes Lager."
     },
     {
       "id": "gute-kleidung",
@@ -276,7 +302,11 @@
       "price": 15,
       "priority": "mittel",
       "phase": "jetzt",
-      "why": "Nach der aufgeflogenen Tarnung Autorität ausstrahlen, vor Leon und dem Paladin."
+      "why": "Nach der aufgeflogenen Tarnung Autorität ausstrahlen, vor Leon und dem Paladin.",
+      "ways": [
+        "erfragen"
+      ],
+      "how": "Leon oder die Stadt kleiden ihren Helden vielleicht ein, gerade vor einem offiziellen Auftritt."
     },
     {
       "id": "kraeuterkunde",
@@ -284,7 +314,11 @@
       "price": 5,
       "priority": "vorschlag",
       "phase": "jetzt",
-      "why": "Für Heiltränke aus deinen 3 Heilkräutern (Xanathars: Kräuterkundeausrüstung). Erst mit dem DM klären, ob dein Alchemistenwerkzeug reicht."
+      "why": "Für Heiltränke aus deinen 3 Heilkräutern (Xanathars: Kräuterkundeausrüstung). Erst mit dem DM klären, ob dein Alchemistenwerkzeug reicht.",
+      "ways": [
+        "erfragen"
+      ],
+      "how": "Frag die Kräuterfrau: Sie hat dir schon das Alchemistenwerkzeug geschenkt."
     },
     {
       "id": "heiltrank-kauf",
@@ -295,7 +329,11 @@
       "group": "verbrauch",
       "priority": "hoch",
       "phase": "nach-saladin",
-      "why": "Du hast 2. Jeder heilt 2W4 + 2 (Ø 7). Günstiger selbst gebraut, falls der DM die Kräuterkunde zulässt (25 GM pro Trank)."
+      "why": "Du hast 2. Jeder heilt 2W4 + 2 (Ø 7). Günstiger selbst gebraut, falls der DM die Kräuterkunde zulässt (25 GM pro Trank).",
+      "ways": [
+        "herstellen"
+      ],
+      "how": "**Herstellen:** Kräuterkundeausrüstung und Übung aus der Trance, 1 Tag Arbeit und 25 GM Zutaten, also die Hälfte des Preises (Xanathars). Siehe [[Werkstatt]]."
     },
     {
       "id": "rolle-magierruestung",
@@ -304,7 +342,12 @@
       "priceText": "ca. 50–100 GM + 50 GM Abschreiben",
       "priority": "vorschlag",
       "phase": "nach-saladin",
-      "why": "Nur falls der DM die 4 fehlenden Einträge nicht gibt: RK 14 statt 11, dein wichtigstes Upgrade."
+      "why": "Nur falls der DM die 4 fehlenden Einträge nicht gibt: RK 14 statt 11, dein wichtigstes Upgrade.",
+      "ways": [
+        "erbeuten",
+        "erfragen"
+      ],
+      "how": "Zauberbücher und Rollen besiegter Magier kannst du abschreiben. Ein befreundeter Magier könnte dir sein Buch leihen. Abschreiben kostet trotzdem 50 GM und 2 Stunden."
     },
     {
       "id": "fokus-feenwesen",
@@ -329,7 +372,11 @@
       "price": 25,
       "priority": "hoch",
       "phase": "nach-saladin",
-      "why": "Neue Identität und feinere Tarnung. Die Skelette hast du schon selbst vermummt."
+      "why": "Neue Identität und feinere Tarnung. Die Skelette hast du schon selbst vermummt.",
+      "ways": [
+        "erfragen"
+      ],
+      "how": "Theaterleute, Schmuggler und Spione haben so etwas. Vielleicht weiß [[Cam Buckland|Cam]], wo man eines bekommt, aber du schuldest ihm schon etwas."
     },
     {
       "id": "kalligraphie",

@@ -123,6 +123,10 @@ for (const s of d.spells) {
 	for (const c of s.corrections ?? []) source(`spells.json ${s.id}`, c.doc);
 }
 for (const it of d.inventory.items) links(`inventory.json ${it.id}`, `${it.desc} ${it.note ?? ''}`);
+for (const w of d.inventory.wishlist ?? []) {
+	for (const way of w.ways ?? []) if (!['herstellen', 'erfragen', 'klauen', 'erbeuten'].includes(way)) errors.push(`inventory.json Wunsch ${w.id}: unbekannter Weg „${way}“`);
+	links(`inventory.json Wunsch ${w.id}`, `${w.why ?? ''} ${w.how ?? ''}`);
+}
 for (const p of d.map.pins) if (p.link) ref(`map.json ${p.id}`, p.link);
 for (const p of d.creatures.party ?? []) if (p.source) source(`creatures.json ${p.id}`, p.source);
 

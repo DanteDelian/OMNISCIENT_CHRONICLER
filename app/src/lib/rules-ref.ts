@@ -324,6 +324,7 @@ export const GLOSSARY: { group: string; terms: [string, string][] }[] = [
 			['Werkzeug', 'Tools'],
 			['Alchemistenwerkzeug', "Alchemist's Supplies"],
 			['Kräuterkundeausrüstung', 'Herbalism Kit'],
+			['Holzschnitzwerkzeug', "Woodcarver's Tools"],
 			['Verkleidungsausrüstung', 'Disguise Kit'],
 			['Giftmischerausrüstung', "Poisoner's Kit"],
 			['Diebeswerkzeug', "Thieves' Tools"],
