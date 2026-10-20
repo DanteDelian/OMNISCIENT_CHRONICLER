@@ -2,6 +2,7 @@
 	import PDoc from './PDoc.svelte';
 	import PMd from './PMd.svelte';
 	import PStat from './PStat.svelte';
+	import PImg from './PImg.svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { printAnchor } from '$lib/markdown';
 
@@ -15,6 +16,12 @@
 
 <PDoc id="gefolge" refs={['page:gefolge']} eyebrow="Gefolge" title="Vertraute, Untote, Diener" subtitle="Wertblöcke nach SRD 5.1 · Vertrauter aktuell: {currentLabel}">
 	<h2 style="margin-top: 0">Deine Untoten</h2>
+	{#if cr.retinueImage}
+		<figure class="retinue-img avoid">
+			<PImg name={cr.retinueImage.file} alt={cr.retinueImage.title} />
+			<figcaption class="small"><b>{cr.retinueImage.title}.</b> {cr.retinueImage.caption}{#if cr.retinueImage.credit}{' '}<span class="tiny muted">{cr.retinueImage.credit}.</span>{/if}</figcaption>
+		</figure>
+	{/if}
 	<div class="grid g2" style="gap: 4mm">
 		{#each cr.undead as u (u.id)}
 			<PStat

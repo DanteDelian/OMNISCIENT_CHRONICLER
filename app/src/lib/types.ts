@@ -220,6 +220,8 @@ export interface Creatures {
 	servant: { id: string; name: string; ac: number; hp: number; speed: string; str: number; rules: string[] };
 	undead: UndeadBlock[];
 	party: PartyMember[];
+	/** Bild der Untoten für die Gefolge-Seite (Datei in campaign/assets/) */
+	retinueImage?: { file: string; title: string; caption: string; credit?: string };
 }
 
 export type ItemGroup = 'koerper' | 'verbrauch' | 'beute' | 'plot' | 'gelagert' | 'verloren';

@@ -858,6 +858,23 @@ html:has(.druck) body {
 	font-size: 6pt;
 }
 
+/* ---------- Gefolge-Bild ---------- */
+.druck .retinue-img {
+	margin: 0 0 4mm;
+}
+.druck .retinue-img img {
+	display: block;
+	width: 100%;
+	height: 62mm;
+	object-fit: cover;
+	object-position: 50% 42%;
+	border-radius: 2mm;
+}
+.druck .retinue-img figcaption {
+	margin-top: 1.2mm;
+	color: var(--p-ink-2);
+}
+
 /* ---------- Wer weiß was? ---------- */
 .druck table.matrix td.c,
 .druck table.matrix th.c {

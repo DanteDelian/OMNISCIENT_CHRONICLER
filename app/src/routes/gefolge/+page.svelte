@@ -36,6 +36,18 @@
 	subtitle="Wertblöcke nach den Regeln (SRD 5.1), mit Live-Tracking für deine Untoten. Angriffe sind würfelbar."
 />
 
+{#if cr.retinueImage}
+	{@const img = cr.retinueImage}
+	<figure class="panel relative mb-6 overflow-hidden">
+		<img src="/api/assets/{img.file}" alt={img.title} class="h-56 w-full object-cover object-[50%_42%] sm:h-72" />
+		<figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/55 to-transparent px-5 pt-12 pb-4">
+			<div class="title-display text-2xl text-white sm:text-3xl">{img.title}</div>
+			<p class="mt-1 max-w-2xl text-sm leading-relaxed text-white/80">{img.caption}</p>
+			{#if img.credit}<p class="mt-1 text-[0.65rem] text-white/50">{img.credit}</p>{/if}
+		</figcaption>
+	</figure>
+{/if}
+
 <!-- Untote: Live -->
 <section class="panel panel-glow mb-6 p-5">
 	<div class="mb-4 flex flex-wrap items-center justify-between gap-3">

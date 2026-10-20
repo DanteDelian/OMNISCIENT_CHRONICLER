@@ -604,5 +604,11 @@
         ]
       }
     ]
+  },
+  "retinueImage": {
+    "file": "diener.webp",
+    "title": "Die stummen Diener",
+    "caption": "So sieht Valerius sie. Für alle anderen sind es stumme, vermummte Diener in Gewändern aus Society-Uniformen und Orc-Kleidung, und was unter den Kapuzen steckt, fragt man einen Helden nicht.",
+    "credit": "KI-Bild (FLUX.1 Schnell über Pollinations), ein Stimmungsbild ohne Regelwert"
   }
 }
