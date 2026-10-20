@@ -14,11 +14,11 @@
 <div class="space-y-4">
 	<HeroBar />
 	<div class="grid gap-4 lg:grid-cols-12">
-		<div class="space-y-4 lg:col-span-4 2xl:col-span-3">
+		<div class="space-y-4 lg:col-span-5 xl:col-span-4 2xl:col-span-3">
 			<HealthCard />
 			<MagicCard />
 		</div>
-		<div class="space-y-4 lg:col-span-8 2xl:col-span-6">
+		<div class="space-y-4 lg:col-span-7 xl:col-span-8 2xl:col-span-6">
 			<ActionsCard />
 			<div class="grid gap-4 xl:grid-cols-2">
 				<ConditionsCard />

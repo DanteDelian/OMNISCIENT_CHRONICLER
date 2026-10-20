@@ -11,6 +11,7 @@ import {
 	Map as MapIcon,
 	Puzzle,
 	Hand,
+	EyeOff,
 	Library,
 	Scale,
 	Printer
@@ -36,7 +37,8 @@ export const NAV = [
 			{ href: '/raetsel', label: 'Rätselwand', icon: Puzzle, key: '' },
 			{ href: '/welt', label: 'Welt', icon: Globe, key: '8' },
 			{ href: '/karte', label: 'Karte', icon: MapIcon, key: '9' },
-			{ href: '/netzwerk', label: 'Netzwerk', icon: Hand, key: '' }
+			{ href: '/netzwerk', label: 'Netzwerk', icon: Hand, key: '' },
+			{ href: '/geheimnisse', label: 'Wer weiß was?', icon: EyeOff, key: '' }
 		]
 	},
 	{

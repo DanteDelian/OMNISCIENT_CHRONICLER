@@ -29,6 +29,7 @@ export const PRINT_PARTS: PrintPart[] = [
 	{ id: 'journal', label: 'Journal', hint: 'Datierte Chronik und Notizseite', group: 'Kampagne' },
 	{ id: 'welt', label: 'Welt', hint: 'Personen, Fraktionen, Orte', group: 'Kampagne' },
 	{ id: 'netzwerk', label: 'Die Unsichtbare Hand', hint: 'Rollen und Leute, zum Ergänzen', group: 'Kampagne' },
+	{ id: 'geheimnisse', label: 'Wer weiß was?', hint: 'Floshems Ruf, Geheimnisse und Mitwisser', group: 'Kampagne' },
 	{ id: 'karte', label: 'Echsen-Karte', hint: 'Karte mit nummerierten Markierungen', group: 'Kampagne' },
 	{ id: 'quellen', label: 'Quellenverzeichnis', hint: 'Alle Originale mit Bewertung', group: 'Archiv' }
 ];

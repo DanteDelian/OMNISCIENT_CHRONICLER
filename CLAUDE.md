@@ -34,6 +34,7 @@ Schema der Daten: **`campaign/README.md`**. Technik: **`docs/ARCHITECTURE.md`**.
   „Geklärt am …“ festhalten. Neue offene Punkte als Frage anlegen, nicht nur im Fließtext.
 - Theorien im Text immer als `*Theorie:*`, offene Punkte als `**Offen:**` markieren: Die Rätselwand sammelt sie automatisch.
 - Leute der Unsichtbaren Hand stehen in `netzwerk.json` (Rollen aus dem Aufbauplan, Agenten mit Treue und Wissen).
+- Erfährt oder ahnt jemand ein Geheimnis von Valerius, in `geheimnisse.json` nachtragen (Seite **Wer weiß was?**), mit Quelle in `how`.
 
 ### Stufenaufstieg
 `character.json` (Stufe, Übungsbonus, TP-Maximum: Patrick fragen, ob gewürfelt wird, Plätze, neue Merkmale),

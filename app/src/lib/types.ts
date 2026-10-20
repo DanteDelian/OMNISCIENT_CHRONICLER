@@ -476,11 +476,45 @@ export interface SpellSets {
 	sets: SpellSet[];
 }
 
+/** Wer etwas weiß oder ahnt: Name eines Welt-Eintrags oder freier Text */
+export interface SecretWitness {
+	who: string;
+	/** Woher die Person es weiß (Markdown) */
+	how?: string;
+}
+
+/** Ein Geheimnis von Valerius (campaign/geheimnisse.json) */
+export interface Secret {
+	id: string;
+	title: string;
+	/** sicher: nur Eingeweihte · gefaehrdet: jemand ahnt es oder es kann rauskommen · aufgeflogen: öffentlich */
+	status: 'sicher' | 'gefaehrdet' | 'aufgeflogen';
+	/** Was wirklich stimmt (Markdown) */
+	truth: string;
+	/** Was die Leute stattdessen glauben (Markdown) */
+	cover?: string;
+	/** Was passiert, wenn es herauskommt (Markdown) */
+	risk?: string;
+	knownBy: SecretWitness[];
+	suspects: SecretWitness[];
+	/** Theorien und offene Punkte (Markdown, erscheinen auf der Rätselwand) */
+	note?: string;
+	links?: string[];
+}
+
+/** Wer weiß was? Floshems Ruf, Gefahren und Geheimnisse */
+export interface Secrets {
+	ruf: string;
+	gefahren: string;
+	secrets: Secret[];
+}
+
 export interface CampaignData {
 	trees: FamilyTree[];
 	fragen: Question[];
 	netzwerk: Network;
 	zaubersets: SpellSets;
+	geheimnisse: Secrets;
 	character: Character;
 	state: PlayState;
 	spells: Spell[];
@@ -497,5 +531,5 @@ export interface CampaignData {
 }
 
 /** Dateien, die die App zurückschreiben darf. */
-export const WRITABLE = ['state', 'inventory', 'quests', 'spells', 'journal', 'map', 'fragen', 'netzwerk', 'zaubersets'] as const;
+export const WRITABLE = ['state', 'inventory', 'quests', 'spells', 'journal', 'map', 'fragen', 'netzwerk', 'zaubersets', 'geheimnisse'] as const;
 export type WritableFile = (typeof WRITABLE)[number];

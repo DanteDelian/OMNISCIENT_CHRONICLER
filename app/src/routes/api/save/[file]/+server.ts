@@ -13,7 +13,8 @@ const SHAPE: Record<WritableFile, 'object' | 'array'> = {
 	map: 'object',
 	fragen: 'array',
 	netzwerk: 'object',
-	zaubersets: 'object'
+	zaubersets: 'object',
+	geheimnisse: 'object'
 };
 
 export const PUT: RequestHandler = async ({ params, request, url }) => {
@@ -33,6 +34,7 @@ export const PUT: RequestHandler = async ({ params, request, url }) => {
 	if (file === 'map' && !Array.isArray((body as { pins?: unknown }).pins)) error(400, 'map.pins fehlt');
 	if (file === 'netzwerk' && !Array.isArray((body as { agents?: unknown }).agents)) error(400, 'netzwerk.agents fehlt');
 	if (file === 'zaubersets' && !Array.isArray((body as { sets?: unknown }).sets)) error(400, 'zaubersets.sets fehlt');
+	if (file === 'geheimnisse' && !Array.isArray((body as { secrets?: unknown }).secrets)) error(400, 'geheimnisse.secrets fehlt');
 	writeJson(`${file}.json`, body, request.headers.get('x-client-id') ?? url.searchParams.get('client') ?? undefined);
 	return json({ ok: true });
 };

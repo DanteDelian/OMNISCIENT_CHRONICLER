@@ -38,7 +38,8 @@ const JOBS = [
 	{ file: '13-fragen-an-den-dm.pdf', teil: 'fragen' },
 	{ file: '14-raetselwand.pdf', teil: 'raetsel' },
 	{ file: '15-netzwerk.pdf', teil: 'netzwerk' },
-	{ file: '16-begriffe-deutsch-englisch.pdf', teil: 'begriffe' }
+	{ file: '16-begriffe-deutsch-englisch.pdf', teil: 'begriffe' },
+	{ file: '17-wer-weiss-was.pdf', teil: 'geheimnisse' }
 ];
 
 // ---------- Argumente und .env ----------

@@ -1,0 +1,118 @@
+{
+  "ruf": "Für die Leute ist Floshem ein **Mystiker**: Niemand weiß, was um ihn herum geschieht, aber als **Held der Echsen** und **Riesen-Schlächter** kann es nur Gutes sein (laut dir, 20.10.2026). Seit dem 11.10.2026 nennt man euch „Held der Echsenmenschen“ und „Riesenbezwinger, der Schlächter“. Die stummen, vermummten Diener passen genau in dieses Bild.",
+  "gefahren": "- **[[Lucira]] liest Gedanken.** Sie ist seit dem 11.10.2026 verschwunden, kann aber zurückkommen. Pläne nie in ihrer Nähe durchdenken.\n- **[[Lisbeth Lhaaz|Lisbeth]] beobachtet euch** mit Argusaugen, seit sie euch Hochstapler genannt hat.\n- **Die Riesen hören mit:** Über die Runenmale versklavter Orcs belauschen sie, was in deren Nähe gesagt wird. Wichtiges nur in einer winzigen Hütte besprechen.\n- **Die nächste Schiffskarawane** bringt die Nachricht vom Tod der echten Donnergarde nach Xantus.",
+  "secrets": [
+    {
+      "id": "donnergarde",
+      "title": "Die falsche Donnergarde",
+      "status": "gefaehrdet",
+      "truth": "Du und Aella reist unter den gestohlenen Identitäten der [[Die Donnergarde|Donnergarde]]: Floshem und Khoraa. Die echte Donnergarde ist tot. Laut [[Cam Buckland|Cam]] hatten „wir“ die Leichen gut versteckt.",
+      "cover": "Floshem, die Unsichtbare Hand, Waldelf-Magier der Donnergarde, angeheuert von [[Leon Lhaaz|Leon]] zum Schutz der Stadt.",
+      "risk": "In der alten Welt ist der Schwindel öffentlich, seit der [[Maskierter Mönchsmeister|Maskierte Mönchsmeister]] die Leichen fand. Nach Xantus kommt die Nachricht mit der nächsten Schiffskarawane.",
+      "knownBy": [
+        { "who": "Aella Rayann", "how": "trägt selbst die Tarnung als Khoraa" },
+        { "who": "Cam Buckland", "how": "hat euch die Identitäten verschafft" },
+        { "who": "Maskierter Mönchsmeister", "how": "fand die Leichen der echten Donnergarde und machte ihren Tod öffentlich" }
+      ],
+      "suspects": [
+        { "who": "Lisbeth Lhaaz", "how": "nannte euch im Kreuzverhör Hochstapler, lässt es aus Dankbarkeit für die Rettung vorerst ruhen" },
+        { "who": "Lucira", "how": "von Lisbeth geholt, wohl um euch als Donnergarde zu prüfen" }
+      ],
+      "links": ["Die Donnergarde", "Nachrichten vom DM"]
+    },
+    {
+      "id": "identitaet",
+      "title": "Hinter Floshem steckt Valerius",
+      "status": "sicher",
+      "truth": "Floshem ist Valerius Moonwhisper, ein **Astralelf**, kein Waldelf.",
+      "cover": "Ein Waldelf mit grüner Kapuze, Blättern am Umhang und grün leuchtender Magie.",
+      "risk": "Laut Cam können die meisten Nicht-Elfen Elfen kaum auseinanderhalten. Ein Elf erkennt unter der Kapuze vielleicht den Astralelfen.",
+      "knownBy": [
+        { "who": "Aella Rayann", "how": "deine Partnerin seit Oakhaven" },
+        { "who": "Cam Buckland", "how": "alter Kollege aus Zaffera-Zeiten" }
+      ],
+      "suspects": [],
+      "note": "*Theorie:* Über Cam wissen auch die Zafferas, wer Floshem ist.\n\n**Offen:** Kennen deine Gefährten am Tisch (Twee, Fridolin, Lucira, die Fee) deinen echten Namen?",
+      "links": ["Backstory"]
+    },
+    {
+      "id": "zafferas",
+      "title": "Ausgebildet bei den Zafferas",
+      "status": "sicher",
+      "truth": "Das [[Zaffera-Syndikat]] entdeckte dein Talent und bildete dich in seiner Villa aus. Aella war dort Vollstreckerin. Heute willst du nicht mehr ihr Handlanger sein, sondern selbst herrschen.",
+      "cover": "Keine Vergangenheit, über die man spricht.",
+      "risk": "Kommen die Zafferas nach Xantus, treffen sie auf einen abtrünnigen Ex-Schützling. Und sie haben den Anschlag auf Lisbeth vermittelt.",
+      "knownBy": [
+        { "who": "Aella Rayann", "how": "war selbst Vollstreckerin der Zafferas" },
+        { "who": "Cam Buckland", "how": "alter Kollege, „Du schuldest mir was“" },
+        { "who": "Zaffera-Syndikat", "how": "deine alte Familie" }
+      ],
+      "suspects": [],
+      "links": ["Zaffera-Syndikat", "Backstory"]
+    },
+    {
+      "id": "lisbeth-auftrag",
+      "title": "Wer Lisbeths Tod bestellt hat",
+      "status": "sicher",
+      "truth": "Laut Cams telepathischer Nachricht hat „Graf Lhaaz“ über die Zafferas Söldner auf [[Lisbeth Lhaaz|Lisbeth]] angesetzt. Ihr Schiff wurde von der eigenen Eskorte angegriffen. Wer der Graf ist, ist offen: der [[Erzherzog Lhaaz|Erzherzog]], [[Leonidas Lhaaz|Leonidas]] oder ein Dritter.",
+      "risk": "Ein Hebel und eine Gefahr zugleich: Zur rechten Zeit erzählt, zieht er Lisbeth vielleicht auf eure Seite. Erfährt der Auftraggeber, dass du es weißt, wirst du selbst zum Ziel.",
+      "knownBy": [
+        { "who": "Cam Buckland", "how": "hat dich gewarnt" },
+        { "who": "Zaffera-Syndikat", "how": "hat den Auftrag vermittelt" },
+        { "who": "„Graf Lhaaz“", "how": "der Auftraggeber" }
+      ],
+      "suspects": [],
+      "note": "*Theorie:* Lisbeth weiß nicht, dass einer ihrer Brüder sie tot sehen wollte.",
+      "links": ["Lisbeth Lhaaz", "Haus Lhaaz"]
+    },
+    {
+      "id": "schriftstueck",
+      "title": "Das Schriftstück mit dem Lhaaz-Wappen",
+      "status": "sicher",
+      "truth": "Du hast das Schriftstück des Attentäters, der [[Lula Lhaaz|Lula]] angriff, an dich genommen. Ein Beweisstück, vielleicht ein Druckmittel gegen das [[Haus Lhaaz]].",
+      "risk": "Wer den Attentäter geschickt hat, könnte das Schriftstück zurückhaben wollen.",
+      "knownBy": [],
+      "suspects": [],
+      "note": "**Offen:** Hat jemand gesehen, wie du das Schriftstück eingesteckt hast?",
+      "links": ["Haus Lhaaz", "Lula Lhaaz"]
+    },
+    {
+      "id": "skelette",
+      "title": "Die stummen Diener sind Untote",
+      "status": "sicher",
+      "truth": "Die vermummten Diener sind Skelette, erweckt mit [[Tote erwecken]]. Die Kapuzengewänder aus Society-Uniformen und Orc-Kleidung verbergen die Knochen. Noch lagern die drei Orc-Skelette auf eurem Boot.",
+      "cover": "Stumme, vermummte Diener des Mystikers. Was unter den Kapuzen steckt, fragt man einen Helden nicht.",
+      "risk": "Untote in der Siedlung wären ein Skandal, besonders vor Lisbeth. Ein Kleriker kann sie mit *Untote vertreiben* entlarven.",
+      "knownBy": [
+        { "who": "Aella Rayann", "how": "war beim Kampf am Fluss dabei, als ihr die Knochen mitnahmt" }
+      ],
+      "suspects": [],
+      "note": "**Offen:** Ahnen [[Twee]] und [[Lucaz Lhaaz|Lucaz]] etwas? Sie fuhren mit den Knochen auf dem Boot zur Stadt.",
+      "links": ["Gefolge", "Skelett"]
+    },
+    {
+      "id": "hand",
+      "title": "Die Unsichtbare Hand",
+      "status": "sicher",
+      "truth": "Du baust eine eigene Organisation auf, um die dominierende Macht von Xantus zu werden.",
+      "cover": "Floshem hilft, wo er kann.",
+      "risk": "Ein Netzwerk gegen die Sorcerer Society wird früher oder später ihr Ziel. Anwerben nur über Mittelsleute.",
+      "knownBy": [
+        { "who": "Aella Rayann", "how": "sieht mit Sorge, wie du dich an Macht berauschst" }
+      ],
+      "suspects": [],
+      "links": ["Aufbauplan der Unsichtbaren Hand", "Netzwerk"]
+    },
+    {
+      "id": "gift",
+      "title": "Drei Portionen Gift",
+      "status": "sicher",
+      "truth": "In deinem Gepäck liegen drei Portionen Gift. Art und Wirkung sind nicht notiert.",
+      "risk": "Ein Fund bei einer Durchsuchung ließe sich kaum erklären.",
+      "knownBy": [],
+      "suspects": [],
+      "note": "**Offen:** Woher stammt das Gift, und wer weiß davon?",
+      "links": []
+    }
+  ]
+}

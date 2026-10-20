@@ -29,7 +29,7 @@ export const QUESTION_TO: Record<Question['to'], { label: string; hint: string }
 	dich: { label: 'An dich', hint: 'Das weißt nur du' }
 };
 
-export const SOURCE_ORDER = ['Welt', 'Quest', 'Journal', 'Karte', 'Zauber', 'Dokument'];
+export const SOURCE_ORDER = ['Welt', 'Quest', 'Journal', 'Geheimnis', 'Karte', 'Zauber', 'Dokument'];
 
 const THEORY = /\*Theorie\b/;
 const OPEN = /\*\*Offen:?\*\*/;
@@ -87,6 +87,9 @@ export function collectClues(d: CampaignData): Clue[] {
 	for (const j of d.journal) {
 		const src = { key: `journal:${j.id}`, ref: `journal:${j.id}`, title: j.title, href: `/journal#${j.id}`, kind: 'Journal' };
 		out.push(...cluesIn(join(j.summary, ...j.events, ...(j.notes ?? [])), src));
+	}
+	for (const g of d.geheimnisse?.secrets ?? []) {
+		out.push(...cluesIn(join(g.truth, g.risk, g.note), { key: `secret:${g.id}`, ref: 'page:geheimnisse', title: g.title, href: `/geheimnisse#${g.id}`, kind: 'Geheimnis' }));
 	}
 	for (const p of d.map.pins) {
 		out.push(...cluesIn(p.text, { key: `pin:${p.id}`, ref: 'page:karte', title: `Karte: ${p.label}`, href: '/karte', kind: 'Karte' }));

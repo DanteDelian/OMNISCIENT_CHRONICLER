@@ -12,6 +12,7 @@ import type {
 	MapData,
 	Network,
 	SpellSets,
+	Secrets,
 	PlayState,
 	Quest,
 	Question,
@@ -101,7 +102,8 @@ export function loadCampaign(): CampaignData {
 		trees: readJson<{ trees: FamilyTree[] }>('stammbaum.json', { trees: [] }).trees ?? [],
 		fragen: readJson<Question[]>('fragen.json', []),
 		netzwerk: { roles: [], agents: [], ...readJson<Partial<Network>>('netzwerk.json', {}) },
-		zaubersets: { sets: [], ...readJson<Partial<SpellSets>>('zaubersets.json', {}) }
+		zaubersets: { sets: [], ...readJson<Partial<SpellSets>>('zaubersets.json', {}) },
+		geheimnisse: { ruf: '', gefahren: '', secrets: [], ...readJson<Partial<Secrets>>('geheimnisse.json', {}) }
 	};
 	const index = buildIndex(base);
 	const data: CampaignData = { ...base, index, backlinks: buildBacklinks(base, index) };

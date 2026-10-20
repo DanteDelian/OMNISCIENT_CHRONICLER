@@ -858,6 +858,28 @@ html:has(.druck) body {
 	font-size: 6pt;
 }
 
+/* ---------- Wer weiß was? ---------- */
+.druck table.matrix td.c,
+.druck table.matrix th.c {
+	text-align: center;
+	color: var(--p-blood);
+	font-size: 10pt;
+}
+.druck table.matrix th.c {
+	color: var(--p-ink-2);
+	font-size: 7.4pt;
+	hyphens: manual;
+	line-height: 1.15;
+}
+.druck .secret {
+	margin-bottom: 3mm;
+	padding-bottom: 2mm;
+	border-bottom: 0.5pt solid var(--p-line);
+}
+.druck .secret p {
+	margin: 0.6mm 0;
+}
+
 /* ---------- Karte ---------- */
 .druck .map {
 	position: relative;

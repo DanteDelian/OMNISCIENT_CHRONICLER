@@ -22,13 +22,14 @@
 	}
 </script>
 
-<section class="panel p-5">
+<section class="panel @container p-5">
 	<div class="mb-3 flex items-center justify-between">
 		<div class="eyebrow">Trefferpunkte</div>
 		{#if s.tempHp > 0}<span class="badge" style="--c: var(--color-astral-2)">+{s.tempHp} temporär</span>{/if}
 	</div>
 
-	<div class="flex items-center gap-4">
+	<!-- Schmale Karte: Ring über den Knöpfen statt daneben -->
+	<div class="flex flex-col items-center gap-4 @[19rem]:flex-row">
 		<div class="relative h-[120px] w-[120px] shrink-0">
 			<svg viewBox="0 0 132 132" class="h-full w-full -rotate-90">
 				<circle cx="66" cy="66" r={R} fill="none" stroke="rgb(255 255 255 / 0.06)" stroke-width="10" />
@@ -51,7 +52,7 @@
 			</div>
 		</div>
 
-		<div class="min-w-0 flex-1 space-y-2">
+		<div class="w-full min-w-0 flex-1 space-y-2">
 			<div class="grid grid-cols-3 gap-1.5">
 				{#each [1, 5, 10] as n (n)}<button class="btn btn-xs btn-danger" onclick={() => apply('dmg', n)}>−{n}</button>{/each}
 				{#each [1, 5, 10] as n (n)}<button class="btn btn-xs btn-life" onclick={() => apply('heal', n)}>+{n}</button>{/each}

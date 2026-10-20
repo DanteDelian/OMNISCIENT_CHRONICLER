@@ -130,6 +130,7 @@ export function buildIndex(d: IndexInput): RefEntry[] {
 	push({ key: 'page:regeln', title: 'Regeln', kind: 'Seite', summary: 'Zustände, Aktionen, Konzentration, Rasten', href: '/regeln', names: ['Regeln'] });
 	push({ key: 'page:raetsel', title: 'Rätselwand', kind: 'Seite', summary: 'Theorien, offene Fragen, Widersprüche und Mysterien', href: '/raetsel', names: ['Rätselwand', 'Offene Fragen', 'Fragen an den DM'] });
 	push({ key: 'page:werkstatt', title: 'Werkstatt', kind: 'Seite', summary: 'Herstellen, Vorräte, Kosten und Erlös', href: '/werkstatt', names: ['Werkstatt', 'Alchemie-Werkstatt'] });
+	push({ key: 'page:geheimnisse', title: 'Wer weiß was?', kind: 'Seite', summary: 'Floshems Ruf, Valerius’ Geheimnisse und wer sie kennt', href: '/geheimnisse', names: ['Wer weiß was?', 'Wer weiß was', 'Geheimnisse'] });
 	push({ key: 'page:netzwerk', title: 'Netzwerk', kind: 'Seite', summary: 'Die Leute der Unsichtbaren Hand', href: '/netzwerk', names: ['Netzwerk', 'Netzwerk der Hand'] });
 	return out;
 }
@@ -181,6 +182,12 @@ export function buildBacklinks(d: IndexInput, index: RefEntry[]): Record<string,
 	for (const it of d.inventory.items) {
 		const from = { key: `item:${it.id}`, title: it.name, kind: 'Gegenstand', href: `/inventar#${it.id}` };
 		for (const l of extractLinks(it.desc)) add(l, from);
+	}
+	for (const g of d.geheimnisse?.secrets ?? []) {
+		const from = { key: `secret:${g.id}`, title: g.title, kind: 'Geheimnis', href: `/geheimnisse#${g.id}` };
+		const people = [...g.knownBy, ...g.suspects].map((w) => w.who);
+		const texts = [g.truth, g.cover, g.risk, g.note, ...[...g.knownBy, ...g.suspects].map((w) => w.how)];
+		for (const l of [...people, ...(g.links ?? []), ...texts.flatMap((t) => extractLinks(t))]) add(l, from);
 	}
 	return result;
 }

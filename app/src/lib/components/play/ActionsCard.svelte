@@ -137,9 +137,10 @@
 	{:else}
 		<ul class="space-y-1.5">
 			{#each rows[tab] as r (r.key)}
-				<li class="group flex items-center gap-3 rounded-xl border border-line bg-white/[0.02] py-2 pr-2 pl-3 transition hover:border-white/15 hover:bg-white/[0.035]">
+				<li class="group flex flex-wrap items-center gap-x-3 gap-y-1.5 rounded-xl border border-line bg-white/[0.02] py-2 pr-2 pl-3 transition hover:border-white/15 hover:bg-white/[0.035]">
 					<span class="h-8 w-1 shrink-0 rounded-full" style="background: {r.color}"></span>
-					<div class="min-w-0 flex-1">
+					<!-- Mindestbreite für den Namen: Bei wenig Platz rutschen die Knöpfe in eine zweite Zeile -->
+					<div class="min-w-[min(100%,9.5rem)] flex-1">
 						<div class="flex items-center gap-2">
 							{#if r.spell}
 								<button class="truncate text-left text-sm font-medium hover:text-astral" onclick={() => (ui.spellDrawer = r.spell!.id)}>{r.name}</button>
@@ -152,7 +153,7 @@
 						</div>
 						<div class="truncate text-xs text-ink-3"><Markdown src={r.meta} inline /></div>
 					</div>
-					<div class="flex shrink-0 items-center gap-1.5">
+					<div class="ml-auto flex shrink-0 items-center gap-1.5">
 						{#if r.spell}
 							{#if r.spell.rolls?.[0]}
 								<button class="btn btn-xs" onclick={() => rolls.damage(`${r.spell!.name}`, r.spell!.rolls![0].expr)} title={r.spell.rolls[0].label}>

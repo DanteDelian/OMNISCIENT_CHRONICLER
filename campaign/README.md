@@ -20,6 +20,7 @@ Alles, was das Grimoire anzeigt, steht in diesen Dateien. Ändert man sie (von H
 | `fragen.json` | Offene und geklärte Fragen an den DM, an den Tisch und an dich (Seite Rätselwand) | ja |
 | `netzwerk.json` | Die Unsichtbare Hand: Rollen und Leute mit Treue, Lohn und Wissen (Seite Netzwerk) | ja |
 | `zaubersets.json` | Zauber-Sets für den Tag: Prioritätenlisten zum Vorbereiten (Zauberbuch, Dialog Lange Rast, Druck) | ja |
+| `geheimnisse.json` | Wer weiß was? Floshems Ruf, Gefahren und Geheimnisse mit Mitwissern (eigene Seite, Druck) | ja |
 | `docs/*.md` | Archiv-Dokumente (Prüfbericht, Lage, Taktik, DM-Nachrichten, Backstory, Alchemie, Einkauf) | nein |
 | `world/*.md` | Personen, Fraktionen, Orte | nein |
 | `assets/` | Bilder, abrufbar unter `/api/assets/<datei>` | nein |
@@ -107,6 +108,12 @@ Pflicht: `id, name, en, level (0 = Zaubertrick), school, status, time, economy, 
 ersten Zauber aus dem Buch vorbereitet, bis die Grenze (IN-Modifikator + Stufe) erreicht ist. Vorschläge, die noch nicht im
 Buch stehen, zählen nicht und erscheinen als Plan. Rituale und Zaubertricks gehören nicht hinein, sie brauchen keine
 Vorbereitung. `icon` aus `ship | castle | wand | building | swords | moon`. Das zuletzt gewählte Set steht in `state.json` als `spellSet`.
+
+### geheimnisse.json
+`{ruf, gefahren, secrets[{id, title, status, truth, cover, risk, knownBy[{who, how}], suspects[{who, how}], note, links[]}]}`.
+`status` aus `sicher | gefaehrdet | aufgeflogen`. `who` ist der Name eines Welt-Eintrags oder freier Text in Anführungszeichen
+(„Graf Lhaaz“). `how` sagt, woher die Person es weiß. `truth`, `cover` (was die Leute glauben), `risk` und `note` sind Markdown,
+`*Theorie:*` und `**Offen:**` in `truth`, `risk` und `note` erscheinen auf der Rätselwand. Nur Belegtes eintragen.
 
 ### Rätselwand (automatisch)
 Die Seite sammelt alles, was in Texten als `*Theorie:*`, `*Theorie (Datum):*`, Liste unter `*Theorien:*` oder `**Offen:**`

@@ -56,6 +56,7 @@ const d = {
 	fragen: json('fragen.json') ?? [],
 	netzwerk: { roles: [], agents: [], ...(json('netzwerk.json') ?? {}) },
 	zaubersets: { sets: [], ...(json('zaubersets.json') ?? {}) },
+	geheimnisse: { ruf: '', gefahren: '', secrets: [], ...(json('geheimnisse.json') ?? {}) },
 	docs: mdDir('docs', (slug, data, body) => ({ slug, title: String(data.title ?? slug), subtitle: data.subtitle, aliases: asArray(data.aliases), order: data.order ?? 99, group: data.group ?? '', body })),
 	world: mdDir('world', (slug, data, body) => ({
 		slug,
@@ -197,6 +198,26 @@ for (const z of d.zaubersets.sets) {
 	links(where, z.tip ?? '');
 }
 
+// Wer weiß was?
+links('geheimnisse.json ruf', d.geheimnisse.ruf);
+links('geheimnisse.json gefahren', d.geheimnisse.gefahren);
+const secretIds = new Set();
+for (const g of d.geheimnisse.secrets) {
+	const where = `geheimnisse.json ${g.id ?? '?'}`;
+	if (!g.id || !g.title || !g.truth) errors.push(`${where}: ohne id, title oder truth`);
+	if (secretIds.has(g.id)) errors.push(`${where}: doppelte ID`);
+	secretIds.add(g.id);
+	if (!['sicher', 'gefaehrdet', 'aufgeflogen'].includes(g.status)) errors.push(`${where}: unbekannter Status „${g.status}“`);
+	if (!Array.isArray(g.knownBy) || !Array.isArray(g.suspects)) errors.push(`${where}: knownBy und suspects müssen Listen sein`);
+	for (const w of [...(g.knownBy ?? []), ...(g.suspects ?? [])]) {
+		if (!w.who) errors.push(`${where}: Zeuge ohne who`);
+		else if (!resolve(w.who) && !/^[„"]/.test(w.who)) warnings.push(`${where}: „${w.who}“ hat keinen Welt-Eintrag`);
+		links(where, w.how ?? '');
+	}
+	for (const l of g.links ?? []) ref(where, l);
+	links(where, [g.truth, g.cover, g.risk, g.note].filter(Boolean).join(' '));
+}
+
 // Zustand plausibel?
 const s = d.state;
 if (s && d.character) {
@@ -213,7 +234,7 @@ for (const s of d.spells.filter((x) => x.status === 'buch' && !x.card)) {
 	if (plain.length > 650) warnings.push(`spells.json ${s.id}: langer Regeltext ohne „card“ für die Zauberkarte`);
 }
 
-console.log(`Index: ${index.length} Einträge · Zauber ${d.spells.length} · Welt ${d.world.length} · Dokumente ${d.docs.length} · Journal ${d.journal.length} · Quests ${d.quests.length} · Stammbäume ${d.trees.length} · Fragen ${d.fragen.length} · Netzwerk ${d.netzwerk.agents.length} · Zauber-Sets ${d.zaubersets.sets.length}`);
+console.log(`Index: ${index.length} Einträge · Zauber ${d.spells.length} · Welt ${d.world.length} · Dokumente ${d.docs.length} · Journal ${d.journal.length} · Quests ${d.quests.length} · Stammbäume ${d.trees.length} · Fragen ${d.fragen.length} · Netzwerk ${d.netzwerk.agents.length} · Zauber-Sets ${d.zaubersets.sets.length} · Geheimnisse ${d.geheimnisse.secrets.length}`);
 for (const w of warnings) console.log(`  Hinweis: ${w}`);
 for (const e of errors) console.log(`  FEHLER:  ${e}`);
 console.log(errors.length ? `\n${errors.length} Fehler gefunden.` : '\nAlles konsistent.');

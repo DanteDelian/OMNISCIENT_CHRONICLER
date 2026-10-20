@@ -22,6 +22,7 @@
 	import PGlossary from '$lib/components/print/PGlossary.svelte';
 	import PMysteries from '$lib/components/print/PMysteries.svelte';
 	import PNetwork from '$lib/components/print/PNetwork.svelte';
+	import PSecrets from '$lib/components/print/PSecrets.svelte';
 
 	const docs = $derived([...campaign.data.docs].sort((a, b) => a.order - b.order));
 	const parts = $derived<PrintPart[]>([
@@ -42,7 +43,7 @@
 	const PRESETS: { label: string; ids: string[] | null }[] = [
 		{ label: 'Alles', ids: null },
 		{ label: 'Für den Spieltisch', ids: ['deckblatt', 'bogen', 'spielbogen', 'zauber', 'zauberkarten', 'gefolge', 'regeln', 'begriffe', 'fragen'] },
-		{ label: 'Kampagne', ids: ['quests', 'raetsel', 'journal', 'welt', 'netzwerk', 'karte'] },
+		{ label: 'Kampagne', ids: ['quests', 'raetsel', 'journal', 'welt', 'netzwerk', 'geheimnisse', 'karte'] },
 		{ label: 'Archiv', ids: ['archiv'] },
 		{ label: 'Nichts', ids: [] }
 	];
@@ -112,6 +113,8 @@
 			<PMysteries />
 		{:else if p.id === 'netzwerk'}
 			<PNetwork />
+		{:else if p.id === 'geheimnisse'}
+			<PSecrets />
 		{:else if p.id === 'inventar'}
 			<PInventory />
 		{:else if p.id === 'quests'}

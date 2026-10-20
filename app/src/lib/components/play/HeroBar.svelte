@@ -26,11 +26,12 @@
 	]);
 </script>
 
-<section class="panel panel-glow overflow-hidden p-5">
+<section class="panel panel-glow @container overflow-hidden p-5">
 	<div class="pointer-events-none absolute -top-24 -left-16 h-64 w-64 rounded-full bg-astral/20 blur-3xl"></div>
 
 	<div class="relative flex flex-wrap items-center gap-x-6 gap-y-4">
-		<div class="flex min-w-0 flex-1 items-center gap-4">
+		<!-- Mindestbreite: Reicht der Platz nicht, rutschen die Knöpfe in die nächste Zeile, statt den Namen zu zerquetschen -->
+		<div class="flex min-w-[min(100%,24rem)] flex-1 items-center gap-4">
 			<div class="relative shrink-0">
 				<div class="absolute inset-0 rounded-full bg-gold/30 blur-xl"></div>
 				<img src="/api/assets/{c.portrait}" alt="Valerius als Floshem" class="relative h-[88px] w-[88px] rounded-full" />
@@ -58,7 +59,7 @@
 		</div>
 	</div>
 
-	<div class="relative mt-5 grid grid-cols-4 gap-2 md:grid-cols-8">
+	<div class="relative mt-5 grid grid-cols-4 gap-2 @3xl:grid-cols-8">
 		<button
 			class="flex flex-col items-center justify-center rounded-2xl border px-2 py-2.5 transition {s.shield
 				? 'border-astral-2/60 bg-astral-2/10'
