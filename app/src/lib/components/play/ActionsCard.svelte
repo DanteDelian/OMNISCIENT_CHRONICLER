@@ -8,7 +8,7 @@
 	import { ui } from '$lib/stores/ui.svelte';
 	import { useFeature } from '$lib/game';
 	import { ACTIONS } from '$lib/rules-ref';
-	import { attackBonus, SCHOOL_COLOR, castable, diceDe, featureLeft, fmtMod, spellAttack, spellDc } from '$lib/rules';
+	import { attackBonus, SCHOOL_COLOR, castable, diceDe, featureLeft, fmtMod, skillBonus, spellAttack, spellDc } from '$lib/rules';
 	import type { Attack, Feature, Spell } from '$lib/types';
 
 	type Tab = 'aktion' | 'bonus' | 'reaktion' | 'lang' | 'standard';
@@ -28,6 +28,8 @@
 		attack?: Attack;
 		feature?: Feature;
 		pseudo?: { text: string; enabled: boolean };
+		/** Fertigkeitswurf statt Wirken (z. B. Zauber erkennen) */
+		check?: { label: string; bonus: number };
 	}
 
 	function spellMeta(sp: Spell): string {
@@ -58,7 +60,15 @@
 			aktion: [
 				...byEco('aktion', true).sort((a, b) => (a.spell!.level - b.spell!.level) || a.name.localeCompare(b.name)),
 				...c.attacks.map((a) => ({ key: `a-${a.id}`, name: a.name, meta: `${a.range} · ${a.props ?? ''}`, color: 'var(--color-ink-2)', tags: ['Waffe'], attack: a })),
-				...featureRows('aktion')
+				...featureRows('aktion'),
+				{
+					key: 'p-erkennen-aktion',
+					name: 'Zauber nach dem Wirken erkennen',
+					meta: 'Du hast das Wirken oder die Wirkung bemerkt: Arkane Kunde gegen SG 15 + Grad, Vorteil bei Magierzaubern (Xanathars).',
+					color: 'var(--color-s-erk)',
+					tags: ['Wurf'],
+					check: { label: 'Zauber erkennen (Arkane Kunde)', bonus: skillBonus(c, s, 'arcana') }
+				}
 			],
 			bonus: [
 				...featureRows('bonus'),
@@ -82,6 +92,22 @@
 			],
 			reaktion: [
 				...byEco('reaktion', true),
+				{
+					key: 'p-erkennen',
+					name: 'Zauber erkennen, während er gewirkt wird',
+					meta: 'Arkane Kunde gegen SG 15 + Grad, Vorteil bei Magierzaubern (Xanathars). Kostet die Reaktion: Gegenzauber geht dann nicht mehr.',
+					color: 'var(--color-s-erk)',
+					tags: ['Wurf'],
+					check: { label: 'Zauber erkennen (Arkane Kunde)', bonus: skillBonus(c, s, 'arcana') }
+				},
+				{
+					key: 'p-vorbereitet',
+					name: 'Vorbereitete Aktion auslösen',
+					meta: 'Tritt der Auslöser ein, führst du sie aus. Ein vorbereiteter Zauber wurde schon in deinem Zug gewirkt: Platz verbraucht, Halten braucht Konzentration.',
+					color: 'var(--color-ink-3)',
+					tags: ['Regel'],
+					pseudo: { text: 'Auslösen', enabled: true }
+				},
 				...c.attacks
 					.filter((a) => a.id === 'dolch' || a.id === 'kampfstab')
 					.map((a) => ({ key: `ga-${a.id}`, name: `Gelegenheitsangriff (${a.name})`, meta: 'Wenn ein sichtbarer Feind deine Reichweite verlässt.', color: 'var(--color-ink-3)', tags: ['Waffe'], attack: a }))
@@ -101,7 +127,7 @@
 	const HINT: Record<Tab, string> = {
 		aktion: 'Eine Aktion pro Zug. Zaubertricks unbegrenzt, Zauber kosten einen Platz.',
 		bonus: 'Eine Bonusaktion pro Zug. Sternenschritt ist kein Zauber, danach darfst du trotzdem normal zaubern.',
-		reaktion: 'Eine Reaktion pro Runde: Schild oder Gegenzauber, nie beides.',
+		reaktion: 'Eine Reaktion pro Runde: Schild, Gegenzauber oder Zauber erkennen, nie zwei davon.',
 		lang: 'Rituale ohne Zauberplatz (+10 Minuten) und Zauber mit langer Wirkzeit.',
 		standard: 'Was jeder im Kampf mit seiner Aktion tun kann.'
 	};
@@ -167,6 +193,8 @@
 							{#if r.attack.damageAlt}<button class="btn btn-xs" onclick={() => rolls.damage(`${r.attack!.name}: zweihändig`, r.attack!.damageAlt!)} title="zweihändig">{diceDe(r.attack.damageAlt)}</button>{/if}
 						{:else if r.feature?.uses}
 							<button class="btn btn-xs btn-primary" disabled={featureLeft(c, s, r.feature.id) <= 0} onclick={() => useFeature(r.feature!.id)}>Nutzen</button>
+						{:else if r.check}
+							<button class="btn btn-xs" onclick={() => rolls.check(r.check!.label, r.check!.bonus)} title="Bei Magierzaubern mit Vorteil"><Dices size={11} />{fmtMod(r.check.bonus)}</button>
 						{:else if r.pseudo}
 							<button class="btn btn-xs" disabled={!r.pseudo.enabled} onclick={() => rolls.event(r.name, 'Bonusaktion verbraucht')}>{r.pseudo.text}</button>
 						{/if}

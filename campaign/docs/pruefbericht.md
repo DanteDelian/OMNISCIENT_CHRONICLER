@@ -124,7 +124,7 @@ Die offenen Fragen stehen gebündelt auf der **[[Rätselwand]]** und als Druckbl
 - **Die gestohlene Spruchrolle** war *Verständigung*, die Quest ist gescheitert.
 - **Vertrauter:** einen Tukan oder Papagei erst, wenn du einen gesehen hast.
 - **Täuschen** stammt aus dem Hintergrund.
-- **Astralelf:** wie geschrieben. In den 4 freien Stunden der langen Rast darfst du herstellen und pflegen.
+- **Astralelf:** wie geschrieben. In den 4 freien Stunden der langen Rast darfst du Handwerk betreiben und Ausrüstung pflegen.
 - **Kadaver beim Haus:** taugt nicht für *Tote erwecken*, er war kein Humanoider.
 
 ### Geklärt am 19. Oktober 2026

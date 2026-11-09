@@ -3,6 +3,7 @@
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { FAMILIAR_MATERIAL, addMinion, removeMinion, summonFamiliar } from '$lib/game';
 	import RenewMinions from '$lib/components/RenewMinions.svelte';
+	import MinionCommand from '$lib/components/MinionCommand.svelte';
 
 	const s = $derived(campaign.data.state);
 	const cr = $derived(campaign.data.creatures);
@@ -76,6 +77,7 @@
 	</div>
 	{#if s.minions.length}
 		{#if s.minions.some((m) => !m.renewed)}<div class="mb-2 flex justify-end"><RenewMinions size="xs" /></div>{/if}
+		<div class="mb-2"><MinionCommand compact /></div>
 		<ul class="space-y-1.5">
 			{#each s.minions as m (m.id)}
 				<li class="flex items-center gap-2 rounded-lg bg-white/[0.02] px-2 py-1.5">

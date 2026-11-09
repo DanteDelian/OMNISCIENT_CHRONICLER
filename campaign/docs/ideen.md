@@ -16,7 +16,7 @@ updated: 2026-11-09
 
 - **Vertrauten neu beschwören und vorausschicken.** Eine [[Eule]] sieht 36 m im Dunkeln und späht nachts Orc-Lager und Riesen aus, ohne dass ihr euch zeigt. Material hast du für 9 Beschwörungen.
 - **Skelette als stille Nachtwache.** Erweckt schlafen sie nicht und sehen 18 m im Dunkeln. Das kostet jeden Tag einen Grad-3-Platz, mit dem Abend-Trick aus dem [[Taktik-Handbuch]] aber kaum etwas.
-- **Handwerk in den freien Stunden.** Nach 4 Stunden Trance bist du wach, während die Gruppe weiter rastet. Laut DM kannst du dann herstellen und pflegen: Lederrüstungen für die Skelette, Geschirr fürs Reittier, Kräuter bestimmen. Alles dazu in der [[Werkstatt]].
+- **Handwerk in den freien Stunden.** Nach 4 Stunden Trance bist du wach, während die Gruppe weiter rastet. Laut DM kannst du dann Handwerk betreiben und Ausrüstung pflegen: Lederrüstungen für die Skelette, Geschirr fürs Reittier, Kräuter bestimmen. Alles dazu in der [[Werkstatt]].
 - **Kräuter sammeln nebenbei.** Bei normalem oder langsamem Tempo kann jemand unterwegs sammeln, auf dem galoppierenden Dino nicht. Die Fee als Waldläuferin findet am meisten, du bestimmst die Funde mit der Kräuterkundeausrüstung. Anleitung in der [[Werkstatt]].
 - **Pfeile und Köcher kaufen**, sobald ihr an einem Händler vorbeikommt. Siehe Einkaufszettel im Inventar.
 

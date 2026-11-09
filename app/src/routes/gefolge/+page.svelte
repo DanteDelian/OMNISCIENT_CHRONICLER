@@ -6,6 +6,7 @@
 	import Markdown from '$lib/components/Markdown.svelte';
 	import SourceChip from '$lib/components/SourceChip.svelte';
 	import RenewMinions from '$lib/components/RenewMinions.svelte';
+	import MinionCommand from '$lib/components/MinionCommand.svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { FAMILIAR_MATERIAL, addMinion, removeMinion, summonFamiliar } from '$lib/game';
 	import { diceDe, fmtMod } from '$lib/rules';
@@ -60,6 +61,7 @@
 		</div>
 	</div>
 	{#if s.minions.length}
+		<div class="mb-3"><MinionCommand /></div>
 		<div class="grid gap-2 md:grid-cols-2 xl:grid-cols-3">
 			{#each s.minions as m (m.id)}
 				{@const block = cr.undead.find((u) => u.id === m.kind)}

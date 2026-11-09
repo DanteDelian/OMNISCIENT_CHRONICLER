@@ -30,7 +30,7 @@ Mit der [[Astrale Trance|Astralen Trance]] übst du jeden Tag ein Werkzeug. Mit 
 
 **Xanathars rechnet Projekte schneller:** Arbeitswochen statt Tage, Marktwert geteilt durch 50, also 10 GM pro Tag. Welche Regel gilt, entscheidet der DM. Die Werkstatt rechnet mit dem Spielerhandbuch.
 
-**Deine freien Stunden:** Nach 4 Stunden Trance bist du wach, während die anderen noch 4 Stunden ruhen. Laut DM darfst du dann herstellen und pflegen. Faustregel: **eine Sache pro Nacht**, nach Wichtigkeit:
+**Deine freien Stunden:** Nach 4 Stunden Trance bist du wach, während die anderen noch 4 Stunden ruhen. Laut DM darfst du dann Handwerk betreiben und deine Ausrüstung pflegen. Faustregel: **eine Sache pro Nacht**, nach Wichtigkeit:
 1. **In Feindgebiet:** Wache halten und die Untoten erneuern. Alles andere wartet.
 2. **Neue Kräuter gesammelt?** Bestimmen, mit Kräuterkunde in der Trance.
 3. **Material für Alchemie da?** Eine Rast-Herstellung, vor Kämpfen am besten ein Alchemistenfeuer (50 GM Wert).
