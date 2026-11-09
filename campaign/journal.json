@@ -302,21 +302,21 @@
       "Der rote Echsen-Clan",
       "Die Seeelfen"
     ],
-    "summary": "Die Gruppe befreit die unterirdische Zuflucht des roten Clans. Der Society-Anführer entkommt unsichtbar, ein Echsenkrieger stiehlt die Botschaft-Rolle.",
+    "summary": "Die Gruppe befreit die unterirdische Zuflucht des roten Clans. Der Society-Anführer entkommt unsichtbar, ein Echsenkrieger stiehlt die Spruchrolle *Verständigung*.",
     "events": [
       "[[Crush Lu]] bat um Hilfe, ihre „Hauptstätte“ zu befreien, eine unterirdische Zuflucht, die die Society besetzt hielt. **Auftrag angenommen.**",
       "Die Zuflucht entpuppte sich als **Höhlensystem nahe dem Hügelberg**. Die Gruppe besiegte die Wachen der Society.",
       "In den Höhlen mit teils überfluteten Tunneln kämpfte die Gruppe gegen weitere Society-Mitglieder. Valerius erhielt **2 Heiltränke**, die Gruppe sicherte **Heilkräuter für 3 weitere**.",
       "Im **Bossraum, einer Magmakammer**, wartete der Anführer: ein **Elf mit schuppenartiger Hautflechte**. Er beschwor **zwei geflügelte Echsenkreaturen** und teleportierte sich nach deren Niederlage **unsichtbar** davon. Den Raum hatte er schon geplündert.",
       "Die Gruppe betrachtete den Auftrag als erfüllt und kehrte zu den Echsen zurück.",
-      "Einer der verbliebenen roten Echsenkrieger hatte Valerius' **Spruchrolle *Botschaft* gestohlen**."
+      "Einer der verbliebenen roten Echsenkrieger hatte Valerius' **Spruchrolle *Verständigung* gestohlen**."
     ],
     "loot": [
       "2 Heiltränke",
       "Heilkräuter (für 3 Heiltränke)"
     ],
     "lost": [
-      "Spruchrolle Botschaft (gestohlen)"
+      "Spruchrolle Verständigung (gestohlen)"
     ],
     "encounters": [
       "Society-Wachen",
@@ -363,7 +363,7 @@
     "people": [],
     "summary": "Die Ohrringe sind identifiziert. Valerius erreicht Stufe 5 und lernt Tote erwecken und Gegenzauber.",
     "events": [
-      "Valerius **identifizierte die magischen Ohrringe**: ein Paar. Sie erlauben **1× pro Tag** eine magische *Botschaft* über große Distanz, aber **nur zwischen den beiden Trägern**.",
+      "Valerius **identifizierte die magischen Ohrringe**: ein Paar. Sie erlauben **1× pro Tag** *Verständigung* über jede Entfernung, aber **nur zwischen den beiden Trägern**.",
       "Die Gruppe erreichte **Stufe 5**.",
       "Valerius wählte die Zauber **[[Tote erwecken]]** und **[[Gegenzauber]]**."
     ],
@@ -815,5 +815,141 @@
     "sources": [
       "review-sessions"
     ]
+  },
+  {
+    "id": "j18-nebel-und-sumpfschuppen",
+    "order": 180,
+    "chapter": "Kapitel 9",
+    "title": "Die Türen im Nebel und die Sumpfschuppen",
+    "type": "session",
+    "date": "2026-11-08",
+    "dateMode": "exakt",
+    "dateLabel": "08.11.2026",
+    "dateBasis": "Laut deiner Nachricht vom 09.11.2026: „Session 08.11.2026“.",
+    "ingame": "Vom Boot auf dem Fluss bis zum Nachtlager am Rand der Wüste",
+    "places": [],
+    "people": [
+      "Aella Rayann",
+      "Twee",
+      "Lucira",
+      "Die Fee",
+      "Fridolin vom See",
+      "Lucaz Lhaaz",
+      "Leonidas Lhaaz",
+      "Die Orcs",
+      "Die Sumpfschuppen",
+      "Sorcerer Society",
+      "Die Teufelsjäger",
+      "Das Reittier"
+    ],
+    "summary": "Die drei Verschwundenen kehren im Nebel zurück, Lucaz geht heim. Zu Fuß Richtung Wüste trefft ihr auf Sumpfschuppen der Sorcerer Society, die Echsenkriegern die Seelen rauben. Ihr besiegt sie, erfahrt viel über die Society und reitet auf einem Dino davon, verfolgt von drei weiteren.",
+    "images": [
+      {
+        "file": "nebel-tueren.webp",
+        "caption": "Die Türen im Nebel"
+      },
+      {
+        "file": "nachtlager-wueste.webp",
+        "caption": "Nachtlager am Rand der Wüste"
+      }
+    ],
+    "events": [
+      "Alle sechs sind wieder am Tisch. Ihr fahrt mit dem Boot ein Stück flussaufwärts, bis dichter Nebel aufzieht und ihr keinen halben Meter weit mehr seht.",
+      "Du wirkst *[[Magie entdecken]]* als Ritual, um im Nebel wenigstens Magie zu spüren. Der Nebel umschlingt dich, das Ritual bricht ab.",
+      "Jeder steht allein in einem Raum voller gleicher Holztüren im Nebel und öffnet eine. Dahinter wartet jemand aus der Wirklichkeit: [[Fridolin vom See|Fridolin]] trifft den befreiten Orc (vermutlich Grump), [[Lucira]] trifft [[Twee]], [[Die Fee|die Fee]] trifft [[Aella Rayann|Kho]], du triffst [[Lucaz Lhaaz|Lucaz]].",
+      "Ihr redet miteinander, und plötzlich steht ihr alle wieder an Bord. **Die drei Verschwundenen sind zurück.** Siehe [[Die verschwundenen Gefährten]].",
+      "Lucaz erinnert sich plötzlich wieder an die drei. Diese Art Magie macht ihm Angst, er will zurück und sich seinem Vater [[Leonidas Lhaaz|Leonidas]] anschließen. Gegen die Strömung kann er das Boot nicht allein steuern, also geht er zu Fuß und will es später mit Soldaten holen.",
+      "Zum Abschied gibt Lucaz euch den [[Verständigungsstein]] von Leonidas, damit ihr Kontakt haltet und den Angriff auf die [[Die belagerte Stadt im Westen|belagerte Stadt]] abstimmt. Leonidas zieht wohl mit seinem Heer weiter südlich parallel zu euch.",
+      "Du befreist die Orc-Leichen vom Fleisch, um an die Knochen zu kommen, und nähst aus ihrer Kleidung zwei notdürftige Umhänge. In der Trance hattest du an diesem Tag noch das Alchemistenwerkzeug gewählt.",
+      "Ihr streitet lange über die letzte Session und entscheidet euch gegen den Fluss: Zu Fuß geht es mit der Fee als Führerin nach Westen oder Nordwesten durch den Dschungel Richtung Wüste. Du nimmst die drei Orc-Skelette und die zwei Umhänge mit.",
+      "Nach ein bis drei Stunden hört die Fee Geräusche. Ihr wollt nachsehen, und sie wirkt einen Zauber, der eurer Gruppe +10 auf Heimlichkeit gibt.",
+      "Beim Anschleichen wirkst du *[[Tote erwecken]]* auf einen deiner Knochenhaufen und gibst dem Skelett einen der Umhänge. Twee gibt dir bardische Inspiration. Fridolin vergisst seinen Segen und merkt es erst später.",
+      "Ihr findet einen schwer verletzten Echsenkrieger, ringsum liegen viele tote Echsenkrieger. Kho fragt ihn auf Echsisch, was passiert ist: die [[Sorcerer Society]].",
+      "Die Fee will ihn heilen, findet aber nichts mehr, wo die Seele saß. Sie heilt ihn, er stirbt trotzdem: **Ihm wurde die Seele geraubt.**",
+      "Weiter vorn stehen sechs menschenähnliche Humanoide mit Schuppen und Klauen an den Armen, die **[[Die Sumpfschuppen|Sumpfschuppen]]**. Ihr Anführer hat einen großen Echsenschwanz. Hinter ihnen steht ein [[Das Reittier|Dino]] ähnlich einem Stegosaurus, etwa 4,5 m groß, dessen Kammschuppen vom Kopf bis zum Hals reichen.",
+      "Mit einer hohen Initiative gehst du mit deinem Skelett in einem Halbbogen um die Gruppe herum, 90 Grad versetzt zu deinen Gefährten. Hinter den Gegnern ragt eine steile Wand mit einer etwa 10 m hohen Felsplattform auf. Du wartest ab: Diesmal sollte nicht wieder der Böse zuerst angreifen, und ihr wirkt deutlich stärker als sie.",
+      "Fridolin gibt sich als Geologe aus. Die Jäger sagen, sie jagen nur und seien gleich fertig. Fridolin verurteilt, was sie den Echsen und dem Dino antun. Der Anführer fragt, mit welchem Recht ihr das verlangt und ob ihr Wächter seid. Fridolin nennt die Echsen eure Freunde und will die Jäger verhaften. Das Gespräch kippt.",
+      "Da alle außer Fridolin noch schleichen, handelst du als Erster: *[[Netz]]* auf die drei hinteren Gegner.",
+      "Twee wirkt *Verlangsamen*, drei Gegner sind betroffen. Du wirkst *[[Sengender Strahl]]* und verbrennst dabei einen Teil der Netze, die Gefangenen darin nehmen guten Schaden. Die Fee schießt mit dem Bogen von einem Baum, auf den sie geflogen ist.",
+      "Kho schlägt zu, doch der Anführer pariert mit einer Reaktion: Seine Schuppen wandern zur Trefferstelle und verhärten sich. Er packt Fridolin mit Händen und Schwanz, Fridolin reißt sich mit bardischer Inspiration los.",
+      "Einer der hinteren stirbt, ein anderer kriecht schwer verletzt ins Gebüsch, im Dschungel ist viel schwieriges Gelände. Der Anführer flieht per *Nebelschritt* auf den Felsvorsprung, doch Lucira schlägt ihn mit zwei Zaubern, Aktion und Bonusaktion, bewusstlos. Die meisten ergeben sich.",
+      "Den Flüchtigen im Gebüsch findet ihr mit Feenfeuer und Tanzenden Lichtern, obwohl er mit Heimlichkeit 16 weit gekommen ist. Die Fee tötet ihn mit Dornenranken. Plündern konntet ihr ihn nicht mehr.",
+      "Lucira bringt den Anführer unbemerkt von den anderen weg, damit sie ihn für tot halten. Ihr befragt alle getrennt. Fridolin verspricht, ihnen nichts zu tun, solange sie die Wahrheit sagen.",
+      "**Was sie erzählen:** Die [[Sorcerer Society]] entstand vor 50 bis 60 Jahren, um gegen ein euch unbekanntes [[Das Imperium|Imperium]] zu kämpfen, das sie und die Freistädte bedroht. Offiziell sitzt sie im Rat von [[Die südliche Freistadt|Freistadt]], zahlt Steuern und hält sich dort an die Gesetze. Der Rat streitet immer wieder, ob man sie haben will.",
+      "Die Society hat fünf Untergruppen: die Sumpfschuppen, darüber die **[[Die Teufelsjäger|Teufelsjäger]]** als höchste Gruppe, die Dämonen beschwören, besiegen und ihnen Kräfte und Seelen stehlen, im Norden die **Wasserwanderer**, im Osten die **Adleraugen** und irgendwo die **Totengräber**. Freistadt und die Freistaaten stehen im kalten Krieg mit dem Imperium.",
+      "Die Sumpfschuppen jagen gezielt Echsenkrieger und rauben ihre Seelen für ihre Anführer, die sie in der Rangordnung nach oben weitergeben. Der Anführer sammelt die Seelen, die anderen lernen den dämonischen Zauber, der sie erntet. Er ist der zweithöchste seiner Gruppe, darüber steht einer, den du als „Farlier“ und später „Farlir“ notiert hast. Den Zauber beibringen oder mehr erzählen wollen sie dir nicht.",
+      "Der Anführer behauptet, er müsse sich stündlich über seinen Nachrichtenstein bei seinen Leuten melden, und auf dem Stein liege ein Passwort. Lucira glaubt ihm und gibt ihm den Stein, damit er „alles in Ordnung“ sagt. Er schlägt Alarm. Im Stein steckt der Zauber *Verständigung*.",
+      "Die vier Gefangenen werden gefesselt. Du plünderst einen Toten (11 Silber) und erweckst ein zweites Skelett aus den Knochen vom Boot.",
+      "Zwei Fesseln halten nicht. Als Lucira kurz nach einem Seil sucht, flieht der Anführer mit einem letzten *Nebelschritt* nach Westen in den Dschungel, mit 1 TP. Du und Lucira lauft hinterher, verirrt euch und kehrt um.",
+      "Die Fee holt ihn fliegend ein und tötet ihn. Sie erbeutet Gold und einen Sack seltsamer Münzen und schneidet dir ein Bein von ihm ab: Sie will deine Gunst, damit du ihr hilfst, in ihre Dimension zurückzukehren oder ihren Alkoholgeruch loszuwerden.",
+      "Du brauchst das Bein nicht, versprichst ihr aber Hilfe, auch weil du dabei Interessantes finden könntest. Sie meint, die Teufelsjäger wüssten etwas darüber oder hätten die Macht dazu. Aus der Richtung, in die der Anführer floh, hat sie Stimmen gehört.",
+      "Die Fee wirkt Tierfreundschaft auf den Dino. Als die übrigen Gefangenen fliehen, warnst du, dass sie gleich die Verfolger führen. Fridolin wirft einen Speer, du tötest einen mit *[[Totenglocke]]*, die Fee einen mit einem Pfeil. Keiner überlebt.",
+      "Fünf von euch reiten auf dem Dino, die Fee fliegt, Lucira hält ihren Drachen Krümel vor der Brust. Für deine zwei Skelette ist kein Platz: Sie versuchen zu folgen, bleiben aber zurück. Der Dino walzt eine breite Schneise durch das schwierige Gelände, ihr kommt schnell voran.",
+      "Die drei Sumpfschuppen, die euch verfolgen, vernichten deine zwei zurückgebliebenen Skelette.",
+      "Nach etwa vier Stunden erreicht ihr den Rand der Wüste. Auf Rat der Fee zieht ihr noch etwa 100 m weiter und lagert ein paar Meter im Dschungel. Twee wirkt *Leomunds winzige Hütte* und färbt die Kuppel als Tarnung. Ihr beginnt die lange Rast.",
+      "Nach sechs bis sieben Stunden erscheinen drei Sumpfschuppen dort, wo ihr den Galopp beendet habt. Sie wirken Rituale und suchen euch, finden die getarnte Hütte aber nicht. Etwa 100 m entfernt schlagen sie ein Lager auf, einer hält Wache.",
+      "Du und Fridolin, der ebenfalls in Trance ruht, beobachtet sie. Ihr seht keine unmittelbare Gefahr, die Rast ist wichtiger. Ende der Session."
+    ],
+    "loot": [
+      "11 Silber",
+      "[[Verständigungsstein]] von Leonidas, über Lucaz",
+      "Die Fee: Gold und ein Sack seltsamer Münzen vom Anführer"
+    ],
+    "lost": [
+      "2 erweckte Skelette, auf der Flucht von drei Sumpfschuppen vernichtet, mit einem der zwei Umhänge",
+      "Das Boot bleibt zurück, Lucaz will es mit Soldaten holen"
+    ],
+    "encounters": [
+      "6 Sumpfschuppen mit Anführer: alle tot (2 im Kampf, der Anführer auf der Flucht, 3 Gefangene beim Fluchtversuch)",
+      "Sterbender Echsenkrieger, Seele geraubt",
+      "Ein Dino ähnlich einem Stegosaurus, mit Tierfreundschaft gewonnen",
+      "3 Sumpfschuppen als Verfolger, lagern 100 m entfernt"
+    ],
+    "level": null,
+    "quests": [
+      {
+        "ref": "verschwundene",
+        "change": "die drei sind zurück"
+      },
+      {
+        "ref": "westen-belagerung",
+        "change": "zu Fuß Richtung Wüste, Verständigungsstein"
+      },
+      {
+        "ref": "sumpfschuppen",
+        "change": "neu"
+      },
+      {
+        "ref": "fee-heimweg",
+        "change": "neu"
+      },
+      {
+        "ref": "reittier",
+        "change": "neu"
+      },
+      {
+        "ref": "skelette",
+        "change": "2 vernichtet"
+      },
+      {
+        "ref": "teufelsjaeger",
+        "change": "neue Hinweise"
+      },
+      {
+        "ref": "botschaft-rolle",
+        "change": "aufgegeben"
+      }
+    ],
+    "notes": [
+      "Am Tisch waren alle sechs: du, Aella, Twee, Lucira, die Fee und Fridolin.",
+      "Deine lange Rast (4 Stunden Trance) ist geschafft. In den übrigen Stunden der Nacht kannst du arbeiten, siehe Rast-Notiz im Dialog „Lange Rast“.",
+      "*Theorie:* Stündliche Meldung und Passwort waren Finten, um an den Stein zu kommen. Ein Verständigungsstein wirkt nach den Regeln nur einmal bis zum nächsten Morgengrauen und braucht kein Passwort.",
+      "*Theorie (deine, 09.11.2026):* Einer der drei Verfolger trägt das Gegenstück zum Stein des Anführers, deshalb waren sie so schnell da. Vielleicht ist sogar „Farlir“ selbst unter ihnen, die Nummer eins der Sumpfschuppen.",
+      "**Offen:** Wo ist der Stein des Anführers jetzt? Er floh danach, die Fee tötete ihn und nahm Gold und Münzen mit."
+    ],
+    "contradictions": [
+      "In deinem Bericht klingt es, als hättest du das zweite Skelett aus dem geplünderten Toten erweckt. Laut deiner Klarstellung stammen beide aus den Knochen vom Boot. Aus einer frischen Leiche entstünde ohnehin ein Zombie, kein Skelett."
+    ],
+    "sources": []
   }
 ]

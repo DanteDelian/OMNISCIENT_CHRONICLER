@@ -768,8 +768,7 @@
     "en": "Fog Cloud",
     "level": 1,
     "school": "Beschwörung",
-    "status": "vorschlag",
-    "pick": true,
+    "status": "buch",
     "concentration": true,
     "time": "1 Aktion",
     "economy": "aktion",
@@ -782,13 +781,16 @@
     "text": "Du erschaffst eine **Nebelkugel mit 6 m (20 Fuß) Radius** um einen Punkt in Reichweite. Die Kugel breitet sich um Ecken aus, und ihr Bereich ist **komplett verschleiert**. Sie hält für die Wirkungsdauer oder bis ein Wind von mindestens mäßiger Stärke (ab etwa 16 km/h) sie verweht.",
     "higher": "Mit einem Platz des 2. Grades oder höher wächst der Radius um **6 m (20 Fuß)** pro Grad über dem 1.",
     "valerius": "36 m · Kugel mit 6 m Radius (mit Grad 2: 12 m) · bis 1 Stunde · Konzentration. Darin könnt ihr euch verstecken, dann müssen Schützen und Felswerfer raten, wo ihr steht.",
-    "why": "**Gegen Schützen und Felswerfer:** Was im Nebel steht, sieht niemand. Zauber, die ein sichtbares Ziel brauchen, gehen hinein gar nicht, und wer sich darin versteckt, muss erst gefunden werden. Zugleich deckt der Nebel deinen Rückzug aus dem Nahkampf. **Als Beschwörung** lädt er *Gutartiges Versetzen* auf und kostet beim Abschreiben die Hälfte.",
-    "slot": "einer der fehlenden Einträge bis Grad 1",
+    "why": "**Gegen Schützen und Felswerfer:** Was im Nebel steht, sieht niemand. Zauber, die ein sichtbares Ziel brauchen, gehen hinein gar nicht, und wer sich darin versteckt, muss erst gefunden werden. Zugleich deckt der Nebel deinen Rückzug aus dem Nahkampf. **Als Beschwörung** lädt er ab Stufe 6 *Gutartiges Versetzen* auf.",
     "tips": [
+      "**Rein, raus, zaubern, rein:** Deine Bewegung darfst du vor und nach der Aktion aufteilen. Tritt an den Rand, wirke auf ein sichtbares Ziel und geh zurück in den Nebel. Aus dem Nebel heraus siehst du selbst nichts.",
       "**Zwischen euch und die Schützen legen,** nicht auf eure Nahkämpfer: Im Nebel sieht auch Aella nichts.",
-      "**Konzentration:** nicht zusammen mit *Netz*. Gegen Schützen der Nebel, gegen anstürmende Gegner das Netz."
+      "**Beide blind, kein Vorteil:** Kämpfen zwei im Nebel gegeneinander, hat jeder Vorteil und Nachteil zugleich, das hebt sich auf. Dunkelsicht hilft im Nebel nicht.",
+      "**Konzentration:** nicht zusammen mit *Netz* oder *Flammenkugel*. Gegen Schützen der Nebel, gegen anstürmende Gegner das Netz.",
+      "**Flucht:** Im Nebel verschwinden, dann [[Sternenschritt]] an einen Ort, den du siehst. Wind ab 16 km/h verweht ihn."
     ],
-    "docs": []
+    "docs": [],
+    "prepared": true
   },
   {
     "id": "spiegelbilder",
@@ -797,7 +799,6 @@
     "level": 2,
     "school": "Illusion",
     "status": "vorschlag",
-    "pick": true,
     "time": "1 Aktion",
     "economy": "aktion",
     "range": "Selbst",
@@ -808,7 +809,6 @@
     "text": "**Drei illusorische Doppelgänger** von dir erscheinen in deinem Feld. Bis der Zauber endet, bewegen sie sich mit dir und ahmen deine Handlungen nach. Dabei wechseln sie ständig die Position, sodass niemand verfolgen kann, welches Bild echt ist. Mit deiner Aktion kannst du die Doppelgänger auflösen.\n\nJedes Mal, wenn eine Kreatur dich während der Wirkungsdauer mit einem Angriff anvisiert, würfelst du einen W20, um zu bestimmen, ob der Angriff stattdessen einen Doppelgänger anvisiert. Bei **drei Doppelgängern** brauchst du dafür eine **6 oder mehr**, bei **zwei** eine **8 oder mehr**, bei **einem** eine **11 oder mehr**.\n\nEin Doppelgänger hat **RK 10 + deinen Geschicklichkeitsmodifikator**. Trifft ein Angriff einen Doppelgänger, wird er zerstört. Ein Doppelgänger kann nur durch einen Angriff zerstört werden, der ihn trifft, alle anderen Schäden und Effekte ignoriert er. Der Zauber endet, wenn alle drei Doppelgänger zerstört sind.\n\nEine Kreatur ist nicht betroffen, wenn sie nicht sehen kann, wenn sie sich auf andere Sinne als die Sicht verlässt, etwa Blindsicht, oder wenn sie Illusionen als falsch erkennt, etwa durch Wahrsicht.",
     "valerius": "**Keine Konzentration**, läuft neben *Netz* oder *Hypnotisches Muster*. Bei 3, 2 und 1 Abbild lenkst du einen Angriff zu 75, 65 und 50 % auf ein Abbild. Abbilder haben RK 11.",
     "why": "**Dein Schutz im Nahkampf:** Wer dich angreift, trifft meist ein Abbild. Zusammen mit [[Magierrüstung]] (RK 14) und [[Schild]] (RK 19) wirst du zum zähesten Ziel der Gruppe, und das ganz ohne Konzentration. Gerade wenn kein Nahkämpfer am Tisch ist, rettet dich das.",
-    "slot": "einer der fehlenden Einträge bis Grad 2",
     "tips": [
       "**Vor dem Nahkampf wirken:** Es hält eine Minute, also meist den ganzen Kampf.",
       "**Wirkt nicht** gegen Wesen mit Blindsicht oder Wahrsicht und gegen Blinde."
@@ -822,8 +822,7 @@
     "en": "Flaming Sphere",
     "level": 2,
     "school": "Beschwörung",
-    "status": "vorschlag",
-    "pick": true,
+    "status": "buch",
     "concentration": true,
     "time": "1 Aktion",
     "economy": "aktion",
@@ -849,13 +848,21 @@
     "higher": "Mit einem Platz des 3. Grades oder höher steigt der Schaden um **1W6** pro Grad über dem 2.",
     "valerius": "SG **15** · Bonusaktion: 9 m bewegen und rammen, 2W6 Feuer (Ø 7) · deine Aktion bleibt frei, etwa für *Totenglocke*. Mit Grad 3: 3W6.",
     "why": "**Beschwörer-Schaden jede Runde:** Mit der Bonusaktion rammst du einen Gegner, mit der Aktion wirkst du *Totenglocke* obendrauf. Wer neben der Kugel steht, brennt, also halten Gegner Abstand: ein Stück Kontrolle. **Als Beschwörung** lädt sie *Gutartiges Versetzen* auf.",
-    "slot": "einer der fehlenden Einträge bis Grad 2",
     "tips": [
-      "**Nicht neben eure Leute parken:** Wer seinen Zug neben der Kugel beendet, brennt, auch Aella.",
+      "**Wirken und gleich rammen:** Mit der Aktion wirken, mit der Bonusaktion im selben Zug bis 9 m bewegen und einen Gegner rammen. Er muss sofort retten (Frage an den DM).",
+      "**Nicht neben eure Leute parken:** Wer seinen Zug neben der Kugel beendet, brennt, auch Aella und deine Skelette.",
+      "**Nicht ins eigene Netz:** Feuer brennt das Netz weg und befreit die Gefangenen. Kugel oder Netz, nicht beides, beide brauchen Konzentration.",
+      "**Bonusaktion knapp:** Kugel bewegen, Untote befehligen und *Sternenschritt* teilen sich die Bonusaktion. Gib den Skeletten vorher einen allgemeinen Befehl.",
       "**Stark gegen Orcs, schwach gegen Riesen:** 2W6 sind für einen Orc viel, für einen Riesen mit über 100 TP wenig."
     ],
     "docs": [],
-    "card": "Eine **Feuerkugel** (1,5 m Durchmesser) auf einem freien Feld. Wer seinen Zug **in 1,5 m** um sie beendet, macht einen **GE-Rettungswurf**: **2W6 Feuer**, bei Erfolg die Hälfte. **Bonusaktion:** bis 9 m bewegen. Rammst du eine Kreatur, macht sie den Rettungswurf, und die Kugel hält an. Springt über Hindernisse bis 1,5 m und Gruben bis 3 m. Entzündet lose Brennbares, Licht 6 m hell und 6 m dämmrig. Höhere Grade: +1W6 pro Grad über 2."
+    "card": "Eine **Feuerkugel** (1,5 m Durchmesser) auf einem freien Feld. Wer seinen Zug **in 1,5 m** um sie beendet, macht einen **GE-Rettungswurf**: **2W6 Feuer**, bei Erfolg die Hälfte. **Bonusaktion:** bis 9 m bewegen. Rammst du eine Kreatur, macht sie den Rettungswurf, und die Kugel hält an. Springt über Hindernisse bis 1,5 m und Gruben bis 3 m. Entzündet lose Brennbares, Licht 6 m hell und 6 m dämmrig. Höhere Grade: +1W6 pro Grad über 2.",
+    "prepared": true,
+    "rulings": [
+      "Die Kugel erscheint auf einem **freien Feld**. Direkt auf einem Gegner wirken geht nicht, der Schaden kommt erst beim Rammen oder am Ende seines Zuges.",
+      "Rammst du eine Kreatur, hält die Kugel für diesen Zug an. Mehr als ein Rammen pro Zug geht also nicht.",
+      "Das Bewegen der Kugel ist kein neuer Zauber: Die Bonusaktions-Zauber-Regel greift nicht."
+    ]
   },
   {
     "id": "magierruestung",
@@ -875,13 +882,11 @@
     "text": "Du berührst eine bereitwillige Kreatur, die keine Rüstung trägt, und eine schützende magische Kraft umgibt sie, bis der Zauber endet. Die Basis-RK des Ziels wird **13 + sein Geschicklichkeitsmodifikator**. Der Zauber endet, wenn das Ziel eine Rüstung anlegt oder du ihn als Aktion beendest.",
     "valerius": "Deine RK steigt von **11 auf 14**, mit *Schild* auf **19**. 8 Stunden, keine Konzentration.",
     "why": "**Deine RK von 11 ist dein größtes Risiko.** Ein normaler Gegner mit +5 trifft dich zu 75 %, mit Magierrüstung nur noch zu 60 %. Ein Grad-1-Platz am Morgen hält den ganzen Abenteuertag. Kein anderer Grad-1-Zauber bringt dir so viel Überleben.",
-    "slot": "einer der fehlenden Einträge bis Grad 1",
     "tips": [
       "**Morgens wirken:** 8 Stunden decken fast jeden Abenteuertag ab.",
       "**Läuft neben allem:** keine Konzentration, also parallel zu *Netz*."
     ],
-    "docs": [],
-    "pick": true
+    "docs": []
   },
   {
     "id": "selbstverkleidung",
@@ -913,7 +918,7 @@
     "en": "Tenser's Floating Disk",
     "level": 1,
     "school": "Beschwörung",
-    "status": "vorschlag",
+    "status": "buch",
     "prepared": false,
     "ritual": true,
     "time": "1 Aktion",
@@ -923,13 +928,17 @@
     "duration": "1 Stunde",
     "source": "Spielerhandbuch 2014 (engl. S. 282) · SRD 5.1 (dort „Floating Disk“)",
     "text": "Dieser Zauber erschafft eine kreisförmige, waagerechte Kraftfläche mit **90 cm Durchmesser** und 2,5 cm Dicke. Sie schwebt 90 cm über dem Boden auf einem freien Feld deiner Wahl in Reichweite, das du sehen kannst. Die Scheibe bleibt für die Wirkungsdauer bestehen und trägt **bis zu 500 Pfund** (rund 225 kg). Wird mehr Gewicht daraufgelegt, endet der Zauber, und alles darauf fällt zu Boden.\n\nDie Scheibe bewegt sich nicht, solange du höchstens 6 m von ihr entfernt bist. Entfernst du dich weiter, folgt sie dir und bleibt in 6 m Abstand. Sie überwindet unebenes Gelände, Treppen, Hänge und Ähnliches, aber **keinen Höhenunterschied von 3 m oder mehr**. Sie kann also keine 3 m tiefe Grube überqueren und eine solche auch nicht verlassen, wenn sie darin erschaffen wurde.\n\nEntfernst du dich mehr als 30 m von der Scheibe, meist weil sie einem Hindernis nicht folgen kann, endet der Zauber.",
-    "valerius": "Ritual: kein Zauberplatz · 225 kg Traglast · 1 Stunde",
-    "why": "**Logistik für deine Nekromantie:** Knochen und Leichen vom Schlachtfeld transportieren, Beute und Alchemie-Zutaten bergen. Als Ritual kostet sie dich nie einen Zauberplatz. Als Beschwörung passt sie zu deiner Schule.",
-    "slot": "jeden fehlenden Eintrag (bis Grad 1 oder bis Grad 2)",
+    "valerius": "Ritual: kein Zauberplatz, keine Vorbereitung · trägt bis 500 Pfund (rund 225 kg) · 1 Stunde · folgt dir in 6 m Abstand",
+    "why": "**Logistik für Werkstatt und Gefolge:** Knochen, Leder, Kräuter und Beute transportieren, ohne dass das Reittier oder ihr sie tragen müsst. Als Ritual kostet sie nie einen Zauberplatz.",
     "tips": [
-      "**Als Ritual ohne Vorbereitung:** wie *Unsichtbarer Diener* jederzeit verfügbar, wenn du 10 Minuten Zeit hast."
+      "**Als Ritual ohne Vorbereitung:** wie *Unsichtbarer Diener* jederzeit verfügbar, wenn du 10 Minuten Zeit hast.",
+      "**Rohstoffe für die Werkstatt:** Häute erlegter Tiere, Lianen, Holz für Pfeile und gesammelte Kräuter passen auf die Scheibe.",
+      "**Knochenhaufen bergen:** Vom Schlachtfeld zurück ins Lager, bevor du *Tote erwecken* wirkst.",
+      "**Ab Stufe 6 ein Gratis-Teleport:** Als Beschwörungszauber ab Grad 1 lädt das Ritual *Gutartiges Versetzen* wieder auf, ganz ohne Platz.",
+      "**Grenzen:** Treppen und Hänge schafft sie, Höhenunterschiede ab 3 m nicht. Entfernst du dich mehr als 30 m, endet der Zauber."
     ],
-    "docs": []
+    "docs": [],
+    "card": "Eine schwebende **Kraftscheibe** (90 cm Durchmesser, 2,5 cm dick) auf einem freien Feld in 9 m, das du siehst, 90 cm über dem Boden, 1 Stunde. Trägt **bis 500 Pfund** (rund 225 kg), mehr beendet den Zauber. Bleibt stehen, solange du höchstens 6 m entfernt bist, sonst folgt sie dir in 6 m Abstand. Unebenes Gelände, Treppen und Hänge ja, Höhenunterschiede ab 3 m nein. Über 30 m Abstand endet der Zauber."
   },
   {
     "id": "donnerwoge",
@@ -997,7 +1006,7 @@
     "en": "See Invisibility",
     "level": 2,
     "school": "Erkenntnismagie",
-    "status": "vorschlag",
+    "status": "buch",
     "prepared": false,
     "time": "1 Aktion",
     "economy": "aktion",
@@ -1006,11 +1015,14 @@
     "duration": "1 Stunde",
     "source": "Spielerhandbuch 2014 (engl. S. 274) · SRD 5.1",
     "text": "Für die Wirkungsdauer siehst du **unsichtbare Kreaturen und Gegenstände**, als wären sie sichtbar, und du kannst in die **Ätherebene** blicken. Ätherische Kreaturen und Gegenstände erscheinen geisterhaft und durchscheinend.",
-    "valerius": "1 Stunde · **keine Konzentration**",
-    "why": "**Der Konter gegen den Society-Anführer,** der sich unsichtbar macht und wegteleportiert. Ohne Sicht kein *Gegenzauber*. Mit diesem Zauber siehst du ihn und kannst seine Flucht brechen. Er hilft auch gegen Geister in der Ätherebene, und Xantus ist voller Flüche und Geister. Keine Konzentration, also parallel zu *Netz*.",
-    "slot": "einen freien Eintrag bis Grad 2",
+    "valerius": "1 Stunde · **keine Konzentration**, läuft neben *Netz* oder *Nebelwolke*",
+    "why": "**Der Konter gegen unsichtbare Zauberer:** Der Society-Anführer aus der Zuflucht machte sich unsichtbar und teleportierte sich weg. Ohne Sicht kein *Gegenzauber*. Mit diesem Zauber siehst du ihn und kannst seine Flucht brechen. Er hilft auch gegen Geister in der Ätherebene.",
     "tips": [
-      "**Vor dem Bosskampf wirken:** 1 Stunde reicht für einen ganzen Dungeon-Abschnitt."
+      "**Vor dem Kampf gegen Zauberer wirken:** 1 Stunde reicht für einen ganzen Abschnitt, und keine Konzentration heißt: *Netz* und *Nebelwolke* gehen weiter.",
+      "**Gegenzauber gegen Unsichtbare:** Du musst das Zaubern sehen. Mit diesem Zauber siehst du auch unsichtbare Zauberer und kannst kontern.",
+      "**Ätherebene:** Geister und Wesen, die sich ins Ätherische zurückziehen, siehst du geisterhaft und durchscheinend.",
+      "**Späh-Sensoren entdecken:** Den Sensor von *Hellsehen* siehst du als leuchtende Kugel. So merkst du, wenn euch jemand magisch beobachtet.",
+      "**Kein Nebelblick:** Nebel, Dunkelheit und Mauern verdecken weiter. Der Zauber hebt nur Unsichtbarkeit auf."
     ],
     "docs": []
   },

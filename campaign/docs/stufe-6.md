@@ -1,11 +1,11 @@
 ---
 title: Stufe-6-Planer
-subtitle: Die 4 fehlenden Einträge und die 2 neuen Zauber auf Stufe 6, passend zu dir als Beschwörer für Schaden und Kontrolle
+subtitle: Die 2 neuen Zauber auf Stufe 6, passend zu dir als Beschwörer für Schaden und Kontrolle
 icon: book-open
 order: 5
 group: Zauber & Taktik
 aliases: [Stufe 6, Stufenaufstieg, Planer Stufe 6, Zauberplan]
-updated: 2026-10-20
+updated: 2026-11-09
 ---
 # Stufe-6-Planer
 
@@ -16,28 +16,27 @@ updated: 2026-10-20
 - **Schaden, Kontrolle, Beschwörung.** Kein Support: Stärken und Heilen übernehmen andere.
 - **Für dich planen, nicht für die Runde.** Ihr spielt in wechselnder Besetzung, mindestens zu dritt. Die Zauber müssen auch tragen, wenn kein Nahkämpfer am Tisch sitzt.
 - **Eure Nahkämpfer nicht treffen.** Flächen lieber lenkbar oder klein.
-- **Im Nahkampf überleben.** Du wirst oft angegriffen und hast RK 11.
+- **Im Nahkampf überleben.** Du hast RK 11. Dein Schutz sind Abstand, deine Skelette als Leibwache, *Nebelwolke* und *Schild*. Mächtigeren Schutz holst du dir auf höheren Stufen (laut dir).
 
-## Dein Plan: sechs Zauber
+## Dein Zauberbuch und der Plan
 
-*Von dir bestätigt am 19.10.2026.*
+**Die 4 fehlenden Einträge sind gewählt** (laut DM am 08.11.2026 nachgetragen): [[Nebelwolke]], [[Flammenkugel]], [[Tensers schwebende Scheibe]] und [[Unsichtbares sehen]]. Damit stehen 14 Zauber ab Grad 1 im Buch, so viele, wie einem Magier der Stufe 5 zustehen.
 
 | Wann | Zauber | Grad | Konz. | Wofür | Trifft eure Leute? |
 | :-- | :-- | :-: | :-: | :-- | :-- |
-| Fehlender Eintrag | [[Magierrüstung]] | 1 | | RK 14 für 8 Stunden, mit *Schild* 19 | nein |
-| Fehlender Eintrag | [[Nebelwolke]] ★ | 1 | ● | Deckung gegen Schützen und Felswürfe, Rückzug | nimmt auch ihnen die Sicht |
-| Fehlender Eintrag | [[Spiegelbilder]] | 2 | | Drei Abbilder fangen Angriffe ab | nein |
-| Fehlender Eintrag | [[Flammenkugel]] ★ | 2 | ● | Jede Runde 2W6 per Bonusaktion, hält Gegner auf Abstand | nur wer neben ihr steht |
+| im Buch | [[Nebelwolke]] ★ | 1 | ● | Deckung gegen Schützen und Felswürfe, Rückzug | nimmt auch ihnen die Sicht |
+| im Buch | [[Tensers schwebende Scheibe]] ★ | 1 | | Ritual: trägt Knochen, Beute und Material | nein |
+| im Buch | [[Flammenkugel]] ★ | 2 | ● | Jede Runde 2W6 per Bonusaktion, hält Gegner auf Abstand | nur wer neben ihr steht |
+| im Buch | [[Unsichtbares sehen]] | 2 | | 1 Stunde ohne Konzentration: Unsichtbare sehen und kontern | nein |
 | Stufe 6 | [[Hypnotisches Muster]] | 3 | ● | Ganze Gruppen fallen aus, auch Riesen | nur wer im Würfel steht |
 | Stufe 6 | [[Flutwelle]] ★ | 3 | | 4W8 und liegend, ohne Konzentration | nein: Ort und Größe legst du fest |
 
 ★ = Beschwörung: lädt *Gutartiges Versetzen* auf, halber Abschreibpreis, ab Stufe 10 unzerbrechliche Konzentration.
 
-**Warum genau diese:**
-- **Überleben ohne Konzentration:** *Magierrüstung*, *Spiegelbilder* und *Schild* laufen neben jedem Kontrollzauber. Ein Eisriese trifft dich dann nicht mehr zu 95 %, sondern zu 80 %, mit *Schild* zu 55 %. Und anfangs zielen drei von vier Angriffen auf ein Abbild.
-- **Eine Kontrolle pro Kampf:** *Netz*, *Hypnotisches Muster*, *Flammenkugel* und *Nebelwolke* brauchen Konzentration, also immer nur eine davon. Du wählst nach Lage.
+**Warum Hypnotisches Muster und Flutwelle:**
+- **Eine Kontrolle pro Kampf:** *Netz*, *Hypnotisches Muster*, *Flammenkugel* und *Nebelwolke* brauchen Konzentration, also immer nur eine davon. *Hypnotisches Muster* ist die stärkste davon: Es schaltet eine ganze Gruppe aus.
 - **Schaden ohne Konzentration:** *Flutwelle*, *Sengender Strahl*, *Eismesser* und *Totenglocke* gehen immer, auch neben einer Kontrolle.
-- **Fast jeder Kampfzauber lädt dein Versetzen auf:** *Eismesser*, *Nebelwolke*, *Netz*, *Flammenkugel* und *Flutwelle* sind Beschwörungen. Damit ist dein Teleport aus dem Nahkampf fast immer bereit.
+- **Fast jeder Kampfzauber lädt dein Versetzen auf:** *Eismesser*, *Nebelwolke*, *Netz*, *Flammenkugel*, *Tensers Scheibe* und *Flutwelle* sind Beschwörungen. Damit ist dein Teleport aus dem Nahkampf fast immer bereit.
 
 **Welcher Zauber wann:**
 
@@ -47,9 +46,7 @@ updated: 2026-10-20
 | Einzelne stürmen auf euch zu | *Netz* in den Weg | *Totenglocke*, *Eismesser* |
 | Schützen oder Felswerfer | *Nebelwolke* zwischen euch und sie | im Nebel neu aufstellen |
 | Ein Orc-Trupp im Nahkampf mit euch | *Flammenkugel* an den Rand | *Totenglocke* mit der Aktion |
-| Einer steht vor dir | *Spiegelbilder*, am besten schon vorher | mit *Gutartiges Versetzen* weg |
-
-**Gibt der DM die fehlenden Einträge nicht** (offen, siehe [[Rätselwand]]): Auf Stufe 6 trotzdem *Hypnotisches Muster* und *Flutwelle*. *Magierrüstung* dann so bald wie möglich von einer Spruchrolle abschreiben (50 GM und 2 Stunden, dazu die Rolle), den Rest ab Stufe 7.
+| Einer steht vor dir | Skelette dazwischen, dann *Sternenschritt* | ab Stufe 6 mit *Gutartiges Versetzen* weg |
 
 ## Die Alternativen
 
@@ -66,13 +63,13 @@ updated: 2026-10-20
 | [[Donnerschritt]] ★ | 3 | | Teleport über 27 m, Donner am Startpunkt | ja, wer neben dir steht |
 | [[Fluch brechen]] | 3 | | Orcs gezielt vom Runenmal befreien | nein |
 
-**Nützlich, aber nicht dein Profil:** [[Hast]] (Support), [[Wasseratmung]], [[Hellsehen]], [[Magie bannen]], [[Selbstverkleidung]], [[Unsichtbares sehen]]. Alle stehen mit vollem Regeltext im Zauberbuch. Nicht dabei: *Leomunds winzige Hütte* und *Verlangsamen*, die hat Twee schon.
+**Nützlich, aber nicht dein Profil:** [[Hast]] (Support), [[Wasseratmung]], [[Hellsehen]], [[Magie bannen]], [[Selbstverkleidung]]. Alle stehen mit vollem Regeltext im Zauberbuch. Nicht dabei: *Leomunds winzige Hütte* und *Verlangsamen*, die hat Twee schon.
 
 ## Deine Fragen
 
 **Kommt die *Flutwelle* aus dir heraus?** Nein. Du legst sie irgendwo in 36 m hin und bestimmst die Größe selbst, bis 9 m lang, 3 m breit und 3 m hoch. Du kannst sie also genau zwischen eure Leute setzen. *Blitz* dagegen schießt als 30-m-Linie von dir aus los. Darum passt die *Flutwelle* besser zu dir, auch wenn sie weniger Schaden macht (Ø 18 statt 28).
 
-**Was stärkt dich im Nahkampf?** *Magierrüstung*, *Spiegelbilder* und *Schild* zusammen, dazu *Gutartiges Versetzen*, um wegzuteleportieren. *Totenglocke* bleibt dein bester Zaubertrick im Nahkampf: Sie verlangt einen Rettungswurf statt eines Angriffswurfs, also hast du keinen Nachteil, wenn ein Gegner neben dir steht.
+**Was stärkt dich im Nahkampf?** Deine Skelette als Leibwache, *Schild*, *Nebelwolke* und *Sternenschritt*, ab Stufe 6 *Gutartiges Versetzen*, um wegzuteleportieren. *Totenglocke* bleibt dein bester Zaubertrick im Nahkampf: Sie verlangt einen Rettungswurf statt eines Angriffswurfs, also hast du keinen Nachteil, wenn ein Gegner neben dir steht.
 
 **Nebelwolke gegen Fernkämpfer?** Ja. Wer im Nebel steht, ist für Schützen nicht zu sehen. Versteckt ihr euch darin, müssen sie raten, wo ihr steht, und Zauber, die ein sichtbares Ziel brauchen, gehen gar nicht. Gegen die Felswürfe der Riesen ist das Gold wert. Aber: Im Nebel seht auch ihr nichts.
 
@@ -99,12 +96,12 @@ updated: 2026-10-20
 
 Der dritte Grad-3-Platz ist der größte Gewinn: *Gegenzauber*, *Tote erwecken* und ein neuer Grad-3-Zauber passen dann in denselben Tag.
 
-**Vorbereiten:** Mit dem Plan stehen auf Stufe 6 **13 Zauber** ab Grad 1 im Buch, die du vorbereiten musst, und du bereitest **10** vor. Die drei Rituale (*Vertrauten finden*, *Unsichtbarer Diener*, *Magie entdecken*) zählen nicht mit: Als Magier wirkst du sie aus dem Buch, ohne sie vorzubereiten. Welche 10 es heute sind, wählst du morgens mit einem [[Zauber-Sets|Zauber-Set]]: *Unterwegs*, *Belagerung und Riesen*, *Zauberer, Teufel, Geister* oder *Stadt und Floshem*. Auf Stufe 5 sind es mit den vier Einträgen 11 Zauber auf 9 Plätzen.
+**Vorbereiten:** Mit dem Plan stehen auf Stufe 6 **12 Zauber** ab Grad 1 im Buch, die du vorbereiten musst, und du bereitest **10** vor. Die vier Rituale (*Vertrauten finden*, *Unsichtbarer Diener*, *Magie entdecken*, *Tensers schwebende Scheibe*) zählen nicht mit: Als Magier wirkst du sie aus dem Buch, ohne sie vorzubereiten. Welche 10 es heute sind, wählst du morgens mit einem [[Zauber-Sets|Zauber-Set]]: *Unterwegs*, *Belagerung und Riesen*, *Zauberer, Teufel, Geister* oder *Stadt und Floshem*. Auf Stufe 5 sind es 10 Zauber auf 9 Plätzen.
 
 ## Gutartiges Versetzen
 
 - **Aktion:** Du teleportierst dich bis zu **9 m** an einen freien Ort, den du siehst, **oder** du tauschst den Platz mit einer bereitwilligen kleinen oder mittelgroßen Kreatur in dieser Reichweite.
-- **Aufladen:** nach einer langen Rast **oder sobald du einen Beschwörungszauber ab Grad 1 wirkst**. Heute sind das *[[Eismesser]]*, *[[Netz]]*, *[[Unsichtbarer Diener]]* und *[[Vertrauten finden]]*, mit dem Plan oben kommen *Nebelwolke*, *Flammenkugel* und *Flutwelle* dazu.
+- **Aufladen:** nach einer langen Rast **oder sobald du einen Beschwörungszauber ab Grad 1 wirkst**. Heute sind das *[[Eismesser]]*, *[[Netz]]*, *[[Nebelwolke]]*, *[[Flammenkugel]]*, *[[Tensers schwebende Scheibe]]*, *[[Unsichtbarer Diener]]* und *[[Vertrauten finden]]*, auf Stufe 6 kommt *Flutwelle* dazu.
 
 > [!TIP] Der Trick mit dem Diener
 > Nach einem Versetzen wirkst du *Unsichtbarer Diener* als Ritual (11 Minuten). Damit ist *Gutartiges Versetzen* wieder bereit, ohne dass du einen Platz verbrauchst.

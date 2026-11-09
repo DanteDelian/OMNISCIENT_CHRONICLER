@@ -4,8 +4,9 @@ aliases: [Fridolin]
 kind: person
 group: gruppe
 tone: ally
-status: Gefährte · am 11.10.2026 nicht dabei
+status: Gefährte
 summary: Seeelf, Paladin und reisender Botschafter. Kam mit einem älteren Seeelfen-Magier, um Beziehungen zu Leon aufzubauen.
+image: fridolin.webp
 ---
 # Fridolin vom See
 
@@ -17,3 +18,9 @@ summary: Seeelf, Paladin und reisender Botschafter. Kam mit einem älteren Seeel
 *Theorien:*
 - Der ältere Magier könnte **Frederic Wellenstand** sein, den Aella als Diplomaten der Seeelfen notiert hat.
 - Der „Paladin“, den Valerius laut Einkaufsliste mit guter Kleidung beeindrucken wollte, könnte Fridolin gewesen sein.
+
+## Zurück (08.11.2026)
+- Im Nebel auf dem Fluss traf er den befreiten Orc hinter einer der Türen, dann stand er wieder an Bord.
+- Bei den [[Die Sumpfschuppen|Sumpfschuppen]] gab er sich als Geologe aus, verurteilte, was sie den Echsen und dem Dino antaten, und wollte sie verhaften. Damit kippte das Gespräch.
+- Er versprach den Gefangenen Schonung, solange sie die Wahrheit sagten. Seinen Segen vergaß er vor dem Kampf.
+- In der Nacht ruhte er wie du in Trance und beobachtete mit dir die Verfolger.

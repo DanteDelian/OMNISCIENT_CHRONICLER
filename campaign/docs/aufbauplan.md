@@ -5,7 +5,7 @@ icon: compass
 order: 9
 group: Pläne
 aliases: [Die Unsichtbare Hand, Unsichtbare Hand, Aufbauplan, Organisation]
-updated: 2026-10-20
+updated: 2026-11-09
 ---
 # Aufbauplan der Unsichtbaren Hand
 
@@ -52,12 +52,29 @@ Eine Organisation kostet laufend: Ein ungelernter Helfer bekommt 2 SM pro Tag, e
 
 **Sparen statt ausgeben:** Vieles auf dem Einkaufszettel lässt sich erfragen, herstellen oder bei Feinden erbeuten. Siehe [[Ideen für die nächsten Sessions|Ideen]].
 
-## Vier Phasen
+## Fünf Phasen
 
 1. **Fundament in Dehubden (jetzt):** Haus fertigstellen lassen, Kellerlabor planen, Lehrling über die Kräuterfrau anwerben. Erste Tränke brauen und verkaufen, das bringt Geld und einen Grund, Leute zu beschäftigen.
-2. **Das Netz (nach der Belagerung):** drei bis fünf Informanten im unteren Ring, am Hafen und im Echsenlager. Feste Treffzeiten, Nachrichten nur über Mittelsleute. Der Ruf als Riesenbezwinger öffnet die Türen der Soldaten.
-3. **Freistadt (Saladins Laden):** Der Handelsposten wird legale Fassade und Umschlagplatz. Laut Aella ist Freistadt ein „Schmelztiegel voller Söldner, Diebe und Ausgestoßener“: ideales Rekrutierungsgebiet.
-4. **Macht (langfristig):** Orcs nach dem Krieg eingliedern, wie du es schon planst. Die Echsen als Verbündete halten. Den Konflikt im [[Haus Lhaaz]] als Hebel nutzen: „Graf Lhaaz“ ließ Lisbeths Schiff überfallen, wohl einer ihrer eigenen Brüder (offen).
+2. **Adel (nach der Befreiung der Stadt):** Deine Erwartung: Wer die Stadt von Graf Leonidas befreit, wird adlig. Mit Land und Leuten wächst die Hand legal, siehe unten.
+3. **Das Netz (nach der Belagerung):** drei bis fünf Informanten im unteren Ring, am Hafen und im Echsenlager. Feste Treffzeiten, Nachrichten nur über Mittelsleute. Der Ruf als Riesenbezwinger öffnet die Türen der Soldaten.
+4. **Freistadt (Saladins Laden):** Der Handelsposten wird legale Fassade und Umschlagplatz. Laut Aella ist Freistadt ein „Schmelztiegel voller Söldner, Diebe und Ausgestoßener“: ideales Rekrutierungsgebiet.
+5. **Macht (langfristig):** Orcs nach dem Krieg eingliedern, wie du es schon planst. Die Echsen als Verbündete halten. Den Konflikt im [[Haus Lhaaz]] als Hebel nutzen: „Graf Lhaaz“ ließ Lisbeths Schiff überfallen, wohl einer ihrer eigenen Brüder (offen).
+
+## Adel: was ein Titel der Hand bringt
+
+*Vorschlag, kein Kanon. Ob und welchen Titel ihr bekommt, entscheiden der DM und Graf Leonidas.*
+
+| Was ein Adliger hat | Wofür die Hand es nutzt |
+| :-- | :-- |
+| **Land** | Kräutergärten für die Werkstatt, Weide für das Reittier, eine Gerberei und eine Schneiderstube als legale Betriebe |
+| **Leute** | Pächter, Bedienstete und Wachen, die bezahlt für dich arbeiten, ohne zu wissen, wofür. Aus ihnen wählst du die ersten Eingeweihten |
+| **Recht** | Abgaben, Wegerecht und ein Wort im Rat der Lhaaz. Wer Recht spricht, erfährt, was im Land vorgeht |
+| **Ruf** | Ein Adliger mit stummen, vermummten Dienern gilt als eigen, nicht als verdächtig. Floshem, der Mystiker, passt dazu |
+| **Einnahmen** | Pacht und die Waren der eigenen Betriebe statt einzelner Verkäufe aus der Werkstatt |
+
+**Haken:** Ein Lehen bindet euch an die Lhaaz, Neider kommen mit dem Titel, und [[Lisbeth Lhaaz|Lisbeth]] sieht genauer hin, je mächtiger ihr werdet.
+
+**Vorher aushandeln:** Bevor ihr die Stadt befreit, mit Leonidas über den [[Verständigungsstein]] klären, was er euch dafür gibt.
 
 ## Regeln für die Hand
 

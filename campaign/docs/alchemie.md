@@ -40,7 +40,7 @@ Dieses Buch ist der Beginn deines Aufstiegs. Während andere ihre Macht aus alte
 
 - Ein **Heiltrank** mit einem Tropfen **Drachenblut** könnte die maximale Heilwirkung erzielen.
 - **Säure** mit dem Schleim eines **Gallertwürfels** könnte zusätzlichen Schaden verursachen oder Rüstung schneller zersetzen.
-- **Der untote Kadaver** bei der Baustelle: Knochen, Gewebe oder Ektoplasma-Reste eignen sich vermutlich für Gifte und nekromantische Elixiere.
+- **Der untote Kadaver** bei eurem Haus: Für *Tote erwecken* taugt er nicht, er war kein Humanoider. Du willst daraus eine Knochenstatue bauen. Reste wie Gewebe oder Ektoplasma eignen sich vielleicht für Gifte und nekromantische Elixiere.
 - **Krokodil und Echsenmenschen:** Häute, Zähne, Klauen und vor allem Organe (Galle, Herz, Blut) für Tränke der Stärke, Ausdauer oder Widerstandskraft.
 - Die **Bestien-Lager** auf der [[Wüstenkarte|Echsen-Karte]] liefern weitere Katalysatoren.
 

@@ -6,6 +6,7 @@ group: gruppe
 tone: ally
 status: Gefährtin · Barbarin 5
 summary: Bronzene Drachenblütige und Sturmherold, Valerius' Partnerin seit Oakhaven.
+image: aella.webp
 ---
 # Aella Rayann „Khoraa“ Stormscale
 
@@ -24,3 +25,4 @@ summary: Bronzene Drachenblütige und Sturmherold, Valerius' Partnerin seit Oakh
 
 Gemeinsame Geschichte: [[Backstory]]
 - **11.10.2026:** Sie war dabei, als drei Gefährten über Nacht verschwanden, und wartete mit dir und dem gefangenen Orc in [[Twee]]s winziger Hütte.
+- **08.11.2026:** Im Nebel traf sie die Fee hinter einer der Türen. Sie fragte den sterbenden Echsenkrieger auf Echsisch, was passiert war. Ihr Schlag gegen den Anführer der [[Die Sumpfschuppen|Sumpfschuppen]] prallte an seinen wandernden Schuppen ab.

@@ -5,18 +5,19 @@ icon: lightbulb
 order: 10
 group: Pläne
 aliases: [Ideen, Brainstorming, Ideenliste]
-updated: 2026-10-20
+updated: 2026-11-09
 ---
 # Ideen für die nächsten Sessions
 
 > [!NOTE] Vorschlag
 > Brainstorming, kein Kanon. Alles hier sind Möglichkeiten, die du am Tisch ausprobieren kannst. Grundlage sind eure Einträge im Grimoire.
 
-## Unterwegs auf dem Boot
+## Unterwegs
 
 - **Vertrauten neu beschwören und vorausschicken.** Eine [[Eule]] sieht 36 m im Dunkeln und späht nachts Orc-Lager und Riesen aus, ohne dass ihr euch zeigt. Material hast du für 9 Beschwörungen.
-- **Skelette als stille Nachtwache.** Erweckt schlafen sie nicht und sehen 18 m im Dunkeln. Das kostet aber jeden Tag einen Grad-3-Platz, lohnt sich also erst, wenn ihr in Feindgebiet rastet.
-- **Alchemie in der Trance.** Mit dem Alchemistenwerkzeug machst du pro langer Rast eine Dosis Säure oder Alchemistenfeuer, aus Rohstoffen zum halben Preis (Xanathars). Ob deine Grundsubstanzen dafür reichen, entscheidet der DM.
+- **Skelette als stille Nachtwache.** Erweckt schlafen sie nicht und sehen 18 m im Dunkeln. Das kostet jeden Tag einen Grad-3-Platz, mit dem Abend-Trick aus dem [[Taktik-Handbuch]] aber kaum etwas.
+- **Handwerk in den freien Stunden.** Nach 4 Stunden Trance bist du wach, während die Gruppe weiter rastet. Laut DM kannst du dann herstellen und pflegen: Lederrüstungen für die Skelette, Geschirr fürs Reittier, Kräuter bestimmen. Alles dazu in der [[Werkstatt]].
+- **Kräuter sammeln nebenbei.** Bei normalem oder langsamem Tempo kann jemand unterwegs sammeln, auf dem galoppierenden Dino nicht. Die Fee als Waldläuferin findet am meisten, du bestimmst die Funde mit der Kräuterkundeausrüstung. Anleitung in der [[Werkstatt]].
 - **Pfeile und Köcher kaufen**, sobald ihr an einem Händler vorbeikommt. Siehe Einkaufszettel im Inventar.
 
 ## Geld für die Hand
@@ -37,16 +38,29 @@ Welche Einträge auf dem Einkaufszettel ohne Gold gehen, steht dort bei „Wie?�
 
 ## Die Orcs gewinnen
 
-- **Den befreiten Orc reden lassen.** Er will bei einem Stamm für euch bürgen. Ein Treffen bei Tag, offen und mit [[Lucaz Lhaaz|Lucaz]] als Zeugen wirkt ehrlicher als ein Überfall.
+- **Den befreiten Orc reden lassen.** Er will bei einem Stamm für euch bürgen. Ein Treffen bei Tag, offen, wirkt ehrlicher als ein Überfall.
 - **Falsche Fährten über die Runenmale.** In der Nähe markierter Orcs gezielt Falsches über Zeit und Weg sagen. Die Riesen hören womöglich mit (siehe [[Taktik-Handbuch]]).
 - **Den Schamanen lebend fangen.** Er floh nach Nordwesten und tötete deine Eule. Gefangen weiß er, wohin das Holz geht und was die Riesen planen. Dafür ist dein *Netz* gemacht, später *Hypnotisches Muster*.
 - **Das Holz im Norden.** Die Orcs schicken auffällig viel Holz nach Norden. Wofür, Schiffe oder Belagerungsgerät? Die Stapel am Fluss brennen gut, mit Öl oder Alchemistenfeuer.
 
 ## Die belagerte Stadt
 
-- **Kontakt zu Leonidas' Frau.** Dein Vertrauter kann eine Nachricht in die Stadt bringen. Ein Zeichen von Lucaz macht sie glaubwürdig.
+- **Den Angriff über den [[Verständigungsstein]] abstimmen.** 25 Wörter am Tag an Leonidas: Zeitpunkt, Richtung, Zeichen. Er kann euch eine Losung für seine Frau nennen, die dein Vertrauter in die Stadt bringt.
+- **Den Lohn vorher klären.** Mit Leonidas besprechen, was er euch für die Befreiung gibt. Laut dir winkt ein Adelstitel, siehe [[Aufbauplan der Unsichtbaren Hand|Aufbauplan]].
 - **Die Riesen erst zählen, dann kämpfen.** Hügel-, Stein- und Eisriesen verlangen eine andere Taktik (siehe Riesen-Briefing im [[Taktik-Handbuch]]).
 - **Die Mauer nutzen.** Hinter Zinnen hast du Dreivierteldeckung: RK 16, mit *Schild* 21.
+
+## Die Sumpfschuppen und die Society
+
+- **Die Verfolger erst entwaffnen:** Ihre Steine tragen *Verständigung*. Wer sie stellt, nimmt zuerst die Steine, dann landet die nächste Nachricht der Society bei euch. Mehr bei [[Die Sumpfschuppen]].
+- **Einen lebend fangen:** Lucira liest Gedanken. Ein Gefangener verrät vielleicht, wer Farlir ist und wohin die Seelen gehen. Vielleicht ist Farlir sogar einer der drei Verfolger.
+- **Den Echsen berichten:** [[Crush Lu]] und die Echsen sollten erfahren, wer ihre Krieger jagt. Das stärkt euer Bündnis und deinen Ruf als ihr Held.
+- **Beweise für den Rat von Freistadt:** Der Rat streitet über die Society. Beweise für den Seelenraub könnten ihn gegen sie wenden, und ihr hättet Freunde im Rat, wenn ihr dort einen Laden eröffnet.
+
+## Die Fee und das Reittier
+
+- **Die Fee nach Hause bringen:** Sie kam als blinder Passagier aus der Dimension des [[Das Wesen hinter dem Siegel|Wesens hinter dem Siegel]]. Wer sie zurückbringt, kommt diesem Wesen vielleicht wieder nahe. Sie selbst hofft auf die Teufelsjäger.
+- **Das Reittier zähmen:** Die Tierfreundschaft hält 24 Stunden. Bis dahin Futter, Ruhe und ein Name. Geschirr und Satteltaschen machst du selbst mit dem Lederwerkzeug.
 
 ## Haus Lhaaz und die Intrige
 
@@ -62,7 +76,7 @@ Welche Einträge auf dem Einkaufszettel ohne Gold gehen, steht dort bei „Wie?�
 
 ## Rätsel, die du anstoßen kannst
 
-- **Die verschwundenen Gefährten:** deine Idee, die Passagierzahlen der Schiffe zu prüfen. Weichen sie ab, wurde mehr verändert als nur Erinnerungen.
+- **Der Nebel mit den Türen:** Die Verschwundenen sind zurück, aber wer holte euch in den Raum voller Türen? Lucaz erinnert sich wieder, erinnert sich auch Lisbeth? Deine Idee mit den Passagierzahlen der Schiffe bleibt spannend.
 - **Das Wesen hinter dem Siegel** will wissen, wenn andere an interessanten Orten forschen. Der [[Der Magische Turm|Turm im See]] ist so ein Ort.
 - **Lulas verborgene Storyline:** Was hat sie gesehen? [[Lucira]] las ihre Gedanken.
 - **Das große Auge unter Wasser** aus Saladins Auftrag: [[Wasseratmung]] wäre der Schlüssel.

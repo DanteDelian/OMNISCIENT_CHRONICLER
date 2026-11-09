@@ -31,7 +31,7 @@
     "arcana": "Magier",
     "insight": "Magier",
     "perception": "Astralelf (Scharfe Sinne)",
-    "deception": "Herkunft offen (Hintergrund?)"
+    "deception": "Hintergrund"
   },
   "hp": {
     "max": 36,
@@ -93,7 +93,6 @@
       },
       "summary": "Bonusaktion: bis 9 m zu einem sichtbaren freien Ort teleportieren.",
       "text": "Als **Bonusaktion** teleportierst du dich bis zu **9 m (30 ft)** an einen freien Ort, den du sehen kannst. **1× pro langer Rast** (Entscheidung eures DM; laut Spelljammer so oft, wie dein Übungsbonus beträgt).\n\nKein Zauber: keine Komponenten, kein Zauberplatz, **kann nicht gegengezaubert werden**.",
-      "note": "Geklärt am 12.10.2026: Der DM gibt dir 1 Ladung pro langer Rast. Den Zauber *Nebelschritt* hast du nicht.",
       "en": "Starlight Step"
     },
     {
@@ -119,8 +118,7 @@
         "reset": "long"
       },
       "summary": "1× pro Tag *Verständigung*: bis zu 25 Wörter an den Träger des anderen Ohrrings, Antwort sofort, Entfernung egal.",
-      "text": "Das Ohrring-Paar ist mit dem Zauber ***Verständigung*** belegt (engl. *Sending*, Grad 3, Hervorrufung) und lässt sich **1× pro Tag** nutzen. Jeder Träger braucht eines der beiden Stücke.\n\n**Wirkung (Spielerhandbuch 2014 / SRD 5.1):** Du sendest eine Nachricht von **höchstens 25 Wörtern** an den Träger des anderen Ohrrings. Er hört sie in seinem Kopf, erkennt dich als Absender, wenn er dich kennt, und kann **sofort auf dieselbe Weise antworten**. Jede Kreatur mit einer Intelligenz von mindestens 1 versteht, was du meinst. Die Entfernung spielt keine Rolle. Ist der Empfänger auf einer anderen Existenzebene, kommt die Nachricht mit 5 % Wahrscheinlichkeit nicht an.\n\nAls Zauber: Zeitaufwand 1 Aktion, Wirkungsdauer 1 Runde. Ob das bei den Ohrringen genauso gilt, entscheidet der DM. Der zweite Ohrring ist für Aella gedacht.",
-      "note": "Geklärt am 12.10.2026: Die Ohrringe tragen *Verständigung*, nicht *Botschaft*. „Pro Tag“ ist hier an die lange Rast gekoppelt."
+      "text": "Das Ohrring-Paar ist mit dem Zauber ***Verständigung*** belegt (engl. *Sending*, Grad 3, Hervorrufung) und lässt sich **1× pro Tag** nutzen. Jeder Träger braucht eines der beiden Stücke.\n\n**Wirkung (Spielerhandbuch 2014 / SRD 5.1):** Du sendest eine Nachricht von **höchstens 25 Wörtern** an den Träger des anderen Ohrrings. Er hört sie in seinem Kopf, erkennt dich als Absender, wenn er dich kennt, und kann **sofort auf dieselbe Weise antworten**. Jede Kreatur mit einer Intelligenz von mindestens 1 versteht, was du meinst. Die Entfernung spielt keine Rolle. Ist der Empfänger auf einer anderen Existenzebene, kommt die Nachricht mit 5 % Wahrscheinlichkeit nicht an.\n\nDie Ohrringe wirken wie der Zauber: **1 Aktion**, Wirkungsdauer 1 Runde, nutzbar **1× pro Tag** ab der langen Rast. Der zweite Ohrring ist für Aella gedacht."
     },
     {
       "id": "geringe-beschwoerung",
@@ -129,7 +127,7 @@
       "economy": "aktion",
       "summary": "Aktion: einen nichtmagischen Gegenstand (≤ 90 cm, ≤ 5 kg) für 1 Stunde erschaffen.",
       "text": "Als **Aktion** beschwörst du einen unbelebten Gegenstand in deine Hand oder auf den Boden, auf ein freies Feld in höchstens **3 m**, das du sehen kannst. Er misst höchstens **90 cm** an jeder Seite, wiegt höchstens **5 kg (10 Pfund)** und hat die Form eines nichtmagischen Gegenstands, den du schon gesehen hast. Er ist **sichtbar magisch** und verbreitet im Umkreis von 1,5 m dämmriges Licht. Er verschwindet nach **1 Stunde**, wenn er Schaden erleidet oder wenn du das Merkmal erneut nutzt.",
-      "note": "Achtung für die Unsichtbare Hand: Das Objekt leuchtet und ist klar als magisch erkennbar.",
+      "note": "**Für die Werkstatt:** Werkzeug, das du schon gesehen hast und das höchstens 5 kg wiegt, kannst du beschwören: Lederwerkzeug, Kräuterkundeausrüstung, Weberwerkzeug, Holzschnitzwerkzeug. Es hält 1 Stunde, dann beschwörst du es neu (Frage an den DM).\n\n**Für die Unsichtbare Hand:** Das Objekt leuchtet und ist klar als magisch erkennbar.",
       "en": "Minor Conjuration"
     },
     {
@@ -138,8 +136,8 @@
       "source": "Astralelf",
       "economy": "passiv",
       "summary": "Kein Schlaf, lange Rast in 4 Stunden. Danach täglich Übung mit 1 Waffe oder 1 Werkzeug.",
-      "text": "Du brauchst keinen Schlaf, und **Magie kann dich nicht einschläfern**. Eine lange Rast schaffst du in **4 Stunden** Trance, bei Bewusstsein.\n\nNach jeder Trance erhältst du bis zum Ende deiner nächsten langen Rast Übung mit **einer Waffe oder einem Werkzeug** deiner Wahl aus dem Spielerhandbuch.",
-      "note": "Hausregel eures DM (12.10.2026): **keine Fertigkeit**. Laut Spelljammer käme eine Fertigkeit dazu. Die tägliche Wahl stellst du auf dem Spieltisch ein.",
+      "text": "Du brauchst keinen Schlaf, und **Magie kann dich nicht einschläfern**. Eine lange Rast schaffst du in **4 Stunden** Trance, bei Bewusstsein.\n\nNach jeder Trance erhältst du bis zum Ende deiner nächsten langen Rast Übung mit **einer Waffe oder einem Werkzeug** deiner Wahl aus dem Spielerhandbuch.\n\n**Die übrige Nacht:** Rastet die Gruppe 8 Stunden, bist du nach 4 Stunden fertig und wach. In dieser Zeit kannst du Handwerk betreiben, Ausrüstung pflegen oder Wache halten (vom DM bestätigt).",
+      "note": "Hausregel eures DM: keine Fertigkeit. Laut Spelljammer käme eine Fertigkeit dazu. Die tägliche Wahl stellst du im Dialog „Lange Rast“ ein.",
       "en": "Astral Trance"
     },
     {
@@ -168,7 +166,6 @@
       "economy": "passiv",
       "summary": "18 m: Dämmerlicht wie hell, Dunkelheit wie dämmrig (dort nur Grautöne).",
       "text": "Im Umkreis von **18 m (60 ft)** siehst du dämmriges Licht wie helles und Dunkelheit wie dämmriges Licht. In der Dunkelheit erkennst du Farben nur als Grautöne.",
-      "note": "Fehlte auf allen Bögen.",
       "en": "Darkvision"
     },
     {

@@ -1,17 +1,100 @@
 [
   {
+    "id": "aella-ohrring",
+    "to": "tisch",
+    "topic": "Ohrring für Aella",
+    "question": "Trägt Aella ihr Stück der Ohrringe schon?",
+    "status": "offen",
+    "links": [
+      "Aella Rayann"
+    ]
+  },
+  {
+    "id": "flammenkugel-rammen",
+    "to": "dm",
+    "topic": "Flammenkugel",
+    "question": "Darf ich die Flammenkugel wirken und im selben Zug mit der Bonusaktion rammen? Direkt auf einen Gegner wirken geht laut Zauber nicht, sie erscheint auf einem freien Feld.",
+    "status": "offen",
+    "links": [
+      "Flammenkugel"
+    ]
+  },
+  {
+    "id": "beschworenes-werkzeug",
+    "to": "dm",
+    "topic": "Werkzeug beschwören",
+    "question": "Darf ich mit *Geringer Beschwörung* Werkzeug erschaffen (Lederwerkzeug, Kräuterkundeausrüstung, Weberwerkzeug) und damit arbeiten? Es hält 1 Stunde, danach beschwöre ich es neu.",
+    "status": "offen",
+    "links": [
+      "Geringe Beschwörung",
+      "Werkstatt"
+    ]
+  },
+  {
+    "id": "leder-material",
+    "to": "dm",
+    "topic": "Leder als Material",
+    "question": "Wie viel ist das Leder von Gegnern und Tieren als Material wert? Eine Lederrüstung kostet 10 GM, das Material die Hälfte. Und tragen Skelette Rüstung ohne Nachteil?",
+    "status": "offen",
+    "links": [
+      "Werkstatt",
+      "Skelett"
+    ]
+  },
+  {
+    "id": "skelett-waffen",
+    "to": "dich",
+    "topic": "Waffen der Skelette",
+    "question": "Trugen die zwei vernichteten Skelette den Kurzbogen, Pfeile oder Society-Dolche? Dann liegen sie jetzt im Dschungel.",
+    "status": "offen",
+    "links": [
+      "Skelett-Gefolge aufbauen"
+    ]
+  },
+  {
+    "id": "orc-name",
+    "to": "dich",
+    "topic": "Der befreite Orc",
+    "question": "Wie heißt der befreite Orc genau (Grump?), und ist er noch bei euch?",
+    "status": "offen",
+    "links": [
+      "Die Orcs"
+    ]
+  },
+  {
+    "id": "farlier",
+    "to": "dich",
+    "topic": "Farlir",
+    "question": "„Farlir“ (zuerst als „Farlier“ notiert), die Nummer eins der Sumpfschuppen: ein Name oder ein Titel, und wie schreibt er sich?",
+    "status": "offen",
+    "links": [
+      "Die Sumpfschuppen"
+    ]
+  },
+  {
+    "id": "dehubden",
+    "to": "dm",
+    "topic": "Name der Basis",
+    "question": "Wie schreibt sich eure Basis: Dehubden oder Dehapten?",
+    "status": "offen",
+    "links": [
+      "Die Siedlung"
+    ]
+  },
+  {
     "id": "freie-eintraege",
     "to": "dm",
     "topic": "Fehlende Zauber",
-    "question": "Nach den Regeln hast du 4 freie Einträge im Zauberbuch (2 bis Grad 1, 2 bis Grad 2). Wurden sie nie gewählt? Darfst du sie nachtragen? Dein Plan: *Magierrüstung*, *Nebelwolke*, *Spiegelbilder* und *Flammenkugel*.",
-    "status": "offen",
+    "question": "Nach den Regeln hast du 4 freie Einträge im Zauberbuch (2 bis Grad 1, 2 bis Grad 2). Darfst du sie nachtragen?",
+    "status": "geklaert",
     "links": [
-      "Stufe-6-Planer",
-      "Magierrüstung",
       "Nebelwolke",
-      "Spiegelbilder",
-      "Flammenkugel"
-    ]
+      "Flammenkugel",
+      "Tensers schwebende Scheibe",
+      "Unsichtbares sehen"
+    ],
+    "answer": "Ja, das Buch darf auf 14 Zauber aufgestockt werden. Du nimmst *Nebelwolke*, *Flammenkugel*, *Tensers schwebende Scheibe* und *Unsichtbares sehen*.",
+    "answered": "2026-11-08"
   },
   {
     "id": "tashas-kessel",
@@ -52,79 +135,95 @@
     "to": "dm",
     "topic": "Frühere Skelette",
     "question": "Hattest du vor Oktober 2026 schon erweckte Skelette (Arena, Haus)? In deinen Unterlagen steht nichts dazu. Wo sind die Knochen?",
-    "status": "offen",
+    "status": "geklaert",
     "links": [
       "Skelett-Gefolge aufbauen"
-    ]
+    ],
+    "answer": "Zwei Skelette liegen inaktiv und versteckt mit den Society-Uniformen in eurer Unterkunft in Dehubden.",
+    "answered": "2026-11-08"
   },
   {
     "id": "skelett-ruestung",
     "to": "dm",
     "topic": "Rüstung der Skelette",
     "question": "Zählen die zusammengeschneiderten Gewänder als Rüstungsfetzen (RK 13), oder haben deine Skelette ohne Rüstung RK 12?",
-    "status": "offen",
+    "status": "geklaert",
     "links": [
       "Skelett",
       "Skelett-Gefolge aufbauen"
-    ]
+    ],
+    "answer": "Standard: RK 10 + GE, also 12. Eine Lederrüstung brächte 13.",
+    "answered": "2026-11-08"
   },
   {
     "id": "skelett-befehl",
     "to": "dm",
     "topic": "Befehle an die Skelette",
     "question": "Reicht ein allgemeiner Befehl vor dem Kampf, etwa „Schützt mich“ oder „Greift jeden an, der im Netz festhängt“, damit die Skelette ohne Bonusaktion kämpfen? Die Regel nennt als Beispiel „Bewacht diesen Raum“. Dann bliebe deine Bonusaktion frei für Sternenschritt oder die Flammenkugel.",
-    "status": "offen",
+    "status": "geklaert",
     "links": [
       "Tote erwecken",
       "Taktik-Handbuch"
-    ]
+    ],
+    "answer": "Ja, allgemeine Befehle wie vorgeschlagen gehen.",
+    "answered": "2026-11-08"
   },
   {
     "id": "verfallene-untote",
     "to": "dm",
     "topic": "Verfallene Untote",
     "question": "Was tun deine Untoten, wenn die Kontrolle doch einmal verfällt? Laut Zaubertext gehorchen sie nach 24 Stunden nur nicht mehr. Greifen sie dich an, wandern sie davon oder stehen sie still?",
-    "status": "offen",
+    "status": "geklaert",
     "links": [
       "Tote erwecken"
-    ]
+    ],
+    "answer": "Sie werden zu NSCs, die der DM steuert.",
+    "answered": "2026-11-08"
   },
   {
     "id": "tukan",
     "to": "dm",
     "topic": "Tukan als Vertrauter",
     "question": "Werte des Raben mit dem Aussehen eines Tukans oder Papageis?",
-    "status": "offen",
+    "status": "geklaert",
     "links": [
       "Ein neuer Vertrauter für den Dschungel"
-    ]
+    ],
+    "answer": "Erst wenn du einen Tukan oder Papagei gesehen hast, kannst du ihn als Vertrauten beschwören.",
+    "answered": "2026-11-08"
   },
   {
     "id": "ohrringe",
     "to": "dm",
     "topic": "Ohrringe",
-    "question": "Wirkt *Verständigung* als Aktion, und gilt „pro Tag“ ab der langen Rast? Trägt Aella ihr Stück schon?",
-    "status": "offen"
+    "question": "Wirkt *Verständigung* über die Ohrringe wie der Zauber?",
+    "status": "geklaert",
+    "answer": "Du hast sie noch, und sie wirken wie der Zauber *Verständigung*.",
+    "answered": "2026-11-08"
   },
   {
     "id": "astralelf",
     "to": "dm",
     "topic": "Astralelf",
     "question": "Astrales Feuer gestrichen, Trance nur Waffe oder Werkzeug, Sternenschritt 1×. Gelten Dunkelsicht 18 m, Feenabstammung und Scharfe Sinne (Wahrnehmung) unverändert?",
-    "status": "offen"
+    "status": "geklaert",
+    "answer": "Stimmt so, wie es im Grimoire steht. In den 4 Stunden der langen Rast, in denen du nicht in Trance bist, kannst du Handwerk betreiben, Ausrüstung pflegen und Ähnliches.",
+    "answered": "2026-11-08"
   },
   {
     "id": "taeuschen",
     "to": "dm",
     "topic": "Täuschen",
     "question": "Woher kommt die Übung? Ein Hintergrund gibt meist zwei Fertigkeiten.",
-    "status": "offen"
+    "status": "geklaert",
+    "answer": "Aus deinem Hintergrund.",
+    "answered": "2026-11-08"
   },
   {
     "id": "fee",
     "to": "tisch",
     "topic": "Die Fee",
-    "question": "Wie heißt sie, und welche Klasse spielt sie?",
+    "question": "Wie heißt die Fee? (Seit dem 08.11.2026 bekannt: Sie ist Waldläuferin, etwa 60 cm groß und fliegt mit Flügeln.)",
     "status": "offen",
     "links": [
       "Die Fee"
@@ -177,6 +276,18 @@
     "answered": "2026-10-19",
     "links": [
       "Taya"
+    ]
+  },
+  {
+    "id": "anfuehrer-stein",
+    "to": "tisch",
+    "topic": "Stein des Anführers",
+    "question": "Wer hat den Verständigungsstein des Sumpfschuppen-Anführers jetzt: Lucira, die Fee, oder liegt er noch bei seiner Leiche?",
+    "status": "offen",
+    "links": [
+      "Die Sumpfschuppen",
+      "Die Fee",
+      "Lucira"
     ]
   }
 ]

@@ -4,8 +4,9 @@ aliases: [Die Nummer 2 der Teufelsjäger, Nummer 2 der Teufelsjäger]
 kind: person
 group: gruppe
 tone: neutral
-status: Gefährtin · Lisbeths Prüferin · am 11.10.2026 nicht dabei
+status: Gefährtin · Lisbeths Prüferin
 summary: Tiefling-Hexenmeisterin, liest alle Sprachen, Schriften und Gedanken. Von Lisbeth geholt, wohl die Nummer 2 der Teufelsjäger.
+image: lucira.webp
 ---
 # Lucira
 
@@ -25,3 +26,9 @@ summary: Tiefling-Hexenmeisterin, liest alle Sprachen, Schriften und Gedanken. V
 In der Nacht vor dem 11.10.2026 verschwand sie mit [[Fridolin vom See|Fridolin]] und [[Die Fee|der Fee]] (die Spieler waren verhindert). Lisbeth erinnert sich seitdem nicht mehr an sie. Siehe [[Die verschwundenen Gefährten]].
 
 > Deine diktierte Notiz vom 12.07.2026 lautete: „die Nummer 2 der Teufelsjäger gesichtet“.
+
+## Zurück (08.11.2026)
+- Im Nebel auf dem Fluss traf sie Twee hinter einer der Türen, dann stand sie wieder an Bord.
+- Sie schlug den fliehenden Anführer der [[Die Sumpfschuppen|Sumpfschuppen]] mit zwei Zaubern bewusstlos, brachte ihn unbemerkt von den anderen weg und befragte ihn.
+- Sie glaubte ihm, er müsse sich stündlich mit Passwort melden, und ließ ihn seinen Verständigungsstein benutzen. Er schlug Alarm und floh später, als sie nach einem Seil suchte.
+- *Theorie:* Laut den Gefangenen sind die [[Die Teufelsjäger|Teufelsjäger]] die höchste Untergruppe der Society. Wenn sie deren Nummer 2 ist, steht sie weit oben in der Society.

@@ -1,6 +1,6 @@
 ---
 name: Die Siedlung
-aliases: [Siedlung, Festung, Lhaaz-Turm, Turm, Dehubden, Leons Stadt]
+aliases: [Siedlung, Festung, Lhaaz-Turm, Turm, Dehubden, Dehapten, Leons Stadt]
 kind: ort
 group: ort
 tone: neutral
@@ -8,6 +8,8 @@ status: Operationsbasis, wächst
 summary: Dehubden, Leons Stadt flussaufwärts, mit oberem und unterem Ring, Villa, Arena und Valerius' Haus.
 ---
 # Die Siedlung (Dehubden)
+
+*Die Schreibweise ist unsicher, du hörst auch „Dehapten“ (Frage auf der [[Rätselwand]]).*
 
 **Valerius' Operationsbasis: die Lhaaz-Stadt flussaufwärts, angeführt von [[Leon Lhaaz]].**
 
@@ -22,5 +24,5 @@ summary: Dehubden, Leons Stadt flussaufwärts, mit oberem und unterem Ring, Vill
 - [[Nitas Tempel]]: der Ort für Verhandlungen. Nita betreut als Priesterin die Eingliederung der Echsen.
 
 ## Früher notiert
-- **Das zugewiesene Haus** mit Baustelle: Darunter soll Valerius' **geheimes Kellerlabor** entstehen. Daneben lag der untote Kadaver. Wo er seit dem Umzug des Hauses ist, ist offen.
+- **Das zugewiesene Haus** mit Baustelle: Darunter soll Valerius' **geheimes Kellerlabor** entstehen. Daneben lag der untote Kadaver. Er liegt jetzt bei eurem Haus. Für *Tote erwecken* taugt er nicht, er war kein Humanoider. Du willst daraus eine Knochenstatue für das Haus bauen.
 - Aella beschreibt die Stadt als „raues, unfertiges Stück Zivilisation am Rande der Wildnis“.

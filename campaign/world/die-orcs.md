@@ -24,6 +24,9 @@ summary: Orc-Stämme, die von den Riesen mit Runenmalen versklavt werden. Ein be
 
 ## Der befreite Orc
 - Er erzählte alles, als das Mal blockiert war, und will bei einem **Orc-Stamm oder streunenden Orcs** für euch bürgen.
+- Sein Name ist vermutlich **Grump**. Im Nebel auf dem Fluss traf ihn Fridolin hinter einer der Türen (08.11.2026).
+
+**Offen:** Ist er noch bei euch?
 
 ## Deine Linie
 Nicht alle Orcs vom Mal befreien: Es ortet und lauscht nur und stört im Kampf nicht, und ohne Mal fehlt ihnen ein Grund, sich gegen die Riesen aufzulehnen. Erst gegen die Riesen einsetzen, später eingliedern wie die Echsen. Siehe [[Die Orcs und die Riesenrunen]].

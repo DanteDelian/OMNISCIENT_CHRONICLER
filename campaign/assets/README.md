@@ -11,25 +11,35 @@ Abrufbar im Grimoire unter `/api/assets/<dateiname>`.
 | `karte-wueste.webp` | daraus verkleinert, 2400 px | `map.json` → `image` |
 | `floshem-portrait-druck.jpg` | Porträt auf Weiß, JPEG | Druckfassung |
 | `karte-wueste-druck.jpg` | Karte, 1800 px, JPEG | Druckfassung |
-| `diener.jpg` | KI-Bild, FLUX.1-dev über den Hugging-Face-Space `black-forest-labs/FLUX.1-dev` (ZeroGPU, kostenlos, Seed 11, 20.10.2026), winziger Phantasietext unten links entfernt | Original der stummen Diener |
-| `diener.webp` | daraus, 1280 px | `creatures.json` → `retinueImage` (Gefolge-Seite) |
-| `diener-druck.jpg` | daraus, 1000 px, JPEG | Druckfassung (Gefolge) |
+| `<id>.jpg`, `<id>.webp`, `<id>-druck.jpg` | KI-Bilder aus `campaign/bilder.json`, siehe unten | Welt-Einträge (`image`), Journal (`images`), Gefolge (`retinueImage`), Werkstatt |
 
 Neues Porträt: Bild hier ablegen (oder Claude bitten, es aus Drive zu holen), rund freistellen,
 als WebP speichern und die Dateinamen in `character.json` eintragen.
 
 **Druckversionen:** Gibt es zu einem Bild eine Datei `<name>-druck.jpg`, nimmt die Druckfassung (`/druck`) diese. Chrome bettet JPEGs unverändert ins PDF ein, WebP dagegen verlustfrei, was die PDFs stark aufbläht. Fehlt die Druckversion, wird das Original verwendet.
 
-**Die stummen Diener neu erzeugen:** Mit `HF_TOKEN` über den Space `black-forest-labs/FLUX.1-dev` (1536 × 1024, Guidance 3,5,
-28 Schritte), das kostet nur GPU-Minuten des kostenlosen Kontingents. Danach `diener.jpg`, `diener.webp` (1280 px) und
-`diener-druck.jpg` (1000 px) ersetzen. Prompt:
+## KI-Bilder
 
-> Painterly fantasy illustration in the style of Dungeons and Dragons character art, rich detail, moody dusk lighting. Three
-> silent servants stand in a row on the deck of a small wooden river boat on a misty jungle river at dusk. They are completely
-> disguised: long hooded robes crudely stitched together from mismatched dark uniforms and rough orcish leather and fur,
-> covering them from head to toe. Their faces are hidden behind dark cloth veils deep inside the shadow of their hoods, nothing
-> of the face is visible. Their hands are wrapped in dirty cloth strips. The servant on the left carries a shortbow in one hand
-> and a quiver of arrows on its back. The servant in the middle and the servant on the right each hold a plain steel dagger low
-> at their side. They stand perfectly still like loyal bodyguards, eerie and mysterious. Faint green magical glow drifts in the
-> air, fireflies, dark jungle and steep river banks behind them. Muted greens, deep browns and teal, painterly brushwork. No
-> text, no watermark, no signature.
+Alle Stimmungsbilder stehen als Aufträge in **`campaign/bilder.json`**: ein gemeinsamer Stil (`stil`) und je Bild
+`id`, `titel`, `fuer` (wo es erscheint) und `prompt`. Erzeugt werden sie mit der **Antigravity-CLI `agy`**
+(Gemini-Bildmodell über Patricks Antigravity-Konto, keine Kosten je Bild):
+
+```bash
+cd app
+python -P scripts/bilder.py              # alle fehlenden Bilder
+python -P scripts/bilder.py --nur fee    # nur diese IDs (kommagetrennt)
+python -P scripts/bilder.py --neu --nur fee   # vorhandenes Bild neu erzeugen
+python -P scripts/bilder.py --liste      # zeigen, was fehlt
+```
+
+Jedes Bild landet dreifach hier: `<id>.jpg` (Original, 1376 × 768), `<id>.webp` (App) und `<id>-druck.jpg`
+(1000 px, Druckfassung). Nach etwa 13 Bildern sperrt agy für einige Stunden (429). Das Skript hört dann auf und
+nennt die Wartezeit, ein neuer Aufruf macht mit den fehlenden weiter.
+
+**Einbinden:** Welt-Eintrag im Frontmatter `image: fee.webp` (optional `imageFocus: 47% 20%` für den Bildausschnitt),
+Journal-Eintrag `images: [{ "file": "nebel-tueren.webp", "caption": "…" }]`, Untote über `retinueImage` in
+`creatures.json`. Die Werkstatt nimmt `werkstatt.webp`.
+
+Die Bilder sind Stimmungsbilder, keine Fakten: Details wie Kleidung oder Begleiter im Hintergrund sind nicht Kanon.
+Das erste Bild der Diener (20.10.2026) stammte noch von FLUX.1-dev über Hugging Face, seit dem 09.11.2026 kommen alle
+Bilder aus Gemini.

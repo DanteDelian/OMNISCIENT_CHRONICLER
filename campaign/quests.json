@@ -6,13 +6,27 @@
     "status": "aktiv",
     "urgent": true,
     "kind": "Auftrag",
-    "next": "Mit Lucaz und der Verstärkung den Fluss weiter nach Norden zum Meer, dann die Küste entlang nach Westen. Unterwegs die Orcs gegen die Riesen gewinnen.",
-    "notes": "Riesen belagern die Stadt von [[Leonidas Lhaaz|Graf Leonidas]] im Westen, seine Frau hält dort die Stellung. Der Graf floh, um Leon zu warnen, und wurde in der Nacht vor Leons Stadt von drei Riesen gestellt. Man traut euch das zu: Ihr seid „Held der Echsenmenschen“ und „Riesenbezwinger, der Schlächter“. Den Wasserweg habt ihr außerhalb der Session per WhatsApp gewählt.",
+    "next": "Leonidas weiß noch nichts von den Sumpfschuppen. Nach dem Morgengrauen über den [[Verständigungsstein]] berichten, zum Beispiel: „Lucaz geht allein zu Fuß zu dir, schick ihm Reiter entgegen. Society-Jäger verfolgen uns. Wir reiten westwärts am Wüstenrand. Wo treffen wir uns?“ (23 von 25 Wörtern, er erkennt dich ohne Namen). Dann auf dem Dino weiter nach Westen, parallel zu seinem Heer.",
+    "notes": "Riesen belagern die Stadt von [[Leonidas Lhaaz|Graf Leonidas]] im Westen, seine Frau hält dort die Stellung. Der Graf floh, um Leon zu warnen, und wurde in der Nacht vor Leons Stadt von drei Riesen gestellt. Man traut euch das zu: Ihr seid „Held der Echsenmenschen“ und „Riesenbezwinger, der Schlächter“. Den Wasserweg habt ihr außerhalb der Session per WhatsApp gewählt.\n\n**Seit dem 08.11.2026 zu Fuß:** Lucaz ist zu seinem Vater zurück und ließ euch den Verständigungsstein von Leonidas da. Ihr lagert am Rand der Wüste, drei Sumpfschuppen in Sichtweite.",
     "links": [
       "Leonidas Lhaaz",
       "Lucaz Lhaaz",
       "Die Riesen",
       "Die belagerte Stadt im Westen"
+    ]
+  },
+  {
+    "id": "sumpfschuppen",
+    "title": "Die Sumpfschuppen und der Seelenraub",
+    "status": "aktiv",
+    "urgent": true,
+    "kind": "Bedrohung",
+    "next": "Drei Verfolger lagern etwa 100 m von eurem Nachtlager am Rand der Wüste. Entkommen oder stellen. Wer sie stellt, nimmt zuerst ihre Steine: Über sie kommt die nächste Nachricht der Society bei euch an statt bei ihnen. Ist Farlir unter ihnen, lohnt es sich, ihn lebend zu fangen: Lucira liest Gedanken, und er weiß, wohin die Seelen gehen. Rechne bei ihm mit mehr als beim Anführer, der schon Schuppen-Parade und *Nebelschritt* hatte.",
+    "notes": "Die [[Die Sumpfschuppen|Sumpfschuppen]], eine Untergruppe der [[Sorcerer Society]], jagen Echsenkrieger und rauben ihre Seelen für ihre Anführer. Am 08.11.2026 habt ihr sechs von ihnen besiegt, ihr Anführer schlug vorher über seinen Verständigungsstein Alarm, unter dem Vorwand einer stündlichen Meldung mit Passwort. *Theorie (deine, 09.11.2026):* Einer der drei Verfolger trägt das Gegenstück zum Stein des Anführers, deshalb waren sie so schnell da. Vielleicht ist sogar „Farlir“ selbst unter ihnen, die Nummer eins der Sumpfschuppen. **Offen:** Wer ist Farlir, und wohin gehen die Seelen?",
+    "links": [
+      "Die Sumpfschuppen",
+      "Sorcerer Society",
+      "Die Teufelsjäger"
     ]
   },
   {
@@ -48,8 +62,8 @@
     "title": "Die verschwundenen Gefährten",
     "status": "aktiv",
     "kind": "Mysterium",
-    "next": "Herausfinden, was Fridolin, Lucira und die Fee in der Nacht vor dem 11.10.2026 fortgerissen hat. Spur: Crush Lu spürte mächtige Magie aus dem Turm im See.",
-    "notes": "Im Traum hast du gesehen, wie eine magische Kraft drei von euch sechs fortreißt, und konntest es nicht verhindern. [[Lisbeth Lhaaz|Lisbeth]] kennt die drei nicht mehr, ihr und [[Crush Lu]] erinnert euch. Im [[Der Magische Turm|Turm]] ist mehr Magie in den Mauern, die langsam abklingt. [[Baldum]] weiß von nichts.\n\n**Deine Idee:** die notierten Passagierzahlen der Schiffe prüfen. Weichen sie ab, wurde mehr verändert als nur Erinnerungen.\n\nLaut DM folgt dazu eine eigene Storyline (die Spieler waren verhindert).\n\n**Am Tisch (laut dir, 19.10.2026):** Die drei fehlten nur in dieser Session. Ihr spielt in wechselnder Besetzung, mindestens zu dritt.",
+    "next": "Die drei sind zurück. Offen: Was war der Nebel mit den Türen, wer hat euch dorthin geholt, und erinnert sich Lisbeth wieder an sie?",
+    "notes": "Im Traum hast du gesehen, wie eine magische Kraft drei von euch sechs fortreißt, und konntest es nicht verhindern. [[Lisbeth Lhaaz|Lisbeth]] kennt die drei nicht mehr, ihr und [[Crush Lu]] erinnert euch. Im [[Der Magische Turm|Turm]] ist mehr Magie in den Mauern, die langsam abklingt. [[Baldum]] weiß von nichts.\n\n**Deine Idee:** die notierten Passagierzahlen der Schiffe prüfen. Weichen sie ab, wurde mehr verändert als nur Erinnerungen.\n\nLaut DM folgt dazu eine eigene Storyline (die Spieler waren verhindert).\n\n**Am Tisch (laut dir, 19.10.2026):** Die drei fehlten nur in dieser Session. Ihr spielt in wechselnder Besetzung, mindestens zu dritt.\n\n**Zurück (08.11.2026):** Im Nebel auf dem Fluss stand jeder allein in einem Raum voller gleicher Holztüren. Hinter den Türen fanden die Verschwundenen jemanden aus der Wirklichkeit, dann standen alle wieder an Bord. [[Lucaz Lhaaz|Lucaz]] erinnert sich seitdem wieder an die drei.",
     "links": [
       "Fridolin vom See",
       "Lucira",
@@ -169,7 +183,7 @@
     "title": "3 Heiltränke aus den Heilkräutern",
     "status": "aktiv",
     "kind": "Projekt",
-    "next": "Mit dem DM klären, ob das Alchemistenwerkzeug reicht. Laut Xanathars: Kräuterkundeausrüstung (5 GM), 1 Tag und 25 GM pro Trank. Die Übung gibt dir die Astrale Trance.",
+    "next": "Kräuterkundeausrüstung mit *Geringer Beschwörung* für je 1 Stunde erschaffen oder kaufen (5 GM), in der Trance Übung wählen. 1 Tag und 25 GM pro Trank (Xanathars). Mit dem DM klären, ob beschworenes Werkzeug reicht.",
     "reward": "3 × Heiltrank (2W4 + 2)",
     "links": [
       "Alchemie-Kompendium"
@@ -181,9 +195,9 @@
     "title": "Skelett-Gefolge aufbauen",
     "status": "aktiv",
     "kind": "Projekt",
-    "next": "Die 3 Skelette vom Boot mit *Tote erwecken* zum Leben bringen: 1 Skelett pro Wirken mit Grad 3. Danach alle 24 Stunden die Kontrolle erneuern.",
+    "next": "Das Orc-Skelett aus dem Rucksack erwecken, sobald du Leibwächter brauchst. Für die zwei Skelette in Dehubden die Society-Uniformen als Vermummung nutzen. Lederrüstungen herstellen: RK 13 statt 12.",
     "reward": "Loyales Gefolge ohne Verratsrisiko",
-    "notes": "Die 3 Skelette aus dem Orc-Kampf (11.10.2026) lagern auf eurem Boot. Orcs sind mittelgroße Humanoide, also geeignet. In deinen Unterlagen steht nicht, dass du vor Oktober 2026 schon Skelette erweckt hattest (Frage an den DM). Das Schlachtfeld im Südosten bleibt eine Quelle für weitere Knochen.\n\n**Dein Plan (19.10.2026):** stumme, vermummte Diener in Gewändern aus den Society-Uniformen und Orc-Kleidung, damit eure Leute und Fremde nicht gleich sehen, was sie sind. Das hilft auch beim befreiten Orc: Er muss nicht erkennen, wessen Knochen das sind.\n\n**Ausrüstung (DM):** Sie tragen nur, was du ihnen gibst. Eines bekommt den Kurzbogen mit 12 Pfeilen, die anderen beiden je einen Society-Dolch, versteckt unter dem Gewand (+4, 1W4 + 2, Wurf 6/18 m). Das Grimoire teilt die Waffen beim Erwecken in dieser Reihenfolge zu.\n\n**Vorschlag zum Zeitpunkt:** Erst kurz vor der Schlacht erwecken. Die Kontrolle hält 24 Stunden, danach kostet jeder Tag einen Grad-3-Platz, und ohne Erneuerung gehorchen sie nicht mehr.",
+    "notes": "**Stand 08.11.2026:** Zwei Skelette aus den Knochen vom Boot hast du erweckt, beide wurden auf der Flucht von den [[Die Sumpfschuppen|Sumpfschuppen]] vernichtet, mit einem der zwei Umhänge. Ein Orc-Skelett mit dem zweiten Umhang trägst du im Rucksack. Zwei inaktive Skelette liegen mit den Society-Uniformen versteckt in eurer Unterkunft in [[Die Siedlung|Dehubden]].\n\n**Laut DM:** Ohne Rüstung haben Skelette RK 10 + GE, also 12. Allgemeine Befehle wie „Schützt mich“ gehen. Verfällt die Kontrolle, werden sie zu NSCs, die der DM steuert.\n\n**Ausrüstung:** Sie tragen nur, was du ihnen gibst. Erneuern: siehe [[Taktik-Handbuch]].",
     "links": [
       "Skelett",
       "Schlachtfeld im Südosten",
@@ -195,7 +209,7 @@
     "title": "Ein neuer Vertrauter für den Dschungel",
     "status": "aktiv",
     "kind": "Projekt",
-    "next": "Nach der langen Rast neu beschwören (Ritual, 1 Stunde 10 Minuten). Material hast du von der Kräuterfrau. Tukan oder Papagei (Werte des Raben) mit dem DM klären.",
+    "next": "Neu beschwören (Ritual, 1 Stunde 10 Minuten). Tukan oder Papagei erst, wenn du einen gesehen hast (DM). Bis dahin Echse, Frosch oder Eule.",
     "notes": "Die **Eule**, die du am 11.10.2026 auf dem Boot beschworen hast, fand die Orcs. Beim Verfolgen des Schamanen wurde sie entdeckt und getötet. Optionen stehen auf der Seite **Gefolge**.",
     "links": [
       "Vertrauten finden",
@@ -211,14 +225,14 @@
     "links": [
       "Die Siedlung"
     ],
-    "notes": "Der DM hat euer angefangenes Haus als Belohnung in den **oberen Ring** teleportiert. Bis es fertig ist, schlaft ihr im Gemeinschaftsquartier im unteren Ring."
+    "notes": "Der DM hat euer angefangenes Haus als Belohnung in den **oberen Ring** teleportiert. Bis es fertig ist, schlaft ihr im Gemeinschaftsquartier im unteren Ring.\n\nBeim Haus liegt der Kadaver eines untoten Wesens. Für *Tote erwecken* taugt er nicht, er war kein Humanoider. Dein Plan: daraus eine Knochenstatue für das Haus bauen."
   },
   {
     "id": "organisation",
     "title": "Die Organisation gründen",
     "status": "aktiv",
     "kind": "Lebensziel",
-    "next": "Eine Infrastruktur in Leons Stadt aufbauen: Leute rekrutieren, die Aufgaben für dich erledigen.",
+    "next": "Erst die Stadt im Westen befreien. Deine Erwartung: Danach seid ihr adlig und könnt Land und Leute für die Organisation einsetzen. Siehe [[Aufbauplan der Unsichtbaren Hand]].",
     "reward": "Ein Imperium",
     "links": [
       "Backstory",
@@ -257,13 +271,14 @@
   },
   {
     "id": "botschaft-rolle",
-    "title": "Die gestohlene Botschaft-Rolle",
-    "status": "aktiv",
+    "title": "Die gestohlene Spruchrolle (Verständigung)",
+    "status": "gescheitert",
     "kind": "Rache",
-    "next": "Den diebischen roten Echsenkrieger finden. Rückholen oder Vergeltung.",
+    "next": "Aufgegeben: Du gehst dem nicht weiter nach (09.11.2026).",
     "links": [
       "Der rote Echsen-Clan"
-    ]
+    ],
+    "notes": "Ein roter Echsenkrieger stahl dir die Spruchrolle *Verständigung*."
   },
   {
     "id": "teufelsjaeger",
@@ -271,7 +286,7 @@
     "status": "geruecht",
     "kind": "Mysterium",
     "next": "Wer sind die Teufelsjäger, und was prüft Lucira als ihre Nummer 2 für Lisbeth?",
-    "notes": "Diktierte Notiz vom 12.07.2026: „die Nummer 2 der Teufelsjäger gesichtet“. Laut dir ist **[[Lucira]]** wohl diese Nummer 2. Echsenmenschen zu jagen, ist unter ihrer Würde. Sie hat einen gebundenen Drachen namens Krümel. Seit dem 11.10.2026 ist sie verschwunden.",
+    "notes": "Diktierte Notiz vom 12.07.2026: „die Nummer 2 der Teufelsjäger gesichtet“. Laut dir ist **[[Lucira]]** wohl diese Nummer 2. Echsenmenschen zu jagen, ist unter ihrer Würde. Sie hat einen gebundenen Drachen namens Krümel. Seit dem 11.10.2026 ist sie verschwunden.\n\n**Neu (08.11.2026):** Laut den gefangenen Sumpfschuppen sind die Teufelsjäger die höchste Untergruppe der [[Sorcerer Society]]. Sie beschwören Dämonen, besiegen sie und stehlen ihre Kräfte und Seelen. *Theorie:* Ist Lucira wirklich ihre Nummer 2, gehört sie zu den Mächtigsten der Society. Die Fee hofft, dass die Teufelsjäger sie nach Hause bringen können.",
     "links": [
       "Lucira",
       "Die Teufelsjäger",
@@ -354,6 +369,34 @@
     "notes": "Die ersten beiden Krieger sind geflohen, einer der neuen hat dich bestohlen. Als persönliche Gefolgschaft derzeit unzuverlässig. Seit Juli 2026 sind die Echsen über Leons Bündnis Verbündete der Stadt.",
     "links": [
       "Der rote Echsen-Clan"
+    ]
+  },
+  {
+    "id": "fee-heimweg",
+    "title": "Die Fee nach Hause bringen",
+    "status": "aktiv",
+    "kind": "Versprechen",
+    "giver": "Die Fee",
+    "next": "Herausfinden, wie die Fee in ihre Dimension zurückkommt oder ihren Alkoholgeruch loswird. Sie meint, die Teufelsjäger wüssten etwas darüber oder hätten die Macht dazu.",
+    "reward": "Die Gunst der Fee und, wie du hoffst, interessante Entdeckungen",
+    "notes": "Am 08.11.2026 bat sie dich um Hilfe und brachte dir dafür ein Bein des Sumpfschuppen-Anführers. Du hast ihr Hilfe versprochen.",
+    "links": [
+      "Die Fee",
+      "Die Teufelsjäger",
+      "Das Wesen hinter dem Siegel"
+    ]
+  },
+  {
+    "id": "reittier",
+    "title": "Das Reittier zähmen",
+    "status": "aktiv",
+    "kind": "Projekt",
+    "next": "Geschirr, Sattel und Satteltaschen herstellen (Lederwerkzeug, siehe [[Werkstatt]]) und den Dino an euch gewöhnen, bevor die Tierfreundschaft der Fee endet.",
+    "notes": "Ein Dino ähnlich einem Stegosaurus, etwa 4,5 m groß. Die Fee gewann ihn am 08.11.2026 mit *Tierfreundschaft*. Fünf von euch reiten ohne Sattel auf ihm.",
+    "links": [
+      "Das Reittier",
+      "Die Fee",
+      "Werkstatt"
     ]
   }
 ]

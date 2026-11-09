@@ -425,8 +425,8 @@
       "id": "skelett",
       "name": "Skelett",
       "type": "Mittelgroßer Untoter",
-      "ac": 13,
-      "acNote": "Rüstungsfetzen, ohne Rüstung 12",
+      "ac": 12,
+      "acNote": "ohne Rüstung: 10 + GE (laut DM), mit Lederrüstung 13",
       "hp": 13,
       "hpFormula": "2W8 + 4",
       "speed": "9 m",
@@ -562,7 +562,7 @@
         ],
         "con": [
           "Keine Dunkelsicht",
-          "Nicht in der Liste des Zaubers, der DM muss zustimmen"
+          "Erst wenn du einen Tukan oder Papagei gesehen hast, darfst du ihn beschwören (DM)"
         ]
       },
       {
@@ -609,6 +609,6 @@
     "file": "diener.webp",
     "title": "Die stummen Diener",
     "caption": "Stumm und vermummt, in Gewändern aus Society-Uniformen und Orc-Kleidung. Was unter den Kapuzen steckt, fragt man einen Helden nicht.",
-    "credit": "KI-Bild (FLUX.1-dev über Hugging Face), ein Stimmungsbild ohne Regelwert"
+    "credit": "KI-Bild (Gemini über Antigravity), ein Stimmungsbild ohne Regelwert"
   }
 }

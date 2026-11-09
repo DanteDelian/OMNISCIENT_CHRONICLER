@@ -1,0 +1,71 @@
+{
+  "stil": "Painterly fantasy illustration in the style of Dungeons and Dragons art, rich detail, dramatic lighting, muted jungle greens and teal with warm accents, painterly brushwork. Landscape composition. No text, no letters, no logos, no watermark, no signature, no frame, no border.",
+  "bilder": [
+    {
+      "id": "diener",
+      "titel": "Die stummen Diener",
+      "fuer": "Gefolge-Seite (creatures.json, retinueImage)",
+      "prompt": "Three silent servants stand in a row on a jungle path at dusk, completely hidden under long hooded robes crudely stitched together from mismatched dark uniforms and rough orcish leather and fur. Deep hoods hide their faces in black shadow, no face is visible at all. Their hands are wrapped in dirty cloth strips. The servant on the left holds a short wooden bow and carries a quiver of arrows on its back. The servant in the middle and the servant on the right each hold one plain short steel dagger low at their side. They stand perfectly still like loyal bodyguards, eerie and mysterious. Faint green magical glow drifts in the air, fireflies, dense dark jungle behind them."
+    },
+    {
+      "id": "reittier",
+      "titel": "Das Reittier",
+      "fuer": "Welt: Das Reittier",
+      "prompt": "A huge herbivorous dinosaur-like beast about four and a half meters tall, resembling a stegosaurus, but its row of crest-like scale plates starts at the head and ends at the base of the neck, its back has no plates. It strides through a dense tropical jungle, crushing the undergrowth and leaving a wide trail of flattened plants behind it. Five small adventurers ride bareback on its broad back without a saddle, a tiny winged fairy flies beside its head. Golden afternoon light falls through the canopy."
+    },
+    {
+      "id": "sumpfschuppen",
+      "titel": "Die Sumpfschuppen",
+      "fuer": "Welt: Die Sumpfschuppen",
+      "prompt": "Six lean humanoid hunters stand in a misty swamp jungle. Their faces and bodies look human, but their arms are covered in scales and their hands end in sharp claws. They wear dark practical hunting clothes. Their leader in front is taller and has a long heavy lizard tail. Cold, calculating expressions. A faint sickly violet glow of soul magic flickers around the leader's clawed hand. In the far background, fallen lizardfolk warriors lie half hidden in the reeds and mist, not gory."
+    },
+    {
+      "id": "nebel-tueren",
+      "titel": "Die Türen im Nebel",
+      "fuer": "Journal: Session vom 08.11.2026",
+      "prompt": "A surreal dreamlike void filled with dense white fog. In it stands an endless room of identical plain wooden doors, all exactly alike, some slightly ajar with soft light behind them. A lone elf mage with long silver hair in a green hooded cloak reaches for one of the door handles. Quiet, unsettling, mysterious."
+    },
+    {
+      "id": "nachtlager-wueste",
+      "titel": "Nachtlager am Wüstenrand",
+      "fuer": "Journal: Session vom 08.11.2026",
+      "prompt": "Night at the edge of a jungle where it meets a moonlit desert of rolling dunes. Among the last trees stands a small opaque magical dome, colored in jungle camouflage greens and browns so that it blends into the foliage. About a hundred meters away out on the sand burns a small campfire of three lurking scaly figures, one of them standing watch and staring into the dark. Starry sky, tense and quiet atmosphere."
+    },
+    {
+      "id": "werkstatt",
+      "titel": "Die Werkstatt im Lager",
+      "fuer": "Werkstatt-Seite",
+      "prompt": "A cozy improvised wilderness workshop at night beside a campfire at the edge of a jungle, no people. A fallen log serves as a workbench with alchemist's glass flasks and a small burner, bundles of drying herbs and roots, cured hides and strips of leather being stitched into a leather armor, a half finished leather saddle, rolls of rough cloth with needle and thread, lianas coiled like rope. One of the tools glows faintly with green magic, as if it was conjured."
+    },
+    {
+      "id": "fee",
+      "titel": "Die Fee",
+      "fuer": "Welt: Die Fee",
+      "prompt": "A tiny fey woman only sixty centimeters tall with delicate translucent wings, a wild jungle ranger with a small bow. She hovers among giant jungle leaves, nocking an arrow, with a mischievous, curious expression. Dappled sunlight."
+    },
+    {
+      "id": "lucira",
+      "titel": "Lucira",
+      "fuer": "Welt: Lucira",
+      "prompt": "A tiefling warlock woman with curved horns and a tail, in dark elegant traveling clothes, faint eldritch magic glowing at her fingertips. A small dragon companion sits curled against her chest. She looks knowing and slightly amused, as if she could read your thoughts. Jungle river at dusk behind her."
+    },
+    {
+      "id": "twee",
+      "titel": "Twee",
+      "fuer": "Welt: Twee",
+      "prompt": "A cheerful male satyr bard with goat legs and small horns, playing a musical instrument by a campfire at a jungle river, a storyteller who collects tales, warm firelight on his face."
+    },
+    {
+      "id": "fridolin",
+      "titel": "Fridolin vom See",
+      "fuer": "Welt: Fridolin vom See",
+      "prompt": "A sea elf paladin and traveling ambassador, calm and righteous, wearing polished armor with wave and ocean motifs and a holy symbol, standing on a riverbank in the jungle, light reflecting from the water."
+    },
+    {
+      "id": "aella",
+      "titel": "Aella „Khoraa“",
+      "fuer": "Welt: Aella Rayann",
+      "prompt": "A powerful bronze dragonborn woman barbarian, covered in bronze scales, surrounded by a crackling storm aura with lightning and wind, a fierce and loyal protector. Stormy jungle coast behind her."
+    }
+  ]
+}
