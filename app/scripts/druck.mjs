@@ -180,7 +180,29 @@ async function newPage(port) {
 	return Cdp.connect(target.webSocketDebuggerUrl);
 }
 
-async function printPdf(cdp, url, file) {
+/**
+ * Blätter, die im Druck breiter als der Satzspiegel (180 mm) werden. Ist eines zu breit, verkleinert Edge seit
+ * Version 157 die ganze PDF. Die Zauberkarten haben eigene, schmalere Ränder und zählen nicht.
+ */
+async function tooWide(cdp) {
+	await cdp.send('Emulation.setEmulatedMedia', { media: 'print' });
+	await cdp.send('Emulation.setDeviceMetricsOverride', { width: 680, height: 1000, deviceScaleFactor: 1, mobile: false });
+	try {
+		const r = await cdp.send('Runtime.evaluate', {
+			expression: `[...document.querySelectorAll('.druck .sheet:not(.cards-sheet)')]
+				.filter((el) => el.scrollWidth > el.clientWidth + 2)
+				.map((el) => (el.id || el.className).replace(/^doc-/, ''))`,
+			returnByValue: true
+		});
+		return r.result?.value ?? [];
+	} finally {
+		await cdp.send('Emulation.clearDeviceMetricsOverride');
+		await cdp.send('Emulation.setEmulatedMedia', { media: '' });
+	}
+}
+
+/** Druckt eine Seite als PDF und gibt die Datei als Buffer zurück. */
+async function printPdf(cdp, url) {
 	const loaded = cdp.once('Page.loadEventFired');
 	await cdp.send('Page.navigate', { url });
 	await loaded;
@@ -198,6 +220,8 @@ async function printPdf(cdp, url, file) {
 		if (!ok) await sleep(250);
 	}
 	if (!ok) throw new Error(`Seite nicht fertig geladen: ${url}`);
+	const wide = await tooWide(cdp);
+	if (wide.length) console.warn(`  Achtung, breiter als die Seite: ${wide.join(', ')}. Edge verkleinert dann die ganze PDF.`);
 	await sleep(300);
 	const base = { printBackground: true, preferCSSPageSize: true, displayHeaderFooter: false };
 	let pdf;
@@ -206,7 +230,52 @@ async function printPdf(cdp, url, file) {
 	} catch {
 		pdf = await cdp.send('Page.printToPDF', base);
 	}
-	fs.writeFileSync(file, Buffer.from(pdf.data, 'base64'));
+	return Buffer.from(pdf.data, 'base64');
+}
+
+/**
+ * Benannte Sprungziele eines Chrome-PDFs mit ihrer Seitenzahl (ab 1). Chrome legt sie für jedes Element an, auf das
+ * ein interner Link zeigt (Inhaltsverzeichnis, Kapitelübersicht). Liest nur das einfache Format ohne Objekt-Streams,
+ * das Chrome schreibt. Klappt das nicht, gibt es eine leere Liste und das Inhaltsverzeichnis bleibt ohne Zahlen.
+ */
+function pdfDestPages(buf) {
+	const s = buf.toString('latin1');
+	const offsets = new Map();
+	for (const m of s.matchAll(/(?:^|[\r\n])(\d+) 0 obj\b/g)) offsets.set(Number(m[1]), m.index + m[0].length);
+	const obj = (n) => {
+		const at = offsets.get(n);
+		return at === undefined ? '' : s.slice(at, s.indexOf('endobj', at));
+	};
+	const at = s.search(/\/Type\s*\/Catalog\b/);
+	if (at < 0) return new Map();
+	const catalog = s.slice(at, s.indexOf('endobj', at));
+	const pagesRoot = Number(catalog.match(/\/Pages (\d+) 0 R/)?.[1]);
+	const destsObj = Number(catalog.match(/\/Dests (\d+) 0 R/)?.[1]);
+	if (!pagesRoot || !destsObj) return new Map();
+	const order = [];
+	const walk = (n, depth = 0) => {
+		const o = obj(n);
+		if (depth < 32 && /\/Type\s*\/Pages\b/.test(o)) {
+			for (const k of (o.match(/\/Kids\s*\[([^\]]*)\]/)?.[1] ?? '').matchAll(/(\d+) 0 R/g)) walk(Number(k[1]), depth + 1);
+		} else order.push(n);
+	};
+	walk(pagesRoot);
+	const pageNo = new Map(order.map((n, i) => [n, i + 1]));
+	const result = new Map();
+	for (const m of obj(destsObj).matchAll(/\/([^\s/\[\]<>()]+)\s*(?:\[\s*(\d+) 0 R|(\d+) 0 R)/g)) {
+		const name = m[1].replace(/#([0-9a-f]{2})/gi, (_, h) => String.fromCharCode(parseInt(h, 16)));
+		const page = m[2] ? Number(m[2]) : Number(obj(Number(m[3])).match(/\[\s*(\d+) 0 R/)?.[1]);
+		if (pageNo.has(page)) result.set(name, pageNo.get(page));
+	}
+	return result;
+}
+
+/** Seitenzahlen für die Druckseite: Teile (Sprungziel doc-<id>) und Kapitel (kap-<n>) als „id:seite,…“. */
+function pageParam(dests) {
+	return [...dests]
+		.filter(([name]) => name.startsWith('doc-') || name.startsWith('kap-'))
+		.map(([name, page]) => `${name.startsWith('doc-') ? name.slice(4) : name}:${page}`)
+		.join(',');
 }
 
 // ---------- Ablauf ----------
@@ -240,9 +309,20 @@ try {
 		const url = `${server}/druck?nolive${teil ? `&teil=${encodeURIComponent(teil)}` : ''}`;
 		const file = path.join(outDir, job.file);
 		const t0 = Date.now();
-		await printPdf(cdp, url, file);
+		let pdf = await printPdf(cdp, url);
+		// Zweiter Durchlauf mit Seitenzahlen für Inhaltsverzeichnis und Kapitelübersicht. Die Zahlen stehen in
+		// freigehaltenen Feldern, der Umbruch bleibt also gleich.
+		let numbered = '';
+		if (teil === null || teil === 'journal') {
+			const seiten = pageParam(pdfDestPages(pdf));
+			if (seiten) {
+				pdf = await printPdf(cdp, `${url}&seiten=${encodeURIComponent(seiten)}`);
+				numbered = '  mit Seitenzahlen';
+			}
+		}
+		fs.writeFileSync(file, pdf);
 		const kb = Math.round(fs.statSync(file).size / 1024);
-		console.log(`✓ ${job.file.padEnd(28)} ${String(kb).padStart(6)} KB  ${((Date.now() - t0) / 1000).toFixed(1)} s`);
+		console.log(`✓ ${job.file.padEnd(28)} ${String(kb).padStart(6)} KB  ${((Date.now() - t0) / 1000).toFixed(1)} s${numbered}`);
 	}
 	console.log(`\nFertig: ${path.relative(process.cwd(), outDir) || outDir}`);
 } finally {

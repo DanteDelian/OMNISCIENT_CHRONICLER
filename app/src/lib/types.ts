@@ -304,6 +304,8 @@ export interface JournalEntry {
 	notes?: string[];
 	contradictions?: string[];
 	sources?: string[];
+	/** Stimmungsbilder in campaign/assets/ */
+	images?: { file: string; caption: string }[];
 }
 
 export interface MapPin {
@@ -358,6 +360,10 @@ export interface WorldEntry {
 	status: string;
 	summary: string;
 	body: string;
+	/** Stimmungsbild in campaign/assets/ (Frontmatter `image`) */
+	image?: string;
+	/** Bildausschnitt als CSS object-position, z. B. „47% 20%“ (Frontmatter `imageFocus`) */
+	imageFocus?: string;
 }
 
 /** Ein Eintrag im Verweis-Index (Suche, [[Wikilinks]], Vorschaukarten). */

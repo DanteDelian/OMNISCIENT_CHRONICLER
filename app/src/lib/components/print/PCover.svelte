@@ -2,7 +2,8 @@
 	import PImg from './PImg.svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
 
-	let { toc }: { toc: { id: string; label: string }[] } = $props();
+	/** pages: Seitenzahlen je Teil aus dem ersten Durchlauf von npm run druck (leer im Browser) */
+	let { toc, pages = {} }: { toc: { id: string; label: string }[]; pages?: Record<string, number> } = $props();
 
 	const c = $derived(campaign.data.character);
 	const today = new Date().toLocaleDateString('de-DE', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -21,7 +22,7 @@
 		{#if toc.length}
 			<ol class="cover-toc" style="grid-template-rows: repeat({Math.ceil(toc.length / 2)}, auto)">
 				{#each toc as t, i (t.id)}
-					<li><span class="n">{String(i + 1).padStart(2, '0')}</span><a href="#doc-{t.id}">{t.label}</a></li>
+					<li><span class="n">{String(i + 1).padStart(2, '0')}</span><a href="#doc-{t.id}">{t.label}</a><span class="pg num">{pages[t.id] ?? ''}</span></li>
 				{/each}
 			</ol>
 		{/if}

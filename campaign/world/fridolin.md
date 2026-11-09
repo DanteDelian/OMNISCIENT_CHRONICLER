@@ -7,6 +7,7 @@ tone: ally
 status: Gefährte
 summary: Seeelf, Paladin und reisender Botschafter. Kam mit einem älteren Seeelfen-Magier, um Beziehungen zu Leon aufzubauen.
 image: fridolin.webp
+imageFocus: 50% 8%
 ---
 # Fridolin vom See
 

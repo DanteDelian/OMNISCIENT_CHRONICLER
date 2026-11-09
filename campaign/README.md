@@ -23,7 +23,8 @@ Alles, was das Grimoire anzeigt, steht in diesen Dateien. Ändert man sie (von H
 | `geheimnisse.json` | Wer weiß was? Floshems Ruf, Gefahren und Geheimnisse mit Mitwissern (eigene Seite, Druck) | ja |
 | `docs/*.md` | Archiv-Dokumente (Prüfbericht, Lage, Taktik, DM-Nachrichten, Backstory, Alchemie, Einkauf) | nein |
 | `world/*.md` | Personen, Fraktionen, Orte | nein |
-| `assets/` | Bilder, abrufbar unter `/api/assets/<datei>` | nein |
+| `bilder.json` | Aufträge für die KI-Stimmungsbilder (Stil, Prompt je Bild), erzeugt mit `python -P scripts/bilder.py` | nein |
+| `assets/` | Bilder, abrufbar unter `/api/assets/<datei>` (siehe `assets/README.md`) | nein |
 
 ## Verweise
 
@@ -45,6 +46,8 @@ group: lhaaz            # gruppe | lhaaz | kontakt | bedrohung | vergangenheit |
 tone: enemy             # ally | neutral | enemy | unknown | dead
 status: Lebt, misstrauisch
 summary: Ein Satz für Karten und Vorschauen.
+image: lisbeth.webp    # optional: Stimmungsbild aus assets/ (Kopfbild, Karte in der Liste, Druck)
+imageFocus: 50% 20%    # optional: Bildausschnitt (CSS object-position), damit Köpfe nicht abgeschnitten werden
 ```
 
 ### docs/*.md (Frontmatter)
@@ -64,10 +67,13 @@ summary: Ein Satz für Karten und Vorschauen.
   "summary": "Ein Satz.", "events": ["Ein Ereignis pro Eintrag, Markdown und [[Verweise]] erlaubt"],
   "loot": [], "lost": [], "encounters": [], "level": null,
   "quests": [{ "ref": "boot-abfangen", "change": "erledigt" }],   // neu | angenommen | aktualisiert | erledigt | gescheitert
-  "notes": [], "contradictions": [], "sources": ["kampagnen-log"]
+  "notes": [], "contradictions": [], "sources": ["kampagnen-log"],
+  "images": [{ "file": "nebel-tueren.webp", "caption": "Die Türen im Nebel" }]   // optional
 }
 ```
-`order` bestimmt die Reihenfolge (in Zehnerschritten, damit man dazwischen einfügen kann).
+`order` bestimmt die Reihenfolge (in Zehnerschritten, damit man dazwischen einfügen kann). Aus `chapter`
+(„Kapitel N“) macht die Druckfassung Kapitelüberschriften und eine Kapitelübersicht mit Seitenzahlen. Einschübe wie
+„Zwischen den Sitzungen“ zählen zum laufenden Kapitel.
 
 ### spells.json
 Pflicht: `id, name, en, level (0 = Zaubertrick), school, status, time, economy, range, components, duration, text`.

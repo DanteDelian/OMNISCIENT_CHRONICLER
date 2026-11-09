@@ -67,6 +67,7 @@ const d = {
 		tone: data.tone ?? 'unknown',
 		status: String(data.status ?? ''),
 		summary: String(data.summary ?? ''),
+		image: data.image ? String(data.image) : undefined,
 		body
 	}))
 };
@@ -216,6 +217,20 @@ for (const g of d.geheimnisse.secrets) {
 	}
 	for (const l of g.links ?? []) ref(where, l);
 	links(where, [g.truth, g.cover, g.risk, g.note].filter(Boolean).join(' '));
+}
+
+// Bilder: Gibt es jede eingetragene Datei in campaign/assets/?
+const asset = (where, file) => {
+	if (file && !fs.existsSync(path.join(root, 'assets', file))) errors.push(`${where}: Bild „${file}“ fehlt in campaign/assets/`);
+};
+for (const w of d.world) asset(`world/${w.slug}.md`, w.image);
+for (const j of d.journal) for (const im of j.images ?? []) asset(`journal.json ${j.id}`, im.file);
+if (d.creatures.retinueImage) asset('creatures.json retinueImage', d.creatures.retinueImage.file);
+asset('character.json portrait', d.character.portrait);
+asset('map.json', d.map.image);
+// Aufträge in bilder.json ohne fertiges Bild sind nur ein Hinweis (python -P scripts/bilder.py erzeugt sie)
+for (const b of json('bilder.json')?.bilder ?? []) {
+	if (!fs.existsSync(path.join(root, 'assets', `${b.id}.webp`))) warnings.push(`bilder.json ${b.id}: noch nicht erzeugt (python -P scripts/bilder.py)`);
 }
 
 // Zustand plausibel?

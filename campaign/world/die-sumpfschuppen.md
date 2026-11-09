@@ -7,6 +7,7 @@ tone: enemy
 status: Feind · drei Verfolger lagern bei euch
 summary: Untergruppe der Sorcerer Society, die Echsenkrieger jagt und ihre Seelen raubt.
 image: sumpfschuppen.webp
+imageFocus: 50% 35%
 ---
 # Die Sumpfschuppen
 

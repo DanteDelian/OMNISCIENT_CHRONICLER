@@ -1,6 +1,7 @@
 <script lang="ts">
 	import PDoc from './PDoc.svelte';
 	import PMd from './PMd.svelte';
+	import PImg from './PImg.svelte';
 	import FamilyTree from '../FamilyTree.svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { printAnchor } from '$lib/markdown';
@@ -37,6 +38,9 @@
 								<span class="pill" style="--c: {tone.color}">{tone.label}</span>
 							</div>
 							<div class="tiny muted">{KIND[w.kind] ?? w.kind}{w.status ? ` · ${w.status}` : ''}{w.aliases.length ? ` · auch: ${w.aliases.join(', ')}` : ''}</div>
+							{#if w.image}
+								<PImg name={w.image} alt={w.name} class="world-img" style="object-position: {w.imageFocus ?? '50% 30%'}" />
+							{/if}
 							{#if w.summary}<p class="small soft" style="font-style: italic; margin: 0.8mm 0 1mm">{w.summary}</p>{/if}
 						</div>
 						<PMd src={body(w.body)} class="small" />

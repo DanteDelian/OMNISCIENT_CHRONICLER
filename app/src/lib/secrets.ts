@@ -9,7 +9,9 @@ const SHORT: Record<string, string> = { 'Zaffera-Syndikat': 'Zafferas', 'Maskier
 export function shortName(who: string): string {
 	if (SHORT[who]) return SHORT[who];
 	if (/^[„"]/.test(who)) return who;
-	return campaign.resolve(who)?.kind === 'Person' ? who.split(' ')[0] : who;
+	// Ohne Artikel: „Die Fee“ → Fee, „Die Sumpfschuppen“ → Sumpfschuppen
+	const name = who.replace(/^(Die|Der|Das)\s+/, '');
+	return campaign.resolve(who)?.kind === 'Person' ? name.split(' ')[0] : name;
 }
 
 /** Alle Mitwisser, wer am meisten weiß zuerst (weiß es zählt doppelt, ahnt es einfach) */

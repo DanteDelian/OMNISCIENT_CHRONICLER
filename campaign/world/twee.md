@@ -7,6 +7,7 @@ tone: ally
 status: Gefährte · Barde
 summary: Satyr-Barde aus dem Süden, sammelt Geschichten. Wirkt Leomunds winzige Hütte.
 image: twee.webp
+imageFocus: 50% 26%
 ---
 # Twee
 

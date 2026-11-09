@@ -78,7 +78,9 @@ function loadWorld(): WorldEntry[] {
 			tone: (data.tone ?? 'unknown') as WorldEntry['tone'],
 			status: String(data.status ?? ''),
 			summary: String(data.summary ?? ''),
-			body: content.trim()
+			body: content.trim(),
+			image: data.image ? String(data.image) : undefined,
+			imageFocus: data.imageFocus ? String(data.imageFocus) : undefined
 		};
 	});
 }

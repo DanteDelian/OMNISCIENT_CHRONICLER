@@ -34,7 +34,7 @@
 			<tr>
 				<th style="width: 30%">Geheimnis</th>
 				<th style="width: 11%">Status</th>
-				{#each people as who (who)}<th class="c">{short(who)}</th>{/each}
+				{#each people as who (who)}<th class="c" title={who}><span>{short(who)}</span></th>{/each}
 			</tr>
 		</thead>
 		<tbody>

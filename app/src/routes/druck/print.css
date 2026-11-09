@@ -27,8 +27,9 @@
 	margin: 10mm 10.5mm 12mm;
 }
 
+/* Deckblatt: gleiche Ränder wie alle Seiten, nur ohne Fußzeile. Ein eigener Rand (margin: 0) ließ Edge ab
+   Version 157 das ganze Deckblatt verkleinern, weil es breiter als die übrigen Seiten wurde. */
 @page cover {
-	margin: 0;
 	@bottom-left {
 		content: none;
 	}
@@ -135,8 +136,8 @@ html:has(.druck) body {
 		break-before: page;
 	}
 	.druck .sheet.cover-sheet {
-		width: 210mm;
-		height: 297mm;
+		width: auto;
+		height: 263mm;
 	}
 	/* Seitenhöhe minus Ränder (15 + 17 mm), mit etwas Luft gegen Überlauf */
 	.druck .sheet.one-page {
@@ -876,6 +877,12 @@ html:has(.druck) body {
 }
 
 /* ---------- Wer weiß was? ---------- */
+/* Feste Spaltenbreiten und senkrechte Namen: Die Tabelle darf nie breiter als die Seite werden, sonst verkleinert
+   Edge die ganze PDF. */
+.druck table.matrix {
+	table-layout: fixed;
+	width: 100%;
+}
 .druck table.matrix td.c,
 .druck table.matrix th.c {
 	text-align: center;
@@ -885,8 +892,15 @@ html:has(.druck) body {
 .druck table.matrix th.c {
 	color: var(--p-ink-2);
 	font-size: 7.4pt;
-	hyphens: manual;
 	line-height: 1.15;
+	vertical-align: bottom;
+	padding: 0.8mm 0;
+}
+.druck table.matrix th.c span {
+	display: inline-block;
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+	white-space: nowrap;
 }
 .druck .secret {
 	margin-bottom: 3mm;
@@ -1020,4 +1034,120 @@ html:has(.druck) body {
 	text-align: right;
 	/* Kursive Buchstaben ragen rechts etwas über, am Seitenrand würden sie abgeschnitten. */
 	padding-right: 1mm;
+}
+
+/* ---------- Seitenzahlen im Inhaltsverzeichnis ---------- */
+.druck .cover-toc a {
+	flex: 1 1 auto;
+}
+.druck .cover-toc .pg,
+.druck .chapter-toc .pg {
+	margin-left: auto;
+	min-width: 7mm;
+	text-align: right;
+	font-size: 8pt;
+	color: var(--p-ink-2);
+}
+
+/* ---------- Kapitel der Chronik ---------- */
+.druck .chapter-toc {
+	background: var(--p-soft);
+	border-radius: 2mm;
+	padding: 2.6mm 3.2mm 2mm;
+	margin-bottom: 6mm;
+}
+.druck .chapter-toc ol {
+	list-style: none;
+	margin: 1mm 0 0;
+	padding: 0;
+}
+.druck .chapter-toc li {
+	display: flex;
+	gap: 3mm;
+	align-items: baseline;
+	padding: 0.9mm 0;
+	border-bottom: 0.4pt dotted var(--p-line-2);
+	font-size: 8.4pt;
+}
+.druck .chapter-toc li:last-child {
+	border-bottom: 0;
+}
+.druck .chapter-toc a {
+	flex: 1 1 auto;
+	color: inherit;
+	text-decoration: none;
+}
+.druck .chapter-toc b {
+	color: var(--p-accent);
+	font-weight: 650;
+	margin-right: 1.5mm;
+}
+.druck .chapter-head {
+	margin: 7mm 0 3.5mm;
+	padding-top: 2.4mm;
+	border-top: 0.8pt solid var(--p-accent);
+	color: var(--p-accent);
+}
+
+/* ---------- Stimmungsbilder ---------- */
+.druck .world-img {
+	display: block;
+	width: 100%;
+	height: 30mm;
+	object-fit: cover;
+	border-radius: 1mm;
+	margin: 1mm 0 1.2mm;
+}
+.druck .journal-imgs {
+	display: grid;
+	gap: 2.4mm;
+	margin: 1.2mm 0 2mm;
+}
+.druck .journal-imgs.two {
+	grid-template-columns: 1fr 1fr;
+}
+.druck .journal-imgs figure {
+	margin: 0;
+}
+.druck .journal-imgs img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+	border-radius: 1mm;
+}
+.druck .journal-imgs figcaption {
+	margin-top: 0.6mm;
+}
+
+/* Deckblatt im Druck: liegt im normalen Satzspiegel (180 × 263 mm), daher etwas kompakter.
+   Steht am Ende, damit es die Grundregeln des Deckblatts überschreibt. */
+@media print {
+	.druck .cover {
+		padding: 11mm 13mm 7mm;
+	}
+	.druck .cover-frame {
+		inset: 0;
+	}
+	.druck .cover-portrait {
+		width: 50mm;
+		height: 50mm;
+		margin: 4mm 0 6mm;
+	}
+	.druck .cover-title {
+		font-size: 40pt;
+	}
+	.druck .cover-sub {
+		font-size: 13.5pt;
+	}
+	.druck .cover-ornament {
+		margin: 4.5mm 0 4mm;
+	}
+	.druck .cover-toc {
+		width: 152mm;
+		font-size: 8.6pt;
+	}
+	.druck .cover-toc li {
+		padding: 0.95mm 0;
+	}
 }

@@ -221,6 +221,17 @@
 
 				{#if j.summary}<p class="mt-3 text-[0.95rem] text-ink">{j.summary}</p>{/if}
 
+				{#if j.images?.length}
+					<div class="mt-4 grid gap-3 {j.images.length > 1 ? 'sm:grid-cols-2' : ''}">
+						{#each j.images as im (im.file)}
+							<figure class="overflow-hidden rounded-xl border border-line bg-white/[0.02]">
+								<img src="/api/assets/{im.file}" alt={im.caption} loading="lazy" class="aspect-[16/9] w-full object-cover" />
+								<figcaption class="flex items-baseline justify-between gap-3 px-3 py-1.5 text-xs text-ink-2">{im.caption}<span class="shrink-0 text-[0.62rem] text-ink-3">KI-Bild</span></figcaption>
+							</figure>
+						{/each}
+					</div>
+				{/if}
+
 				{#if j.events.length}
 					<ul class="prose-grim prose-sm mt-3">
 						{#each j.events as ev, i (i)}<li><Markdown src={ev} inline /></li>{/each}
@@ -239,19 +250,19 @@
 						{#if j.encounters?.length}
 							<div class="rounded-xl bg-white/[0.025] p-2.5">
 								<div class="mb-1 flex items-center gap-1 text-[0.68rem] text-ink-3"><Skull size={11} />Gegner</div>
-								{#each j.encounters as e (e)}<div class="text-xs text-ink-2">{e}</div>{/each}
+								{#each j.encounters as e (e)}<div class="text-xs text-ink-2"><Markdown src={e} inline /></div>{/each}
 							</div>
 						{/if}
 						{#if j.loot?.length}
 							<div class="rounded-xl bg-gold/[0.05] p-2.5">
 								<div class="mb-1 flex items-center gap-1 text-[0.68rem] text-gold"><Gem size={11} />Beute</div>
-								{#each j.loot as e (e)}<div class="text-xs text-ink-2">{e}</div>{/each}
+								{#each j.loot as e (e)}<div class="text-xs text-ink-2"><Markdown src={e} inline /></div>{/each}
 							</div>
 						{/if}
 						{#if j.lost?.length}
 							<div class="rounded-xl bg-blood/[0.05] p-2.5">
 								<div class="mb-1 flex items-center gap-1 text-[0.68rem] text-blood"><PackageX size={11} />Verloren</div>
-								{#each j.lost as e (e)}<div class="text-xs text-ink-2">{e}</div>{/each}
+								{#each j.lost as e (e)}<div class="text-xs text-ink-2"><Markdown src={e} inline /></div>{/each}
 							</div>
 						{/if}
 					</div>

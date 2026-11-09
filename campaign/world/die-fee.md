@@ -7,6 +7,7 @@ tone: unknown
 status: Gefährtin · Waldläuferin
 summary: Blinder Passagier aus der Dimension hinter dem Siegel, Waldläuferin, etwa 60 cm groß und geflügelt. Riecht nach Alkohol, obwohl sie angeblich nicht trinkt.
 image: fee.webp
+imageFocus: 50% 22%
 ---
 # Die Fee
 

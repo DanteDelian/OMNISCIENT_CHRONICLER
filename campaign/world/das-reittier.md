@@ -7,6 +7,7 @@ tone: ally
 status: Mit Tierfreundschaft gewonnen · noch nicht gezähmt
 summary: Ein etwa 4,5 m großes Wesen ähnlich einem Stegosaurus, das die Sumpfschuppen jagten. Trägt fünf von euch.
 image: reittier.webp
+imageFocus: 50% 45%
 ---
 # Das Reittier
 

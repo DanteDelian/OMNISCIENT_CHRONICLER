@@ -31,6 +31,15 @@
 		...PRINT_PARTS.filter((p) => p.id === 'quellen')
 	]);
 
+	// Seitenzahlen für Inhaltsverzeichnis und Kapitel: ?seiten=bogen:2,kap-4:61 (setzt npm run druck im zweiten Durchlauf)
+	const pages: Record<string, number> = Object.fromEntries(
+		(page.url.searchParams.get('seiten') ?? '')
+			.split(',')
+			.map((pair) => pair.split(':'))
+			.filter(([id, n]) => id && Number(n) > 0)
+			.map(([id, n]) => [id, Number(n)])
+	);
+
 	// Auswahl: ?teil=bogen,zauber (ohne Parameter: alles)
 	const fromUrl = page.url.searchParams.get('teil');
 	let chosen = $state<string[] | null>(fromUrl ? fromUrl.split(',').map((s) => s.trim()) : null);
@@ -92,7 +101,7 @@
 
 	{#each active as p (p.id)}
 		{#if p.id === 'deckblatt'}
-			<PCover {toc} />
+			<PCover {toc} {pages} />
 		{:else if p.id === 'bogen'}
 			<PCharacter />
 		{:else if p.id === 'spielbogen'}
@@ -120,7 +129,7 @@
 		{:else if p.id === 'quests'}
 			<PQuests />
 		{:else if p.id === 'journal'}
-			<PJournal />
+			<PJournal {pages} />
 		{:else if p.id === 'welt'}
 			<PWorld />
 		{:else if p.id === 'karte'}

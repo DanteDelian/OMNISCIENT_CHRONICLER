@@ -7,6 +7,7 @@ tone: neutral
 status: Gefährtin · Lisbeths Prüferin
 summary: Tiefling-Hexenmeisterin, liest alle Sprachen, Schriften und Gedanken. Von Lisbeth geholt, wohl die Nummer 2 der Teufelsjäger.
 image: lucira.webp
+imageFocus: 50% 18%
 ---
 # Lucira
 

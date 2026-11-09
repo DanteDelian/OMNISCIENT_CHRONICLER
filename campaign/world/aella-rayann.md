@@ -7,6 +7,7 @@ tone: ally
 status: Gefährtin · Barbarin 5
 summary: Bronzene Drachenblütige und Sturmherold, Valerius' Partnerin seit Oakhaven.
 image: aella.webp
+imageFocus: 50% 8%
 ---
 # Aella Rayann „Khoraa“ Stormscale
 
