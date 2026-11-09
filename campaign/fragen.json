@@ -14,10 +14,12 @@
     "to": "dm",
     "topic": "Flammenkugel",
     "question": "Darf ich die Flammenkugel wirken und im selben Zug mit der Bonusaktion rammen? Direkt auf einen Gegner wirken geht laut Zauber nicht, sie erscheint auf einem freien Feld.",
-    "status": "offen",
+    "status": "geklaert",
     "links": [
       "Flammenkugel"
-    ]
+    ],
+    "answer": "Ja, das steht im Regeltext: Du wirkst die Kugel mit deiner Aktion auf ein freies Feld und bewegst sie im selben Zug mit der Bonusaktion bis zu 9 m. Rammst du einen Gegner, macht er den Rettungswurf gegen den Schaden, und die Kugel bleibt für diesen Zug stehen. Direkt auf einem Gegner erschaffen geht nicht.",
+    "answered": "2026-11-09"
   },
   {
     "id": "beschworenes-werkzeug",
@@ -34,7 +36,7 @@
     "id": "leder-material",
     "to": "dm",
     "topic": "Leder als Material",
-    "question": "Wie viel ist das Leder von Gegnern und Tieren als Material wert? Eine Lederrüstung kostet 10 GM, das Material die Hälfte. Und tragen Skelette Rüstung ohne Nachteil?",
+    "question": "Taugen Häute erlegter Tiere und Gegner als Material für Lederarbeiten, wie viel sind sie wert, und wie lange dauert das Gerben?",
     "status": "offen",
     "links": [
       "Werkstatt",
@@ -66,10 +68,12 @@
     "to": "dich",
     "topic": "Farlir",
     "question": "„Farlir“ (zuerst als „Farlier“ notiert), die Nummer eins der Sumpfschuppen: ein Name oder ein Titel, und wie schreibt er sich?",
-    "status": "offen",
+    "status": "geklaert",
     "links": [
       "Die Sumpfschuppen"
-    ]
+    ],
+    "answer": "Farlir, die Nummer eins der Sumpfschuppen (deine Schreibweise vom 09.11.2026).",
+    "answered": "2026-11-09"
   },
   {
     "id": "dehubden",
@@ -112,23 +116,13 @@
     "to": "dm",
     "topic": "Heiltränke",
     "question": "Nach den Regeln braut man Heiltränke mit der Kräuterkundeausrüstung (5 GM). Das Alchemistenwerkzeug ist für Säure, Alchemistenfeuer, Gegengift, Öl, Parfüm und Seife. Lässt du Heiltränke auch mit dem Alchemistenwerkzeug zu?",
-    "status": "offen",
+    "status": "geklaert",
     "links": [
       "3 Heiltränke aus den Heilkräutern",
       "Alchemie-Kompendium"
-    ]
-  },
-  {
-    "id": "graf-lhaaz",
-    "to": "dm",
-    "topic": "Familie Lhaaz",
-    "question": "Wer ist der „Graf Lhaaz“, der Lisbeths Tod bestellt hat: der Erzherzog, Leonidas oder ein Dritter? Und ist Leonidas der „Baron“ aus Cams Brief?",
-    "status": "offen",
-    "links": [
-      "Erzherzog Lhaaz",
-      "Leonidas Lhaaz",
-      "Lisbeth Lhaaz"
-    ]
+    ],
+    "answer": "Nach den Regeln nur mit der Kräuterkundeausrüstung. Die kostet 5 GM oder lässt sich beschwören, also braucht es keine Ausnahme.",
+    "answered": "2026-11-09"
   },
   {
     "id": "fruehere-skelette",
@@ -288,6 +282,59 @@
       "Die Sumpfschuppen",
       "Die Fee",
       "Lucira"
+    ]
+  },
+  {
+    "id": "kho-farbe",
+    "to": "tisch",
+    "topic": "Khos Schuppen",
+    "question": "Ist Kho rot oder bronzen? Ihr Bogen und die Backstory sagen bronzen (Blitzresistenz), du hast sie am 09.11.2026 als rot mit Drachenschwanz beschrieben.",
+    "status": "offen",
+    "links": [
+      "Aella Rayann"
+    ]
+  },
+  {
+    "id": "donnergarde-mitglieder",
+    "to": "dm",
+    "topic": "Donnergarde",
+    "question": "Bestand die Donnergarde nur aus Khoraa und Floshem, oder gab es weitere Mitglieder?",
+    "status": "geklaert",
+    "links": [
+      "Die Donnergarde"
+    ],
+    "answer": "Laut Cams Brief bestand die Donnergarde aus Khoraa und Floshem, weitere Mitglieder nennt er nicht.",
+    "answered": "2026-11-09"
+  },
+  {
+    "id": "freie-stunden",
+    "to": "dm",
+    "topic": "Freie Stunden",
+    "question": "In den 4 freien Stunden der langen Rast: Projektarbeit nach Spielerhandbuch (5 GM Fortschritt pro 8 Stunden) und zusätzlich eine Rast-Herstellung nach Xanathars, oder nur eins davon?",
+    "status": "offen",
+    "links": [
+      "Werkstatt",
+      "Astrale Trance"
+    ]
+  },
+  {
+    "id": "fellruestung-skelette",
+    "to": "dm",
+    "topic": "Rüstung für die Skelette",
+    "question": "Dürfen deine Skelette Rüstung tragen: Lederrüstung (RK 13) oder sogar Fellrüstung (mittelschwer, RK 12 + GE höchstens 2, also 14)?",
+    "status": "offen",
+    "links": [
+      "Werkstatt"
+    ]
+  },
+  {
+    "id": "glaube-xantus",
+    "to": "dm",
+    "topic": "Götter und Glaube",
+    "question": "Welche Götter oder Glaubensrichtungen gibt es in Xantus und in der alten Welt? Daran könnte die Unsichtbare Hand ihre Ideale anknüpfen.",
+    "status": "offen",
+    "links": [
+      "Aufbauplan der Unsichtbaren Hand"
     ]
   }
 ]

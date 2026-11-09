@@ -208,7 +208,7 @@ for (const g of d.geheimnisse.secrets) {
 	if (!g.id || !g.title || !g.truth) errors.push(`${where}: ohne id, title oder truth`);
 	if (secretIds.has(g.id)) errors.push(`${where}: doppelte ID`);
 	secretIds.add(g.id);
-	if (!['sicher', 'gefaehrdet', 'aufgeflogen'].includes(g.status)) errors.push(`${where}: unbekannter Status „${g.status}“`);
+	if (!['sicher', 'gefaehrdet', 'aufgeflogen', 'archiv'].includes(g.status)) errors.push(`${where}: unbekannter Status „${g.status}“`);
 	if (!Array.isArray(g.knownBy) || !Array.isArray(g.suspects)) errors.push(`${where}: knownBy und suspects müssen Listen sein`);
 	for (const w of [...(g.knownBy ?? []), ...(g.suspects ?? [])]) {
 		if (!w.who) errors.push(`${where}: Zeuge ohne who`);
@@ -220,18 +220,18 @@ for (const g of d.geheimnisse.secrets) {
 }
 
 // Bilder: Gibt es jede eingetragene Datei in campaign/assets/?
+// Fehlt ein Bild, das in bilder.json noch als Auftrag steht, ist das nur ein Hinweis: Die App blendet es aus.
+const pending = new Set((json('bilder.json')?.bilder ?? []).map((b) => `${b.id}.webp`));
 const asset = (where, file) => {
-	if (file && !fs.existsSync(path.join(root, 'assets', file))) errors.push(`${where}: Bild „${file}“ fehlt in campaign/assets/`);
+	if (!file || fs.existsSync(path.join(root, 'assets', file))) return;
+	if (pending.has(file)) warnings.push(`${where}: Bild „${file}“ noch nicht erzeugt (python -P scripts/bilder.py)`);
+	else errors.push(`${where}: Bild „${file}“ fehlt in campaign/assets/`);
 };
 for (const w of d.world) asset(`world/${w.slug}.md`, w.image);
 for (const j of d.journal) for (const im of j.images ?? []) asset(`journal.json ${j.id}`, im.file);
 if (d.creatures.retinueImage) asset('creatures.json retinueImage', d.creatures.retinueImage.file);
 asset('character.json portrait', d.character.portrait);
 asset('map.json', d.map.image);
-// Aufträge in bilder.json ohne fertiges Bild sind nur ein Hinweis (python -P scripts/bilder.py erzeugt sie)
-for (const b of json('bilder.json')?.bilder ?? []) {
-	if (!fs.existsSync(path.join(root, 'assets', `${b.id}.webp`))) warnings.push(`bilder.json ${b.id}: noch nicht erzeugt (python -P scripts/bilder.py)`);
-}
 
 // Zustand plausibel?
 const s = d.state;

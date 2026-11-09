@@ -533,7 +533,7 @@
       "id": "aella",
       "name": "Aella Rayann „Khoraa“ Stormscale",
       "altName": "In Valerius' Backstory noch Draka „Drake“ Stormscale",
-      "role": "Bronzene Drachenblütige · Barbarin 5 (Pfad des Sturmherolds)",
+      "role": "Drachenblütige · Barbarin 5 (Pfad des Sturmherolds)",
       "ac": "16 (Halbplatte) · 18 mit Schild",
       "hp": 45,
       "speed": "12 m",
@@ -608,7 +608,7 @@
   "retinueImage": {
     "file": "diener.webp",
     "title": "Die stummen Diener",
-    "caption": "Stumm und vermummt, in Gewändern aus Society-Uniformen und Orc-Kleidung. Was unter den Kapuzen steckt, fragt man einen Helden nicht.",
+    "caption": "Stumm und vermummt, in groben Kutten aus Uniformen und Orc-Kleidung. Was unter den Kapuzen steckt, fragt man einen Helden nicht.",
     "credit": "KI-Bild (Gemini über Antigravity), ein Stimmungsbild ohne Regelwert"
   }
 }

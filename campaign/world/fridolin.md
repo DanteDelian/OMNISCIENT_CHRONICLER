@@ -25,3 +25,4 @@ imageFocus: 50% 8%
 - Bei den [[Die Sumpfschuppen|Sumpfschuppen]] gab er sich als Geologe aus, verurteilte, was sie den Echsen und dem Dino antaten, und wollte sie verhaften. Damit kippte das Gespräch.
 - Er versprach den Gefangenen Schonung, solange sie die Wahrheit sagten. Seinen Segen vergaß er vor dem Kampf.
 - In der Nacht ruhte er wie du in Trance und beobachtete mit dir die Verfolger.
+- [[Lucira]] misstraut ihm, weil er sich euch gerade anbiedert (laut dir, 09.11.2026).

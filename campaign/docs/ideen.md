@@ -22,14 +22,14 @@ updated: 2026-11-09
 
 ## Geld für die Hand
 
-- **Die Werkstatt jeden Tag nutzen.** Ein Alchemistenfeuer pro langer Rast oder ein Heiltrank pro Arbeitstag bringt zum vollen Preis je 25 GM. Abnehmer: Saladins Laden, Stammkunden der Hand oder eine Stadt im Krieg, die Feuer und Heiltränke braucht. Siehe [[Werkstatt]].
+- **Die Werkstatt jeden Tag nutzen.** Ein Alchemistenfeuer pro langer Rast oder ein Heiltrank pro Arbeitstag bringt zum vollen Preis je 25 GM. Abnehmer: die Kräuterfrau, eine Stadt im Krieg, die Feuer und Heiltränke braucht, später Saladin. Siehe [[Werkstatt]].
 - **Die Belohnung vorher aushandeln.** Hilft ihr der belagerten Stadt, könnt ihr etwas verlangen: Gold, Handelsrechte, ein Lager oder ein Haus für die Hand. Nach dem Sieg ist eure Verhandlungsmacht kleiner.
 - **Der Ruf als Kapital.** Floshem ist ein Mystiker: Niemand weiß, was um ihn herum geschieht, aber als Held der Echsen und Riesen-Schlächter kann es nur Gutes sein (laut dir). Wer ihn um Rat, Schutz oder einen Gefallen bittet, zahlt in Gold oder in Gefälligkeiten. Die vermummten, stummen Diener passen genau in dieses Bild.
 - **Beute verwerten.** Die rostigen Orc-Äxte bringen beim Händler wenig, als Metall oder als Ausrüstung für Verbündete vielleicht mehr.
 
 ## Beschaffen ohne Gold
 
-- **Erfragen:** Die Kräuterfrau (Kräuterkundeausrüstung), die Verstärkung aus der Stadt (Köcher, Proviant), Leon (gute Kleidung). Ein Held, der freundlich fragt, bekommt oft mehr als ein Kunde.
+- **Erfragen:** Die Kräuterfrau (Kräuterkundeausrüstung), Leonidas' Heer (Köcher, Proviant), Leon (gute Kleidung). Ein Held, der freundlich fragt, bekommt oft mehr als ein Kunde.
 - **Herstellen:** Pfeile mit Holzschnitzwerkzeug (1 GM, bis zu 20 pro langer Rast), Alchemie mit deinem Werkzeug, Heiltränke mit Kräuterkunde. Die Trance gibt dir jeden Tag die passende Übung.
 - **Klauen, aber bei Feinden:** Pfeile, Köcher und Proviant aus Orc-Lagern. Dein Vertrauter trägt Kleines, der [[Unsichtbarer Diener|Unsichtbare Diener]] öffnet Kisten und trägt bis zu 13 kg, aber was er trägt, sieht man. In Fingerfertigkeit bist du nicht geübt (+1), lass also lieber die Diener arbeiten.
 - **Einsammeln:** Nach jedem Kampf findest du in 1 Minute die Hälfte der verschossenen Pfeile wieder.
@@ -55,7 +55,7 @@ Welche Einträge auf dem Einkaufszettel ohne Gold gehen, steht dort bei „Wie?�
 - **Die Verfolger erst entwaffnen:** Ihre Steine tragen *Verständigung*. Wer sie stellt, nimmt zuerst die Steine, dann landet die nächste Nachricht der Society bei euch. Mehr bei [[Die Sumpfschuppen]].
 - **Einen lebend fangen:** Lucira liest Gedanken. Ein Gefangener verrät vielleicht, wer Farlir ist und wohin die Seelen gehen. Vielleicht ist Farlir sogar einer der drei Verfolger.
 - **Den Echsen berichten:** [[Crush Lu]] und die Echsen sollten erfahren, wer ihre Krieger jagt. Das stärkt euer Bündnis und deinen Ruf als ihr Held.
-- **Beweise für den Rat von Freistadt:** Der Rat streitet über die Society. Beweise für den Seelenraub könnten ihn gegen sie wenden, und ihr hättet Freunde im Rat, wenn ihr dort einen Laden eröffnet.
+- **Beweise für den Rat von Freistadt:** Der Rat streitet über die Society. Beweise für den Seelenraub könnten ihn gegen sie wenden, und ihr hättet Freunde im Rat, wenn ihr dort Saladins Laden erwerbt.
 
 ## Die Fee und das Reittier
 
@@ -64,15 +64,16 @@ Welche Einträge auf dem Einkaufszettel ohne Gold gehen, steht dort bei „Wie?�
 
 ## Haus Lhaaz und die Intrige
 
-- **Wer ist „Graf Lhaaz“?** Achte darauf, wie [[Leonidas Lhaaz|Leonidas]] über Lisbeth spricht und wie Lisbeth über ihre Brüder. [[Cam Buckland|Cam]] wüsste vielleicht, wer die Zafferas bezahlt hat, aber du schuldest ihm schon etwas.
-- **Lisbeth als Verbündete.** Ihr habt sie gerettet, und sie wird milder. Laut Aella ist sie die wahre Matriarchin der Familie. Ein Hinweis auf den Anschlag zur rechten Zeit könnte sie auf eure Seite ziehen.
+- **Wer ist „Graf Lhaaz“?** Achte darauf, wie [[Leonidas Lhaaz|Leonidas]] über Lisbeth spricht und wie Lisbeth über ihre Brüder. [[Cam Buckland|Cam]] wüsste vielleicht, wer die Zafferas bezahlt hat, aber du schuldest ihm schon etwas. Wie du ihn sicher erreichst, steht bei Cam.
+- **Lisbeth als Verbündete.** Ihr habt sie gerettet und sie ist milder gestimmt, misstraut euch aber weiterhin, deshalb Lucira. Laut Aella ist sie die wahre Matriarchin der Familie. Ein Hinweis auf den Anschlag zur rechten Zeit könnte sie auf eure Seite ziehen.
 - **Leon stärken.** Er wächst in seine Rolle. Ein Leon, der dir vertraut, schützt euer Haus im oberen Ring und dein künftiges Labor.
 
 ## Die Unsichtbare Hand
 
-- **Ein erster Lehrling** über die Kräuterfrau, Phase 1 im [[Aufbauplan der Unsichtbaren Hand|Aufbauplan]]. Trag ihn im [[Netzwerk]] ein.
-- **Saladin bei Laune halten.** Er wird ungeduldig. Eine kurze Nachricht, dass ihr den Laden in Freistadt nicht vergessen habt, kostet wenig.
-- **Die neue Identität vor der nächsten Lhaaz-Karawane:** Verkleidungsausrüstung, später *Selbstverkleidung*. Siehe [[Neue Identität nach der Donnergarde]].
+- **Erst Einnahmen, dann ein Verwalter.** Er wirbt den Lehrling und alle anderen an, keiner außer ihm kennt dich. Vorher ein Druckmittel finden und einen Vorschuss zahlen. Siehe [[Aufbauplan der Unsichtbaren Hand|Aufbauplan]], die Leute trägst du im [[Netzwerk]] ein.
+- **Saladin bei Laune halten.** Er wird ungeduldig. Beim nächsten Treffen zeigen, dass ihr den Laden nicht vergessen habt, und fragen, ob er eine Spruchrolle *Verständigung* hat.
+- **Die Donnergarde ablegen**, bevor die nächste Lhaaz-Karawane kommt: öffentlich austreten und etwas Eigenes machen, am besten nach der Befreiung der Stadt. Siehe [[Neue Identität nach der Donnergarde]].
+- **Cam nach dem Mönchsmeister fragen**, sobald ihr einen sicheren Weg habt. Siehe [[Cam Buckland]].
 
 ## Rätsel, die du anstoßen kannst
 

@@ -18,6 +18,13 @@ imageFocus: 50% 18%
 - Ist laut dir wohl die **Nummer 2 der [[Die Teufelsjäger|Teufelsjäger]]**. Echsenmenschen zu jagen, ist unter ihrer Würde.
 - Hat einen gebundenen Drachen namens **Krümel**.
 
+## Wem sie misstraut (laut dir, 09.11.2026)
+- **Euch beiden:** Lisbeth misstraut euch und hat Lucira deshalb geholt. Lucira misstraut euch ebenfalls.
+- **Der Fee und Fridolin**, weil die beiden sich euch gerade anbiedern.
+- **Twee** ab und zu.
+
+**Für dich:** Was sie in euren Köpfen liest, kann bei Lisbeth landen. Pläne nur in Twees Hütte oder allein durchdenken. Dass sie auch der Fee und Fridolin misstraut, heißt: Sie prüft die ganze Gruppe, nicht nur dich.
+
 ## Was sie getan hat
 - Las auf dem Riesenthron im [[Der Magische Turm|Turm]] ein Siegel und löste es dabei aus. So kam die Begegnung mit dem [[Das Wesen hinter dem Siegel|Wesen hinter dem Siegel]] zustande.
 - Las auf dem Schwert eines Riesen zwei Runen: **schützen** und **schneiden**.

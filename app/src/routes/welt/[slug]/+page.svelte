@@ -8,6 +8,8 @@
 	import type { FamilyTree as Tree } from '$lib/types';
 
 	const w = $derived(campaign.data.world.find((x) => x.slug === page.params.slug));
+	/** Bild, das sich nicht laden ließ (noch nicht erzeugt): ausblenden */
+	let brokenImage = $state('');
 	const links = $derived(w ? (campaign.data.backlinks[`world:${w.slug}`] ?? []) : []);
 	const journal = $derived(links.filter((l) => l.kind === 'Journal'));
 	const quests = $derived(links.filter((l) => l.kind === 'Quest'));
@@ -44,9 +46,9 @@
 		{#each trees.filter((x) => x.world === w.slug) as tree (tree.id)}{@render treePanel(tree, true)}{/each}
 		<div class="grid gap-6 lg:grid-cols-[1fr_320px]">
 			<article class="panel overflow-hidden p-6 lg:p-8">
-				{#if w.image}
+				{#if w.image && brokenImage !== w.image}
 					<figure class="-mx-6 -mt-6 mb-5 lg:-mx-8 lg:-mt-8">
-						<img src="/api/assets/{w.image}" alt={w.name} class="aspect-[16/9] max-h-[440px] w-full object-cover" style="object-position: {w.imageFocus ?? '50% 30%'}" />
+						<img src="/api/assets/{w.image}" alt={w.name} class="aspect-[16/9] max-h-[440px] w-full object-cover" style="object-position: {w.imageFocus ?? '50% 30%'}" onerror={() => (brokenImage = w.image ?? '')} />
 						<figcaption class="px-6 pt-1.5 text-right text-[0.65rem] text-ink-3 lg:px-8">KI-Bild, ein Stimmungsbild: Details sind nicht Kanon</figcaption>
 					</figure>
 				{/if}

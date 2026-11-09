@@ -35,3 +35,5 @@ summary: Magier-Organisation mit fünf Untergruppen. Gegründet gegen das Imperi
   - die **Adleraugen** im Osten
   - die **Totengräber**, deren Gebiet ihr nicht kennt. *Theorie:* Nekromanten.
 - Freistadt und die Freistaaten stehen im kalten Krieg mit dem Imperium.
+
+**Für dich:** Gegner bleiben, ein Druckmittel gewinnen oder beitreten und aufsteigen? Die Abwägung steht im [[Aufbauplan der Unsichtbaren Hand|Aufbauplan]].

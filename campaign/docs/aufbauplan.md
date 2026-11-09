@@ -10,55 +10,123 @@ updated: 2026-11-09
 # Aufbauplan der Unsichtbaren Hand
 
 > [!NOTE] Vorschlag
-> Ein Planungsdokument, kein Kanon. Alles hier sind Ideen, die du am Tisch erst umsetzen musst. Grundlage sind dein Lebensziel aus der [[Backstory]] und dein Besitz im Oktober 2026. Der Name „Die Unsichtbare Hand“ ist ebenfalls nur ein Vorschlag, nach Floshems Beinamen.
+> Ein Planungsdokument, kein Kanon. Alles hier musst du am Tisch erst umsetzen. Grundlage sind dein Lebensziel aus der [[Backstory]] und dein Stand am 09.11.2026. Der Name „Die Unsichtbare Hand“ ist nur ein Vorschlag, nach Floshems Beinamen.
 
-**Das Ziel:** eine eigene Organisation gründen und zur dominierenden Macht von [[Xantus]] aufsteigen. Nicht länger Handlanger der Zafferas sein, sondern selbst herrschen.
+**Das Ziel:** eine eigene Organisation, die dir gehört, statt Handlanger der Zafferas zu sein. Langfristig die dominierende Macht von [[Xantus]].
+
+## Wo du stehst (09.11.2026)
+
+- **Unterwegs:** Ihr zieht nach Westen, um die [[Die belagerte Stadt im Westen|belagerte Stadt]] zu befreien. Aufbauen kannst du erst, wenn ihr zurück in [[Die Siedlung|Dehubden]] seid.
+- **Geld:** 47 GM und 27 SM. Das reicht für Werkzeug, nicht für Personal: Ein gelernter Helfer kostet 2 GM am Tag, also rund 60 GM im Monat (Spielerhandbuch).
+- **Beobachtet:** [[Lisbeth Lhaaz|Lisbeth]] misstraut euch und hat deshalb [[Lucira]] geholt. Lucira liest Gedanken und misstraut euch ebenfalls, dazu der Fee, Fridolin und ab und zu Twee.
+- **Die Tarnung läuft ab:** Die nächste Schiffskarawane bringt die Nachricht vom Tod der echten [[Die Donnergarde|Donnergarde]] nach Xantus. Was dann an Floshem hängt, wird verdächtig.
 
 ## Was du schon hast
 
-| Ressource | Nutzen für die Organisation |
+| Ressource | Nutzen für die Hand |
 | :-- | :-- |
-| Haus im oberen Ring (noch im Bau) | Hauptquartier, darunter das [[Geheimes Kellerlabor|Kellerlabor]] |
-| Alchemistenwerkzeug, Grundsubstanzen, die [[Kontakte der Festung|Kräuterfrau]] | eigene Waren: Tränke, Gifte, später mehr |
-| 47 GM, 16 SM | Startkapital |
+| Haus im oberen Ring (im Bau), darunter das geplante [[Geheimes Kellerlabor|Kellerlabor]] | Sitz der Hand, ein Ort, an dem niemand mithört |
+| [[Werkstatt]]: Alchemistenwerkzeug und jeden Tag ein Trance-Werkzeug | eigene Waren: Tränke, Alchemie, Leder, Kleidung |
+| Die [[Kontakte der Festung|Kräuterfrau]] | Abnehmerin für Tränke und Gifte, Weg zu einem Lehrling. Laut dir fällt dein Gift nicht auf, weil du damit handeln darfst |
 | Ruf: „Held der Echsenmenschen“, „Riesenbezwinger, der Schlächter“ | Türöffner bei Leon, den Echsen und den Soldaten |
-| Ohrringe der Verständigung | sicherer Kanal zu Aella, über jede Entfernung |
-| Untote (3 Skelette auf dem Boot), vermummt in Gewändern aus Society-Uniformen und Orc-Kleidung | Wachen und Arbeiter ohne Verratsrisiko, die niemand auf den ersten Blick erkennt |
-| Kontakte: Kräuterfrau, der Gnom, der Jäger, [[Saladin]], [[Crush Lu]], [[Leon Lhaaz|Leon]] | Wissen, Handel, Schutz |
-| Saladins künftiger Laden in [[Die südliche Freistadt|Freistadt]] | legale Fassade, Umschlagplatz, Rabatt |
+| [[Verständigungsstein]] zu Leonidas, Ohrringe zu Aella | zwei Kanäle über jede Entfernung |
+| Untote: ein Orc-Skelett im Rucksack, zwei inaktive in eurer Unterkunft | Nachtwache und Arbeit, wo niemand hinsieht |
+| [[Cam Buckland]] in der alten Welt | Papiere, Identitäten und Nachrichten aus der Heimat, sobald ihr einen sicheren Weg zu ihm habt |
 
-## Rollen, die dir fehlen
+## Regeln für die Hand
 
-| Rolle | Aufgabe | Wo du sie finden könntest | Kosten (Spielerhandbuch) |
-| :-- | :-- | :-- | :-- |
-| Lehrling | Laborarbeit, Botengänge, Alchemie | über die Kräuterfrau, wie schon geplant | ungelernt 2 SM pro Tag |
-| Augen und Ohren | Gerüchte sammeln | Gemeinschaftsquartier, Hafen, Echsenlager vor dem unteren Ring | 2 SM pro Tag oder Gefälligkeiten |
-| Kurier | Nachrichten zwischen den Ringen und nach Freistadt | Bootsleute, Soldaten | Bote: 2 KM pro Meile |
-| Händler | Saladins Laden führen | in Freistadt anwerben | gelernt 2 GM pro Tag |
-| Muskeln | Schutz und Arbeit | Untote sofort, [[Die Orcs|Orcs]] nach dem Krieg gegen die Riesen | Untote: nur Zauberplätze |
-| Spion | Pläne der [[Sorcerer Society]] | *Selbstverkleidung* und Verkleidungsausrüstung | hohes Risiko |
+1. **Nur einer kennt dich.** Die Hand arbeitet in Zellen: Du sprichst nur mit deinem Verwalter, alle anderen kennen nur ihn. Wer gefangen wird, kann dich nicht verraten.
+2. **Erst Einnahmen, dann Leute.** Jeder Helfer kostet jeden Tag. Einstellen, wenn das Geld regelmäßig kommt.
+3. **Druckmittel vor Vertrauen.** Wer eingeweiht wird, hat dir vorher etwas in die Hand gegeben: Schulden bei dir, ein Geheimnis, eine Abhängigkeit. Dazu guter Lohn, damit er gar nicht erst an Verrat denkt.
+4. **Sichtbar ist nur, was legal ist:** Haus, Werkstatt, Handel mit der Kräuterfrau. Alles andere läuft über Mittelsleute.
+5. **Untote nur, wo niemand hinsieht.** Sie verraten nichts, aber ihr Anblick verrät dich (siehe [[Wer weiß was?]]).
+6. **Nichts in Luciras Nähe planen.** Was sie liest, kann bei Lisbeth landen.
+7. **Nicht gegen [[Nita]] arbeiten.** Sie eint Echsen und Menschen und ist die moralische Autorität der Stadt.
 
-## Geld
+## Ideale und Glaubenssätze (Vorschlag)
 
-Eine Organisation kostet laufend: Ein ungelernter Helfer bekommt 2 SM pro Tag, ein gelernter 2 GM (Spielerhandbuch). Was die Leute im [[Netzwerk]] pro Woche kosten, rechnet die Seite Netzwerk aus.
+**Wie D&D das macht:** Drei Werkzeuge. Die **Gesinnung** beschreibt, wie jemand handelt: gut oder böse, rechtschaffen oder chaotisch. **Ideale, Bindungen und Makel** aus dem Spielerhandbuch sagen, woran jemand glaubt, wem er sich verpflichtet fühlt und wo er schwach ist. Dazu kommt der **Glaube** an Götter, die in jeder Welt der DM festlegt. Welche es in Xantus gibt, ist eine Frage an den DM. Fraktionen in offiziellen Welten funktionieren genauso: Die Harfner kämpfen im Verborgenen gegen Tyrannei, die Zhentarim sind ein Netz aus Söldnern und Händlern. Jede hat ein Ziel, Glaubenssätze, Ränge und ein Erkennungszeichen.
 
-| Quelle | Was sie bringt | Haken |
+**Warum Ideale Kontrolle geben:** Geld kauft Arbeit, Druckmittel erzwingen Schweigen, aber nur eine gemeinsame Sache hält Leute, wenn es gefährlich wird. Wer an die Sache glaubt, wirbt selbst neue Leute an und verrät die Hand nicht.
+
+**Die Sache: Unrecht, das ihr selbst gesehen habt.**
+- **Seelenraub:** Die [[Die Sumpfschuppen|Sumpfschuppen]] rauben Echsenkriegern die Seelen. Du bist der „Held der Echsenmenschen“.
+- **Runensklaverei:** Die [[Die Riesen|Riesen]] versklaven [[Die Orcs|Orc-Stämme]] mit Runenmalen. Du hast einen Orc befreit.
+
+Daraus wird der Leitspruch **„Wir schützen, wen niemand schützt.“** Er zieht genau die Leute an, die du brauchst: Echsen, befreite Orcs, Ausgestoßene und alle, die verschwinden müssen.
+
+**Fünf Glaubenssätze:**
+1. **Schutz:** Die Hand schützt, wen niemand schützt.
+2. **Schweigen:** Was in der Hand geschieht, bleibt in der Hand. Wer sie verrät, verliert ihren Schutz.
+3. **Treue um Treue:** Die Hand vergisst niemanden, der ihr gedient hat.
+4. **Wissen:** Ein Geheimnis zur rechten Zeit ist mehr wert als Gold.
+5. **Unsichtbarkeit:** Die Hand braucht keinen Ruhm. Den Dank bekommen andere.
+
+**Ränge und Zeichen:**
+
+| Rang | Wer | Was er weiß |
 | :-- | :-- | :-- |
-| [[Werkstatt]] | Alchemistenfeuer oder Heiltrank, zum vollen Preis je 25 GM Gewinn pro Tag | Händler zahlen nur die Hälfte, dann bleibt nichts. Abnehmer zum vollen Preis findet ihr erst mit Laden oder Stammkunden |
-| Belohnungen | Gold, Rechte oder ein Haus von der belagerten Stadt, von Leon, von den Echsen | vorher aushandeln |
-| Floshems Ruf | Mystiker, Held der Echsen und Riesen-Schlächter: Bitten um Rat und Schutz, bezahlt in Gold oder Gefälligkeiten | Ein Ruf lässt sich schnell verspielen |
-| Beute | Waffen und Ausrüstung besiegter Feinde | bringt beim Händler die Hälfte |
-| Saladins Laden | legale Einnahmen in Freistadt | erst nach dem Handel mit Saladin |
+| **Die Hand** | du | alles |
+| **Die Handfläche** | der Verwalter | Leute und Aufträge, nicht dein Geheimnis |
+| **Die Finger** | Lehrling, Augen und Ohren, Boten | nur den eigenen Auftrag und den Verwalter |
 
-**Sparen statt ausgeben:** Vieles auf dem Einkaufszettel lässt sich erfragen, herstellen oder bei Feinden erbeuten. Siehe [[Ideen für die nächsten Sessions|Ideen]].
+- **Erkennungszeichen:** eine offene Hand, klein und unauffällig, etwa in einen Ring oder in Siegellack geprägt.
+- **Aufnahme:** ein Eid auf die fünf Sätze. Mit [[Geringfügige Illusion]] lässt du dabei eine Hand aus Licht erscheinen. Das vergisst keiner, und es kostet dich nichts.
 
-## Fünf Phasen
+**Haken:** Ideale binden auch dich. Bricht die Hand ihre eigenen Sätze, verliert sie ihre Leute, und Aella wird dich daran messen. Nach den Regeln raubt *Tote erwecken* keine Seele, es belebt nur den Körper. Das Spielerhandbuch nennt das Erschaffen von Untoten aber keine gute Tat, und wer von deinen Skeletten erfährt, wird kaum unterscheiden.
 
-1. **Fundament in Dehubden (jetzt):** Haus fertigstellen lassen, Kellerlabor planen, Lehrling über die Kräuterfrau anwerben. Erste Tränke brauen und verkaufen, das bringt Geld und einen Grund, Leute zu beschäftigen.
-2. **Adel (nach der Befreiung der Stadt):** Deine Erwartung: Wer die Stadt von Graf Leonidas befreit, wird adlig. Mit Land und Leuten wächst die Hand legal, siehe unten.
-3. **Das Netz (nach der Belagerung):** drei bis fünf Informanten im unteren Ring, am Hafen und im Echsenlager. Feste Treffzeiten, Nachrichten nur über Mittelsleute. Der Ruf als Riesenbezwinger öffnet die Türen der Soldaten.
-4. **Freistadt (Saladins Laden):** Der Handelsposten wird legale Fassade und Umschlagplatz. Laut Aella ist Freistadt ein „Schmelztiegel voller Söldner, Diebe und Ausgestoßener“: ideales Rekrutierungsgebiet.
-5. **Macht (langfristig):** Orcs nach dem Krieg eingliedern, wie du es schon planst. Die Echsen als Verbündete halten. Den Konflikt im [[Haus Lhaaz]] als Hebel nutzen: „Graf Lhaaz“ ließ Lisbeths Schiff überfallen, wohl einer ihrer eigenen Brüder (offen).
+## Der Weg in sechs Schritten
+
+1. **Unterwegs (jetzt): Ruf, Beute, Lohn.** Erst die Stadt befreien, dann aufbauen. Vorher mit [[Leonidas Lhaaz|Leonidas]] über den Verständigungsstein klären, was er euch dafür gibt. Unterwegs Material sammeln: Kräuter, Häute, Stoff, Society-Steine.
+2. **Zurück in Dehubden: Einnahmen.** Haus und Kellerlabor fertig, die Werkstatt liefert Tränke, Alchemie und Gifte an die Kräuterfrau. Das ist legal, bringt regelmäßig Geld und erklärt, warum bei dir Leute ein und aus gehen.
+3. **Der Verwalter, die erste Person der Hand.** Er führt Haus, Handel und Bücher und wirbt später alle anderen an. Bevor du ihn einweihst: ein Druckmittel sichern und ihm einen Vorschuss geben (siehe unten).
+4. **Die Donnergarde ablegen.** Bevor die Schiffskarawane kommt, öffentlich austreten und etwas Eigenes machen (siehe unten).
+5. **Adel, wenn Leonidas euch belohnt.** Land und Leute machen die Hand legal: Ein Gut braucht ohnehin einen Verwalter, Pächter, Bedienstete und Wachen. Niemand wundert sich, wenn dort Leute eingestellt werden.
+6. **Das Netz, danach.** Über den Verwalter: Augen und Ohren am Hafen, im Echsenlager und im Gemeinschaftsquartier, Boten zwischen den Ringen. Später die Orcs nach dem Krieg gegen die Riesen und die Echsen als Verbündete. Der Streit im [[Haus Lhaaz]] ist ein Hebel: „Graf Lhaaz“ ließ Lisbeths Schiff überfallen, wohl einer ihrer eigenen Brüder (offen).
+
+## Der Verwalter
+
+**Wen du suchst:** jemanden, der lesen, schreiben und rechnen kann, verschwiegen ist und einen Grund hat, dir treu zu sein. Gut geeignet ist, wer schon etwas zu verbergen hat oder ohne dich nichts hätte.
+
+| Druckmittel | Wie du es bekommst | Haken |
+| :-- | :-- | :-- |
+| **Schulden** | Du übernimmst seine Schulden, er zahlt sie mit Arbeit ab | Wer zu tief drinsteckt, wird verzweifelt |
+| **Ein Geheimnis** | Du erfährst etwas über ihn, das niemand wissen darf | Erpressung erzeugt Hass. Nur in der Hinterhand halten, nie aussprechen, solange er treu ist |
+| **Abhängigkeit** | Er verdankt dir Stelle, Haus oder Schutz, etwa als Flüchtling oder Ausgestoßener | Fällt weg, sobald er woanders mehr bekommt |
+| **Guter Lohn** | Mehr als üblich und pünktlich, dazu ein Vorschuss | Kostet laufend Geld |
+
+**Was er wissen darf:** dass Floshem ihn bezahlt und Stillschweigen erwartet. Nicht, was im Keller liegt, nicht deine Herkunft, nichts über die Zafferas.
+
+**Kosten:** Ein gelernter Helfer bekommt 2 GM am Tag (Spielerhandbuch). Mit einem Monat Vorschuss brauchst du rund 60 GM, also erst nach den ersten Einnahmen oder dem Lohn von Leonidas.
+
+**Wo du ihn findest:** über die Kräuterfrau, unter den Schreibern von Leons Verwaltung oder unter den Neuen der nächsten Schiffskarawane, die hier niemand kennt.
+
+> [!TIP] Erst prüfen, dann einweihen
+> Lass ihn eine Weile nur Haus und Handel führen. Gib ihm eine harmlose Information, die nur er kennt, und hör, ob sie irgendwo wieder auftaucht. Erst dann bekommt er Leute und Geheimnisse.
+
+## Die Donnergarde ablegen
+
+Laut [[Nachrichten vom DM|Cams Brief]] bestand die Donnergarde nur aus Khoraa und Floshem. Beitreten könnt ihr also nicht: Ihr *seid* die beiden, deren Tod bald bekannt wird. Weitere Mitglieder nennt er nicht.
+
+**Austreten und etwas Eigenes machen** ist der bessere Weg, am besten direkt nach der Befreiung der Stadt, wenn euer Ruf am größten ist, und mit dem Adelstitel als neuem Namen. Kommt dann die Nachricht „Die Donnergarde ist tot“, trifft sie einen Namen, den ihr schon abgelegt habt. Fragen bleiben, aber eure Taten stehen.
+
+**Was du dafür brauchst:** einen guten Grund (eigenes Haus, eigenes Land, Aellas Traum von einem ruhigeren Leben) und eine Geschichte, die zu Floshems Ruf passt: Der Mystiker geht seinen eigenen Weg.
+
+*Theorie:* Leon zuerst die Wahrheit zu sagen, könnte ihn zum Mitwisser statt zum Gegner machen. Cam schrieb selbst, ihr könntet die Namen nutzen, „um rüberzukommen und dann die Wahrheit zu erzählen“. Lisbeth würde es aber gegen euch verwenden.
+
+## Die Sorcerer Society: Gegner, Druckmittel oder Karriere?
+
+**Was ihr wisst:** Die [[Sorcerer Society]] sagt von sich, sie kämpfe seit 50 bis 60 Jahren gegen ein [[Das Imperium|Imperium]], das die Freistädte bedroht, und sitzt offiziell im Rat von [[Die südliche Freistadt|Freistadt]]. Ob das Imperium wirklich ein Tyrann ist, wisst ihr nur aus ihrem Mund. Gesehen habt ihr etwas anderes: Seelenraub an Echsenkriegern für ihre Anführer. *Theorie:* Beides kann stimmen, eine Fassade für den Rat und dunkle Arbeit im Verborgenen.
+
+| Weg | Was er bringt | Was dagegen spricht |
+| :-- | :-- | :-- |
+| **Gegner bleiben** und Beweise sammeln | Steine und Gefangene als Beweis für den Rat von Freistadt, Dank der Echsen, Freunde im Rat | Die Society jagt euch weiter |
+| **Druckmittel statt Beitritt** | Mit Beweisen für den Seelenraub in der Hinterhand verhandeln: euer Schweigen gegen Ruhe, Wissen oder Zauber | Wer eine Organisation erpresst, wird ihr Ziel. Nur über Mittelsleute |
+| **Beitreten und aufsteigen** | Zauber, Bibliotheken, Macht, ein Platz im Rat. Als Maulwurf das beste Ohr der Hand | Ihr habt gerade sechs ihrer Leute getötet, und die Verfolger haben deine Skelette gesehen. Seelenraub verträgt sich weder mit eurem Bündnis mit den Echsen noch mit Aella. Lucira gehört wohl zu den Teufelsjägern und misstraut euch |
+
+**Empfehlung:** Jetzt Gegner bleiben. Der Überfall auf die drei Verfolger bringt Steine und vielleicht Farlir als Beweis. Später ist das Druckmittel der klügste Weg, weil er zu den Regeln der Hand passt: Informationen zuerst. Beitreten nur als langes Spiel mit neuer Identität und erst, wenn euch niemand mehr mit den toten Sumpfschuppen verbindet.
+
+*Theorie:* Lucira könnte die Tür in die Society sein, wenn sie wirklich die Nummer 2 der Teufelsjäger ist. Sie arbeitet aber für Lisbeth.
 
 ## Adel: was ein Titel der Hand bringt
 
@@ -67,38 +135,54 @@ Eine Organisation kostet laufend: Ein ungelernter Helfer bekommt 2 SM pro Tag, e
 | Was ein Adliger hat | Wofür die Hand es nutzt |
 | :-- | :-- |
 | **Land** | Kräutergärten für die Werkstatt, Weide für das Reittier, eine Gerberei und eine Schneiderstube als legale Betriebe |
-| **Leute** | Pächter, Bedienstete und Wachen, die bezahlt für dich arbeiten, ohne zu wissen, wofür. Aus ihnen wählst du die ersten Eingeweihten |
+| **Leute** | Pächter, Bedienstete und Wachen, die bezahlt für dich arbeiten, ohne zu wissen, wofür. Der Verwalter wählt aus ihnen die ersten Eingeweihten |
 | **Recht** | Abgaben, Wegerecht und ein Wort im Rat der Lhaaz. Wer Recht spricht, erfährt, was im Land vorgeht |
-| **Ruf** | Ein Adliger mit stummen, vermummten Dienern gilt als eigen, nicht als verdächtig. Floshem, der Mystiker, passt dazu |
+| **Ruf** | Ein Adliger mit stummen, vermummten Dienern gilt als eigen, nicht als verdächtig |
 | **Einnahmen** | Pacht und die Waren der eigenen Betriebe statt einzelner Verkäufe aus der Werkstatt |
 
-**Haken:** Ein Lehen bindet euch an die Lhaaz, Neider kommen mit dem Titel, und [[Lisbeth Lhaaz|Lisbeth]] sieht genauer hin, je mächtiger ihr werdet.
+**Haken:** Ein Lehen bindet euch an die Lhaaz, Neider kommen mit dem Titel, und Lisbeth sieht genauer hin, je mächtiger ihr werdet.
 
-**Vorher aushandeln:** Bevor ihr die Stadt befreit, mit Leonidas über den [[Verständigungsstein]] klären, was er euch dafür gibt.
+## Wer später dazukommt
 
-## Regeln für die Hand
+Alle wirbt der Verwalter an, keiner kennt dich. Die Leute trägst du auf der Seite [[Netzwerk]] ein.
 
-- **Keine Spur zu dir.** Anwerben nur über Mittelsleute. Floshem ist aufgeflogen, die Hand braucht kein Gesicht.
-- **Sichtbar bleibt nur, was legal ist:** Haus, Labor, Lehre, Laden. [[Lisbeth Lhaaz|Lisbeth]] beobachtet euch, und [[Lucira]] liest Gedanken.
-- **Informationen zuerst, Gold danach.** Ein Gerücht zur rechten Zeit ist mehr wert als eine Kiste Münzen.
-- **Untote für alles, was niemand sehen darf.** Sie reden nicht und laufen nicht über.
-- **Nicht gegen [[Nita]] arbeiten.** Sie ist die moralische Autorität der Stadt und eint Echsen und Menschen.
+| Rolle | Aufgabe | Wo | Kosten (Spielerhandbuch) |
+| :-- | :-- | :-- | :-- |
+| Lehrling | Labor, Kräuter, Botengänge | über die Kräuterfrau | ungelernt 2 SM am Tag |
+| Augen und Ohren | Gerüchte sammeln | Hafen, Echsenlager, Gemeinschaftsquartier | 2 SM am Tag oder Gefälligkeiten |
+| Bote | Nachrichten in der Stadt und zwischen den Ringen | Bootsleute, Laufburschen | 2 KM pro Meile |
+| Wachen | Haus, später das Gut | mit dem Titel ganz offiziell | ungelernt 2 SM am Tag |
+
+**Bewusst nicht dabei:**
+- **Ein Spion bei der [[Sorcerer Society]]:** Sie jagt euch bereits. Wer dort schnüffelt, ist tot oder verrät euch.
+- **Ein eigener Händler in Freistadt:** Der Laden dort gehört [[Saladin]]. Ihr besorgt ihn für ihn und bekommt dafür Rabatt und einen Abnehmer, mehr nicht.
+
+## Geld
+
+| Quelle | Was sie bringt | Haken |
+| :-- | :-- | :-- |
+| [[Werkstatt]] | Tränke, Alchemie, Leder und Kleidung zum vollen Preis | Händler zahlen nur die Hälfte. Lohnend erst mit festen Abnehmern wie der Kräuterfrau |
+| Lohn für die Befreiung | Gold, Rechte, Land, vielleicht ein Titel | vorher aushandeln |
+| Beute | Waffen, Ausrüstung, Material | beim Händler die Hälfte wert |
+| Saladin | Rabatt im Laden und ein Abnehmer in Freistadt | erst nach dem Handel mit ihm |
 
 ## Risiken
 
-- **Lisbeth und Lucira:** Lucira kann Gedanken lesen. Pläne nicht in ihrer Nähe besprechen.
-- **Die Runenmale der Riesen:** Wer mit markierten Orcs arbeitet, wird belauscht. Wichtiges nur in einer winzigen Hütte besprechen.
-- **Aella:** Sie träumt von einem Leben ohne ständige Gewalt und sieht mit Sorge, wie du dich an Macht berauschst (Backstory). Zu skrupellose Schritte könnten euer Bündnis belasten. Ein Rollenspiel-Konflikt, den du bewusst einsetzen kannst.
-- **Die Society:** Ein Netzwerk, das gegen sie arbeitet, wird früher oder später ihr Ziel.
+- **Lisbeth und Lucira:** Lucira liest Gedanken und misstraut euch. Pläne nur in Twees Hütte oder allein besprechen.
+- **Die Runenmale der Riesen:** Wer mit markierten Orcs arbeitet, wird belauscht.
+- **Aella:** Sie träumt von einem Leben ohne ständige Gewalt und sieht mit Sorge, wie du dich an Macht berauschst (Backstory). Zu skrupellose Schritte belasten euer Bündnis. Das kannst du im Rollenspiel bewusst einsetzen.
+- **Die Society** hat euch im Blick, seit die Sumpfschuppen Alarm geschlagen haben.
+- **Der Mönchsmeister** hat die echte Donnergarde gefunden. Ob er euch nach Xantus folgt, weiß vielleicht [[Cam Buckland|Cam]].
 
 ## Nächste Schritte
 
-- [ ] Beim DM nachfragen, wie weit das Haus im oberen Ring ist
-- [ ] Lehrling über die Kräuterfrau anwerben
-- [ ] Mit dem DM klären, was du mit dem Alchemistenwerkzeug herstellen darfst
-- [ ] Holzschnitzwerkzeug (1 GM) besorgen: bis zu 20 Pfeile pro langer Rast für die Bogen-Skelette
-- [ ] Vor der Schlacht um die Stadt eine Belohnung aushandeln
-- [ ] Einen ersten Informanten im unteren Ring gewinnen
-- [ ] Lage und Preis für Saladins Laden in Freistadt erkunden
+- [ ] Mit Leonidas den Lohn für die Befreiung klären (Verständigungsstein)
+- [ ] Unterwegs Material sammeln: Kräuter, Häute, Stoff
+- [ ] Zurück in Dehubden beim DM nachfragen, wie weit das Haus ist
+- [ ] Mit der Kräuterfrau einen festen Handel vereinbaren (Tränke und Gifte)
+- [ ] Einen Verwalter suchen und ein Druckmittel finden, bevor du ihn einweihst
+- [ ] Entscheiden, wann ihr die Donnergarde ablegt, spätestens vor der nächsten Schiffskarawane
+- [ ] Einen sicheren Weg zu Cam finden und ihn nach dem Mönchsmeister fragen
+- [ ] Die fünf Glaubenssätze mit Aella besprechen, bevor jemand den Eid schwört
 
 Siehe auch die Quest [[Die Organisation gründen]].

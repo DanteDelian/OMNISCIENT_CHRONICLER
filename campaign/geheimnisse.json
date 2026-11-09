@@ -1,6 +1,6 @@
 {
   "ruf": "Für die Leute ist Floshem ein **Mystiker**: Niemand weiß, was um ihn herum geschieht, aber als **Held der Echsen** und **Riesen-Schlächter** kann es nur Gutes sein (laut dir, 20.10.2026). Seit dem 11.10.2026 nennt man euch „Held der Echsenmenschen“ und „Riesenbezwinger, der Schlächter“. Die stummen, vermummten Diener passen genau in dieses Bild.",
-  "gefahren": "- **[[Lucira]] liest Gedanken** und ist seit dem 08.11.2026 wieder bei euch. Pläne nie in ihrer Nähe durchdenken.\n- **[[Lisbeth Lhaaz|Lisbeth]] beobachtet euch** mit Argusaugen, seit sie euch Hochstapler genannt hat.\n- **Die Society weiß von euch:** Der Anführer der [[Die Sumpfschuppen|Sumpfschuppen]] schlug am 08.11.2026 über seinen Verständigungsstein Alarm, drei Verfolger lagern in Sichtweite.\n- **Die Riesen hören mit:** Über die Runenmale versklavter Orcs belauschen sie, was in deren Nähe gesagt wird. Wichtiges nur in einer winzigen Hütte besprechen.\n- **Die nächste Schiffskarawane** bringt die Nachricht vom Tod der echten Donnergarde nach Xantus.",
+  "gefahren": "- **[[Lucira]] liest Gedanken** und ist seit dem 08.11.2026 wieder bei euch. Sie misstraut euch, der Fee, Fridolin und ab und zu Twee und berichtet wohl an Lisbeth. Pläne nie in ihrer Nähe durchdenken.\n- **[[Lisbeth Lhaaz|Lisbeth]] beobachtet euch** mit Argusaugen, seit sie euch Hochstapler genannt hat.\n- **Die Society weiß von euch:** Der Anführer der [[Die Sumpfschuppen|Sumpfschuppen]] schlug am 08.11.2026 über seinen Verständigungsstein Alarm, drei Verfolger lagern in Sichtweite.\n- **Die Riesen hören mit:** Über die Runenmale versklavter Orcs belauschen sie, was in deren Nähe gesagt wird. Wichtiges nur in einer winzigen Hütte besprechen.\n- **Die nächste Schiffskarawane** bringt die Nachricht vom Tod der echten Donnergarde nach Xantus.",
   "secrets": [
     {
       "id": "donnergarde",
@@ -30,7 +30,7 @@
         },
         {
           "who": "Lucira",
-          "how": "von Lisbeth geholt, wohl um euch als Donnergarde zu prüfen"
+          "how": "von Lisbeth geholt, weil Lisbeth euch misstraut. Lucira misstraut euch selbst auch (laut dir, 09.11.2026)"
         }
       ],
       "links": [
@@ -192,12 +192,11 @@
     {
       "id": "gift",
       "title": "Drei Portionen Gift",
-      "status": "sicher",
+      "status": "archiv",
       "truth": "In deinem Gepäck liegen drei Portionen Gift. Art und Wirkung sind nicht notiert.",
-      "risk": "Ein Fund bei einer Durchsuchung ließe sich kaum erklären.",
       "knownBy": [],
       "suspects": [],
-      "note": "**Offen:** Woher stammt das Gift, und wer weiß davon?",
+      "note": "Laut dir (09.11.2026) kein Problem: Du darfst mit Gift handeln und stellst es für die Kräuterfrau her. Deshalb im Archiv. **Offen:** Woher stammen die drei Portionen, und was bewirken sie?",
       "links": []
     }
   ]

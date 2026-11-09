@@ -4,7 +4,7 @@ aliases: [Lisbeth, Lizbeth, Tantchen Lisbeth]
 kind: person
 group: lhaaz
 tone: neutral
-status: Lebt, milder gestimmt, beobachtet euch
+status: Lebt, milder gestimmt, misstraut euch weiterhin
 summary: Schwester des Erzherzogs und von Leonidas, Tante von Leon und Lula. Von euch gerettet, hält euch für Hochstapler, ist inzwischen aber milder gestimmt.
 ---
 # Lisbeth Lhaaz („Tantchen Lisbeth“)
@@ -25,5 +25,5 @@ summary: Schwester des Erzherzogs und von Leonidas, Tante von Leon und Lula. Von
 
 ## Seit Juli 2026
 - Eure Verdienste um die Echsen und die erledigten Aufträge haben sie **milder gestimmt**. Ihr bleibt aber unter Beobachtung.
-- Sie hat [[Lucira]] geholt, um Leon zu unterstützen und wohl euch zu prüfen.
+- Sie hat [[Lucira]] geholt, um Leon zu unterstützen und euch zu prüfen: Sie misstraut euch weiterhin (laut dir, 09.11.2026).
 - **11.10.2026:** Lisbeth **erinnert sich nicht mehr** an [[Fridolin vom See|Fridolin]], Lucira und [[Die Fee|die Fee]]. Ihr habt sie gewarnt und gebeten durchzuzählen. Siehe [[Die verschwundenen Gefährten]].

@@ -26,3 +26,4 @@ imageFocus: 50% 22%
 - **Ihre Bitte:** Du sollst ihr helfen, in ihre Dimension zurückzukehren oder ihren Alkoholgeruch loszuwerden. Du hast es versprochen. Sie meint, die [[Die Teufelsjäger|Teufelsjäger]] wüssten etwas darüber. Siehe [[Die Fee nach Hause bringen]].
 - Aus der Fluchtrichtung des Anführers hat sie Stimmen gehört.
 - Mit *Tierfreundschaft* gewann sie [[Das Reittier]].
+- [[Lucira]] misstraut ihr, weil sie sich euch gerade anbiedert (laut dir, 09.11.2026).

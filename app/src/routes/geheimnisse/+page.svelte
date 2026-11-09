@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { EyeOff, Eye, Plus, Pencil, Trash2, ShieldCheck, ShieldAlert, ShieldX, Sparkles, TriangleAlert, Users, X } from '@lucide/svelte';
+	import { Archive, EyeOff, Eye, Plus, Pencil, Trash2, ShieldCheck, ShieldAlert, ShieldX, Sparkles, TriangleAlert, Users, X } from '@lucide/svelte';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import Markdown from '$lib/components/Markdown.svelte';
 	import RefChip from '$lib/components/RefChip.svelte';
@@ -12,14 +12,18 @@
 	const STATUS: Record<Secret['status'], { label: string; hint: string; color: string; icon: typeof ShieldCheck }> = {
 		sicher: { label: 'Sicher', hint: 'nur Eingeweihte', color: 'var(--color-life)', icon: ShieldCheck },
 		gefaehrdet: { label: 'Gefährdet', hint: 'jemand ahnt es oder es kann herauskommen', color: 'var(--color-warn)', icon: ShieldAlert },
-		aufgeflogen: { label: 'Aufgeflogen', hint: 'öffentlich bekannt', color: 'var(--color-blood)', icon: ShieldX }
+		aufgeflogen: { label: 'Aufgeflogen', hint: 'öffentlich bekannt', color: 'var(--color-blood)', icon: ShieldX },
+		archiv: { label: 'Archiv', hint: 'kein Geheimnis mehr, nur zur Erinnerung', color: 'var(--color-ink-3)', icon: Archive }
 	};
 
 	const g = $derived(campaign.data.geheimnisse);
 	const secrets = $derived(g.secrets);
+	/** Archivierte Geheimnisse stehen nicht in der Tabelle, nur unten zur Erinnerung */
+	const active = $derived(secrets.filter((s) => s.status !== 'archiv'));
+	const archived = $derived(secrets.filter((s) => s.status === 'archiv'));
 
 	/** Alle Mitwisser, wer am meisten weiß zuerst */
-	const people = $derived(witnesses(secrets));
+	const people = $derived(witnesses(active));
 	/** Klick in der Tabelle: nichts → ahnt → weiß → nichts. Die Begründung bleibt beim Wechsel erhalten. */
 	function cycle(s: Secret, who: string) {
 		campaign.change('geheimnisse', (d) => {
@@ -138,7 +142,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				{#each secrets as s (s.id)}
+				{#each active as s (s.id)}
 					{@const st = STATUS[s.status]}
 					<tr class="group">
 						<td class="sticky left-0 z-10 border-t border-line bg-panel py-2 pr-3">
@@ -168,10 +172,9 @@
 </section>
 
 <!-- Die Geheimnisse -->
-<div class="mt-6 grid gap-4 lg:grid-cols-2">
-	{#each secrets as s (s.id)}
+{#snippet card(s: Secret)}
 		{@const st = STATUS[s.status]}
-		<article id={s.id} class="panel scroll-mt-24 p-5">
+		<article id={s.id} class="panel scroll-mt-24 p-5 {s.status === 'archiv' ? 'opacity-75' : ''}">
 			<header class="flex items-start justify-between gap-3">
 				<div class="min-w-0">
 					<span class="badge" style="--c: {st.color}"><st.icon size={11} />{st.label}</span>
@@ -227,8 +230,17 @@
 				{/if}
 			</div>
 		</article>
-	{/each}
+{/snippet}
+<div class="mt-6 grid gap-4 lg:grid-cols-2">
+	{#each active as s (s.id)}{@render card(s)}{/each}
 </div>
+{#if archived.length}
+	<h2 class="title-display mt-8 mb-1 flex items-center gap-2 text-2xl"><Archive size={18} class="text-ink-3" />Archiv</h2>
+	<p class="mb-3 text-xs text-ink-3">Kein Geheimnis mehr. Steht hier nur, damit nichts verloren geht.</p>
+	<div class="grid gap-4 lg:grid-cols-2">
+		{#each archived as s (s.id)}{@render card(s)}{/each}
+	</div>
+{/if}
 
 <Modal open={!!editing} title={isNew ? 'Neues Geheimnis' : 'Geheimnis bearbeiten'} subtitle="Nur was belegt ist. Vermutungen als *Theorie:*, offene Punkte als **Offen:**." onclose={() => (editing = null)} width="max-w-2xl">
 	{#if editing}

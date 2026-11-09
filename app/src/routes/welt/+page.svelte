@@ -8,6 +8,8 @@
 
 	let kind = $state<'alle' | 'person' | 'fraktion' | 'ort'>('alle');
 	let q = $state('');
+	/** Bilder, die sich nicht laden ließen (noch nicht erzeugt) */
+	let broken = $state<string[]>([]);
 
 	const world = $derived(campaign.data.world);
 	const backlinks = $derived(campaign.data.backlinks);
@@ -72,8 +74,8 @@
 					{@const refs = backlinks[`world:${w.slug}`]?.length ?? 0}
 					<a href="/welt/{w.slug}" class="panel panel-hover relative flex flex-col overflow-hidden p-4" data-ref="world:{w.slug}">
 						<span class="absolute inset-y-0 left-0 w-1" style="background: {t.color}"></span>
-						{#if w.image}
-							<img src="/api/assets/{w.image}" alt="" loading="lazy" class="-mx-4 -mt-4 mb-3 h-28 w-[calc(100%+2rem)] max-w-none object-cover" style="object-position: {w.imageFocus ?? '50% 30%'}" />
+						{#if w.image && !broken.includes(w.image)}
+							<img src="/api/assets/{w.image}" alt="" loading="lazy" class="-mx-4 -mt-4 mb-3 h-28 w-[calc(100%+2rem)] max-w-none object-cover" style="object-position: {w.imageFocus ?? '50% 30%'}" onerror={() => (broken = [...broken, w.image ?? ''])} />
 						{/if}
 						<div class="flex items-center gap-2">
 							<span class="badge" style="--c: {t.color}">{KIND_LABEL[w.kind]}</span>

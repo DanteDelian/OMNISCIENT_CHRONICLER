@@ -5,13 +5,16 @@ kind: person
 group: gruppe
 tone: ally
 status: Gefährtin · Barbarin 5
-summary: Bronzene Drachenblütige und Sturmherold, Valerius' Partnerin seit Oakhaven.
+summary: Drachenblütige Barbarin (Sturmherold) mit Drachenschwanz, Valerius' Partnerin seit Oakhaven.
 image: aella.webp
 imageFocus: 50% 8%
 ---
 # Aella Rayann „Khoraa“ Stormscale
 
-**Bronzene Drachenblütige · Barbarin (Pfad des Sturmherolds) · Valerius' Partnerin und loyalste Verbündete.**
+**Drachenblütige · Barbarin (Pfad des Sturmherolds) · Valerius' Partnerin und loyalste Verbündete.**
+
+- **Aussehen (laut dir, 09.11.2026):** rote Schuppen und, ungewöhnlich für Drachenblütige, ein Drachenschwanz.
+- **Offen:** Ihr Bogen und die Backstory nennen sie bronzen, daher die Blitzresistenz. Rote Schuppen bei bronzener Abstammung, oder ist sie rot (dann Feuer statt Blitz)? Frage an den Tisch.
 
 > **Name:** Aella Rayann, wie in ihren eigenen Dokumenten (von Patrick bestätigt am 12.10.2026). In Valerius' Backstory heißt sie noch *Draka „Drake“ Stormscale*.
 

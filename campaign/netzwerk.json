@@ -1,46 +1,39 @@
 {
   "roles": [
     {
+      "id": "verwalter",
+      "label": "Verwalter",
+      "task": "Führt Haus, Handel und Bücher und wirbt alle anderen an. Kennt als Einziger dich",
+      "where": "über die [[Kontakte der Festung|Kräuterfrau]], unter Leons Schreibern oder Neuen der nächsten Schiffskarawane",
+      "cost": "gelernt 2 GM pro Tag, dazu ein Vorschuss"
+    },
+    {
       "id": "lehrling",
       "label": "Lehrling",
-      "task": "Laborarbeit, Botengänge, Alchemie",
-      "where": "über die [[Kontakte der Festung|Kräuterfrau]], wie schon geplant",
+      "task": "Labor, Kräuter, Botengänge",
+      "where": "über die [[Kontakte der Festung|Kräuterfrau]], angeworben vom Verwalter",
       "cost": "ungelernt 2 SM pro Tag"
     },
     {
       "id": "augen",
       "label": "Augen und Ohren",
       "task": "Gerüchte sammeln",
-      "where": "Gemeinschaftsquartier, Hafen, Echsenlager vor dem unteren Ring",
+      "where": "Hafen, Echsenlager, Gemeinschaftsquartier, angeworben vom Verwalter",
       "cost": "2 SM pro Tag oder Gefälligkeiten"
     },
     {
-      "id": "kurier",
-      "label": "Kurier",
-      "task": "Nachrichten zwischen den Ringen und nach Freistadt",
-      "where": "Bootsleute, Soldaten",
-      "cost": "Bote: 2 KM pro Meile"
+      "id": "bote",
+      "label": "Bote",
+      "task": "Nachrichten in der Stadt und zwischen den Ringen",
+      "where": "Bootsleute, Laufburschen, angeworben vom Verwalter",
+      "cost": "2 KM pro Meile"
     },
     {
-      "id": "haendler",
-      "label": "Händler",
-      "task": "[[Saladin]]s Laden führen",
-      "where": "in [[Die südliche Freistadt|Freistadt]] anwerben",
-      "cost": "gelernt 2 GM pro Tag"
-    },
-    {
-      "id": "muskeln",
-      "label": "Muskeln",
-      "task": "Schutz und Arbeit",
-      "where": "Untote sofort, [[Die Orcs|Orcs]] nach dem Krieg gegen die Riesen",
-      "cost": "Untote: nur Zauberplätze"
-    },
-    {
-      "id": "spion",
-      "label": "Spion",
-      "task": "Pläne der [[Sorcerer Society]]",
-      "where": "*Selbstverkleidung* und Verkleidungsausrüstung",
-      "cost": "hohes Risiko"
+      "id": "wachen",
+      "label": "Wachen",
+      "task": "Haus, später das Gut",
+      "where": "mit dem Adelstitel ganz offiziell",
+      "cost": "ungelernt 2 SM pro Tag"
     }
   ],
   "agents": []

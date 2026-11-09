@@ -21,7 +21,7 @@
     "status": "aktiv",
     "urgent": true,
     "kind": "Bedrohung",
-    "next": "Drei Verfolger lagern etwa 100 m von eurem Nachtlager am Rand der Wüste. Entkommen oder stellen. Wer sie stellt, nimmt zuerst ihre Steine: Über sie kommt die nächste Nachricht der Society bei euch an statt bei ihnen. Ist Farlir unter ihnen, lohnt es sich, ihn lebend zu fangen: Lucira liest Gedanken, und er weiß, wohin die Seelen gehen. Rechne bei ihm mit mehr als beim Anführer, der schon Schuppen-Parade und *Nebelschritt* hatte.",
+    "next": "**Plan für die nächste Session:** die drei Verfolger schleichend überrumpeln, während einer Wache hält. Briefing im [[Taktik-Handbuch]]. Drei Verfolger lagern etwa 100 m von eurem Nachtlager am Rand der Wüste. Entkommen oder stellen. Wer sie stellt, nimmt zuerst ihre Steine: Über sie kommt die nächste Nachricht der Society bei euch an statt bei ihnen. Ist Farlir unter ihnen, lohnt es sich, ihn lebend zu fangen: Lucira liest Gedanken, und er weiß, wohin die Seelen gehen. Rechne bei ihm mit mehr als beim Anführer, der schon Schuppen-Parade und *Nebelschritt* hatte.",
     "notes": "Die [[Die Sumpfschuppen|Sumpfschuppen]], eine Untergruppe der [[Sorcerer Society]], jagen Echsenkrieger und rauben ihre Seelen für ihre Anführer. Am 08.11.2026 habt ihr sechs von ihnen besiegt, ihr Anführer schlug vorher über seinen Verständigungsstein Alarm, unter dem Vorwand einer stündlichen Meldung mit Passwort. *Theorie (deine, 09.11.2026):* Einer der drei Verfolger trägt das Gegenstück zum Stein des Anführers, deshalb waren sie so schnell da. Vielleicht ist sogar „Farlir“ selbst unter ihnen, die Nummer eins der Sumpfschuppen. **Offen:** Wer ist Farlir, und wohin gehen die Seelen?",
     "links": [
       "Die Sumpfschuppen",
@@ -77,8 +77,8 @@
     "title": "Neue Identität nach der Donnergarde",
     "status": "aktiv",
     "kind": "Bedrohung",
-    "next": "Vor Ankunft der nächsten Lhaaz-Schiffskarawane eine neue Tarnung oder einen neuen Plan haben.",
-    "notes": "Der Maskierte Mönchsmeister hat die versteckten Leichen der echten Donnergarde gefunden. Der Schwindel ist öffentlich. Bausteine: Verkleidungsausrüstung (25 GM) und *Selbstverkleidung* als möglicher Zauber. Die 3 Society-Uniformen stecken inzwischen in den Vermummungen deiner Skelette.\n\n**Stand Oktober 2026:** Euer Ruf trägt inzwischen: „Held der Echsenmenschen“, „Riesenbezwinger, der Schlächter“. Lisbeth hält euch weiter für Hochstapler, ist aber milder gestimmt.",
+    "next": "Vor der nächsten Lhaaz-Schiffskarawane die Donnergarde ablegen: öffentlich austreten und etwas Eigenes machen, am besten nach der Befreiung der Stadt und mit dem Adelstitel als neuem Namen. Siehe [[Aufbauplan der Unsichtbaren Hand|Aufbauplan]].",
+    "notes": "Der Maskierte Mönchsmeister hat die versteckten Leichen der echten Donnergarde gefunden. In der alten Welt ist der Schwindel öffentlich, in Xantus weiß es noch niemand sicher. Beitreten geht nicht: Laut Cams Brief bestand die Donnergarde nur aus Khoraa und Floshem. Bausteine: Verkleidungsausrüstung (25 GM), später *Selbstverkleidung*. Die 3 Society-Uniformen liegen mit den zwei inaktiven Skeletten in eurer Unterkunft.\n\n**Stand November 2026:** Euer Ruf trägt: „Held der Echsenmenschen“, „Riesenbezwinger, der Schlächter“. Lisbeth ist milder gestimmt, misstraut euch aber weiterhin und hat deshalb Lucira geholt.",
     "links": [
       "Die Donnergarde",
       "Maskierter Mönchsmeister"
@@ -89,7 +89,7 @@
     "title": "Lisbeth Lhaaz misstraut euch",
     "status": "aktiv",
     "kind": "Bedrohung",
-    "next": "Ihr Vertrauen ausbauen. Lucira prüft euch in Lisbeths Auftrag.",
+    "next": "Ihr Vertrauen ausbauen. Lucira prüft euch in Lisbeths Auftrag und misstraut euch ebenfalls (laut dir, 09.11.2026).",
     "notes": "**Korrigiert:** Lisbeth lebt. Ihr habt sie aus dem Schiff gerettet, das von der eigenen Eskorte angegriffen wurde. Danach hat sie euch ins Kreuzverhör genommen und hält euch für Hochstapler. Aus Dankbarkeit lässt sie es vorerst ruhen. Cams Warnung, ihr Schiff werde nie ankommen, kam zu spät (vom DM bestätigt, von dir am 12.10.2026 noch einmal bestätigt). Hebel: Laut Cams Warnung hat „Graf Lhaaz“ über die Zafferas ihren Tod bestellt. Wer das ist, ist offen: ihr Bruder, der [[Erzherzog Lhaaz|Erzherzog]], ihr Bruder [[Leonidas Lhaaz|Leonidas]] oder ein Dritter.\n\n**Juli 2026:** Eure Verdienste um die Echsen und die erledigten Aufträge haben Lisbeth milder gestimmt. Ihr bleibt unter Beobachtung: Sie hat [[Lucira]] geholt, um Leon zu unterstützen und euch zu prüfen.\n\n**11.10.2026:** Lisbeth erinnert sich nicht mehr an Fridolin, Lucira und die Fee.",
     "links": [
       "Lisbeth Lhaaz",
@@ -232,14 +232,14 @@
     "title": "Die Organisation gründen",
     "status": "aktiv",
     "kind": "Lebensziel",
-    "next": "Erst die Stadt im Westen befreien. Deine Erwartung: Danach seid ihr adlig und könnt Land und Leute für die Organisation einsetzen. Siehe [[Aufbauplan der Unsichtbaren Hand]].",
+    "next": "Erst die Stadt im Westen befreien und den Lohn mit Leonidas klären. Zurück in Dehubden: Einnahmen über die Kräuterfrau, dann einen Verwalter suchen, der alle anderen anwirbt. Siehe [[Aufbauplan der Unsichtbaren Hand]].",
     "reward": "Ein Imperium",
     "links": [
       "Backstory",
       "Die südliche Freistadt",
       "Aufbauplan der Unsichtbaren Hand"
     ],
-    "notes": "Dein Haus steht jetzt im oberen Ring. Euer Ruf: „Held der Echsenmenschen“, „Riesenbezwinger, der Schlächter“. Mögliche Bausteine: die Orcs nach dem Krieg gegen die Riesen, Freistadt als Rekrutierungsgebiet."
+    "notes": "Dein Haus steht im oberen Ring. Euer Ruf: „Held der Echsenmenschen“, „Riesenbezwinger, der Schlächter“. Deine Erwartung: Nach der Befreiung der Stadt seid ihr adlig und könnt Land und Leute einsetzen. Grundsatz: Nur der Verwalter kennt dich, er braucht vorher ein Druckmittel und einen Vorschuss. Spätere Bausteine: die Orcs nach dem Krieg gegen die Riesen, die Echsen als Verbündete."
   },
   {
     "id": "zwei-seelen",

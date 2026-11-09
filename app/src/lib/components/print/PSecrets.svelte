@@ -9,10 +9,14 @@
 	const STATUS: Record<Secret['status'], { label: string; color: string }> = {
 		sicher: { label: 'Sicher', color: 'var(--p-life)' },
 		gefaehrdet: { label: 'Gefährdet', color: 'var(--p-warn)' },
-		aufgeflogen: { label: 'Aufgeflogen', color: 'var(--p-blood)' }
+		aufgeflogen: { label: 'Aufgeflogen', color: 'var(--p-blood)' },
+		archiv: { label: 'Archiv', color: 'var(--p-ink-3)' }
 	};
 	const g = $derived(campaign.data.geheimnisse);
-	const people = $derived(witnesses(g.secrets));
+	/** Archivierte Geheimnisse: nicht in der Tabelle, am Ende zur Erinnerung */
+	const active = $derived(g.secrets.filter((s) => s.status !== 'archiv'));
+	const archived = $derived(g.secrets.filter((s) => s.status === 'archiv'));
+	const people = $derived(witnesses(active));
 	const mark = (s: Secret, who: string) => (s.knownBy.some((w) => w.who === who) ? '●' : s.suspects.some((w) => w.who === who) ? '○' : '');
 </script>
 
@@ -38,7 +42,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			{#each g.secrets as s (s.id)}
+			{#each active as s (s.id)}
 				<tr>
 					<td><b>{s.title}</b></td>
 					<td class="nowrap" style="color: {STATUS[s.status].color}">{STATUS[s.status].label}</td>
@@ -50,7 +54,7 @@
 
 	<h2>Die Geheimnisse</h2>
 	<div class="cols-2">
-		{#each g.secrets as s (s.id)}
+		{#each [...active, ...archived] as s (s.id)}
 			<div class="secret avoid">
 				<h4>{s.title} <span class="tiny" style="color: {STATUS[s.status].color}">· {STATUS[s.status].label}</span></h4>
 				<p class="small"><b>Wahrheit:</b> <PMd src={s.truth} inline /></p>

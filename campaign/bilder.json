@@ -1,17 +1,17 @@
 {
-  "stil": "Painterly fantasy illustration in the style of Dungeons and Dragons art, rich detail, dramatic lighting, muted jungle greens and teal with warm accents, painterly brushwork. Landscape composition. No text, no letters, no logos, no watermark, no signature, no frame, no border.",
+  "stil": "Masterful, highly detailed fantasy illustration in the style of official Dungeons & Dragons sourcebook art: painterly digital painting, sharp focus, intricate textures, cinematic lighting with strong contrast and deep shadows, rich saturated colors, muted jungle greens and teal with warm golden accents. Professional quality, crisp, not washed out. Landscape 16:9 composition. No text, no letters, no logos, no watermark, no signature, no frame, no border.",
   "bilder": [
     {
       "id": "diener",
       "titel": "Die stummen Diener",
       "fuer": "Gefolge-Seite (creatures.json, retinueImage)",
-      "prompt": "Three silent servants stand in a row on a jungle path at dusk, completely hidden under long hooded robes crudely stitched together from mismatched dark uniforms and rough orcish leather and fur. Deep hoods hide their faces in black shadow, no face is visible at all. Their hands are wrapped in dirty cloth strips. The servant on the left holds a short wooden bow and carries a quiver of arrows on its back. The servant in the middle and the servant on the right each hold one plain short steel dagger low at their side. They stand perfectly still like loyal bodyguards, eerie and mysterious. Faint green magical glow drifts in the air, fireflies, dense dark jungle behind them."
+      "prompt": "Exactly four silent servants stand side by side in a row on a jungle path at dusk. Each is wrapped from head to toe in a long, shapeless hooded robe like a crude bathrobe, roughly sewn from a heap of stolen orc clothing: patched furs, coarse dark cloth and leather scraps. Deep hoods hide their faces completely in black shadow; no face is visible. Their hands are wrapped in dirty cloth strips. From left to right: the first holds a heavy rusty orcish axe, the second an orcish axe and a plain knife, the third a plain knife, the fourth a short wooden bow with a quiver of arrows on its back. On the shoulder of each servant sits one bird: a toucan with a big colorful beak, a bright green and red parrot, an astral owl with silvery-blue feathers sparkling with tiny stars, and a falcon. In the background a silver fish leaps out of a dark jungle river. Faint green magical glow and fireflies. Eerie and mysterious, loyal bodyguards standing perfectly still."
     },
     {
       "id": "reittier",
       "titel": "Das Reittier",
       "fuer": "Welt: Das Reittier",
-      "prompt": "A huge herbivorous dinosaur-like beast about four and a half meters tall, resembling a stegosaurus, but its row of crest-like scale plates starts at the head and ends at the base of the neck, its back has no plates. It strides through a dense tropical jungle, crushing the undergrowth and leaving a wide trail of flattened plants behind it. Five small adventurers ride bareback on its broad back without a saddle, a tiny winged fairy flies beside its head. Golden afternoon light falls through the canopy."
+      "prompt": "A huge herbivorous dinosaur-like beast about four and a half meters tall, similar to a stegosaurus, but with a single row of crest-like scale plates that runs only from the top of its head down to the base of its neck; its back has no plates. It strides through a dense tropical jungle, crushing the undergrowth and leaving a wide trail of flattened plants. Exactly five clearly distinct adventurers ride bareback on its broad back, from front to back: (1) an astral elf wizard with long silver-white hair, pale skin and a dark green hooded cloak, faint green magic at his fingertips; (2) a female dragonborn barbarian with crimson red scales, a long dragon tail hanging down the beast's side and a large glowing magical scythe; (3) a cheerful satyr bard with goat legs and small horns, holding a small magical keyboard instrument with glowing keys; (4) a tiefling warlock woman with curved horns, a thin tail and dark elegant clothes, holding a tiny baby dragon against her chest; (5) a sea elf paladin with blue-green skin in shining silver-blue armor with a shield. A tiny winged fairy ranger, only sixty centimeters tall, with a small bow, flies beside the beast's head. Golden afternoon light falls through the canopy."
     },
     {
       "id": "sumpfschuppen",
@@ -53,7 +53,7 @@
       "id": "twee",
       "titel": "Twee",
       "fuer": "Welt: Twee",
-      "prompt": "A cheerful male satyr bard with goat legs and small horns, playing a musical instrument by a campfire at a jungle river, a storyteller who collects tales, warm firelight on his face."
+      "prompt": "A cheerful male satyr bard with goat legs and small horns sits by a campfire at a jungle river and plays a small magical keyboard instrument: a portable enchanted keyboard with softly glowing keys that floats in the air in front of him, music notes of light drifting up. A storyteller who collects tales, warm firelight on his face. He is alone, no other people."
     },
     {
       "id": "fridolin",
@@ -65,7 +65,7 @@
       "id": "aella",
       "titel": "Aella „Khoraa“",
       "fuer": "Welt: Aella Rayann",
-      "prompt": "A powerful bronze dragonborn woman barbarian, covered in bronze scales, surrounded by a crackling storm aura with lightning and wind, a fierce and loyal protector. Stormy jungle coast behind her."
+      "prompt": "Full-body action portrait of a powerful female dragonborn barbarian, a Storm Herald. Her scales are deep crimson red, and, unusually for a dragonborn, she has a long, muscular dragon tail. She wields a large two-handed magical scythe whose curved blade glows with crackling blue-white storm energy. A swirling storm aura of lightning, wind and sea spray surrounds her. A fierce and loyal protector with a determined expression, her face clearly visible. She stands on wet black rocks at a stormy jungle coast."
     }
   ]
 }

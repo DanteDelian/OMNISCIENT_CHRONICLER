@@ -495,8 +495,9 @@ export interface SecretWitness {
 export interface Secret {
 	id: string;
 	title: string;
-	/** sicher: nur Eingeweihte · gefaehrdet: jemand ahnt es oder es kann rauskommen · aufgeflogen: öffentlich */
-	status: 'sicher' | 'gefaehrdet' | 'aufgeflogen';
+	/** sicher: nur Eingeweihte · gefaehrdet: jemand ahnt es oder es kann rauskommen · aufgeflogen: öffentlich ·
+	 * archiv: kein Geheimnis mehr (steht nicht in der Tabelle, nur noch zur Erinnerung) */
+	status: 'sicher' | 'gefaehrdet' | 'aufgeflogen' | 'archiv';
 	/** Was wirklich stimmt (Markdown) */
 	truth: string;
 	/** Was die Leute stattdessen glauben (Markdown) */

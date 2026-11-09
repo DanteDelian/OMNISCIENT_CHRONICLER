@@ -198,6 +198,48 @@ Der Eisriese entspricht dem **Frostriesen** des Monsterhandbuchs.
 - **Ab Stufe 6:** Mit *Gutartiges Versetzen* tauschst du per Aktion den Platz mit Aella. Sie steht sofort an der Front, du bist aus der Gefahr. Mit *[[Hypnotisches Muster]]* fällt eine ganze Gruppe Riesen aus, mit *[[Flutwelle]]* liegen sie am Boden. Siehe [[Stufe-6-Planer]].
 - **Nicht vergessen:** *Person festhalten* wirkt nicht gegen Riesen, nur gegen Humanoide wie die Orcs.
 
+## Briefing: Überfall auf die drei Verfolger
+
+**Lage:** Drei [[Die Sumpfschuppen|Sumpfschuppen]] lagern etwa 100 m von Twees Hütte am Rand der Wüste, einer hält Wache. Einer trägt vermutlich das Gegenstück zum Stein ihres Anführers, vielleicht ist sogar Farlir dabei. Ihr wollt sie schleichend überrumpeln.
+
+**Euer Ziel:** Keiner entkommt (sie haben deine Skelette gesehen), einer bleibt am Leben, am besten Farlir, und alle Steine gehören danach euch.
+
+### Vorher, in der Hütte
+
+- **Zauber-Set „Society, Teufel, Geister“** vorbereiten: [[Gegenzauber]], [[Netz]], [[Sengender Strahl]], [[Schild]]. [[Totenglocke]] hast du ohnehin.
+- **Beide Grad-3-Plätze aufheben.** Sie sind für *Gegenzauber* gegen *Nebelschritt*, mit dem der Anführer zweimal entkam, und gegen den Seelenraub-Zauber. Das Orc-Skelett erweckst du lieber nach dem Kampf, wenn ein Platz übrig ist.
+- **Absprechen, wer bewusstlos schlägt.** Nur ein Nahkampfangriff kann jemanden auf 0 TP bewusstlos statt tot machen. Das übernehmen Kho oder Fridolin, deine Zauber töten.
+- **Knebel und Fesseln bereithalten.** *Nebelschritt* braucht nur die Stimme: Ein Knebel verhindert ihn, Fesseln nicht. Mit [[Geringe Beschwörung|Geringer Beschwörung]] erschaffst du Handschellen (Befreien oder Zerbrechen jeweils SG 20). Sie halten nur 1 Stunde und immer nur ein Paar, danach echte Fesseln.
+- **Den Dino sichern.** Die Tierfreundschaft hält 24 Stunden ab dem Wirken. Läuft sie aus, kann ihn der Kampflärm vertreiben.
+- **Nicht in Luciras Nähe planen,** was nur dich angeht (siehe [[Lucira]]).
+
+### Anschleichen
+
+- **Die Fee** wirkt wieder ihren Zauber für +10 auf Heimlichkeit (vermutlich *Spurloses Gehen*). Er gilt für alle im Umkreis von 9 m um sie: dicht zusammenbleiben.
+- **Aus dem Dunkeln kommen.** Wer am Feuer sitzt, sieht schlecht ins Dunkle. Du siehst 18 m weit im Dunkeln.
+- **Überraschung:** Wer euch nicht bemerkt, ist zu Beginn überrascht. In seinem ersten Zug kann er sich weder bewegen noch handeln, und bis dieser Zug vorbei ist, auch nicht reagieren. Wer schläft, bemerkt nichts.
+- **Abstand 15 bis 18 m.** Von dort erreichst du alles mit *Netz*, *Gegenzauber* und *Totenglocke* und bleibst außerhalb ihrer Klauen.
+
+### Runde 1
+
+- **Du:** *Netz* (6-m-Würfel) über die zwei Schlafenden und, wenn es geht, den Wächter. Wer zu Beginn seines Zuges im Netz steckt, macht einen Geschicklichkeitsrettungswurf gegen SG 15. Wer dann noch schläft, gilt meist als bewusstlos und scheitert automatisch (DM). Festgesetzt heißt: Angriffe gegen ihn mit Vorteil, seine Angriffe mit Nachteil.
+- **Die anderen:** alles auf den Wächter, dann auf die Festgesetzten. Twees *Verlangsamen* hat schon einmal drei auf einmal erwischt.
+
+### Ab Runde 2
+
+- **Reaktion für *Gegenzauber* freihalten.** *Nebelschritt* ist Grad 2, also hebt *Gegenzauber* ihn ohne Wurf auf. Du musst den Zaubernden sehen und darfst höchstens 18 m entfernt sein. Den Seelenraub-Zauber kennst du nicht: Liegt er über Grad 3, brauchst du einen Wurf gegen SG 10 + sein Grad. Erkennen kostet ebenfalls die Reaktion, darum gilt: lieber gleich kontern.
+- **Schaden ohne Konzentration,** damit das *Netz* hält: *Sengender Strahl* (3 Strahlen, je 2W6 Feuer) und *Totenglocke* (1W12, wenn das Ziel schon verletzt ist).
+- **Kein Feuer ins Netz, wenn du jemanden lebend willst.** Am 08.11.2026 verbrannte dein *Sengender Strahl* einen Teil des Netzes, die Gefangenen darin kamen frei. Strahlen also nur auf Ziele außerhalb.
+- **Holt einer seinen Stein heraus,** ist das eine Aktion. Dann ist er das nächste Ziel. Ob *Gegenzauber* einen Stein aufhält, entscheidet der DM, nach den Regeln wirkt der Träger den Zauber selbst.
+- **[[Schild]] nur im Notfall:** Deine Reaktion brauchst du für *Gegenzauber*.
+
+### Danach
+
+- **Steine einsammeln,** getrennt aufbewahren, nicht antworten. Die nächste Nachricht der Society landet dann bei euch (siehe [[Die Sumpfschuppen]]).
+- **Den Gefangenen getrennt befragen,** außer Hörweite der anderen. Lucira kann Gedanken lesen, misstraut euch aber und berichtet wohl an Lisbeth: Was ihr fragt, erfährt sie mit.
+- **Die Toten:** Kleidung und Ausrüstung für Vermummungen und die [[Werkstatt]]. *Tote erwecken* macht aus einer frischen Leiche einen Zombie, aus Knochen ein Skelett.
+- **Kurze Rast:** [[Arkane Erholung]] holt bis zu 3 Grade an Plätzen zurück.
+
 ## Tote erwecken: klug erneuern
 
 **Kurz:** Das Erneuern kostet dich **einen** Grad-3-Platz pro Tag, nicht alle. Ein Wirken hält bis zu 4 Untote weitere 24 Stunden. Mit dem Abend-Trick kostet es dich praktisch nichts.
