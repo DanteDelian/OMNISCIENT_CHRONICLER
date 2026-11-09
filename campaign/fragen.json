@@ -4,10 +4,12 @@
     "to": "tisch",
     "topic": "Ohrring für Aella",
     "question": "Trägt Aella ihr Stück der Ohrringe schon?",
-    "status": "offen",
+    "status": "geklaert",
     "links": [
       "Aella Rayann"
-    ]
+    ],
+    "answer": "Beide Ohrringe sind sicher bei dir. Einen willst du selbst tragen (Ohrloch, dazu eine Replik für die Symmetrie), den anderen bekommt am besten dein künftiger Verwalter. Mit Aella reist du ohnehin, für Notfälle hast du Botschaft.",
+    "answered": "2026-11-09"
   },
   {
     "id": "flammenkugel-rammen",
@@ -26,42 +28,50 @@
     "to": "dm",
     "topic": "Werkzeug beschwören",
     "question": "Darf ich mit *Geringer Beschwörung* Werkzeug erschaffen (Lederwerkzeug, Kräuterkundeausrüstung, Weberwerkzeug) und damit arbeiten? Es hält 1 Stunde, danach beschwöre ich es neu.",
-    "status": "offen",
+    "status": "geklaert",
     "links": [
       "Geringe Beschwörung",
       "Werkstatt"
-    ]
+    ],
+    "answer": "Ja darf ich",
+    "answered": "2026-11-09"
   },
   {
     "id": "leder-material",
     "to": "dm",
     "topic": "Leder als Material",
     "question": "Taugen Häute erlegter Tiere und Gegner als Material für Lederarbeiten, wie viel sind sie wert, und wie lange dauert das Gerben?",
-    "status": "offen",
+    "status": "geklaert",
     "links": [
       "Werkstatt",
       "Skelett"
-    ]
+    ],
+    "answer": "Keine offizielle Regel. Vorschlag im Handwerks-Handbuch (Leder): Häute nach Größe 5 SM bis 15 GM, Gerben eine freie Nacht pro Haut, Leder aus der Beute zum halben Wert. Zeig ihn dem DM.",
+    "answered": "2026-11-09"
   },
   {
     "id": "skelett-waffen",
     "to": "dich",
     "topic": "Waffen der Skelette",
     "question": "Trugen die zwei vernichteten Skelette den Kurzbogen, Pfeile oder Society-Dolche? Dann liegen sie jetzt im Dschungel.",
-    "status": "offen",
+    "status": "geklaert",
     "links": [
       "Skelett-Gefolge aufbauen"
-    ]
+    ],
+    "answer": "habe die nicht ausgerüstet einer trug kleidung der andere auch nicht. habe auch einen Ork Bademantel noch bei mir",
+    "answered": "2026-11-09"
   },
   {
     "id": "orc-name",
     "to": "dich",
     "topic": "Der befreite Orc",
     "question": "Wie heißt der befreite Orc genau (Grump?), und ist er noch bei euch?",
-    "status": "offen",
+    "status": "geklaert",
     "links": [
       "Die Orcs"
-    ]
+    ],
+    "answer": "Grum heißt er nun fest auch wenn ich mich in zukunft verschreiben könnte bei dem raw langtext",
+    "answered": "2026-11-09"
   },
   {
     "id": "farlier",
@@ -80,10 +90,12 @@
     "to": "dm",
     "topic": "Name der Basis",
     "question": "Wie schreibt sich eure Basis: Dehubden oder Dehapten?",
-    "status": "offen",
+    "status": "geklaert",
     "links": [
       "Die Siedlung"
-    ]
+    ],
+    "answer": "Dehapten ich habe mich verschrieben",
+    "answered": "2026-11-09"
   },
   {
     "id": "freie-eintraege",
@@ -105,11 +117,13 @@
     "to": "dm",
     "topic": "Tashas Kessel",
     "question": "Sind Zauber daraus erlaubt, etwa *Feenwesen beschwören* (Fokus 300 GM)? Wichtig für die Wahl auf Stufe 6.",
-    "status": "offen",
+    "status": "geklaert",
     "links": [
       "Stufe-6-Planer",
       "Feenwesen beschwören"
-    ]
+    ],
+    "answer": "ja sind es. Feen dürfen aber keinen Polymorph nutzen, das das zu stark wäre laut DM.",
+    "answered": "2026-11-09"
   },
   {
     "id": "heiltraenke",
@@ -218,10 +232,12 @@
     "to": "tisch",
     "topic": "Die Fee",
     "question": "Wie heißt die Fee? (Seit dem 08.11.2026 bekannt: Sie ist Waldläuferin, etwa 60 cm groß und fliegt mit Flügeln.)",
-    "status": "offen",
+    "status": "geklaert",
     "links": [
       "Die Fee"
-    ]
+    ],
+    "answer": "Alucasia",
+    "answered": "2026-11-09"
   },
   {
     "id": "riesenrune",
@@ -289,10 +305,12 @@
     "to": "tisch",
     "topic": "Khos Schuppen",
     "question": "Ist Kho rot oder bronzen? Ihr Bogen und die Backstory sagen bronzen (Blitzresistenz), du hast sie am 09.11.2026 als rot mit Drachenschwanz beschrieben.",
-    "status": "offen",
+    "status": "geklaert",
     "links": [
       "Aella Rayann"
-    ]
+    ],
+    "answer": "Habe dir im Claude Chat ein Bild von Kho geschickt mache das schön mit magischer Sense!",
+    "answered": "2026-11-09"
   },
   {
     "id": "donnergarde-mitglieder",
@@ -311,30 +329,46 @@
     "to": "dm",
     "topic": "Freie Stunden",
     "question": "In den 4 freien Stunden der langen Rast: Projektarbeit nach Spielerhandbuch (5 GM Fortschritt pro 8 Stunden) und zusätzlich eine Rast-Herstellung nach Xanathars, oder nur eins davon?",
-    "status": "offen",
+    "status": "geklaert",
     "links": [
       "Werkstatt",
       "Astrale Trance"
-    ]
+    ],
+    "answer": "Faustregel im Handwerks-Handbuch: eine Sache pro Nacht, nach Wichtigkeit: Wache und Untote, Kräuter bestimmen, eine Rast-Herstellung, sonst 4 Stunden Projekt. Das Trance-Werkzeug passend wählen.",
+    "answered": "2026-11-09"
   },
   {
     "id": "fellruestung-skelette",
     "to": "dm",
     "topic": "Rüstung für die Skelette",
     "question": "Dürfen deine Skelette Rüstung tragen: Lederrüstung (RK 13) oder sogar Fellrüstung (mittelschwer, RK 12 + GE höchstens 2, also 14)?",
-    "status": "offen",
+    "status": "geklaert",
     "links": [
       "Werkstatt"
-    ]
+    ],
+    "answer": "DM sagt die können alle Rüstungen tragen ohne geübt sein zu müssen. Da diese Magisch sind die Skelette und das dann teil des zaubers sind.",
+    "answered": "2026-11-09"
   },
   {
     "id": "glaube-xantus",
     "to": "dm",
     "topic": "Götter und Glaube",
     "question": "Welche Götter oder Glaubensrichtungen gibt es in Xantus und in der alten Welt? Daran könnte die Unsichtbare Hand ihre Ideale anknüpfen.",
-    "status": "offen",
+    "status": "geklaert",
     "links": [
       "Aufbauplan der Unsichtbaren Hand"
+    ],
+    "answer": "Die Welt von D&D 5e mit Ergänzungen des DM. Keine Glaubensausrichtung für die Hand: Loyalität über guten Lohn, gute Behandlung und eine geachtete Hierarchie (Aufbauplan angepasst).",
+    "answered": "2026-11-09"
+  },
+  {
+    "id": "kho-abstammung",
+    "to": "tisch",
+    "topic": "Khos Drachenabstammung",
+    "question": "Kho hat rote Schuppen. Bleibt ihre Abstammung laut Bogen bronzen (Blitz-Odem, Blitzresistenz), oder ist sie auch in den Werten rot (Feuer)?",
+    "status": "offen",
+    "links": [
+      "Aella Rayann"
     ]
   }
 ]

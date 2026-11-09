@@ -5,6 +5,8 @@ group: kontakt
 tone: ally
 status: Verbündete, roter Clan
 summary: Perlmuttfarbene Echsenfrau, mächtige Klerikerin oder Magierin des roten Clans.
+image: crush-lu.webp
+imageFocus: 50% 20%
 ---
 # Crush Lu
 

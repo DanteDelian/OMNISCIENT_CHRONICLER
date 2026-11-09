@@ -1,6 +1,8 @@
 """Bilder für das Grimoire mit der Antigravity-CLI (agy, Gemini über Patricks Antigravity-Konto) erzeugen.
 
-Liest die Aufträge aus campaign/bilder.json und legt für jedes fehlende Bild drei Dateien an:
+Liest die Aufträge aus campaign/bilder.json und legt für jedes fehlende Bild drei Dateien an.
+Steht bei einem Auftrag "referenzen" (Dateien in campaign/assets/, etwa die Bilder der Spieler unter referenz/),
+gehen sie als Vorlagen mit, damit die Figuren genau so aussehen. Die drei Dateien:
   campaign/assets/<id>.jpg        Original (1376 × 768)
   campaign/assets/<id>.webp       für die App
   campaign/assets/<id>-druck.jpg  für die Druckfassung (1000 px)
@@ -32,10 +34,18 @@ ASSETS = CAMPAIGN / 'assets'
 AGY = Path(os.path.expandvars(r'%LOCALAPPDATA%')) / 'agy' / 'bin' / 'agy.exe'
 
 
-def task_text(name: str, prompt: str, style: str) -> str:
+def task_text(name: str, prompt: str, style: str, refs: list[tuple[str, str]] | None = None) -> str:
+    """Auftrag an agy. refs: (Dateiname im Arbeitsordner, wer oder was darauf zu sehen ist)"""
+    ref_text = ''
+    if refs:
+        listed = '; '.join(f'{file} shows {what}' for file, what in refs)
+        ref_text = (f'Reference images are in the current folder: {listed}. Give them to your image generation tool as references, '
+                    'so that these characters look exactly like in the references: face, skin or scale color, hair, horns, '
+                    'clothing, jewelry and weapons. Paint a new, original scene as described below, do not copy the composition '
+                    'of the references, and do not show any text or logos from them. ')
     return (
         f'Use your image generation tool to create exactly one image and save it in the current folder as {name}.png. '
-        f'Image: {prompt} {style} '
+        f'{ref_text}Image: {prompt} {style} '
         'Do nothing else: no code, no other files, no shell commands. Reply only with the saved file name.'
     )
 
@@ -60,7 +70,15 @@ def generate(item: dict, style: str) -> str:
     """Ein Bild erzeugen. Gibt 'ok', 'fehler' oder 'kontingent:<zeit>' zurück."""
     work = Path(tempfile.mkdtemp(prefix=f'agy-{item["id"]}-'))
     try:
-        cmd = [str(AGY), '-p', task_text(item['id'], item['prompt'], style), '--sandbox', '--dangerously-skip-permissions', '--print-timeout', '6m']
+        # Vorlagen (Bilder der Spieler, Porträt) als JPEG in den Arbeitsordner, damit nur das Ergebnis ein PNG ist
+        refs: list[tuple[str, str]] = []
+        for i, ref in enumerate(item.get('referenzen', []), 1):
+            src = ASSETS / ref['datei']
+            if src.exists():
+                name = f'vorlage-{i}.jpg'
+                Image.open(src).convert('RGB').save(work / name, quality=92)
+                refs.append((name, ref['was']))
+        cmd = [str(AGY), '-p', task_text(item['id'], item['prompt'], style, refs), '--sandbox', '--dangerously-skip-permissions', '--print-timeout', '6m']
         try:
             run = subprocess.run(cmd, cwd=work, capture_output=True, text=True, encoding='utf-8', errors='replace', timeout=420)
         except subprocess.TimeoutExpired:

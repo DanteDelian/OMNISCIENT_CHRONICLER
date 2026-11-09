@@ -6,6 +6,8 @@ group: bedrohung
 tone: enemy
 status: Belagern Leonidas' Stadt, versklaven Orcs
 summary: Riesen verschiedener Art im Norden und Westen. Belagern die Stadt von Graf Leonidas und versklaven Orc-Stämme mit Runenmalen.
+image: riesen.webp
+imageFocus: 50% 35%
 ---
 # Die Riesen
 

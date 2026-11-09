@@ -178,13 +178,6 @@
       "Den Jäger oder die Apothekerin diskret kontaktieren.",
       "Mit Gruppenmitgliedern kommunizieren, während sie ihre Fähigkeiten einsetzen."
     ],
-    "corrections": [
-      {
-        "doc": "zauberbuch-optimiert",
-        "text": "„Funktioniert durch Türen und Wände“ stimmt nur, wenn du das Ziel kennst und weißt, dass es dahinter ist."
-      }
-    ],
-    "note": "Gestohlen wurde die **Spruchrolle** *Botschaft*, ein eigener Gegenstand. Den Zaubertrick beherrschst du weiterhin.\n\n**Geklärt am 12.10.2026:** *Botschaft* ist ein **Zaubertrick** (Spielerhandbuch 2014 und 2024). Kurz stand im Raum, ob euer DM ihn als Grad-1-Zauber handhabt. Das ist vom Tisch.",
     "docs": [
       "zauber-von-val",
       "charakterbogen-alt",
@@ -229,12 +222,6 @@
     "rulings": [
       "Als Ritual musst du ihn nicht vorbereiten (Ritualzauberei). Die Wirkzeit steigt dann auf 1 Stunde 10 Minuten.",
       "Fällt er auf 0 TP, verschwindet er ohne Körper. Ein neues Wirken bringt ihn zurück, wieder für 10 GM."
-    ],
-    "corrections": [
-      {
-        "doc": "beschworene-wesen",
-        "text": "„Nutzt deine Reaktion“ ist falsch. Beim Überbringen nutzt der Vertraute **seine** Reaktion."
-      }
     ],
     "synergies": [
       {
@@ -299,12 +286,6 @@
       "Er kann angegriffen werden. Er ist nur unsichtbar.",
       "Seine Traglast folgt aus ST 2 (Regel: ST × 15 = 30 Pfund, rund 13 kg).",
       "Die Aktion *Helfen* ist für ihn nicht vorgesehen. Frag im Zweifel den DM."
-    ],
-    "corrections": [
-      {
-        "doc": "beschworene-wesen",
-        "text": "„Kann nicht angegriffen werden“ ist falsch, er hat RK 10 und 1 TP. „Bis 4,5 kg“ steht nicht in den Regeln."
-      }
     ],
     "conflicts": [
       {
@@ -391,12 +372,6 @@
       "**Illusionen entlarven:** Trugbilder strahlen Illusionsmagie aus.",
       "**Nur Auren von Sichtbarem:** Unsichtbare Magie spürst du, siehst aber keine Aura.",
       "**Genaue Eigenschaften** eines magischen Gegenstands erfährst du, wenn du dich während einer kurzen Rast mit ihm beschäftigst. So wurden die Ohrringe identifiziert."
-    ],
-    "corrections": [
-      {
-        "doc": "kampagnen-log",
-        "text": "„Hellsicht und Teleportation“: Teleportation ist keine Schule der Magie, Teleport-Zauber gehören zur Beschwörung. Vermutlich Erkenntnismagie und Beschwörung, oder der DM hat es so formuliert."
-      }
     ],
     "conflicts": [
       {
@@ -545,12 +520,6 @@
       "Festgehalten durch Netz ist kein Zauber-Zustand. Ein Gegner kann sich mit seiner Aktion befreien, bleibt aber im schwierigen Gelände.",
       "Feuer verbrennt nur den getroffenen 1,5-m-Würfel, nicht das ganze Netz."
     ],
-    "corrections": [
-      {
-        "doc": "zauber-von-val",
-        "text": "Schule ist **Beschwörung**, nicht Verzauberung. Befreien ist ein **Stärkewurf**, kein Wurf auf Athletik oder Akrobatik. Ein auf dem Boden ausgelegtes Netz hält auch ohne Verankerung."
-      }
-    ],
     "synergies": [
       {
         "with": "Eismesser",
@@ -664,22 +633,12 @@
       "Einen Dungeon-Raum vorab erkunden. Untote sind immun gegen Gift.",
       "Fallen auslösen und als Ablenkung dienen.",
       "Mit Verkleidungsausrüstung, Umhängen und Masken notdürftig tarnen.",
-      "Startmaterial: der untote Kadaver bei der Baustelle (DM fragen) und die Knochen auf dem Schlachtfeld im Südosten."
+      "Startmaterial: Knochen und Leichen kleiner oder mittelgroßer Humanoider, etwa auf dem Schlachtfeld im Südosten. Der Kadaver bei eurem Haus taugt nicht, er war kein Humanoider."
     ],
     "rulings": [
       "Kein Konzentrationszauber. *Netz* und Untote laufen problemlos parallel.",
       "Nur Überreste **kleiner oder mittelgroßer Humanoider**. Tiere oder Monster funktionieren nicht.",
       "Jede Kreatur braucht ihren eigenen Leichnam oder Knochenhaufen."
-    ],
-    "corrections": [
-      {
-        "doc": "zauber-von-val",
-        "text": "Das Erneuern der Kontrolle dauert **1 Minute** (die Wirkzeit des Zaubers), nicht „1 Aktion“."
-      },
-      {
-        "doc": "zauberbuch-optimiert",
-        "text": "Gleicher Fehler: „Mit einem erneuten Wirken (1 Aktion)“ ist falsch."
-      }
     ],
     "synergies": [
       {
@@ -1143,7 +1102,7 @@
     "text": "Ein Blitzstrahl, der eine **30 m (100 Fuß) lange und 1,5 m (5 Fuß) breite Linie** bildet, schießt in eine Richtung deiner Wahl von dir aus. Jede Kreatur in der Linie macht einen **Geschicklichkeitsrettungswurf**: bei Misserfolg **8W6 Blitzschaden**, bei Erfolg die Hälfte. Der Blitz entzündet brennbare Gegenstände im Bereich, die niemand trägt oder hält.",
     "higher": "Mit einem Platz des 4. Grades oder höher steigt der Schaden um **1W6** pro Grad über dem 3.",
     "valerius": "SG **15** · Linie 30 m ab dir · 8W6 Blitz (Ø 28). Gegen Eis- und Hügelriesen im Schnitt etwa 24 pro Riese in der Linie.",
-    "why": "**Die Alternative mit mehr Schaden:** Ø 28 statt 18. Der Blitz schießt aber als 30-m-Linie von dir aus los und trifft alles darin. Aella ist als bronzene Drachenblütige immerhin resistent. Keine Beschwörung, also kein Aufladen von *Gutartiges Versetzen*.",
+    "why": "**Die Alternative mit mehr Schaden:** Ø 28 statt 18. Der Blitz schießt aber als 30-m-Linie von dir aus los und trifft alles darin. Ob Aella gegen Blitz resistent ist, hängt von ihrer Drachenabstammung ab (offen). Keine Beschwörung, also kein Aufladen von *Gutartiges Versetzen*.",
     "slot": "Stufe 6 (einer der 2 neuen Zauber bis Grad 3)",
     "tips": [
       "**Ausrichten:** Stell dich so, dass mehrere Gegner hintereinander stehen, etwa an einem Tor oder einer Gasse."
@@ -1325,7 +1284,10 @@
       "**Heiter** für Kontrolle (bezaubern), **zornig** für Schaden, **listig** für Flucht und Verwirrung.",
       "**Vor dem Kampf rufen:** Mit 1 Stunde Wirkungsdauer steht er schon bereit, wenn es losgeht."
     ],
-    "docs": []
+    "docs": [],
+    "rulings": [
+      "Tashas Kessel ist erlaubt (DM, 09.11.2026). Beschworene Feen dürfen aber kein *Verwandlung* (Polymorph) nutzen, das wäre laut DM zu stark."
+    ]
   },
   {
     "id": "stinkende-wolke",

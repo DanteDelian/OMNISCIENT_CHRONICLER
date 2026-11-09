@@ -12,7 +12,7 @@ summary: Magier-Organisation mit fünf Untergruppen. Gegründet gegen das Imperi
 **Feindliche Magier-Organisation · Ziel: die Ausrottung aller Echsenmenschen.**
 
 - Uniformierte Magier, vermutlich Menschen oder Elfen, organisiert und gefährlich.
-- Drei ihrer Magier griffen [[Crush Lu]] an und wurden von Valerius' *Netz* festgesetzt. Beute: 3 Dolche und **3 Uniformen**. Die Uniformen liegen heute bei zwei inaktiven Skeletten in eurer Unterkunft in [[Die Siedlung|Dehubden]].
+- Drei ihrer Magier griffen [[Crush Lu]] an und wurden von Valerius' *Netz* festgesetzt. Beute: 3 Dolche und **3 Uniformen**. Die Uniformen liegen heute bei zwei inaktiven Skeletten in eurer Unterkunft in [[Die Siedlung|Dehapten]].
 - Sie besetzten die Zuflucht des roten Clans ([[Hügelberg und Zuflucht]]), die Gruppe eroberte sie zurück.
 
 ## Der Anführer

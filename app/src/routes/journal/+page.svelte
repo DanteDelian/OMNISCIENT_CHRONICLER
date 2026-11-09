@@ -60,11 +60,13 @@
 	let type = $state<'alle' | JournalEntry['type']>('alle');
 	let who = $state('');
 	let q = $state('');
+	/** Zeitleiste: das Neueste oben (umschaltbar) */
+	let newestFirst = $state(true);
 
 	const refsInJournal = $derived([...new Set(journal.flatMap((j) => [...(j.people ?? []), ...(j.places ?? [])]))].sort());
 
 	const visible = $derived(
-		journal.filter((j) => {
+		(newestFirst ? [...journal].reverse() : journal).filter((j) => {
 			if (type !== 'alle' && j.type !== type) return false;
 			if (who && ![...(j.people ?? []), ...(j.places ?? [])].includes(who)) return false;
 			if (q) {
@@ -177,6 +179,7 @@
 	{#each Object.entries(TYPE) as [id, t] (id)}
 		<button class="chip {type === id ? 'chip-on' : ''}" onclick={() => (type = id as JournalEntry['type'])}><t.icon size={12} />{t.label}</button>
 	{/each}
+	<button class="chip" onclick={() => (newestFirst = !newestFirst)} title="Reihenfolge der Zeitleiste umkehren">{newestFirst ? 'Neueste zuerst' : 'Älteste zuerst'}</button>
 	<select class="input !h-8 w-56 text-xs" bind:value={who} aria-label="Nach Person oder Ort filtern">
 		<option value="">Alle Personen und Orte</option>
 		{#each refsInJournal as r (r)}<option value={r}>{r}</option>{/each}

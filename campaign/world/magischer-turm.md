@@ -6,6 +6,8 @@ group: ort
 tone: unknown
 status: Siegel inaktiv, Magie klingt ab
 summary: Turm im See mit einem Riesenthron. Ein Siegel darauf führte zu einem gottähnlichen Wesen, im Oktober verschwanden von hier aus drei Gefährten.
+image: turm.webp
+imageFocus: 50% 40%
 ---
 # Der Magische Turm
 

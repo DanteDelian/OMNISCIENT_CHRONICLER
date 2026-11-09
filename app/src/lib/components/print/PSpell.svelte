@@ -79,10 +79,6 @@
 		<h4>Konflikte</h4>
 		<ul class="bullets">{#each sp.conflicts as r (r.with)}<li><b><PMd src={`[[${r.with}]]`} inline /></b>: <PMd src={r.text} inline /></li>{/each}</ul>
 	{/if}
-	{#if sp.corrections?.length}
-		<h4>Korrekturen</h4>
-		<ul class="bullets">{#each sp.corrections as k (k.text)}<li><span class="muted">{docTitle(k.doc)}:</span> <PMd src={k.text} inline /></li>{/each}</ul>
-	{/if}
 	{#if sp.note}<div class="box-soft small" style="margin-top: 1.6mm"><PMd src={sp.note} /></div>{/if}
 	<p class="tiny muted" style="margin: 1.4mm 0 0">
 		{sp.source ?? ''}{#if sp.docs?.length} · Dokumente: {sp.docs.map(docTitle).join(', ')}{/if}

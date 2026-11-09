@@ -6,6 +6,8 @@ group: kontakt
 tone: unknown
 status: Von den Riesen versklavt, mögliche Verbündete
 summary: Orc-Stämme, die von den Riesen mit Runenmalen versklavt werden. Ein befreiter Orc will für euch bürgen.
+image: orcs.webp
+imageFocus: 50% 40%
 ---
 # Die Orcs
 
@@ -24,7 +26,7 @@ summary: Orc-Stämme, die von den Riesen mit Runenmalen versklavt werden. Ein be
 
 ## Der befreite Orc
 - Er erzählte alles, als das Mal blockiert war, und will bei einem **Orc-Stamm oder streunenden Orcs** für euch bürgen.
-- Sein Name ist vermutlich **Grump**. Im Nebel auf dem Fluss traf ihn Fridolin hinter einer der Türen (08.11.2026).
+- Sein Name ist vermutlich **Grum**. Im Nebel auf dem Fluss traf ihn Fridolin hinter einer der Türen (08.11.2026).
 
 **Offen:** Ist er noch bei euch?
 

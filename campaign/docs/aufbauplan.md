@@ -16,7 +16,7 @@ updated: 2026-11-09
 
 ## Wo du stehst (09.11.2026)
 
-- **Unterwegs:** Ihr zieht nach Westen, um die [[Die belagerte Stadt im Westen|belagerte Stadt]] zu befreien. Aufbauen kannst du erst, wenn ihr zurück in [[Die Siedlung|Dehubden]] seid.
+- **Unterwegs:** Ihr zieht nach Westen, um die [[Die belagerte Stadt im Westen|belagerte Stadt]] zu befreien. Aufbauen kannst du erst, wenn ihr zurück in [[Die Siedlung|Dehapten]] seid.
 - **Geld:** 47 GM und 27 SM. Das reicht für Werkzeug, nicht für Personal: Ein gelernter Helfer kostet 2 GM am Tag, also rund 60 GM im Monat (Spielerhandbuch).
 - **Beobachtet:** [[Lisbeth Lhaaz|Lisbeth]] misstraut euch und hat deshalb [[Lucira]] geholt. Lucira liest Gedanken und misstraut euch ebenfalls, dazu der Fee, Fridolin und ab und zu Twee.
 - **Die Tarnung läuft ab:** Die nächste Schiffskarawane bringt die Nachricht vom Tod der echten [[Die Donnergarde|Donnergarde]] nach Xantus. Was dann an Floshem hängt, wird verdächtig.
@@ -29,7 +29,7 @@ updated: 2026-11-09
 | [[Werkstatt]]: Alchemistenwerkzeug und jeden Tag ein Trance-Werkzeug | eigene Waren: Tränke, Alchemie, Leder, Kleidung |
 | Die [[Kontakte der Festung|Kräuterfrau]] | Abnehmerin für Tränke und Gifte, Weg zu einem Lehrling. Laut dir fällt dein Gift nicht auf, weil du damit handeln darfst |
 | Ruf: „Held der Echsenmenschen“, „Riesenbezwinger, der Schlächter“ | Türöffner bei Leon, den Echsen und den Soldaten |
-| [[Verständigungsstein]] zu Leonidas, Ohrringe zu Aella | zwei Kanäle über jede Entfernung |
+| [[Verständigungsstein]] zu Leonidas, die [[Ohrringe der Verständigung]] (beide bei dir) | Kanäle über jede Entfernung. Der zweite Ohrring wird dein Draht zum Verwalter |
 | Untote: ein Orc-Skelett im Rucksack, zwei inaktive in eurer Unterkunft | Nachtwache und Arbeit, wo niemand hinsieht |
 | [[Cam Buckland]] in der alten Welt | Papiere, Identitäten und Nachrichten aus der Heimat, sobald ihr einen sicheren Weg zu ihm habt |
 
@@ -43,42 +43,26 @@ updated: 2026-11-09
 6. **Nichts in Luciras Nähe planen.** Was sie liest, kann bei Lisbeth landen.
 7. **Nicht gegen [[Nita]] arbeiten.** Sie eint Echsen und Menschen und ist die moralische Autorität der Stadt.
 
-## Ideale und Glaubenssätze (Vorschlag)
+## Loyalität: Lohn, Behandlung, Hierarchie
 
-**Wie D&D das macht:** Drei Werkzeuge. Die **Gesinnung** beschreibt, wie jemand handelt: gut oder böse, rechtschaffen oder chaotisch. **Ideale, Bindungen und Makel** aus dem Spielerhandbuch sagen, woran jemand glaubt, wem er sich verpflichtet fühlt und wo er schwach ist. Dazu kommt der **Glaube** an Götter, die in jeder Welt der DM festlegt. Welche es in Xantus gibt, ist eine Frage an den DM. Fraktionen in offiziellen Welten funktionieren genauso: Die Harfner kämpfen im Verborgenen gegen Tyrannei, die Zhentarim sind ein Netz aus Söldnern und Händlern. Jede hat ein Ziel, Glaubenssätze, Ränge und ein Erkennungszeichen.
+Die Hand richtet sich nicht nach einem Glauben aus und braucht keinen Eid. Sie hält zusammen über drei Dinge:
 
-**Warum Ideale Kontrolle geben:** Geld kauft Arbeit, Druckmittel erzwingen Schweigen, aber nur eine gemeinsame Sache hält Leute, wenn es gefährlich wird. Wer an die Sache glaubt, wirbt selbst neue Leute an und verrät die Hand nicht.
-
-**Die Sache: Unrecht, das ihr selbst gesehen habt.**
-- **Seelenraub:** Die [[Die Sumpfschuppen|Sumpfschuppen]] rauben Echsenkriegern die Seelen. Du bist der „Held der Echsenmenschen“.
-- **Runensklaverei:** Die [[Die Riesen|Riesen]] versklaven [[Die Orcs|Orc-Stämme]] mit Runenmalen. Du hast einen Orc befreit.
-
-Daraus wird der Leitspruch **„Wir schützen, wen niemand schützt.“** Er zieht genau die Leute an, die du brauchst: Echsen, befreite Orcs, Ausgestoßene und alle, die verschwinden müssen.
-
-**Fünf Glaubenssätze:**
-1. **Schutz:** Die Hand schützt, wen niemand schützt.
-2. **Schweigen:** Was in der Hand geschieht, bleibt in der Hand. Wer sie verrät, verliert ihren Schutz.
-3. **Treue um Treue:** Die Hand vergisst niemanden, der ihr gedient hat.
-4. **Wissen:** Ein Geheimnis zur rechten Zeit ist mehr wert als Gold.
-5. **Unsichtbarkeit:** Die Hand braucht keinen Ruhm. Den Dank bekommen andere.
-
-**Ränge und Zeichen:**
+1. **Gute Bezahlung:** mehr als üblich und pünktlich. Wer gut verdient, hat keinen Grund zu wechseln.
+2. **Gute Behandlung von jedem durch jeden:** keine Willkür, kein Herabsetzen, auch nicht von oben nach unten.
+3. **Die Hierarchie wird geachtet:** Aufträge kommen von oben, Berichte gehen nach oben, keiner überspringt eine Stufe.
 
 | Rang | Wer | Was er weiß |
 | :-- | :-- | :-- |
 | **Die Hand** | du | alles |
 | **Die Handfläche** | der Verwalter | Leute und Aufträge, nicht dein Geheimnis |
-| **Die Finger** | Lehrling, Augen und Ohren, Boten | nur den eigenen Auftrag und den Verwalter |
+| **Die Finger** | Lehrling, Augen und Ohren, Boten, Wachen | nur den eigenen Auftrag und den Verwalter |
 
-- **Erkennungszeichen:** eine offene Hand, klein und unauffällig, etwa in einen Ring oder in Siegellack geprägt.
-- **Aufnahme:** ein Eid auf die fünf Sätze. Mit [[Geringfügige Illusion]] lässt du dabei eine Hand aus Licht erscheinen. Das vergisst keiner, und es kostet dich nichts.
-
-**Haken:** Ideale binden auch dich. Bricht die Hand ihre eigenen Sätze, verliert sie ihre Leute, und Aella wird dich daran messen. Nach den Regeln raubt *Tote erwecken* keine Seele, es belebt nur den Körper. Das Spielerhandbuch nennt das Erschaffen von Untoten aber keine gute Tat, und wer von deinen Skeletten erfährt, wird kaum unterscheiden.
+**Aufstieg und Strafe:** Wer gute Arbeit macht, steigt auf und verdient mehr. Wer die Hierarchie umgeht oder plaudert, verliert Lohn und Schutz der Hand. Das Druckmittel (siehe unten) bleibt für den Notfall in der Hinterhand.
 
 ## Der Weg in sechs Schritten
 
 1. **Unterwegs (jetzt): Ruf, Beute, Lohn.** Erst die Stadt befreien, dann aufbauen. Vorher mit [[Leonidas Lhaaz|Leonidas]] über den Verständigungsstein klären, was er euch dafür gibt. Unterwegs Material sammeln: Kräuter, Häute, Stoff, Society-Steine.
-2. **Zurück in Dehubden: Einnahmen.** Haus und Kellerlabor fertig, die Werkstatt liefert Tränke, Alchemie und Gifte an die Kräuterfrau. Das ist legal, bringt regelmäßig Geld und erklärt, warum bei dir Leute ein und aus gehen.
+2. **Zurück in Dehapten: Einnahmen.** Haus und Kellerlabor fertig, die Werkstatt liefert Tränke, Alchemie und Gifte an die Kräuterfrau. Das ist legal, bringt regelmäßig Geld und erklärt, warum bei dir Leute ein und aus gehen.
 3. **Der Verwalter, die erste Person der Hand.** Er führt Haus, Handel und Bücher und wirbt später alle anderen an. Bevor du ihn einweihst: ein Druckmittel sichern und ihm einen Vorschuss geben (siehe unten).
 4. **Die Donnergarde ablegen.** Bevor die Schiffskarawane kommt, öffentlich austreten und etwas Eigenes machen (siehe unten).
 5. **Adel, wenn Leonidas euch belohnt.** Land und Leute machen die Hand legal: Ein Gut braucht ohnehin einen Verwalter, Pächter, Bedienstete und Wachen. Niemand wundert sich, wenn dort Leute eingestellt werden.
@@ -94,6 +78,8 @@ Daraus wird der Leitspruch **„Wir schützen, wen niemand schützt.“** Er zie
 | **Ein Geheimnis** | Du erfährst etwas über ihn, das niemand wissen darf | Erpressung erzeugt Hass. Nur in der Hinterhand halten, nie aussprechen, solange er treu ist |
 | **Abhängigkeit** | Er verdankt dir Stelle, Haus oder Schutz, etwa als Flüchtling oder Ausgestoßener | Fällt weg, sobald er woanders mehr bekommt |
 | **Guter Lohn** | Mehr als üblich und pünktlich, dazu ein Vorschuss | Kostet laufend Geld |
+
+**Der zweite Ohrring:** Trägt dein Verwalter ihn, sprecht ihr 1× pro Tag über jede Entfernung, auch wenn du unterwegs bist. Gib ihn ihm erst, wenn er die Probezeit bestanden hat.
 
 **Was er wissen darf:** dass Floshem ihn bezahlt und Stillschweigen erwartet. Nicht, was im Keller liegt, nicht deine Herkunft, nichts über die Zafferas.
 
@@ -178,11 +164,10 @@ Alle wirbt der Verwalter an, keiner kennt dich. Die Leute trägst du auf der Sei
 
 - [ ] Mit Leonidas den Lohn für die Befreiung klären (Verständigungsstein)
 - [ ] Unterwegs Material sammeln: Kräuter, Häute, Stoff
-- [ ] Zurück in Dehubden beim DM nachfragen, wie weit das Haus ist
+- [ ] Zurück in Dehapten beim DM nachfragen, wie weit das Haus ist
 - [ ] Mit der Kräuterfrau einen festen Handel vereinbaren (Tränke und Gifte)
 - [ ] Einen Verwalter suchen und ein Druckmittel finden, bevor du ihn einweihst
 - [ ] Entscheiden, wann ihr die Donnergarde ablegt, spätestens vor der nächsten Schiffskarawane
 - [ ] Einen sicheren Weg zu Cam finden und ihn nach dem Mönchsmeister fragen
-- [ ] Die fünf Glaubenssätze mit Aella besprechen, bevor jemand den Eid schwört
 
 Siehe auch die Quest [[Die Organisation gründen]].

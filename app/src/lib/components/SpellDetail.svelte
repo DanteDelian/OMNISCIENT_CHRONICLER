@@ -167,15 +167,8 @@
 		</section>
 	{/if}
 
-	{#if spell.corrections?.length || spell.note}
+	{#if spell.note}
 		<section class="space-y-2">
-			{#each spell.corrections ?? [] as c, i (i)}
-				<div class="callout callout-fix">
-					<div class="callout-title" data-label="Korrigiert"><TriangleAlert size={14} />Fehler im Dokument</div>
-					<Markdown src={c.text} class="prose-sm" />
-					<div class="mt-2"><SourceChip id={c.doc} /></div>
-				</div>
-			{/each}
 			{#if spell.note}
 				<div class="callout callout-warning">
 					<div class="callout-title" data-label="Hinweis">Offen</div>

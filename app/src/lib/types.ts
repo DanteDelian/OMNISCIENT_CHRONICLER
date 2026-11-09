@@ -99,7 +99,24 @@ export interface PlayState {
 	workshop?: { at: number; item: string };
 	/** Zeitpunkt der letzten langen Rast */
 	lastLongRest?: number;
+	/** Herstellungsprojekte nach Spielerhandbuch (Werkstatt) */
+	projects?: CraftProject[];
+	/** Allgemeiner Befehl an die Untoten, gilt bis die Aufgabe erledigt ist (laut DM) */
+	minionCommand?: string;
 	updatedAt: number;
+}
+
+/** Ein Herstellungsprojekt: 5 GM Marktwert pro 8 Stunden Arbeit (Spielerhandbuch) */
+export interface CraftProject {
+	id: string;
+	name: string;
+	/** Werkzeug, wie es in der Astralen Trance heißt */
+	tool: string;
+	/** Marktwert in GM */
+	value: number;
+	/** Fortschritt in GM */
+	done: number;
+	note?: string;
 }
 
 export interface Ref {
@@ -141,7 +158,6 @@ export interface Spell {
 	rulings?: string[];
 	synergies?: Ref[];
 	conflicts?: Ref[];
-	corrections?: { doc: string; text: string }[];
 	note?: string;
 	docs?: string[];
 	/** Kurzregeln für die Zauberkarte im Druck (Volltext steht in text) */
@@ -264,6 +280,8 @@ export interface Inventory {
 	currency: { gm: number; sm: number; km: number };
 	items: Item[];
 	wishlist: WishItem[];
+	/** Materialvorrat für die Werkstatt in GM je Sorte (Xanathars: Goldwert der Materialien, die du bei dir trägst) */
+	materials?: Record<string, number>;
 }
 
 export type QuestStatus = 'aktiv' | 'geruecht' | 'erledigt' | 'gescheitert';

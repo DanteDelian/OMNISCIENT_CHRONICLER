@@ -11,7 +11,21 @@
       "id": "reittier",
       "titel": "Das Reittier",
       "fuer": "Welt: Das Reittier",
-      "prompt": "A huge herbivorous dinosaur-like beast about four and a half meters tall, similar to a stegosaurus, but with a single row of crest-like scale plates that runs only from the top of its head down to the base of its neck; its back has no plates. It strides through a dense tropical jungle, crushing the undergrowth and leaving a wide trail of flattened plants. Exactly five clearly distinct adventurers ride bareback on its broad back, from front to back: (1) an astral elf wizard with long silver-white hair, pale skin and a dark green hooded cloak, faint green magic at his fingertips; (2) a female dragonborn barbarian with crimson red scales, a long dragon tail hanging down the beast's side and a large glowing magical scythe; (3) a cheerful satyr bard with goat legs and small horns, holding a small magical keyboard instrument with glowing keys; (4) a tiefling warlock woman with curved horns, a thin tail and dark elegant clothes, holding a tiny baby dragon against her chest; (5) a sea elf paladin with blue-green skin in shining silver-blue armor with a shield. A tiny winged fairy ranger, only sixty centimeters tall, with a small bow, flies beside the beast's head. Golden afternoon light falls through the canopy."
+      "prompt": "A huge herbivorous dinosaur-like beast about four and a half meters tall, similar to a stegosaurus, but with a single row of crest-like scale plates that runs only from the top of its head down to the base of its neck; its back has no plates. It strides through a dense tropical jungle, crushing the undergrowth and leaving a wide trail of flattened plants. Exactly five clearly distinct adventurers ride bareback on its broad back, from front to back: (1) an astral elf wizard with long silver hair and a long silver beard, wearing a deep green hood and a cloak decorated with leaves, faint green glowing magic at his fingertips; (2) Kho, a female red dragonborn barbarian with curved dark horns, a long braid and a long dragon tail hanging down the beast's side, holding her skull-topped magical scythe; (3) a cheerful satyr bard with goat legs and small horns, holding a small magical keyboard instrument with glowing keys; (4) a tiefling warlock woman with curved horns, a thin tail and dark elegant clothes, holding a tiny baby dragon against her chest; (5) a sea elf paladin with blue-green skin in shining silver-blue armor with a shield. Alucasia, a tiny fairy ranger only sixty centimeters tall with dark brown skin, long lilac hair and pink-violet butterfly wings, flies beside the beast's head with her bow. Golden afternoon light falls through the canopy.",
+      "referenzen": [
+        {
+          "datei": "floshem.jpg",
+          "was": "Valerius, the astral elf wizard with long silver hair and beard in a green hood"
+        },
+        {
+          "datei": "referenz/kho.jpg",
+          "was": "Kho, the red dragonborn barbarian (Storm Herald of the sea) with her skull-topped scythe"
+        },
+        {
+          "datei": "referenz/alucasia.jpg",
+          "was": "Alucasia, the fairy ranger"
+        }
+      ]
     },
     {
       "id": "sumpfschuppen",
@@ -23,7 +37,13 @@
       "id": "nebel-tueren",
       "titel": "Die Türen im Nebel",
       "fuer": "Journal: Session vom 08.11.2026",
-      "prompt": "A surreal dreamlike void filled with dense white fog. In it stands an endless room of identical plain wooden doors, all exactly alike, some slightly ajar with soft light behind them. A lone elf mage with long silver hair in a green hooded cloak reaches for one of the door handles. Quiet, unsettling, mysterious."
+      "prompt": "A surreal dreamlike void filled with dense white fog. In it stands an endless room of identical plain wooden doors, all exactly alike, some slightly ajar with soft light behind them. Alone in the fog, an astral elf wizard with long silver hair and a long silver beard, wearing a deep green hood and a cloak decorated with leaves, faint green glowing magic at his fingertips, reaches for one of the door handles. Quiet, unsettling, mysterious.",
+      "referenzen": [
+        {
+          "datei": "floshem.jpg",
+          "was": "Valerius, the astral elf wizard with long silver hair and beard in a green hood"
+        }
+      ]
     },
     {
       "id": "nachtlager-wueste",
@@ -39,9 +59,15 @@
     },
     {
       "id": "fee",
-      "titel": "Die Fee",
-      "fuer": "Welt: Die Fee",
-      "prompt": "A tiny fey woman only sixty centimeters tall with delicate translucent wings, a wild jungle ranger with a small bow. She hovers among giant jungle leaves, nocking an arrow, with a mischievous, curious expression. Dappled sunlight."
+      "titel": "Alucasia",
+      "fuer": "Welt: Alucasia (die Fee)",
+      "prompt": "Alucasia, a tiny fey ranger only sixty centimeters tall: dark brown skin, long wavy lilac-pink hair with violet flowers and a fine silver circlet with a violet gem, pointed ears, pink eyes, a delicate nose ring. Large translucent butterfly wings shimmering in pink, violet and blue, with little chains of crystal drops hanging from them. She wears brown leather ranger armor with golden filigree and tall boots and carries an elegant bow decorated with flowers and a quiver of pink-fletched arrows. She hovers among giant jungle leaves and flowers, nocking an arrow, with a mischievous, curious look. Dappled golden light.",
+      "referenzen": [
+        {
+          "datei": "referenz/alucasia.jpg",
+          "was": "Alucasia, the fairy ranger"
+        }
+      ]
     },
     {
       "id": "lucira",
@@ -59,13 +85,93 @@
       "id": "fridolin",
       "titel": "Fridolin vom See",
       "fuer": "Welt: Fridolin vom See",
-      "prompt": "A sea elf paladin and traveling ambassador, calm and righteous, wearing polished armor with wave and ocean motifs and a holy symbol, standing on a riverbank in the jungle, light reflecting from the water."
+      "prompt": "A sea elf paladin and traveling ambassador: a lean elf with pale blue-green skin, long dark hair flowing like seaweed and calm, righteous eyes, wearing polished silver-blue plate armor with wave and ocean motifs, a shield and a holy symbol. He stands on a jungle riverbank, light reflecting from the water."
     },
     {
       "id": "aella",
-      "titel": "Aella „Khoraa“",
+      "titel": "Kho",
       "fuer": "Welt: Aella Rayann",
-      "prompt": "Full-body action portrait of a powerful female dragonborn barbarian, a Storm Herald. Her scales are deep crimson red, and, unusually for a dragonborn, she has a long, muscular dragon tail. She wields a large two-handed magical scythe whose curved blade glows with crackling blue-white storm energy. A swirling storm aura of lightning, wind and sea spray surrounds her. A fierce and loyal protector with a determined expression, her face clearly visible. She stands on wet black rocks at a stormy jungle coast."
+      "prompt": "Full-body action portrait of Kho, a powerful female dragonborn barbarian, a Storm Herald of the sea. Deep red-orange scales, curved dark ram-like horns, a long dark braid, golden eyes, a long muscular dragon tail. She wears a brown leather top, leather bracers, a fur-trimmed loincloth with a skull belt buckle and metal knee guards. She wields her large magical scythe with a skull at the top of the shaft; crackling blue-white lightning runs down the shaft. Around her swirls a storm aura of lightning, wind and sea spray, ocean waves crash against black rocks behind her. Fierce, loyal protector, her face clearly visible.",
+      "referenzen": [
+        {
+          "datei": "referenz/kho.jpg",
+          "was": "Kho, the red dragonborn barbarian (Storm Herald of the sea) with her skull-topped scythe"
+        },
+        {
+          "datei": "referenz/kho-wappen.jpg",
+          "was": "Kho again, close-up of her face, horns, braid and scythe"
+        }
+      ]
+    },
+    {
+      "id": "riesen",
+      "titel": "Riesen in der Nacht",
+      "fuer": "Welt: Die Riesen · Journal: Riesen in der Nacht",
+      "prompt": "Night attack on a frontier town with a wooden palisade beside a jungle river: two mountain giants with craggy, rock-grey skin and one much larger frost giant with pale blue skin, an icy beard and fur armor stride out of the dark jungle edge. One of the giants carries a huge greatsword engraved with two softly glowing magical runes. Torches and fires burn along the palisade, tiny defenders on the walls give a sense of enormous scale. Dramatic moonlight and firelight."
+    },
+    {
+      "id": "orcs",
+      "titel": "Die Orcs und die Runenmale",
+      "fuer": "Welt: Die Orcs · Journal: Die Verschwundenen und die Orcs am Fluss",
+      "prompt": "A band of muscular orc warriors on a jungle riverbank, each marked with a glowing magical rune brand burned into the skin of the shoulder or chest. Wary and oppressed, they haul and stack huge piles of timber. In the misty distance the silhouette of a giant watches over them. Overcast light, tense and grim mood, not gory."
+    },
+    {
+      "id": "crush-lu",
+      "titel": "Crush Lu",
+      "fuer": "Welt: Crush Lu",
+      "prompt": "A wise and powerful lizardfolk woman whose scales shimmer pearlescent like mother-of-pearl, a priestess or mage of a lizardfolk clan that paints itself with red pigment. She wears ritual adornments of bone, feathers and red paint and holds a carved staff, faint magic glowing in her other hand. She stands at the entrance of an underground sanctuary carved into a jungle hill. Calm, commanding presence."
+    },
+    {
+      "id": "saladin",
+      "titel": "Saladin",
+      "fuer": "Welt: Saladin",
+      "prompt": "Saladin, a djinn and merchant of wonders: blue skin, a bald head with a single high black topknot, pointed ears, a short black goatee and a broad confident smile. Muscular bare chest under an open indigo robe richly embroidered in gold, glowing cyan runes run along the robe's edges, a golden sash and golden rings. He stands behind the counter of his cluttered shop of wonders full of colorful potions, glowing crystal balls, scrolls, books and brass lanterns, holding a radiant golden magic lamp in one hand. Warm candlelight.",
+      "referenzen": [
+        {
+          "datei": "referenz/saladin.jpg",
+          "was": "Saladin, the blue djinn merchant, in his shop"
+        },
+        {
+          "datei": "referenz/saladin-2.jpg",
+          "was": "Saladin again, smiling with crossed arms"
+        }
+      ]
+    },
+    {
+      "id": "turm",
+      "titel": "Der Magische Turm",
+      "fuer": "Welt: Der Magische Turm",
+      "prompt": "A lone ancient stone tower rising from the middle of a misty jungle lake. On its flat top stands an enormous throne built for a giant. Faint magical light glows in seams of the tower walls, and a broken arcane seal shimmers in the air above the throne. The deep, dark water around the tower hints at something huge beneath the surface. Twilight, mysterious and grand."
+    },
+    {
+      "id": "siedlung",
+      "titel": "Dehapten",
+      "fuer": "Welt: Die Siedlung",
+      "prompt": "A young frontier settlement on a jungle river, seen from above at a slight angle: an upper ring and a lower ring of concentric fortifications, the lower ring with a new wooden palisade, a stately villa, a small arena and a tall stone tower. In the upper ring stands an unfinished house with scaffolding. Outside the lower ring, lizardfolk tents and campfires. Boats on the river, warm morning light, a sense of hope and hard work."
+    },
+    {
+      "id": "moenchsmeister",
+      "titel": "Der Maskierte Mönchsmeister",
+      "fuer": "Welt: Maskierter Mönchsmeister",
+      "prompt": "A mysterious masked monk master in plain dark robes, his face hidden behind a smooth, featureless mask, kneels at night in a misty old-world forest beside a freshly uncovered hidden grave and examines a torn, embroidered cloak. He follows every trail like a bloodhound. Lantern light, cold mist, tense and ominous mood, not gory."
+    },
+    {
+      "id": "teufelsjaeger",
+      "titel": "Die Teufelsjäger",
+      "fuer": "Welt: Die Teufelsjäger",
+      "prompt": "Devil hunters of a secret mage society: three sorcerers in dark uniforms stand around a glowing summoning circle in a dark stone chamber. They bind a horned demon in chains of light and draw its power out of it as a stream of violet soul light into a crystal. Ominous, powerful and morally dark."
+    },
+    {
+      "id": "stadt-im-westen",
+      "titel": "Die belagerte Stadt im Westen",
+      "fuer": "Welt: Die belagerte Stadt im Westen",
+      "prompt": "A walled city in the desert under siege by giants: huge giants hurl boulders at sandstone walls while defenders hold the battlements. On the tallest tower a commanding noblewoman in armor directs the archers. Dunes and the ruins of a temple with elephant-headed statues in the distance. Sunset, dust and smoke, heroic and defiant mood."
+    },
+    {
+      "id": "cam",
+      "titel": "Cam Buckland",
+      "fuer": "Welt: Cam Buckland",
+      "prompt": "A cunning forger of identities and papers in his cramped workshop in a rainy old-world harbor city at night: an older man with ink-stained fingers and spectacles, seen half from behind, bent over forged documents, wax seals, stamps, a magnifying glass and noble crests, candles burning low. Secretive, clever mood."
     }
   ]
 }

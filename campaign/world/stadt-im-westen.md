@@ -6,6 +6,8 @@ group: ort
 tone: ally
 status: Von Riesen belagert
 summary: Die Stadt von Graf Leonidas Lhaaz im Westen. Seine Frau hält die Stellung gegen die Riesen.
+image: stadt-im-westen.webp
+imageFocus: 50% 45%
 ---
 # Die belagerte Stadt im Westen
 

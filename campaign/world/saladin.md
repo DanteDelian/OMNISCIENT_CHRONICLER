@@ -6,6 +6,8 @@ group: kontakt
 tone: neutral
 status: Wartet auf den Handelsposten in Freistadt (ungeduldig)
 summary: Ein Dschinn und Handelspartner für Wunder. Will einen Handelsposten in Freistadt und bietet dir eine unendliche Schriftrolle.
+image: saladin.webp
+imageFocus: 50% 25%
 ---
 # Saladin
 

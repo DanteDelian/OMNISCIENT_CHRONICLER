@@ -12,7 +12,8 @@ summary: Vater von Leon und Lula, Bruder von Leonidas und Lisbeth. In Cams Brief
 **Vater von [[Leon Lhaaz|Leon]] und [[Lula Lhaaz|Lula]] · Bruder von [[Leonidas Lhaaz|Graf Leonidas]] und [[Lisbeth Lhaaz|Lisbeth]] · Oberhaupt des [[Haus Lhaaz|Hauses Lhaaz]] in der alten Welt.**
 
 - **Laut dir (19.10.2026):** Leons Vater ist der Erzherzog. Leonidas ist sein Bruder, Lisbeth seine Schwester.
-- **In [[Nachrichten vom DM|Cams Brief]]** heißt Leons Vater noch „Graf Lhaaz“: Er schickte seine beiden Kinder in die neue Stadt flussaufwärts, wo „etwas Besonderes“ entdeckt worden war, und suchte erfahrene, loyale Ritter als Schutz. Ein Bruder von ihm, ein **Baron**, habe in [[Xantus]] die meiste Macht.
+- **In [[Nachrichten vom DM|Cams Brief]]** heißt Leons Vater noch „Graf Lhaaz“: Er schickte seine beiden Kinder in die neue Stadt flussaufwärts, wo „etwas Besonderes“ entdeckt worden war, und suchte erfahrene, loyale Ritter als Schutz. Ein Bruder von ihm, ein **Baron**, habe in [[Xantus]] die meiste Macht. Laut DM ein Verschreiber: Gemeint ist der Erzherzog (09.11.2026).
+- *Theorie (deine, 09.11.2026):* Leonidas und Lisbeth verstehen sich gut. Dann steckt hinter dem Auftrag eher Leons Vater, der Erzherzog, oder jemand Unbekanntes aus der Familie.
 - Die Familie wirkte dank Küstenlage und eigener Flotte an der ersten Expedition nach Xantus mit.
 
 ## Der Anschlag auf Lisbeth

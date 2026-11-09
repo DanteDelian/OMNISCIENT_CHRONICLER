@@ -6,6 +6,8 @@ group: bedrohung
 tone: enemy
 status: Unbekannt, gefährlich
 summary: Unbekannter Ermittler, der die Leichen der echten Donnergarde fand.
+image: moenchsmeister.webp
+imageFocus: 50% 30%
 ---
 # Maskierter Mönchsmeister
 

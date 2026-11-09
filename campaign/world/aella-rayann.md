@@ -1,20 +1,20 @@
 ---
 name: Aella Rayann „Khoraa“ Stormscale
-aliases: [Aella, Aella Rayann, Khoraa, Draka, Drake, Draka Stormscale]
+aliases: [Aella, Aella Rayann, Kho, Koh, Khoraa, Draka, Drake, Draka Stormscale]
 kind: person
 group: gruppe
 tone: ally
 status: Gefährtin · Barbarin 5
 summary: Drachenblütige Barbarin (Sturmherold) mit Drachenschwanz, Valerius' Partnerin seit Oakhaven.
 image: aella.webp
-imageFocus: 50% 8%
+imageFocus: 50% 14%
 ---
 # Aella Rayann „Khoraa“ Stormscale
 
 **Drachenblütige · Barbarin (Pfad des Sturmherolds) · Valerius' Partnerin und loyalste Verbündete.**
 
-- **Aussehen (laut dir, 09.11.2026):** rote Schuppen und, ungewöhnlich für Drachenblütige, ein Drachenschwanz.
-- **Offen:** Ihr Bogen und die Backstory nennen sie bronzen, daher die Blitzresistenz. Rote Schuppen bei bronzener Abstammung, oder ist sie rot (dann Feuer statt Blitz)? Frage an den Tisch.
+- **Aussehen (deine Bilder, 09.11.2026):** rote Schuppen, gebogene dunkle Hörner, ein langer dunkler Zopf und, ungewöhnlich für Drachenblütige, ein langer Drachenschwanz. Ihre Waffe ist eine **magische Sense** mit einem Totenschädel am Schaft, über die Blitze laufen. Sturmherold des Meeres.
+- **Offen:** Ihr Bogen nennt eine bronzene Abstammung: Blitz-Odem und Blitzresistenz. Bleibt das trotz der roten Schuppen so? Frage an den Tisch.
 
 > **Name:** Aella Rayann, wie in ihren eigenen Dokumenten (von Patrick bestätigt am 12.10.2026). In Valerius' Backstory heißt sie noch *Draka „Drake“ Stormscale*.
 
@@ -22,7 +22,7 @@ imageFocus: 50% 8%
 - Tarnidentität: **„Khoraa, die wandernde Dragonborn-Ritterin“** der [[Die Donnergarde|Donnergarde]], inzwischen aufgeflogen.
 - Beim Verhör durch [[Lisbeth Lhaaz]] versagten ihr die Worte. Das hat Lisbeths Verdacht bestätigt.
 - Sie träumt von einem Leben ohne ständige Gewalt und sieht mit Sorge, wie Valerius sich an seiner Macht berauscht. Sie versteht sich als sein Schild, vielleicht auch als sein Gewissen.
-- **Plan:** Sie bekommt einen der magischen Ohrringe (1× pro Tag *Verständigung* zwischen den Trägern, Entfernung egal).
+- **Ohrringe:** Beide liegen bei dir. Den zweiten bekommt eher dein künftiger Verwalter: Mit Aella reist du ohnehin, und für Notfälle gibt es *Botschaft*.
 - Ihre Notizen sind laut Patrick aktueller als Valerius' Kampagnen-Log.
 
 **Kampfwerte laut ihrem Bogen:** RK 16, mit Schild 18 · 45 TP · 12 m · Kampfrausch 3× · Sturmaura · Odem.

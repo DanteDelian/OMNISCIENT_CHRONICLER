@@ -17,7 +17,7 @@ Mit der [[Astrale Trance|Astralen Trance]] übst du jeden Tag ein Werkzeug. Mit 
 
 **Du brauchst drei Dinge:**
 1. **Übung im Werkzeug.** Die Trance gibt dir eine Werkzeugübung bis zur nächsten langen Rast.
-2. **Das Werkzeug.** Selbst besitzen oder mit [[Geringe Beschwörung|Geringer Beschwörung]] erschaffen: 1 Aktion, höchstens 90 cm groß und 5 kg schwer, leuchtet schwach, verschwindet nach 1 Stunde, bei Schaden oder wenn du die Fähigkeit erneut nutzt. Ob ein ganzes Set als ein Gegenstand gilt, ist eine Frage an den DM.
+2. **Das Werkzeug.** Selbst besitzen oder mit [[Geringe Beschwörung|Geringer Beschwörung]] erschaffen: 1 Aktion, höchstens 90 cm groß und 5 kg schwer, leuchtet schwach, verschwindet nach 1 Stunde, bei Schaden oder wenn du die Fähigkeit erneut nutzt. Laut DM darfst du so Werkzeug erschaffen und damit arbeiten (09.11.2026).
 3. **Material** im Wert des halben Marktpreises, gekauft oder gefunden. Ob Gefundenes zählt, entscheidet der DM.
 
 **Drei Wege:**
@@ -30,9 +30,70 @@ Mit der [[Astrale Trance|Astralen Trance]] übst du jeden Tag ein Werkzeug. Mit 
 
 **Xanathars rechnet Projekte schneller:** Arbeitswochen statt Tage, Marktwert geteilt durch 50, also 10 GM pro Tag. Welche Regel gilt, entscheidet der DM. Die Werkstatt rechnet mit dem Spielerhandbuch.
 
-**Deine freien Stunden:** Nach 4 Stunden Trance bist du wach, während die anderen noch 4 Stunden ruhen. Laut DM darfst du dann herstellen und pflegen. Das sind 2,5 GM Projektfortschritt pro Nacht. Ob du in derselben Nacht zusätzlich eine Rast-Herstellung schaffst, ist eine Frage an den DM. Bis dahin gilt: pro Nacht eins von beidem.
+**Deine freien Stunden:** Nach 4 Stunden Trance bist du wach, während die anderen noch 4 Stunden ruhen. Laut DM darfst du dann herstellen und pflegen. Faustregel: **eine Sache pro Nacht**, nach Wichtigkeit:
+1. **In Feindgebiet:** Wache halten und die Untoten erneuern. Alles andere wartet.
+2. **Neue Kräuter gesammelt?** Bestimmen, mit Kräuterkunde in der Trance.
+3. **Material für Alchemie da?** Eine Rast-Herstellung, vor Kämpfen am besten ein Alchemistenfeuer (50 GM Wert).
+4. **Sonst:** 4 Stunden an einem Projekt (2,5 GM Fortschritt), etwa Rüstungen für die Skelette.
+
+**Wähle das Trance-Werkzeug passend:** Die Übung bekommst du am Ende der Trance. Entscheide also vorher, was du in den freien Stunden danach machen willst.
 
 **Werkzeug und Fertigkeit zusammen:** Hast du Übung im Werkzeug und in einer passenden Fertigkeit, darf dir der DM Vorteil auf den Wurf geben (Xanathars). Du bist in Arkane Kunde geübt: Beim Bestimmen von Tränken, Giften und magischen Pflanzen lohnt das.
+
+## Zutaten und Material
+
+**Was die Regeln sagen:** Spielerhandbuch und Xanathars rechnen Material nur in Gold, es kostet die Hälfte des Marktwerts. Welche Zutaten genau hineingehören, schreibt kein offizielles Regelwerk vor. Xanathars spricht bei der Alchemie von „besonderen Materialien“, deren Goldwert du bei dir trägst. Genau so führt die [[Werkstatt]] deinen Materialvorrat. Konkret werden die Regeln nur an drei Stellen:
+
+- **Gift ernten (Spielleiterhandbuch):** Von einer toten oder kampfunfähigen giftigen Kreatur, etwa einer Schlange, gewinnst du in 1W6 Minuten eine Dosis. Dafür brauchst du einen Wurf auf Intelligenz (Naturkunde) gegen SG 20, ohne Übung in Naturkunde zählt die Übung mit der Giftmischerausrüstung. Scheiterst du um 5 oder mehr, wirkt das Gift auf dich.
+- **Magische Gegenstände (Xanathars):** Sie brauchen eine Formel, ein exotisches Material und Zeit. Das Material stammt meist von einem Wesen passender Stärke: gewöhnlich Herausforderungsgrad 1 bis 3, ungewöhnlich 4 bis 8, selten 9 bis 12, sehr selten 13 bis 18, legendär ab 19. Kosten: gewöhnlich 1 Arbeitswoche und 50 GM, ungewöhnlich 2 Arbeitswochen und 200 GM, selten 10 Arbeitswochen und 2.000 GM. Magische Dinge besorgt ihr bisher über [[Saladin]].
+- **Spruchrollen (Xanathars):** Du brauchst Übung in Arkane Kunde, musst den Zauber an jedem Arbeitstag vorbereitet haben und seine Materialkomponenten stellen. Zaubertrick 1 Tag und 15 GM, Grad 1 1 Tag und 25 GM, Grad 2 3 Tage und 250 GM, Grad 3 1 Arbeitswoche und 500 GM. Wichtig für Saladins unendliche Schriftrolle.
+
+**Was Grundstoffe kosten (Spielerhandbuch: Handelsgüter und Ausrüstung):**
+
+| Ware | Preis |
+| :-- | --: |
+| Salz, 1 Pfund (0,5 kg) | 5 KM |
+| Eisen, 1 Pfund | 1 SM |
+| Segeltuch, etwa 0,8 m² | 1 SM |
+| Baumwollstoff, etwa 0,8 m² | 5 SM |
+| Leinen, etwa 0,8 m² | 5 GM |
+| Seide, etwa 0,8 m² | 10 GM |
+| Phiole | 1 GM |
+| Glasflasche | 2 GM |
+| Tonkrug oder Becher | 2 KM |
+| Öl, eine Flasche | 1 SM |
+| Siegelwachs | 5 SM |
+| Tinte, 30 ml | 10 GM |
+| Pergament, ein Bogen | 1 SM |
+| Hanfseil, 15 m | 1 GM |
+
+> [!NOTE] Zutaten je Erzeugnis: ein Vorschlag für den DM
+> Kein Regeltext. Die Tabelle übersetzt den halben Marktwert in Zutaten, die zur Welt passen. Was im Dschungel wächst, was es wert ist und ob Gesammeltes zählt, entscheidet der DM.
+
+| Erzeugnis | Material laut Regel | Zutaten (Vorschlag) | Aus dem Dschungel | Aus der Stadt |
+| :-- | --: | :-- | :-- | :-- |
+| Säure | 12,5 GM | 1 Phiole, Vitriol aus Schwefelkies oder Eisenerz, Wasser | Schwefelquellen, Erz | Phiole, Vitriol |
+| Alchemistenfeuer | 25 GM | 1 Tonflasche, eine halbe Flasche Lampenöl, Harz oder Pech, Schwefel, ein Schuss Branntwein | Harz, Pech | Öl, Schwefel, Branntwein |
+| Gegengift | 25 GM | 1 Phiole, 2 bis 3 Portionen bittere Heilwurzeln, Holzkohle, Alkohol | Wurzeln, Holzkohle | Phiole, Alkohol |
+| Öl | 5 KM | 1 Tonflasche, Tierfett oder Nussöl | Fett, Nüsse | |
+| Parfüm | 2,5 GM | 1 Phiole, Blüten, etwas Harz, Alkohol | Blüten, Harz | Phiole, Alkohol |
+| Seife | 1 KM | Fett und Holzasche | beides | |
+| Heiltrank | 25 GM | 1 Phiole, etwa 3 Portionen Heilkräuter, sauberes Wasser oder Wein | Heilkräuter | Phiole, Wein |
+| Einfaches Gift | 50 GM | Gift einer giftigen Kreatur (siehe oben) oder Giftpflanzen | Schlangen, Spinnen, Pflanzen | |
+| Leder- oder Fellrüstung | 5 GM | gegerbte Häute von 1 bis 2 großen Tieren, Riemen, Faden | Jagd, danach Gerben | Schnallen, Faden |
+| Sattel, Zaumzeug | halber Wert | Leder, Riemen, Metallringe und Schnallen | Leder | Eisenteile |
+| Gewand, Robe | halber Wert | Stoff und Faden | Beutestoff, Fasern | Stoff, Garn |
+| Pfeile (20) | Holz | gerade Schösslinge, Federn, Spitzen aus Stein, Knochen oder Metall | alles | Metallspitzen |
+| Kurzbogen | 12,5 GM | biegsames Holz, Sehne aus Darm oder Pflanzenfaser | Holz, Sehnen | |
+| Schild | 5 GM | Holzbretter, Leder, Eisenbeschlag | Holz, Leder | Eisen |
+
+**Unterwegs sammeln:** Heilkräuter, bittere Wurzeln, Blüten, Harz und Pech, Lianen, Holz und Schösslinge, Federn, Felle und Häute, Tierfett, Knochen und das Gift von Schlangen und Spinnen.
+
+**In der Stadt kaufen:** Phiolen und Flaschen, Lampenöl, Salz, Schwefel, Alkohol, Eisen und Schnallen, Stoff und Garn, Siegelwachs, Tinte und Pergament. Phiolen stehen auf dem Einkaufszettel im Inventar. Was du an Grundstoffen kaufst, trägst du im Materialvorrat der Werkstatt ein.
+
+**Mit dem DM klären:** Was zählt als Material, und wie viel ist es wert? Ein einfacher Vorschlag: Gesammeltes zählt zum halben Händlerpreis, wie bei Beute.
+
+**Später: Produktion statt Einzelstücke.** Jetzt verkaufst du einzeln an die Städte: Leonidas' Heer braucht Feuer und Heiltränke, die Kräuterfrau kauft Tränke und Gifte. Mit Lehrling und Verwalter wird daraus eine Werkstatt, mit Land eine Produktion: Kräutergärten, Gerberei, Schneiderstube (siehe [[Aufbauplan der Unsichtbaren Hand|Aufbauplan]]).
 
 ## Alchemie
 
@@ -145,9 +206,14 @@ Die Regeltexte der Erzeugnisse stehen bei den Rezepten in der [[Werkstatt]].
 Freie Nächte: je 4 Stunden nach deiner Trance, also 2,5 GM Fortschritt pro Nacht.
 
 **Für dich:**
-- **Rüstung für die Skelette:** Laut DM haben sie ohne Rüstung RK 10 + GE = 12, mit Lederrüstung 13. Eine **Fellrüstung** kostet gleich viel und gäbe 12 + 2 = 14. Ob Skelette mittelschwere Rüstung tragen dürfen, ist eine Frage an den DM.
+- **Rüstung für die Skelette:** Laut DM tragen sie jede Rüstung ohne Übung, weil sie Teil des Zaubers ist. Ohne Rüstung RK 10 + GE = 12. Die **Fellrüstung** machst du selbst und sie gibt für 10 GM schon RK 14. Kettenhemd (RK 15) und Schuppenpanzer (RK 16, Nachteil auf Heimlichkeit) kosten je 50 GM und brauchen einen Schmied. Ein Schild gibt +2. Orcs tragen oft Fellrüstung: Nach einem Kampf gegen Orcs liegen fertige Rüstungen herum.
 - **Für das Reittier:** Zaumzeug und ein Packsattel zuerst. Ein Sattel für fünf Reiter steht in keiner Preisliste, den Wert legt der DM fest.
-- **Material:** Häute erlegter Tiere müssen erst gegerbt werden, das dauert. Ob Lianen als Riemen taugen und wie lange das Gerben braucht, ist eine Frage an den DM.
+
+> [!TIP] Vorschlag für Häute und Leder (keine offizielle Regel)
+> - **Häute nach Größe** zählen als Material: klein (Fuchs, Affe) 5 SM, mittel (Wolf, Ziege) 1 GM, groß (Hirsch, Pferd, Riesenechse) 5 GM, riesig (dein Dino) 15 GM. Zum Vergleich nennt das Spielerhandbuch eine Ziege für 1 GM, eine Kuh für 10 GM und einen Ochsen für 15 GM.
+> - **Gerben:** pro Haut eine freie Nacht mit dem Lederwerkzeug (schaben, salzen, räuchern), danach zählt sie als Material.
+> - **Leder aus der Beute:** erbeutete Lederrüstungen, Riemen und Taschen zählen zum halben Wert des Gegenstands.
+> - **Lianen** taugen als Seil und für grobe Riemen, nicht als Leder.
 
 ## Schneidern
 

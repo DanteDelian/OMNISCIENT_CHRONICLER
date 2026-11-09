@@ -5,9 +5,11 @@ kind: ort
 group: ort
 tone: neutral
 status: Operationsbasis, wächst
-summary: Dehubden, Leons Stadt flussaufwärts, mit oberem und unterem Ring, Villa, Arena und Valerius' Haus.
+summary: Dehapten, Leons Stadt flussaufwärts, mit oberem und unterem Ring, Villa, Arena und Valerius' Haus.
+image: siedlung.webp
+imageFocus: 50% 45%
 ---
-# Die Siedlung (Dehubden)
+# Die Siedlung (Dehapten)
 
 *Die Schreibweise ist unsicher, du hörst auch „Dehapten“ (Frage auf der [[Rätselwand]]).*
 

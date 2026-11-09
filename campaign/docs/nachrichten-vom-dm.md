@@ -52,3 +52,4 @@ Du hast deine Kontakte angesetzt, doch keiner konnte einen Weg finden, dich auf 
 > - Es ist **nicht** Valerius' Auftrag, Lisbeth zu beseitigen. Die [[Zaffera-Syndikat|Zafferas]] vermitteln nur.
 > - Der Anschlag war **schon passiert**, als die Nachricht kam. Laut Aellas Chronik habt ihr Lisbeth dabei gerettet. Siehe [[Lisbeth Lhaaz]].
 > - Zurück geht es nur mit den **Lhaaz-Schiffskarawanen**.
+> - **Verschreiber im Brief (laut DM, 09.11.2026):** Leons Vater ist der [[Erzherzog Lhaaz|Erzherzog]], nicht „Graf Lhaaz“. Leonidas und Lisbeth sind seine Geschwister.

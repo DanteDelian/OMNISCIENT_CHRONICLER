@@ -1,17 +1,19 @@
 ---
-name: Die Fee
-aliases: [Fee]
+name: Alucasia
+aliases: [Die Fee, Fee]
 kind: person
 group: gruppe
 tone: unknown
 status: Gefährtin · Waldläuferin
-summary: Blinder Passagier aus der Dimension hinter dem Siegel, Waldläuferin, etwa 60 cm groß und geflügelt. Riecht nach Alkohol, obwohl sie angeblich nicht trinkt.
+summary: Alucasia, die Fee. Blinder Passagier aus der Dimension hinter dem Siegel, Waldläuferin, etwa 60 cm groß, mit Schmetterlingsflügeln. Riecht nach Alkohol, obwohl sie angeblich nicht trinkt.
 image: fee.webp
-imageFocus: 50% 22%
+imageFocus: 50% 20%
 ---
-# Die Fee
+# Alucasia
 
-**Waldläuferin · etwa 60 cm groß, fliegt mit Flügeln · Gefährtin seit dem 12.07.2026 · heißt vorerst einfach „die Fee“, bis ihr Name bekannt ist.**
+**Fee · Waldläuferin · etwa 60 cm groß · Gefährtin seit dem 12.07.2026.** Ihren Namen habt ihr am Tisch geklärt: **Alucasia**.
+
+- **Aussehen (Bild von dir, 09.11.2026):** dunkle Haut, langes, welliges fliederfarbenes Haar mit violetten Blüten und einem feinen Stirnreif, spitze Ohren, große Schmetterlingsflügel in Rosa, Violett und Blau mit Ketten aus Kristalltropfen. Braune Lederrüstung mit goldenen Ornamenten, ein Bogen mit Blüten.
 
 - Kam als **blinder Passagier** mit, als [[Lucira]] das Siegel im [[Der Magische Turm|Turm]] auslöste. Sie blieb auch nach dem Verlassen der Dimension bei der Gruppe.
 - Ihr Atem **riecht nach Alkohol**, obwohl sie sagt, sie trinke keinen. *Theorie: ein Fluch.*

@@ -122,7 +122,6 @@ for (const s of d.spells) {
 	for (const r of [...(s.synergies ?? []), ...(s.conflicts ?? [])]) ref(`spells.json ${s.id}`, r.with);
 	for (const t of [s.text, s.higher, s.valerius, s.why, s.note, ...(s.tips ?? []), ...(s.uses ?? []), ...(s.rulings ?? [])]) links(`spells.json ${s.id}`, t);
 	for (const doc of s.docs ?? []) source(`spells.json ${s.id}`, doc);
-	for (const c of s.corrections ?? []) source(`spells.json ${s.id}`, c.doc);
 }
 for (const it of d.inventory.items) links(`inventory.json ${it.id}`, `${it.desc} ${it.note ?? ''}`);
 for (const w of d.inventory.wishlist ?? []) {

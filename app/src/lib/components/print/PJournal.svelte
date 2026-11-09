@@ -9,13 +9,14 @@
 	/** Seitenzahlen der Kapitel (zweiter Durchlauf von npm run druck) */
 	let { pages = {} }: { pages?: Record<string, number> } = $props();
 
-	const journal = $derived([...campaign.data.journal].sort((a, b) => a.order - b.order));
+	/** Das Neueste zuerst, wie in der App */
+	const journal = $derived([...campaign.data.journal].sort((a, b) => b.order - a.order));
 	const quests = $derived(campaign.data.quests);
 	const sources = $derived(campaign.data.sources);
 	const srcTitle = (id: string) => sources.find((s) => s.id === id)?.title ?? id;
 	const questTitle = (id: string) => quests.find((q) => q.id === id)?.title ?? id;
 
-	/** Kapitel aus „Kapitel N“: Überschrift beim ersten Eintrag, Einschübe (z. B. „Zwischen den Sitzungen“) zählen zum laufenden Kapitel. */
+	/** Kapitel aus „Kapitel N“: Überschrift beim ersten gezeigten Eintrag, Einschübe (z. B. „Zwischen den Sitzungen“) zählen zum laufenden Kapitel. */
 	const chapters = $derived.by(() => {
 		const list: { id: string; label: string; first: string; titles: string[] }[] = [];
 		for (const j of journal) {
@@ -30,7 +31,7 @@
 	const heads = $derived(new Map(chapters.map((c) => [c.first, c])));
 </script>
 
-<PDoc id="journal" eyebrow="Journal" title="Chronik der Kampagne" subtitle="{journal.length} Einträge in {chapters.length} Kapiteln. Daten ohne festen Termin sind aus den Zeitstempeln der Dokumente abgeleitet (siehe „Datierung“).">
+<PDoc id="journal" eyebrow="Journal" title="Chronik der Kampagne" subtitle="{journal.length} Einträge in {chapters.length} Kapiteln, das Neueste zuerst. Daten ohne festen Termin sind aus den Zeitstempeln der Dokumente abgeleitet (siehe „Datierung“).">
 	{#if chapters.length > 1}
 		<nav class="chapter-toc avoid">
 			<div class="label">Kapitel</div>

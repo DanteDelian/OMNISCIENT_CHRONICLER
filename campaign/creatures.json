@@ -426,7 +426,7 @@
       "name": "Skelett",
       "type": "Mittelgroßer Untoter",
       "ac": 12,
-      "acNote": "ohne Rüstung: 10 + GE (laut DM), mit Lederrüstung 13",
+      "acNote": "ohne Rüstung 10 + GE = 12. Laut DM tragen deine Skelette jede Rüstung ohne Übung, sie ist Teil des Zaubers: Lederrüstung 13, Fellrüstung 14, Kettenhemd 15, Schuppenpanzer 16 (Nachteil auf Heimlichkeit), Schild +2. Schwere Rüstung braucht weiter die Stärke, sonst sind sie 3 m langsamer",
       "hp": 13,
       "hpFormula": "2W8 + 4",
       "speed": "9 m",
@@ -459,6 +459,13 @@
           "range": "1,5 m · Wurf 6/18 m"
         },
         {
+          "name": "Orc-Axt (wenn ausgerüstet)",
+          "bonus": 2,
+          "damage": "1d12",
+          "type": "Hieb",
+          "range": "1,5 m · zweihändig"
+        },
+        {
           "name": "Kurzschwert (wenn ausgerüstet)",
           "bonus": 4,
           "damage": "1d6+2",
@@ -479,6 +486,18 @@
           "action": "Kurzbogen (wenn ausgerüstet)"
         },
         {
+          "item": "Rostige Orc-Axt",
+          "action": "Orc-Axt (wenn ausgerüstet)"
+        },
+        {
+          "item": "Rostige Orc-Axt",
+          "action": "Orc-Axt (wenn ausgerüstet)"
+        },
+        {
+          "item": "Rostige Orc-Axt",
+          "action": "Orc-Axt (wenn ausgerüstet)"
+        },
+        {
           "item": "Society-Dolch",
           "action": "Dolch (wenn ausgerüstet)"
         },
@@ -487,7 +506,7 @@
           "action": "Dolch (wenn ausgerüstet)"
         }
       ],
-      "verdict": "Fernkampf-Artillerie aus der Deckung. Entsteht aus **Knochen**. **Laut DM** tragen deine Skelette nur, was du ihnen gibst: Waffen, Rüstung, Kleidung."
+      "verdict": "Fernkampf-Artillerie aus der Deckung oder mit Orc-Axt in der zweiten Reihe. Entsteht aus **Knochen**. **Laut DM** tragen deine Skelette nur, was du ihnen gibst: Waffen, Rüstung, Kleidung. Jede Rüstung geht ohne Übung, weil sie Teil des Zaubers ist. Die Orc-Axt wird wie eine Zweihandaxt geführt: Stärke statt Geschicklichkeit, darum +2 auf den Angriff, aber 1W12 Schaden."
     },
     {
       "id": "zombie",
@@ -542,7 +561,7 @@
         "Sturmaura (Meer): Blitz auf eine Kreatur in 3 m, GE-Rettungswurf",
         "Odem: 1,5 × 9 m Blitzlinie, GE-Rettungswurf SG 13, 2W6",
         "Zusätzlicher Angriff · Leichtsinniger Angriff · Gefahrensinn",
-        "Soll den zweiten Ohrring bekommen: 1× pro Tag *Verständigung* zwischen euch"
+        "Waffe: eine magische Sense mit Totenschädel am Schaft (deine Bilder, 09.11.2026)"
       ],
       "source": "aella-overview"
     }

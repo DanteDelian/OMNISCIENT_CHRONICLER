@@ -47,8 +47,8 @@
       "backstory",
       "kampagnen-log"
     ],
-    "contradictions": [
-      "Cams Brief nennt Leons Vater „Graf Lhaaz“. Laut dir (19.10.2026) ist Leons Vater der [[Erzherzog Lhaaz|Erzherzog]], und [[Leonidas Lhaaz|Leonidas]] und [[Lisbeth Lhaaz|Lisbeth]] sind seine Geschwister."
+    "notes": [
+      "Laut DM hat er sich im Brief verschrieben: Leons Vater ist der Erzherzog, Leonidas und Lisbeth sind seine Geschwister (09.11.2026)."
     ]
   },
   {
@@ -86,9 +86,6 @@
         "ref": "lula",
         "change": "neu"
       }
-    ],
-    "contradictions": [
-      "Dein Log sagt, Valerius floh „als einziger Überlebender“. Aellas Chronik sagt: Valerius und Aella entkamen."
     ],
     "sources": [
       "kampagnen-log",
@@ -660,6 +657,12 @@
     ],
     "sources": [
       "review-sessions"
+    ],
+    "images": [
+      {
+        "file": "riesen.webp",
+        "caption": "Riesen in der Nacht"
+      }
     ]
   },
   {
@@ -689,7 +692,7 @@
     ],
     "summary": "Lohn und Bündnis in Leons Stadt: Lula ist frei, die Echsen dürfen sich eingliedern. Die Gruppe wählt den Westen über den Wasserweg.",
     "events": [
-      "Ihr reist rasch zurück nach **[[Die Siedlung|Dehubden]]**, Leons Stadt, zum Gespräch mit [[Leon Lhaaz|Leon]] und [[Lisbeth Lhaaz|Tante Lisbeth]].",
+      "Ihr reist rasch zurück nach **[[Die Siedlung|Dehapten]]**, Leons Stadt, zum Gespräch mit [[Leon Lhaaz|Leon]] und [[Lisbeth Lhaaz|Tante Lisbeth]].",
       "Viel Gold als Lohn. Du hast jetzt insgesamt **47 GM und 16 SM**.",
       "Am Tag zuvor führten [[Crush Lu]] und [[Zitherus]] mit Leon Friedens- und Bündnisgespräche. Leon setzte sich diplomatisch durch und wächst in seine Rolle.",
       "Die Echsenmenschen dürfen sich eingliedern, lagern aber erst einmal in neuen Zelten vor dem unteren Ring. Sie wollten tiefer verwurzelt sein, auch in den höheren Ringen. Das lehnte Leon vorerst ab.",
@@ -814,6 +817,12 @@
     ],
     "sources": [
       "review-sessions"
+    ],
+    "images": [
+      {
+        "file": "orcs.webp",
+        "caption": "Die Orcs und ihre Runenmale"
+      }
     ]
   },
   {
@@ -856,7 +865,7 @@
     "events": [
       "Alle sechs sind wieder am Tisch. Ihr fahrt mit dem Boot ein Stück flussaufwärts, bis dichter Nebel aufzieht und ihr keinen halben Meter weit mehr seht.",
       "Du wirkst *[[Magie entdecken]]* als Ritual, um im Nebel wenigstens Magie zu spüren. Der Nebel umschlingt dich, das Ritual bricht ab.",
-      "Jeder steht allein in einem Raum voller gleicher Holztüren im Nebel und öffnet eine. Dahinter wartet jemand aus der Wirklichkeit: [[Fridolin vom See|Fridolin]] trifft den befreiten Orc (vermutlich Grump), [[Lucira]] trifft [[Twee]], [[Die Fee|die Fee]] trifft [[Aella Rayann|Kho]], du triffst [[Lucaz Lhaaz|Lucaz]].",
+      "Jeder steht allein in einem Raum voller gleicher Holztüren im Nebel und öffnet eine. Dahinter wartet jemand aus der Wirklichkeit: [[Fridolin vom See|Fridolin]] trifft den befreiten Orc (vermutlich Grum), [[Lucira]] trifft [[Twee]], [[Die Fee|die Fee]] trifft [[Aella Rayann|Kho]], du triffst [[Lucaz Lhaaz|Lucaz]].",
       "Ihr redet miteinander, und plötzlich steht ihr alle wieder an Bord. **Die drei Verschwundenen sind zurück.** Siehe [[Die verschwundenen Gefährten]].",
       "Lucaz erinnert sich plötzlich wieder an die drei. Diese Art Magie macht ihm Angst, er will zurück und sich seinem Vater [[Leonidas Lhaaz|Leonidas]] anschließen. Gegen die Strömung kann er das Boot nicht allein steuern, also geht er zu Fuß und will es später mit Soldaten holen.",
       "Zum Abschied gibt Lucaz euch den [[Verständigungsstein]] von Leonidas, damit ihr Kontakt haltet und den Angriff auf die [[Die belagerte Stadt im Westen|belagerte Stadt]] abstimmt. Leonidas zieht wohl mit seinem Heer weiter südlich parallel zu euch.",

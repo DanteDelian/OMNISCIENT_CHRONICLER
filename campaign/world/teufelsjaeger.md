@@ -6,6 +6,8 @@ group: kontakt
 tone: unknown
 status: Höchste Untergruppe der Sorcerer Society
 summary: Die höchste Untergruppe der Sorcerer Society. Sie beschwören Dämonen und stehlen ihnen Kräfte und Seelen. Ihre Nummer 2 ist wohl Lucira.
+image: teufelsjaeger.webp
+imageFocus: 50% 40%
 ---
 # Die Teufelsjäger
 

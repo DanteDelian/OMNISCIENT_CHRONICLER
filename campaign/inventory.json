@@ -34,7 +34,7 @@
       "group": "koerper",
       "qty": 1,
       "magic": true,
-      "desc": "Einer von zwei Verständigungssteinen. [[Lucaz Lhaaz|Lucaz]] gab ihn euch am 08.11.2026 von seinem Vater [[Leonidas Lhaaz|Leonidas]], um den Angriff auf die belagerte Stadt abzustimmen. Den anderen trägt wohl Leonidas.\n\n**Regeln (SRD 5.1):** Verständigungssteine gibt es paarweise, jeder glatte Stein ist passend zum anderen geschnitzt, sodass man das Paar leicht erkennt. Solange du einen Stein berührst, kannst du als **Aktion** den Zauber *Verständigung* daraus wirken. Ziel ist der Träger des anderen Steins. Trägt niemand den anderen Stein, merkst du das, sobald du den Stein benutzt, und der Zauber wird nicht gewirkt. Wurde *Verständigung* über die Steine gewirkt, lassen sie sich erst nach dem **nächsten Morgengrauen** wieder benutzen. Wird einer der beiden Steine zerstört, wird der andere nichtmagisch.\n\n**Verständigung:** eine Nachricht von höchstens 25 Wörtern. Der Empfänger hört sie im Kopf, erkennt dich, wenn er dich kennt, und kann sofort genauso antworten. Die Entfernung spielt keine Rolle.\n\n**Für dich:** Der Stein lädt sich mit dem Morgengrauen auf, die Ohrringe mit der langen Rast. Beides zusammen sind zwei Nachrichten am Tag: der Stein für Leonidas, die Ohrringe für Aella."
+      "desc": "Einer von zwei Verständigungssteinen. [[Lucaz Lhaaz|Lucaz]] gab ihn euch am 08.11.2026 von seinem Vater [[Leonidas Lhaaz|Leonidas]], um den Angriff auf die belagerte Stadt abzustimmen. Den anderen trägt wohl Leonidas.\n\n**Regeln (SRD 5.1):** Verständigungssteine gibt es paarweise, jeder glatte Stein ist passend zum anderen geschnitzt, sodass man das Paar leicht erkennt. Solange du einen Stein berührst, kannst du als **Aktion** den Zauber *Verständigung* daraus wirken. Ziel ist der Träger des anderen Steins. Trägt niemand den anderen Stein, merkst du das, sobald du den Stein benutzt, und der Zauber wird nicht gewirkt. Wurde *Verständigung* über die Steine gewirkt, lassen sie sich erst nach dem **nächsten Morgengrauen** wieder benutzen. Wird einer der beiden Steine zerstört, wird der andere nichtmagisch.\n\n**Verständigung:** eine Nachricht von höchstens 25 Wörtern. Der Empfänger hört sie im Kopf, erkennt dich, wenn er dich kennt, und kann sofort genauso antworten. Die Entfernung spielt keine Rolle.\n\n**Für dich:** Der Stein lädt sich mit dem Morgengrauen auf, die Ohrringe mit der langen Rast. Den Stein nutzt du für Leonidas, die Ohrringe später für deinen Verwalter."
     },
     {
       "id": "dolch",
@@ -168,14 +168,14 @@
       "name": "Society-Uniformen",
       "group": "gelagert",
       "qty": 3,
-      "desc": "Die drei Uniformen der Society-Magier aus dem Kampf bei [[Crush Lu]]. Sie liegen mit zwei inaktiven Skeletten versteckt in eurer Unterkunft in [[Die Siedlung|Dehubden]] und sollen sie vermummen."
+      "desc": "Die drei Uniformen der Society-Magier aus dem Kampf bei [[Crush Lu]]. Sie liegen mit zwei inaktiven Skeletten versteckt in eurer Unterkunft in [[Die Siedlung|Dehapten]] und sollen sie vermummen."
     },
     {
       "id": "versteckte-skelette",
       "name": "Skelette in der Unterkunft",
       "group": "gelagert",
       "qty": 2,
-      "desc": "Zwei nicht erweckte Skelette, versteckt in eurer Unterkunft in [[Die Siedlung|Dehubden]], zusammen mit den Society-Uniformen."
+      "desc": "Zwei nicht erweckte Skelette, versteckt in eurer Unterkunft in [[Die Siedlung|Dehapten]], zusammen mit den Society-Uniformen."
     },
     {
       "id": "orc-waffen",
@@ -308,6 +308,22 @@
         "erfragen"
       ],
       "how": "**Herstellen:** Alchemistenwerkzeug, 1 Flasche pro langer Rast für 5 KM Zutaten (Xanathars). Kaufen ist schneller. **Erfragen:** Lampenöl hat jedes Lager."
+    },
+    {
+      "id": "phiolen",
+      "name": "Phiolen",
+      "price": 10,
+      "priceText": "10 GM",
+      "qty": 10,
+      "group": "verbrauch",
+      "priority": "mittel",
+      "phase": "jetzt",
+      "why": "Säure, Gegengift, Parfüm und jeder Heiltrank brauchen eine Phiole (1 GM, Spielerhandbuch). Ohne Phiolen keine Alchemie zum Verkaufen.",
+      "ways": [
+        "erfragen",
+        "erbeuten"
+      ],
+      "how": "**Erfragen:** bei der Kräuterfrau oder einem Alchemisten. **Erbeuten:** leere Phiolen und Flaschen aus der Beute aufheben. Siehe [[Handwerks-Handbuch]]."
     },
     {
       "id": "gute-kleidung",

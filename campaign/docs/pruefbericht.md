@@ -4,19 +4,19 @@ subtitle: Was falsch war, was korrigiert wurde und was noch offen ist
 icon: shield-check
 order: 1
 group: Prüfung
-updated: 2026-10-20
+updated: 2026-11-09
 ---
 # Prüfbericht
 
-**Stand: 20. Oktober 2026.** Abgeglichen wurden die 12 Dateien im Drive-Ordner *Valerius*, die 3 Dokumente im Ordner *Kho* (darunter dein Sessionbericht vom 12.10.2026), das alte Grimoire auf GitHub und die D&D-5e-Regeln (Spielerhandbuch 2014, Xanathars Ratgeber für alles, Spelljammer für den Astralelfen). Deine Antworten vom 12.10.2026 und dein [[Sessionbericht Juli bis Oktober 2026|Sessionbericht]] sind eingearbeitet.
+**Stand: 9. November 2026.** Abgeglichen wurden die 12 Dateien im Drive-Ordner *Valerius*, die 3 Dokumente im Ordner *Kho* (darunter dein Sessionbericht vom 12.10.2026), das alte Grimoire auf GitHub und die D&D-5e-Regeln (Spielerhandbuch 2014, Xanathars Ratgeber für alles, Spelljammer für den Astralelfen). Deine Antworten vom 12.10.2026, dein [[Sessionbericht Juli bis Oktober 2026|Sessionbericht]], die Session vom 08.11.2026 und deine Antworten vom 08. und 09.11.2026 sind eingearbeitet.
 
-> **Gemini-Entwürfe:** Die beiden „Optimiert“-Dokumente vom 10.10.2026 waren Vorschläge von Gemini und sind **nicht übernommen**. Ihre vier neuen Zauber (Nebelwolke, Spiegelbilder, Gedanken wahrnehmen, Fliegen) stehen nicht im Grimoire. Gemini hat auch in deinen älteren Dokumenten mitgeschrieben. Daher stammen viele der Fehler unten.
+> **Gemini-Entwürfe:** Die beiden „Optimiert“-Dokumente vom 10.10.2026 waren Vorschläge von Gemini und sind **nicht übernommen**. Ihre vier neuen Zauber (Nebelwolke, Spiegelbilder, Gedanken wahrnehmen, Fliegen) wurden nicht übernommen. *Nebelwolke* hast du am 08.11.2026 selbst gewählt. Gemini hat auch in deinen älteren Dokumenten mitgeschrieben. Daher stammen viele der Fehler unten.
 
 ## Kurzfassung
 
 - **Werte:** Der Weisheits-Modifikator war in allen Bögen falsch (−2 statt **−1**). Dadurch steigen Wahrnehmung, Menschenkenntnis und der WE-Rettungswurf um 1, die passive Wahrnehmung ist **12**. Trefferpunkte: **36** (deine Angabe).
 - **Regeln:** Nebelschritt ist nicht „immer vorbereitet“ und steht laut dir auch nicht im Buch. Die [[Astrale Trance]] gibt täglich zusätzlich eine **Fertigkeit**. Die [[Dunkelsicht]] fehlte. Den Zaubertrick des Astralelfen (Astrales Feuer) hat Valerius laut DM **nicht**. Das Erneuern von *Tote erwecken* dauert **1 Minute**.
-- **Zauberbuch:** Nach den Regeln sind **4 Einträge frei** (2 bis Grad 1, 2 bis Grad 2). [[Botschaft]] ist ein Zaubertrick, damit sind alle 4 Zaubertricks belegt. Vorschläge stehen im Zauberbuch.
+- **Zauberbuch:** voll, **14 von 14** (DM, 08.11.2026). Neu sind [[Nebelwolke]], [[Flammenkugel]], [[Tensers schwebende Scheibe]] und [[Unsichtbares sehen]]. *Magierrüstung* und *Spiegelbilder* willst du nicht. [[Botschaft]] ist ein Zaubertrick, alle 4 Zaubertricks sind belegt.
 - **Kampagne:** **[[Lisbeth Lhaaz]] lebt.** Ihr habt sie gerettet. Die alten Notizen hielten sie für erledigt. Die Gefährtin heißt **[[Aella Rayann]]**. [[Taya]] ist laut Aellas aktuelleren Notizen wiederbelebt.
 - **DM-Entscheidungen (12.10.2026):** Die [[Astrale Trance]] gibt nur Waffe oder Werkzeug, keine Fertigkeit. [[Sternenschritt]] hast du 1× pro langer Rast. Die Ohrringe tragen *Verständigung*, nicht *Botschaft*.
 - **Lücken:** Ereignisse und Personen aus Aellas Dokument fehlten (Lisbeths Rettung, das Verhör, die Seeelfen), ebenso deine handschriftlichen Notizen (Nummer 2 der Teufelsjäger).
@@ -64,6 +64,18 @@ updated: 2026-10-20
     - **Regelreferenz:** Ausweichen, Helfen, Verstecken, Vorbereiten, Materialkomponenten, Gelegenheitsangriff bei Teleport, Deckung, kritische Treffer, Packen und Stoßen, Sofortiger Tod, Stabilisieren und lange Rast sind jetzt vollständig.
     - **Zauberkarten im Druck:** Nichts wird mehr abgeschnitten. Lange Texte haben eigene Kurzregeln, sonst wird die Schrift kleiner. Die sechs Empfehlungen haben schon fertige Karten.
 
+16. **Prüfung am 09.11.2026.** Die vier neuen Zauber (*Nebelwolke*, *Flammenkugel*, *Tensers schwebende Scheibe*, *Unsichtbares sehen*) und alle Wertblöcke (Skelett, Zombie, Unsichtbarer Diener, alle 15 Vertrauten) stimmen mit dem SRD 5.1 überein, auch die höheren Grade. Ergänzt: die Orc-Axt als Waffe der Skelette, geführt wie eine Zweihandaxt (+2, 1W12 Hieb), und die Rüstungsregel des DM.
+17. **Korrekturen aus deinen Dokumenten,** früher bei den Zaubern vermerkt, stehen jetzt nur noch hier:
+    - **[[Botschaft]]** (Zauberbuch und Taktikhandbuch (Optimiert, Gemini)): „Funktioniert durch Türen und Wände“ stimmt nur, wenn du das Ziel kennst und weißt, dass es dahinter ist.
+    - **[[Vertrauten finden]]** (Beschwörte Wesen Wertblöcke): „Nutzt deine Reaktion“ ist falsch. Beim Überbringen nutzt der Vertraute **seine** Reaktion.
+    - **[[Unsichtbarer Diener]]** (Beschwörte Wesen Wertblöcke): „Kann nicht angegriffen werden“ ist falsch, er hat RK 10 und 1 TP. „Bis 4,5 kg“ steht nicht in den Regeln.
+    - **[[Magie entdecken]]** (Beschwörungsmagier in D&D 5 (Kampagnen-Log)): „Hellsicht und Teleportation“: Teleportation ist keine Schule der Magie, Teleport-Zauber gehören zur Beschwörung. Vermutlich Erkenntnismagie und Beschwörung, oder der DM hat es so formuliert.
+    - **[[Netz]]** (Zauber von Val): Schule ist **Beschwörung**, nicht Verzauberung. Befreien ist ein **Stärkewurf**, kein Wurf auf Athletik oder Akrobatik. Ein auf dem Boden ausgelegtes Netz hält auch ohne Verankerung.
+    - **[[Tote erwecken]]** (Zauber von Val): Das Erneuern der Kontrolle dauert **1 Minute** (die Wirkzeit des Zaubers), nicht „1 Aktion“.
+    - **[[Tote erwecken]]** (Zauberbuch und Taktikhandbuch (Optimiert, Gemini)): Gleicher Fehler: „Mit einem erneuten Wirken (1 Aktion)“ ist falsch.
+    - **[[Botschaft]]:** Die gestohlene Spruchrolle war *Verständigung*, nicht *Botschaft* (DM, 08.11.2026). Den Zaubertrick *Botschaft* beherrschst du weiterhin.
+18. **Ohrringe der Verständigung:** Laut deinem früheren Plan sollte Aella den zweiten bekommen. Stand 09.11.2026: Beide liegen bei dir, der zweite ist für deinen künftigen Verwalter gedacht.
+
 ### Nur in den Gemini-Entwürfen (zur Info)
 - *Gedanken wahrnehmen*: Tieferes Sondieren ist ein **WE**-Rettungswurf, nicht IN.
 - *Fliegen* wäre auf Stufe 5 kein freier Platz gewesen. Deine Stufe-5-Zauber sind *Tote erwecken* und *Gegenzauber*.
@@ -74,7 +86,7 @@ updated: 2026-10-20
 1. **[[Lisbeth Lhaaz]] lebt.** Im alten Grimoire und im Kampagnen-Log stand: „Ihr Schiff wird nie ankommen, das Problem löst sich von selbst.“ Laut der Chronik deiner Gefährtin wurde ihr Schiff aber von der eigenen Eskorte angegriffen, und ihr habt sie gerettet. Danach hat sie euch verhört und hält euch für Hochstapler. Der DM bestätigt, dass Cams Nachricht zu spät kam. Du: „es ist ja schon passiert“. DM: „Ja die Nachricht kommt zu spät“. Am 12.10.2026 hast du es noch einmal bestätigt. Lisbeth ist also eine aktive Bedrohung, und zugleich ein Hebel, weil ihr eigener Verwandter sie tot sehen wollte.
 2. **Lisbeth als „Schwägerin(?)“ des Grafen** war eine Vermutung des alten Grimoires und ist gestrichen. Lisbeth ist die Schwester des [[Erzherzog Lhaaz|Erzherzogs]] und von [[Leonidas Lhaaz|Leonidas]] und die Tante von Leon und Lula (von dir am 19.10.2026 bestätigt).
 3. **Das Lhaaz-Schriftstück** stammt vom **Attentäter**, der Lula angriff. Im alten Grimoire fehlte das.
-4. **Valerius und Aella** überlebten den Echsen-Hinterhalt, nicht Valerius allein (Kampagnen-Log gegen Aellas Chronik).
+4. **Valerius und Aella** überlebten den Echsen-Hinterhalt, nicht Valerius allein (Kampagnen-Log gegen Aellas Chronik). Von dir am 09.11.2026 bestätigt, der Widerspruch im Journal ist gelöst.
 5. **Ergänzte Ereignisse:** die Rettung auf See, Lisbeths Verhör, 40 Stunden Landgang, die Spuren des roten Echsenkriegers, die zwei überlebenden Echsenkrieger im Kampf gegen den Riesen, der Weg zur Abholstelle (Lisbeths Eskorte) und Aellas Notizen (Bericht an die Echsen, nur noch wenige Eier, Höhle wieder bewohnbar).
 6. **Deine handschriftlichen Notizen** aus dem Kampagnen-Log fehlten: „wollte die neuen Kollegen testen …“, „das wir die echsen mission gefailt sind“, „die nummer 2 der teufelsjäger gesichtet“. Sie stehen jetzt im Journal.
 7. **Neue Personen:** Frederic Wellenstand und Fridolin vom See ([[Die Seeelfen|Seeelfen]]), der [[Kontakte der Festung|Paladin]], die [[Die Nummer 2 der Teufelsjäger|Nummer 2 der Teufelsjäger]] und die [[Die Echsen-Allianz|Echsen-Allianz]] (Lulas Geiselnehmer, getrennt vom roten Clan).
@@ -83,13 +95,37 @@ updated: 2026-10-20
 10. **[[Taya]]:** Laut deinem Log scheiterte die Wiederbelebung, laut Aellas Notizen gelang sie („Taya wiederbeleben ✔“). Aellas Notizen sind aktueller (deine Angabe). Taya gilt damit als wiederbelebt. Danach ist sie verschwunden (laut dir, 19.10.2026).
 11. **Vertrauter:** zuletzt eine **Eule**, davor ein Falke. Die Eule wurde am 11.10.2026 vom Orc-Schamanen getötet.
 12. **Ohrringe:** Sie tragen ***Verständigung*** (Sending), nicht *Botschaft*: bis zu 25 Wörter, Antwort sofort, Entfernung egal. Jeder Träger braucht ein Stück.
-13. **Familie Lhaaz:** Das Kampagnen-Log nennt Leon und Lula die Kinder des Grafen, der Lisbeths Tod bestellte. Laut dir (19.10.2026) ist Leons Vater aber der **[[Erzherzog Lhaaz|Erzherzog]]**, und Leonidas und Lisbeth sind seine Geschwister. Der Eintrag „Graf Lhaaz“ heißt deshalb jetzt „Erzherzog Lhaaz“. Den Titel „Graf“ aus Cams Brief lasse ich als Widerspruch im Journal stehen. **Offen:** Wer der „Graf Lhaaz“ ist, der Lisbeths Tod bestellt hat, und ob [[Leonidas Lhaaz|Leonidas]] der „Baron“ aus Cams Brief ist (*Theorie*).
+13. **Familie Lhaaz:** Das Kampagnen-Log nennt Leon und Lula die Kinder des Grafen, der Lisbeths Tod bestellte. Leons Vater ist aber der **[[Erzherzog Lhaaz|Erzherzog]]**, Leonidas und Lisbeth sind seine Geschwister (von dir am 19.10.2026 bestätigt). **Geklärt am 09.11.2026:** Der DM hat sich in Cams Brief verschrieben, „Graf Lhaaz“ meint dort den Erzherzog. **Offen:** Wer hat Lisbeths Tod bestellt? *Theorie (deine):* Weil Leonidas und Lisbeth sich gut verstehen, eher Leons Vater oder jemand Unbekanntes aus der Familie. Ob [[Leonidas Lhaaz|Leonidas]] der „Baron“ aus Cams Brief ist, bleibt *Theorie*.
 14. **Skelette:** In keinem deiner Dokumente steht, dass du vor Oktober 2026 Skelette erweckt hast. Das Log endet beim Plan, auf dem Schlachtfeld im Südosten Knochen zu holen.
 15. **Die Notizen vom Spieltisch** stammen aus der Session vom 12.07.2026. Die „neuen Kollegen“ sind die neuen Gefährten, die „Nummer 2 der Teufelsjäger“ ist wohl [[Lucira]].
 
 ## D · Offene Fragen
 
-Die offenen Fragen stehen gebündelt auf der **[[Rätselwand]]** und als Druckblatt „Fragen an den DM“: fehlende Zauber, Tashas Kessel, Heiltränke, Familie Lhaaz, frühere Skelette, Rüstung der Skelette, Tukan, Ohrringe, Rassenmerkmale, Täuschen und der Name der Fee.
+Die offenen Fragen stehen gebündelt auf der **[[Rätselwand]]** und als Druckblatt „Fragen an den DM“. Offen sind noch der Verständigungsstein des Sumpfschuppen-Anführers und Khos Drachenabstammung.
+
+### Geklärt am 9. November 2026
+- **Namen:** Die Fee heißt **Alucasia**, der befreite Orc **Grum**, eure Basis **Dehapten**.
+- **Ohrringe:** Beide sind sicher bei dir. Einen willst du selbst tragen, den anderen bekommt dein künftiger Verwalter.
+- **Geringe Beschwörung:** Werkzeug darfst du so erschaffen und damit arbeiten (DM).
+- **Rüstung der Skelette:** Sie tragen jede Rüstung ohne Übung, weil sie Teil des Zaubers sind (DM). Bewaffnet waren die zwei vernichteten Skelette nicht.
+- **Tashas Kessel:** erlaubt. Beschworene Feen dürfen aber kein *Verwandlung* (Polymorph) nutzen (DM).
+- **Familie Lhaaz:** Leons Vater ist der Erzherzog, „Graf Lhaaz“ in Cams Brief war ein Verschreiber des DM. Leonidas und Lisbeth sind seine Geschwister.
+- **Hinterhalt der Echsen:** Valerius und Kho haben überlebt.
+- **Kho:** rote Schuppen, ein Drachenschwanz und eine magische Sense (deine Bilder). Ihre Abstammung laut Bogen (bronzen, Blitz) ist noch offen.
+- **Die Hand:** keine Ausrichtung nach Glauben. Loyalität über guten Lohn, gute Behandlung und eine geachtete Hierarchie.
+- **Aus den Regeln beantwortet:** Flammenkugel wirken und im selben Zug rammen, Heiltränke nur mit Kräuterkunde, die Donnergarde bestand laut Cams Brief aus Khoraa und Floshem.
+- **Session vom 08.11.2026:** Der Stein des Sumpfschuppen-Anführers trägt *Verständigung*. Stündliche Meldung und Passwort waren vermutlich Finten (*Theorie*).
+
+### Geklärt am 8. November 2026 (DM)
+- **Zauberbuch:** bis 14 Zauber auffüllen. Gewählt: *Nebelwolke*, *Flammenkugel*, *Tensers schwebende Scheibe*, *Unsichtbares sehen*.
+- **Skelette:** RK 10 + GE ohne Rüstung, allgemeine Befehle gelten, bis die Aufgabe erledigt ist. Eines liegt als Knochen in deinem Rucksack, zwei aus den Bootsknochen wurden auf der Flucht vernichtet, zwei inaktive liegen mit den Society-Uniformen in eurer Unterkunft.
+- **Verfallene Untote** werden zu Gegnern unter der Kontrolle des DM.
+- **Ohrringe:** wirken wie der Zauber *Verständigung*.
+- **Die gestohlene Spruchrolle** war *Verständigung*, die Quest ist gescheitert.
+- **Vertrauter:** einen Tukan oder Papagei erst, wenn du einen gesehen hast.
+- **Täuschen** stammt aus dem Hintergrund.
+- **Astralelf:** wie geschrieben. In den 4 freien Stunden der langen Rast darfst du herstellen und pflegen.
+- **Kadaver beim Haus:** taugt nicht für *Tote erwecken*, er war kein Humanoider.
 
 ### Geklärt am 19. Oktober 2026
 - **Familie Lhaaz:** Leons Vater ist der Erzherzog. Leonidas ist sein Bruder, Lisbeth seine Schwester und damit auch die Schwester von Leonidas.
@@ -102,7 +138,7 @@ Die offenen Fragen stehen gebündelt auf der **[[Rätselwand]]** und als Druckbl
 
 ### Geklärt am 16. Oktober 2026
 - **Sitzungsgrenze:** Die Session zwischen dem 12.07. und dem 11.10.2026 bleibt undatiert, so gewollt.
-- **Schreibweisen:** Twee und Dehubden stimmen. Die Fee heißt vorerst „die Fee“.
+- **Schreibweisen:** Twee und Dehapten stimmen. Die Fee heißt vorerst „die Fee“.
 - **Skelette:** Die 3 aus dem Orc-Kampf lagern auf dem Boot, noch nicht erweckt.
 - **Material für *Vertrauten finden*:** 9, kein weiteres bekommen.
 
@@ -122,23 +158,23 @@ Die offenen Fragen stehen gebündelt auf der **[[Rätselwand]]** und als Druckbl
 
 ## E · Empfehlungen
 
-1. **RK 11 ist dein größtes Risiko.** [[Magierrüstung]] in einen freien Grad-1-Eintrag: RK 14 für 8 Stunden, mit *Schild* 19.
-2. **Identität:** [[Selbstverkleidung]] (Grad 1) für schnelle Tarnung, [[Gestalt verändern]] (Grad 2) für eine Tarnung, die auch Berührung übersteht. In die fehlenden Einträge passen sie nicht mehr, dort steht dein Kampfplan. Also später über Spruchrollen oder ab Stufe 7.
-3. **Astrale Trance jeden Tag nutzen, meist für ein Werkzeug.** Das **Alchemistenwerkzeug** (ohne Trance hast du damit keine Übung), an Brautagen die Kräuterkundeausrüstung (Heiltränke, das Set fehlt dir noch) oder die Verkleidungsausrüstung (Identität). Den erbeuteten **Kurzbogen** bekommt eines deiner Skelette.
-4. **Konzentration ist dein Engpass.** *Netz*, *Schutz vor Gut und Böse*, *Magie entdecken* und aus dem Plan *Nebelwolke*, *Flammenkugel* und *Hypnotisches Muster* schließen sich gegenseitig aus, und dein KO-Rettungswurf ist nur +3. Zauber ohne Konzentration ([[Magierrüstung]], [[Spiegelbilder]], [[Flutwelle]], [[Tote erwecken]]) laufen parallel.
-5. **Deine Bonusaktion ist überbucht.** Sternenschritt, Untote befehligen, Diener befehligen und später die *Flammenkugel* bewegen konkurrieren. Plane pro Runde eins davon.
-6. **[[Schild]] nur bei einem Angriffsergebnis von 11 bis 15** wirken (mit *Magierrüstung* 14 bis 18), sonst die Reaktion für *Gegenzauber* aufheben.
-7. **Vertrauter für den Dschungel** (die Eule ist tot): [[Echse]] oder [[Frosch (Kröte)|Frosch]] fallen nicht auf und sind laut Zauber erlaubt. Ein Tukan oder Papagei mit den Werten des [[Rabe|Raben]] braucht die Zustimmung des DM. Die [[Eule]] bleibt der beste Kampfhelfer. Neu beschwören kostet 10 GM und 1 Stunde (als Ritual 1 Stunde 10 Minuten).
-8. **Die Vorbereitung wird knapp.** 7 von 9 Plätzen sind belegt, mit dem Zauberplan kommen 4 Zauber dazu. Fest vorbereiten: *Magierrüstung* und *Spiegelbilder*, dazu je nach Tag *Nebelwolke* oder *Flammenkugel* statt *Schutz vor Gut und Böse*. Rituale (*Vertrauten finden*, *Unsichtbarer Diener*, *Magie entdecken*) musst du nicht vorbereiten. Auf Stufe 6 hast du 10 Plätze.
-9. **Lisbeth als Chance (Theorie):** Sie weiß vermutlich nicht, dass „Graf Lhaaz“, wohl einer ihrer eigenen Brüder, ihren Tod bestellt hat. Und dass ihr sie gerettet habt, ist euer Kapital.
-10. **Dein Zauberplan** (Schaden, Kontrolle, Beschwörung) im [[Stufe-6-Planer]]: *Magierrüstung*, *Nebelwolke*, *Spiegelbilder* und *Flammenkugel* für die 4 fehlenden Einträge, *Hypnotisches Muster* und *Flutwelle* auf Stufe 6. Gegen die Riesenrunen hilft [[Fluch brechen]], denn laut DM sind sie ein Fluch.
-11. **Sternenschritt ist jetzt knapp** (1×). Halte ihn für die Flucht aus dem Nahkampf zurück, nicht für Positionswechsel.
+1. **Verteidigung ohne Magierrüstung:** RK 11, mit [[Schild]] 16. Deine Linie: Skelette um dich herum, [[Nebelwolke]], später stärkerer Schutz. Dazu Abstand (9 bis 18 m) und Deckung: halbe Deckung gibt +2 RK, Dreivierteldeckung +5.
+2. **Identität:** Die Donnergarde ablegen, bevor die nächste Schiffskarawane kommt (siehe [[Aufbauplan der Unsichtbaren Hand|Aufbauplan]]). Für schnelle Tarnung die Verkleidungsausrüstung in der Trance, später [[Selbstverkleidung]] oder [[Gestalt verändern]] über Spruchrollen oder ab Stufe 7.
+3. **Astrale Trance jeden Tag nutzen** und das Werkzeug danach wählen, was du in den freien Stunden machen willst (siehe [[Handwerks-Handbuch]]). Den Kurzbogen bekommt eines deiner Skelette.
+4. **Konzentration ist dein Engpass.** *Netz*, *Nebelwolke*, *Flammenkugel*, *Schutz vor Gut und Böse* und ab Stufe 6 *Hypnotisches Muster* schließen sich gegenseitig aus, und dein KO-Rettungswurf ist nur +3. Ohne Konzentration laufen [[Sengender Strahl]], [[Eismesser]], [[Tote erwecken]] und ab Stufe 6 [[Flutwelle]].
+5. **Deine Bonusaktion bleibt frei,** seit allgemeine Befehle an die Skelette gelten (DM). Nutze sie für [[Sternenschritt]] oder die *Flammenkugel*.
+6. **[[Schild]] nur bei einem Angriffsergebnis von 11 bis 15** wirken, sonst die Reaktion für [[Gegenzauber]] aufheben.
+7. **Vertrauter für den Dschungel** (die Eule ist tot): einen Tukan oder Papagei mit den Werten des [[Rabe|Raben]], sobald du einen gesehen hast (DM). Bis dahin ist die [[Eule]] der beste Kampfhelfer. Neu beschwören kostet 10 GM und 1 Stunde.
+8. **Vorbereitung:** Die [[Zauber-Sets]] wählen deine 9 Zauber für den Tag, auf Stufe 6 sind es 10. Rituale musst du nicht vorbereiten.
+9. **Lisbeth als Chance (Theorie):** Sie weiß vermutlich nicht, wer ihren Tod bestellt hat. Dass ihr sie gerettet habt, ist euer Kapital.
+10. **Stufe 6:** *Hypnotisches Muster* und *Flutwelle* (siehe [[Stufe-6-Planer]]). Tashas Kessel ist erlaubt, damit bleibt [[Feenwesen beschwören]] eine Option, sobald du den Fokus für 300 GM hast. Gegen die Riesenrunen hilft [[Fluch brechen]].
+11. **Sternenschritt ist knapp** (1×). Halte ihn für die Flucht aus dem Nahkampf zurück.
 
 ## F · Hinweise zu Aellas Bogen (für ihre Spielerin)
 
-- Glefe (zweihändig) und Schild schließen sich aus. RK 18 gilt nur mit Einhandwaffe.
+- Ihre Waffe ist eine magische Sense (deine Bilder). Eine Sense gibt es im Spielerhandbuch nicht, sie nutzt vermutlich die Werte der Glefe: 1W10 Hieb, schwer, Reichweite, zweihändig. Zweihandwaffe und Schild schließen sich aus, RK 18 gilt nur mit Einhandwaffe.
 - Sturmaura (Meer) macht auf Stufe 5 **2W6** Blitzschaden (nicht 1W6), SG = 8 + 3 + 2 = **13**. Im Bogen stehen 12 und 13.
-- Kampfrausch gibt keine Blitzresistenz, die hat sie als bronzene Drachenblütige aber ohnehin.
+- Kampfrausch gibt keine Blitzresistenz. Die hat sie nur mit bronzener Abstammung, wie ihr Bogen sagt. Mit roter Abstammung wäre es Feuer (offen).
 
 ## Quellen
 

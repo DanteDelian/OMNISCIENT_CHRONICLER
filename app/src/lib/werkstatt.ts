@@ -4,7 +4,7 @@
  */
 import { campaign } from '$lib/stores/campaign.svelte';
 import { rolls } from '$lib/stores/rolls.svelte';
-import { fmtGold } from '$lib/format';
+import { fmtGold, uid } from '$lib/format';
 import { pay } from '$lib/game';
 import type { Item, PlayState } from '$lib/types';
 
@@ -30,6 +30,57 @@ export interface Recipe {
 	rules: string;
 	/** Wofür Valerius es braucht */
 	use?: string;
+	/** Sorte im Materialvorrat */
+	material: MaterialId;
+}
+
+/** Materialvorrat in GM (Xanathars rechnet Material nur in Gold) */
+export const MATERIALS = [
+	{ id: 'alchemie', label: 'Alchemie', hint: 'Phiolen, Öl, Schwefel, Salz, Harz, Alkohol' },
+	{ id: 'kraeuter', label: 'Kräuter', hint: 'Heilkräuter, Wurzeln, Blüten' },
+	{ id: 'leder', label: 'Leder und Felle', hint: 'gegerbte Häute, Riemen, Schnallen' },
+	{ id: 'stoff', label: 'Stoff und Faden', hint: 'Stoff, Garn, Beutestoff' },
+	{ id: 'holz', label: 'Holz und Federn', hint: 'Schösslinge, Bretter, Federn, Sehnen' }
+] as const;
+export type MaterialId = (typeof MATERIALS)[number]['id'];
+/** Welches Werkzeug aus welchem Vorrat arbeitet */
+export const TOOL_MATERIAL: Record<string, MaterialId> = {
+	Alchemistenwerkzeug: 'alchemie',
+	'Kräuterkundeausrüstung': 'kraeuter',
+	Lederwerkzeug: 'leder',
+	Weberwerkzeug: 'stoff',
+	Holzschnitzwerkzeug: 'holz'
+};
+/** Woher das Material kommt: kaufen (Geld abziehen), aus dem Vorrat oder schon da (nichts verbuchen) */
+export type MaterialSource = 'kaufen' | 'vorrat' | 'frei';
+
+export function materialStock(id: MaterialId | undefined): number {
+	return id ? (campaign.data.inventory.materials?.[id] ?? 0) : 0;
+}
+
+/** Vorrat ändern (Wert in GM, den der DM für Gesammeltes nennt) */
+export function adjustMaterial(id: MaterialId, delta: number): void {
+	campaign.change('inventory', (inv) => {
+		const now = Math.max(0, Math.round(((inv.materials?.[id] ?? 0) + delta) * 100) / 100);
+		inv.materials = { ...(inv.materials ?? {}), [id]: now };
+	});
+}
+
+/** Material bezahlen oder aus dem Vorrat nehmen. false, wenn Geld oder Vorrat nicht reichen. */
+function takeMaterial(what: string, cost: number, source: MaterialSource, id: MaterialId | undefined): boolean {
+	if (cost <= 0 || source === 'frei') return true;
+	if (source === 'kaufen') {
+		if (pay(cost)) return true;
+		rolls.event('Nicht genug Geld', `${what}: Material für ${fmtGold(cost)} GM`, 'bad');
+		return false;
+	}
+	const have = materialStock(id);
+	if (!id || have + 1e-9 < cost) {
+		rolls.event('Zu wenig Material', `${what}: ${fmtGold(have)} von ${fmtGold(cost)} GM im Vorrat`, 'bad');
+		return false;
+	}
+	adjustMaterial(id, -cost);
+	return true;
 }
 
 const ALCHEMY =
@@ -38,6 +89,7 @@ const ALCHEMY =
 export const RECIPES: Recipe[] = [
 	{
 		id: 'alchemistenfeuer',
+		material: 'alchemie',
 		name: 'Alchemistenfeuer',
 		en: "Alchemist's Fire",
 		tool: 'Alchemistenwerkzeug',
@@ -53,6 +105,7 @@ export const RECIPES: Recipe[] = [
 	},
 	{
 		id: 'saeure',
+		material: 'alchemie',
 		name: 'Säure',
 		en: 'Acid (vial)',
 		tool: 'Alchemistenwerkzeug',
@@ -68,6 +121,7 @@ export const RECIPES: Recipe[] = [
 	},
 	{
 		id: 'gegengift',
+		material: 'alchemie',
 		name: 'Gegengift',
 		en: 'Antitoxin (vial)',
 		tool: 'Alchemistenwerkzeug',
@@ -82,6 +136,7 @@ export const RECIPES: Recipe[] = [
 	},
 	{
 		id: 'oel',
+		material: 'alchemie',
 		name: 'Öl',
 		en: 'Oil (flask)',
 		tool: 'Alchemistenwerkzeug',
@@ -97,6 +152,7 @@ export const RECIPES: Recipe[] = [
 	},
 	{
 		id: 'parfuem',
+		material: 'alchemie',
 		name: 'Parfüm',
 		en: 'Perfume (vial)',
 		tool: 'Alchemistenwerkzeug',
@@ -111,6 +167,7 @@ export const RECIPES: Recipe[] = [
 	},
 	{
 		id: 'seife',
+		material: 'alchemie',
 		name: 'Seife',
 		en: 'Soap',
 		tool: 'Alchemistenwerkzeug',
@@ -125,6 +182,7 @@ export const RECIPES: Recipe[] = [
 	},
 	{
 		id: 'heiltrank',
+		material: 'kraeuter',
 		name: 'Heiltrank',
 		en: 'Potion of Healing',
 		tool: 'Kräuterkundeausrüstung',
@@ -140,6 +198,7 @@ export const RECIPES: Recipe[] = [
 	},
 	{
 		id: 'pfeile',
+		material: 'holz',
 		name: 'Pfeile',
 		en: 'Arrows',
 		tool: 'Holzschnitzwerkzeug',
@@ -172,12 +231,10 @@ export function trained(s: PlayState, r: Recipe): boolean {
 }
 
 /** Herstellen: Zutaten bezahlen (oder aus dem Vorrat), Erzeugnis ins Inventar, Rast-Zyklus markieren. */
-export function craft(r: Recipe, qty: number, fromStock: boolean): boolean {
-	const cost = fromStock ? 0 : r.cost * Math.ceil(qty / r.yield);
-	if (cost > 0 && !pay(cost)) {
-		rolls.event('Nicht genug Geld', `${r.name}: Zutaten für ${fmtGold(cost)} GM`, 'bad');
-		return false;
-	}
+export function craft(r: Recipe, qty: number, source: MaterialSource): boolean {
+	const full = r.cost * Math.ceil(qty / r.yield);
+	if (!takeMaterial(r.name, full, source, r.material)) return false;
+	const cost = source === 'kaufen' ? full : 0;
 	campaign.change('inventory', (inv) => {
 		const it = inv.items.find((i) => i.id === r.id);
 		if (it) it.qty += qty;
@@ -186,4 +243,80 @@ export function craft(r: Recipe, qty: number, fromStock: boolean): boolean {
 	if (r.time === 'rast') campaign.change('state', (s) => (s.workshop = { at: Date.now(), item: r.name }));
 	rolls.event('Hergestellt', `${qty} × ${r.name}${cost ? ` für ${fmtGold(cost)} GM Zutaten` : ''}`, 'good');
 	return true;
+}
+
+// ---------- Projekte (Spielerhandbuch: Herstellen in der Freizeit) ----------
+
+/** 5 GM Marktwert pro Arbeitstag von 8 Stunden */
+export const GM_PER_HOUR = 5 / 8;
+/** Astralelf: nach 4 Stunden Trance wach, während die anderen noch 4 Stunden ruhen (laut DM: Zeit zum Herstellen) */
+export const FREE_HOURS = 4;
+
+export interface ProjectPreset {
+	name: string;
+	tool: string;
+	value: number;
+	note?: string;
+}
+
+/** Was Valerius gerade brauchen kann, Preise aus dem Spielerhandbuch (Details im Handwerks-Handbuch) */
+export const PROJECT_PRESETS: ProjectPreset[] = [
+	{ name: 'Lederrüstung', tool: 'Lederwerkzeug', value: 10, note: 'leicht, RK 11 + GE' },
+	{ name: 'Fellrüstung', tool: 'Lederwerkzeug', value: 10, note: 'mittelschwer, RK 12 + GE (höchstens 2)' },
+	{ name: 'Zaumzeug und Zügel', tool: 'Lederwerkzeug', value: 2 },
+	{ name: 'Packsattel', tool: 'Lederwerkzeug', value: 5 },
+	{ name: 'Reitsattel', tool: 'Lederwerkzeug', value: 10 },
+	{ name: 'Militärsattel', tool: 'Lederwerkzeug', value: 20, note: 'Vorteil auf Würfe, um im Sattel zu bleiben' },
+	{ name: 'Satteltaschen', tool: 'Lederwerkzeug', value: 4 },
+	{ name: 'Rucksack', tool: 'Lederwerkzeug', value: 2 },
+	{ name: 'Köcher', tool: 'Lederwerkzeug', value: 1, note: 'fasst 20 Pfeile' },
+	{ name: 'Kurzbogen', tool: 'Holzschnitzwerkzeug', value: 25, note: '1W6 Stich, Munition (24/96 m), zweihändig' },
+	{ name: 'Schild', tool: 'Holzschnitzwerkzeug', value: 10, note: '+2 RK' },
+	{ name: 'Speer', tool: 'Holzschnitzwerkzeug', value: 1, note: '1W6 Stich, Wurfwaffe (6/18 m), vielseitig (1W8)' },
+	{ name: 'Zelt für zwei', tool: 'Weberwerkzeug', value: 2 },
+	{ name: 'Decke', tool: 'Weberwerkzeug', value: 0.5 }
+];
+
+/** Freie Nächte (je 4 Stunden), bis das Projekt fertig ist */
+export function nightsLeft(value: number, done: number): number {
+	return Math.ceil((value - done) / (GM_PER_HOUR * FREE_HOURS) - 1e-9);
+}
+
+/** Neues Projekt. Mit payMaterial wird das Material (halber Marktwert) bezahlt. */
+export function startProject(p: ProjectPreset, source: MaterialSource): boolean {
+	const material = p.value / 2;
+	if (!takeMaterial(p.name, material, source, TOOL_MATERIAL[p.tool])) return false;
+	campaign.change('state', (s) => {
+		(s.projects ??= []).push({ id: uid('projekt'), name: p.name, tool: p.tool, value: p.value, done: 0, ...(p.note ? { note: p.note } : {}) });
+	});
+	const how = source === 'kaufen' ? `, Material ${fmtGold(material)} GM bezahlt` : source === 'vorrat' ? `, Material ${fmtGold(material)} GM aus dem Vorrat` : '';
+	rolls.event('Projekt begonnen', `${p.name} (${fmtGold(p.value)} GM)${how}`, 'good');
+	return true;
+}
+
+/** Stunden Arbeit gutschreiben (5 GM pro 8 Stunden), höchstens bis zum Marktwert */
+export function workOn(id: string, hours: number): void {
+	const p = campaign.data.state.projects?.find((x) => x.id === id);
+	if (!p) return;
+	const done = Math.min(p.value, Math.round((p.done + hours * GM_PER_HOUR) * 100) / 100);
+	campaign.change('state', (s) => {
+		const x = s.projects?.find((y) => y.id === id);
+		if (x) x.done = done;
+	});
+	rolls.event('Am Projekt gearbeitet', `${p.name}: ${hours} Std., jetzt ${fmtGold(done)} von ${fmtGold(p.value)} GM`, 'info');
+}
+
+/** Fertiges Projekt ins Inventar (am Körper) */
+export function finishProject(id: string): void {
+	const p = campaign.data.state.projects?.find((x) => x.id === id);
+	if (!p) return;
+	campaign.change('inventory', (inv) => {
+		inv.items.push({ id: uid('eigen'), name: p.name, group: 'koerper', qty: 1, desc: `Selbst hergestellt mit dem ${p.tool}.${p.note ? ` ${p.note}.` : ''}` });
+	});
+	campaign.change('state', (s) => (s.projects = (s.projects ?? []).filter((x) => x.id !== id)));
+	rolls.event('Fertig', `${p.name} liegt jetzt im Inventar`, 'good');
+}
+
+export function dropProject(id: string): void {
+	campaign.change('state', (s) => (s.projects = (s.projects ?? []).filter((x) => x.id !== id)));
 }

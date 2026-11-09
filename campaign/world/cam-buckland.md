@@ -6,6 +6,8 @@ group: kontakt
 tone: ally
 status: Kontakt in der alten Welt
 summary: Identitäts- und Papierfälscher, alter Kollege aus Zaffera-Zeiten. „Du schuldest mir was.“
+image: cam.webp
+imageFocus: 50% 35%
 ---
 # Cam Buckland
 
