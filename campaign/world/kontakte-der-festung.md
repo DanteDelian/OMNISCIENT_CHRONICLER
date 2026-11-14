@@ -15,7 +15,7 @@ Kleinere, aber nützliche Bekanntschaften in und um [[Die Siedlung|Leons Stadt]]
 Apothekerin mit eigenem **Laden im oberen Ring**. Ihre Quest, die 10 unbekannten Kräuter, hat die Gruppe am **12.07.2026 abgegeben**. Dafür bekam Valerius ein **Alchemistenwerkzeug** geschenkt, dazu Grundsubstanzen für den Anfang und Material für bis zu 10× *Vertrauten finden*. Die Kräuter selbst hat er laut Zählung noch. Siehe [[Alchemie-Kompendium]].
 
 ## Der Gnom
-Runenexperte und zeitweiliger Verbündeter. Besitzt einen interessanten **Handschuh**. *Vielleicht kann er die Riesenrunen deuten.*
+Runenexperte und zeitweiliger Verbündeter. Besitzt einen interessanten **Handschuh**. *Vielleicht kann er die Riesenrunen deuten.* Das Runenschwert der Riesen lag im Juli vor der Stadt und war zu schwer. Mit [[Tensers schwebende Scheibe|Tensers schwebender Scheibe]] ließe es sich zu ihm bringen.
 
 ## Der Jäger
 Möglicher Kontakt in der Wildnis.

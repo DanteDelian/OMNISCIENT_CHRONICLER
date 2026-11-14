@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ShieldCheck, Compass, ScrollText, Swords, Mail, BookOpen, FlaskConical, ShoppingBag, Lightbulb, FileText, Hammer } from '@lucide/svelte';
+	import { ShieldCheck, Compass, ScrollText, Swords, Mail, BookOpen, FlaskConical, ShoppingBag, Lightbulb, FileText, Hammer, Telescope } from '@lucide/svelte';
 	let { name = '', size = 18, class: cls = '' }: { name?: string; size?: number; class?: string } = $props();
 	const ICONS = {
 		'shield-check': ShieldCheck,
@@ -11,7 +11,8 @@
 		'flask-conical': FlaskConical,
 		'shopping-bag': ShoppingBag,
 		lightbulb: Lightbulb,
-		hammer: Hammer
+		hammer: Hammer,
+		telescope: Telescope
 	} as const;
 	const Icon = $derived(ICONS[name as keyof typeof ICONS] ?? FileText);
 </script>

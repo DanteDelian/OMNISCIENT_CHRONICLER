@@ -29,3 +29,12 @@ imageFocus: 50% 20%
 - Aus der Fluchtrichtung des Anführers hat sie Stimmen gehört.
 - Mit *Tierfreundschaft* gewann sie [[Das Reittier]].
 - [[Lucira]] misstraut ihr, weil sie sich euch gerade anbiedert (laut dir, 09.11.2026).
+
+## Was auffällt (14.11.2026)
+- Sie trägt den „Sack seltsamer Münzen“ des Anführers. Beim sterbenden Echsenkrieger spürte sie, dass die Seele fehlte. Sie spürt Seelen also und weiß vielleicht längst, was die Münzen sind.
+- Nach Hause käme sie auch ohne die Teufelsjäger: [[Verbannung]] (Grad 4, ab Stufe 7) schickt ein Wesen von einer anderen Ebene zurück.
+- [[Nita]] kann Flüche lösen. Ob der Alkoholgeruch ein Fluch ist, hat noch niemand geprüft.
+
+*Theorie:* In den seltsamen Münzen stecken die geraubten Seelen der Echsenkrieger.
+
+**Offen:** Was hat sie erlebt, solange sie fort war?

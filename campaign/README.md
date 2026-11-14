@@ -21,6 +21,7 @@ Alles, was das Grimoire anzeigt, steht in diesen Dateien. Ändert man sie (von H
 | `netzwerk.json` | Die Unsichtbare Hand: Rollen und Leute mit Treue, Lohn und Wissen (Seite Netzwerk) | ja |
 | `zaubersets.json` | Zauber-Sets für den Tag: Prioritätenlisten zum Vorbereiten (Zauberbuch, Dialog Lange Rast, Druck) | ja |
 | `geheimnisse.json` | Wer weiß was? Floshems Ruf, Gefahren und Geheimnisse mit Mitwissern (eigene Seite, Druck) | ja |
+| `uhren.json` | Uhren: Fristen, wachsende Gefahren und Ziele, in Feldern gezählt (Spieltisch, Quests) | ja |
 | `docs/*.md` | Archiv-Dokumente (Prüfbericht, Lage, Taktik, DM-Nachrichten, Backstory, Alchemie, Einkauf) | nein |
 | `world/*.md` | Personen, Fraktionen, Orte | nein |
 | `bilder.json` | Aufträge für die KI-Stimmungsbilder (Stil, Prompt je Bild), erzeugt mit `python -P scripts/bilder.py` | nein |
@@ -51,7 +52,7 @@ imageFocus: 50% 20%    # optional: Bildausschnitt (CSS object-position), damit K
 ```
 
 ### docs/*.md (Frontmatter)
-`title`, `subtitle`, `icon` (shield-check, compass, scroll-text, swords, mail, book-open, flask-conical, shopping-bag),
+`title`, `subtitle`, `icon` (shield-check, compass, scroll-text, swords, mail, book-open, flask-conical, shopping-bag, lightbulb, hammer, telescope),
 `order`, `group`, `aliases`, `updated` (JJJJ-MM-TT). Hinweiskästen: `> [!TIP] Titel`, `[!RULE]`, `[!WARNING]`, `[!NOTE]`, `[!FIX]`.
 
 ### journal.json
@@ -120,6 +121,12 @@ Vorbereitung. `icon` aus `ship | castle | wand | building | swords | moon`. Das 
 `status` aus `sicher | gefaehrdet | aufgeflogen`. `who` ist der Name eines Welt-Eintrags oder freier Text in Anführungszeichen
 („Graf Lhaaz“). `how` sagt, woher die Person es weiß. `truth`, `cover` (was die Leute glauben), `risk` und `note` sind Markdown,
 `*Theorie:*` und `**Offen:**` in `truth`, `risk` und `note` erscheinen auf der Rätselwand. Nur Belegtes eintragen.
+
+### uhren.json
+`{clocks[{id, title, kind, segments, filled, unit, when, then, link, note}]}`. `kind` aus `frist` (läuft ab), `gefahr` (wächst) und `ziel`
+(Fortschritt). `segments` ist die Zahl der Felder (2 bis 12), `filled` die gefüllten, `unit` sagt, wofür ein Feld steht („Stunden“).
+`when` (wann sie abläuft), `then` (was dann passiert) und `note` sind Markdown, `link` ist der Name eines Eintrags. Die App füllt und
+leert Felder per Klick. Unbekannte Stände als Schätzung kennzeichnen: Den wahren Stand kennt der DM.
 
 ### Rätselwand (automatisch)
 Die Seite sammelt alles, was in Texten als `*Theorie:*`, `*Theorie (Datum):*`, Liste unter `*Theorien:*` oder `**Offen:**`

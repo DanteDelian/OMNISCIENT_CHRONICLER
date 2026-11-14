@@ -4,11 +4,11 @@ subtitle: Was falsch war, was korrigiert wurde und was noch offen ist
 icon: shield-check
 order: 1
 group: Prüfung
-updated: 2026-11-09
+updated: 2026-11-14
 ---
 # Prüfbericht
 
-**Stand: 9. November 2026.** Abgeglichen wurden die 12 Dateien im Drive-Ordner *Valerius*, die 3 Dokumente im Ordner *Kho* (darunter dein Sessionbericht vom 12.10.2026), das alte Grimoire auf GitHub und die D&D-5e-Regeln (Spielerhandbuch 2014, Xanathars Ratgeber für alles, Spelljammer für den Astralelfen). Deine Antworten vom 12.10.2026, dein [[Sessionbericht Juli bis Oktober 2026|Sessionbericht]], die Session vom 08.11.2026 und deine Antworten vom 08. und 09.11.2026 sind eingearbeitet.
+**Stand: 14. November 2026.** Am 14.11.2026 wurden alle Einträge gegeneinander und gegen die Regeln gelesen, das Ergebnis steht in der [[Tiefenanalyse]] und unten bei Punkt B 19. Abgeglichen wurden die 12 Dateien im Drive-Ordner *Valerius*, die 3 Dokumente im Ordner *Kho* (darunter dein Sessionbericht vom 12.10.2026), das alte Grimoire auf GitHub und die D&D-5e-Regeln (Spielerhandbuch 2014, Xanathars Ratgeber für alles, Spelljammer für den Astralelfen). Deine Antworten vom 12.10.2026, dein [[Sessionbericht Juli bis Oktober 2026|Sessionbericht]], die Session vom 08.11.2026 und deine Antworten vom 08. und 09.11.2026 sind eingearbeitet.
 
 > **Gemini-Entwürfe:** Die beiden „Optimiert“-Dokumente vom 10.10.2026 waren Vorschläge von Gemini und sind **nicht übernommen**. Ihre vier neuen Zauber (Nebelwolke, Spiegelbilder, Gedanken wahrnehmen, Fliegen) wurden nicht übernommen. *Nebelwolke* hast du am 08.11.2026 selbst gewählt. Gemini hat auch in deinen älteren Dokumenten mitgeschrieben. Daher stammen viele der Fehler unten.
 
@@ -38,7 +38,7 @@ updated: 2026-11-09
 | Astrale Trance | nur Schlaf-Ersatz | **+1 Waffe oder Werkzeug** | täglich nach der Trance. Spelljammer gäbe zusätzlich eine Fertigkeit, euer DM nicht (12.10.2026) |
 | Sternenschritt | 3× (Übungsbonus) | **1×** pro langer Rast | Entscheidung eures DM (12.10.2026) |
 
-**Bestätigt richtig:** alle Attributswerte, Übungsbonus +3, RK 11, Initiative +1, Bewegung 9 m, Zauber-SG 15, Zauberangriff +7, Plätze 4/3/2, RW Intelligenz +7, Arkane Kunde +7, Täuschen +4, Dolch +4 (1W4 + 1), Kampfstab +3 (1W6, zweihändig 1W8), Arkane Erholung (3 Grade), 13 Rationen. Geld laut deiner Angabe jetzt **47 GM und 16 SM**.
+**Bestätigt richtig:** alle Attributswerte, Übungsbonus +3, RK 11, Initiative +1, Bewegung 9 m, Zauber-SG 15, Zauberangriff +7, Plätze 4/3/2, RW Intelligenz +7, Arkane Kunde +7, Täuschen +4, Dolch +4 (1W4 + 1), Kampfstab +3 (1W6, zweihändig 1W8), Arkane Erholung (3 Grade), 13 Rationen. Geld: **47 GM und 27 SM** (16 SM laut deiner Angabe, dazu 11 SM Beute vom 08.11.2026).
 
 ## B · Zauber und Regeln
 
@@ -76,6 +76,19 @@ updated: 2026-11-09
     - **[[Botschaft]]:** Die gestohlene Spruchrolle war *Verständigung*, nicht *Botschaft* (DM, 08.11.2026). Den Zaubertrick *Botschaft* beherrschst du weiterhin.
 18. **Ohrringe der Verständigung:** Laut deinem früheren Plan sollte Aella den zweiten bekommen. Stand 09.11.2026: Beide liegen bei dir, der zweite ist für deinen künftigen Verwalter gedacht.
 
+19. **Prüfung am 14.11.2026** ([[Tiefenanalyse]]). Berichtigt und ergänzt:
+    - **[[Schutz vor Gut und Böse]]:** Bisher stand dort, dein Fokus ersetze auch verbrauchte Komponenten ohne Preis. Laut Sage Advice ersetzt ein Fokus nur Komponenten ohne Preis, die **nicht** verbraucht werden. Du brauchst Weihwasser oder Silber- und Eisenpulver, und im Inventar ist keins.
+    - **Riesen und Engstellen:** Ein riesiges Wesen zwängt sich durch 3 m breite Durchgänge. Schmalere kann es gar nicht betreten. Das Taktik-Handbuch sagte bisher, es zwänge sich durch alles unter 3 m.
+    - **[[Tote erwecken]]:** In der Kurzzeile stand für Skelette RK 13. Ohne Rüstung haben sie laut DM RK 12.
+    - **[[Geringe Beschwörung]]:** Der Gegenstand verschwindet auch, wenn er Schaden **zufügt** (Errata zum Spielerhandbuch).
+    - **Steinriese im Netz:** Der einfache Stärkewurf gelingt zu 60 %, mit Athletik zu 90 %. Die Tabelle nannte nur die 90 %.
+    - **[[Totenglocke]] im Briefing:** Auf Stufe 5 sind es 2W12 gegen Verletzte, nicht 1W12.
+    - **Steine und Gegenzauber:** Ein Zauber aus einem Gegenstand hat keine Komponenten (SRD 5.1) und ist damit nicht wahrnehmbar (Xanathars). *Gegenzauber* hält das Senden über einen Stein nach den Regeln nicht auf. Frage an den DM.
+    - **Neue Merkmale im Bogen** mit vollem Regeltext: [[Zauberwirken]], [[Dein Zauberbuch]] und [[Attributswerterhöhung]], dazu der Ausblick auf die Schulmerkmale der Stufen 10 und 14.
+    - **Sechs neue Vorschläge im Zauberbuch** mit vollem Regeltext: [[Alarm]], [[Sprachen verstehen]], [[Illusionsschrift]], [[Magischer Mund]], [[Gedanken wahrnehmen]] und [[Verbannung]].
+    - **Veraltet und nachgezogen:** der Wasserweg (seit dem 08.11. reitet ihr am Wüstenrand), der Vorrat an Knochen, die Ohrringe (für den Verwalter, nicht für Aella), das Geld, Lucaz (zurück beim Vater), die Namen Grum und Dehapten, Tashas Kessel (erlaubt), Heiltränke (nur mit Kräuterkunde).
+    - **Deine Werte gehen auf:** Die Standardwerte 15, 14, 13, 12, 10 und 8, dazu +2 Intelligenz und +1 Konstitution vom Volk und je +1 auf beide mit Stufe 4, ergeben genau deinen Bogen. Offen sind die zweite Sprache des Astralelfen und dein Hintergrund: Er bringt zwei Fertigkeiten, eingetragen ist nur Täuschen.
+
 ### Nur in den Gemini-Entwürfen (zur Info)
 - *Gedanken wahrnehmen*: Tieferes Sondieren ist ein **WE**-Rettungswurf, nicht IN.
 - *Fliegen* wäre auf Stufe 5 kein freier Platz gewesen. Deine Stufe-5-Zauber sind *Tote erwecken* und *Gegenzauber*.
@@ -101,7 +114,7 @@ updated: 2026-11-09
 
 ## D · Offene Fragen
 
-Die offenen Fragen stehen gebündelt auf der **[[Rätselwand]]** und als Druckblatt „Fragen an den DM“. Offen sind noch der Verständigungsstein des Sumpfschuppen-Anführers und Khos Drachenabstammung.
+Die offenen Fragen stehen gebündelt auf der **[[Rätselwand]]** und als Druckblatt „Fragen an den DM“. Offen sind 23 Fragen: der Verständigungsstein des Sumpfschuppen-Anführers, Khos Drachenabstammung und 21 neue aus der Tiefenanalyse vom 14.11.2026.
 
 ### Geklärt am 9. November 2026
 - **Namen:** Die Fee heißt **Alucasia**, der befreite Orc **Grum**, eure Basis **Dehapten**.
@@ -169,6 +182,11 @@ Die offenen Fragen stehen gebündelt auf der **[[Rätselwand]]** und als Druckbl
 9. **Lisbeth als Chance (Theorie):** Sie weiß vermutlich nicht, wer ihren Tod bestellt hat. Dass ihr sie gerettet habt, ist euer Kapital.
 10. **Stufe 6:** *Hypnotisches Muster* und *Flutwelle* (siehe [[Stufe-6-Planer]]). Tashas Kessel ist erlaubt, damit bleibt [[Feenwesen beschwören]] eine Option, sobald du den Fokus für 300 GM hast. Gegen die Riesenrunen hilft [[Fluch brechen]].
 11. **Sternenschritt ist knapp** (1×). Halte ihn für die Flucht aus dem Nahkampf zurück.
+12. **Der Morgen-Trick:** Nach der Trance *Tote erwecken* wirken, 1 Stunde kurz rasten, den Platz mit der Arkanen Erholung zurückholen. Abends bleibt der Abend-Trick die bessere Wahl, wenn ein Platz übrig ist (siehe [[Taktik-Handbuch]]).
+13. **Rituale ins Buch holen:** [[Alarm]], [[Sprachen verstehen]], [[Illusionsschrift]] und [[Magischer Mund]] kosten nie einen Platz und machen dich unabhängig von Lucira und von schlechten Wachen.
+14. **Gefangene der Society** bekommen Knebel und einen Sack über den Kopf. *Nebelschritt* braucht die Stimme und einen sichtbaren Zielort.
+15. **Eine Sicherheitskopie des Zauberbuchs** anlegen, sobald das Kellerlabor steht: 22 Stunden und 220 GM (siehe [[Dein Zauberbuch]]).
+16. **Skelette reisen auf der Scheibe mit,** wenn ihr reitet (DM fragen). So gehen sie nicht wieder verloren wie am 08.11.2026.
 
 ## F · Hinweise zu Aellas Bogen (für ihre Spielerin)
 

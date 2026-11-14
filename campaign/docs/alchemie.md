@@ -11,11 +11,14 @@ updated: 2025-08-12
 
 *Aus deinem Dokument „Alchemi“ (12.08.2025), mit Regelhinweisen ergänzt.*
 
+> [!NOTE] Stand November 2026
+> Die Quest der Kräuterfrau ist erledigt, das Werkzeug hast du. Was du heute herstellen kannst und was es kostet, steht im [[Handwerks-Handbuch]] und in der [[Werkstatt]].
+
 Dieses Buch ist der Beginn deines Aufstiegs. Während andere ihre Macht aus alten Göttern oder roher Gewalt ziehen, erwächst deine aus dem stillen Brodeln eines Kessels und dem präzisen Zerstampfen einer Wurzel. Der erste Schritt: die **Kräuterfrau** der Festung überzeugen, dich als Lehrling anzunehmen. Ihre Aufgabe ist dein Initiationsritus. Siehe [[Kontakte der Festung]].
 
 ## Kapitel 1 · Die Anfangsinvestition
 
-**Einmalig: Alchemistenwerkzeug**, Marktwert **50 GM**. Damals hattest du nur 6 Silber, heute **17 GM und 16 SM**. Wege: Kauf nach dem Saladin-Handel, ein Zweitset der Kräuterfrau oder eine Questbelohnung.
+**Einmalig: Alchemistenwerkzeug**, Marktwert **50 GM**. **Erledigt:** Die Kräuterfrau hat es dir am 12.07.2026 zum Abschluss ihrer Quest geschenkt, dazu Grundsubstanzen für den Anfang.
 
 **Laufend: Reagenzien** laut Rezepttabelle.
 

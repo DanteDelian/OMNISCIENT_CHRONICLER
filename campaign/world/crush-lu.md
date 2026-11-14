@@ -21,3 +21,5 @@ imageFocus: 50% 20%
 ## Seit Juli 2026
 - Führte mit [[Zitherus]] die Friedens- und Bündnisgespräche mit [[Leon Lhaaz|Leon]]. Danach kam [[Lula Lhaaz|Lula]] frei, und die Echsen dürfen sich in Leons Stadt eingliedern.
 - **11.10.2026:** Spürte nachts etwas Mächtiges, das wohl vom [[Der Magische Turm|Turm im See]] ausging, und eilte zu euch. Sie erinnert sich, anders als Lisbeth, an die drei verschwundenen Gefährten. Siehe [[Die verschwundenen Gefährten]].
+
+**Idee (14.11.2026):** Crush Lu spürt Seelen: In Tayas Körper nahm sie zwei wahr. Sie könnte prüfen, was in dem „Sack seltsamer Münzen“ steckt, den die Fee beim Anführer der [[Die Sumpfschuppen|Sumpfschuppen]] fand. Und sie sollte erfahren, wer ihre Krieger jagt.

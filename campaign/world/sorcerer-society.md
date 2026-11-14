@@ -18,7 +18,7 @@ summary: Magier-Organisation mit fünf Untergruppen. Gegründet gegen das Imperi
 ## Der Anführer
 - Ein **Elf mit schuppenartiger Hautflechte**. Er beschwor zwei geflügelte Echsenkreaturen und teleportierte sich nach deren Niederlage **unsichtbar** davon. Seinen Bossraum, eine Magmakammer, hatte er schon geplündert.
 - *Theorie:* Aellas Notiz „komischer humanoider Echsentyp, sehr androgyn, kann Teufel beschwören (?)“ könnte dieselbe Person meinen.
-- *Gegenzauber* ist Valerius' Antwort, auch gegen die Flucht per Teleport.
+- *Gegenzauber* ist Valerius' Antwort, auch gegen die Flucht per Teleport. [[Unsichtbares sehen]] steht seit dem 08.11.2026 in deinem Buch.
 
 ## Neu (Juli 2026)
 - Laut den Echsen wird die Society im **Osten und Nordosten** immer stärker, breitet sich aus und **erntet die Seelen** der Echsen anderer Stämme.
@@ -35,5 +35,13 @@ summary: Magier-Organisation mit fünf Untergruppen. Gegründet gegen das Imperi
   - die **Adleraugen** im Osten
   - die **Totengräber**, deren Gebiet ihr nicht kennt. *Theorie:* Nekromanten.
 - Freistadt und die Freistaaten stehen im kalten Krieg mit dem Imperium.
+
+## Was auffällt (14.11.2026)
+
+*Theorie:* Jede Untergruppe wird, was sie jagt. Die Sumpfschuppen tragen Schuppen und Klauen, ihr Anführer dazu einen Echsenschwanz. Die Wasserwanderer jagen dann Meeresvölker, die Adleraugen Vogelvölker, die Totengräber die Toten.
+
+*Theorie:* Der Elf aus der Magmakammer ist Farlir oder einer seiner Ranghöchsten. Seine schuppenartige Hautflechte ist dieselbe Verwandlung in einem frühen Stadium.
+
+*Theorie:* Zauberer (Sorcerer) können mit Metamagie ohne Worte und Gesten wirken. Dann helfen weder Knebel noch *Gegenzauber*, wohl aber fehlende Sicht.
 
 **Für dich:** Gegner bleiben, ein Druckmittel gewinnen oder beitreten und aufsteigen? Die Abwägung steht im [[Aufbauplan der Unsichtbaren Hand|Aufbauplan]].

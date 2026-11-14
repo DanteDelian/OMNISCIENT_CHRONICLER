@@ -536,8 +536,33 @@ export interface Secrets {
 	secrets: Secret[];
 }
 
+/** Eine Uhr (campaign/uhren.json): eine Frist, eine wachsende Gefahr oder ein Ziel, in Feldern gezählt */
+export interface Clock {
+	id: string;
+	title: string;
+	/** frist: läuft ab · gefahr: wächst · ziel: Fortschritt zu etwas Gutem */
+	kind: 'frist' | 'gefahr' | 'ziel';
+	/** Anzahl der Felder (2 bis 12) */
+	segments: number;
+	filled: number;
+	/** Wofür ein Feld steht, etwa „Stunden“ */
+	unit?: string;
+	/** Wann sie abläuft (Markdown) */
+	when?: string;
+	/** Was dann passiert (Markdown) */
+	then?: string;
+	/** Name eines Eintrags, zu dem die Uhr gehört */
+	link?: string;
+	note?: string;
+}
+
+export interface Clocks {
+	clocks: Clock[];
+}
+
 export interface CampaignData {
 	trees: FamilyTree[];
+	uhren: Clocks;
 	fragen: Question[];
 	netzwerk: Network;
 	zaubersets: SpellSets;
@@ -558,5 +583,5 @@ export interface CampaignData {
 }
 
 /** Dateien, die die App zurückschreiben darf. */
-export const WRITABLE = ['state', 'inventory', 'quests', 'spells', 'journal', 'map', 'fragen', 'netzwerk', 'zaubersets', 'geheimnisse'] as const;
+export const WRITABLE = ['state', 'inventory', 'quests', 'spells', 'journal', 'map', 'fragen', 'netzwerk', 'zaubersets', 'geheimnisse', 'uhren'] as const;
 export type WritableFile = (typeof WRITABLE)[number];

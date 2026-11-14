@@ -17,3 +17,7 @@ summary: Gottähnliches Wesen in einer Dimensionsblase hinter dem Siegel auf dem
 - Mit zurück kam ein blinder Passagier: [[Die Fee|die Fee]].
 
 > Was es sonst sagte, weißt du nicht mehr. Quest: [[Das Siegel und das Wesen]].
+
+*Theorie:* Das Siegel hielt etwas im Turm zurück, und das Wesen war nur der Ort, an den es führte. Seit das Siegel inaktiv ist, regt sich etwas unter dem See.
+
+**Offen:** Was stand auf dem Siegel? [[Lucira]] hat es gelesen.

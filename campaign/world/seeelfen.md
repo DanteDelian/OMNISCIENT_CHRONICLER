@@ -15,3 +15,7 @@ summary: Seeelfen-Botschafter suchen Beziehungen zu Leon. Fridolin vom See gehö
 - Aus Aellas Notizen: **Frederic Wellenstand**, Diplomat der Seeelfen.
 
 *Theorie:* Frederic Wellenstand ist der ältere Seeelfen-Magier, mit dem Fridolin ankam.
+
+*Theorie:* Jede Untergruppe der [[Sorcerer Society|Society]] jagt ein Volk und nimmt dessen Gestalt an. Die Wasserwanderer im Norden hätten es dann auf Meeresvölker abgesehen, also auch auf die Seeelfen.
+
+*Theorie:* Die Seeelfen überqueren das Meer ohne Lhaaz-Schiffe. Das wäre ein zweiter Weg in die alte Welt.

@@ -31,6 +31,8 @@ imageFocus: 50% 35%
 - **Spruchrolle kaufen und selbst lesen:** Der Zauber steht auf der Magierliste, du wirkst ihn also ohne Wurf von der Rolle. Frag [[Saladin]] oder sieh dich in [[Die südliche Freistadt|Freistadt]] um, nur nicht bei der Society. Nach Xanathars Richtwerten kostet so eine Rolle etwa 50 bis 300 GM, den Preis bestimmt der DM.
 - **Oder ins Zauberbuch:** Statt sie zu lesen, schreibst du sie ab: 6 Stunden und 150 GM, dazu ein Wurf auf Arkane Kunde gegen SG 13. Die Rolle ist danach in jedem Fall verbraucht. Dafür kannst du *Verständigung* danach immer wirken, für einen Grad-3-Platz.
 - **Einen fremden Zauberer bezahlen** ist keine gute Idee: Er hört jedes Wort.
+- **Ein Brief mit [[Illusionsschrift]] (Ritual):** Nur Cam liest den echten Text, alle anderen sehen einen harmlosen Brief. Die Täuschung hält 10 Tage. Dauert die Überfahrt länger, liegt der echte Text offen.
+- *Theorie:* Die [[Die Seeelfen|Seeelfen]] kommen ohne Lhaaz-Schiffe über das Meer. Dann gäbe es über Fridolins Leute einen zweiten Weg für Post.
 
 **Lohnt es sich?** Ja, aber nicht sofort. Cam schrieb „Du schuldest mir was, ich melde mich“. Wer sich zuerst meldet, bittet um etwas, und die Schuld wächst. Melde dich, wenn du ihm etwas bieten kannst.
 
@@ -50,3 +52,5 @@ imageFocus: 50% 35%
 **Erste Nachricht, ein Vorschlag (21 von 25 Wörtern, ohne Namen):** „Alter Kollege, angekommen und gesund. Meine Schuld vergesse ich nicht. Folgt der Mönch meiner Spur? Brauchst du etwas, sag es jetzt.“ Harmlos, falls er geschnappt wurde, und seine Antwort verrät dir, wie es um ihn steht.
 
 Volltext: [[Nachrichten vom DM]]
+
+*Theorie:* Dein Hintergrund ist der Kriminelle. Sein Merkmal ist ein verlässlicher Kontakt in die Unterwelt, über den Nachrichten auch über weite Strecken laufen. Das wäre Cam. Die Frage an den DM steht auf der [[Rätselwand]].

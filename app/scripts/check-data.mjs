@@ -5,7 +5,7 @@
  * - jeder [[Verweis]] und jeder Personen-/Ortsname löst sich auf
  * - Quellen-IDs (sources.json) und Quest-IDs existieren
  * - Stammbäume (stammbaum.json) verbinden nur vorhandene Personen
- * - Fragen (fragen.json) und Netzwerk (netzwerk.json) sind vollständig
+ * - Fragen (fragen.json), Netzwerk (netzwerk.json) und Uhren (uhren.json) sind vollständig
  * Aufruf: npm run check:data   (Exit-Code 1 bei Fehlern)
  */
 import fs from 'node:fs';
@@ -57,6 +57,7 @@ const d = {
 	netzwerk: { roles: [], agents: [], ...(json('netzwerk.json') ?? {}) },
 	zaubersets: { sets: [], ...(json('zaubersets.json') ?? {}) },
 	geheimnisse: { ruf: '', gefahren: '', secrets: [], ...(json('geheimnisse.json') ?? {}) },
+	uhren: { clocks: [], ...(json('uhren.json') ?? {}) },
 	docs: mdDir('docs', (slug, data, body) => ({ slug, title: String(data.title ?? slug), subtitle: data.subtitle, aliases: asArray(data.aliases), order: data.order ?? 99, group: data.group ?? '', body })),
 	world: mdDir('world', (slug, data, body) => ({
 		slug,
@@ -218,6 +219,20 @@ for (const g of d.geheimnisse.secrets) {
 	links(where, [g.truth, g.cover, g.risk, g.note].filter(Boolean).join(' '));
 }
 
+// Uhren: Fristen, Gefahren und Ziele
+const clockIds = new Set();
+for (const c of d.uhren.clocks) {
+	const where = `uhren.json ${c.id ?? '?'}`;
+	if (!c.id || !c.title) errors.push(`${where}: ohne id oder title`);
+	if (clockIds.has(c.id)) errors.push(`${where}: doppelte ID`);
+	clockIds.add(c.id);
+	if (!['frist', 'gefahr', 'ziel'].includes(c.kind)) errors.push(`${where}: kind muss frist, gefahr oder ziel sein`);
+	if (!(c.segments >= 2 && c.segments <= 12)) errors.push(`${where}: segments muss zwischen 2 und 12 liegen`);
+	if (!(c.filled >= 0 && c.filled <= c.segments)) errors.push(`${where}: filled muss zwischen 0 und segments liegen`);
+	if (c.link) ref(where, c.link);
+	links(where, [c.when, c.then, c.note].filter(Boolean).join(' '));
+}
+
 // Bilder: Gibt es jede eingetragene Datei in campaign/assets/?
 // Fehlt ein Bild, das in bilder.json noch als Auftrag steht, ist das nur ein Hinweis: Die App blendet es aus.
 const pending = new Set((json('bilder.json')?.bilder ?? []).map((b) => `${b.id}.webp`));
@@ -248,7 +263,7 @@ for (const s of d.spells.filter((x) => x.status === 'buch' && !x.card)) {
 	if (plain.length > 650) warnings.push(`spells.json ${s.id}: langer Regeltext ohne „card“ für die Zauberkarte`);
 }
 
-console.log(`Index: ${index.length} Einträge · Zauber ${d.spells.length} · Welt ${d.world.length} · Dokumente ${d.docs.length} · Journal ${d.journal.length} · Quests ${d.quests.length} · Stammbäume ${d.trees.length} · Fragen ${d.fragen.length} · Netzwerk ${d.netzwerk.agents.length} · Zauber-Sets ${d.zaubersets.sets.length} · Geheimnisse ${d.geheimnisse.secrets.length}`);
+console.log(`Index: ${index.length} Einträge · Zauber ${d.spells.length} · Welt ${d.world.length} · Dokumente ${d.docs.length} · Journal ${d.journal.length} · Quests ${d.quests.length} · Stammbäume ${d.trees.length} · Fragen ${d.fragen.length} · Netzwerk ${d.netzwerk.agents.length} · Zauber-Sets ${d.zaubersets.sets.length} · Geheimnisse ${d.geheimnisse.secrets.length} · Uhren ${d.uhren.clocks.length}`);
 for (const w of warnings) console.log(`  Hinweis: ${w}`);
 for (const e of errors) console.log(`  FEHLER:  ${e}`);
 console.log(errors.length ? `\n${errors.length} Fehler gefunden.` : '\nAlles konsistent.');

@@ -1,0 +1,84 @@
+{
+  "clocks": [
+    {
+      "id": "huette",
+      "title": "Twees Hütte",
+      "kind": "frist",
+      "segments": 8,
+      "filled": 7,
+      "unit": "Stunden",
+      "when": "8 Stunden nach dem Wirken",
+      "then": "Die Kuppel verschwindet, ihr seid wieder zu sehen.",
+      "link": "Twee",
+      "note": "Die Verfolger kamen nach 6 bis 7 Stunden. Stand: Ende der Session vom 08.11.2026."
+    },
+    {
+      "id": "steine",
+      "title": "Steine der Verfolger",
+      "kind": "frist",
+      "segments": 2,
+      "filled": 1,
+      "unit": "bis zum Morgengrauen",
+      "when": "nächstes Morgengrauen",
+      "then": "Sie können wieder senden.",
+      "link": "Die Sumpfschuppen",
+      "note": "Beide Steine eines Paars sind stumm, sobald einer gesendet hat. Der Anführer schlug am 08.11. Alarm."
+    },
+    {
+      "id": "tierfreundschaft",
+      "title": "Tierfreundschaft am Dino",
+      "kind": "frist",
+      "segments": 6,
+      "filled": 3,
+      "unit": "je 4 Stunden",
+      "when": "24 Stunden nach dem Wirken am 08.11.",
+      "then": "Der Dino ist nicht mehr bezaubert. Bis dahin an euch gewöhnen oder neu wirken.",
+      "link": "Das Reittier",
+      "note": "Rund 11 von 24 Stunden sind vorbei: 4 Stunden Ritt, 6 bis 7 Stunden Rast."
+    },
+    {
+      "id": "society-alarm",
+      "title": "Alarm der Society",
+      "kind": "gefahr",
+      "segments": 6,
+      "filled": 2,
+      "when": "läuft seit dem 08.11.2026",
+      "then": "Mehr Jäger, vielleicht Farlir selbst.",
+      "link": "Sorcerer Society",
+      "note": "Feld 1: Der Anführer schlug Alarm. Feld 2: Drei Verfolger lagern bei euch. Füll ein Feld, wenn die Society wieder von euch erfährt."
+    },
+    {
+      "id": "belagerung",
+      "title": "Die Belagerung im Westen",
+      "kind": "gefahr",
+      "segments": 6,
+      "filled": 2,
+      "when": "unbekannt",
+      "then": "Die Stadt fällt, bevor ihr ankommt.",
+      "link": "Die belagerte Stadt im Westen",
+      "note": "Schätzung: Leonidas ist geflohen, seine Frau hält die Stellung. Den wahren Stand kennt der DM."
+    },
+    {
+      "id": "schiffskarawane",
+      "title": "Die nächste Schiffskarawane",
+      "kind": "gefahr",
+      "segments": 4,
+      "filled": 1,
+      "when": "unbekannt",
+      "then": "Der Tod der echten Donnergarde wird in Xantus bekannt.",
+      "link": "Die Donnergarde",
+      "note": "Schätzung. Vorher die Donnergarde ablegen, siehe [[Aufbauplan der Unsichtbaren Hand|Aufbauplan]]."
+    },
+    {
+      "id": "saladin",
+      "title": "Saladins Geduld",
+      "kind": "gefahr",
+      "segments": 4,
+      "filled": 2,
+      "when": "unbekannt",
+      "then": "Der Handel um die unendliche Schriftrolle steht auf dem Spiel.",
+      "link": "Saladin",
+      "note": "Schätzung: Er wird schon ungeduldig, und ihr zieht erst nach Westen."
+    }
+  ]
+}

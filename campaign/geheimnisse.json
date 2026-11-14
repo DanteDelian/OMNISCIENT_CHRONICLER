@@ -1,6 +1,6 @@
 {
   "ruf": "Für die Leute ist Floshem ein **Mystiker**: Niemand weiß, was um ihn herum geschieht, aber als **Held der Echsen** und **Riesen-Schlächter** kann es nur Gutes sein (laut dir, 20.10.2026). Seit dem 11.10.2026 nennt man euch „Held der Echsenmenschen“ und „Riesenbezwinger, der Schlächter“. Die stummen, vermummten Diener passen genau in dieses Bild.",
-  "gefahren": "- **[[Lucira]] liest Gedanken** und ist seit dem 08.11.2026 wieder bei euch. Sie misstraut euch, der Fee, Fridolin und ab und zu Twee und berichtet wohl an Lisbeth. Pläne nie in ihrer Nähe durchdenken.\n- **[[Lisbeth Lhaaz|Lisbeth]] beobachtet euch** mit Argusaugen, seit sie euch Hochstapler genannt hat.\n- **Die Society weiß von euch:** Der Anführer der [[Die Sumpfschuppen|Sumpfschuppen]] schlug am 08.11.2026 über seinen Verständigungsstein Alarm, drei Verfolger lagern in Sichtweite.\n- **Die Riesen hören mit:** Über die Runenmale versklavter Orcs belauschen sie, was in deren Nähe gesagt wird. Wichtiges nur in einer winzigen Hütte besprechen.\n- **Die nächste Schiffskarawane** bringt die Nachricht vom Tod der echten Donnergarde nach Xantus.",
+  "gefahren": "- **[[Lucira]] liest Gedanken** und ist seit dem 08.11.2026 wieder bei euch. Sie misstraut euch, der Fee, Fridolin und ab und zu Twee und berichtet wohl an Lisbeth. Pläne nie in ihrer Nähe durchdenken. Wie ihr Gedankenlesen nach den Regeln wohl geht und wie du dich schützt, steht bei [[Gedanken wahrnehmen]].\n- **Alles Fremde liest Lucira:** Schriften, Sprachen und Gedanken laufen über sie. Wer liest, entscheidet, was ihr erfahrt. Siehe [[Tiefenanalyse]].\n- **[[Lisbeth Lhaaz|Lisbeth]] beobachtet euch** mit Argusaugen, seit sie euch Hochstapler genannt hat.\n- **Die Society weiß von euch:** Der Anführer der [[Die Sumpfschuppen|Sumpfschuppen]] schlug am 08.11.2026 über seinen Verständigungsstein Alarm, drei Verfolger lagern in Sichtweite.\n- **Die Riesen hören mit:** Über die Runenmale versklavter Orcs belauschen sie, was in deren Nähe gesagt wird. Wichtiges nur in einer winzigen Hütte besprechen.\n- **Die nächste Schiffskarawane** bringt die Nachricht vom Tod der echten Donnergarde nach Xantus.\n- **Die Spur des Dinos:** Er walzt eine Schneise durch den Dschungel, der jeder Jäger folgen kann. So fanden euch die drei Verfolger.",
   "secrets": [
     {
       "id": "donnergarde",
@@ -109,7 +109,7 @@
         }
       ],
       "suspects": [],
-      "note": "*Theorie:* Lisbeth weiß nicht, dass einer ihrer Brüder sie tot sehen wollte.",
+      "note": "*Theorie:* Lisbeth weiß nicht, dass einer ihrer Brüder sie tot sehen wollte.\n\n*Theorie:* Hinter dem Anschlag auf Lisbeth und dem Attentat auf Lula steckt dieselbe Hand. Dann scheidet der Erzherzog aus, Lula ist seine Tochter. Die Indizien stehen in der [[Tiefenanalyse]].",
       "links": [
         "Lisbeth Lhaaz",
         "Haus Lhaaz"
@@ -123,7 +123,7 @@
       "risk": "Wer den Attentäter geschickt hat, könnte das Schriftstück zurückhaben wollen.",
       "knownBy": [],
       "suspects": [],
-      "note": "**Offen:** Hat jemand gesehen, wie du das Schriftstück eingesteckt hast?",
+      "note": "**Offen:** Hat jemand gesehen, wie du das Schriftstück eingesteckt hast?\n\n**Offen:** Was steht darin? In keinem Dokument ist notiert, dass es jemand gelesen hat.\n\n*Theorie:* Lulas Attentäter und der Überfall auf Lisbeths Schiff kamen beide aus dem Haus selbst. Dahinter steckt dieselbe Hand.",
       "links": [
         "Haus Lhaaz",
         "Lula Lhaaz"
@@ -176,7 +176,7 @@
       "status": "sicher",
       "truth": "Du baust eine eigene Organisation auf, um die dominierende Macht von Xantus zu werden.",
       "cover": "Floshem hilft, wo er kann.",
-      "risk": "Ein Netzwerk gegen die Sorcerer Society wird früher oder später ihr Ziel. Anwerben nur über Mittelsleute.",
+      "risk": "Ein Netzwerk gegen die Sorcerer Society wird früher oder später ihr Ziel. Anwerben nur über Mittelsleute. Mit [[Magischer Mund]] und [[Illusionsschrift]] muss dich nicht einmal dein Verwalter kennen.",
       "knownBy": [
         {
           "who": "Aella Rayann",

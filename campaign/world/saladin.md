@@ -28,3 +28,13 @@ Du warst als **Fisch** mit Tayas [[Schleimbert]] unter Wasser. Dort sahst du ein
 - **Wunschliste:** Nimmervoller Beutel · Perle der Macht · Armschienen der Verteidigung · Umhang des Schutzes · Arkaner Grimoire +1.
 
 Details: [[Einkaufs- und Verhandlungsliste]]
+
+## Was auffällt (14.11.2026)
+- Er verlangt einen **rechtmäßigen** Erwerb, in einer Stadt, in der die Society im Rat sitzt und sich an die Gesetze hält.
+- Er wartete am Fuß des Turms, als das Siegel fiel, und freute sich über deinen Bericht vom Auge unter Wasser.
+
+*Theorie:* Er will einen rechtlich sauberen Platz in Freistadt, nicht nur einen Laden.
+
+*Theorie:* Er weiß, was unter dem See liegt.
+
+**Offen:** Auf wessen Namen läuft der Handelsposten, und was genau kann die unendliche Schriftrolle?

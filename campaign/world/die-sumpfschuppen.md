@@ -34,8 +34,15 @@ imageFocus: 50% 35%
 - **Ein erbeuteter Stein ist ein Ohr bei der Society:** Wer ihn trägt, hört die nächste Nachricht an seinen Träger. Antworten verrät dich, denn der Absender erkennt dich nicht als seinen Mann.
 - **Nie wieder einem Gefangenen ein Gerät geben.** Vorher mit *[[Magie entdecken]]* die Schule prüfen: *[[Botschaft]]* ist Verwandlung und reicht 36 m, *Verständigung* ist Hervorrufung und reicht überallhin.
 - Wer die Sumpfschuppen stellt, nimmt zuerst die Steine.
+- **Beide Steine eines Paars schweigen** bis zum Morgengrauen, sobald einer gesendet hat. Vor dem Morgengrauen kann der Träger des Gegenstücks nicht noch einmal rufen.
+- **Kein Gegenzauber gegen Steine:** Ein Zauber aus einem Gegenstand hat keine Komponenten, es gibt nichts zu sehen. Wer einen Stein hält, sendet.
+- **Gefangene:** Knebel und ein Sack über den Kopf. *Nebelschritt* braucht die Stimme und einen Zielort, den der Zaubernde sieht.
 - *Theorie (deine, 09.11.2026):* Einer der drei Verfolger trägt das Gegenstück zum Stein des Anführers, deshalb waren sie so schnell da. Vielleicht ist sogar „Farlir“ selbst unter ihnen, die Nummer eins der Sumpfschuppen. Dann hätte die Alarmnachricht des Anführers genau sie erreicht.
 
 *Theorie:* Der Anführer der Society aus der Zuflucht, ein Elf mit schuppenartiger Hautflechte, könnte zu ihnen gehören.
+
+*Theorie:* Wer Seelen sammelt, nimmt die Gestalt der Beute an. Die einfachen Jäger tragen Schuppen und Klauen, ihr Anführer dazu einen Echsenschwanz. Farlir wäre dann von allen am meisten Echse.
+
+*Theorie:* Der „Sack seltsamer Münzen“, den die Fee beim Anführer fand, trägt die geraubten Seelen. Siehe [[Tiefenanalyse]].
 
 **Offen:** Wer ist Farlir, und wohin gehen die geraubten Seelen? Wo ist der Stein des Anführers?

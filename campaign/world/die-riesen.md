@@ -23,3 +23,7 @@ imageFocus: 50% 35%
 - Die Riesen **versklaven Orc-Stämme** und brennen jedem Gefangenen eine **Riesenrune** in die rechte Handfläche. Laut DM ist das Mal ein Fluch. Es lässt sich aufspüren, und die Riesen können zuhören, was in seiner Nähe gesagt wird, aber nicht ständig. Es ist Erkenntnismagie. Siehe [[Die Orcs]].
 
 *Regel-Hinweis:* Ein Eisriese entspricht wohl dem **Frostriesen** des Monsterhandbuchs (immun gegen Kälte). Dein *Netz* fängt ihn leicht (GE-Rettung −1: zu 75 % gefangen), er reißt sich aber mit einer Aktion zu 60 % los (ST +6 gegen SG 15). *Totenglocke* wirkt gut (WE-Rettung +3: 55 % Fehlschlag), die Kälte von *Eismesser* verpufft.
+
+*Theorie:* Der Turm im See mit dem riesenhaften Thron ist ihr Ziel. Siehe [[Der Magische Turm]].
+
+**Regel:** Ein Riese zwängt sich durch 3 m breite Durchgänge und kommt durch schmalere gar nicht. Siehe [[Taktik-Handbuch]].

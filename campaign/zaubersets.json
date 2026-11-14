@@ -19,7 +19,7 @@
         "unsichtbares-sehen",
         "schutz-vor-gut-und-boese"
       ],
-      "tip": "Die Rituale laufen ohne Vorbereitung: [[Vertrauten finden]] zum Vorausspähen, [[Magie entdecken]] vor Truhen und Türen, [[Unsichtbarer Diener]] fürs Lager, [[Tensers schwebende Scheibe]] für Knochen, Beute und Material."
+      "tip": "Die Rituale laufen ohne Vorbereitung: [[Vertrauten finden]] zum Vorausspähen, [[Magie entdecken]] vor Truhen und Türen, [[Unsichtbarer Diener]] fürs Lager, [[Tensers schwebende Scheibe]] für Knochen, Beute und Material. Reitet ihr, trägt die Scheibe deine Skelette hinter euch her."
     },
     {
       "id": "belagerung",
@@ -32,6 +32,7 @@
         "nebelwolke",
         "schild",
         "flutwelle",
+        "verbannung",
         "tote-erwecken",
         "gegenzauber",
         "sengender-strahl",
@@ -56,12 +57,13 @@
         "schild",
         "sengender-strahl",
         "hypnotisches-muster",
+        "verbannung",
         "eismesser",
         "nebelwolke",
         "flutwelle",
         "flammenkugel"
       ],
-      "tip": "*Gegenzauber* für Kontroll- und Fluchtzauber aufheben, nicht für Schaden. *Unsichtbares sehen* hält 1 Stunde ohne Konzentration: Dann kannst du auch unsichtbare Zauberer kontern. *Schutz vor Gut und Böse* auf Aella gegen Teufel, Untote und Feenwesen. *Eismesser* braucht keine Stimme und geht auch in magischer Stille."
+      "tip": "*Gegenzauber* für Kontroll- und Fluchtzauber aufheben, nicht für Schaden. *Unsichtbares sehen* hält 1 Stunde ohne Konzentration: Dann kannst du auch unsichtbare Zauberer kontern. *Schutz vor Gut und Böse* auf Aella gegen Teufel, Untote und Feenwesen. *Eismesser* braucht keine Stimme und geht auch in magischer Stille. *Nebelschritt* braucht einen sichtbaren Zielort: Im Nebel oder mit einem Sack über dem Kopf springt niemand."
     },
     {
       "id": "stadt",
@@ -74,6 +76,7 @@
         "netz",
         "nebelwolke",
         "unsichtbares-sehen",
+        "gedanken-wahrnehmen",
         "schild",
         "hypnotisches-muster",
         "schutz-vor-gut-und-boese",

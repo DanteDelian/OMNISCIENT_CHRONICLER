@@ -1,5 +1,238 @@
 [
   {
+    "id": "uhrzeit-ueberfall",
+    "to": "dm",
+    "topic": "Uhrzeit beim Überfall",
+    "question": "Endet eure Rast vor oder nach dem Morgengrauen? Davor sind beide Steine eines Paars stumm, das schon gesendet hat. Danach können die Verfolger wieder Alarm schlagen.",
+    "status": "offen",
+    "links": [
+      "Die Sumpfschuppen",
+      "Verständigungsstein"
+    ]
+  },
+  {
+    "id": "huette-dino",
+    "to": "dm",
+    "topic": "Der Dino in der Nacht",
+    "question": "Wo stand der Dino, während ihr in *Leomunds winziger Hütte* geruht habt? Nach den Regeln passen nur Kreaturen bis mittelgroß hinein, und die Verfolger lagern 100 m entfernt.",
+    "status": "offen",
+    "links": [
+      "Das Reittier",
+      "Twee"
+    ]
+  },
+  {
+    "id": "morgen-trick",
+    "to": "dm",
+    "topic": "Arkane Erholung am Morgen",
+    "question": "Darfst du gleich nach deiner Trance *Tote erwecken* wirken, eine Stunde kurz rasten und den Platz mit der Arkanen Erholung zurückholen? Die Regeln erlauben es, es kostet die Erholung des Tages.",
+    "status": "offen",
+    "links": [
+      "Arkane Erholung",
+      "Tote erwecken"
+    ]
+  },
+  {
+    "id": "stein-gegenzauber",
+    "to": "dm",
+    "topic": "Gegenzauber gegen Steine",
+    "question": "Lässt sich das Senden über einen Verständigungsstein mit *Gegenzauber* aufhalten? Nach den Regeln hat ein Zauber aus einem Gegenstand keine Komponenten, es gäbe also nichts zu sehen.",
+    "status": "offen",
+    "links": [
+      "Gegenzauber",
+      "Die Sumpfschuppen"
+    ]
+  },
+  {
+    "id": "scheibe-skelette",
+    "to": "dm",
+    "topic": "Skelette auf der Scheibe",
+    "question": "Dürfen deine Skelette auf *Tensers schwebender Scheibe* mitreisen, wenn ihr reitet? Sie trägt 225 kg und folgt dir in 6 m Abstand.",
+    "status": "offen",
+    "links": [
+      "Tensers schwebende Scheibe",
+      "Skelett"
+    ]
+  },
+  {
+    "id": "silberpulver",
+    "to": "dm",
+    "topic": "Material für Schutz vor Gut und Böse",
+    "question": "Reichen ein zerfeiltes Silberstück und das Eisenpulver aus dem Alchemistenwerkzeug als Material? Der Zauber verbraucht es bei jedem Wirken, und ein Fokus ersetzt Verbrauchtes nicht.",
+    "status": "offen",
+    "links": [
+      "Schutz vor Gut und Böse"
+    ]
+  },
+  {
+    "id": "hintergrund",
+    "to": "dm",
+    "topic": "Hintergrund",
+    "question": "Welchen Hintergrund hat Valerius? Ein Hintergrund bringt zwei Fertigkeiten, Werkzeuge oder Sprachen und ein Merkmal. Eingetragen ist nur Täuschen.",
+    "status": "offen",
+    "links": [
+      "Backstory",
+      "Tiefenanalyse"
+    ]
+  },
+  {
+    "id": "sprache",
+    "to": "dm",
+    "topic": "Zweite Sprache",
+    "question": "Ein Astralelf spricht Gemeinsprache und eine weitere Sprache. Eingetragen ist keine: Darfst du sie noch wählen, etwa Drakonisch?",
+    "status": "offen",
+    "links": [
+      "Tiefenanalyse"
+    ]
+  },
+  {
+    "id": "schriftrolle",
+    "to": "dm",
+    "topic": "Saladins Schriftrolle",
+    "question": "Was kann die unendliche Schriftrolle genau: Spart sie beim Herstellen von Zauberrollen das Gold, die Zeit oder nur das Pergament? Und auf wessen Namen läuft der Handelsposten in Freistadt?",
+    "status": "offen",
+    "links": [
+      "Saladin",
+      "Ein Handelsposten für Saladin in Freistadt"
+    ]
+  },
+  {
+    "id": "koenig",
+    "to": "dm",
+    "topic": "Der König",
+    "question": "„Schwert des Königs“ ist ein Titel, den ein König vergibt. Welchem König dient das Haus Lhaaz, und was will die Krone in Xantus?",
+    "status": "offen",
+    "links": [
+      "Leonidas Lhaaz",
+      "Haus Lhaaz"
+    ]
+  },
+  {
+    "id": "dehapten-truppen",
+    "to": "dm",
+    "topic": "Besatzung von Dehapten",
+    "question": "Wie viele Soldaten sind noch in Leons Stadt, seit Leonidas mit einem Heer nach Westen zieht?",
+    "status": "offen",
+    "links": [
+      "Die Siedlung",
+      "Leonidas Lhaaz"
+    ]
+  },
+  {
+    "id": "runenschwert",
+    "to": "dm",
+    "topic": "Das Runenschwert",
+    "question": "Liegt das Schwert des Riesen mit den Runen „schützen“ und „schneiden“ noch vor Dehapten? Mit *Tensers schwebender Scheibe* ließe es sich jetzt bergen.",
+    "status": "offen",
+    "links": [
+      "Die Riesen",
+      "Tensers schwebende Scheibe"
+    ]
+  },
+  {
+    "id": "lisbeth-erinnerung",
+    "to": "dm",
+    "topic": "Lisbeths Erinnerung",
+    "question": "Erinnert sich Lisbeth wieder an Fridolin, Lucira und die Fee, seit die drei zurück sind? Bei Lucaz kam die Erinnerung im Nebel wieder.",
+    "status": "offen",
+    "links": [
+      "Lisbeth Lhaaz",
+      "Die verschwundenen Gefährten"
+    ]
+  },
+  {
+    "id": "siegel-text",
+    "to": "tisch",
+    "topic": "Das Siegel im Turm",
+    "question": "Lucira hat das Siegel auf dem Thron gelesen und dabei ausgelöst. Was stand darauf?",
+    "status": "offen",
+    "links": [
+      "Lucira",
+      "Der Magische Turm"
+    ]
+  },
+  {
+    "id": "verschwundene-erlebt",
+    "to": "tisch",
+    "topic": "Die Zeit im Nebel",
+    "question": "Was haben Fridolin, Lucira und die Fee erlebt, solange sie fort waren, und woran erinnern sie sich?",
+    "status": "offen",
+    "links": [
+      "Die verschwundenen Gefährten",
+      "Fridolin vom See",
+      "Lucira",
+      "Die Fee"
+    ]
+  },
+  {
+    "id": "twee-sueden",
+    "to": "tisch",
+    "topic": "Twee und der Süden",
+    "question": "Twee stammt aus dem Süden. Was weiß er über Freistadt, den Rat, die Society und das Imperium?",
+    "status": "offen",
+    "links": [
+      "Twee",
+      "Die südliche Freistadt",
+      "Das Imperium"
+    ]
+  },
+  {
+    "id": "muenzen",
+    "to": "tisch",
+    "topic": "Die seltsamen Münzen",
+    "question": "Hat die Fee den Sack seltsamer Münzen vom Anführer der Sumpfschuppen noch, und was sind das für Münzen? Mit *Magie entdecken* prüfen.",
+    "status": "offen",
+    "links": [
+      "Die Fee",
+      "Die Sumpfschuppen"
+    ]
+  },
+  {
+    "id": "seeelfen-norden",
+    "to": "tisch",
+    "topic": "Seeelfen im Norden",
+    "question": "Verschwinden im Norden Seeelfen? Dort arbeiten laut den Gefangenen die Wasserwanderer der Society.",
+    "status": "offen",
+    "links": [
+      "Fridolin vom See",
+      "Die Seeelfen",
+      "Sorcerer Society"
+    ]
+  },
+  {
+    "id": "grum",
+    "to": "tisch",
+    "topic": "Grum",
+    "question": "Wo ist Grum jetzt? Auf dem Dino ritten fünf, die Fee flog: Er war nicht dabei.",
+    "status": "offen",
+    "links": [
+      "Die Orcs",
+      "Die Orcs und die Riesenrunen"
+    ]
+  },
+  {
+    "id": "schriftstueck-inhalt",
+    "to": "dich",
+    "topic": "Das Schriftstück",
+    "question": "Was steht in dem Schriftstück mit dem Lhaaz-Wappen, das du dem Attentäter abgenommen hast? Hast du es je gelesen oder jemandem gezeigt?",
+    "status": "offen",
+    "links": [
+      "Haus Lhaaz",
+      "Lula Lhaaz"
+    ]
+  },
+  {
+    "id": "traum",
+    "to": "dich",
+    "topic": "Dein Traum",
+    "question": "Was genau hast du in der Nacht vor dem 11.10.2026 gesehen: Woher kam die Kraft, wohin riss sie die drei, und was geschah mit deinen Zaubern? Als Astralelf warst du in der Trance bei Bewusstsein.",
+    "status": "offen",
+    "links": [
+      "Die verschwundenen Gefährten",
+      "Astrale Trance"
+    ]
+  },
+  {
     "id": "aella-ohrring",
     "to": "tisch",
     "topic": "Ohrring für Aella",

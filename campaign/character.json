@@ -126,8 +126,8 @@
       "source": "Schule der Beschwörung",
       "economy": "aktion",
       "summary": "Aktion: einen nichtmagischen Gegenstand (≤ 90 cm, ≤ 5 kg) für 1 Stunde erschaffen.",
-      "text": "Als **Aktion** beschwörst du einen unbelebten Gegenstand in deine Hand oder auf den Boden, auf ein freies Feld in höchstens **3 m**, das du sehen kannst. Er misst höchstens **90 cm** an jeder Seite, wiegt höchstens **5 kg (10 Pfund)** und hat die Form eines nichtmagischen Gegenstands, den du schon gesehen hast. Er ist **sichtbar magisch** und verbreitet im Umkreis von 1,5 m dämmriges Licht. Er verschwindet nach **1 Stunde**, wenn er Schaden erleidet oder wenn du das Merkmal erneut nutzt.",
-      "note": "**Für die Werkstatt:** Werkzeug, das du schon gesehen hast und das höchstens 5 kg wiegt, kannst du beschwören: Lederwerkzeug, Kräuterkundeausrüstung, Weberwerkzeug, Holzschnitzwerkzeug. Es hält 1 Stunde, dann beschwörst du es neu (Frage an den DM).\n\n**Für die Unsichtbare Hand:** Das Objekt leuchtet und ist klar als magisch erkennbar. Laut DM darfst du Werkzeug so erschaffen und damit arbeiten (09.11.2026).",
+      "text": "Als **Aktion** beschwörst du einen unbelebten Gegenstand in deine Hand oder auf den Boden, auf ein freies Feld in höchstens **3 m**, das du sehen kannst. Er misst höchstens **90 cm** an jeder Seite, wiegt höchstens **5 kg (10 Pfund)** und hat die Form eines nichtmagischen Gegenstands, den du schon gesehen hast. Er ist **sichtbar magisch** und verbreitet im Umkreis von 1,5 m dämmriges Licht. Er verschwindet nach **1 Stunde**, wenn du das Merkmal erneut nutzt oder sobald er **Schaden erleidet oder zufügt**.",
+      "note": "**Für die Werkstatt:** Werkzeug, das du schon gesehen hast und das höchstens 5 kg wiegt, kannst du beschwören: Lederwerkzeug, Kräuterkundeausrüstung, Weberwerkzeug, Holzschnitzwerkzeug. Es hält 1 Stunde, dann beschwörst du es neu (Frage an den DM).\n\n**Für die Unsichtbare Hand:** Das Objekt leuchtet und ist klar als magisch erkennbar. Laut DM darfst du Werkzeug so erschaffen und damit arbeiten (09.11.2026).\n\n**Schlüssel und Siegel:** Ein Schlüssel, den du gesehen hast, schließt eine Stunde lang. Ein Siegelring, den du gesehen hast, siegelt Wachs, und der Abdruck bleibt, wenn der Ring verschwindet. **Waffen:** Der Gegenstand verschwindet beim ersten Schaden, den er zufügt (Errata zum Spielerhandbuch).",
       "en": "Minor Conjuration"
     },
     {
@@ -169,6 +169,16 @@
       "en": "Darkvision"
     },
     {
+      "id": "zauberwirken",
+      "name": "Zauberwirken",
+      "en": "Spellcasting",
+      "source": "Magier",
+      "economy": "passiv",
+      "summary": "Zauberbuch, Vorbereitung (IN-Modifikator + Stufe), Zauber-SG und Zauberangriff über Intelligenz.",
+      "text": "Als Schüler der arkanen Magie besitzt du ein Zauberbuch mit Zaubern, die den ersten Schimmer deiner wahren Macht zeigen.\n\n**Zaubertricks.** Auf der 1. Stufe kennst du drei Zaubertricks deiner Wahl aus der Zauberliste des Magiers. Auf höheren Stufen lernst du weitere: den vierten auf Stufe 4, den fünften auf Stufe 10.\n\n**Zauberbuch.** Auf der 1. Stufe hast du ein Zauberbuch mit sechs Magierzaubern des 1. Grades deiner Wahl. Dein Zauberbuch ist der Aufbewahrungsort der Magierzauber, die du kennst. Ausgenommen sind deine Zaubertricks, sie sind fest in deinem Geist verankert.\n\n**Zauber vorbereiten und wirken.** Die Magiertabelle zeigt, wie viele Zauberplätze du für Zauber des 1. Grades und höher hast. Um einen dieser Zauber zu wirken, musst du einen Platz mindestens des Zaubergrades verbrauchen. Alle verbrauchten Plätze erhältst du zurück, wenn du eine lange Rast beendest.\n\nDu bereitest die Liste der Magierzauber vor, die dir zum Wirken zur Verfügung stehen. Wähle dazu so viele Magierzauber aus deinem Zauberbuch, wie dein **Intelligenzmodifikator plus deine Magierstufe** beträgt (mindestens einen). Die Zauber müssen von einem Grad sein, für den du Zauberplätze hast.\n\nBist du zum Beispiel ein Magier der 3. Stufe, hast du vier Plätze des 1. und zwei des 2. Grades. Mit Intelligenz 16 kann deine Liste vorbereiteter Zauber sechs Zauber des 1. oder 2. Grades in beliebiger Mischung enthalten, gewählt aus deinem Zauberbuch. Bereitest du den Zauber *Magisches Geschoss* (Grad 1) vor, kannst du ihn mit einem Platz des 1. oder des 2. Grades wirken. Das Wirken entfernt den Zauber nicht aus der Liste deiner vorbereiteten Zauber.\n\nDu kannst deine Liste vorbereiteter Zauber ändern, wenn du eine lange Rast beendest. Eine neue Liste vorzubereiten braucht Zeit zum Studium deines Zauberbuchs und zum Einprägen der Formeln und Gesten: **mindestens 1 Minute pro Zaubergrad für jeden Zauber auf deiner Liste**.\n\n**Zauberattribut.** Intelligenz ist dein Zauberattribut für deine Magierzauber, weil du sie durch hingebungsvolles Studium und Auswendiglernen lernst. Du verwendest Intelligenz immer dann, wenn sich ein Zauber auf dein Zauberattribut bezieht. Außerdem verwendest du deinen Intelligenzmodifikator, wenn du den Rettungswurf-SG eines Magierzaubers festlegst und wenn du einen Angriffswurf mit einem solchen Zauber machst.\n\n- **Zauberrettungswurf-SG** = 8 + dein Übungsbonus + dein Intelligenzmodifikator\n- **Zauberangriffsmodifikator** = dein Übungsbonus + dein Intelligenzmodifikator\n\n**Zauberfokus.** Du kannst einen arkanen Fokus als Zauberfokus für deine Magierzauber verwenden.\n\n**Zauber des 1. Grades und höher lernen.** Jedes Mal, wenn du eine Magierstufe erreichst, kannst du deinem Zauberbuch kostenlos **zwei Magierzauber** deiner Wahl hinzufügen. Jeder dieser Zauber muss von einem Grad sein, für den du Zauberplätze hast. Auf deinen Abenteuern findest du vielleicht weitere Zauber, die du deinem Zauberbuch hinzufügen kannst.",
+      "note": "**Für dich auf Stufe 5:** 9 vorbereitete Zauber (IN 4 + Stufe 5), Zauber-SG 15, Zauberangriff +7, Plätze 4 / 3 / 2. Dein Fokus ist der Ring. Rituale aus dem Buch zählen nicht zu den 9, siehe [[Ritualzauberei]]."
+    },
+    {
       "id": "ritualzauberei",
       "name": "Ritualzauberei",
       "source": "Magier",
@@ -176,6 +186,26 @@
       "summary": "Ritualzauber aus dem Buch ohne Vorbereitung wirken (+10 Minuten, kein Platz).",
       "text": "Zauber mit dem Ritual-Merkmal, die in deinem Zauberbuch stehen, kannst du als Ritual wirken, **ohne sie vorzubereiten**. Die Wirkzeit verlängert sich um 10 Minuten, ein Zauberplatz wird nicht verbraucht, darum geht ein Ritual auch nicht auf einem höheren Grad: *Vertrauten finden*, *Unsichtbarer Diener*, *Magie entdecken*.",
       "en": "Ritual Casting"
+    },
+    {
+      "id": "dein-zauberbuch",
+      "name": "Dein Zauberbuch",
+      "en": "Your Spellbook",
+      "source": "Magier",
+      "economy": "passiv",
+      "summary": "Zauber abschreiben: 2 Stunden und 50 GM pro Grad. Sicherheitskopie: 1 Stunde und 10 GM pro Grad.",
+      "text": "Die Zauber, die du deinem Zauberbuch beim Aufsteigen hinzufügst, spiegeln die arkane Forschung wider, die du auf eigene Faust betreibst, und die Durchbrüche, die du über das Wesen des Multiversums erzielt hast. Auf deinen Abenteuern findest du vielleicht weitere Zauber: auf einer Schriftrolle in der Truhe eines bösen Magiers oder in einem verstaubten Wälzer in einer alten Bibliothek.\n\n**Einen Zauber ins Buch kopieren.** Findest du einen Magierzauber des 1. Grades oder höher, kannst du ihn deinem Zauberbuch hinzufügen, wenn er von einem Grad ist, den du vorbereiten kannst, und wenn du die Zeit hast, ihn zu entziffern und abzuschreiben.\n\nBeim Kopieren gibst du die Grundform des Zaubers wieder und entzifferst dann die eigentümliche Schreibweise des Magiers, der ihn niedergeschrieben hat. Du musst den Zauber üben, bis du die Laute und Gesten verstehst, und schreibst ihn dann in deiner eigenen Schreibweise in dein Zauberbuch.\n\nFür **jeden Grad** des Zaubers dauert das **2 Stunden** und kostet **50 GM**. Die Kosten stehen für Materialkomponenten, die du verbrauchst, während du mit dem Zauber experimentierst, um ihn zu meistern, und für die edlen Tinten, mit denen du ihn festhältst. Hast du Zeit und Geld aufgewendet, kannst du den Zauber wie deine anderen Zauber vorbereiten.\n\n**Das Buch ersetzen.** Du kannst einen Zauber aus deinem eigenen Zauberbuch in ein anderes Buch kopieren, zum Beispiel für eine Sicherheitskopie. Das geht wie das Kopieren eines neuen Zaubers, aber schneller und leichter, weil du deine eigene Schreibweise verstehst und den Zauber schon wirken kannst. Du brauchst nur **1 Stunde und 10 GM pro Grad** des kopierten Zaubers.\n\nVerlierst du dein Zauberbuch, kannst du auf dieselbe Weise die Zauber, die du **vorbereitet** hast, in ein neues Zauberbuch übertragen. Um den Rest aufzufüllen, musst du die Zauber wie gewohnt neu finden. Deshalb bewahren viele Magier Sicherheitskopien an einem sicheren Ort auf.\n\n**Das Aussehen des Buchs.** Dein Zauberbuch ist eine einzigartige Sammlung von Zaubern mit eigenen Verzierungen und Randnotizen. Es kann ein schlichtes, zweckmäßiges Lederbuch sein, das du von deinem Meister bekommen hast, ein fein gebundener Foliant mit Goldschnitt aus einer alten Bibliothek oder eine lose Sammlung von Notizen, die du zusammengerafft hast, nachdem dein früheres Zauberbuch bei einem Missgeschick verloren ging.",
+      "note": "**Beschwörungszauber kosten dich die Hälfte:** 1 Stunde und 25 GM pro Grad, siehe [[Gelehrter der Beschwörung]].\n\n**Sicherheitskopie:** Dein Buch enthält 14 Zauber mit zusammen 22 Graden. Eine Kopie kostet 22 Stunden und 220 GM, dazu ein leeres Buch (50 GM). Verlierst du das Buch ohne Kopie, bleiben dir nur die 9 vorbereiteten Zauber."
+    },
+    {
+      "id": "attributswerterhoehung",
+      "name": "Attributswerterhöhung",
+      "en": "Ability Score Improvement",
+      "source": "Magier",
+      "economy": "passiv",
+      "summary": "Stufe 4, 8, 12, 16 und 19: ein Attribut +2 oder zwei Attribute je +1, höchstens 20.",
+      "text": "Wenn du die **4. Stufe** erreichst und erneut auf der **8., 12., 16. und 19. Stufe**, kannst du einen Attributswert deiner Wahl um **2** erhöhen oder zwei Attributswerte deiner Wahl um je **1**. Wie üblich kannst du einen Attributswert mit diesem Merkmal nicht über 20 erhöhen.",
+      "note": "Die Erhöhung von Stufe 4 steckt schon in deinen Werten. Die nächste kommt auf **Stufe 8**. Was sie dir bringt, steht im [[Stufe-6-Planer]] unter „Ausblick“."
     },
     {
       "id": "gelehrter-der-beschwoerung",
@@ -195,6 +225,28 @@
       "summary": "Ausblick: Aktion, bis 9 m teleportieren oder Platz mit einem Verbündeten tauschen.",
       "text": "Ab **Stufe 6**: Als **Aktion** teleportierst du dich bis zu **9 m** an einen freien Ort, den du sehen kannst. Stattdessen kannst du auch einen Ort in dieser Reichweite wählen, an dem eine **kleine oder mittelgroße Kreatur** steht. Ist sie bereit, teleportiert ihr beide und tauscht die Plätze. Danach geht es erst wieder, wenn du eine lange Rast beendest **oder einen Beschwörungszauber ab Grad 1 wirkst**.",
       "en": "Benign Transposition"
+    },
+    {
+      "id": "fokussierte-beschwoerung",
+      "name": "Fokussierte Beschwörung (ab Stufe 10)",
+      "en": "Focused Conjuration",
+      "source": "Schule der Beschwörung",
+      "economy": "passiv",
+      "upcoming": true,
+      "summary": "Ausblick: Schaden bricht deine Konzentration auf Beschwörungszauber nicht mehr.",
+      "text": "Ab **Stufe 10**: Solange du dich auf einen **Beschwörungszauber** konzentrierst, kann deine Konzentration nicht dadurch brechen, dass du Schaden erleidest.",
+      "note": "Gilt für *Netz*, *Nebelwolke*, *Flammenkugel* und spätere Beschwörungen, nicht für *Hypnotisches Muster* (Illusion). Wirst du kampfunfähig oder stirbst du, endet die Konzentration weiterhin."
+    },
+    {
+      "id": "dauerhafte-beschwoerungen",
+      "name": "Dauerhafte Beschwörungen (ab Stufe 14)",
+      "en": "Durable Summons",
+      "source": "Schule der Beschwörung",
+      "economy": "passiv",
+      "upcoming": true,
+      "summary": "Ausblick: Kreaturen, die du mit einem Beschwörungszauber rufst oder erschaffst, erhalten 30 temporäre TP.",
+      "text": "Ab **Stufe 14**: Jede Kreatur, die du mit einem **Beschwörungszauber** herbeirufst oder erschaffst, hat **30 temporäre Trefferpunkte**.",
+      "note": "Gilt für den Vertrauten und für *Feenwesen beschwören*, beide sind Beschwörungen. Nicht für deine Untoten: *Tote erwecken* ist Nekromantie."
     }
   ],
   "goal": "Eine eigene Organisation gründen und zur dominierenden Macht von Xantus aufsteigen. Nicht länger Handlanger der Zafferas sein, sondern selbst herrschen.",

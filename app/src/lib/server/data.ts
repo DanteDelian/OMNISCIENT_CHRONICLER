@@ -4,6 +4,7 @@ import { buildBacklinks, buildIndex } from '$lib/refs';
 import type {
 	CampaignData,
 	Character,
+	Clocks,
 	Creatures,
 	DocFile,
 	FamilyTree,
@@ -105,7 +106,8 @@ export function loadCampaign(): CampaignData {
 		fragen: readJson<Question[]>('fragen.json', []),
 		netzwerk: { roles: [], agents: [], ...readJson<Partial<Network>>('netzwerk.json', {}) },
 		zaubersets: { sets: [], ...readJson<Partial<SpellSets>>('zaubersets.json', {}) },
-		geheimnisse: { ruf: '', gefahren: '', secrets: [], ...readJson<Partial<Secrets>>('geheimnisse.json', {}) }
+		geheimnisse: { ruf: '', gefahren: '', secrets: [], ...readJson<Partial<Secrets>>('geheimnisse.json', {}) },
+		uhren: { clocks: [], ...readJson<Partial<Clocks>>('uhren.json', {}) }
 	};
 	const index = buildIndex(base);
 	const data: CampaignData = { ...base, index, backlinks: buildBacklinks(base, index) };

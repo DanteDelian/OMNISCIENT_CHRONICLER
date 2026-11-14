@@ -27,3 +27,7 @@ summary: Schwester des Erzherzogs und von Leonidas, Tante von Leon und Lula. Von
 - Eure Verdienste um die Echsen und die erledigten Aufträge haben sie **milder gestimmt**. Ihr bleibt aber unter Beobachtung.
 - Sie hat [[Lucira]] geholt, um Leon zu unterstützen und euch zu prüfen: Sie misstraut euch weiterhin (laut dir, 09.11.2026).
 - **11.10.2026:** Lisbeth **erinnert sich nicht mehr** an [[Fridolin vom See|Fridolin]], Lucira und [[Die Fee|die Fee]]. Ihr habt sie gewarnt und gebeten durchzuzählen. Siehe [[Die verschwundenen Gefährten]].
+
+- **Seit dem 08.11.2026:** Die drei sind zurück, und [[Lucaz Lhaaz|Lucaz]] erinnert sich wieder.
+
+**Offen:** Erinnert sich auch Lisbeth wieder?

@@ -5,7 +5,7 @@ icon: compass
 order: 9
 group: Pläne
 aliases: [Die Unsichtbare Hand, Unsichtbare Hand, Aufbauplan, Organisation]
-updated: 2026-11-09
+updated: 2026-11-14
 ---
 # Aufbauplan der Unsichtbaren Hand
 
@@ -90,6 +90,19 @@ Die Hand richtet sich nicht nach einem Glauben aus und braucht keinen Eid. Sie h
 > [!TIP] Erst prüfen, dann einweihen
 > Lass ihn eine Weile nur Haus und Handel führen. Gib ihm eine harmlose Information, die nur er kennt, und hör, ob sie irgendwo wieder auftaucht. Erst dann bekommt er Leute und Geheimnisse.
 
+## Eine Hand ohne Gesicht
+
+Regel 1 sagt: Nur einer kennt dich. Mit vier Zaubern muss es nicht einmal der Verwalter:
+
+| Zauber | Wofür |
+| :-- | :-- |
+| [[Magischer Mund]] (Ritual) | Aufträge, die eine Wand spricht, wenn das Losungswort fällt. Verstell beim Einsprechen deine Stimme |
+| [[Illusionsschrift]] (Ritual) | Briefe, die nur der Empfänger lesen kann, auch an Cam |
+| [[Gedanken wahrnehmen]] | Die Probe für den Verwalter: Lies, woran er denkt, wenn du nach dem Köder fragst |
+| [[Alarm]] (Ritual) | Haus, Labor und Lager melden jeden Eindringling in deinem Kopf |
+
+Dazu die [[Geringe Beschwörung]] für Schlüssel und Siegel und in der Trance die Fälscherausrüstung für Papiere. Alle vier Zauber stehen als Vorschläge im [[Zauberbuch]]. Keiner ist eine Beschwörung: Abschreiben kostet den vollen Preis.
+
 ## Die Donnergarde ablegen
 
 Laut [[Nachrichten vom DM|Cams Brief]] bestand die Donnergarde nur aus Khoraa und Floshem. Beitreten könnt ihr also nicht: Ihr *seid* die beiden, deren Tod bald bekannt wird. Weitere Mitglieder nennt er nicht.
@@ -141,7 +154,7 @@ Alle wirbt der Verwalter an, keiner kennt dich. Die Leute trägst du auf der Sei
 
 **Bewusst nicht dabei:**
 - **Ein Spion bei der [[Sorcerer Society]]:** Sie jagt euch bereits. Wer dort schnüffelt, ist tot oder verrät euch.
-- **Ein eigener Händler in Freistadt:** Der Laden dort gehört [[Saladin]]. Ihr besorgt ihn für ihn und bekommt dafür Rabatt und einen Abnehmer, mehr nicht.
+- **Ein eigener Händler in Freistadt:** vorerst nicht. Frag [[Saladin]] aber, auf wessen Namen der Posten läuft. Er will ihn *rechtmäßig* erworben: Steht die Hand in den Büchern und Saladin pachtet, hast du Besitz in Freistadt (siehe [[Tiefenanalyse]]).
 
 ## Geld
 
@@ -155,6 +168,7 @@ Alle wirbt der Verwalter an, keiner kennt dich. Die Leute trägst du auf der Sei
 ## Risiken
 
 - **Lisbeth und Lucira:** Lucira liest Gedanken und misstraut euch. Pläne nur in Twees Hütte oder allein besprechen.
+- **Lucira als einziges Auge:** Schriften, Sprachen und Gedanken liest für euch nur sie. Mit [[Sprachen verstehen]] und [[Gedanken wahrnehmen]] wirst du unabhängig.
 - **Die Runenmale der Riesen:** Wer mit markierten Orcs arbeitet, wird belauscht.
 - **Aella:** Sie träumt von einem Leben ohne ständige Gewalt und sieht mit Sorge, wie du dich an Macht berauschst (Backstory). Zu skrupellose Schritte belasten euer Bündnis. Das kannst du im Rollenspiel bewusst einsetzen.
 - **Die Society** hat euch im Blick, seit die Sumpfschuppen Alarm geschlagen haben.
@@ -169,5 +183,8 @@ Alle wirbt der Verwalter an, keiner kennt dich. Die Leute trägst du auf der Sei
 - [ ] Einen Verwalter suchen und ein Druckmittel finden, bevor du ihn einweihst
 - [ ] Entscheiden, wann ihr die Donnergarde ablegt, spätestens vor der nächsten Schiffskarawane
 - [ ] Einen sicheren Weg zu Cam finden und ihn nach dem Mönchsmeister fragen
+- [ ] Saladin fragen, auf wessen Namen der Handelsposten läuft
+- [ ] Twee nach Freistadt, dem Rat und dem Imperium fragen
+- [ ] Spruchrollen für die Rituale der Hand suchen (Alarm, Sprachen verstehen, Illusionsschrift, Magischer Mund)
 
 Siehe auch die Quest [[Die Organisation gründen]].

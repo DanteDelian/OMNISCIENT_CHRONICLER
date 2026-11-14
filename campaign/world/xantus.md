@@ -17,4 +17,4 @@ summary: Wildnis, Ruinen, Reichtümer und Flüche. Eine ehemalige Sträflingskol
 - Die Lhaaz-Schiffskarawanen sind die einzige Verbindung zurück.
 - Für Valerius ist es das Land, auf dem sein **Imperium** entstehen soll.
 
-*Theorie:* [[Leonidas Lhaaz|Graf Leonidas]], der Bruder von Leons Vater mit eigener Stadt im Westen, ist der Baron. Die Baronsstadt wäre dann die [[Die belagerte Stadt im Westen|belagerte Stadt im Westen]].
+*Theorie:* Die Stadt des Barons liegt flussabwärts von Dehapten an der Mündung im Norden, wo der Fluss ins Meer fließt und die Schiffe landen. [[Leonidas Lhaaz|Leonidas]] mit seiner [[Die belagerte Stadt im Westen|Stadt in der Wüste im Westen]] wäre dann nicht der Baron.

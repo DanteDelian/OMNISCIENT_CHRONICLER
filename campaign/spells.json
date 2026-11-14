@@ -208,7 +208,9 @@
       "**In Sicherheit bringen:** Als Aktion in die Taschendimension schicken und später in bis zu 9 m Entfernung zurückrufen.",
       "**Berührungszauber aus der Distanz:** Der Vertraute überbringt sie bis 30 m von dir entfernt, mit seiner eigenen Reaktion. Zum Beispiel *Schutz vor Gut und Böse* auf Aella.",
       "**Gestalt wechseln** durch erneutes Wirken (als Ritual 1 Std. 10 Min., 10 GM). Für den Dschungel eignen sich unauffällige Gestalten, siehe **Gefolge** → „Nächste Beschwörung“.",
-      "**Typ beachten:** Er ist Himmlisches Wesen, Feenwesen oder Unhold, kein Tier. Effekte, die nur Tiere betreffen, wirken nicht auf ihn."
+      "**Typ beachten:** Er ist Himmlisches Wesen, Feenwesen oder Unhold, kein Tier. Effekte, die nur Tiere betreffen, wirken nicht auf ihn.",
+      "**Die bessere Wache:** Eine Eule hat eine passive Wahrnehmung von 13 und Vorteil auf Hören und Sehen, das sind passiv 18. Deine Skelette haben 9, du selbst 12.",
+      "**Vor einem Überfall:** 70 Minuten als Ritual, kein Platz. Durch die Augen der Eule zählst du Gegner im Dunkeln, ohne dich zu zeigen."
     ],
     "uses": [
       "Gebiete unauffällig auskundschaften, Gespräche belauschen, Feindbewegungen beobachten.",
@@ -272,7 +274,8 @@
       "**Als Ritual kostenlos:** 10 Minuten länger, kein Zauberplatz, keine Vorbereitung nötig. Ideal vor jeder Erkundung.",
       "**Fallen auslösen:** Türen öffnen, Hebel umlegen, an Seilen ziehen. Ob er schwer genug für eine Druckplatte ist, entscheidet der DM.",
       "**Unsichtbar ist nicht unverwundbar:** Gegner müssen ihn erst finden, ein Treffer reicht aber.",
-      "**Nicht zu weit weg schicken:** über 18 m von dir endet der Zauber."
+      "**Nicht zu weit weg schicken:** über 18 m von dir endet der Zauber.",
+      "**Steine holen:** Vor einem Zugriff als Ritual wirken und den Diener einen Verständigungsstein holen lassen, der neben einem Schlafenden liegt. Er selbst ist unsichtbar, was er trägt, nicht. Ob das als einfache Aufgabe gilt, entscheidet der DM."
     ],
     "uses": [
       "Labor reinigen, Kessel rühren, Werkzeug sauber halten: reinere Ergebnisse bei der Alchemie.",
@@ -323,13 +326,14 @@
     "source": "Spielerhandbuch 2014 (engl. S. 270) · SRD 5.1",
     "text": "Bis der Zauber endet, ist eine bereitwillige Kreatur, die du berührst, vor bestimmten Kreaturentypen geschützt: **Aberrationen, Himmlische Wesen, Elementare, Feenwesen, Unholde und Untote**.\n\nDer Schutz hat mehrere Vorteile. Kreaturen dieser Typen haben **Nachteil auf Angriffswürfe** gegen das Ziel. Das Ziel kann von ihnen außerdem **nicht bezaubert, verängstigt oder besessen** werden. Ist es bereits durch eine solche Kreatur bezaubert, verängstigt oder besessen, hat es **Vorteil** auf jeden neuen Rettungswurf gegen diesen Effekt.",
     "tips": [
+      "**Erst das Material besorgen:** Ohne Weihwasser oder Silber- und Eisenpulver kannst du den Zauber nicht wirken. Eisenpulver gehört zum Alchemistenwerkzeug, Silber feilst du von einem Silberstück (DM fragen). Weihwasser kostet 25 GM oder kommt von [[Nita]].",
       "**Gegen Geister und Besessenheit:** Xantus war eine Sträflingskolonie voller Flüche und Geister. Schutz vor Besessenheit ist dort Gold wert.",
       "**Nachteil für jeden Angriff:** Ein Unhold oder Untoter, der Aella bedrängt, trifft deutlich seltener.",
       "**Über den Vertrauten wirken:** Als Berührungszauber kann ihn dein Vertrauter zu einem Verbündeten bringen.",
       "**Konzentration:** Er beendet dein *Netz*, und umgekehrt."
     ],
     "rulings": [
-      "**Material:** Laut Sage Advice ersetzt dein Arkaner Fokus auch verbrauchte Komponenten, wenn sie keinen Preis haben. Andernfalls brauchst du Weihwasser oder Silber- und Eisenpulver für jedes Wirken. Mit dem DM klären.",
+      "**Material:** Der Zauber verbraucht Weihwasser oder Silber- und Eisenpulver. Verbrauchte Komponenten ersetzt ein Fokus nie, auch wenn sie keinen Preis haben (Sage Advice): Du brauchst das Material für jedes Wirken. Im Inventar steht derzeit keins.",
       "Die Kreaturentypen erkennst du nicht immer auf den ersten Blick. Frag im Zweifel, welcher Typ der Gegner ist."
     ],
     "conflicts": [
@@ -348,7 +352,8 @@
       "zauber-von-val",
       "charakterbogen-alt"
     ],
-    "card": "Eine bereitwillige Kreatur, die du berührst, ist geschützt vor **Aberrationen, Himmlischen, Elementaren, Feenwesen, Unholden und Untoten**: Ihre Angriffe haben **Nachteil**, und das Ziel kann von ihnen **nicht bezaubert, verängstigt oder besessen** werden. Ist es schon betroffen, hat es Vorteil auf neue Rettungswürfe dagegen. Material wird verbraucht."
+    "card": "Eine bereitwillige Kreatur, die du berührst, ist geschützt vor **Aberrationen, Himmlischen, Elementaren, Feenwesen, Unholden und Untoten**: Ihre Angriffe haben **Nachteil**, und das Ziel kann von ihnen **nicht bezaubert, verängstigt oder besessen** werden. Ist es schon betroffen, hat es Vorteil auf neue Rettungswürfe dagegen. Material wird verbraucht.",
+    "note": "**Berichtigt am 14.11.2026:** Bisher stand hier, dein Fokus ersetze auch verbrauchte Komponenten ohne Preis. Laut Sage Advice ersetzt ein Fokus nur Komponenten ohne Preis, die **nicht** verbraucht werden."
   },
   {
     "id": "magie-entdecken",
@@ -518,7 +523,8 @@
     ],
     "rulings": [
       "Festgehalten durch Netz ist kein Zauber-Zustand. Ein Gegner kann sich mit seiner Aktion befreien, bleibt aber im schwierigen Gelände.",
-      "Feuer verbrennt nur den getroffenen 1,5-m-Würfel, nicht das ganze Netz."
+      "Feuer verbrennt nur den getroffenen 1,5-m-Würfel, nicht das ganze Netz.",
+      "Festgehalten heißt Bewegungsrate 0, aber ein Teleport ist keine Bewegung: *Nebelschritt* führt aus dem Netz hinaus. Gegen Teleport helfen *Gegenzauber*, fehlende Sicht oder ein Knebel."
     ],
     "synergies": [
       {
@@ -616,7 +622,7 @@
     "source": "Spielerhandbuch 2014 (engl. S. 212) · SRD 5.1",
     "text": "Dieser Zauber erschafft einen untoten Diener. Wähle einen Knochenhaufen oder den Leichnam eines **mittelgroßen oder kleinen Humanoiden** in Reichweite. Dein Zauber erfüllt das Ziel mit einer widerwärtigen Nachahmung des Lebens und erhebt es als Untoten: aus **Knochen** wird ein **Skelett**, aus einem **Leichnam** ein **Zombie**. Die Werte hat der DM.\n\nIn jedem deiner Züge kannst du **als Bonusaktion** jeder Kreatur, die du mit diesem Zauber erschaffen hast und die höchstens **18 m** entfernt ist, gedanklich einen Befehl erteilen. Kontrollierst du mehrere, kannst du einigen oder allen gleichzeitig befehlen, dann aber jedem denselben Befehl. Du bestimmst, welche Aktion die Kreatur in ihrem nächsten Zug ausführt und wohin sie sich bewegt, oder gibst einen allgemeinen Befehl, etwa einen bestimmten Raum oder Gang zu bewachen. Ohne Befehl verteidigt sich die Kreatur nur gegen feindliche Kreaturen. Einen erhaltenen Befehl befolgt sie, bis die Aufgabe erledigt ist.\n\nDie Kreatur steht **24 Stunden** unter deiner Kontrolle, danach gehorcht sie keinem Befehl mehr. Um die Kontrolle um weitere 24 Stunden zu verlängern, musst du den Zauber erneut auf die Kreatur wirken, bevor die aktuellen 24 Stunden enden. So genutzt **erneuert der Zauber deine Kontrolle über bis zu vier** Kreaturen, die du mit diesem Zauber erschaffen hast, statt eine neue zu erschaffen.",
     "higher": "Mit einem Platz ab Grad 4 erschaffst du **pro Grad über dem 3. zwei zusätzliche Untote** oder erneuerst die Kontrolle über zwei weitere. Jede Kreatur muss aus einem anderen Leichnam oder Knochenhaufen stammen.",
-    "valerius": "Grad 3: 1 neuer Untoter **oder** Kontrolle über bis zu **4** erneuern · Befehl: **Bonusaktion**, 18 m · Skelett: RK 13, 13 TP, Waffe laut DM nur, was du ihm gibst: Kurzbogen +4 (1W6 + 2) oder Dolch +4 (1W4 + 2)",
+    "valerius": "Grad 3: 1 neuer Untoter **oder** Kontrolle über bis zu **4** erneuern · Befehl: **Bonusaktion**, 18 m · Skelett: RK 12 ohne Rüstung (Lederrüstung 13, Fellrüstung 14), 13 TP, Waffe laut DM nur, was du ihm gibst: Kurzbogen +4 (1W6 + 2) oder Dolch +4 (1W4 + 2)",
     "tips": [
       "**Ein Investitionszauber, kein Kampfzauber:** 1 Minute Wirkzeit, also vor dem Kampf wirken.",
       "**Skelette sind besser als Zombies:** Mit Bogen werden sie zur Artillerie aus der Deckung, mit Dolch zur stummen Leibwache. Laut DM tragen sie nur, was du ihnen gibst. Zombies sind langsame Trefferpunkte-Säcke.",
@@ -624,6 +630,8 @@
       "**Kontrolle nie verfallen lassen:** Nach 24 Stunden gehorchen sie nicht mehr. Was sie dann tun, entscheidet der DM. Der Gefolge-Bereich im Grimoire erinnert dich daran.",
       "**Abends erneuern:** Die 24 Stunden zählen ab dem Wirken. Erneuere kurz vor der langen Rast mit einem übrigen Grad-3-Platz, die Rast gibt ihn gleich zurück. 1 Minute, alle höchstens 3 m entfernt. Ein Platz hält bis zu 4, jeder weitere Untote kostet dich täglich einen zweiten Platz.",
       "**Arkane Erholung als Versicherung:** Ist abends kein Grad-3-Platz übrig, holt sie nach einer kurzen Rast genau einen zurück. Siehe [[Taktik-Handbuch]].",
+      "**Der Morgen-Trick:** Nach deiner Trance sind alle Plätze zurück. Wirke den Zauber, raste 1 Stunde kurz und hol den Platz mit der Arkanen Erholung wieder. Du beginnst den Tag mit Untoten und vollen Plätzen, die Erholung ist dann für diesen Tag verbraucht.",
+      "**Schlechte Wachen:** Ein Skelett hat eine passive Wahrnehmung von 9. Als Nachtwache schreckt es ab, bemerkt aber kaum einen Schleicher. Dafür sind eine Eule oder das Ritual [[Alarm]] da.",
       "**Schwachstelle Wucht:** Skelette sind anfällig für Wuchtschaden. Keulen und Hämmer zerlegen sie.",
       "**Achtung vor Klerikern:** *Untote vertreiben* kann dein Gefolge in die Flucht schlagen.",
       "**Diskretion:** Untote in der Siedlung wären ein Skandal, besonders vor Lisbeth. Die Unsichtbare Hand bleibt unsichtbar."
@@ -648,6 +656,14 @@
       {
         "with": "Totenglocke",
         "text": "Treffer deiner Skelette verletzen das Ziel, danach trifft die Totenglocke mit dem W12."
+      },
+      {
+        "with": "Tensers schwebende Scheibe",
+        "text": "Die Scheibe trägt 225 kg und folgt dir in 6 m Abstand. Darauf reisen deine Skelette mit, wenn ihr reitet."
+      },
+      {
+        "with": "Arkane Erholung",
+        "text": "Morgen-Trick: nach der Trance wirken, 1 Stunde kurz rasten, den Grad-3-Platz zurückholen."
       }
     ],
     "conflicts": [
@@ -698,11 +714,13 @@
       "**Du musst das Zaubern sehen:** Nebel, Dunkelheit, Unsichtbarkeit oder volle Deckung verhindern *Gegenzauber*, auch gegen dich.",
       "**Eine Hand frei halten:** Nur somatische Komponente. Halte deinen Stab einhändig.",
       "**Den Zauber erkennen kostet die Reaktion:** Laut Xanathars kannst du einen Zauber mit Arkane Kunde (SG 15 + Grad) als Reaktion erkennen. Dann ist die Reaktion aber für *Gegenzauber* weg. Meist entscheidest du blind.",
-      "**Gegen-Gegenzauber:** Dein Gegenzauber ist selbst ein Zauber und kann gekontert werden."
+      "**Gegen-Gegenzauber:** Dein Gegenzauber ist selbst ein Zauber und kann gekontert werden.",
+      "**Wortlos gewirkt:** Zauberer (Sorcerer) können mit Metamagie ohne Worte und Gesten wirken. Dann siehst du kein Wirken und kannst nicht kontern. *Theorie:* Die Sorcerer Society heißt nicht zufällig so."
     ],
     "rulings": [
       "Der Wurf ist ein **Attributswurf** ohne Übungsbonus, kein Rettungswurf.",
-      "Ist der Zauber gebrochen, ist der Platz des Gegners trotzdem verbraucht."
+      "Ist der Zauber gebrochen, ist der Platz des Gegners trotzdem verbraucht.",
+      "Zauber aus magischen Gegenständen wie einem Verständigungsstein brauchen keine Komponenten (SRD 5.1). Ohne Komponenten ist das Wirken nach Xanathars nicht wahrnehmbar: Es gibt nichts zu sehen, also auch nichts zu kontern. Das letzte Wort hat der DM."
     ],
     "conflicts": [
       {
@@ -746,7 +764,8 @@
       "**Zwischen euch und die Schützen legen,** nicht auf eure Nahkämpfer: Im Nebel sieht auch Aella nichts.",
       "**Beide blind, kein Vorteil:** Kämpfen zwei im Nebel gegeneinander, hat jeder Vorteil und Nachteil zugleich, das hebt sich auf. Dunkelsicht hilft im Nebel nicht.",
       "**Konzentration:** nicht zusammen mit *Netz* oder *Flammenkugel*. Gegen Schützen der Nebel, gegen anstürmende Gegner das Netz.",
-      "**Flucht:** Im Nebel verschwinden, dann [[Sternenschritt]] an einen Ort, den du siehst. Wind ab 16 km/h verweht ihn."
+      "**Flucht:** Im Nebel verschwinden, dann [[Sternenschritt]] an einen Ort, den du siehst. Wind ab 16 km/h verweht ihn.",
+      "**Gegen Nebelschritt:** Der Zauber verlangt einen Ort, den der Zaubernde sieht. Wer im Nebel steht, sieht keinen und kann nicht hinausspringen, bis er herausgelaufen ist. Auf die Gegner gelegt, nimmt der Nebel ihnen auch jeden Zauber, der ein sichtbares Ziel braucht."
     ],
     "docs": [],
     "prepared": true
@@ -893,11 +912,23 @@
       "**Als Ritual ohne Vorbereitung:** wie *Unsichtbarer Diener* jederzeit verfügbar, wenn du 10 Minuten Zeit hast.",
       "**Rohstoffe für die Werkstatt:** Häute erlegter Tiere, Lianen, Holz für Pfeile und gesammelte Kräuter passen auf die Scheibe.",
       "**Knochenhaufen bergen:** Vom Schlachtfeld zurück ins Lager, bevor du *Tote erwecken* wirkst.",
+      "**Skelette mitnehmen:** Am 08.11.2026 blieben zwei Skelette zurück, weil auf dem Dino kein Platz war. Die Scheibe trägt sie hinter euch her: Sie bleibt in 6 m Abstand, wie schnell du auch reitest, die Regel nennt kein Tempo. Sie hält 1 Stunde, auf langen Ritten wirkst du sie im Sattel neu (DM fragen).",
+      "**Schweres bergen:** Das Runenschwert der Riesen war im Juli zu schwer zum Mitnehmen. 225 kg trägt die Scheibe.",
       "**Ab Stufe 6 ein Gratis-Teleport:** Als Beschwörungszauber ab Grad 1 lädt das Ritual *Gutartiges Versetzen* wieder auf, ganz ohne Platz.",
       "**Grenzen:** Treppen und Hänge schafft sie, Höhenunterschiede ab 3 m nicht. Entfernst du dich mehr als 30 m, endet der Zauber."
     ],
     "docs": [],
-    "card": "Eine schwebende **Kraftscheibe** (90 cm Durchmesser, 2,5 cm dick) auf einem freien Feld in 9 m, das du siehst, 90 cm über dem Boden, 1 Stunde. Trägt **bis 500 Pfund** (rund 225 kg), mehr beendet den Zauber. Bleibt stehen, solange du höchstens 6 m entfernt bist, sonst folgt sie dir in 6 m Abstand. Unebenes Gelände, Treppen und Hänge ja, Höhenunterschiede ab 3 m nein. Über 30 m Abstand endet der Zauber."
+    "card": "Eine schwebende **Kraftscheibe** (90 cm Durchmesser, 2,5 cm dick) auf einem freien Feld in 9 m, das du siehst, 90 cm über dem Boden, 1 Stunde. Trägt **bis 500 Pfund** (rund 225 kg), mehr beendet den Zauber. Bleibt stehen, solange du höchstens 6 m entfernt bist, sonst folgt sie dir in 6 m Abstand. Unebenes Gelände, Treppen und Hänge ja, Höhenunterschiede ab 3 m nein. Über 30 m Abstand endet der Zauber.",
+    "synergies": [
+      {
+        "with": "Tote erwecken",
+        "text": "Deine Skelette reisen auf der Scheibe mit, wenn die Gruppe reitet oder fährt."
+      },
+      {
+        "with": "Gutartiges Versetzen (ab Stufe 6)",
+        "text": "Als Beschwörungs-Ritual lädt sie das Versetzen ohne Zauberplatz wieder auf."
+      }
+    ]
   },
   {
     "id": "donnerwoge",
@@ -1442,7 +1473,192 @@
     "tips": [
       "**Kein Beschwörungszauber:** lädt *Gutartiges Versetzen* nicht auf, und Abschreiben kostet den vollen Preis (150 GM, 6 Stunden pro Rolle).",
       "**Wen zuerst?** Wer frei ist, kann nicht mehr belauscht werden. Mit einem befreiten Häuptling oder Schamanen könnt ihr offen reden, in der Nähe eines markierten Orcs hören die Riesen womöglich mit.",
-      "**Die Fee:** Ihr Atem riecht nach Alkohol, *Theorie:* ein Fluch. Kehrt sie zurück, könnte *Fluch brechen* das prüfen."
+      "**Die Fee:** Ihr Atem riecht nach Alkohol, *Theorie:* ein Fluch. Seit dem 08.11.2026 ist sie zurück: *Fluch brechen* würde es zeigen. [[Nita]] hat schon das Mal des Orcs gelöst, frag sie zuerst.",
+      "**Die seltsamen Münzen:** *Theorie:* Der Sack Münzen vom Anführer der Sumpfschuppen trägt die geraubten Seelen. In offiziellen Abenteuern befreit ein Zauber, der Flüche bricht, die Seele aus einer Seelenmünze. Ob das hier gilt, weiß nur der DM."
+    ],
+    "docs": []
+  },
+  {
+    "id": "alarm",
+    "name": "Alarm",
+    "en": "Alarm",
+    "level": 1,
+    "school": "Bannzauber",
+    "status": "vorschlag",
+    "ritual": true,
+    "time": "1 Minute",
+    "economy": "minute",
+    "range": "9 m (30 Fuß)",
+    "area": "Tür, Fenster oder Bereich bis zu einem 6-m-Würfel",
+    "components": "V, G, M (ein winziges Glöckchen und ein Stück feiner Silberdraht)",
+    "duration": "8 Stunden",
+    "source": "Spielerhandbuch 2014 (engl. S. 211) · SRD 5.1",
+    "summary": "Bewacht 8 Stunden lang eine Tür, ein Fenster oder einen Bereich und warnt dich im Kopf oder mit einer Glocke.",
+    "text": "Du setzt einen Alarm gegen unerwünschtes Eindringen. Wähle eine **Tür, ein Fenster oder einen Bereich** in Reichweite, der nicht größer ist als ein **Würfel mit 6 m (20 Fuß) Kantenlänge**. Bis der Zauber endet, warnt dich ein Alarm, sobald eine **winzige oder größere Kreatur** den geschützten Bereich berührt oder betritt. Wenn du den Zauber wirkst, kannst du Kreaturen bestimmen, die den Alarm nicht auslösen. Außerdem wählst du, ob der Alarm **geistig** oder **hörbar** ist.\n\nEin **geistiger Alarm** warnt dich mit einem Signal in deinem Kopf, wenn du höchstens **1,6 km (1 Meile)** vom geschützten Bereich entfernt bist. Schläfst du, weckt dich das Signal.\n\nEin **hörbarer Alarm** lässt 10 Sekunden lang den Klang einer Handglocke ertönen, zu hören im Umkreis von **18 m (60 Fuß)**.",
+    "valerius": "Ritual: 11 Minuten, kein Platz, keine Vorbereitung · 8 Stunden · geistiger Alarm bis 1,6 km",
+    "why": "**Die Wache, die nichts übersieht:** Deine Skelette haben eine passive Wahrnehmung von 9, du selbst 12. Der Alarm meldet jede Kreatur ab winziger Größe, auch Schleicher und Unsichtbare. Als Ritual kostet er nichts. Nach 4 Stunden Trance bist du ohnehin wach und spürst das Signal bis 1,6 km weit: gut für das Nachtlager, das Haus im oberen Ring und später das Kellerlabor.",
+    "slot": "Abschreiben von einer Rolle (50 GM, 2 Stunden) oder einer der 2 Zauber einer neuen Stufe",
+    "tips": [
+      "**Geistig statt hörbar:** Der Eindringling merkt nicht, dass er entdeckt ist.",
+      "**Engstellen wählen:** Eine Tür oder ein Fenster zählt als Ganzes. Im Freien deckt der 6-m-Würfel einen Zugang ab, nicht das ganze Lager.",
+      "**Die eigenen Leute ausnehmen:** Beim Wirken bestimmst du, wer den Alarm nicht auslöst, auch Skelette und der Vertraute.",
+      "**Kein Beschwörungszauber:** Abschreiben kostet den vollen Preis."
+    ],
+    "docs": []
+  },
+  {
+    "id": "sprachen-verstehen",
+    "name": "Sprachen verstehen",
+    "en": "Comprehend Languages",
+    "level": 1,
+    "school": "Erkenntnismagie",
+    "status": "vorschlag",
+    "ritual": true,
+    "time": "1 Aktion",
+    "economy": "aktion",
+    "range": "Selbst",
+    "components": "V, G, M (eine Prise Ruß und Salz)",
+    "duration": "1 Stunde",
+    "source": "Spielerhandbuch 2014 (engl. S. 224) · SRD 5.1",
+    "summary": "Eine Stunde lang verstehst du jede gesprochene Sprache und jede Schrift, die du berührst.",
+    "text": "Für die Wirkungsdauer verstehst du die **wörtliche Bedeutung jeder gesprochenen Sprache**, die du hörst. Du verstehst auch **jede geschriebene Sprache**, die du siehst, musst dazu aber die Oberfläche **berühren**, auf der die Worte stehen. Eine Seite Text zu lesen dauert etwa 1 Minute.\n\nDer Zauber entschlüsselt keine geheimen Botschaften in einem Text und keine Glyphen, etwa ein arkanes Siegel, die nicht Teil einer geschriebenen Sprache sind.",
+    "valerius": "Ritual: 11 Minuten, kein Platz · 1 Stunde · Schrift nur bei Berührung, etwa 1 Minute pro Seite",
+    "why": "**Lesen und verstehen ohne Lucira:** Bisher läuft alles Fremde über sie, und sie berichtet wohl an Lisbeth. Als Ritual kostet der Zauber nichts: Du verstehst, was Echsen, Orcs und Sumpfschuppen untereinander reden, und liest jede Schrift, die du berührst. Antworten kannst du damit nicht.",
+    "slot": "Abschreiben von einer Rolle (50 GM, 2 Stunden) oder einer der 2 Zauber einer neuen Stufe",
+    "tips": [
+      "**Nur verstehen, nicht sprechen:** Für Gespräche brauchst du weiter einen Dolmetscher oder [[Nitas Tempel]].",
+      "**Wörtlich:** Du verstehst den Wortsinn. Anspielungen, Losungen und Geheimschriften entschlüsselt der Zauber nicht.",
+      "**Runen:** Ob die Runen der Riesen eine Schrift sind oder Zauberzeichen, entscheidet der DM. Sind sie eine Schrift, liest du sie.",
+      "**Vor dem Gespräch wirken:** als Ritual 11 Minuten, dann hält er das ganze Verhör oder Treffen."
+    ],
+    "docs": []
+  },
+  {
+    "id": "gedanken-wahrnehmen",
+    "name": "Gedanken wahrnehmen",
+    "en": "Detect Thoughts",
+    "level": 2,
+    "school": "Erkenntnismagie",
+    "status": "vorschlag",
+    "concentration": true,
+    "time": "1 Aktion",
+    "economy": "aktion",
+    "range": "Selbst (9 m)",
+    "target": "Eine Kreatur in 9 m, die du sehen kannst",
+    "components": "V, G, M (ein Kupferstück)",
+    "duration": "Konzentration, bis zu 1 Minute",
+    "save": "WE, nur beim tieferen Sondieren",
+    "source": "Spielerhandbuch 2014 (engl. S. 231) · SRD 5.1",
+    "summary": "Du liest die oberflächlichen Gedanken einer Kreatur in 9 m und kannst tiefer graben.",
+    "text": "Für die Wirkungsdauer kannst du die Gedanken bestimmter Kreaturen lesen. Wenn du den Zauber wirkst und **als Aktion in jedem deiner Züge**, bis der Zauber endet, kannst du deinen Geist auf **eine Kreatur** richten, die du im Umkreis von **9 m (30 Fuß)** sehen kannst. Hat die gewählte Kreatur eine Intelligenz von 3 oder weniger oder spricht sie keine Sprache, ist sie nicht betroffen.\n\nZunächst erfährst du die **oberflächlichen Gedanken** der Kreatur: das, was sie in diesem Moment am meisten beschäftigt. Als Aktion kannst du deine Aufmerksamkeit entweder auf die Gedanken einer anderen Kreatur richten oder versuchen, **tiefer** in den Geist derselben Kreatur einzudringen. Dringst du tiefer ein, muss das Ziel einen **Weisheitsrettungswurf** machen. Scheitert es, gewinnst du Einblick in seine Beweggründe (falls es welche hat), seinen Gefühlszustand und etwas, das in seinem Geist viel Raum einnimmt, etwa etwas, das es fürchtet, liebt oder hasst. Gelingt der Wurf, endet der Zauber. **In beiden Fällen weiß das Ziel, dass du in seinen Geist eindringst.** Richtest du deine Aufmerksamkeit nicht auf die Gedanken einer anderen Kreatur, kann das Ziel in seinem Zug seine Aktion nutzen, um einen **Intelligenzwurf gegen deinen Intelligenzwurf** zu machen. Gewinnt es, endet der Zauber.\n\nFragen, die du laut an die Zielkreatur richtest, lenken ganz von selbst den Lauf ihrer Gedanken. Der Zauber ist deshalb bei einem **Verhör** besonders wirksam.\n\nDu kannst mit diesem Zauber auch **denkende Kreaturen aufspüren**, die du nicht sehen kannst. Wenn du den Zauber wirkst oder als Aktion während der Wirkungsdauer, kannst du im Umkreis von 9 m nach Gedanken suchen. Der Zauber durchdringt Barrieren, aber 60 cm (2 Fuß) Fels, 5 cm (2 Zoll) eines Metalls außer Blei oder eine dünne Bleischicht halten ihn auf. Eine Kreatur mit einer Intelligenz von 3 oder weniger oder eine, die keine Sprache spricht, kannst du nicht aufspüren.\n\nHast du so die Anwesenheit einer Kreatur bemerkt, kannst du für den Rest der Wirkungsdauer ihre Gedanken wie oben beschrieben lesen, auch wenn du sie nicht siehst. Sie muss aber weiter in Reichweite sein.",
+    "valerius": "Sondieren: WE-Rettungswurf gegen SG **15** · 9 m · bis 1 Minute · Konzentration · Wettstreit: dein IN-Wurf **+4**",
+    "why": "**Der Zauber der Unsichtbaren Hand:** Oberflächliche Gedanken liest du ohne Rettungswurf, und Fragen lenken, woran das Ziel denkt. Damit verhörst du Gefangene selbst, statt Lucira zu bitten, prüfst einen Verwalter, bevor du ihn einweihst, und weißt in Verhandlungen, was Leonidas oder Saladin wirklich wollen. *Theorie:* So liest auch Lucira Gedanken. Dann zeigt dir der Regeltext, wie du dich schützt.",
+    "slot": "Abschreiben von einer Rolle (100 GM, 4 Stunden) oder einer der 2 Zauber einer neuen Stufe",
+    "tips": [
+      "**Erst fragen, dann lesen:** Eine laut gestellte Frage bringt die Antwort an die Oberfläche. Das geht ohne Rettungswurf, und das Ziel merkt nichts.",
+      "**Tiefer graben verrät dich:** Beim Sondieren macht das Ziel einen Weisheitsrettungswurf und weiß in jedem Fall, dass du in seinem Kopf bist. Schafft es den Wurf, endet der Zauber.",
+      "**Sichtbar gewirkt:** Worte, Gesten und ein Kupferstück. Wirke ihn vor dem Gespräch außer Sicht, er hält 1 Minute.",
+      "**Lauscher finden:** Der Zauber spürt denkende Kreaturen in 9 m auch durch Wände auf. Unsichtbare und Horcher hinter der Tür entgehen ihm nicht.",
+      "**Konzentration:** nicht zusammen mit *Netz* oder *Nebelwolke*.",
+      "**So schützt du dich vor Lucira:** Sie muss den Zauber wirken, du siehst und hörst es. Er reicht 9 m und hält 1 Minute. Denk in der Zeit an Formeln. Gräbt sie tiefer, merkst du es und wirfst sie mit einer Aktion hinaus: dein Intelligenzwurf (+4) gegen ihren."
+    ],
+    "rulings": [
+      "Kreaturen mit Intelligenz 3 oder weniger und Kreaturen, die keine Sprache sprechen, sind nicht betroffen.",
+      "Mit Arkane Kunde erkennst du den Zauber, wenn ihn jemand wirkt: SG 17 (15 + Grad 2), bei dir 55 %."
+    ],
+    "docs": []
+  },
+  {
+    "id": "magischer-mund",
+    "name": "Magischer Mund",
+    "en": "Magic Mouth",
+    "level": 2,
+    "school": "Illusion",
+    "status": "vorschlag",
+    "ritual": true,
+    "time": "1 Minute",
+    "economy": "minute",
+    "range": "9 m (30 Fuß)",
+    "target": "Ein Gegenstand, den du siehst und den niemand trägt",
+    "components": "V, G, M (ein Stückchen Honigwabe und Jadestaub im Wert von mindestens 10 GM, wird verbraucht)",
+    "duration": "Bis gebannt",
+    "source": "Spielerhandbuch 2014 (engl. S. 257) · SRD 5.1",
+    "summary": "Ein Gegenstand spricht eine Nachricht von bis zu 25 Wörtern, sobald eintritt, was du festlegst.",
+    "text": "Du legst eine Nachricht in einen Gegenstand in Reichweite. Sie wird ausgesprochen, sobald eine **Auslösebedingung** erfüllt ist. Wähle einen Gegenstand, den du sehen kannst und den keine andere Kreatur trägt oder hält. Sprich dann die Nachricht. Sie darf **höchstens 25 Wörter** lang sein, kann aber über bis zu 10 Minuten verteilt gesprochen werden. Lege zuletzt fest, unter welchen Umständen der Zauber deine Nachricht übermittelt.\n\nTritt dieser Umstand ein, erscheint auf dem Gegenstand ein magischer Mund und spricht die Nachricht **mit deiner Stimme und in der Lautstärke, in der du gesprochen hast**. Hat der gewählte Gegenstand einen Mund oder etwas, das wie ein Mund aussieht, etwa den Mund einer Statue, erscheint der magische Mund dort, sodass die Worte aus dem Mund des Gegenstands zu kommen scheinen. Wenn du den Zauber wirkst, legst du fest, ob er **endet, nachdem er seine Nachricht übermittelt hat**, oder ob er bestehen bleibt und die Nachricht **jedes Mal wiederholt**, wenn der Auslöser eintritt.\n\nDer auslösende Umstand kann so allgemein oder so genau sein, wie du möchtest. Er muss aber auf **sichtbaren oder hörbaren Bedingungen** beruhen, die im Umkreis von **9 m (30 Fuß)** um den Gegenstand eintreten. Du könntest dem Mund zum Beispiel auftragen zu sprechen, wenn sich eine Kreatur dem Gegenstand auf 9 m nähert oder wenn in 9 m Umkreis eine silberne Glocke läutet.",
+    "valerius": "Ritual: 11 Minuten, kein Platz · bis gebannt · 25 Wörter · Auslöser in 9 m um den Gegenstand · 10 GM Jadestaub pro Wirken",
+    "why": "**Befehle ohne Gesicht:** Die Hand arbeitet in Zellen, und nur der Verwalter soll dich kennen. Mit diesem Zauber muss es nicht einmal er: Eine Wand, eine Statue oder ein Türklopfer spricht deinen Auftrag, sobald das Losungswort fällt. Der Mund bleibt, bis er gebannt wird, und kostet als Ritual nur den Jadestaub.",
+    "slot": "Abschreiben von einer Rolle (100 GM, 4 Stunden) oder einer der 2 Zauber einer neuen Stufe",
+    "tips": [
+      "**Deine Stimme:** Der Mund spricht mit deiner Stimme und in der Lautstärke, in der du gesprochen hast. Verstell sie beim Einsprechen, in Täuschen bist du geübt (+4).",
+      "**Auslöser nach Wunsch:** alles, was man in 9 m um den Gegenstand sehen oder hören kann. Ein Losungswort, ein Klopfzeichen, eine bestimmte Kleidung.",
+      "**Einmal oder immer wieder:** Beim Wirken legst du fest, ob der Mund nach der Nachricht endet oder sie bei jedem Auslöser wiederholt.",
+      "**Toter Briefkasten:** Ein Mund, der nur spricht, wenn jemand allein im Keller das Losungswort sagt, verrät nichts, wenn ein anderer davorsteht.",
+      "**Warnanlage:** „Sprich, wenn jemand ohne grünen Umhang diesen Raum betritt“ macht aus jeder Tür eine Wache.",
+      "**Grenzen:** 25 Wörter. Der Gegenstand darf nicht getragen werden. *Magie entdecken* zeigt die Illusion, *Magie bannen* beendet sie."
+    ],
+    "docs": []
+  },
+  {
+    "id": "illusionsschrift",
+    "name": "Illusionsschrift",
+    "en": "Illusory Script",
+    "level": 1,
+    "school": "Illusion",
+    "status": "vorschlag",
+    "ritual": true,
+    "time": "1 Minute",
+    "economy": "minute",
+    "range": "Berührung",
+    "components": "G, M (Tinte auf Bleibasis im Wert von mindestens 10 GM, wird verbraucht)",
+    "duration": "10 Tage",
+    "source": "Spielerhandbuch 2014 (engl. S. 252) · SRD 5.1",
+    "summary": "Nur wen du bestimmst, liest den echten Text. Alle anderen sehen unlesbare Zeichen oder eine andere Nachricht.",
+    "text": "Du schreibst auf Pergament, Papier oder ein anderes geeignetes Schreibmaterial und belegst es mit einer mächtigen Illusion, die für die Wirkungsdauer anhält.\n\n**Für dich und alle Kreaturen, die du beim Wirken bestimmst,** erscheint die Schrift normal, in deiner Handschrift geschrieben, und vermittelt den Sinn, den du beim Schreiben gemeint hast. **Für alle anderen** erscheint die Schrift, als wäre sie in einer unbekannten oder magischen Schrift geschrieben, die nicht zu entziffern ist. Stattdessen kannst du die Schrift auch wie eine **völlig andere Nachricht** aussehen lassen, in anderer Handschrift und in einer anderen Sprache, die aber eine sein muss, die du beherrschst.\n\nWird der Zauber gebannt, verschwinden die ursprüngliche Schrift und die Illusion zusammen.\n\nEine Kreatur mit **Wahrem Blick** kann die verborgene Botschaft lesen.",
+    "valerius": "Ritual: 11 Minuten, kein Platz · 10 Tage · 10 GM Tinte pro Wirken · nur Gestik, keine Stimme",
+    "why": "**Post, die nur der Richtige liest:** Jeder Brief in die alte Welt reist auf einem Lhaaz-Schiff und geht durch Lhaaz-Hände. Mit diesem Zauber sehen alle anderen einen harmlosen Brief oder unlesbare Zeichen. Nur wen du beim Wirken bestimmst, liest den echten Text. Auch für Aufträge an die Hand und für alles, was Lucira nicht lesen soll.",
+    "slot": "Abschreiben von einer Rolle (50 GM, 2 Stunden) oder einer der 2 Zauber einer neuen Stufe",
+    "tips": [
+      "**10 Tage:** Danach endet die Täuschung, und der echte Text liegt offen. Vorher klären, wie lange die Überfahrt dauert.",
+      "**Ein anderer Brief statt Zeichensalat:** Unlesbare Zeichen machen neugierig. Lass die Schrift wie einen gewöhnlichen Brief aussehen, in anderer Handschrift und in einer Sprache, die du beherrschst.",
+      "**Den Empfänger bestimmst du beim Wirken,** zum Beispiel [[Cam Buckland|Cam]] oder deinen Verwalter.",
+      "**Wahrer Blick durchschaut es,** und *Magie entdecken* zeigt, dass eine Illusion auf dem Blatt liegt.",
+      "**Wird der Zauber gebannt,** verschwinden Täuschung und echter Text zusammen. Das schützt den Inhalt, kostet aber die Nachricht.",
+      "*Theorie:* Lucira liest jede Schrift, aber eine Illusion ist keine Schrift. Ob ihre Gabe die Täuschung durchdringt, entscheidet der DM."
+    ],
+    "docs": []
+  },
+  {
+    "id": "verbannung",
+    "name": "Verbannung",
+    "en": "Banishment",
+    "level": 4,
+    "school": "Bannzauber",
+    "status": "vorschlag",
+    "concentration": true,
+    "time": "1 Aktion",
+    "economy": "aktion",
+    "range": "18 m (60 Fuß)",
+    "target": "Eine Kreatur, die du sehen kannst",
+    "components": "V, G, M (ein Gegenstand, der dem Ziel zuwider ist)",
+    "duration": "Konzentration, bis zu 1 Minute",
+    "save": "CH",
+    "source": "Spielerhandbuch 2014 (engl. S. 217) · SRD 5.1",
+    "summary": "Schickt eine Kreatur auf eine andere Ebene: Fremde nach Hause, Einheimische für bis zu eine Minute fort.",
+    "text": "Du versuchst, eine Kreatur in Reichweite, die du sehen kannst, auf eine andere Existenzebene zu schicken. Das Ziel muss einen **Charismarettungswurf** bestehen, sonst wird es verbannt.\n\nIst das Ziel auf der Existenzebene **heimisch**, auf der du dich befindest, verbannst du es auf eine **harmlose Halbebene**. Dort ist das Ziel **kampfunfähig**. Es bleibt dort, bis der Zauber endet. Dann erscheint es wieder an dem Ort, den es verlassen hat, oder im nächsten freien Feld, falls dieser Ort besetzt ist.\n\nIst das Ziel auf einer **anderen Existenzebene heimisch** als der, auf der du dich befindest, wird es mit einem leisen Knall verbannt und **kehrt auf seine Heimatebene zurück**. Endet der Zauber, bevor 1 Minute vergangen ist, erscheint das Ziel wieder an dem Ort, den es verlassen hat, oder im nächsten freien Feld, falls dieser Ort besetzt ist. Andernfalls **kehrt das Ziel nicht zurück**.",
+    "higher": "Mit einem Platz ab Grad 5 kannst du **pro Grad über dem 4. eine weitere Kreatur** als Ziel wählen.",
+    "valerius": "SG **15** (CH-Rettungswurf) · 18 m · bis 1 Minute · Konzentration · Richtwerte: Hügelriese scheitert zu 80 %, Steinriese 75 %, Orc 70 %, Eisriese 65 %",
+    "why": "**Ein Zauber, drei Probleme:** Die [[Die Fee|Fee]] stammt aus einer anderen Dimension. Scheitert ihr Rettungswurf und hältst du eine Minute die Konzentration, ist sie zu Hause: Dein Versprechen ist eingelöst, ohne die Teufelsjäger. Beschworene Dämonen der Society schickst du genauso endgültig zurück. Und ein Riese verschwindet für bis zu einer Minute aus dem Kampf, während ihr die anderen erledigt.",
+    "slot": "Stufe 7 (Grad-4-Plätze)",
+    "tips": [
+      "**Charisma ist bei den meisten Gegnern schwach:** Riesen, Bestien und Orcs scheitern oft.",
+      "**Die volle Minute halten:** Endet die Konzentration früher, taucht auch ein Wesen von einer anderen Ebene wieder auf. Geh vorher in Deckung.",
+      "**Einheimische kommen zurück:** Ein Riese ist in Xantus zu Hause. Er sitzt kampfunfähig auf einer harmlosen Halbebene und erscheint am selben Ort wieder. Nutzt die Zeit, stellt euch um die Stelle auf und bereitet Angriffe vor.",
+      "**Material:** etwas, das dem Ziel zuwider ist. Dein Fokus ersetzt es.",
+      "**Kein Beschwörungszauber:** lädt *Gutartiges Versetzen* nicht auf, Abschreiben kostet den vollen Preis (200 GM, 8 Stunden)."
+    ],
+    "rulings": [
+      "Ob ein bereitwilliges Ziel den Rettungswurf freiwillig scheitern lassen darf, sagt die Regel nicht. Die meisten DMs erlauben es.",
+      "Was die Heimatebene der Fee ist, weiß nur der DM: die Dimension des [[Das Wesen hinter dem Siegel|Wesens hinter dem Siegel]] oder die Feenwelt."
     ],
     "docs": []
   }

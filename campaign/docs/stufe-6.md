@@ -5,7 +5,7 @@ icon: book-open
 order: 5
 group: Zauber & Taktik
 aliases: [Stufe 6, Stufenaufstieg, Planer Stufe 6, Zauberplan]
-updated: 2026-11-09
+updated: 2026-11-14
 ---
 # Stufe-6-Planer
 
@@ -108,6 +108,8 @@ Der dritte Grad-3-Platz ist der größte Gewinn: *Gegenzauber*, *Tote erwecken* 
 
 **Einsatz:** Steht ein Gegner vor dir, teleportierst du dich weg oder tauschst mit einem Nahkämpfer: Er steht sofort an deiner Stelle, du an seinem sicheren Platz. Anders als [[Sternenschritt]] kostet es deine Aktion.
 
+**Rochade mit dem Skelett:** Ein Skelett ist mittelgroß und gehorcht. Stell eins an einen sicheren Platz hinter dir. Erreicht dich ein Nahkämpfer, tauschst du mit ihm: Der Gegner steht neben einem Skelett, du 9 m weiter. Genauso holst du einen Gefährten aus einem Griff oder aus deinem eigenen Netz. Ein Vertrauter taugt dafür nicht, er ist winzig.
+
 ## Was dir die Schule der Beschwörung schenkt
 
 | Stufe | Merkmal | Wirkung |
@@ -129,7 +131,7 @@ Ihr spielt in wechselnder Besetzung, mindestens zu dritt. Der Plan oben funktion
 | [[Fridolin vom See|Fridolin]] | Paladin, Frontkämpfer | Nahkampf, Heilung durch Handauflegen, Smite |
 | [[Twee]] | Barde | *Leomunds winzige Hütte* als Ritual, *Verlangsamen* |
 | [[Lucira]] | Hexenmeisterin | Gedanken und Schriften lesen, Fernkampf |
-| [[Die Fee]] | Klasse unbekannt | |
+| [[Die Fee]] | Waldläuferin, fliegt | Führen und Spuren lesen, Heimlichkeit für die ganze Gruppe, Bogen, *Tierfreundschaft* |
 
 ## Abschreiben statt lernen
 
@@ -143,6 +145,41 @@ Spruchrollen und fremde Zauberbücher kannst du jederzeit abschreiben, zusätzli
 
 Saladins **unendliche Schriftrolle** zum Herstellen von Zauberrollen wäre hier Gold wert.
 
-## Ausblick Stufe 7
+## Rituale und Zauber für die Hand
 
-Grad-4-Plätze: *Tote erwecken* mit Grad 4 erweckt **3 Untote** auf einmal oder hält bis zu 6 unter Kontrolle, *Feenwesen beschwören* schlägt mit Grad 4 zweimal zu. Die Arkane Erholung holt dann bis zu 4 Grade zurück.
+Rituale kosten dich keinen Platz und keine Vorbereitung, nur einen Eintrag im Buch. Sie müssen keiner deiner zwei Zauber pro Stufe sein: Von einer Spruchrolle schreibst du sie ab.
+
+| Zauber | Grad | Abschreiben | Wofür |
+| :-- | :-: | :-- | :-- |
+| [[Alarm]] (Ritual) | 1 | 50 GM, 2 Stunden | Wache für Lager, Haus und Labor. Meldet auch Schleicher und Unsichtbare |
+| [[Sprachen verstehen]] (Ritual) | 1 | 50 GM, 2 Stunden | Fremde Sprachen und Schriften ohne Lucira |
+| [[Illusionsschrift]] (Ritual) | 1 | 50 GM, 2 Stunden | Briefe, die nur der Empfänger liest, auch an Cam |
+| [[Magischer Mund]] (Ritual) | 2 | 100 GM, 4 Stunden | Aufträge an die Hand, ohne dass dich jemand sieht |
+| [[Gedanken wahrnehmen]] | 2 | 100 GM, 4 Stunden | Verhöre und Verhandlungen, den Verwalter prüfen |
+
+Warum gerade diese, steht in der [[Tiefenanalyse]].
+
+## Ausblick bis Stufe 10
+
+| Stufe | Was kommt | Für dich |
+| :-: | :-- | :-- |
+| 7 | ein Grad-4-Platz, Arkane Erholung bis 4 Grade | *Tote erwecken* mit Grad 4 erweckt **3 Untote** auf einmal oder hält 6 unter Kontrolle. [[Verbannung]] schickt die Fee nach Hause, Dämonen zurück und einen Riesen eine Minute fort. *Feenwesen beschwören* schlägt mit Grad 4 zweimal zu |
+| 8 | [[Attributswerterhöhung]], zweiter Grad-4-Platz | siehe unten |
+| 9 | Grad-5-Platz, Übungsbonus +4 | Zauber-SG 16, Zauberangriff +8. *Tote erwecken* mit Grad 5: 5 neue Untote oder 8 erneuern |
+| 10 | [[Fokussierte Beschwörung (ab Stufe 10)|Fokussierte Beschwörung]], fünfter Zaubertrick | Schaden bricht deine Konzentration auf Beschwörungszauber nicht mehr |
+
+### Stufe 8: Intelligenz oder Konzentration?
+
+Dein Engpass ist die Konzentration: KO-Rettungswurf +3, bei SG 10 hältst du zu 70 %.
+
+| Wahl | Was sie bringt | Konzentration bei SG 10 |
+| :-- | :-- | :-: |
+| **Intelligenz +2** (auf 20) | Zauber-SG 16, Zauberangriff +8, ein vorbereiteter Zauber mehr, Arkane Kunde +8 | 70 % |
+| Talent *Kriegszauberwirker* (War Caster) | Vorteil auf Konzentrationswürfe, Gesten auch mit vollen Händen, ein Zauber als Gelegenheitsangriff | 91 % |
+| Talent *Widerstandsfähig* (Resilient) mit Konstitution | KO 17 und Übung in KO-Rettungswürfen: +6, ab Stufe 9 +7 | 85 % |
+
+**Empfehlung: Intelligenz +2.** Ab Stufe 10 bricht Schaden deine Konzentration auf Beschwörungszauber ohnehin nicht mehr, und fast alle deine Konzentrationszauber sind Beschwörungen: *Netz*, *Nebelwolke*, *Flammenkugel*. Ein Talent für die Konzentration wäre nach zwei Stufen fast wertlos, der höhere Zauber-SG bleibt. Die Ausnahme ist *Hypnotisches Muster*, eine Illusion: Wird es dein wichtigster Zauber, lohnt sich *Kriegszauberwirker* doch. Talente sind eine Zusatzregel, frag den DM.
+
+### Stufe 10: der fünfte Zaubertrick
+
+Laut Cams Brief zieht Floshem „mit magischen Händen und Dienern jedes Gasthaus in seinen Bann“. Die *Magierhand* hast du nicht. Bis dahin spielen [[Unsichtbarer Diener]] und [[Taschenspielerei]] diese Rolle.

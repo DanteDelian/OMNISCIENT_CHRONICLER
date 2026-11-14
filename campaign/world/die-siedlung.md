@@ -11,7 +11,7 @@ imageFocus: 50% 45%
 ---
 # Die Siedlung (Dehapten)
 
-*Die Schreibweise ist unsicher, du hörst auch „Dehapten“ (Frage auf der [[Rätselwand]]).*
+*Schreibweise laut dir: Dehapten (09.11.2026). In älteren Notizen steht „Dehubden“.*
 
 **Valerius' Operationsbasis: die Lhaaz-Stadt flussaufwärts, angeführt von [[Leon Lhaaz]].**
 
@@ -28,3 +28,8 @@ imageFocus: 50% 45%
 ## Früher notiert
 - **Das zugewiesene Haus** mit Baustelle: Darunter soll Valerius' **geheimes Kellerlabor** entstehen. Daneben lag der untote Kadaver. Er liegt jetzt bei eurem Haus. Für *Tote erwecken* taugt er nicht, er war kein Humanoider. Du willst daraus eine Knochenstatue für das Haus bauen.
 - Aella beschreibt die Stadt als „raues, unfertiges Stück Zivilisation am Rande der Wildnis“.
+
+## Seit November 2026
+- [[Leonidas Lhaaz|Leonidas]] zieht mit einem Heer von hier nach Westen.
+
+**Offen:** Wie viele Soldaten schützen die Stadt noch, mit den Echsen vor dem Tor und der Society im Osten?

@@ -18,3 +18,7 @@ summary: Tochter des Erzherzogs, Schwester von Leon. Nach den Friedensgespräche
 - [[Lucira]] las ihre Gedanken und half ihr. Was Lula gesehen hat, wisst ihr nicht. Laut DM war das eigentlich eine **verborgene Storyline** für später. Lula ist auf dem Weg der Besserung.
 
 > In manchen Notizen heißt sie „Luna“. Gemeint ist dieselbe Person.
+
+*Theorie:* Ihr Attentäter und der Überfall auf Lisbeths Schiff gehen auf dieselbe Hand zurück. Beide kamen aus dem Haus selbst.
+
+**Offen:** Was steht in dem Schriftstück des Attentäters?

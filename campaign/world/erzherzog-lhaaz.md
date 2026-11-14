@@ -24,3 +24,5 @@ Wer dieser Graf ist, ist **offen**:
 - **Graf Leonidas oder ein Dritter?** Dieselbe Warnung nennt Lisbeth „die Schwester des Erzherzogs“ und den Grafen getrennt davon, als wären es zwei Personen. Und Leonidas trägt den Titel Graf.
 
 *Theorie:* Ist der Auftraggeber der Erzherzog oder Leonidas, dann wollte einer ihrer eigenen Brüder Lisbeth tot sehen. Das wäre ein starker **Hebel** für Valerius. Siehe [[Offene Fragen an den DM]].
+
+*Theorie:* Steckt hinter dem Attentat auf Lula dieselbe Hand wie hinter dem Anschlag auf Lisbeth, scheidet der Erzherzog aus. Lula ist seine Tochter.

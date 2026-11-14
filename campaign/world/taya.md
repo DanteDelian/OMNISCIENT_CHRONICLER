@@ -19,3 +19,5 @@ summary: Frühere Gefährtin. Nach ihrer Wiederbelebung verschwunden, seit Juli 
 - Mit Schleimbert warst du als Fisch unter Wasser, für Saladins Auftrag. Siehe [[Saladin]].
 
 Siehe [[Die Zwei-Seelen-Anomalie]].
+
+**Offen:** Seit dem 08.11.2026 wisst ihr, dass die [[Sorcerer Society|Society]] Seelen raubt und weitergibt. Hängt die zweite Seele in Tayas Körper damit zusammen?

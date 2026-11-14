@@ -5,17 +5,18 @@ icon: lightbulb
 order: 10
 group: Pläne
 aliases: [Ideen, Brainstorming, Ideenliste]
-updated: 2026-11-09
+updated: 2026-11-14
 ---
 # Ideen für die nächsten Sessions
 
 > [!NOTE] Vorschlag
-> Brainstorming, kein Kanon. Alles hier sind Möglichkeiten, die du am Tisch ausprobieren kannst. Grundlage sind eure Einträge im Grimoire.
+> Brainstorming, kein Kanon. Alles hier sind Möglichkeiten, die du am Tisch ausprobieren kannst. Grundlage sind eure Einträge im Grimoire. Die neuesten Ideen und die Muster dahinter stehen in der [[Tiefenanalyse]] vom 14.11.2026.
 
 ## Unterwegs
 
 - **Vertrauten neu beschwören und vorausschicken.** Eine [[Eule]] sieht 36 m im Dunkeln und späht nachts Orc-Lager und Riesen aus, ohne dass ihr euch zeigt. Material hast du für 9 Beschwörungen.
-- **Skelette als stille Nachtwache.** Erweckt schlafen sie nicht und sehen 18 m im Dunkeln. Das kostet jeden Tag einen Grad-3-Platz, mit dem Abend-Trick aus dem [[Taktik-Handbuch]] aber kaum etwas.
+- **Skelette als Nachtwache, aber nicht allein.** Erweckt schlafen sie nicht und sehen 18 m im Dunkeln, ihre passive Wahrnehmung ist aber nur 9. Als Abschreckung gut, als Augen schlecht: Dafür ist die Eule da (passiv 18) oder das Ritual [[Alarm]]. Mit dem Abend- oder Morgen-Trick aus dem [[Taktik-Handbuch]] kostet die Kontrolle keinen Platz.
+- **Skelette auf der Scheibe.** [[Tensers schwebende Scheibe]] trägt sie hinter dem Dino her (DM fragen).
 - **Handwerk in den freien Stunden.** Nach 4 Stunden Trance bist du wach, während die Gruppe weiter rastet. Laut DM kannst du dann Handwerk betreiben und Ausrüstung pflegen: Lederrüstungen für die Skelette, Geschirr fürs Reittier, Kräuter bestimmen. Alles dazu in der [[Werkstatt]].
 - **Kräuter sammeln nebenbei.** Bei normalem oder langsamem Tempo kann jemand unterwegs sammeln, auf dem galoppierenden Dino nicht. Die Fee als Waldläuferin findet am meisten, du bestimmst die Funde mit der Kräuterkundeausrüstung. Anleitung in der [[Werkstatt]].
 - **Pfeile und Köcher kaufen**, sobald ihr an einem Händler vorbeikommt. Siehe Einkaufszettel im Inventar.
@@ -45,7 +46,7 @@ Welche Einträge auf dem Einkaufszettel ohne Gold gehen, steht dort bei „Wie?�
 
 ## Die belagerte Stadt
 
-- **Den Angriff über den [[Verständigungsstein]] abstimmen.** 25 Wörter am Tag an Leonidas: Zeitpunkt, Richtung, Zeichen. Er kann euch eine Losung für seine Frau nennen, die dein Vertrauter in die Stadt bringt.
+- **Den Angriff über den [[Verständigungsstein]] abstimmen.** 25 Wörter am Tag an Leonidas: Zeitpunkt, Richtung, Zeichen. Er kann euch eine Losung für seine Frau nennen, die dein Vertrauter in die Stadt bringt. Der Stein lädt sich im Morgengrauen auf: Wer kurz davor sendet, hat kurz danach die nächste Nachricht frei.
 - **Den Lohn vorher klären.** Mit Leonidas besprechen, was er euch für die Befreiung gibt. Laut dir winkt ein Adelstitel, siehe [[Aufbauplan der Unsichtbaren Hand|Aufbauplan]].
 - **Die Riesen erst zählen, dann kämpfen.** Hügel-, Stein- und Eisriesen verlangen eine andere Taktik (siehe Riesen-Briefing im [[Taktik-Handbuch]]).
 - **Die Mauer nutzen.** Hinter Zinnen hast du Dreivierteldeckung: RK 16, mit *Schild* 21.
@@ -53,13 +54,14 @@ Welche Einträge auf dem Einkaufszettel ohne Gold gehen, steht dort bei „Wie?�
 ## Die Sumpfschuppen und die Society
 
 - **Die Verfolger erst entwaffnen:** Ihre Steine tragen *Verständigung*. Wer sie stellt, nimmt zuerst die Steine, dann landet die nächste Nachricht der Society bei euch. Mehr bei [[Die Sumpfschuppen]].
-- **Einen lebend fangen:** Lucira liest Gedanken. Ein Gefangener verrät vielleicht, wer Farlir ist und wohin die Seelen gehen. Vielleicht ist Farlir sogar einer der drei Verfolger.
+- **Einen lebend fangen:** Lucira liest Gedanken. Ein Gefangener verrät vielleicht, wer Farlir ist und wohin die Seelen gehen. Vielleicht ist Farlir sogar einer der drei Verfolger. Knebel und ein Sack über den Kopf halten ihn: *Nebelschritt* braucht die Stimme und einen sichtbaren Zielort.
+- **Die seltsamen Münzen prüfen:** Die Fee nahm dem Anführer einen Sack davon ab. [[Magie entdecken]] zeigt, ob etwas darin steckt.
 - **Den Echsen berichten:** [[Crush Lu]] und die Echsen sollten erfahren, wer ihre Krieger jagt. Das stärkt euer Bündnis und deinen Ruf als ihr Held.
 - **Beweise für den Rat von Freistadt:** Der Rat streitet über die Society. Beweise für den Seelenraub könnten ihn gegen sie wenden, und ihr hättet Freunde im Rat, wenn ihr dort Saladins Laden erwerbt.
 
 ## Die Fee und das Reittier
 
-- **Die Fee nach Hause bringen:** Sie kam als blinder Passagier aus der Dimension des [[Das Wesen hinter dem Siegel|Wesens hinter dem Siegel]]. Wer sie zurückbringt, kommt diesem Wesen vielleicht wieder nahe. Sie selbst hofft auf die Teufelsjäger.
+- **Die Fee nach Hause bringen:** Sie kam als blinder Passagier aus der Dimension des [[Das Wesen hinter dem Siegel|Wesens hinter dem Siegel]]. Wer sie zurückbringt, kommt diesem Wesen vielleicht wieder nahe. Sie selbst hofft auf die Teufelsjäger. Ab Stufe 7 kannst du es selbst: [[Verbannung]].
 - **Das Reittier zähmen:** Die Tierfreundschaft hält 24 Stunden. Bis dahin Futter, Ruhe und ein Name. Geschirr und Satteltaschen machst du selbst mit dem Lederwerkzeug.
 
 ## Haus Lhaaz und die Intrige
@@ -67,11 +69,13 @@ Welche Einträge auf dem Einkaufszettel ohne Gold gehen, steht dort bei „Wie?�
 - **Wer ist „Graf Lhaaz“?** Achte darauf, wie [[Leonidas Lhaaz|Leonidas]] über Lisbeth spricht und wie Lisbeth über ihre Brüder. [[Cam Buckland|Cam]] wüsste vielleicht, wer die Zafferas bezahlt hat, aber du schuldest ihm schon etwas. Wie du ihn sicher erreichst, steht bei Cam.
 - **Lisbeth als Verbündete.** Ihr habt sie gerettet und sie ist milder gestimmt, misstraut euch aber weiterhin, deshalb Lucira. Laut Aella ist sie die wahre Matriarchin der Familie. Ein Hinweis auf den Anschlag zur rechten Zeit könnte sie auf eure Seite ziehen.
 - **Leon stärken.** Er wächst in seine Rolle. Ein Leon, der dir vertraut, schützt euer Haus im oberen Ring und dein künftiges Labor.
+- **Das Schriftstück lesen.** Das Papier mit dem Lhaaz-Wappen vom Attentäter liegt in deinem Gepäck. Was darin steht, ist nirgends notiert.
 
 ## Die Unsichtbare Hand
 
 - **Erst Einnahmen, dann ein Verwalter.** Er wirbt den Lehrling und alle anderen an, keiner außer ihm kennt dich. Vorher ein Druckmittel finden und einen Vorschuss zahlen. Siehe [[Aufbauplan der Unsichtbaren Hand|Aufbauplan]], die Leute trägst du im [[Netzwerk]] ein.
-- **Saladin bei Laune halten.** Er wird ungeduldig. Beim nächsten Treffen zeigen, dass ihr den Laden nicht vergessen habt, und fragen, ob er eine Spruchrolle *Verständigung* hat.
+- **Saladin bei Laune halten.** Er wird ungeduldig. Beim nächsten Treffen zeigen, dass ihr den Laden nicht vergessen habt, und fragen, ob er eine Spruchrolle *Verständigung* hat. Und auf wessen Namen der Posten laufen soll: Er will ihn rechtmäßig erworben.
+- **Twee als Stimme.** Er sammelt Geschichten und stammt aus dem Süden. Frag ihn nach Freistadt und dem Imperium, und lass ihn aus eurem Austritt aus der Donnergarde ein Lied machen.
 - **Die Donnergarde ablegen**, bevor die nächste Lhaaz-Karawane kommt: öffentlich austreten und etwas Eigenes machen, am besten nach der Befreiung der Stadt. Siehe [[Neue Identität nach der Donnergarde]].
 - **Cam nach dem Mönchsmeister fragen**, sobald ihr einen sicheren Weg habt. Siehe [[Cam Buckland]].
 
@@ -81,5 +85,7 @@ Welche Einträge auf dem Einkaufszettel ohne Gold gehen, steht dort bei „Wie?�
 - **Das Wesen hinter dem Siegel** will wissen, wenn andere an interessanten Orten forschen. Der [[Der Magische Turm|Turm im See]] ist so ein Ort.
 - **Lulas verborgene Storyline:** Was hat sie gesehen? [[Lucira]] las ihre Gedanken.
 - **Das große Auge unter Wasser** aus Saladins Auftrag: [[Wasseratmung]] wäre der Schlüssel.
+- **Lucira nach dem Siegel fragen.** Sie hat es gelesen. Was darauf stand, hat noch niemand notiert.
+- **Die drei fragen, was sie erlebt haben,** solange sie fort waren.
 
 Mehr offene Punkte stehen auf der [[Rätselwand]].

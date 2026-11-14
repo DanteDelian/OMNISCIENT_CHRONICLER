@@ -26,7 +26,7 @@
       "qty": 1,
       "magic": true,
       "desc": "Ein Paar, mit dem Zauber *Verständigung* belegt: 1× pro Tag eine Nachricht von bis zu 25 Wörtern an den Träger des anderen Stücks, Antwort sofort, Entfernung egal. Gefunden in einer Truhe im verborgenen Lagerraum unter dem verlassenen Haus bei den Tempelruinen.",
-      "note": "Jeder Träger braucht ein Stück. Plan: Aella bekommt eines. Ob sie es schon trägt, ist nicht notiert."
+      "note": "Jeder Träger braucht ein Stück. Stand 09.11.2026: Beide liegen bei dir. Eins willst du selbst tragen, das andere bekommt dein künftiger Verwalter."
     },
     {
       "id": "verstaendigungsstein",
@@ -69,7 +69,7 @@
       "name": "Alchemistenwerkzeug",
       "group": "koerper",
       "qty": 1,
-      "desc": "Geschenk der [[Kontakte der Festung|Kräuterfrau]] beim Abschluss ihrer Quest (12.07.2026). Am 11.10.2026 in der winzigen Hütte zum ersten Mal benutzt."
+      "desc": "Geschenk der [[Kontakte der Festung|Kräuterfrau]] beim Abschluss ihrer Quest (12.07.2026). Am 11.10.2026 in der winzigen Hütte zum ersten Mal benutzt. Enthält auch Eisenpulver: zusammen mit gefeiltem Silber das Material für *Schutz vor Gut und Böse* (DM fragen)."
     },
     {
       "id": "rucksack",
@@ -154,7 +154,7 @@
       "group": "verbrauch",
       "qty": 3,
       "desc": "Beute aus der Zuflucht. Laut deiner Zählung vom 12.10.2026: 3 Stück.",
-      "note": "Regel-Tipp: Laut Xanathars braut man Heiltränke mit der Kräuterkundeausrüstung (5 GM), nicht mit dem Alchemistenwerkzeug. Ob dein Alchemistenwerkzeug reicht, mit dem DM klären."
+      "note": "Heiltränke braut man nach den Regeln mit der Kräuterkundeausrüstung (5 GM), nicht mit dem Alchemistenwerkzeug. Laut DM darfst du sie mit *Geringer Beschwörung* erschaffen. 1 Tag und 25 GM Material pro Trank."
     },
     {
       "id": "society-dolche",
@@ -190,7 +190,7 @@
       "name": "Schriftstück mit Lhaaz-Wappen",
       "group": "plot",
       "qty": 1,
-      "desc": "Vom **Attentäter**, der Lula angriff. Ein Beweisstück, vielleicht ein Druckmittel gegen das Haus Lhaaz."
+      "desc": "Vom **Attentäter**, der Lula angriff. Ein Beweisstück, vielleicht ein Druckmittel gegen das Haus Lhaaz. **Offen:** Was darin steht, ist nirgends notiert."
     },
     {
       "id": "brief-cam",
@@ -260,7 +260,7 @@
         "erbeuten",
         "erfragen"
       ],
-      "how": "Gefallene Schützen tragen einen. Oder du fragst die Verstärkung aus der Stadt: Für den Helden der Echsen findet sich ein alter Köcher."
+      "how": "Gefallene Schützen tragen einen. Oder du fragst bei Leonidas’ Heer nach. Selbst gemacht mit dem Lederwerkzeug: eine freie Nacht."
     },
     {
       "id": "kurzbogen-2",
@@ -287,11 +287,11 @@
       "group": "verbrauch",
       "priority": "vorschlag",
       "phase": "jetzt",
-      "why": "Du hast 13. Die Fahrt nach Norden und die Küste entlang nach Westen kann länger dauern. 10 Tage für 5 GM.",
+      "why": "Du hast 13. Der Weg am Wüstenrand nach Westen kann länger dauern, und in der Wüste findet niemand Nahrung. 10 Tage für 5 GM.",
       "ways": [
         "erfragen"
       ],
-      "how": "Die Echsen und die Stadt verdanken dir viel. Ein Sack Proviant als Dank ist kein großer Wunsch."
+      "how": "Leonidas zieht mit seinem Heer parallel zu euch. Ein Sack Proviant für die Leute, die seine Stadt befreien, ist kein großer Wunsch."
     },
     {
       "id": "oel",
@@ -324,6 +324,38 @@
         "erbeuten"
       ],
       "how": "**Erfragen:** bei der Kräuterfrau oder einem Alchemisten. **Erbeuten:** leere Phiolen und Flaschen aus der Beute aufheben. Siehe [[Handwerks-Handbuch]]."
+    },
+    {
+      "id": "silber-eisenpulver",
+      "name": "Silber- und Eisenpulver oder Weihwasser",
+      "price": 0.1,
+      "priceText": "1 SM selbst gefeilt, Weihwasser 25 GM",
+      "qty": 1,
+      "group": "verbrauch",
+      "priority": "hoch",
+      "phase": "jetzt",
+      "why": "*Schutz vor Gut und Böse* verbraucht es bei jedem Wirken, und ein Fokus ersetzt Verbrauchtes nicht. Ohne das Material kannst du den Zauber nicht wirken, obwohl er vorbereitet ist.",
+      "ways": [
+        "herstellen",
+        "erfragen"
+      ],
+      "how": "**Herstellen:** Eisenpulver gehört zum Alchemistenwerkzeug, Silber feilst du von einem Silberstück. Frag den DM, ob das reicht. **Erfragen:** Weihwasser bei [[Nita]]."
+    },
+    {
+      "id": "sack-knebel",
+      "name": "Säcke, Knebel und Seil",
+      "price": 1,
+      "priceText": "rund 1 GM",
+      "qty": 1,
+      "group": "koerper",
+      "priority": "hoch",
+      "phase": "jetzt",
+      "why": "Für Gefangene der Society: Der Knebel nimmt die Stimme, der Sack über dem Kopf die Sicht. *Nebelschritt* braucht beides. Am 08.11.2026 hielten zwei Fesseln nicht, und der Anführer entkam.",
+      "ways": [
+        "herstellen",
+        "erbeuten"
+      ],
+      "how": "**Herstellen:** Säcke und Knebel nähst du aus Beutestoff, Seil gibt es aus Lianen. Handschellen erschaffst du mit [[Geringe Beschwörung|Geringer Beschwörung]] für je 1 Stunde."
     },
     {
       "id": "gute-kleidung",
@@ -396,7 +428,7 @@
       "price": 300,
       "priority": "vorschlag",
       "phase": "nach-saladin",
-      "why": "Eine vergoldete Blume für *Feenwesen beschwören*, wird nicht verbraucht. Nur sinnvoll, wenn der DM Tashas Kessel erlaubt."
+      "why": "Eine vergoldete Blume für *Feenwesen beschwören*, wird nicht verbraucht. Tashas Kessel ist laut DM erlaubt (09.11.2026), beschworene Feen dürfen aber kein *Verwandlung* nutzen."
     },
     {
       "id": "alchemistenwerkzeug",
@@ -426,6 +458,26 @@
       "priority": "hoch",
       "phase": "nach-saladin",
       "why": "Für Spruchrollen. Material je Rolle laut Xanathars: Grad 1 25 GM, Grad 2 250 GM, Grad 3 500 GM."
+    },
+    {
+      "id": "rollen-rituale",
+      "name": "Spruchrollen zum Abschreiben: Alarm, Sprachen verstehen, Gedanken wahrnehmen",
+      "priceText": "Preis erfragen, dazu 50 GM und 2 Stunden pro Grad",
+      "priority": "mittel",
+      "phase": "nach-saladin",
+      "why": "Rituale kosten dich keinen Platz und keine Vorbereitung, nur einen Eintrag im Buch. Diese drei machen dich unabhängig von Lucira und von schlechten Wachen. Siehe [[Tiefenanalyse]].",
+      "ways": [
+        "erfragen"
+      ],
+      "how": "Frag [[Saladin]] oder sieh dich in [[Die südliche Freistadt|Freistadt]] um, nur nicht bei der Society."
+    },
+    {
+      "id": "zweitbuch",
+      "name": "Leeres Buch für eine Sicherheitskopie",
+      "price": 50,
+      "priority": "vorschlag",
+      "phase": "nach-saladin",
+      "why": "Dein Zauberbuch ist dein wertvollster Besitz. Eine Kopie kostet 1 Stunde und 10 GM pro Zaubergrad: für deine 14 Zauber (22 Grade) 22 Stunden und 220 GM, dazu das Buch. Die Arbeit passt in deine freien Nachtstunden, die Kopie ins Kellerlabor. Siehe [[Dein Zauberbuch]]."
     },
     {
       "id": "nimmervoller-beutel",

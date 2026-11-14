@@ -4,14 +4,23 @@
       "id": "lhaaz",
       "world": "haus-lhaaz",
       "title": "Stammbaum Haus Lhaaz",
-      "note": "Durchgezogen: belegt · gestrichelt: offen · rot: Feindschaft. Leons Vater ist der Erzherzog, Leonidas und Lisbeth sind seine Geschwister (laut dir, 19.10.2026). Cams Brief nannte ihn „Graf Lhaaz“, laut DM ein Verschreiber (09.11.2026). **Offen:** Welcher „Graf Lhaaz“ hat Lisbeths Tod bestellt, der Erzherzog, Leonidas oder ein Dritter? *Theorie:* Leonidas ist der „Baron“ aus Cams Brief. Siehe [[Offene Fragen an den DM]].",
+      "note": "Durchgezogen: belegt · gestrichelt: offen · rot: Feindschaft. Leons Vater ist der Erzherzog, Leonidas und Lisbeth sind seine Geschwister (laut dir, 19.10.2026). Cams Brief nannte ihn „Graf Lhaaz“, laut DM ein Verschreiber (09.11.2026). **Offen:** Welcher „Graf Lhaaz“ hat Lisbeths Tod bestellt, der Erzherzog, Leonidas, der Baron oder ein Dritter?\n\n*Theorie:* Der Baron aus Cams Brief ist ein eigener Bruder und nicht Leonidas. Dehapten liegt laut Cam „flussaufwärts“ von der Stadt des Barons, Leonidas’ Stadt aber in der Wüste im Westen. Siehe [[Tiefenanalyse]].",
       "nodes": [
+        {
+          "id": "baron",
+          "label": "Der Baron",
+          "sub": "laut Cam die meiste Macht · Name unbekannt",
+          "x": 0.5,
+          "y": 0,
+          "tone": "unknown",
+          "uncertain": true
+        },
         {
           "id": "erzherzog",
           "label": "Erzherzog Lhaaz",
           "ref": "Erzherzog Lhaaz",
           "sub": "Oberhaupt, alte Welt · bei Cam „Graf Lhaaz“",
-          "x": 0.5,
+          "x": 1.5,
           "y": 0,
           "tone": "unknown"
         },
@@ -20,7 +29,7 @@
           "label": "Lisbeth Lhaaz",
           "ref": "Lisbeth Lhaaz",
           "sub": "„Tantchen Lisbeth“ · beobachtet euch",
-          "x": 1.5,
+          "x": 2.5,
           "y": 0,
           "tone": "neutral"
         },
@@ -28,8 +37,8 @@
           "id": "leonidas",
           "label": "Graf Leonidas",
           "ref": "Leonidas Lhaaz",
-          "sub": "„Schwert des Königs“ · Theorie: der Baron",
-          "x": 2.5,
+          "sub": "„Schwert des Königs“ · Stadt im Westen",
+          "x": 3.5,
           "y": 0,
           "tone": "ally"
         },
@@ -37,7 +46,7 @@
           "id": "frau",
           "label": "Leonidas’ Frau",
           "sub": "Name unbekannt · hält die belagerte Stadt",
-          "x": 3.5,
+          "x": 4.5,
           "y": 0,
           "tone": "unknown"
         },
@@ -46,7 +55,7 @@
           "label": "Leon Lhaaz",
           "ref": "Leon Lhaaz",
           "sub": "führt Dehapten",
-          "x": 0,
+          "x": 1,
           "y": 1,
           "tone": "neutral"
         },
@@ -55,7 +64,7 @@
           "label": "Lula Lhaaz",
           "ref": "Lula Lhaaz",
           "sub": "frei seit Juli 2026",
-          "x": 1,
+          "x": 2,
           "y": 1,
           "tone": "neutral"
         },
@@ -63,8 +72,8 @@
           "id": "lucaz",
           "label": "Lucaz Lhaaz",
           "ref": "Lucaz Lhaaz",
-          "sub": "Schwertkämpfer · reist mit euch",
-          "x": 2,
+          "sub": "Schwertkämpfer · zurück beim Vater",
+          "x": 3,
           "y": 1,
           "tone": "ally"
         },
@@ -73,12 +82,23 @@
           "label": "Lisa Lhaaz",
           "ref": "Lisa Lhaaz",
           "sub": "wohl Magierin",
-          "x": 3,
+          "x": 4,
           "y": 1,
           "tone": "ally"
         }
       ],
       "edges": [
+        {
+          "kind": "geschwister",
+          "from": [
+            "baron"
+          ],
+          "to": [
+            "erzherzog"
+          ],
+          "label": "Bruder (laut Cam)",
+          "uncertain": true
+        },
         {
           "kind": "geschwister",
           "from": [
@@ -143,6 +163,17 @@
           "kind": "feindschaft",
           "from": [
             "leonidas"
+          ],
+          "to": [
+            "lisbeth"
+          ],
+          "label": "bestellte ihren Tod?",
+          "uncertain": true
+        },
+        {
+          "kind": "feindschaft",
+          "from": [
+            "baron"
           ],
           "to": [
             "lisbeth"

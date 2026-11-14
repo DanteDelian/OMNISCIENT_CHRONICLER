@@ -16,11 +16,11 @@ Dank Küstenlage und eigener Schiffe wirkte die Familie an der **ersten Expediti
 | [[Erzherzog Lhaaz|Der Erzherzog]] | Familienoberhaupt in der alten Welt, Vater von Leon und Lula. In Cams Brief „Graf Lhaaz“ |
 | [[Leonidas Lhaaz]] | „Schwert des Königs“, Bruder des Erzherzogs, Herr der belagerten Stadt im Westen |
 | [[Lisbeth Lhaaz]] | „Tantchen Lisbeth“, Schwester des Erzherzogs und von Leonidas |
-| Der **Baron** | laut Cams Brief ein Bruder von Leons Vater, hat in Xantus die meiste Macht, Herr der ersten Stadt. *Theorie:* Leonidas |
+| Der **Baron** | laut Cams Brief ein Bruder von Leons Vater, hat in Xantus die meiste Macht, Herr der ersten Stadt flussabwärts von Dehapten |
 | [[Leon Lhaaz]] | Sohn des Erzherzogs, Anführer der Siedlung |
 | [[Lula Lhaaz]] | Tochter des Erzherzogs, seit Juli 2026 frei |
 | Leonidas’ **Frau** | hält die belagerte Stadt, Name nicht notiert |
-| [[Lucaz Lhaaz]] | Sohn von Leonidas, Schwertkämpfer, begleitet euch nach Westen |
+| [[Lucaz Lhaaz]] | Sohn von Leonidas, Schwertkämpfer, seit dem 08.11.2026 zurück bei seinem Vater |
 | [[Lisa Lhaaz]] | Tochter von Leonidas, wohl Magierin |
 
 **Die Geschwister:** Der Erzherzog, Leonidas und Lisbeth (laut dir, 19.10.2026). Leon und Lula sind die Kinder des Erzherzogs, Lucaz und Lisa die von Leonidas.
@@ -31,4 +31,10 @@ Dank Küstenlage und eigener Schiffe wirkte die Familie an der **ersten Expediti
 
 Das Schriftstück mit dem Lhaaz-Wappen stammt von dem Attentäter, der Lula angriff. *Theorie:* noch ein Hinweis auf Intrigen innerhalb der Familie.
 
-*Theorie:* Leonidas ist der „Baron“ aus Cams Brief, denn der ist ebenfalls ein Bruder von Leons Vater. Du nennst Leonidas allerdings Graf. Siehe [[Offene Fragen an den DM]].
+**Offen:** Was in dem Schriftstück steht, ist nirgends notiert.
+
+*Theorie:* Der Baron ist ein eigener Bruder und nicht Leonidas. Dehapten liegt laut Cam „flussaufwärts“ von der Stadt des Barons, also am selben Fluss. Leonidas’ Stadt liegt in der Wüste im Westen.
+
+*Theorie:* Hinter dem Attentat auf Lula und dem Anschlag auf Lisbeth steckt dieselbe Hand. Beide kamen aus dem Haus selbst: ein Schriftstück mit dem Wappen, die eigene Eskorte. Die Indizien stehen in der [[Tiefenanalyse]].
+
+**Offen:** „Schwert des Königs“ ist ein Titel, den ein König vergibt. Welchem König dient das Haus?

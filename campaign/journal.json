@@ -960,5 +960,51 @@
       "In deinem Bericht klingt es, als hättest du das zweite Skelett aus dem geplünderten Toten erweckt. Laut deiner Klarstellung stammen beide aus den Knochen vom Boot. Aus einer frischen Leiche entstünde ohnehin ein Zombie, kein Skelett."
     ],
     "sources": []
+  },
+  {
+    "id": "j19-tiefenanalyse",
+    "order": 190,
+    "chapter": "Zwischen den Sitzungen",
+    "title": "Muster, Fäden und ein Plan für die Nacht",
+    "type": "planung",
+    "date": "2026-11-14",
+    "dateMode": "exakt",
+    "dateLabel": "14.11.2026",
+    "dateBasis": "Tag der Tiefenanalyse aller Unterlagen.",
+    "ingame": "Planung",
+    "places": [],
+    "people": [
+      "Lucira",
+      "Die Fee",
+      "Leonidas Lhaaz",
+      "Die Sumpfschuppen"
+    ],
+    "summary": "Alle Unterlagen gegeneinander gelesen: ein Plan für die Stunden vor dem Überfall, neue Regelkniffe, Theorien über Lucira, die Münzen und das Haus Lhaaz und 21 neue Fragen.",
+    "events": [
+      "**Die Nacht vor dem Überfall:** als Ritual eine [[Eule]] beschwören und das Lager der Verfolger auskundschaften. Das Orc-Skelett erwecken, 1 Stunde kurz rasten und den Platz mit der [[Arkane Erholung|Arkanen Erholung]] zurückholen.",
+      "**Der [[Verständigungsstein]] hat zwei Nachrichten:** eine vor dem Morgengrauen, eine danach.",
+      "**Regeln, die entscheiden:** *Nebelschritt* braucht einen sichtbaren Zielort, also ein Sack über den Kopf und die [[Nebelwolke]]. Gegen einen Stein hilft kein [[Gegenzauber]]. Vor dem Morgengrauen ist das Steinpaar des Anführers stumm.",
+      "**Berichtigt:** [[Schutz vor Gut und Böse]] verbraucht Material, das im Inventar fehlt. Riesen kommen durch Gassen unter 3 m Breite gar nicht. Skelette haben ohne Rüstung RK 12.",
+      "**Neue Vorschläge im Zauberbuch:** [[Alarm]], [[Sprachen verstehen]], [[Gedanken wahrnehmen]], [[Magischer Mund]], [[Illusionsschrift]] und für Stufe 7 [[Verbannung]].",
+      "**Muster:** Lucira und der Anführer der Sumpfschuppen, die seltsamen Münzen, zwei Anschläge aus dem Haus Lhaaz, der Baron an der Flussmündung, der Turm und die Riesen, die Paare hinter den Türen. Alles als Theorie in der [[Tiefenanalyse]]."
+    ],
+    "quests": [
+      {
+        "ref": "sumpfschuppen",
+        "change": "Plan geschärft"
+      },
+      {
+        "ref": "westen-belagerung",
+        "change": "zwei Nachrichten an Leonidas"
+      },
+      {
+        "ref": "fee-heimweg",
+        "change": "Verbannung als Weg"
+      }
+    ],
+    "notes": [
+      "Planung, kein Spielgeschehen. Die Fragen stehen auf der [[Rätselwand]], die Korrekturen im [[Prüfbericht]]."
+    ],
+    "sources": []
   }
 ]

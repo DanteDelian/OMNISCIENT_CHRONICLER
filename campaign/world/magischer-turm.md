@@ -24,3 +24,8 @@ imageFocus: 50% 40%
 - Der Riesenthron und die Riesenrunen der Orcs deuten auf eine Verbindung zu den [[Die Riesen|Riesen]].
 - Die Unterwasser-Mission für Saladin (großes Auge, steinerne Hand) fand vielleicht im See um diesen Turm statt.
 - Es gibt auch den Lhaaz-Turm von [[Die Siedlung|Leons Stadt]]. Auf der Echsen-Karte ist mit dem Turm-Symbol vermutlich dieser gemeint.
+- Riesen haben den Turm gebaut, und der Thron ist ihr Ziel. In der Nacht, nachdem das Siegel fiel, standen drei Riesen vor Leons Stadt.
+- Das Siegel hielt etwas zurück. Seit es inaktiv ist, regt sich, was unter dem See liegt: das große Auge, die steinerne Hand.
+- Laut Cams Brief wurde flussaufwärts „etwas Besonderes“ entdeckt. Gemeint ist dieser Turm.
+
+**Offen:** Was stand auf dem Siegel? [[Lucira]] hat es gelesen, und in keinem Dokument steht, dass sie jemand gefragt hat.

@@ -25,3 +25,5 @@ imageFocus: 50% 40%
 - [[Die Fee]] glaubt, die Teufelsjäger wüssten, wie sie in ihre Dimension zurückkommt, oder hätten die Macht dazu. Siehe [[Die Fee nach Hause bringen]].
 
 *Theorie:* Ist Lucira wirklich ihre Nummer 2, gehört sie zu den Mächtigsten der Society, und die Seelen der Echsen landen am Ende vielleicht bei ihren Leuten.
+
+*Theorie:* Die Echsenseelen sind Bezahlung oder Köder für die Dämonen, die die Teufelsjäger rufen. Dann brauchen sie ständig neue, und mit den Echsen gibt es für die Society keinen Frieden.

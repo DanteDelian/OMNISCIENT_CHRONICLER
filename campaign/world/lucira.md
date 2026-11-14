@@ -40,3 +40,18 @@ In der Nacht vor dem 11.10.2026 verschwand sie mit [[Fridolin vom See|Fridolin]]
 - Sie schlug den fliehenden Anführer der [[Die Sumpfschuppen|Sumpfschuppen]] mit zwei Zaubern bewusstlos, brachte ihn unbemerkt von den anderen weg und befragte ihn.
 - Sie glaubte ihm, er müsse sich stündlich mit Passwort melden, und ließ ihn seinen Verständigungsstein benutzen. Er schlug Alarm und floh später, als sie nach einem Seil suchte.
 - *Theorie:* Laut den Gefangenen sind die [[Die Teufelsjäger|Teufelsjäger]] die höchste Untergruppe der Society. Wenn sie deren Nummer 2 ist, steht sie weit oben in der Society.
+
+## Was auffällt (14.11.2026)
+- Im Juli sagte sie, Echsenmenschen zu jagen sei unter ihrer Würde. Im November erfahrt ihr, dass genau das die Sumpfschuppen tun, die den Teufelsjägern unterstehen. Sie kannte die Rangordnung also schon.
+- Am 08.11.2026 befragte sie den Anführer allein, gab ihm seinen Stein zurück und ließ ihn unbewacht, als er floh. Sie liest Gedanken und glaubte ihm trotzdem aufs Wort.
+- Dagegen: Sie selbst beendete seinen ersten Fluchtversuch mit zwei Zaubern.
+
+*Theorie:* Sie hat den Anführer gedeckt oder benutzt. Er unterstand ihrer eigenen Gruppe.
+
+*Theorie:* Ihr Gedankenlesen ist der Zauber [[Gedanken wahrnehmen]]. Dann muss sie ihn sichtbar wirken, er reicht 9 m und hält 1 Minute, und tiefes Graben bemerkst du.
+
+**Offen:** Was stand auf dem Siegel, das sie im Turm gelesen hat?
+
+**Offen:** Was hat sie erlebt, solange sie fort war?
+
+**Für dich:** Gefangene der Society bleiben nie mit ihr allein, erbeutete Steine trägst du oder Kho. Mit [[Sprachen verstehen]] liest du fremde Schriften selbst.

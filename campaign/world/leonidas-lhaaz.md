@@ -19,8 +19,19 @@ summary: „Schwert des Königs“, Bruder des Erzherzogs und von Lisbeth, Onkel
 ## Wer ist er im Haus Lhaaz?
 Laut dir (19.10.2026) ist er der Bruder von Leons Vater, dem [[Erzherzog Lhaaz|Erzherzog]], und von Lisbeth. Laut Cams Brief hat ein **Baron**, ein Bruder von Leons Vater, in [[Xantus]] die meiste Macht und herrscht über die erste Stadt.
 
-*Theorie:* Leonidas ist dieser Baron. Dafür spricht: Er ist ein Bruder von Leons Vater und hat eine eigene Stadt in Xantus. Dagegen: Du nennst ihn Graf.
+*Theorie:* Leonidas ist dieser Baron. Dafür spricht: Er ist ein Bruder von Leons Vater und hat eine eigene Stadt in Xantus. Dagegen: Du nennst ihn Graf, und laut Cam liegt Dehapten „flussaufwärts“ von der Stadt des Barons. Leonidas’ Stadt liegt aber in der Wüste im Westen, nicht am Fluss.
 
 **Offen:** Cams Warnung nennt einen „Graf Lhaaz“ als Auftraggeber des Anschlags auf [[Lisbeth Lhaaz|Lisbeth]], also auf seine eigene Schwester, falls Leonidas gemeint ist. Siehe [[Offene Fragen an den DM]].
 
 *Theorie (deine, 09.11.2026):* Leonidas und Lisbeth verstehen sich gut. Dann steckt hinter dem Auftrag eher Leons Vater, der Erzherzog, oder jemand Unbekanntes aus der Familie.
+
+## Was auffällt (14.11.2026)
+- Er ist der einzige Lhaaz, den ihr als **Graf** kennt. Cams Warnung nennt den Auftraggeber „Graf Lhaaz“, getrennt vom Erzherzog.
+- Als „Schwert des Königs“ steht er den Soldaten nahe. Lisbeths Schiff wurde von der eigenen Eskorte angegriffen.
+- Er führt jetzt ein Heer aus Dehapten nach Westen. Die Stadt, in der Lisbeth, Leon und Lula leben, hat seitdem weniger Schutz.
+
+Nichts davon ist ein Beweis, und laut dir verstehen er und Lisbeth sich gut. **Achten auf:** wie er reagiert, wenn Lisbeths Rettung zur Sprache kommt.
+
+**Offen:** Welchem König dient das „Schwert des Königs“?
+
+**Für dich:** Was du über den [[Verständigungsstein]] sendest, weiß er. Den Lohn für die Befreiung klärst du vor dem Kampf.

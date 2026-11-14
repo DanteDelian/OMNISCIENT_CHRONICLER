@@ -5,7 +5,7 @@ icon: shopping-bag
 order: 8
 group: Pläne
 aliases: [Einkaufsliste, Einkaufsliste Valerius, Einkaufs- & Verhandlungsliste, Verhandlungsliste]
-updated: 2026-11-09
+updated: 2026-11-14
 ---
 # Einkaufs- und Verhandlungsliste
 
@@ -14,14 +14,16 @@ updated: 2026-11-09
 > [!NOTE] Stand November 2026
 > Neu auf dem Zettel: **Lederwerkzeug** (5 GM) und **Weberwerkzeug** (1 GM) für Lederrüstungen, Sattel und Vermummungen, dazu **Pfeile**, **Köcher** und ein **zweiter Kurzbogen** für deine Bogen-Skelette. Was du ohne Gold bekommst, steht bei jedem Eintrag unter „Wie?“.
 
-**Budget heute: 47 GM, 16 SM.** Im November 2025 waren es 17 GM, 16 SM. Was du ohne Gold bekommst, steht im Einkaufszettel bei „Wie?“ und in der [[Werkstatt]].
+**Budget heute: 47 GM, 27 SM.** Im November 2025 waren es 17 GM, 16 SM. Was du ohne Gold bekommst, steht im Einkaufszettel bei „Wie?“ und in der [[Werkstatt]].
 
 ## Phase 1 · Sofort leistbar
 
 | Priorität | Gegenstand | Kosten | Nutzen |
 | :-- | :-- | :-- | :-- |
 | Mittel | Gute Kleidung | 15 GM | Nach der aufgeflogenen Tarnung Autorität ausstrahlen, vor Leon und dem Paladin |
-| Vorschlag | Kräuterkundeausrüstung | 5 GM | Laut Xanathars das Werkzeug für Heiltränke (DM fragen) |
+| Vorschlag | Kräuterkundeausrüstung | 5 GM | Das Werkzeug für Heiltränke. Laut DM darfst du es auch mit *Geringer Beschwörung* erschaffen |
+| Hoch | Silber- und Eisenpulver oder Weihwasser | 1 SM oder 25 GM | Wird von *Schutz vor Gut und Böse* verbraucht. Ohne das Material ist der Zauber nicht wirkbar |
+| Hoch | Säcke, Knebel und Seil | rund 1 GM | Für Gefangene der Society: *Nebelschritt* braucht Stimme und Sicht |
 
 ## Phase 2 · Nach dem Handel mit Saladin
 
@@ -37,7 +39,7 @@ updated: 2026-11-09
 
 ## Verhandlung mit Saladin
 
-Tauschware: die **magischen Ohrringe**, oder sie werden Teil eines größeren Deals. Siehe [[Saladin]].
+Im November 2025 waren die **magischen Ohrringe** als Tauschware gedacht. Stand 09.11.2026: Du behältst sie, der zweite ist für deinen Verwalter. Saladin bietet inzwischen die unendliche Schriftrolle für den Handelsposten in Freistadt. Siehe [[Saladin]].
 
 **Wunschliste (magische Gegenstände):**
 

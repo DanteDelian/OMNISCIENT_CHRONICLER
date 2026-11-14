@@ -26,3 +26,7 @@ imageFocus: 50% 8%
 - Er versprach den Gefangenen Schonung, solange sie die Wahrheit sagten. Seinen Segen vergaß er vor dem Kampf.
 - In der Nacht ruhte er wie du in Trance und beobachtete mit dir die Verfolger.
 - [[Lucira]] misstraut ihm, weil er sich euch gerade anbiedert (laut dir, 09.11.2026).
+
+**Offen:** Verschwinden im Norden Seeelfen? Dort arbeiten laut den Gefangenen die Wasserwanderer der Society.
+
+**Offen:** Was hat er erlebt, solange er fort war?

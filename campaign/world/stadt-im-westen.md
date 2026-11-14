@@ -15,6 +15,8 @@ imageFocus: 50% 45%
 
 - Wird von [[Die Riesen|Riesen]] belagert. Die **Frau von Graf Leonidas** hält die Stellung. Ihr Name ist nicht notiert.
 - Liegt laut dir im Westen, in der Wüste, wie auch der Tempel der [[Die Elefantenhominoiden|Loxodons]].
-- **Euer Weg (Oktober 2026):** mit dem Boot den Fluss nach Norden zum Meer, dann die Küste entlang nach Westen. Unterwegs liegen Orc-Lager und Riesengebiet. Siehe [[Die Belagerung im Westen brechen]].
+- **Euer Weg:** Im Oktober 2026 wolltet ihr mit dem Boot den Fluss nach Norden zum Meer und dann die Küste entlang nach Westen. Seit dem 08.11.2026 reitet ihr stattdessen auf dem [[Das Reittier|Dino]] am Wüstenrand nach Westen. Siehe [[Die Belagerung im Westen brechen]].
 
-*Theorie:* Ist Leonidas der „Baron“ aus Cams Brief, dann ist das die **erste Stadt** der Lhaaz in [[Xantus]].
+*Theorie:* Diese Stadt ist nicht die erste Stadt der Lhaaz. Die liegt laut Cams Brief flussabwärts von Dehapten und gehört dem Baron. Siehe [[Tiefenanalyse]].
+
+*Theorie:* Die Belagerer bekommen ihr Holz über das Meer. Orcs schlagen es am Fluss und schicken es nach Norden.
