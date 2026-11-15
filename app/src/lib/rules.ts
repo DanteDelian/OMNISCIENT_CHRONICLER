@@ -293,6 +293,23 @@ export function diceDe(expr: string): string {
 		.replace(/-/g, ' − ');
 }
 
+/**
+ * Wortlaut eines Waffenangriffs wie im Wertblock:
+ * „Nahkampf-Waffenangriff: +4 auf Treffer, Reichweite 1,5 m, ein Ziel. Treffer: 5 (1W6 + 2) Stichschaden.“
+ */
+export function attackWording(a: { bonus: number; damage: string; type: string; range: string }): string {
+	const parts = a.range.split('·').map((p) => p.trim());
+	const reach = parts.find((p) => /^\d+(,\d+)? m$/.test(p));
+	const thrown = parts.find((p) => /^Wurf /.test(p))?.replace(/^Wurf /, '');
+	const ranged = parts.find((p) => /^\d+\s*\/\s*\d+ m$/.test(p));
+	const extra = parts.filter((p) => p !== reach && p !== ranged && !/^Wurf /.test(p));
+	const kind = thrown ? 'Nah- oder Fernkampf-Waffenangriff' : ranged ? 'Fernkampf-Waffenangriff' : 'Nahkampf-Waffenangriff';
+	const where = thrown ? `Reichweite ${reach ?? '1,5 m'} oder Reichweite ${thrown}` : `Reichweite ${ranged ?? reach ?? a.range}`;
+	const dice = /d/i.test(a.damage);
+	const hit = dice ? `${Math.max(1, Math.floor(averageOf(a.damage)))} (${diceDe(a.damage)})` : a.damage;
+	return `${kind}: ${fmtMod(a.bonus)} auf Treffer, ${where}, ein Ziel${extra.length ? ` (${extra.join(', ')})` : ''}. Treffer: ${hit} ${a.type}schaden.`;
+}
+
 export function pct(p: number): string {
 	return `${Math.round(p * 100)} %`;
 }

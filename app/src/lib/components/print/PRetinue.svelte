@@ -36,10 +36,12 @@
 				abilities={u.abilities}
 				lines={[
 					['Rettungswürfe', u.saves],
-					['Anfällig', u.vulnerable],
-					['Immun', u.immune],
+					['Schadensanfälligkeiten', u.vulnerable],
+					['Schadensimmunitäten', u.immune],
+					['Zustandsimmunitäten', u.conditionImmune],
 					['Sinne', u.senses],
-					['Sprachen', u.languages]
+					['Sprachen', u.languages],
+					['Herausforderung', u.cr]
 				]}
 				traits={u.traits ?? []}
 				actions={u.actions}
@@ -119,16 +121,21 @@
 			<PStat
 				anchor={printAnchor(`creature:${f.id}`)}
 				name={f.name}
-				subtitle="Winziger Geist in Tiergestalt"
+				subtitle="{f.size === 'klein' ? 'Kleiner' : 'Winziger'} Geist in Tiergestalt"
 				ac={f.ac}
+				acNote={f.acNote}
 				hp={f.hp}
+				hpFormula={f.hpFormula}
 				speed={f.speed}
 				abilities={f.abilities}
 				lines={[
 					['Fertigkeiten', f.skills || undefined],
-					['Sinne', f.senses]
+					['Sinne', f.senses],
+					['Herausforderung', f.cr]
 				]}
 				traits={f.traits}
+				textActions={f.actions ?? []}
+				textActionsNote="(Tiergestalt, als Vertrauter kein Angriff)"
 				verdict={f.verdict}
 				note={f.note}
 				current={f.id === s.familiar.form && !fallen}

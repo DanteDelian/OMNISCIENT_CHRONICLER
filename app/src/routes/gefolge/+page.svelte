@@ -115,13 +115,16 @@
 			abilities={u.abilities}
 			lines={[
 				['Rettungswürfe', u.saves],
-				['Anfällig', u.vulnerable],
-				['Immun', u.immune],
+				['Schadensanfälligkeiten', u.vulnerable],
+				['Schadensimmunitäten', u.immune],
+				['Zustandsimmunitäten', u.conditionImmune],
 				['Sinne', u.senses],
-				['Sprachen', u.languages]
+				['Sprachen', u.languages],
+				['Herausforderung', u.cr]
 			]}
 			traits={u.traits ?? []}
 			actions={u.actions}
+			actionsNote="· mit der Waffe, die du ihm gibst"
 			verdict={u.verdict}
 		/>
 	{/each}
@@ -204,14 +207,20 @@
 				name={f.name}
 				subtitle="{f.size} · Vertrauter (Geist in Tiergestalt)"
 				ac={f.ac}
+				acNote={f.acNote}
 				hp={f.hp}
+				hpFormula={f.hpFormula}
 				speed={f.speed}
 				abilities={f.abilities}
 				lines={[
 					['Fertigkeiten', f.skills || undefined],
-					['Sinne', f.senses]
+					['Sinne', f.senses],
+					['Sprachen', '—'],
+					['Herausforderung', f.cr]
 				]}
 				traits={f.traits}
+				textActions={f.actions ?? []}
+				textActionsNote="· der Tiergestalt, ein Vertrauter greift nicht an"
 				verdict={f.verdict}
 				note={f.note}
 				highlight={f.id === s.familiar.form && !fallen}

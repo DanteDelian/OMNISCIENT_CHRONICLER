@@ -176,14 +176,31 @@ export interface Familiar {
 	name: string;
 	size: string;
 	ac: number;
+	/** z. B. „natürliche Rüstung“ */
+	acNote?: string;
 	hp: number;
+	/** Trefferwürfel laut SRD, z. B. „1W4 − 1“ */
+	hpFormula?: string;
+	/** Herausforderungsgrad laut SRD, z. B. „0 (10 EP)“ */
+	cr?: string;
 	speed: string;
 	abilities: Record<Ability, number>;
 	skills: string;
 	senses: string;
 	traits: StatTrait[];
+	/** Aktionen der Tiergestalt im Wortlaut. Als Vertrauter greift er nicht an, Aktionen ohne Angriff (Tintenwolke) gehen. */
+	actions?: StatTrait[];
 	verdict: string;
 	note?: string;
+}
+
+/** Waffenangriff eines Wertblocks (würfelbar) */
+export interface StatAttack {
+	name: string;
+	bonus: number;
+	damage: string;
+	type: string;
+	range: string;
 }
 
 export interface UndeadBlock {
@@ -198,12 +215,15 @@ export interface UndeadBlock {
 	abilities: Record<Ability, number>;
 	saves?: string;
 	vulnerable?: string;
+	/** Schadensimmunitäten */
 	immune?: string;
+	/** Zustandsimmunitäten */
+	conditionImmune?: string;
 	senses: string;
 	languages: string;
 	cr: string;
 	traits?: StatTrait[];
-	actions: { name: string; bonus: number; damage: string; type: string; range: string }[];
+	actions: StatAttack[];
 	/** Ausrüstung in der Reihenfolge des Erweckens: Gegenstand und passende Aktion */
 	loadout?: { item: string; action: string }[];
 	verdict: string;

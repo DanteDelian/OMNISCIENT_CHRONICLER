@@ -20,14 +20,22 @@
       "traits": [
         {
           "name": "Vorbeiflug",
-          "text": "Provoziert keine Gelegenheitsangriffe, wenn sie aus der Reichweite eines Feindes fliegt."
+          "text": "Die Eule provoziert keine Gelegenheitsangriffe, wenn sie aus der Reichweite eines Feindes fliegt."
         },
         {
           "name": "Scharfes Gehör und scharfe Sicht",
-          "text": "Vorteil auf Wahrnehmung, die auf Gehör oder Sicht beruht."
+          "text": "Die Eule hat Vorteil auf Weisheitswürfe (Wahrnehmung), die auf Gehör oder Sicht beruhen."
         }
       ],
-      "verdict": "Der beste Kampfhelfer: anfliegen, *Helfen*, gefahrlos wegfliegen. Sieht nachts."
+      "verdict": "Der beste Kampfhelfer: anfliegen, *Helfen*, gefahrlos wegfliegen. Sieht nachts.",
+      "hpFormula": "1W4 − 1",
+      "cr": "0 (10 EP)",
+      "actions": [
+        {
+          "name": "Krallen",
+          "text": "Nahkampf-Waffenangriff: +3 auf Treffer, Reichweite 1,5 m, ein Ziel. Treffer: 1 Hiebschaden."
+        }
+      ]
     },
     {
       "id": "falke",
@@ -49,10 +57,18 @@
       "traits": [
         {
           "name": "Scharfe Sicht",
-          "text": "Vorteil auf Wahrnehmung, die auf Sicht beruht."
+          "text": "Der Falke hat Vorteil auf Weisheitswürfe (Wahrnehmung), die auf Sicht beruhen."
         }
       ],
-      "verdict": "Der beste Späher bei Tag. Keine Dunkelsicht. Valerius hatte schon einmal einen Falken."
+      "verdict": "Der beste Späher bei Tag. Keine Dunkelsicht. Valerius hatte schon einmal einen Falken.",
+      "hpFormula": "1W4 − 1",
+      "cr": "0 (10 EP)",
+      "actions": [
+        {
+          "name": "Krallen",
+          "text": "Nahkampf-Waffenangriff: +5 auf Treffer, Reichweite 1,5 m, ein Ziel. Treffer: 1 Hiebschaden."
+        }
+      ]
     },
     {
       "id": "rabe",
@@ -78,7 +94,15 @@
         }
       ],
       "verdict": "Grundlage für einen Tukan oder Papagei (Aussehen mit dem DM klären). Fliegt, ahmt Stimmen nach.",
-      "note": "Tukan und Papagei stehen nicht in der Liste des Zaubers. Viele DMs erlauben die Werte des Raben mit anderem Aussehen."
+      "note": "Tukan und Papagei stehen nicht in der Liste des Zaubers. Viele DMs erlauben die Werte des Raben mit anderem Aussehen.",
+      "hpFormula": "1W4 − 1",
+      "cr": "0 (10 EP)",
+      "actions": [
+        {
+          "name": "Schnabel",
+          "text": "Nahkampf-Waffenangriff: +4 auf Treffer, Reichweite 1,5 m, ein Ziel. Treffer: 1 Stichschaden."
+        }
+      ]
     },
     {
       "id": "echse",
@@ -98,7 +122,15 @@
       "skills": "",
       "senses": "Dunkelsicht 9 m, passive Wahrnehmung 9",
       "traits": [],
-      "verdict": "Im Land der Echsenvölker völlig unauffällig. Klettert an Stämmen und Mauern."
+      "verdict": "Im Land der Echsenvölker völlig unauffällig. Klettert an Stämmen und Mauern.",
+      "hpFormula": "1W4",
+      "cr": "0 (10 EP)",
+      "actions": [
+        {
+          "name": "Biss",
+          "text": "Nahkampf-Waffenangriff: +0 auf Treffer, Reichweite 1,5 m, ein Ziel. Treffer: 1 Stichschaden."
+        }
+      ]
     },
     {
       "id": "frosch",
@@ -120,14 +152,17 @@
       "traits": [
         {
           "name": "Amphibisch",
-          "text": "Atmet Luft und Wasser."
+          "text": "Der Frosch kann Luft und Wasser atmen."
         },
         {
           "name": "Sprung aus dem Stand",
-          "text": "Weitsprung bis 3 m, Hochsprung bis 1,5 m, mit oder ohne Anlauf."
+          "text": "Der Frosch springt bis zu 3 m weit und bis zu 1,5 m hoch, mit oder ohne Anlauf."
         }
       ],
-      "verdict": "Unsichtbar am Flussufer und im nassen Unterholz. Gut für Wasser und Land."
+      "verdict": "Unsichtbar am Flussufer und im nassen Unterholz. Gut für Wasser und Land.",
+      "hpFormula": "1W4 − 1",
+      "cr": "0 (0 EP)",
+      "actions": []
     },
     {
       "id": "giftschlange",
@@ -148,7 +183,15 @@
       "senses": "Blindsicht 3 m, passive Wahrnehmung 10",
       "traits": [],
       "verdict": "Schnell an Land und im Wasser, höchste RK der Liste. Kann als Vertrauter nicht beißen, schreckt aber ab.",
-      "note": "Als Tier hätte sie einen Giftbiss. Als Vertrauter kann sie nicht angreifen."
+      "note": "Als Tier hätte sie einen Giftbiss. Als Vertrauter kann sie nicht angreifen.",
+      "hpFormula": "1W4",
+      "cr": "1/8 (25 EP)",
+      "actions": [
+        {
+          "name": "Biss",
+          "text": "Nahkampf-Waffenangriff: +5 auf Treffer, Reichweite 1,5 m, ein Ziel. Treffer: 1 Stichschaden, und das Ziel muss einen Konstitutionsrettungswurf gegen SG 10 machen. Bei einem Fehlschlag erleidet es 5 (2W4) Giftschaden, bei einem Erfolg die Hälfte."
+        }
+      ]
     },
     {
       "id": "spinne",
@@ -170,18 +213,26 @@
       "traits": [
         {
           "name": "Spinnenklettern",
-          "text": "Klettert an schwierigen Flächen und kopfüber an Decken, ohne Wurf."
+          "text": "Die Spinne kann an schwierigen Flächen klettern, auch kopfüber an Decken, ohne einen Attributswurf machen zu müssen."
         },
         {
           "name": "Netzgespür",
-          "text": "Bei Kontakt mit einem Netz kennt sie den Standort jeder Kreatur, die es berührt."
+          "text": "Solange die Spinne ein Netz berührt, kennt sie den genauen Standort jeder anderen Kreatur, die dasselbe Netz berührt."
         },
         {
           "name": "Netzläufer",
-          "text": "Ignoriert Bewegungseinschränkungen durch Netze. Passt zu *Netz*!"
+          "text": "Die Spinne ignoriert Bewegungseinschränkungen durch Netze. Das gilt auch für dein *Netz*."
         }
       ],
-      "verdict": "Spionage in Innenräumen, unsichtbar an der Decke."
+      "verdict": "Spionage in Innenräumen, unsichtbar an der Decke.",
+      "hpFormula": "1W4 − 1",
+      "cr": "0 (10 EP)",
+      "actions": [
+        {
+          "name": "Biss",
+          "text": "Nahkampf-Waffenangriff: +4 auf Treffer, Reichweite 1,5 m, eine Kreatur. Treffer: 1 Stichschaden, und das Ziel muss einen Konstitutionsrettungswurf gegen SG 9 bestehen, sonst erleidet es 2 (1W4) Giftschaden."
+        }
+      ]
     },
     {
       "id": "fledermaus",
@@ -203,15 +254,23 @@
       "traits": [
         {
           "name": "Echolot",
-          "text": "Keine Blindsicht, solange sie taub ist."
+          "text": "Die Fledermaus kann ihre Blindsicht nicht nutzen, solange sie taub ist."
         },
         {
           "name": "Scharfes Gehör",
-          "text": "Vorteil auf Wahrnehmung, die auf Gehör beruht."
+          "text": "Die Fledermaus hat Vorteil auf Weisheitswürfe (Wahrnehmung), die auf Gehör beruhen."
         }
       ],
       "verdict": "Orientiert sich in völliger Dunkelheit, langsam im Flug.",
-      "note": "Korrigiert: Die Fledermaus hat Blindsicht, keine Dunkelsicht."
+      "note": "Korrigiert: Die Fledermaus hat Blindsicht, keine Dunkelsicht.",
+      "hpFormula": "1W4 − 1",
+      "cr": "0 (10 EP)",
+      "actions": [
+        {
+          "name": "Biss",
+          "text": "Nahkampf-Waffenangriff: +0 auf Treffer, Reichweite 1,5 m, eine Kreatur. Treffer: 1 Stichschaden."
+        }
+      ]
     },
     {
       "id": "katze",
@@ -233,10 +292,18 @@
       "traits": [
         {
           "name": "Scharfer Geruchssinn",
-          "text": "Vorteil auf Wahrnehmung, die auf Geruch beruht."
+          "text": "Die Katze hat Vorteil auf Weisheitswürfe (Wahrnehmung), die auf Geruch beruhen."
         }
       ],
-      "verdict": "Unauffällig in Städten und Siedlungen."
+      "verdict": "Unauffällig in Städten und Siedlungen.",
+      "hpFormula": "1W4",
+      "cr": "0 (10 EP)",
+      "actions": [
+        {
+          "name": "Klauen",
+          "text": "Nahkampf-Waffenangriff: +0 auf Treffer, Reichweite 1,5 m, ein Ziel. Treffer: 1 Hiebschaden."
+        }
+      ]
     },
     {
       "id": "wiesel",
@@ -258,10 +325,18 @@
       "traits": [
         {
           "name": "Scharfes Gehör und scharfer Geruchssinn",
-          "text": "Vorteil auf Wahrnehmung, die auf Gehör oder Geruch beruht."
+          "text": "Das Wiesel hat Vorteil auf Weisheitswürfe (Wahrnehmung), die auf Gehör oder Geruch beruhen."
         }
       ],
-      "verdict": "Bester Schleicher an Land (Heimlichkeit +5), schnell, RK 13."
+      "verdict": "Bester Schleicher an Land (Heimlichkeit +5), schnell, RK 13.",
+      "hpFormula": "1W4 − 1",
+      "cr": "0 (10 EP)",
+      "actions": [
+        {
+          "name": "Biss",
+          "text": "Nahkampf-Waffenangriff: +5 auf Treffer, Reichweite 1,5 m, eine Kreatur. Treffer: 1 Stichschaden."
+        }
+      ]
     },
     {
       "id": "ratte",
@@ -283,10 +358,18 @@
       "traits": [
         {
           "name": "Scharfer Geruchssinn",
-          "text": "Vorteil auf Wahrnehmung, die auf Geruch beruht."
+          "text": "Die Ratte hat Vorteil auf Weisheitswürfe (Wahrnehmung), die auf Geruch beruhen."
         }
       ],
-      "verdict": "Unauffällig in Lagern, Kellern und auf Schiffen."
+      "verdict": "Unauffällig in Lagern, Kellern und auf Schiffen.",
+      "hpFormula": "1W4 − 1",
+      "cr": "0 (10 EP)",
+      "actions": [
+        {
+          "name": "Biss",
+          "text": "Nahkampf-Waffenangriff: +0 auf Treffer, Reichweite 1,5 m, ein Ziel. Treffer: 1 Stichschaden."
+        }
+      ]
     },
     {
       "id": "krabbe",
@@ -308,10 +391,19 @@
       "traits": [
         {
           "name": "Amphibisch",
-          "text": "Atmet Luft und Wasser."
+          "text": "Die Krabbe kann Luft und Wasser atmen."
         }
       ],
-      "verdict": "Am Strand und im Hafen unauffällig. 9 m Blindsicht."
+      "verdict": "Am Strand und im Hafen unauffällig. 9 m Blindsicht.",
+      "hpFormula": "1W4",
+      "cr": "0 (10 EP)",
+      "acNote": "natürliche Rüstung",
+      "actions": [
+        {
+          "name": "Schere",
+          "text": "Nahkampf-Waffenangriff: +0 auf Treffer, Reichweite 1,5 m, ein Ziel. Treffer: 1 Wuchtschaden."
+        }
+      ]
     },
     {
       "id": "tintenfisch",
@@ -333,23 +425,31 @@
       "traits": [
         {
           "name": "Luft anhalten",
-          "text": "Außerhalb des Wassers 30 Minuten."
-        },
-        {
-          "name": "Wasseratmung",
-          "text": "Atmet nur unter Wasser."
+          "text": "Außerhalb des Wassers kann der Oktopus 30 Minuten lang die Luft anhalten."
         },
         {
           "name": "Unterwassertarnung",
-          "text": "Vorteil auf Heimlichkeit unter Wasser."
+          "text": "Der Oktopus hat Vorteil auf Geschicklichkeitswürfe (Heimlichkeit), die er unter Wasser macht."
         },
         {
-          "name": "Tintenwolke",
-          "text": "Unter Wasser: 1,5 m Radius komplett verschleiert für 1 Minute, danach Spurt als Bonusaktion. Lädt nach kurzer oder langer Rast."
+          "name": "Wasseratmung",
+          "text": "Der Oktopus kann nur unter Wasser atmen."
         }
       ],
       "verdict": "Für Unterwasser-Missionen, etwa beim Magischen Turm im See.",
-      "note": "Korrigiert: Die Tintenwolke des normalen Oktopus hat 1,5 m Radius. Die 6 m im alten Dokument gehören zum Riesenkraken."
+      "note": "Korrigiert: Die Tintenwolke des normalen Oktopus hat 1,5 m Radius. Die 6 m im alten Dokument gehören zum Riesenkraken. Die Tintenwolke ist kein Angriff: Als Vertrauter darf er sie einsetzen.",
+      "hpFormula": "1W6",
+      "cr": "0 (10 EP)",
+      "actions": [
+        {
+          "name": "Tentakel",
+          "text": "Nahkampf-Waffenangriff: +4 auf Treffer, Reichweite 1,5 m, ein Ziel. Treffer: 1 Wuchtschaden, und das Ziel ist gepackt (Befreien SG 10). Solange es gepackt ist, kann der Oktopus seine Tentakel nicht gegen ein anderes Ziel einsetzen."
+        },
+        {
+          "name": "Tintenwolke (lädt nach einer kurzen oder langen Rast)",
+          "text": "Ist der Oktopus unter Wasser, breitet sich um ihn eine Tintenwolke mit 1,5 m Radius aus. Der Bereich ist 1 Minute lang komplett verschleiert, eine starke Strömung kann die Tinte aber verteilen. Nachdem er die Tinte ausgestoßen hat, kann der Oktopus die Aktion Spurt als Bonusaktion ausführen."
+        }
+      ]
     },
     {
       "id": "piranha",
@@ -371,14 +471,22 @@
       "traits": [
         {
           "name": "Blutrausch",
-          "text": "Vorteil auf Angriffe gegen verletzte Kreaturen. Als Vertrauter nutzlos, weil er nicht angreifen darf."
+          "text": "Der Piranha hat Vorteil auf Nahkampf-Angriffswürfe gegen jede Kreatur, der Trefferpunkte fehlen. Als Vertrauter greift er nicht an."
         },
         {
           "name": "Wasseratmung",
-          "text": "Atmet nur unter Wasser."
+          "text": "Der Piranha kann nur unter Wasser atmen."
         }
       ],
-      "verdict": "Schnellster Schwimmer, sonst schwach."
+      "verdict": "Schnellster Schwimmer, sonst schwach.",
+      "hpFormula": "1W4 − 1",
+      "cr": "0 (10 EP)",
+      "actions": [
+        {
+          "name": "Biss",
+          "text": "Nahkampf-Waffenangriff: +5 auf Treffer, Reichweite 1,5 m, ein Ziel. Treffer: 1 Stichschaden."
+        }
+      ]
     },
     {
       "id": "seepferdchen",
@@ -400,10 +508,13 @@
       "traits": [
         {
           "name": "Wasseratmung",
-          "text": "Kann nur unter Wasser atmen."
+          "text": "Das Seepferdchen kann nur unter Wasser atmen."
         }
       ],
-      "verdict": "Nur unter Wasser brauchbar, dort sehr heimlich."
+      "verdict": "Nur unter Wasser brauchbar, dort sehr heimlich.",
+      "hpFormula": "1W4 − 1",
+      "cr": "0 (0 EP)",
+      "actions": []
     }
   ],
   "servant": {
@@ -424,9 +535,9 @@
     {
       "id": "skelett",
       "name": "Skelett",
-      "type": "Mittelgroßer Untoter",
+      "type": "Mittelgroßer Untoter, rechtschaffen böse",
       "ac": 12,
-      "acNote": "ohne Rüstung 10 + GE = 12. Laut DM tragen deine Skelette jede Rüstung ohne Übung, sie ist Teil des Zaubers: Lederrüstung 13, Fellrüstung 14, Kettenhemd 15, Schuppenpanzer 16 (Nachteil auf Heimlichkeit), Schild +2. Schwere Rüstung braucht weiter die Stärke, sonst sind sie 3 m langsamer",
+      "acNote": "SRD: 13 mit Rüstungsfetzen. Ohne Rüstung 10 + GE = 12. Laut DM tragen deine Skelette jede Rüstung ohne Übung, sie ist Teil des Zaubers: Lederrüstung 13, Fellrüstung 14, Kettenhemd 15, Schuppenpanzer 16 (Nachteil auf Heimlichkeit), Schild +2. Schwere Rüstung braucht weiter die Stärke, sonst sind sie 3 m langsamer",
       "hp": 13,
       "hpFormula": "2W8 + 4",
       "speed": "9 m",
@@ -439,9 +550,9 @@
         "cha": 5
       },
       "vulnerable": "Wucht",
-      "immune": "Gift · Erschöpfung, Vergiftet",
+      "immune": "Gift",
       "senses": "Dunkelsicht 18 m, passive Wahrnehmung 9",
-      "languages": "Versteht die Sprachen seines früheren Lebens, spricht nicht",
+      "languages": "versteht alle Sprachen, die es zu Lebzeiten kannte, kann aber nicht sprechen",
       "cr": "1/4 (50 EP)",
       "actions": [
         {
@@ -506,12 +617,13 @@
           "action": "Dolch (wenn ausgerüstet)"
         }
       ],
-      "verdict": "Fernkampf-Artillerie aus der Deckung oder mit Orc-Axt in der zweiten Reihe. Entsteht aus **Knochen**. **Laut DM** tragen deine Skelette nur, was du ihnen gibst: Waffen, Rüstung, Kleidung. Jede Rüstung geht ohne Übung, weil sie Teil des Zaubers ist. Die Orc-Axt wird wie eine Zweihandaxt geführt: Stärke statt Geschicklichkeit, darum +2 auf den Angriff, aber 1W12 Schaden."
+      "verdict": "Fernkampf-Artillerie aus der Deckung oder mit Orc-Axt in der zweiten Reihe. Entsteht aus **Knochen**. **Laut DM** tragen deine Skelette nur, was du ihnen gibst: Waffen, Rüstung, Kleidung. Jede Rüstung geht ohne Übung, weil sie Teil des Zaubers ist. Die Orc-Axt wird wie eine Zweihandaxt geführt: Stärke statt Geschicklichkeit, darum +2 auf den Angriff, aber 1W12 Schaden.",
+      "conditionImmune": "Erschöpfung, Vergiftet"
     },
     {
       "id": "zombie",
       "name": "Zombie",
-      "type": "Mittelgroßer Untoter",
+      "type": "Mittelgroßer Untoter, neutral böse",
       "ac": 8,
       "hp": 22,
       "hpFormula": "3W8 + 9",
@@ -525,14 +637,14 @@
         "cha": 5
       },
       "saves": "WE +0",
-      "immune": "Gift · Vergiftet",
+      "immune": "Gift",
       "senses": "Dunkelsicht 18 m, passive Wahrnehmung 8",
-      "languages": "Versteht die Sprachen seines früheren Lebens, spricht nicht",
+      "languages": "versteht die Sprachen, die er zu Lebzeiten kannte, kann aber nicht sprechen",
       "cr": "1/4 (50 EP)",
       "traits": [
         {
           "name": "Untote Zähigkeit",
-          "text": "Würde Schaden ihn auf 0 TP bringen, macht er einen KO-Rettungswurf gegen SG 5 + Schaden. Gelingt er, bleibt er bei 1 TP. Gilt nicht bei gleißendem Schaden oder kritischen Treffern."
+          "text": "Würde Schaden den Zombie auf 0 Trefferpunkte bringen, muss er einen Konstitutionsrettungswurf gegen SG 5 + erlittener Schaden machen, außer der Schaden ist gleißend oder stammt von einem kritischen Treffer. Bei einem Erfolg fällt der Zombie stattdessen auf 1 Trefferpunkt."
         }
       ],
       "actions": [
@@ -544,7 +656,8 @@
           "range": "1,5 m"
         }
       ],
-      "verdict": "Langsamer Trefferpunkte-Puffer. Entsteht aus einem **Leichnam**."
+      "verdict": "Langsamer Trefferpunkte-Puffer. Entsteht aus einem **Leichnam**.",
+      "conditionImmune": "Vergiftet"
     }
   ],
   "party": [

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import PMd from './PMd.svelte';
-	import type { Ability, StatTrait } from '$lib/types';
-	import { ABILITIES, diceDe, fmtMod, mod } from '$lib/rules';
+	import type { Ability, StatAttack, StatTrait } from '$lib/types';
+	import { ABILITIES, attackWording, fmtMod, mod } from '$lib/rules';
 
 	let {
 		anchor,
@@ -16,6 +16,8 @@
 		lines = [],
 		traits = [],
 		actions = [],
+		textActions = [],
+		textActionsNote = '',
 		verdict = '',
 		note = '',
 		current = false
@@ -31,7 +33,9 @@
 		abilities: Record<Ability, number>;
 		lines?: [string, string | undefined][];
 		traits?: StatTrait[];
-		actions?: { name: string; bonus: number; damage: string; type: string; range: string }[];
+		actions?: StatAttack[];
+		textActions?: StatTrait[];
+		textActionsNote?: string;
 		verdict?: string;
 		note?: string;
 		current?: boolean;
@@ -54,8 +58,12 @@
 	{#if actions.length}
 		<div class="label" style="margin-top: 1.4mm; color: #7a1d2c">Aktionen</div>
 		{#each actions as a (a.name)}
-			<div class="sb-trait"><b><i>{a.name}.</i></b> Waffenangriff {fmtMod(a.bonus)}, {a.range}. Treffer: {diceDe(a.damage)} {a.type}.</div>
+			<div class="sb-trait"><b><i>{a.name}.</i></b> {attackWording(a)}</div>
 		{/each}
+	{/if}
+	{#if textActions.length}
+		<div class="label" style="margin-top: 1.4mm; color: #7a1d2c">Aktionen {textActionsNote}</div>
+		{#each textActions as t (t.name)}<div class="sb-trait"><b><i>{t.name}.</i></b> <PMd src={t.text} inline /></div>{/each}
 	{/if}
 	{#if verdict}<div class="small soft" style="margin-top: 1.2mm; border-top: 0.4pt solid #e3c9c9; padding-top: 1mm"><PMd src={verdict} inline /></div>{/if}
 	{#if note}<div class="tiny muted" style="margin-top: 0.8mm"><PMd src={note} inline /></div>{/if}
