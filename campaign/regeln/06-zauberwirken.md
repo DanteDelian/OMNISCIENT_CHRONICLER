@@ -140,7 +140,7 @@ Sagt ein Zauber, dass eine Materialkomponente vom Zauber **verbraucht** wird, mu
 Ein Zauberwirker muss eine Hand frei haben, um an die Materialkomponenten eines Zaubers zu gelangen oder einen Zauberfokus zu halten. Es kann aber **dieselbe Hand** sein, mit der er die gestischen Komponenten ausführt.
 
 > [!VAL]
-> Dein Fokus ist der Ring: Er ersetzt Material ohne Preis, das nicht verbraucht wird. Verbrauchtes ersetzt er nie (Sage Advice): *Vertrauten finden* kostet jedes Mal 10 GM, *Schutz vor Gut und Böse* jedes Mal Weihwasser oder Silber- und Eisenpulver. Ohne Stimme gehen nur *Eismesser*, *Geringfügige Illusion*, *Gegenzauber* und *Hypnotisches Muster*. Halte den Stab einhändig, sonst fehlt die Hand für die Gesten.
+> Dein Fokus ist der Ring: Er ersetzt Material ohne Preis, das nicht verbraucht wird. Verbrauchtes ersetzt er nie (Sage Advice): *Vertrauten finden* kostet jedes Mal 10 GM, *Schutz vor Gut und Böse* jedes Mal Weihwasser oder Silber- und Eisenpulver. Ohne Stimme gehen nur *Eismesser*, *Geringfügige Illusion* und *Gegenzauber*, ab Stufe 6 auch *Hypnotisches Muster*. Halte den Stab einhändig, sonst fehlt die Hand für die Gesten.
 
 ## Wirkungsdauer {Duration} {#wirkungsdauer}
 <!-- auch: Unmittelbar -->

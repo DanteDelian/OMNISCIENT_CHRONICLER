@@ -33,7 +33,7 @@ Das Briefing steht im [[Taktik-Handbuch]], die Gründe in der [[Tiefenanalyse]].
 - **Zauberbuch:** 14 Zauber ab Grad 1, neu sind [[Nebelwolke]], [[Flammenkugel]], [[Tensers schwebende Scheibe]] und [[Unsichtbares sehen]]. Das passende [[Zauber-Sets|Zauber-Set]] wählst du nach der Trance, Zauber ohne Material überspringt es von selbst. Auf Stufe 6 kommen *Hypnotisches Muster* und *Flutwelle* (siehe [[Stufe-6-Planer]]).
 - **Nicht wirkbar:** [[Schutz vor Gut und Böse]] verbraucht Weihwasser oder Silber- und Eisenpulver. Du hast keins, der Zauber ist aber noch vorbereitet. Die Zauber-Sets überspringen ihn, bis das Material im Inventar steht.
 - **Untote:** keine aktiven. Ein Orc-Skelett mit Umhang trägst du im Rucksack, zwei inaktive Skelette liegen mit den Society-Uniformen in eurer Unterkunft in [[Die Siedlung|Dehapten]]. Ohne Rüstung haben sie RK 12, allgemeine Befehle gehen (DM).
-- **Astrale Trance:** Für den neuen Tag Lederwerkzeug, für Lederrüstungen der Skelette und Geschirr fürs Reittier. Das Werkzeug beschwörst du mit *Geringer Beschwörung*, das hat der DM erlaubt. Mit Feinden in 100 m gehen Wache und Untote vor. Was du alles herstellen kannst: [[Werkstatt]].
+- **Astrale Trance:** Für den neuen Tag Lederwerkzeug, für Fellrüstungen der Skelette (RK 14, Lederrüstung gäbe nur 13) und Geschirr fürs Reittier. Das Werkzeug beschwörst du mit *Geringer Beschwörung*, das hat der DM erlaubt. Mit Feinden in 100 m gehen Wache und Untote vor. Was du alles herstellen kannst: [[Werkstatt]].
 - **Verbindungen:** der Verständigungsstein zu Leonidas. Er lädt sich im Morgengrauen auf, die Ladung vom 08.11. ist noch da. Die Ohrringe hast du beide bei dir, der zweite ist für deinen künftigen Verwalter gedacht.
 - **Kein Vertrauter:** Die Eule ist seit dem 11.10.2026 tot. Neu beschwören als Ritual, Tukan oder Papagei erst, wenn du einen gesehen hast.
 
@@ -47,4 +47,4 @@ Das Briefing steht im [[Taktik-Handbuch]], die Gründe in der [[Tiefenanalyse]].
 **Euer Ruf:** „Held der Echsenmenschen“ und „Riesenbezwinger, der Schlächter“. Nach der Befreiung der Stadt erwartest du einen Adelstitel (siehe [[Aufbauplan der Unsichtbaren Hand]]).
 
 > [!NOTE] Offen
-> Die Fragen an den DM, an den Tisch und an dich stehen auf der [[Rätselwand]], 21 davon neu seit dem 14.11.2026. Was abläuft, zeigen die Uhren am Spieltisch. Die ganze Session im Journal: [[Die Türen im Nebel und die Sumpfschuppen]].
+> Die Fragen an den DM, an den Tisch und an dich stehen auf der [[Rätselwand]], 23 davon neu seit dem 14.11.2026. Was abläuft, zeigen die Uhren am Spieltisch. Die ganze Session im Journal: [[Die Türen im Nebel und die Sumpfschuppen]].

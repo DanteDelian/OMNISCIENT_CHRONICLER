@@ -5,14 +5,14 @@ icon: shopping-bag
 order: 8
 group: Pläne
 aliases: [Einkaufsliste, Einkaufsliste Valerius, Einkaufs- & Verhandlungsliste, Verhandlungsliste]
-updated: 2026-11-14
+updated: 2026-11-15
 ---
 # Einkaufs- und Verhandlungsliste
 
 *Aus deinem Dokument vom 16.11.2025, mit Korrekturen.* Der aktuelle Einkaufszettel mit Preisen und „Kann ich mir das leisten?“ steht unter **Inventar → Einkaufszettel**.
 
 > [!NOTE] Stand November 2026
-> Neu auf dem Zettel: **Lederwerkzeug** (5 GM) und **Weberwerkzeug** (1 GM) für Lederrüstungen, Sattel und Vermummungen, dazu **Pfeile**, **Köcher** und ein **zweiter Kurzbogen** für deine Bogen-Skelette. Was du ohne Gold bekommst, steht bei jedem Eintrag unter „Wie?“.
+> Neu auf dem Zettel: **Lederwerkzeug** (5 GM) und **Weberwerkzeug** (1 GM) für Fellrüstungen der Skelette (RK 14), Sattel und Vermummungen, dazu **Pfeile**, **Köcher** und ein **zweiter Kurzbogen** für deine Bogen-Skelette. Was du ohne Gold bekommst, steht bei jedem Eintrag unter „Wie?“.
 
 **Budget heute: 47 GM, 27 SM.** Im November 2025 waren es 17 GM, 16 SM. Was du ohne Gold bekommst, steht im Einkaufszettel bei „Wie?“ und in der [[Werkstatt]].
 
@@ -31,7 +31,7 @@ updated: 2026-11-14
 | :-- | :-- | :-- | :-- |
 | ~~Kritisch~~ | Alchemistenwerkzeug | 50 GM | **Erledigt:** Geschenk der Kräuterfrau (12.07.2026) |
 | Hoch | Verkleidungsausrüstung | 25 GM | Neue Identität und feinere Tarnung. Die Skelette hast du schon selbst vermummt |
-| Hoch | Spruchrollen-Herstellung | 10 GM Kalligraphenwerkzeug + Material | Material je Rolle: Grad 1 **25 GM**, Grad 2 **250 GM**, Grad 3 **500 GM** (Xanathars) |
+| Hoch | Spruchrollen-Herstellung | nur Material | Je Rolle: Grad 1 **25 GM**, Grad 2 **250 GM**, Grad 3 **500 GM** (Xanathars). Ein Werkzeug brauchst du nicht, nur Übung in Arkane Kunde, und die hast du |
 | ~~Mittel~~ | Spruchrolle *Leomunds winzige Hütte* | 250–500 GM + 150 GM Abschreiben | **Nicht mehr nötig:** Twee wirkt die Hütte als Ritual |
 
 > [!FIX] **Preis für Spruchrollen**

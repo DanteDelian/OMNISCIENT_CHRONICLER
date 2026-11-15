@@ -17,13 +17,13 @@ updated: 2026-11-14
 - **Vertrauten neu beschwören und vorausschicken.** Eine [[Eule]] sieht 36 m im Dunkeln und späht nachts Orc-Lager und Riesen aus, ohne dass ihr euch zeigt. Material hast du für 9 Beschwörungen.
 - **Skelette als Nachtwache, aber nicht allein.** Erweckt schlafen sie nicht und sehen 18 m im Dunkeln, ihre passive Wahrnehmung ist aber nur 9. Als Abschreckung gut, als Augen schlecht: Dafür ist die Eule da (passiv 18) oder das Ritual [[Alarm]]. Mit dem Abend- oder Morgen-Trick aus dem [[Taktik-Handbuch]] kostet die Kontrolle keinen Platz.
 - **Skelette auf der Scheibe.** [[Tensers schwebende Scheibe]] trägt sie hinter dem Dino her (DM fragen).
-- **Handwerk in den freien Stunden.** Nach 4 Stunden Trance bist du wach, während die Gruppe weiter rastet. Laut DM kannst du dann Handwerk betreiben und Ausrüstung pflegen: Lederrüstungen für die Skelette, Geschirr fürs Reittier, Kräuter bestimmen. Alles dazu in der [[Werkstatt]].
+- **Handwerk in den freien Stunden.** Nach 4 Stunden Trance bist du wach, während die Gruppe weiter rastet. Laut DM kannst du dann Handwerk betreiben und Ausrüstung pflegen: Fellrüstungen für die Skelette (RK 14), Geschirr fürs Reittier, Kräuter bestimmen. Alles dazu in der [[Werkstatt]].
 - **Kräuter sammeln nebenbei.** Bei normalem oder langsamem Tempo kann jemand unterwegs sammeln, auf dem galoppierenden Dino nicht. Die Fee als Waldläuferin findet am meisten, du bestimmst die Funde mit der Kräuterkundeausrüstung. Anleitung in der [[Werkstatt]].
 - **Pfeile und Köcher kaufen**, sobald ihr an einem Händler vorbeikommt. Siehe Einkaufszettel im Inventar.
 
 ## Geld für die Hand
 
-- **Die Werkstatt jeden Tag nutzen.** Ein Alchemistenfeuer pro langer Rast oder ein Heiltrank pro Arbeitstag bringt zum vollen Preis je 25 GM. Abnehmer: die Kräuterfrau, eine Stadt im Krieg, die Feuer und Heiltränke braucht, später Saladin. Siehe [[Werkstatt]].
+- **Die Werkstatt jeden Tag nutzen.** Ein Alchemistenfeuer pro langer Rast oder ein Heiltrank pro Arbeitstag bringt zum vollen Preis je 25 GM Gewinn (Wert 50 GM, Material 25 GM). Abnehmer: die Kräuterfrau, eine Stadt im Krieg, die Feuer und Heiltränke braucht, später Saladin. Siehe [[Werkstatt]].
 - **Die Belohnung vorher aushandeln.** Hilft ihr der belagerten Stadt, könnt ihr etwas verlangen: Gold, Handelsrechte, ein Lager oder ein Haus für die Hand. Nach dem Sieg ist eure Verhandlungsmacht kleiner.
 - **Der Ruf als Kapital.** Floshem ist ein Mystiker: Niemand weiß, was um ihn herum geschieht, aber als Held der Echsen und Riesen-Schlächter kann es nur Gutes sein (laut dir). Wer ihn um Rat, Schutz oder einen Gefallen bittet, zahlt in Gold oder in Gefälligkeiten. Die vermummten, stummen Diener passen genau in dieses Bild.
 - **Beute verwerten.** Die rostigen Orc-Äxte bringen beim Händler wenig, als Metall oder als Ausrüstung für Verbündete vielleicht mehr.

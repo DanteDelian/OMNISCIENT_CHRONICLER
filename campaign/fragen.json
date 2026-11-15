@@ -380,7 +380,7 @@
     "links": [
       "Skelett-Gefolge aufbauen"
     ],
-    "answer": "Zwei Skelette liegen inaktiv und versteckt mit den Society-Uniformen in eurer Unterkunft in Dehubden.",
+    "answer": "Zwei Skelette liegen inaktiv und versteckt mit den Society-Uniformen in eurer Unterkunft in Dehapten.",
     "answered": "2026-11-08"
   },
   {
@@ -613,6 +613,17 @@
     "links": [
       "Gutartiges Versetzen",
       "Unsichtbarer Diener"
+    ]
+  },
+  {
+    "id": "illusionsschrift-ablauf",
+    "to": "dm",
+    "topic": "Illusionsschrift nach 10 Tagen",
+    "question": "Was geschieht mit einer Illusionsschrift, wenn die 10 Tage ablaufen: Liegt der echte Text dann offen, oder verschwindet er wie beim Bannen? Wichtig, falls die Nachricht an Cam länger unterwegs ist.",
+    "status": "offen",
+    "links": [
+      "Illusionsschrift",
+      "Cam Buckland"
     ]
   }
 ]

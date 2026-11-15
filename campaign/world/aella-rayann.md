@@ -25,7 +25,7 @@ imageFocus: 50% 14%
 - **Ohrringe:** Beide liegen bei dir. Den zweiten bekommt eher dein künftiger Verwalter: Mit Aella reist du ohnehin, und für Notfälle gibt es *Botschaft*.
 - Ihre Notizen sind laut Patrick aktueller als Valerius' Kampagnen-Log.
 
-**Kampfwerte laut ihrem Bogen:** RK 16, mit Schild 18 · 45 TP · 12 m · Kampfrausch 3× · Sturmaura · Odem.
+**Kampfwerte laut ihrem Bogen:** RK 16 (mit Schild 18, aber nur mit einer Einhandwaffe: Die Sense ist vermutlich zweihändig, siehe [[Prüfbericht]]) · 45 TP · 12 m · Kampfrausch 3× · Sturmaura · Odem.
 
 Gemeinsame Geschichte: [[Backstory]]
 - **11.10.2026:** Sie war dabei, als drei Gefährten über Nacht verschwanden, und wartete mit dir und dem gefangenen Orc in [[Twee]]s winziger Hütte.

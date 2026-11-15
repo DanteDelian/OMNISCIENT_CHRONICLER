@@ -5,7 +5,7 @@ icon: flask-conical
 order: 7
 group: Pläne
 aliases: [Alchemie, Alchemi, Rezeptbuch]
-updated: 2025-08-12
+updated: 2026-11-14
 ---
 # Alchemie-Kompendium
 

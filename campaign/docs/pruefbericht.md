@@ -8,7 +8,7 @@ updated: 2026-11-15
 ---
 # Prüfbericht
 
-**Stand: 15. November 2026.** Am 14.11.2026 wurden alle Einträge gegeneinander und gegen die Regeln gelesen, das Ergebnis steht in der [[Tiefenanalyse]] und unten bei Punkt B 19. Die Gesamtdurchsicht vom 15.11.2026 (Punkt B 20) hat danach alle Texte noch einmal maschinell und von Hand gegen Spielstand, Uhren und Regeln geprüft. Abgeglichen wurden die 12 Dateien im Drive-Ordner *Valerius*, die 3 Dokumente im Ordner *Kho* (darunter dein Sessionbericht vom 12.10.2026), das alte Grimoire auf GitHub und die D&D-5e-Regeln (Spielerhandbuch 2014, Xanathars Ratgeber für alles, Spelljammer für den Astralelfen). Deine Antworten vom 12.10.2026, dein [[Sessionbericht Juli bis Oktober 2026|Sessionbericht]], die Session vom 08.11.2026 und deine Antworten vom 08. und 09.11.2026 sind eingearbeitet.
+**Stand: 15. November 2026.** Am 14.11.2026 wurden alle Einträge gegeneinander und gegen die Regeln gelesen, das Ergebnis steht in der [[Tiefenanalyse]] und unten bei Punkt B 19. Die Gesamtdurchsicht vom 15.11.2026 hat danach alle Texte maschinell geprüft (Punkt B 20) und jede Datei einzeln von Hand gegen Spielstand, Uhren und Regeln gelesen (Punkt B 21). Abgeglichen wurden die 12 Dateien im Drive-Ordner *Valerius*, die 3 Dokumente im Ordner *Kho* (darunter dein Sessionbericht vom 12.10.2026), das alte Grimoire auf GitHub und die D&D-5e-Regeln (Spielerhandbuch 2014, Xanathars Ratgeber für alles, Spelljammer für den Astralelfen). Deine Antworten vom 12.10.2026, dein [[Sessionbericht Juli bis Oktober 2026|Sessionbericht]], die Session vom 08.11.2026 und deine Antworten vom 08. und 09.11.2026 sind eingearbeitet.
 
 > **Gemini-Entwürfe:** Die beiden „Optimiert“-Dokumente vom 10.10.2026 waren Vorschläge von Gemini und sind **nicht übernommen**. Ihre vier neuen Zauber (Nebelwolke, Spiegelbilder, Gedanken wahrnehmen, Fliegen) wurden nicht übernommen. *Nebelwolke* hast du am 08.11.2026 selbst gewählt. Gemini hat auch in deinen älteren Dokumenten mitgeschrieben. Daher stammen viele der Fehler unten.
 
@@ -99,6 +99,23 @@ updated: 2026-11-15
     - **Neues Regelkapitel „Der Magier“:** die Magiertabelle bis Stufe 20 mit allen Zauberplätzen, Zaubermeisterschaft, Signaturzauber und die Schule der Beschwörung im Überblick.
     - **Ohne Befund geprüft:** deine Werte in allen Texten (SG 15, Zauberangriff +7, TP 36, Übungsbonus +3, 9 vorbereitete Zauber; abweichende Zahlen nur bei klar markierten Zukunftswerten wie Intelligenz 20), die Quest-Bezüge im Journal, das Geld (47 GM, 27 SM), die Stand-Angaben der Dokumente, die Uhren gegen die Lage und das Material für [[Vertrauten finden]] (9 Sätze).
 
+21. **Durchsicht von Hand am 15.11.2026.** Nach dem Prüfskript wurde jede Datei unter `campaign/` einzeln gelesen und gegen die Regeln, den Spielstand und die anderen Einträge geprüft: die 13 Dokumente, alle 48 Welteinträge, die 19 Journal-Einträge, alle 45 Zauber (Regeltext, Werte, Prozente, Tipps, Synergien), die Regelkapitel 01 bis 11 mit allen Zahlen und Preisen, dazu Bogen, Spielstand, Inventar (29 Gegenstände, 26 Wünsche), 31 Quests, 53 Fragen, 7 Uhren, Netzwerk, Geheimnisse, Gefolge, Zauber-Sets, Stammbaum, Karte (14 Punkte), Quellen und die 21 Bildaufträge. Berichtigt:
+    - **Rochade aus dem eigenen Netz:** Mit *Gutartiges Versetzen* holst du einen Gefährten heraus, aber dann stehst du selbst im [[Netz]]. Wer es in seinem eigenen Zug betritt, rettet sofort. Stufe-6-Planer, Tiefenanalyse und Taktik-Handbuch sagen das jetzt dazu.
+    - **[[Donnerwoge]] ins Netz:** Wer hineingestoßen wird, rettet nicht sofort, sondern zu Beginn seines Zuges. Das Netz verlangt den Wurf beim Betreten nur im eigenen Zug.
+    - **Rüstung der Skelette:** Laut DM tragen sie jede Rüstung. Die Fellrüstung kostet wie die Lederrüstung 10 GM (5 GM Material, 4 freie Nächte), gibt aber RK 14 statt 13. Quest, Lage, Ideen, Einkaufsliste, Wunschliste und Werkstatt empfahlen noch Leder.
+    - **Spruchrollen ohne Werkzeug:** Nach Xanathars brauchst du dafür nur Übung in Arkane Kunde. Das Kalligraphenwerkzeug (10 GM) ist aus Einkaufsliste und Wunschliste gestrichen.
+    - **Cams Rolle:** Xanathars nennt keinen Kaufpreis. Eine Rolle des 3. Grades ist ungewöhnlich, das Spielleiterhandbuch nennt dafür 101 bis 500 GM. „50 bis 300 GM“ ist gestrichen.
+    - **[[Illusionsschrift]]:** Dass nach 10 Tagen der echte Text offen liegt, steht nicht in der Regel. Belegt ist nur, dass beim Bannen Täuschung und Text verschwinden. Zauberbuch, Tiefenanalyse und Cams Seite sagen das jetzt, die Frage steht auf der Rätselwand.
+    - **Tensers Scheibe lädt Versetzen auf:** im Zauberbuch und im Taktik-Handbuch noch als Tatsache, jetzt wie im Stufe-6-Planer als *Theorie*.
+    - **[[Verbannung]]:** Ein Eisriese ist in Charisma-Rettungswürfen geübt (+4) und rettet gegen SG 15 zur Hälfte. Dort standen 65 % Erfolg für dich.
+    - **[[Feenwesen beschwören]]:** Dort stand noch „vorher klären, ob euer DM ihn erlaubt“. Tashas Kessel ist erlaubt (09.11.2026).
+    - **Aella:** RK 18 mit Schild gilt nur mit Einhandwaffe, die Sense ist vermutlich zweihändig (siehe F). Ob sie gegen Blitz resistent ist, hängt an ihrer offenen Drachenabstammung. Der Stufe-6-Planer sagte „resistent“.
+    - **Plan vor dem Überfall:** In der Quest stand, du wirkst [[Unsichtbares sehen]], ohne dass es vorbereitet war. Jetzt: Hütte neu, Set nach der Trance, Eule, dann der Zauber.
+    - **Veraltet:** der Kadaver im Inventar („entscheidet der DM“, „offen, wo er liegt“; laut DM untauglich, er liegt bei eurem Haus), Lucira „verschwunden“ (seit dem 08.11. zurück), „zu Fuß“ statt über Land, der Kartenpunkt des Schlachtfelds („wichtigstes Reiseziel“), Cams Ohrring (für den Verwalter, nicht für Aella), *Flammenkugel* und *Nebelwolke* im Taktik-Handbuch noch als Plan.
+    - **Kleinigkeiten:** der Set-Name im Stufe-6-Planer, *Hypnotisches Muster* im Regelkapitel ohne „ab Stufe 6“, die Ritualliste im Bogen ohne *Tensers schwebende Scheibe*, *Spiegelbilder* und *Magierrüstung* ohne den Hinweis, dass du sie nicht willst, „Dehubden“ statt Dehapten, Twees Seite ohne die Ritualregel der Hütte, der Gewinn je Spruchrolle, der Inhalt der Apotheker-Quest (nicht belegt, jetzt neutral), ein Grammatikfehler, das Datum der Alchemie-Seite.
+    - **Bild der Orcs:** Die Runenmale saßen auf Schulter oder Brust. Belegt ist die rechte Handfläche, das Bild ist neu erzeugt.
+    - **Ohne Befund geprüft:** alle SRD-Werte (Riesen, Orc, Skelett, Zombie, Diener, 15 Vertraute), alle Trefferchancen und Prozente in Taktik-Handbuch, Stufe-6-Planer und Zauberbuch, das Handwerk (Preise, Material, freie Nächte, Pfeile), Preise und Gewichte im Regelkapitel Ausrüstung, das Geld (47 GM, 27 SM), die sechs besiegten Sumpfschuppen, die Plätze vom 08.11., die Uhren gegen die Lage. *Totenglocke* „meist immun“ gegen körperlose Untote stimmt.
+
 ### Nur in den Gemini-Entwürfen (zur Info)
 - *Gedanken wahrnehmen*: Tieferes Sondieren ist ein **WE**-Rettungswurf, nicht IN.
 - *Fliegen* wäre auf Stufe 5 kein freier Platz gewesen. Deine Stufe-5-Zauber sind *Tote erwecken* und *Gegenzauber*.
@@ -124,7 +141,7 @@ updated: 2026-11-15
 
 ## D · Offene Fragen
 
-Die offenen Fragen stehen gebündelt auf der **[[Rätselwand]]** und als Druckblatt „Fragen an den DM“. Offen sind 24 Fragen (14 an den DM, 8 an den Tisch, 2 an dich): der Verständigungsstein des Sumpfschuppen-Anführers, Khos Drachenabstammung, 21 aus der Tiefenanalyse vom 14.11.2026 und seit dem 15.11.2026 die Frage, ob ein Beschwörungsritual *Gutartiges Versetzen* auflädt.
+Die offenen Fragen stehen gebündelt auf der **[[Rätselwand]]** und als Druckblatt „Fragen an den DM“. Offen sind 25 Fragen (15 an den DM, 8 an den Tisch, 2 an dich): der Verständigungsstein des Sumpfschuppen-Anführers, Khos Drachenabstammung, 21 aus der Tiefenanalyse vom 14.11.2026 und seit dem 15.11.2026 zwei Regelfragen: ob ein Beschwörungsritual *Gutartiges Versetzen* auflädt und was nach 10 Tagen mit einer *Illusionsschrift* geschieht.
 
 ### Geklärt am 9. November 2026
 - **Namen:** Die Fee heißt **Alucasia**, der befreite Orc **Grum**, eure Basis **Dehapten**.

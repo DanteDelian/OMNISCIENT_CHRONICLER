@@ -86,7 +86,7 @@ Am 08.11. hast du zwei Skelette verloren, weil auf dem Dino kein Platz war. [[Te
 
 ### Rochade mit dem Skelett (ab Stufe 6)
 
-[[Gutartiges Versetzen (ab Stufe 6)|Gutartiges Versetzen]] tauscht dich mit einer bereitwilligen kleinen oder mittelgroßen Kreatur in 9 m. Ein Skelett gehorcht und ist mittelgroß. Stell eins an einen sicheren Platz hinter dir. Erreicht dich ein Nahkämpfer, tauschst du: Er steht neben einem Skelett, du 9 m weiter. Jeder Beschwörungszauber ab Grad 1 lädt das Versetzen wieder auf, und fast alle deine Kampfzauber sind Beschwörungen. Du kannst auch einen Gefährten aus einem Griff oder aus deinem eigenen Netz heraustauschen.
+[[Gutartiges Versetzen (ab Stufe 6)|Gutartiges Versetzen]] tauscht dich mit einer bereitwilligen kleinen oder mittelgroßen Kreatur in 9 m. Ein Skelett gehorcht und ist mittelgroß. Stell eins an einen sicheren Platz hinter dir. Erreicht dich ein Nahkämpfer, tauschst du: Er steht neben einem Skelett, du 9 m weiter. Jeder Beschwörungszauber ab Grad 1 lädt das Versetzen wieder auf, und fast alle deine Kampfzauber sind Beschwörungen. Du kannst auch einen Gefährten aus einem Griff oder aus deinem eigenen Netz heraustauschen. Dann stehst aber du im Netz: Wer es in seinem eigenen Zug betritt, rettet sofort (bei dir GE +1), danach hilft *Sternenschritt*.
 
 ### Geringe Beschwörung für die Hand
 
@@ -253,7 +253,7 @@ Hat sie die Gabe aus einer anderen Quelle, gelten andere Regeln. Dann fragst du 
 Die Hand soll Leute führen, die dich nie sehen. Dafür gibt es Zauber, die genau das tun:
 
 - **[[Magischer Mund]] (Ritual, Grad 2):** Ein Gegenstand spricht eine Nachricht von bis zu 25 Wörtern, sobald eintritt, was du festlegst, etwa ein Losungswort. Er bleibt, bis er gebannt wird. So bekommt dein Verwalter Aufträge von einer Wand, und nicht einmal er muss dich kennen. Kostet 10 GM Jadestaub pro Wirken.
-- **[[Illusionsschrift]] (Ritual, Grad 1):** Nur wer von dir bestimmt ist, liest den echten Text. Alle anderen sehen etwas anderes. Jeder Brief in die alte Welt geht durch Lhaaz-Hände: So käme einer an Cam vorbei an ihnen. Die Täuschung hält 10 Tage. Dauert die Überfahrt länger, liegt danach der echte Text offen.
+- **[[Illusionsschrift]] (Ritual, Grad 1):** Nur wer von dir bestimmt ist, liest den echten Text. Alle anderen sehen etwas anderes. Jeder Brief in die alte Welt geht durch Lhaaz-Hände: So käme einer an Cam vorbei an ihnen. Die Täuschung hält 10 Tage. Was nach den 10 Tagen geschieht, lässt die Regel offen: Beim Bannen verschwinden Täuschung und echter Text zusammen. **Offen:** Liegt der Text nach Ablauf offen oder ist er weg? Vor einer langen Überfahrt den DM fragen.
 - **[[Gedanken wahrnehmen]]:** Den Verwalter prüfen, bevor du ihn einweihst. Verhandlungen mit Leonidas und Saladin.
 - **[[Verbannung]] (Grad 4, ab Stufe 7):** Schickt ein Wesen von einer anderen Ebene nach Hause, endgültig, wenn du die Konzentration eine Minute hältst. Das löst dein Versprechen an die Fee ohne die Teufelsjäger, schickt beschworene Dämonen der Society zurück und nimmt einen Riesen für eine Minute aus dem Kampf.
 

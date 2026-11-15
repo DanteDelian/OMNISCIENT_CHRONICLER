@@ -1006,5 +1006,46 @@
       "Planung, kein Spielgeschehen. Die Fragen stehen auf der [[Rätselwand]], die Korrekturen im [[Prüfbericht]]."
     ],
     "sources": []
+  },
+  {
+    "id": "j20-gesamtdurchsicht",
+    "order": 200,
+    "chapter": "Zwischen den Sitzungen",
+    "title": "Jede Seite noch einmal gelesen",
+    "type": "planung",
+    "date": "2026-11-15",
+    "dateMode": "exakt",
+    "dateLabel": "15.11.2026",
+    "dateBasis": "Tag der Gesamtdurchsicht aller Unterlagen.",
+    "ingame": "Planung",
+    "places": [],
+    "people": [
+      "Twee",
+      "Aella Rayann",
+      "Cam Buckland"
+    ],
+    "summary": "Jede Datei der Kampagne von Hand gegen Regeln und Spielstand gelesen: Netz-Regeln geschärft, Fellrüstung statt Leder für die Skelette, Spruchrollen ohne Werkzeug und ein Nachtplan, der vor dem Überfall neu vorbereitet.",
+    "events": [
+      "**Vor dem Überfall:** [[Twee]] kann die Hütte als Ritual neu wirken (11 Minuten), dann zählt nur noch das Morgengrauen. Nach deiner Trance bereitest du das Set „Society, Teufel, Geister“ vor. Erst damit hast du [[Unsichtbares sehen]].",
+      "**Netz-Regeln:** Wer in dein [[Netz]] gestoßen wird, rettet erst zu Beginn seines Zuges. Holst du ab Stufe 6 einen Gefährten per Rochade aus dem Netz, stehst du selbst darin und rettest sofort.",
+      "**Skelette in Fellrüstung:** gleicher Preis wie Lederrüstung (10 GM, 5 GM Material, 4 freie Nächte), aber RK 14 statt 13. Laut DM dürfen sie jede Rüstung tragen.",
+      "**Spruchrollen** brauchen nach Xanathars kein Werkzeug, nur Übung in Arkane Kunde. Das Kalligraphenwerkzeug ist von der Wunschliste gestrichen.",
+      "**Vorsichtiger formuliert:** ob ein Ritual *Gutartiges Versetzen* auflädt, was nach 10 Tagen mit einer [[Illusionsschrift]] geschieht, ob [[Aella Rayann|Aella]] gegen Blitz resistent ist und ob sie mit der Sense einen Schild tragen kann.",
+      "**Kleinere Fehler** in Zauberbuch, Bogen, Quests, Karte, Welt und Regelwerk berichtigt. Das Bild der [[Die Orcs|Orcs]] zeigt die Runenmale jetzt an der Hand."
+    ],
+    "quests": [
+      {
+        "ref": "sumpfschuppen",
+        "change": "Vorbereiten und Hütte im Plan"
+      },
+      {
+        "ref": "skelette",
+        "change": "Fellrüstung statt Leder"
+      }
+    ],
+    "notes": [
+      "Planung, kein Spielgeschehen. Alle Korrekturen stehen im [[Prüfbericht]] unter B 21, die neue Frage auf der [[Rätselwand]]."
+    ],
+    "sources": []
   }
 ]

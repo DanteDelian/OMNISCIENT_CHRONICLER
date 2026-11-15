@@ -793,7 +793,8 @@
       "**Wirkt nicht** gegen Wesen mit Blindsicht oder Wahrsicht und gegen Blinde."
     ],
     "docs": [],
-    "card": "**Drei Abbilder** von dir, 1 Minute. Wirst du angegriffen, würfle einen W20: Bei 3 Abbildern trifft der Angriff mit **6+** ein Abbild, bei 2 mit **8+**, bei 1 mit **11+**. Ein Abbild hat RK 10 + deinen GE-Mod. und vergeht, wenn ein Angriff es trifft. Andere Schäden und Effekte ignoriert es. Endet, wenn alle drei weg sind, oder als Aktion. Wirkungslos gegen Kreaturen, die nicht sehen, Blindsicht nutzen oder Illusionen durchschauen."
+    "card": "**Drei Abbilder** von dir, 1 Minute. Wirst du angegriffen, würfle einen W20: Bei 3 Abbildern trifft der Angriff mit **6+** ein Abbild, bei 2 mit **8+**, bei 1 mit **11+**. Ein Abbild hat RK 10 + deinen GE-Mod. und vergeht, wenn ein Angriff es trifft. Andere Schäden und Effekte ignoriert es. Endet, wenn alle drei weg sind, oder als Aktion. Wirkungslos gegen Kreaturen, die nicht sehen, Blindsicht nutzen oder Illusionen durchschauen.",
+    "note": "**Laut dir nicht gewünscht** (Prüfbericht, Kurzfassung). Bleibt nur als Option bei den Vorschlägen."
   },
   {
     "id": "flammenkugel",
@@ -865,7 +866,8 @@
       "**Morgens wirken:** 8 Stunden decken fast jeden Abenteuertag ab.",
       "**Läuft neben allem:** keine Konzentration, also parallel zu *Netz*."
     ],
-    "docs": []
+    "docs": [],
+    "note": "**Laut dir nicht gewünscht** (Prüfbericht, Kurzfassung). Bleibt nur als Option bei den Vorschlägen."
   },
   {
     "id": "selbstverkleidung",
@@ -915,7 +917,7 @@
       "**Knochenhaufen bergen:** Vom Schlachtfeld zurück ins Lager, bevor du *Tote erwecken* wirkst.",
       "**Skelette mitnehmen:** Am 08.11.2026 blieben zwei Skelette zurück, weil auf dem Dino kein Platz war. Die Scheibe trägt sie hinter euch her: Sie bleibt in 6 m Abstand, wie schnell du auch reitest, die Regel nennt kein Tempo. Sie hält 1 Stunde, auf langen Ritten wirkst du sie im Sattel neu (DM fragen).",
       "**Schweres bergen:** Das Runenschwert der Riesen war im Juli zu schwer zum Mitnehmen. 225 kg trägt die Scheibe.",
-      "**Ab Stufe 6 ein Gratis-Teleport:** Als Beschwörungszauber ab Grad 1 lädt das Ritual *Gutartiges Versetzen* wieder auf, ganz ohne Platz.",
+      "**Ab Stufe 6 vielleicht ein Gratis-Teleport:** *Theorie:* Als Beschwörungszauber des 1. Grades lädt auch das Ritual *Gutartiges Versetzen* wieder auf. **Offen:** Ob ein Ritual ohne Zauberplatz zählt, entscheidet der DM (Frage auf der Rätselwand).",
       "**Grenzen:** Treppen und Hänge schafft sie, Höhenunterschiede ab 3 m nicht. Entfernst du dich mehr als 30 m, endet der Zauber."
     ],
     "docs": [],
@@ -927,7 +929,7 @@
       },
       {
         "with": "Gutartiges Versetzen (ab Stufe 6)",
-        "text": "Als Beschwörungs-Ritual lädt sie das Versetzen ohne Zauberplatz wieder auf."
+        "text": "*Theorie:* Als Beschwörungs-Ritual lädt sie das Versetzen ohne Zauberplatz wieder auf. Ob das gilt, entscheidet der DM."
       }
     ]
   },
@@ -957,10 +959,10 @@
     "text": "Eine Welle donnernder Kraft fegt von dir aus. Jede Kreatur in einem **4,5-m-Würfel**, der von dir ausgeht, muss einen **Konstitutionsrettungswurf** machen. Misslingt er, erleidet sie **2W8 Schallschaden** und wird **3 m von dir weggestoßen**. Gelingt er, erleidet sie den halben Schaden und wird nicht gestoßen.\n\nAußerdem werden nicht befestigte Gegenstände, die sich vollständig im Bereich befinden, automatisch 3 m von dir weggestoßen, und der Zauber erzeugt einen donnernden Knall, der bis zu **90 m** weit zu hören ist.",
     "higher": "Mit einem Platz ab Grad 2 steigt der Schaden um **1W8** pro Grad über dem 1.",
     "valerius": "SG **15** · **2W8** (Ø 9) · Stoß 3 m",
-    "why": "**Dein Notfallknopf, wenn Nahkämpfer dich erreichen.** Mit RK 11 bist du im Nahkampf verloren. Die Woge stößt alle in deiner Nähe 3 m weg, sogar **in dein Netz hinein**: Wer es betritt, muss sofort retten.",
+    "why": "**Dein Notfallknopf, wenn Nahkämpfer dich erreichen.** Mit RK 11 bist du im Nahkampf verloren. Die Woge stößt alle in deiner Nähe 3 m weg, sogar **in dein Netz hinein**: Wer darin landet, rettet zu Beginn seines Zuges gegen das Festhalten und steht bis dahin im schwierigen Gelände.",
     "slot": "jeden fehlenden Eintrag (bis Grad 1 oder bis Grad 2)",
     "tips": [
-      "**Ins Netz stoßen:** Gegner, die du in dein *Netz* stößt, müssen beim Betreten einen GE-Rettungswurf machen.",
+      "**Ins Netz stoßen:** Wer in dein *Netz* gestoßen wird, rettet nicht sofort: Das Netz verlangt den Wurf nur, wenn jemand es in seinem eigenen Zug betritt. Er rettet zu Beginn seines Zuges.",
       "**Laut:** 90 m weit hörbar. Nichts für die Unsichtbare Hand bei Infiltrationen."
     ],
     "docs": []
@@ -1310,7 +1312,7 @@
     "text": "Du rufst einen **Feengeist** herbei. Er erscheint auf einem freien Platz in Reichweite, den du sehen kannst, und nimmt eine körperliche Gestalt mit dem Wertblock unten an. Beim Wirken wählst du eine Stimmung: **zornig**, **heiter** oder **listig**. Der Geist sieht aus wie ein Feenwesen deiner Wahl, dem man diese Stimmung ansieht, und sie bestimmt eine seiner Fähigkeiten. Er verschwindet bei 0 TP oder wenn der Zauber endet.\n\nEr ist dir und deinen Gefährten verbündet. Im Kampf teilt er deine Initiative, handelt aber direkt nach dir. Er gehorcht deinen gesprochenen Befehlen, ohne dass du dafür eine Aktion brauchst. Gibst du keinen Befehl, nutzt er die Aktion **Ausweichen** und bewegt sich aus der Gefahr.\n\n**Feengeist** (kleines Feenwesen): RK 12 + Grad des Zaubers (natürliche Rüstung) · TP 30, plus 10 für jeden Grad über dem dritten · Bewegung 12 m · ST 13, GE 16, KO 14, IN 14, WE 11, CH 16 · immun gegen den Zustand Bezaubert · Dunkelsicht 18 m, passive Wahrnehmung 10 · spricht Sylvanisch und versteht deine Sprachen · Übungsbonus wie deiner.\n\n- **Mehrfachangriff:** so viele Angriffe wie der halbe Grad des Zaubers, abgerundet.\n- **Kurzschwert:** Nahkampf-Waffenangriff mit deinem Zauberangriffsbonus, Reichweite 1,5 m, ein Ziel. Treffer: 1W6 + 3 + Grad des Zaubers Stichschaden plus 1W6 Energieschaden.\n- **Feenschritt (Bonusaktion):** Der Geist teleportiert sich magisch bis zu 9 m an einen freien Ort, den er sehen kann. Danach wirkt je nach Stimmung: *zornig*: Vorteil auf seinen nächsten Angriffswurf bis zum Ende dieses Zuges. *heiter*: Eine Kreatur, die er in 3 m sieht, macht einen Weisheitsrettungswurf gegen deinen Zauber-SG, sonst ist sie 1 Minute lang von dir und ihm bezaubert oder bis sie Schaden erleidet. *listig*: Er füllt einen 3-m-Würfel in höchstens 1,5 m Abstand mit magischer Dunkelheit, die bis zum Ende seines nächsten Zuges hält.",
     "higher": "Mit einem Platz ab Grad 4 setzt du überall im Wertblock, wo der Grad des Zaubers steht, den höheren Grad ein.",
     "valerius": "Grad 3: RK 15, 30 TP, Kurzschwert **+7**, 1W6 + 6 Stich und 1W6 Energie (Ø 13), 9 m Teleport pro Runde · Konzentration bis 1 Stunde · Fokus **300 GM**, wird nicht verbraucht.",
-    "why": "**Der stärkste Beschwörer-Zauber bis Grad 3:** ein eigener Kämpfer, der jede Runde teleportiert und Gegner flankiert. Bleibt eine ganze Stunde, also die ganze Schlacht. **Aber:** Der Fokus kostet 300 GM, du hast 47. Und er stammt aus Tashas Kessel beziehungsweise dem Spielerhandbuch 2024: vorher klären, ob euer DM ihn erlaubt.",
+    "why": "**Der stärkste Beschwörer-Zauber bis Grad 3:** ein eigener Kämpfer, der jede Runde teleportiert und Gegner flankiert. Bleibt eine ganze Stunde, also die ganze Schlacht. **Aber:** Der Fokus kostet 300 GM, du hast 47. Er stammt aus Tashas Kessel, und den erlaubt euer DM (09.11.2026).",
     "slot": "Stufe 6 (einer der 2 neuen Zauber bis Grad 3)",
     "tips": [
       "**Heiter** für Kontrolle (bezaubern), **zornig** für Schaden, **listig** für Flucht und Verwirrung.",
@@ -1619,7 +1621,7 @@
     "why": "**Post, die nur der Richtige liest:** Jeder Brief in die alte Welt reist auf einem Lhaaz-Schiff und geht durch Lhaaz-Hände. Mit diesem Zauber sehen alle anderen einen harmlosen Brief oder unlesbare Zeichen. Nur wen du beim Wirken bestimmst, liest den echten Text. Auch für Aufträge an die Hand und für alles, was Lucira nicht lesen soll.",
     "slot": "Abschreiben von einer Rolle (50 GM, 2 Stunden) oder einer der 2 Zauber einer neuen Stufe",
     "tips": [
-      "**10 Tage:** Danach endet die Täuschung, und der echte Text liegt offen. Vorher klären, wie lange die Überfahrt dauert.",
+      "**10 Tage:** Was nach den 10 Tagen geschieht, lässt die Regel offen: Beim Bannen verschwinden Täuschung und echter Text zusammen. **Offen:** Liegt der Text nach Ablauf offen oder ist er weg? Vor einer langen Überfahrt den DM fragen. Vorher klären, wie lange die Überfahrt dauert.",
       "**Ein anderer Brief statt Zeichensalat:** Unlesbare Zeichen machen neugierig. Lass die Schrift wie einen gewöhnlichen Brief aussehen, in anderer Handschrift und in einer Sprache, die du beherrschst.",
       "**Den Empfänger bestimmst du beim Wirken,** zum Beispiel [[Cam Buckland|Cam]] oder deinen Verwalter.",
       "**Wahrer Blick durchschaut es,** und *Magie entdecken* zeigt, dass eine Illusion auf dem Blatt liegt.",
@@ -1647,7 +1649,7 @@
     "summary": "Schickt eine Kreatur auf eine andere Ebene: Fremde nach Hause, Einheimische für bis zu eine Minute fort.",
     "text": "Du versuchst, eine Kreatur in Reichweite, die du sehen kannst, auf eine andere Existenzebene zu schicken. Das Ziel muss einen **Charismarettungswurf** bestehen, sonst wird es verbannt.\n\nIst das Ziel auf der Existenzebene **heimisch**, auf der du dich befindest, verbannst du es auf eine **harmlose Halbebene**. Dort ist das Ziel **kampfunfähig**. Es bleibt dort, bis der Zauber endet. Dann erscheint es wieder an dem Ort, den es verlassen hat, oder im nächsten freien Feld, falls dieser Ort besetzt ist.\n\nIst das Ziel auf einer **anderen Existenzebene heimisch** als der, auf der du dich befindest, wird es mit einem leisen Knall verbannt und **kehrt auf seine Heimatebene zurück**. Endet der Zauber, bevor 1 Minute vergangen ist, erscheint das Ziel wieder an dem Ort, den es verlassen hat, oder im nächsten freien Feld, falls dieser Ort besetzt ist. Andernfalls **kehrt das Ziel nicht zurück**.",
     "higher": "Mit einem Platz ab Grad 5 kannst du **pro Grad über dem 4. eine weitere Kreatur** als Ziel wählen.",
-    "valerius": "SG **15** (CH-Rettungswurf) · 18 m · bis 1 Minute · Konzentration · Richtwerte: Hügelriese scheitert zu 80 %, Steinriese 75 %, Orc 70 %, Eisriese 65 %",
+    "valerius": "SG **15** (CH-Rettungswurf) · 18 m · bis 1 Minute · Konzentration · Richtwerte: Hügelriese scheitert zu 80 %, Steinriese 75 %, Orc 70 %, Eisriese 50 % (geübt in Charisma-Rettungswürfen)",
     "why": "**Ein Zauber, drei Probleme:** Die [[Die Fee|Fee]] stammt aus einer anderen Dimension. Scheitert ihr Rettungswurf und hältst du eine Minute die Konzentration, ist sie zu Hause: Dein Versprechen ist eingelöst, ohne die Teufelsjäger. Beschworene Dämonen der Society schickst du genauso endgültig zurück. Und ein Riese verschwindet für bis zu einer Minute aus dem Kampf, während ihr die anderen erledigt.",
     "slot": "Stufe 7 (Grad-4-Plätze)",
     "tips": [

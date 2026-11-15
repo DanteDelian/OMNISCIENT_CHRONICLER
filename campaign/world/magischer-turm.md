@@ -18,7 +18,7 @@ imageFocus: 50% 40%
 - Dort trefft ihr den Goblin [[Baldum]], Techniker und Gelehrter.
 - **12.07.2026:** [[Lucira]] las auf dem Thron ein **Siegel** und löste es dabei aus. Die Gruppe wurde in eine Dimensionsblase gerissen und sprach mit dem [[Das Wesen hinter dem Siegel|Wesen hinter dem Siegel]]. Seitdem ist das Siegel **inaktiv**. Mit zurück kam [[Die Fee|die Fee]].
 - Beim Abstieg wartete [[Saladin]] am Turm.
-- **11.10.2026:** [[Crush Lu]] spürte mächtige Magie, die wohl vom Turm ausging. In derselben Nacht verschwanden [[Fridolin vom See|Fridolin]], Lucira und die Fee. Im Turm fand ihr **mehr Magie in den Mauern**, die langsam abklingt. Baldum wusste von nichts. Siehe [[Die verschwundenen Gefährten]].
+- **11.10.2026:** [[Crush Lu]] spürte mächtige Magie, die wohl vom Turm ausging. In derselben Nacht verschwanden [[Fridolin vom See|Fridolin]], Lucira und die Fee. Im Turm fandet ihr **mehr Magie in den Mauern**, die langsam abklingt. Baldum wusste von nichts. Siehe [[Die verschwundenen Gefährten]].
 
 *Theorien:*
 - Der Riesenthron und die Riesenrunen der Orcs deuten auf eine Verbindung zu den [[Die Riesen|Riesen]].

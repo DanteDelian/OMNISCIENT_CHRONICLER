@@ -5,7 +5,7 @@ icon: book-open
 order: 5
 group: Zauber & Taktik
 aliases: [Stufe 6, Stufenaufstieg, Planer Stufe 6, Zauberplan]
-updated: 2026-11-14
+updated: 2026-11-15
 ---
 # Stufe-6-Planer
 
@@ -52,7 +52,7 @@ updated: 2026-11-14
 
 | Zauber | Grad | Konz. | Wofür | Trifft eure Leute? |
 | :-- | :-: | :-: | :-- | :-- |
-| [[Blitz]] | 3 | | 8W6 in einer 30-m-Linie aus dir heraus (Ø 28). Mehr Schaden als *Flutwelle*, aber schwerer zu lenken | ja, wer in der Linie steht. Aella ist resistent |
+| [[Blitz]] | 3 | | 8W6 in einer 30-m-Linie aus dir heraus (Ø 28). Mehr Schaden als *Flutwelle*, aber schwerer zu lenken | ja, wer in der Linie steht. Ob Aella gegen Blitz resistent ist, hängt an ihrer Drachenabstammung (offen) |
 | [[Feuerball]] | 3 | | 8W6 in 6 m Radius, gegen dichte Gruppen | ja, alles in der Kugel |
 | [[Schneesturm]] ★ | 3 | ● | Riesen stürzen und kommen kaum voran. Statt *Muster* bei einer Belagerung auf Abstand | ja, 12 m Radius |
 | [[Stinkende Wolke]] ★ | 3 | ● | Trupps verlieren ihre Aktion, die Sicht ist blockiert | ja, 6 m Radius |
@@ -96,7 +96,7 @@ updated: 2026-11-14
 
 Der dritte Grad-3-Platz ist der größte Gewinn: *Gegenzauber*, *Tote erwecken* und ein neuer Grad-3-Zauber passen dann in denselben Tag.
 
-**Vorbereiten:** Mit dem Plan stehen auf Stufe 6 **12 Zauber** ab Grad 1 im Buch, die du vorbereiten musst, und du bereitest **10** vor. Die vier Rituale (*Vertrauten finden*, *Unsichtbarer Diener*, *Magie entdecken*, *Tensers schwebende Scheibe*) zählen nicht mit: Als Magier wirkst du sie aus dem Buch, ohne sie vorzubereiten. Welche 10 es heute sind, wählst du morgens mit einem [[Zauber-Sets|Zauber-Set]]: *Unterwegs*, *Belagerung und Riesen*, *Zauberer, Teufel, Geister* oder *Stadt und Floshem*. Auf Stufe 5 sind es 10 Zauber auf 9 Plätzen.
+**Vorbereiten:** Mit dem Plan stehen auf Stufe 6 **12 Zauber** ab Grad 1 im Buch, die du vorbereiten musst, und du bereitest **10** vor. Die vier Rituale (*Vertrauten finden*, *Unsichtbarer Diener*, *Magie entdecken*, *Tensers schwebende Scheibe*) zählen nicht mit: Als Magier wirkst du sie aus dem Buch, ohne sie vorzubereiten. Welche 10 es heute sind, wählst du morgens mit einem [[Zauber-Sets|Zauber-Set]]: *Unterwegs*, *Belagerung und Riesen*, *Society, Teufel, Geister* oder *Stadt und Floshem*. Auf Stufe 5 sind es 10 Zauber auf 9 Plätzen.
 
 ## Gutartiges Versetzen
 
@@ -108,7 +108,7 @@ Der dritte Grad-3-Platz ist der größte Gewinn: *Gegenzauber*, *Tote erwecken* 
 
 **Einsatz:** Steht ein Gegner vor dir, teleportierst du dich weg oder tauschst mit einem Nahkämpfer: Er steht sofort an deiner Stelle, du an seinem sicheren Platz. Anders als [[Sternenschritt]] kostet es deine Aktion.
 
-**Rochade mit dem Skelett:** Ein Skelett ist mittelgroß und gehorcht. Stell eins an einen sicheren Platz hinter dir. Erreicht dich ein Nahkämpfer, tauschst du mit ihm: Der Gegner steht neben einem Skelett, du 9 m weiter. Genauso holst du einen Gefährten aus einem Griff oder aus deinem eigenen Netz. Ein Vertrauter taugt dafür nicht, er ist winzig.
+**Rochade mit dem Skelett:** Ein Skelett ist mittelgroß und gehorcht. Stell eins an einen sicheren Platz hinter dir. Erreicht dich ein Nahkämpfer, tauschst du mit ihm: Der Gegner steht neben einem Skelett, du 9 m weiter. Genauso holst du einen Gefährten aus einem Griff oder aus deinem eigenen Netz. Dann stehst aber du im Netz: Wer es in seinem eigenen Zug betritt, rettet sofort (bei dir GE +1), danach hilft *Sternenschritt*. Ein Vertrauter taugt dafür nicht, er ist winzig.
 
 ## Was dir die Schule der Beschwörung schenkt
 

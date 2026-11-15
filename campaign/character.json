@@ -184,7 +184,7 @@
       "source": "Magier",
       "economy": "passiv",
       "summary": "Ritualzauber aus dem Buch ohne Vorbereitung wirken (+10 Minuten, kein Platz).",
-      "text": "Zauber mit dem Ritual-Merkmal, die in deinem Zauberbuch stehen, kannst du als Ritual wirken, **ohne sie vorzubereiten**. Die Wirkzeit verlängert sich um 10 Minuten, ein Zauberplatz wird nicht verbraucht, darum geht ein Ritual auch nicht auf einem höheren Grad: *Vertrauten finden*, *Unsichtbarer Diener*, *Magie entdecken*.",
+      "text": "Zauber mit dem Ritual-Merkmal, die in deinem Zauberbuch stehen, kannst du als Ritual wirken, **ohne sie vorzubereiten**. Die Wirkzeit verlängert sich um 10 Minuten, ein Zauberplatz wird nicht verbraucht, darum geht ein Ritual auch nicht auf einem höheren Grad: *Vertrauten finden*, *Unsichtbarer Diener*, *Magie entdecken* und *Tensers schwebende Scheibe*.",
       "en": "Ritual Casting"
     },
     {

@@ -206,7 +206,7 @@
 			{/each}
 		</ul>
 	{:else}
-		<p class="mt-3 text-sm text-ink-3">Noch kein Projekt. Zum Beispiel eine Lederrüstung für ein Skelett: 10 GM Wert, 5 GM Material, 4 freie Nächte.</p>
+		<p class="mt-3 text-sm text-ink-3">Noch kein Projekt. Zum Beispiel eine Fellrüstung für ein Skelett (RK 14): 10 GM Wert, 5 GM Material, 4 freie Nächte.</p>
 	{/if}
 </section>
 

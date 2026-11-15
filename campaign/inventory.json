@@ -219,7 +219,7 @@
       "group": "gelagert",
       "qty": 1,
       "desc": "Der Kadaver eines untoten Wesens liegt bei eurem Haus. Er war kein Humanoider und taugt deshalb nicht für *Tote erwecken*. Dein Plan: eine Knochenstatue für das Haus. Reste eignen sich vielleicht als Reagenzien.",
-      "note": "*Tote erwecken* wirkt nur auf Überreste kleiner oder mittelgroßer Humanoider. Ob dieser Kadaver taugt, entscheidet der DM. Seit der DM euer angefangenes Haus in den oberen Ring teleportiert hat, ist offen, wo der Kadaver liegt."
+      "note": "Laut DM (08.11.2026) taugt er nicht für *Tote erwecken*: Der Zauber wirkt nur auf Überreste kleiner oder mittelgroßer Humanoider."
     },
     {
       "id": "rolle-botschaft",
@@ -388,7 +388,7 @@
       "priority": "hoch",
       "phase": "jetzt",
       "group": "koerper",
-      "why": "Für Lederrüstungen der Skelette (RK 13 statt 12), Sattel, Geschirr und Satteltaschen fürs Reittier. *Geringe Beschwörung* ersetzt es für jeweils 1 Stunde, ein echtes hält dauerhaft und leuchtet nicht.",
+      "why": "Für Fellrüstungen der Skelette (RK 14 statt 12, Lederrüstung gäbe 13), Sattel, Geschirr und Satteltaschen fürs Reittier. *Geringe Beschwörung* ersetzt es für jeweils 1 Stunde, ein echtes hält dauerhaft und leuchtet nicht.",
       "ways": [
         "erfragen"
       ],
@@ -450,14 +450,6 @@
         "erfragen"
       ],
       "how": "Theaterleute, Schmuggler und Spione haben so etwas. Vielleicht weiß [[Cam Buckland|Cam]], wo man eines bekommt, aber du schuldest ihm schon etwas."
-    },
-    {
-      "id": "kalligraphie",
-      "name": "Kalligraphenwerkzeug",
-      "price": 10,
-      "priority": "hoch",
-      "phase": "nach-saladin",
-      "why": "Für Spruchrollen. Material je Rolle laut Xanathars: Grad 1 25 GM, Grad 2 250 GM, Grad 3 500 GM."
     },
     {
       "id": "rollen-rituale",

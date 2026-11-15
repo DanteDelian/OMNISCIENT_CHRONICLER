@@ -101,6 +101,9 @@ Pflicht: `id, name, en, level (0 = Zaubertrick), school, status, time, economy, 
 - optional: `prepared, ritual, concentration, trigger, target, area, attack, save, damage, rolls[{label, expr}], source,
   valerius, higher, tips[], uses[], rulings[], synergies[{with, text}], conflicts[{with, text}], corrections[{doc, text}], note, docs[]`
 - `card`: Kurzregeln für die Zauberkarte im Druck · `pick: true`: Empfehlung des Stufe-6-Planers (steht bei den Vorschlägen vorn)
+- `consumes`: ID des Gegenstands (Inventar oder Wunschliste), den der Zauber verbraucht. Ein Fokus ersetzt verbrauchtes
+  Material nicht. Fehlt es im Inventar, zeigt der Wirken-Knopf „Material fehlt“ und die Zauber-Sets überspringen den
+  Zauber; beim Wirken zieht die App ein Stück ab. `npm run check:data` warnt bei vorbereiteten Zaubern ohne Material.
 - Würfelausdrücke in `rolls`: `2d8`, `1d20+4` (Anzeige wird automatisch zu 2W8).
 
 ### quests.json
@@ -131,7 +134,8 @@ Pflicht: `id, name, en, level (0 = Zaubertrick), school, status, time, economy, 
 ### zaubersets.json
 `{sets[{id, name, icon, when, spells[], tip}]}`. `spells` sind Zauber-IDs **nach Priorität**: Beim Anwenden werden die
 ersten Zauber aus dem Buch vorbereitet, bis die Grenze (IN-Modifikator + Stufe) erreicht ist. Vorschläge, die noch nicht im
-Buch stehen, zählen nicht und erscheinen als Plan. Rituale und Zaubertricks gehören nicht hinein, sie brauchen keine
+Buch stehen, zählen nicht und erscheinen als Plan. Zauber mit `consumes`, deren Material im Inventar fehlt, überspringt
+das Set und nennt sie unter „Material fehlt“. Rituale und Zaubertricks gehören nicht hinein, sie brauchen keine
 Vorbereitung. `icon` aus `ship | castle | wand | building | swords | moon`. Das zuletzt gewählte Set steht in `state.json` als `spellSet`.
 
 ### geheimnisse.json

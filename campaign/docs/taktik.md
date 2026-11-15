@@ -126,8 +126,8 @@ Konzentration brauchen: [[Netz]], [[Nebelwolke]], [[Flammenkugel]], [[Schutz vor
 - **Vertrauter überbringt Berührungszauber:** [[Schutz vor Gut und Böse]] auf Aella, ohne dass du nach vorn musst.
 - **Netz → Flutwelle (ab Stufe 6):** Wer im Netz festhängt, rettet mit Nachteil gegen die Welle und liegt danach. Die Welle ist Wasser, kein Feuer: Nach den Regeln bleibt das Netz.
 - **Hypnotisches Muster → Netz (ab Stufe 6):** Beide brauchen Konzentration. Erst bannen und die Übrigen erledigen. Bist du so weit, legst du das Netz über die Gebannten: Das Muster endet, aber sie stehen schon im Netz und retten zu Beginn ihres Zuges gegen das Festhalten.
-- **Tensers Scheibe → Gutartiges Versetzen (ab Stufe 6):** Das Ritual ist ein Beschwörungszauber ab Grad 1 und lädt dein Versetzen wieder auf, ganz ohne Platz.
-- **Rochade mit dem Skelett (ab Stufe 6):** *Gutartiges Versetzen* tauscht dich mit einer bereitwilligen kleinen oder mittelgroßen Kreatur in 9 m. Stell ein Skelett an einen sicheren Platz. Erreicht dich ein Nahkämpfer, tauschst du: Er steht neben dem Skelett, du 9 m weiter. Genauso holst du einen Gefährten aus einem Griff oder aus deinem eigenen Netz.
+- **Tensers Scheibe → Gutartiges Versetzen (ab Stufe 6):** *Theorie:* Das Ritual bleibt ein Beschwörungszauber des 1. Grades und lädt dein Versetzen wieder auf, ganz ohne Platz. **Offen:** Ob ein Ritual ohne Zauberplatz zählt, entscheidet der DM (Frage auf der [[Rätselwand]]).
+- **Rochade mit dem Skelett (ab Stufe 6):** *Gutartiges Versetzen* tauscht dich mit einer bereitwilligen kleinen oder mittelgroßen Kreatur in 9 m. Stell ein Skelett an einen sicheren Platz. Erreicht dich ein Nahkämpfer, tauschst du: Er steht neben dem Skelett, du 9 m weiter. Genauso holst du einen Gefährten aus einem Griff oder aus deinem eigenen Netz. Dann stehst aber du im Netz: Wer es in seinem eigenen Zug betritt, rettet sofort (bei dir GE +1), danach hilft *Sternenschritt*.
 - **Scheibe → Skelette reisen mit:** [[Tensers schwebende Scheibe]] trägt 225 kg und bleibt 6 m hinter dir, wie schnell du auch reitest. So bleiben deine Skelette beim Dino (DM fragen).
 - **Nebelwolke gegen Nebelschritt:** Der Sprung braucht einen Zielort, den der Zaubernde sieht. Im Nebel gibt es keinen. Wer springen will, muss erst hinauslaufen.
 
@@ -306,8 +306,8 @@ Der Preis: Die Arkane Erholung ist für diesen Tag verbraucht. **Faustregel:** I
 
 ## Positionierung
 
-- **18 m:** Reichweite von *Netz*, *Gegenzauber*, *Eismesser*, *Totenglocke* und *Flammenkugel* (Plan). Nah genug bleiben.
-- **36 m:** *Sengender Strahl* und *Botschaft*, mit dem Plan auch *Nebelwolke*, *Hypnotisches Muster* und *Flutwelle*.
+- **18 m:** Reichweite von *Netz*, *Gegenzauber*, *Eismesser*, *Totenglocke* und *Flammenkugel*. Nah genug bleiben.
+- **36 m:** *Sengender Strahl*, *Botschaft* und *Nebelwolke*, ab Stufe 6 auch *Hypnotisches Muster* und *Flutwelle*.
 - **9 m Abstand** zu Nahkämpfern: eine Bewegung und ein Sternenschritt entfernt.
 
 ## Rasten

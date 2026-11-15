@@ -30,11 +30,14 @@ python -P scripts/bilder.py              # alle fehlenden Bilder
 python -P scripts/bilder.py --nur fee    # nur diese IDs (kommagetrennt)
 python -P scripts/bilder.py --neu --nur fee   # vorhandenes Bild neu erzeugen
 python -P scripts/bilder.py --liste      # zeigen, was fehlt
+python -P scripts/bilder.py --modell gemini-4-argon-low   # mit diesem Agentenmodell beginnen
 ```
 
 Jedes Bild landet dreifach hier: `<id>.jpg` (Original, 1376 × 768), `<id>.webp` (App) und `<id>-druck.jpg`
-(1000 px, Druckfassung). Nach etwa 13 Bildern sperrt agy für einige Stunden (429). Das Skript hört dann auf und
-nennt die Wartezeit, ein neuer Aufruf macht mit den fehlenden weiter.
+(1000 px, Druckfassung). Nach etwa 13 Bildern sperrt agy für einige Stunden (429), daneben gibt es eine Wochensperre.
+Die Sperre hängt am Agentenmodell: Das Skript wechselt dann selbst zum nächsten Modell aus `AGY_MODELLE`
+(Liste: `agy models`) und hört erst auf, wenn alle gesperrt sind. Dann nennt es die Wartezeit, ein neuer Aufruf macht
+mit den fehlenden weiter.
 
 **Einbinden:** Welt-Eintrag im Frontmatter `image: fee.webp` (optional `imageFocus: 47% 20%` für den Bildausschnitt),
 Journal-Eintrag `images: [{ "file": "nebel-tueren.webp", "caption": "…" }]`, Untote über `retinueImage` in
