@@ -45,7 +45,7 @@
 <PageHeader
 	eyebrow="Regeln"
 	title="Regelwerk"
-	subtitle="D&D 5e im vollen Wortlaut: das SRD 5.1 übersetzt, ergänzt um Regeln aus Xanathars Ratgeber und dem Spielleiterhandbuch in eigenen Worten. Bei jeder Regel steht, was sie für Valerius bedeutet."
+	subtitle="D&D 5e im vollen Wortlaut: das SRD 5.1 übersetzt, ergänzt um Regeln aus dem Spielerhandbuch, Xanathars Ratgeber und dem Spielleiterhandbuch in eigenen Worten. Bei jeder Regel steht, was sie für Valerius bedeutet."
 />
 
 <div class="relative mb-8 max-w-2xl">

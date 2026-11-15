@@ -21,7 +21,8 @@
 		Sparkles,
 		Swords,
 		Telescope,
-		Tent
+		Tent,
+		WandSparkles
 	} from '@lucide/svelte';
 	let { name = '', size = 18, class: cls = '' }: { name?: string; size?: number; class?: string } = $props();
 	const ICONS = {
@@ -44,7 +45,8 @@
 		dices: Dices,
 		tent: Tent,
 		backpack: Backpack,
-		gem: Gem
+		gem: Gem,
+		'wand-sparkles': WandSparkles
 	} as const;
 	const Icon = $derived(ICONS[name as keyof typeof ICONS] ?? FileText);
 </script>

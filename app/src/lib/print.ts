@@ -32,7 +32,7 @@ export const PRINT_PARTS: PrintPart[] = [
 	{ id: 'netzwerk', label: 'Die Unsichtbare Hand', hint: 'Rollen und Leute, zum Ergänzen', group: 'Kampagne' },
 	{ id: 'geheimnisse', label: 'Wer weiß was?', hint: 'Floshems Ruf, Geheimnisse und Mitwisser', group: 'Kampagne' },
 	{ id: 'karte', label: 'Echsen-Karte', hint: 'Karte mit nummerierten Markierungen', group: 'Kampagne' },
-	{ id: 'regelwerk', label: 'Regelwerk', hint: 'Zehn Kapitel im vollen Wortlaut, mit Sprungmarken', group: 'Archiv' },
+	{ id: 'regelwerk', label: 'Regelwerk', hint: 'Alle Kapitel im vollen Wortlaut, mit Sprungmarken', group: 'Archiv' },
 	{ id: 'quellen', label: 'Quellenverzeichnis', hint: 'Alle Originale mit Bewertung', group: 'Archiv' }
 ];
 

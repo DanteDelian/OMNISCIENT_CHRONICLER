@@ -603,5 +603,16 @@
     "links": [
       "Aella Rayann"
     ]
+  },
+  {
+    "id": "versetzen-ritual",
+    "to": "dm",
+    "topic": "Gutartiges Versetzen ab Stufe 6",
+    "question": "Lädt ein Beschwörungszauber, den Valerius als Ritual wirkt (Unsichtbarer Diener, Tensers schwebende Scheibe, Vertrauten finden), Gutartiges Versetzen wieder auf? Das Merkmal verlangt einen Beschwörungszauber des 1. Grades oder höher, ein Ritual verbraucht aber keinen Zauberplatz.",
+    "status": "offen",
+    "links": [
+      "Gutartiges Versetzen",
+      "Unsichtbarer Diener"
+    ]
   }
 ]

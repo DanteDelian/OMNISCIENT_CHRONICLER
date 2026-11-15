@@ -17,7 +17,8 @@ Schema der Daten: **`campaign/README.md`**. Technik: **`docs/ARCHITECTURE.md`**.
    `[[Verweisen]]`), `places`, `people`, `loot`, `lost`, `encounters`, `quests` (Änderungen), `sources`.
    Gibt es für das Datum schon „Session-Notizen“ (Schnellnotizen vom Tisch, `id: notizen-JJJJ-MM-TT`), einarbeiten.
 3. **Folgen nachziehen:** `quests.json` (Status, nächster Schritt), `inventory.json` (Beute, Geld, Verbrauch),
-   neue Personen oder Orte als `world/*.md`, `docs/lage.md` aktualisieren, bei Stufenaufstieg siehe unten.
+   `uhren.json` (Felder füllen, abgelaufene Uhren anpassen oder löschen), neue Personen oder Orte als `world/*.md`,
+   `docs/lage.md` aktualisieren, bei Stufenaufstieg siehe unten.
 4. `cd app && npm run check:data`, dann Git-Commit der Kampagnendaten.
 
 ### Abgleich mit Google Drive
@@ -54,12 +55,16 @@ Sie brauchen keine Vorbereitung.
 
 - **Svelte 5 Runes** (`$state`, `$derived`, `$effect`, `$props`), `ssr = false`, Daten lädt `+layout.server.ts`.
 - **Zustand:** `campaign` aus `lib/stores/campaign.svelte.ts`. Ändern immer über `campaign.change('<datei>', fn)`.
-  Das speichert entprellt nach `campaign/<datei>.json`. Spielaktionen (Schaden, Wirken, Rasten) liegen in `lib/game.ts`.
-- **Design-System** in `src/app.css`: `panel`, `panel-glow`, `sunken`, `btn` (`-primary`, `-ghost`, `-danger`, `-life`,
-  `-sm`, `-xs`), `chip`/`chip-on`, `badge` (Farbe über `--c`), `eyebrow`, `title-display`, `num`, `prose-grim`,
-  `callout-*`, Tokens wie `text-astral`, `bg-panel`, `border-line`. Neue UI immer daraus bauen.
+  Das speichert entprellt nach `campaign/<datei>.json` und legt einen Schritt im Verlauf an (Strg+Z), bei Bedarf mit
+  Beschriftung als drittem Argument. Spielaktionen (Schaden, Wirken, Rasten, Kampfmodus) liegen in `lib/game.ts`.
+- **Design-System „Astral-Grimoire“** in `src/app.css`: `panel`, `panel-glow`, `panel-ornate` (Doppellinie mit Ecksternen),
+  `sunken`, `btn` (`-primary`, `-gold`, `-ghost`, `-danger`, `-life`, `-sm`, `-xs`), `chip`/`chip-on`, `badge` (Farbe über `--c`),
+  `eyebrow`, `title-display` mit `title-astral` oder `title-gold`, `ornament`, `divider-astral`, `dropcap`, `num`, `prose-grim`,
+  `callout-*` (auch `callout-val` für „Für Valerius“), `stagger` (gestaffeltes Erscheinen), Tokens wie `text-astral`,
+  `text-gold`, `bg-panel`, `border-line`, Schriften `font-display` (Cormorant), `font-caps` (Cinzel), `font-book`
+  (EB Garamond). Neue UI immer daraus bauen, an Tablets denken (große Ziele, nichts nur per Hover).
 - **Bausteine:** `Markdown` (mit Verweisen), `RefChip`, `SourceChip`, `Pips`, `Modal`, `PageHeader`, `StatBlock`,
-  `SpellDetail`, `Callout`. Regeln und Rechnungen: `lib/rules.ts`, Regeltexte im vollen Wortlaut: `campaign/regeln/*.md` (Parser `lib/rulebook.ts`, Seite `/regeln`).
+  `SpellDetail`, `Callout`, `ForceGraph` (Graphen, Daten aus `lib/graphs.ts`), `RollNumber`. Regeln und Rechnungen: `lib/rules.ts`, Regeltexte im vollen Wortlaut: `campaign/regeln/*.md` (Parser `lib/rulebook.ts`, Seite `/regeln`).
 - **Druckfassung** (`/druck`): Teile in `lib/components/print/` (Präfix `P`), Stil in `routes/druck/print.css`,
   nur Klassen unter `.druck`. Neue Daten, die man am Tisch braucht, auch dort ergänzen.
 - Vor jedem Commit: `npm run check` und `npm run check:data` grün.

@@ -90,7 +90,10 @@ export function buildIndex(d: IndexInput): RefEntry[] {
 		});
 	}
 	for (const f of d.character.features) {
-		push({ key: `feature:${f.id}`, title: f.name, kind: 'Merkmal', summary: f.summary, href: `/bogen#${f.id}`, names: [f.name], meta: f.source });
+		// „Gutartiges Versetzen (ab Stufe 6)“ ist auch als [[Gutartiges Versetzen]] erreichbar
+		const short = f.name.replace(/\s*\([^)]*\)$/, '');
+		const names = short && short !== f.name ? [f.name, short] : [f.name];
+		push({ key: `feature:${f.id}`, title: f.name, kind: 'Merkmal', summary: f.summary, href: `/bogen#${f.id}`, names, meta: f.source });
 	}
 	for (const a of d.character.attacks) {
 		push({ key: `attack:${a.id}`, title: a.name, kind: 'Angriff', summary: `${a.bonus >= 0 ? '+' : ''}${a.bonus} · ${a.damage} ${a.damageType}`, href: `/bogen#angriffe`, names: [a.name] });

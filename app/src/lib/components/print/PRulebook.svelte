@@ -18,7 +18,7 @@
 	id="regelwerk"
 	eyebrow="Regelwerk"
 	title="Regeln im vollen Wortlaut"
-	subtitle="D&D 5e: das SRD 5.1 übersetzt, ergänzt um Regeln aus Xanathars Ratgeber und dem Spielleiterhandbuch in eigenen Worten. Gold markiert, was für Valerius gilt."
+	subtitle="D&D 5e: das SRD 5.1 übersetzt, ergänzt um Regeln aus dem Spielerhandbuch, Xanathars Ratgeber und dem Spielleiterhandbuch in eigenen Worten. Gold markiert, was für Valerius gilt."
 >
 	<div class="rb-toc small">
 		{#each chapters as ch (ch.slug)}

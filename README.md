@@ -1,32 +1,34 @@
 # Valerius · Grimoire
 
-Das Session-Dashboard und Nachschlagewerk für **Valerius „Floshem“ Moonwhisper**, Astralelf-Magier der
-Schule der Beschwörung, Stufe 5, in der Kampagne um Xantus. Lokal, ohne Cloud, für den Laptop am Spieltisch
-gebaut und auch auf Tablet und Handy nutzbar.
+Das Astral-Grimoire für **Valerius „Floshem“ Moonwhisper**, Astralelf-Magier der Schule der Beschwörung, Stufe 5,
+in der Kampagne um Xantus: Spieltisch, Kampfbegleiter, Regelwerk und Kampagnen-Chronik in einem. Lokal, ohne Cloud,
+für Laptop und Tablet am Spieltisch gebaut und auch auf dem Handy nutzbar.
 
 ## Was drin ist
 
 | Bereich | Was du dort tust |
 | :-- | :-- |
-| **Spieltisch** | TP mit Schaden und Heilen, temporäre TP, Todesrettung · Zauberplätze und Kräfte zum Abhaken · „Was kann ich tun?“ nach Aktion, Bonusaktion und Reaktion · Wirken verbraucht Plätze und setzt Konzentration · Konzentrationsprobe erscheint automatisch nach Schaden · Proben und Rettungswürfe per Klick · Zustände mit Regeltext · Gefolge · Lage und Schnellnotiz |
-| **Charakterbogen** | Alle Werte, Fertigkeiten mit Herkunft der Übung, Angriffe, Merkmale, Astrale Trance. Druckbar |
+| **Spieltisch** | TP-Ring mit Schaden und Heilen, temporäre TP, Todesrettung · Zauberplätze als Kristalle, Kräfte zum Abhaken · „Was kann ich tun?“ nach Aktion, Bonusaktion und Reaktion · Wirken verbraucht Plätze, setzt Konzentration und leuchtet in der Farbe der Schule · Konzentrationsprobe erscheint automatisch nach Schaden · Proben und Rettungswürfe per Klick · Zustände im vollen Regeltext · Uhren · Gefolge · Lage und Schnellnotiz |
+| **Kampf** | Rundenzähler, Aktion, Bonusaktion und Reaktion zum Abhaken, Bewegung in Feldern mit Spurt und Aufstehen, laufende Effekte mit Ablauf in Runden, Hinweise aus den Regeln, Schild und Gegenzauber direkt wirkbar. Nur für Valerius, die Gegner führt der DM |
+| **Charakterbogen** | Alle Werte, Fertigkeiten mit Herkunft der Übung, Angriffe, Merkmale, Astrale Trance |
 | **Zauberbuch** | Vollständige Regeltexte, deine Werte, Trefferrechner, Tipps, Einsatzideen, Synergien und Konflikte, Korrekturen mit Quelle. Zauber-Sets für den Tag (Vorbereitung per Klick), freie Plätze, Vorschläge |
-| **Gefolge** | Untote mit Live-TP, Waffen und Erneuern der 24-Stunden-Kontrolle, alle Vertrauten-Gestalten, Unsichtbarer Diener, Aella, Dschungel-Plan für den nächsten Vertrauten |
+| **Gefolge** | Wertblöcke im vollen Wortlaut, Untote mit Live-TP, Waffen und Erneuern der 24-Stunden-Kontrolle, alle Vertrauten-Gestalten, Unsichtbarer Diener, Aella |
 | **Inventar** | Geldbeutel mit Wechseln, Gegenstände (Heiltrank trinken heilt direkt), Einkaufszettel mit „leistbar“ und Wegen ohne Gold |
 | **Werkstatt** | Was Valerius selbst herstellt (Alchemie, Heiltränke, Pfeile), Vorräte, Kosten und was es der Unsichtbaren Hand bringt |
 | **Journal** | Datierte Chronik mit Orten, Personen, Beute, Gegnern, Quest-Änderungen, Widersprüchen und Quellen |
 | **Quests** | Dringend, aktiv, Gerüchte, erledigt, gescheitert, jeweils mit Verlauf aus dem Journal |
-| **Rätselwand** | Offene Fragen an den DM zum Abhaken, Theorien, Widersprüche und Mysterien aus allen Texten |
+| **Rätselwand** | Ermittlungswand als Graph: offene Fragen, Theorien, Mysterien und Widersprüche um die Einträge, bei denen sich die Fäden bündeln. Dazu die Listen zum Abhaken am Tisch |
 | **Welt** | Personen, Fraktionen und Orte mit Stammbaum und Rückverweisen |
 | **Karte** | Echsen-Karte mit Zoom, gedeuteten und ungedeuteten Markierungen, eigene Markierungen per Klick |
-| **Netzwerk** | Die Unsichtbare Hand: Rollen, Leute mit Treue, Lohn und Wissen |
+| **Netzwerk** | Beziehungsnetz der Welt als Graph mit Ebenen (Verweise, Familie Lhaaz, Geheimnisse, Unsichtbare Hand) zum Ziehen, Zoomen und Suchen. Dazu die Hand: Rollen, Leute mit Treue, Lohn und Wissen |
 | **Wer weiß was?** | Floshems Ruf, Valerius' Geheimnisse und wer sie kennt oder ahnt, als Tabelle zum Anklicken |
-| **Archiv** | Prüfbericht, Taktik-Handbuch, DM-Nachrichten, Backstory, Alchemie, Einkauf und alle Drive-Originale mit Bewertung |
-| **Regeln** | Zustände, Aktionen, Zauberwirken, Deckung, Licht, Todesrettung, Rasten, jeweils mit Bezug zu Valerius, dazu alle Fachbegriffe Deutsch–Englisch |
-| **Druckfassung** | Alle Dokumente als helles A4-Layout zum Ausdrucken: Deckblatt, Charakterbogen, Sitzungsbogen zum Abhaken, Zauberbuch im Regelbuch-Stil, Zauberkarten, Gefolge, Regeln, Begriffe, Fragen an den DM, Inventar mit Werkstatt, Quests, Rätselwand, Journal, Welt, Netzwerk, Wer weiß was?, Karte, Archiv. Teile frei wählbar, PDFs per Befehl |
+| **Archiv** | Tiefenanalyse, Prüfbericht, Lage, Taktik-Handbuch, DM-Nachrichten, Stufe-6-Planer, Backstory, Alchemie, Einkauf, Aufbauplan und alle Drive-Originale mit Bewertung |
+| **Regeln** | D&D 5e im vollen Wortlaut, von den Zuständen bis zur Magiertabelle, jede Regel mit „Für Valerius“, Suche, dazu alle Fachbegriffe Deutsch–Englisch |
+| **Druckfassung** | Alles als helles A4-Layout: Deckblatt, Charakterbogen, Sitzungsbogen zum Abhaken, Zauberbuch im Regelbuch-Stil, Zauberkarten, Gefolge, Spickzettel, Begriffe, Fragen an den DM, Inventar, Quests, Uhren, Rätselwand, Journal, Welt, Netzwerk, Wer weiß was?, Karte, volles Regelwerk mit Sprungmarken, Archiv. Teile frei wählbar, PDFs per Befehl |
 
-Überall: **Suche mit Strg+K** (oder `/`), **Vorschaukarten** beim Überfahren von Verweisen, **Würfelschale** mit `D`,
-Ziffern `1` bis `0` springen zu den Bereichen.
+Überall: **Suche mit Strg+K** (oder `/`), **Rückgängig mit Strg+Z**, **Vorschaukarten** beim Überfahren von Verweisen,
+**Würfelschale** mit `D` (rollende Würfel, Vorteil und Nachteil), Ziffern `1` bis `0` springen zu den Bereichen,
+in der Seitenleiste ein Schalter, der den Bildschirm des Tablets wach hält.
 
 ## Starten
 
@@ -40,7 +42,7 @@ cd app
 npm install
 npm run dev          # http://localhost:5173
 npm run check        # Typprüfung
-npm run check:data   # Kampagnendaten und alle Verweise prüfen
+npm run check:data   # Kampagnendaten, Regeln und alle Verweise prüfen
 npm run build        # Produktionsbuild
 npm run druck        # alle PDFs nach druck/ (das Grimoire muss laufen)
 ```
@@ -51,13 +53,13 @@ Im Druckdialog Kopf- und Fußzeilen ausschalten, die Seitenzahlen setzt die Druc
 
 ## Daten
 
-Alles liegt lesbar in [`campaign/`](campaign/README.md) (JSON und Markdown) und ist per Git versioniert.
-Die App schreibt nur den Spielstand, das Inventar, Quests, Journal, Karte, die Vorbereitung der Zauber, Fragen,
-Netzwerk, Zauber-Sets und Geheimnisse zurück.
+Alles liegt lesbar in [`campaign/`](campaign/README.md) (JSON und Markdown) und ist per Git versioniert, auch die
+Regelkapitel in `campaign/regeln/`. Die App schreibt nur den Spielstand, das Inventar, Quests, Journal, Karte, die
+Vorbereitung der Zauber, Fragen, Netzwerk, Zauber-Sets, Geheimnisse und Uhren zurück.
 Ändert Claude Code eine Datei, aktualisieren sich alle offenen Geräte sofort.
 
 **Nach einer Session:** Erzähl Claude Code, was passiert ist. Claude legt einen datierten Journal-Eintrag an,
-aktualisiert Quests, Inventar, Personen und Orte und verlinkt alles. Am Tisch landen Schnellnotizen automatisch
+aktualisiert Quests, Inventar, Uhren, Personen und Orte und verlinkt alles. Am Tisch landen Schnellnotizen automatisch
 im Journal.
 
 ## Optional
@@ -67,6 +69,8 @@ im Journal.
 
 ---
 
-Regelinhalte teilweise nach dem System Reference Document 5.1 von Wizards of the Coast LLC (CC BY 4.0), in eigener
-deutscher Fassung. Toll the Dead, Ice Knife, Tidal Wave und Thunder Step stammen aus Xanathars Ratgeber für alles,
-Summon Fey aus Tashas Kessel voller Allem. Sie sind in eigenen Worten zusammengefasst.
+Enthält Regelinhalte aus dem System Reference Document 5.1 („SRD 5.1“) von Wizards of the Coast LLC, verfügbar unter
+https://dnd.wizards.com/resources/systems-reference-document, lizenziert unter der Creative Commons Attribution 4.0
+International License (https://creativecommons.org/licenses/by/4.0/legalcode), in eigener deutscher Übersetzung.
+Regeln und Zauber aus anderen Büchern (Xanathars Ratgeber für alles, Tashas Kessel voller Allem, Spielleiterhandbuch)
+stehen in eigenen Worten und sind mit ihrer Quelle gekennzeichnet.

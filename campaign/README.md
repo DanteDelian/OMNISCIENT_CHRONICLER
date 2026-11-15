@@ -8,7 +8,7 @@ Alles, was das Grimoire anzeigt, steht in diesen Dateien. Ändert man sie (von H
 | Datei | Inhalt | Schreibt die App? |
 | :-- | :-- | :-- |
 | `character.json` | Charakterbogen: Attribute, Übungen, TP-Maximum, Angriffe, Merkmale (`features`) | nein |
-| `state.json` | Spielstand: aktuelle TP, verbrauchte Plätze, Kräfte, Zustände, Konzentration, Trance, Untote | ja |
+| `state.json` | Spielstand: aktuelle TP, verbrauchte Plätze, Kräfte, Zustände, Konzentration, Trance, Untote, laufender Kampf | ja |
 | `spells.json` | Zauber mit vollständigem Regeltext, Tipps, Verweisen, Korrekturen | ja (nur `prepared`) |
 | `creatures.json` | Wertblöcke: Vertraute, Diener, Untote, Gefährtin | nein |
 | `inventory.json` | Geld, Gegenstände, Wunschliste | ja |
@@ -21,7 +21,7 @@ Alles, was das Grimoire anzeigt, steht in diesen Dateien. Ändert man sie (von H
 | `netzwerk.json` | Die Unsichtbare Hand: Rollen und Leute mit Treue, Lohn und Wissen (Seite Netzwerk) | ja |
 | `zaubersets.json` | Zauber-Sets für den Tag: Prioritätenlisten zum Vorbereiten (Zauberbuch, Dialog Lange Rast, Druck) | ja |
 | `geheimnisse.json` | Wer weiß was? Floshems Ruf, Gefahren und Geheimnisse mit Mitwissern (eigene Seite, Druck) | ja |
-| `uhren.json` | Uhren: Fristen, wachsende Gefahren und Ziele, in Feldern gezählt (Spieltisch, Quests) | ja |
+| `uhren.json` | Uhren: Fristen, wachsende Gefahren und Ziele, in Feldern gezählt (Karte Uhren am Spieltisch, Druck) | ja |
 | `regeln/*.md` | Regelwerk im vollen Wortlaut: ein Kapitel pro Datei (Seite Regeln, Spickzettel, Zustände am Spieltisch) | nein |
 | `docs/*.md` | Archiv-Dokumente (Prüfbericht, Lage, Taktik, DM-Nachrichten, Backstory, Alchemie, Einkauf) | nein |
 | `world/*.md` | Personen, Fraktionen, Orte | nein |
@@ -145,6 +145,13 @@ Vorbereitung. `icon` aus `ship | castle | wand | building | swords | moon`. Das 
 (Fortschritt). `segments` ist die Zahl der Felder (2 bis 12), `filled` die gefüllten, `unit` sagt, wofür ein Feld steht („Stunden“).
 `when` (wann sie abläuft), `then` (was dann passiert) und `note` sind Markdown, `link` ist der Name eines Eintrags. Die App füllt und
 leert Felder per Klick. Unbekannte Stände als Schätzung kennzeichnen: Den wahren Stand kennt der DM.
+
+### state.json: Kampf
+Nur die App schreibt `combat`, solange ein Kampf läuft (Seite Kampf, Knopf „Kampf“ im Kopf des Spieltischs):
+`{round, used{action, bonus, reaction, move, dash, bonusSpell, leveledSpell}, effects[{id, name, until, spellId, note}], startedAt}`.
+`move` ist die verbrauchte Bewegung in Metern, `until` die Runde, mit deren Beginn ein Effekt endet (`null`: bis du ihn beendest).
+Zauber mit Wirkungsdauer legen beim Wirken einen Effekt an. „Kampf beenden“ und die lange Rast entfernen `combat` wieder.
+Es gibt bewusst keine Gegner und keine Initiative-Liste: Die führt der DM.
 
 ### Rätselwand (automatisch)
 Die Seite sammelt alles, was in Texten als `*Theorie:*`, `*Theorie (Datum):*`, Liste unter `*Theorien:*` oder `**Offen:**`
