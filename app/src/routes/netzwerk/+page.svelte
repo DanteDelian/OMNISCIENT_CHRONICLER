@@ -1,5 +1,12 @@
 <script lang="ts">
-	import { Plus, Pencil, Trash2, Eye, MapPin, Coins, UserPlus, ScrollText } from '@lucide/svelte';
+	import { Plus, Pencil, Trash2, Eye, MapPin, Coins, UserPlus, ScrollText, Network, Users, Search } from '@lucide/svelte';
+	import { goto } from '$app/navigation';
+	import { page } from '$app/state';
+	import ForceGraph from '$lib/components/ForceGraph.svelte';
+	import GraphSidePanel from '$lib/components/GraphSidePanel.svelte';
+	import { WORLD_LAYERS, worldGraph, type WorldLayer } from '$lib/graphs';
+	import { WORLD_GROUPS } from '$lib/print';
+	import { TONE } from '$lib/tone';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import Markdown from '$lib/components/Markdown.svelte';
 	import RefChip from '$lib/components/RefChip.svelte';
@@ -24,6 +31,44 @@
 	const gold = $derived(goldValue(campaign.data.inventory.currency));
 	const plan = $derived(campaign.data.docs.find((d) => d.slug === 'aufbauplan'));
 	const rules = $derived(mdSection(plan?.body, 'Regeln für die Hand'));
+
+	// ---------- Ansicht: Beziehungsnetz oder die Hand ----------
+	const view = $derived(page.url.searchParams.get('ansicht') === 'hand' ? 'hand' : 'netz');
+	function setView(v: 'netz' | 'hand') {
+		const u = new URL(page.url);
+		if (v === 'hand') u.searchParams.set('ansicht', 'hand');
+		else u.searchParams.delete('ansicht');
+		goto(u.pathname + u.search, { replaceState: true, noScroll: true, keepFocus: true });
+	}
+
+	function toggled<T>(set: Set<T>, v: T): Set<T> {
+		const next = new Set(set);
+		if (next.has(v)) next.delete(v);
+		else next.add(v);
+		return next;
+	}
+	let layers = $state(new Set<WorldLayer>(['verweise', 'familie', 'geheimnisse']));
+	let groups = $state(new Set(WORLD_GROUPS.map((g) => g.id)));
+	const graph = $derived(worldGraph(campaign.data, campaign.resolve, layers, groups));
+	let selected = $state<string | null>(null);
+	let focus = $state<string | null>(null);
+	let query = $state('');
+	const matches = $derived(
+		query.trim()
+			? graph.nodes.filter((n) => n.label.toLowerCase().includes(query.trim().toLowerCase())).slice(0, 6)
+			: []
+	);
+	const selectedNode = $derived(graph.nodes.find((n) => n.id === selected));
+	const hubs = $derived(
+		graph.nodes
+			.filter((n) => n.id !== 'valerius' && n.id.startsWith('world:'))
+			.sort((a, b) => b.r - a.r)
+			.slice(0, 8)
+	);
+	function pick(id: string) {
+		focus = null;
+		queueMicrotask(() => (focus = id));
+	}
 
 	const roleLabel = (id: string) => net.roles.find((r) => r.id === id)?.label ?? id;
 	const fmtWage = (sm: number) => (sm % 10 === 0 ? `${sm / 10} GM` : `${sm} SM`) + ' pro Tag';
@@ -71,8 +116,10 @@
 
 <PageHeader
 	eyebrow="Netzwerk"
-	title="Die Unsichtbare Hand"
-	subtitle="Deine Leute, ihre Rollen und was sie über dich wissen. Rollen und Phasen stammen aus dem Aufbauplan."
+	title={view === 'hand' ? 'Die Unsichtbare Hand' : 'Beziehungsnetz'}
+	subtitle={view === 'hand'
+		? 'Deine Leute, ihre Rollen und was sie über dich wissen. Rollen und Phasen stammen aus dem Aufbauplan.'
+		: 'Wer mit wem verbunden ist, wer deine Geheimnisse kennt und wie das Haus Lhaaz zusammenhängt. Valerius steht in der Mitte.'}
 >
 	{#snippet actions()}
 		{#if plan}<a class="btn" href="/archiv/{plan.slug}" data-ref="doc:{plan.slug}"><ScrollText size={15} />Aufbauplan</a>{/if}
@@ -80,6 +127,78 @@
 	{/snippet}
 </PageHeader>
 
+<div class="mb-5 flex gap-1 rounded-xl bg-black/30 p-1 sm:inline-flex" role="tablist" aria-label="Ansicht">
+	<button role="tab" aria-selected={view === 'netz'} class="flex flex-1 items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium whitespace-nowrap transition {view === 'netz' ? 'bg-white/10 text-ink' : 'text-ink-3 hover:text-ink'}" onclick={() => setView('netz')}><Network size={15} />Beziehungsnetz</button>
+	<button role="tab" aria-selected={view === 'hand'} class="flex flex-1 items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium whitespace-nowrap transition {view === 'hand' ? 'bg-white/10 text-ink' : 'text-ink-3 hover:text-ink'}" onclick={() => setView('hand')}><Users size={15} />Die Hand</button>
+</div>
+
+{#if view === 'netz'}
+	<div class="mb-3 flex flex-wrap items-center gap-1.5">
+		{#each WORLD_LAYERS as l (l.id)}
+			<button class="chip {layers.has(l.id) ? 'chip-on' : ''}" aria-pressed={layers.has(l.id)} title={l.hint} onclick={() => (layers = toggled(layers, l.id))}>{l.label}</button>
+		{/each}
+		<span class="mx-1 hidden h-5 w-px bg-line sm:block"></span>
+		{#each WORLD_GROUPS as g (g.id)}
+			<button class="chip {groups.has(g.id) ? 'chip-on' : ''}" aria-pressed={groups.has(g.id)} onclick={() => (groups = toggled(groups, g.id))}>{g.label}</button>
+		{/each}
+		<div class="relative ml-auto w-full sm:w-56">
+			<Search size={14} class="absolute top-1/2 left-3 -translate-y-1/2 text-ink-3" />
+			<input
+				class="input !h-8 !pl-8 text-sm"
+				placeholder="Person, Ort, Gruppe finden"
+				bind:value={query}
+				aria-label="Im Netz suchen"
+				onkeydown={(e) => {
+					if (e.key === 'Enter' && matches[0]) {
+						pick(matches[0].id);
+						query = '';
+					}
+				}}
+			/>
+			{#if matches.length}
+				<ul class="panel absolute top-9 right-0 left-0 z-20 p-1">
+					{#each matches as m (m.id)}
+						<li><button class="flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-left text-sm hover:bg-white/[0.06]" onclick={() => { pick(m.id); query = ''; }}><span class="h-2 w-2 rounded-full" style="background: {m.color}"></span>{m.label}<span class="ml-auto text-xs text-ink-3">{m.kind}</span></button></li>
+					{/each}
+				</ul>
+			{/if}
+		</div>
+	</div>
+
+	<div class="grid gap-4 xl:grid-cols-[minmax(0,1fr)_340px]">
+		<div class="panel overflow-hidden">
+			<ForceGraph nodes={graph.nodes} links={graph.links} bind:selected {focus} label="Beziehungsnetz der Kampagne">
+				{#snippet legend()}
+					<div class="flex flex-wrap items-center gap-x-3 gap-y-1 rounded-xl border border-line bg-bg/75 px-3 py-2 text-[0.68rem] text-ink-3 backdrop-blur">
+						{#each Object.entries(TONE) as [k, t] (k)}<span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full" style="background: {t.color}"></span>{t.label}</span>{/each}
+						<span class="text-ink-3/80">● Person · ⬢ Gruppe · ◆ Ort · ■ Geheimnis · ★ du</span>
+					</div>
+				{/snippet}
+			</ForceGraph>
+		</div>
+		<GraphSidePanel node={selectedNode} nodes={graph.nodes} links={graph.links} onpick={pick} onclose={() => (selected = null)}>
+			{#snippet intro()}
+				<div class="eyebrow mb-2">So liest du das Netz</div>
+				<p class="text-sm leading-relaxed text-ink-2">
+					Jeder Punkt ist ein Eintrag aus der Welt, die Farbe zeigt, wie er zu dir steht. Linien entstehen, wo ein Eintrag einen anderen erwähnt, wo der Stammbaum verwandt
+					zeigt und wo jemand eines deiner Geheimnisse kennt oder ahnt. Je mehr Fäden, desto größer der Punkt.
+				</p>
+				<ul class="mt-3 space-y-1 text-xs text-ink-3">
+					<li><b class="text-ink-2">Antippen</b> zeigt Einzelheiten und Nachbarn.</li>
+					<li><b class="text-ink-2">Ziehen</b> verschiebt einen Punkt, mit Umschalt bleibt er liegen.</li>
+					<li><b class="text-ink-2">Rad oder zwei Finger</b> zoomen, die leere Fläche verschiebt.</li>
+				</ul>
+				<div class="eyebrow mt-6 mb-2">Die meisten Fäden</div>
+				<ul class="space-y-1">
+					{#each hubs as h (h.id)}
+						<li><button class="flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-left text-sm hover:bg-white/[0.05]" onclick={() => pick(h.id)}><span class="h-2 w-2 rounded-full" style="background: {h.color}"></span><span class="flex-1 truncate">{h.label}</span><span class="text-xs text-ink-3">{h.kind}</span></button></li>
+					{/each}
+				</ul>
+				<p class="mt-5 text-xs text-ink-3">{graph.nodes.length} Punkte · {graph.links.length} Verbindungen</p>
+			{/snippet}
+		</GraphSidePanel>
+	</div>
+{:else}
 <div class="mb-8 grid grid-cols-2 gap-3 lg:grid-cols-4">
 	<div class="panel p-4">
 		<div class="eyebrow">Aktiv</div>
@@ -210,6 +329,8 @@
 		</aside>
 	{/if}
 </div>
+
+{/if}
 
 <Modal open={!!editing} title={isNew ? 'Neue Person' : 'Person bearbeiten'} onclose={() => (editing = null)} width="max-w-xl">
 	{#if editing}

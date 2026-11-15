@@ -1,5 +1,11 @@
 <script lang="ts">
-	import { Plus, Pencil, Trash2, Check, RotateCcw, Printer, Search, TriangleAlert, Sparkles, CircleHelp, Lightbulb } from '@lucide/svelte';
+	import { Plus, Pencil, Trash2, Check, RotateCcw, Printer, Search, TriangleAlert, Sparkles, CircleHelp, Lightbulb, Waypoints, List } from '@lucide/svelte';
+	import { goto } from '$app/navigation';
+	import { page } from '$app/state';
+	import { tick } from 'svelte';
+	import ForceGraph from '$lib/components/ForceGraph.svelte';
+	import GraphSidePanel from '$lib/components/GraphSidePanel.svelte';
+	import { MYSTERY_LAYERS, mysteryGraph, type MysteryLayer } from '$lib/graphs';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import Markdown from '$lib/components/Markdown.svelte';
 	import RefChip from '$lib/components/RefChip.svelte';
@@ -31,6 +37,49 @@
 		const f = normalizeName(filter);
 		return groupClues(f ? clues.filter((c) => normalizeName(`${c.text} ${c.source.title}`).includes(f)) : clues);
 	});
+
+	// ---------- Ansicht: Ermittlungswand oder Listen ----------
+	const view = $derived(page.url.searchParams.get('ansicht') === 'listen' ? 'listen' : 'wand');
+	function setView(v: 'wand' | 'listen') {
+		const u = new URL(page.url);
+		if (v === 'listen') u.searchParams.set('ansicht', 'listen');
+		else u.searchParams.delete('ansicht');
+		u.hash = '';
+		goto(u.pathname + u.search, { replaceState: true, noScroll: true, keepFocus: true });
+	}
+	function toggled<T>(set: Set<T>, v: T): Set<T> {
+		const next = new Set(set);
+		if (next.has(v)) next.delete(v);
+		else next.add(v);
+		return next;
+	}
+	// Theorien sind die meisten Funde: zuerst ausgeblendet, damit die Wand lesbar bleibt
+	let layers = $state(new Set<MysteryLayer>(['fragen', 'offen', 'mysterien', 'widersprueche']));
+	let toFilter = $state(new Set<string>(TO));
+	const wall = $derived(mysteryGraph(campaign.data, campaign.resolve, layers, toFilter));
+	let selected = $state<string | null>(null);
+	let graphFocus = $state<string | null>(null);
+	const selectedNode = $derived(wall.nodes.find((n) => n.id === selected));
+	const hotspots = $derived(
+		wall.nodes
+			.filter((n) => n.id.startsWith('world:'))
+			.sort((a, b) => b.r - a.r)
+			.slice(0, 8)
+	);
+	function pick(id: string) {
+		graphFocus = null;
+		queueMicrotask(() => (graphFocus = id));
+	}
+	/** Von der Wand aus eine Frage beantworten: zur Liste wechseln und das Antwortfeld öffnen */
+	async function answerFromWall(id: string) {
+		const q = fragen.find((x) => `frage:${x.id}` === id);
+		if (!q) return;
+		setView('listen');
+		await tick();
+		startAnswer(q);
+		await tick();
+		document.getElementById(q.id)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+	}
 
 	function patch(id: string, fn: (q: Question) => void) {
 		campaign.change('fragen', (list) => {
@@ -117,7 +166,7 @@
 
 <div class="mb-8 grid grid-cols-2 gap-3 lg:grid-cols-4">
 	{#each tiles as t (t.id)}
-		<a href="#{t.id}" class="panel panel-hover p-4">
+		<a href="?ansicht=listen#{t.id}" class="panel panel-hover p-4">
 			<div class="eyebrow flex items-center gap-1.5"><t.icon size={12} style="color: {t.color}" />{t.label}</div>
 			<div class="num mt-1 text-2xl text-ink">{t.value}</div>
 			<div class="text-xs text-ink-3">{t.hint}</div>
@@ -125,6 +174,54 @@
 	{/each}
 </div>
 
+<div class="mb-5 flex gap-1 rounded-xl bg-black/30 p-1 sm:inline-flex" role="tablist" aria-label="Ansicht">
+	<button role="tab" aria-selected={view === 'wand'} class="flex flex-1 items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium whitespace-nowrap transition {view === 'wand' ? 'bg-white/10 text-ink' : 'text-ink-3 hover:text-ink'}" onclick={() => setView('wand')}><Waypoints size={15} />Ermittlungswand</button>
+	<button role="tab" aria-selected={view === 'listen'} class="flex flex-1 items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium whitespace-nowrap transition {view === 'listen' ? 'bg-white/10 text-ink' : 'text-ink-3 hover:text-ink'}" onclick={() => setView('listen')}><List size={15} />Fragen und Funde</button>
+</div>
+
+{#if view === 'wand'}
+	<div class="mb-3 flex flex-wrap items-center gap-1.5">
+		{#each MYSTERY_LAYERS as l (l.id)}
+			<button class="chip {layers.has(l.id) ? 'chip-on' : ''}" aria-pressed={layers.has(l.id)} onclick={() => (layers = toggled(layers, l.id))}>
+				<span class="h-2 w-2 rounded-full" style="background: {l.color}"></span>{l.label}
+			</button>
+		{/each}
+		<span class="mx-1 hidden h-5 w-px bg-line sm:block"></span>
+		{#each TO as to (to)}
+			<button class="chip {toFilter.has(to) ? 'chip-on' : ''}" aria-pressed={toFilter.has(to)} onclick={() => (toFilter = toggled(toFilter, to))}>Fragen {QUESTION_TO[to].label.toLowerCase()}</button>
+		{/each}
+	</div>
+	<div class="grid gap-4 xl:grid-cols-[minmax(0,1fr)_360px]">
+		<div class="panel overflow-hidden">
+			<ForceGraph nodes={wall.nodes} links={wall.links} bind:selected focus={graphFocus} curved label="Ermittlungswand: Fragen, Theorien und wen sie betreffen">
+				{#snippet legend()}
+					<div class="flex flex-wrap items-center gap-x-3 gap-y-1 rounded-xl border border-line bg-bg/75 px-3 py-2 text-[0.68rem] text-ink-3 backdrop-blur">
+						<span>● Frage</span><span>◆ Theorie, offener Punkt</span><span>⬢ Mysterium</span><span>▲ Widerspruch</span><span class="text-ink-3/80">Große Punkte: Personen, Orte, Gruppen mit vielen Fäden</span>
+					</div>
+				{/snippet}
+			</ForceGraph>
+		</div>
+		<GraphSidePanel node={selectedNode} nodes={wall.nodes} links={wall.links} onpick={pick} onclose={() => (selected = null)}>
+			{#snippet intro()}
+				<div class="eyebrow mb-2">Wo die Fäden zusammenlaufen</div>
+				<p class="text-sm leading-relaxed text-ink-2">
+					Jede offene Frage, jede Theorie und jeder offene Punkt hängt an den Personen, Orten und Gruppen, die er betrifft: über Verweise und über Namen im Text. Wo viele
+					Fäden zusammenlaufen, wird der Punkt groß. Dort lohnt sich die nächste Frage am Tisch.
+				</p>
+				<div class="eyebrow mt-6 mb-2">Brennpunkte</div>
+				<ul class="space-y-1">
+					{#each hotspots as h (h.id)}
+						<li><button class="flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-left text-sm hover:bg-white/[0.05]" onclick={() => pick(h.id)}><span class="h-2 w-2 rounded-full" style="background: {h.color}"></span><span class="flex-1 truncate">{h.label}</span><span class="text-xs text-ink-3">{h.kind}</span></button></li>
+					{/each}
+				</ul>
+				<p class="mt-5 text-xs text-ink-3">{wall.nodes.length} Punkte · {wall.links.length} Fäden</p>
+			{/snippet}
+			{#snippet actions(n)}
+				{#if n.id.startsWith('frage:')}<button class="btn btn-sm btn-life" onclick={() => answerFromWall(n.id)}><Check size={13} />Antwort eintragen</button>{/if}
+			{/snippet}
+		</GraphSidePanel>
+	</div>
+{:else}
 <div class="grid gap-6 xl:grid-cols-[1fr_380px]">
 	<section id="fragen" class="scroll-mt-24">
 		<h2 class="title-display mb-1 text-2xl">Offene Fragen</h2>
@@ -278,6 +375,8 @@
 		{/each}
 	</div>
 </section>
+
+{/if}
 
 <Modal open={!!editing} title={isNew ? 'Neue Frage' : 'Frage bearbeiten'} onclose={() => (editing = null)} width="max-w-xl">
 	{#if editing}
