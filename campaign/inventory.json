@@ -480,6 +480,13 @@
       "why": "Dein Zauberbuch ist dein wertvollster Besitz. Eine Kopie kostet 1 Stunde und 10 GM pro Zaubergrad: für deine 14 Zauber (22 Grade) 22 Stunden und 220 GM, dazu das Buch. Die Arbeit passt in deine freien Nachtstunden, die Kopie ins Kellerlabor. Siehe [[Dein Zauberbuch]]."
     },
     {
+      "id": "ring-gedankenschutz",
+      "name": "Ring des Gedankenschutzes",
+      "priority": "saladin",
+      "phase": "saladin",
+      "why": "Macht dich immun gegen Magie, die Gedanken liest oder Lügen erkennt, und lässt sich unsichtbar machen. Der Gegenstand gegen Luciras Gedankenlesen und für jeden, der eine geheime Organisation führt. Alternative: das Amulett des Schutzes vor Ortung, das dich vor Erkenntnismagie und Suchzaubern verbirgt. Beide brauchen Einstimmung. Wortlaut unter **Regeln → Magische Gegenstände**."
+    },
+    {
       "id": "nimmervoller-beutel",
       "name": "Nimmervoller Beutel",
       "priority": "saladin",

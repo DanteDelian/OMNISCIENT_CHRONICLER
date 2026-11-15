@@ -121,6 +121,7 @@ Dazu aus dem Juli: Echsenmenschen zu jagen, sei „unter ihrer Würde“. Im Nov
 Der Anführer „sammelt die Seelen“. Bei seiner Leiche fand die Fee „einen Sack seltsamer Münzen“. Geraubte Seelen brauchen ein Gefäß, wenn man sie „in der Rangordnung nach oben“ weitergibt.
 
 - *Theorie:* Die seltsamen Münzen tragen die geraubten Seelen der Echsenkrieger.
+- *Theorie:* Die seltsamen Münzen sind schlicht fremdes Geld, etwa Münzen des Imperiums. Dann ist die Frage, warum ein Jäger der Society, die gegen das Imperium gegründet wurde, einen Sack davon trägt.
 - **Prüfen:** Lass dir die Münzen zeigen. [[Magie entdecken]] als Ritual zeigt die Schule, Nekromantie wäre ein Treffer. Ein Wurf auf Arkane Kunde (+7) oder Religion (+4) sagt dir vielleicht, was du da siehst.
 - In offiziellen Abenteuern gibt es Seelenmünzen als Währung der Neun Höllen. Dort befreit ein Zauber, der Flüche bricht, die Seele in der Münze (*Baldur's Gate: Abstieg nach Avernus*). Ob euer DM so etwas meint, ist offen.
 - Die Fee spürte beim sterbenden Echsenkrieger, dass die Seele fehlte, und [[Crush Lu]] spürte in Tayas Körper zwei Seelen. Beide können also prüfen, was in den Münzen steckt. Die Fee weiß es vielleicht längst.
