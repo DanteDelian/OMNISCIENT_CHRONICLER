@@ -1,10 +1,11 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { Search, Dices, Brain, CircleAlert } from '@lucide/svelte';
+	import { Search, Dices, Brain, CircleAlert, Swords, Undo2, Sun, SunDim } from '@lucide/svelte';
 	import { NAV, isActive } from '$lib/nav';
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { live } from '$lib/stores/live.svelte';
 	import { ui } from '$lib/stores/ui.svelte';
+	import { wakelock } from '$lib/stores/wakelock.svelte';
 	import { slotTotals, slotsLeft } from '$lib/rules';
 
 	let { onnavigate }: { onnavigate?: () => void } = $props();
@@ -15,6 +16,7 @@
 	const quests = $derived(campaign.data.quests.filter((q) => q.status === 'aktiv' && q.urgent).length);
 	const questions = $derived(campaign.data.fragen.filter((q) => q.status === 'offen').length);
 	const isMac = typeof navigator !== 'undefined' && /Mac/.test(navigator.platform);
+	const lastStep = $derived(campaign.history.at(-1));
 </script>
 
 <nav class="flex h-full flex-col gap-4 px-3 py-4" aria-label="Hauptnavigation">
@@ -59,6 +61,12 @@
 			{/if}
 		</div>
 	</a>
+	{#if s.combat}
+		<a href="/kampf" class="flex items-center justify-between rounded-xl border border-blood/40 bg-blood/[0.08] px-3 py-2 text-sm transition hover:border-blood/70" onclick={onnavigate}>
+			<span class="flex items-center gap-2"><Swords size={14} class="text-blood" />Kampf</span>
+			<span class="num text-ink-2">Runde <b class="text-ink">{s.combat.round}</b></span>
+		</a>
+	{/if}
 
 	<div class="flex-1 space-y-4 overflow-y-auto">
 		{#each NAV as g (g.group)}
@@ -93,6 +101,27 @@
 		<button class="btn w-full justify-between !px-3" onclick={() => (ui.dice = !ui.dice)}>
 			<span class="flex items-center gap-2"><Dices size={15} />Würfel</span><span class="kbd">D</span>
 		</button>
+		<div class="flex gap-2">
+			<button
+				class="btn min-w-0 flex-1 justify-between !px-3"
+				disabled={!campaign.canUndo}
+				onclick={() => campaign.undo()}
+				title={lastStep ? `Rückgängig: ${lastStep.label}` : 'Nichts zum Rückgängigmachen'}
+			>
+				<span class="flex min-w-0 items-center gap-2"><Undo2 size={15} /><span class="truncate">{lastStep ? lastStep.label : 'Rückgängig'}</span></span><span class="kbd shrink-0">{isMac ? '⌘' : 'Strg'} Z</span>
+			</button>
+			{#if wakelock.supported}
+				<button
+					class="btn !px-2.5 {wakelock.enabled ? 'btn-gold' : ''}"
+					onclick={() => wakelock.toggle()}
+					aria-pressed={wakelock.enabled}
+					aria-label="Bildschirm wach halten"
+					title={wakelock.enabled ? (wakelock.active ? 'Bildschirm bleibt an (klicken zum Ausschalten)' : 'Wach halten ist an, der Browser hat es noch nicht erlaubt') : 'Bildschirm wach halten (fürs Tablet am Tisch)'}
+				>
+					{#if wakelock.enabled}<Sun size={15} />{:else}<SunDim size={15} />{/if}
+				</button>
+			{/if}
+		</div>
 		<div class="flex items-center justify-between px-1 text-[0.7rem] text-ink-3">
 			<span class="flex items-center gap-1.5">
 				<span class="h-1.5 w-1.5 rounded-full {live.connected ? 'bg-life' : 'bg-ink-3'}"></span>

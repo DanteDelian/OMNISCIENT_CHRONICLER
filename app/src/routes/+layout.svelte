@@ -13,11 +13,12 @@
 	import { onMount, untrack } from 'svelte';
 	import { goto, onNavigate } from '$app/navigation';
 	import { page } from '$app/state';
-	import { Menu, X } from '@lucide/svelte';
+	import { Menu, X, Undo2, Swords } from '@lucide/svelte';
 	import { fly, fade } from 'svelte/transition';
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { live } from '$lib/stores/live.svelte';
 	import { ui } from '$lib/stores/ui.svelte';
+	import { wakelock } from '$lib/stores/wakelock.svelte';
 	import { NAV } from '$lib/nav';
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import Starfield from '$lib/components/Starfield.svelte';
@@ -46,6 +47,7 @@
 
 	onMount(() => {
 		live.start();
+		wakelock.init();
 		const flush = () => campaign.flushAll();
 		window.addEventListener('pagehide', flush);
 		return () => window.removeEventListener('pagehide', flush);
@@ -56,10 +58,17 @@
 		if (!document.startViewTransition || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 		if (nav.from?.url.pathname === nav.to?.url.pathname) return;
 		if (nav.to?.url.pathname.startsWith('/druck') || nav.from?.url.pathname.startsWith('/druck')) return;
+		// Der Name gilt nur während des Übergangs: Er macht <main> zu einem eigenen Stapelkontext,
+		// sonst lägen Dialoge der Seiten unter der mobilen Kopfzeile.
+		const main = document.querySelector('main');
 		return new Promise((resolve) => {
-			document.startViewTransition(async () => {
+			if (main) main.style.viewTransitionName = 'main';
+			const t = document.startViewTransition(async () => {
 				resolve();
 				await nav.complete;
+			});
+			t.finished.finally(() => {
+				if (main) main.style.viewTransitionName = '';
 			});
 		});
 	});
@@ -73,6 +82,14 @@
 		if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
 			e.preventDefault();
 			ui.palette = !ui.palette;
+			return;
+		}
+		// Strg+Z nimmt den letzten Spielschritt zurück, außer beim Tippen in ein Feld
+		if ((e.metaKey || e.ctrlKey) && !e.shiftKey && !e.altKey && e.key.toLowerCase() === 'z' && !typing(e)) {
+			if (campaign.canUndo) {
+				e.preventDefault();
+				campaign.undo();
+			}
 			return;
 		}
 		if (typing(e) || e.metaKey || e.ctrlKey || e.altKey) return;
@@ -109,7 +126,13 @@
 		<div class="no-print fixed inset-x-0 top-0 z-30 flex h-14 items-center justify-between border-b border-line bg-bg/80 px-4 backdrop-blur-xl lg:hidden">
 			<button class="icon-btn" onclick={() => (mobileNav = true)} aria-label="Menü"><Menu size={20} /></button>
 			<span class="title-display title-gold text-2xl">Valerius</span>
-			<img src="/api/assets/{campaign.data.character.avatar ?? campaign.data.character.portrait}" alt="" class="h-8 w-8 rounded-full ring-1 ring-gold/40" />
+			<div class="flex items-center gap-1">
+				{#if campaign.data.state.combat}
+					<a href="/kampf" class="badge num" style="--c: var(--color-blood)" aria-label="Kampf, Runde {campaign.data.state.combat.round}"><Swords size={11} />{campaign.data.state.combat.round}</a>
+				{/if}
+				<button class="icon-btn" onclick={() => campaign.undo()} disabled={!campaign.canUndo} aria-label="Rückgängig" title={campaign.history.at(-1)?.label ?? 'Nichts zum Rückgängigmachen'}><Undo2 size={18} /></button>
+				<img src="/api/assets/{campaign.data.character.avatar ?? campaign.data.character.portrait}" alt="" class="h-8 w-8 rounded-full ring-1 ring-gold/40" />
+			</div>
 		</div>
 		{#if mobileNav}
 			<div class="fixed inset-0 z-50 lg:hidden">
@@ -121,7 +144,7 @@
 			</div>
 		{/if}
 
-		<main class="min-w-0 flex-1 px-4 pt-20 pb-24 sm:px-6 lg:px-8 lg:pt-7" style="view-transition-name: main">
+		<main class="min-w-0 flex-1 px-4 pt-20 pb-24 sm:px-6 lg:px-8 lg:pt-7">
 			{#key page.url.pathname}
 				<div class="rise mx-auto max-w-[1520px]">
 					{@render children()}

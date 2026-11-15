@@ -1,14 +1,16 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
+	import { backOut } from 'svelte/easing';
+	import RollNumber from './RollNumber.svelte';
 	import { rolls } from '$lib/stores/rolls.svelte';
 	import { ui } from '$lib/stores/ui.svelte';
 </script>
 
-<div class="pointer-events-none fixed right-4 bottom-4 z-40 flex w-[320px] flex-col-reverse gap-2 {ui.dice ? 'opacity-0' : ''}" aria-live="polite">
+<div class="pointer-events-none fixed right-4 bottom-4 z-40 flex w-[min(320px,calc(100vw-2rem))] flex-col-reverse gap-2 {ui.dice ? 'opacity-0' : ''}" aria-live="polite">
 	{#each rolls.toasts as t (t.id)}
 		<button
-			class="panel pointer-events-auto flex items-center gap-3 px-3.5 py-2.5 text-left"
-			in:fly={{ x: 24, duration: 180 }}
+			class="panel pointer-events-auto flex items-center gap-3 px-3.5 py-2.5 text-left {t.crit === 'hit' ? 'toast-crit' : t.crit === 'miss' ? 'toast-fumble' : ''}"
+			in:fly={{ x: 32, duration: 260, easing: backOut }}
 			out:fly={{ x: 24, duration: 140 }}
 			onclick={() => rolls.dismiss(t.id)}
 		>
@@ -17,10 +19,10 @@
 			{:else}
 				<span
 					class="num grid h-11 w-11 shrink-0 place-items-center rounded-xl text-xl font-semibold {t.crit === 'hit'
-						? 'bg-life/15 text-life'
+						? 'bg-gold/15 text-gold'
 						: t.crit === 'miss'
 							? 'bg-blood/15 text-blood'
-							: 'bg-white/[0.06] text-ink'}">{t.total}</span
+							: 'bg-white/[0.06] text-ink'}"><RollNumber value={t.total ?? 0} range={t.range} /></span
 				>
 			{/if}
 			<span class="min-w-0">
@@ -30,3 +32,23 @@
 		</button>
 	{/each}
 </div>
+
+<style>
+	.toast-crit {
+		border-color: color-mix(in oklab, var(--color-gold) 55%, transparent);
+		animation: toast-glow 1.8s ease-out 0.5s;
+	}
+	.toast-fumble {
+		border-color: color-mix(in oklab, var(--color-blood) 50%, transparent);
+	}
+	@keyframes toast-glow {
+		30% {
+			box-shadow: 0 0 28px color-mix(in oklab, var(--color-gold) 45%, transparent);
+		}
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.toast-crit {
+			animation: none;
+		}
+	}
+</style>

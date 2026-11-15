@@ -6,7 +6,7 @@
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { rolls } from '$lib/stores/rolls.svelte';
 	import { ui } from '$lib/stores/ui.svelte';
-	import { useFeature } from '$lib/game';
+	import { markUsed, useFeature } from '$lib/game';
 	import { ruleHref, rulesOf } from '$lib/rulebook';
 	import { attackBonus, SCHOOL_COLOR, castable, diceDe, featureLeft, fmtMod, skillBonus, spellAttack, spellDc } from '$lib/rules';
 	import type { Attack, Feature, Spell } from '$lib/types';
@@ -117,6 +117,17 @@
 		};
 	});
 
+	/** Im Kampf: Welche Aktionsart ein Tab verbraucht */
+	const TAB_KIND: Partial<Record<Tab, 'action' | 'bonus' | 'reaction'>> = { aktion: 'action', bonus: 'bonus', reaktion: 'reaction' };
+	const TAB_NAME: Partial<Record<Tab, string>> = { aktion: 'Aktion', bonus: 'Bonusaktion', reaktion: 'Reaktion' };
+	const combat = $derived(s.combat);
+
+	/** Ein Wurf aus diesem Tab verbraucht im Kampf die passende Aktionsart */
+	function spend() {
+		const kind = TAB_KIND[tab];
+		if (kind) markUsed(kind);
+	}
+
 	const TABS: { id: Tab; label: string }[] = [
 		{ id: 'aktion', label: 'Aktion' },
 		{ id: 'bonus', label: 'Bonusaktion' },
@@ -145,11 +156,20 @@
 				role="tab"
 				aria-selected={tab === t.id}
 				class="shrink-0 rounded-lg px-3 py-1.5 text-xs font-medium whitespace-nowrap transition {tab === t.id ? 'bg-white/10 text-ink' : 'text-ink-3 hover:text-ink'}"
-				onclick={() => (tab = t.id)}>{t.label}</button
+				onclick={() => (tab = t.id)}
+				>{t.label}{#if combat && TAB_KIND[t.id]}{@const used = combat.used[TAB_KIND[t.id]!]}<span
+						class="ml-1.5 inline-block h-1.5 w-1.5 rounded-full align-middle {used ? 'bg-ink-3/50' : 'bg-life shadow-[0_0_6px_var(--color-life)]'}"
+						title={used ? 'verbraucht' : 'frei'}
+					></span>{/if}</button
 			>
 		{/each}
 	</div>
 	<p class="mb-3 flex items-start gap-2 text-xs text-ink-3"><Info size={13} class="mt-0.5 shrink-0" />{HINT[tab]}</p>
+	{#if combat && TAB_KIND[tab] && combat.used[TAB_KIND[tab]!]}
+		<p class="-mt-1 mb-3 rounded-lg border border-line bg-black/20 px-3 py-1.5 text-xs text-ink-3">
+			{TAB_NAME[tab]} in diesem Zug schon verbraucht{tab === 'reaktion' ? ', zurück zu Beginn deines Zuges' : ''}.
+		</p>
+	{/if}
 
 	{#if tab === 'standard'}
 		<ul class="grid gap-2 sm:grid-cols-2">
@@ -192,15 +212,34 @@
 							{/if}
 							<CastButton spell={r.spell} size="xs" />
 						{:else if r.attack}
-							<button class="btn btn-xs" onclick={() => rolls.check(`${r.attack!.name}: Angriff`, attackBonus(c, s, r.attack!))}>{fmtMod(attackBonus(c, s, r.attack))}</button>
+							<button
+								class="btn btn-xs"
+								onclick={() => {
+									rolls.check(`${r.attack!.name}: Angriff`, attackBonus(c, s, r.attack!));
+									spend();
+								}}>{fmtMod(attackBonus(c, s, r.attack))}</button
+							>
 							<button class="btn btn-xs" onclick={() => rolls.damage(`${r.attack!.name}: Schaden`, r.attack!.damage)}><Dices size={11} />{diceDe(r.attack.damage)}</button>
 							{#if r.attack.damageAlt}<button class="btn btn-xs" onclick={() => rolls.damage(`${r.attack!.name}: zweihändig`, r.attack!.damageAlt!)} title="zweihändig">{diceDe(r.attack.damageAlt)}</button>{/if}
 						{:else if r.feature?.uses}
 							<button class="btn btn-xs btn-primary" disabled={featureLeft(c, s, r.feature.id) <= 0} onclick={() => useFeature(r.feature!.id)}>Nutzen</button>
 						{:else if r.check}
-							<button class="btn btn-xs" onclick={() => rolls.check(r.check!.label, r.check!.bonus)} title="Bei Magierzaubern mit Vorteil"><Dices size={11} />{fmtMod(r.check.bonus)}</button>
+							<button
+								class="btn btn-xs"
+								onclick={() => {
+									rolls.check(r.check!.label, r.check!.bonus);
+									spend();
+								}}
+								title="Bei Magierzaubern mit Vorteil"><Dices size={11} />{fmtMod(r.check.bonus)}</button>
 						{:else if r.pseudo}
-							<button class="btn btn-xs" disabled={!r.pseudo.enabled} onclick={() => rolls.event(r.name, 'Bonusaktion verbraucht')}>{r.pseudo.text}</button>
+							<button
+								class="btn btn-xs"
+								disabled={!r.pseudo.enabled}
+								onclick={() => {
+									rolls.event(r.name, `${TAB_NAME[tab] ?? 'Aktion'} verbraucht`);
+									spend();
+								}}>{r.pseudo.text}</button
+							>
 						{/if}
 					</div>
 				</li>

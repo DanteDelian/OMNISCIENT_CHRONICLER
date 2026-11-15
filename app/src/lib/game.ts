@@ -2,8 +2,8 @@
 import { campaign } from './stores/campaign.svelte';
 import { rolls } from './stores/rolls.svelte';
 import { ui } from './stores/ui.svelte';
-import { SCHOOL_COLOR, concentrationDc, slotsLeft } from './rules';
-import type { Minion, Spell } from './types';
+import { SCHOOL_COLOR, concentrationDc, currentSpeed, slotsLeft } from './rules';
+import type { CombatEffect, Minion, Spell } from './types';
 import { uid } from './format';
 
 const st = () => campaign.data.state;
@@ -83,6 +83,9 @@ export function useFeature(id: string) {
 		return false;
 	}
 	st().featureUsed[id] = used + 1;
+	const c = st().combat;
+	if (c && f.economy === 'bonus') c.used.bonus = true;
+	if (c && f.economy === 'aktion') c.used.action = true;
 	rolls.event(f.name, `noch ${f.uses.max - used - 1}/${f.uses.max}`);
 	save();
 	return true;
@@ -92,6 +95,7 @@ export function endConcentration(reason = 'beendet') {
 	const s = st();
 	if (!s.concentration) return;
 	rolls.event(`Konzentration ${reason}`, s.concentration.name, 'bad');
+	if (s.combat) s.combat.effects = s.combat.effects.filter((e) => e.spellId !== s.concentration?.spellId);
 	s.concentration = null;
 	ui.concentrationCheck = null;
 	save();
@@ -114,6 +118,25 @@ export function castSpell(sp: Spell, slotLevel: number | null, asRitual = false)
 		s.concentration = { spellId: sp.id, name: sp.name, since: Date.now() };
 	}
 	if (sp.id === 'schild') s.shield = true;
+	const c = s.combat;
+	if (c && !asRitual) {
+		if (sp.economy === 'aktion') {
+			c.used.action = true;
+			if (sp.level > 0) c.used.leveledSpell = true;
+		} else if (sp.economy === 'bonus') {
+			c.used.bonus = true;
+			c.used.bonusSpell = true;
+		} else if (sp.economy === 'reaktion') c.used.reaction = true;
+		// Schild hält bis zum Beginn deines nächsten Zuges
+		const rounds = sp.id === 'schild' ? 1 : durationRounds(sp.duration);
+		if (rounds) {
+			const keep = c.effects.filter((e) => e.spellId !== sp.id && !(sp.concentration && e.note === 'Konzentration'));
+			const effect: CombatEffect = { id: uid('fx'), name: sp.name, until: c.round + rounds, spellId: sp.id };
+			if (sp.concentration) effect.note = 'Konzentration';
+			if (sp.id === 'schild') effect.note = '+5 RK bis zu deinem Zug';
+			c.effects = [...keep, effect];
+		}
+	}
 	if (sp.id === 'unsichtbarer-diener') s.servant = true;
 	const how = asRitual ? 'als Ritual' : sp.level === 0 ? 'Zaubertrick' : `Grad ${slotLevel}`;
 	rolls.event(`${sp.name} gewirkt`, how, 'info');
@@ -197,6 +220,7 @@ export function longRest() {
 	s.servant = false;
 	for (const m of s.minions) m.renewed = false;
 	s.lastLongRest = Date.now();
+	delete s.combat;
 	rolls.event('Lange Rast', 'TP, Plätze, Sternenschritt und Ohrring sind zurück. Trance-Übung neu wählen!', 'good');
 	save();
 }
@@ -293,5 +317,136 @@ export function renewMinions(slotLevel: number) {
 
 export function removeMinion(id: string) {
 	st().minions = st().minions.filter((m) => m.id !== id);
+	save();
+}
+
+// ---------- Kampfmodus: nur für Valerius, keine Gegner und keine Initiative-Liste ----------
+
+/** Wirkungsdauer in Runden: „1 Minute“ = 10, „1 Stunde“ = 600, „Unmittelbar“ = null. */
+export function durationRounds(duration: string): number | null {
+	const d = duration.toLowerCase();
+	if (/unmittelbar|sofort|bis gebannt/.test(d)) return null;
+	const n = (re: RegExp) => Number(d.match(re)?.[1] ?? 0);
+	if (/\d+\s*runde/.test(d)) return n(/(\d+)\s*runde/);
+	if (/\d+\s*minute/.test(d)) return n(/(\d+)\s*minute/) * 10;
+	if (/\d+\s*stunde/.test(d)) return n(/(\d+)\s*stunde/) * 600;
+	if (/\d+\s*tag/.test(d)) return n(/(\d+)\s*tag/) * 14400;
+	return null;
+}
+
+export function startCombat() {
+	const s = st();
+	const effects: CombatEffect[] = [];
+	if (s.concentration) effects.push({ id: uid('fx'), name: s.concentration.name, until: null, spellId: s.concentration.spellId, note: 'Konzentration' });
+	if (s.shield) effects.push({ id: uid('fx'), name: 'Schild', until: 2, spellId: 'schild', note: '+5 RK bis zu deinem Zug' });
+	s.combat = { round: 1, used: { action: false, bonus: false, reaction: false, move: 0, dash: false }, effects, startedAt: Date.now() };
+	rolls.event('Kampf beginnt', 'Runde 1 · Initiative würfeln!', 'info');
+	save();
+}
+
+/** Dein nächster Zug: Aktion, Bonusaktion, Reaktion und Bewegung sind zurück, abgelaufene Effekte enden. */
+export function nextTurn() {
+	const s = st();
+	const c = s.combat;
+	if (!c) return;
+	c.round += 1;
+	c.used = { action: false, bonus: false, reaction: false, move: 0, dash: false };
+	s.shield = false;
+	const ended = c.effects.filter((e) => e.until !== null && e.until <= c.round);
+	c.effects = c.effects.filter((e) => e.until === null || e.until > c.round);
+	for (const e of ended) {
+		if (s.concentration && e.spellId === s.concentration.spellId) s.concentration = null;
+		rolls.event(`${e.name} endet`, `zu Beginn von Runde ${c.round}`, 'info');
+	}
+	rolls.event(`Runde ${c.round}`, 'Dein Zug: Aktion, Bonusaktion, Reaktion und Bewegung sind zurück', 'info');
+	if (s.hp === 0 && s.deathSaves.success < 3 && s.deathSaves.fail < 3) rolls.event('Todesrettungswurf', 'Du bist auf 0 TP: zu Beginn deines Zuges würfeln', 'bad');
+	save();
+}
+
+export function endCombat() {
+	const s = st();
+	const c = s.combat;
+	if (!c) return;
+	rolls.event('Kampf beendet', `${c.round} ${c.round === 1 ? 'Runde' : 'Runden'}`, 'good');
+	// Schild hält nur bis zu deinem nächsten Zug: Nach dem Kampf ist er vorbei
+	s.shield = false;
+	delete s.combat;
+	save();
+}
+
+export function toggleEconomy(kind: 'action' | 'bonus' | 'reaction') {
+	const c = st().combat;
+	if (!c) return;
+	c.used[kind] = !c.used[kind];
+	save();
+}
+
+/** Bewegung, die dir in diesem Zug zusteht: Spurt gibt deine Bewegungsrate ein zweites Mal. */
+export function moveBudget(): number {
+	const c = st().combat;
+	const { speed } = currentSpeed(ch(), st());
+	return speed * (c?.used.dash ? 2 : 1);
+}
+
+/** Verbrauchte Bewegung in Metern setzen (Felder à 1,5 m). */
+export function setMove(m: number) {
+	const c = st().combat;
+	if (!c) return;
+	c.used.move = Math.max(0, Math.min(moveBudget(), Math.round(m * 10) / 10));
+	save();
+}
+
+/** Bewegung verbrauchen (negativ: zurückgeben). */
+export function spendMove(m: number) {
+	const c = st().combat;
+	if (c) setMove(c.used.move + m);
+}
+
+export function toggleDash() {
+	const c = st().combat;
+	if (!c) return;
+	c.used.dash = !c.used.dash;
+	if (c.used.dash) c.used.action = true;
+	else c.used.move = Math.min(c.used.move, moveBudget());
+	save();
+}
+
+/** Aufstehen kostet die Hälfte deiner Bewegungsrate (Zustand Liegend). */
+export function standUp() {
+	const s = st();
+	const half = ch().speed / 2;
+	s.conditions = s.conditions.filter((x) => x !== 'liegend');
+	if (s.combat) s.combat.used.move = Math.min(moveBudget(), s.combat.used.move + half);
+	rolls.event('Aufgestanden', `kostet ${String(half).replace('.', ',')} m Bewegung`, 'info');
+	save();
+}
+
+/** Im Kampf eine Aktionsart als verbraucht markieren (Waffenangriff, Befehl an die Untoten …). */
+export function markUsed(kind: 'action' | 'bonus' | 'reaction') {
+	const c = st().combat;
+	if (!c || c.used[kind]) return;
+	c.used[kind] = true;
+	save();
+}
+
+/** Eigener Effekt auf Valerius, z. B. „Vergiftet, 1 Minute“ oder ein Segen von außen. */
+export function addEffect(name: string, rounds: number | null, note?: string) {
+	const c = st().combat;
+	const n = name.trim();
+	if (!c || !n) return;
+	const effect: CombatEffect = { id: uid('fx'), name: n, until: rounds ? c.round + rounds : null };
+	if (note) effect.note = note;
+	c.effects = [...c.effects, effect];
+	save();
+}
+
+export function removeEffect(id: string) {
+	const s = st();
+	const c = s.combat;
+	if (!c) return;
+	const e = c.effects.find((x) => x.id === id);
+	c.effects = c.effects.filter((x) => x.id !== id);
+	if (e && s.concentration && e.spellId === s.concentration.spellId) s.concentration = null;
+	if (e?.spellId === 'schild') s.shield = false;
 	save();
 }

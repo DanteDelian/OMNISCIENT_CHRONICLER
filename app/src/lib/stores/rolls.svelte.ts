@@ -1,6 +1,6 @@
 /** Würfelprotokoll und Benachrichtigungen (unten rechts). */
 import { rollD20, rollExpr, type RollMode } from '$lib/dice';
-import { fmtMod } from '$lib/rules';
+import { fmtMod, maxOf } from '$lib/rules';
 
 export interface LogEntry {
 	id: number;
@@ -9,6 +9,10 @@ export interface LogEntry {
 	total?: number;
 	detail: string;
 	crit?: 'hit' | 'miss';
+	/** Kleinstes und größtes mögliches Ergebnis (für die Würfelanimation) */
+	range?: [number, number];
+	/** Seitenzahl des größten Würfels: bestimmt die Form in der Würfelschale */
+	die?: number;
 	tone?: 'good' | 'bad' | 'info';
 	at: number;
 }
@@ -39,6 +43,8 @@ class RollStore {
 			label,
 			total: r.total,
 			detail: `${dice} ${fmtMod(bonus)}`,
+			range: [1 + bonus, 20 + bonus],
+			die: 20,
 			crit: r.natural === 20 ? 'hit' : r.natural === 1 ? 'miss' : undefined
 		});
 		if (this.mode !== 'normal') this.mode = 'normal';
@@ -52,7 +58,9 @@ class RollStore {
 			this.event('Ungültiger Würfelausdruck', expr, 'bad');
 			return null;
 		}
-		this.push({ kind: 'dmg', label, total: r.total, detail: `${expr.replace(/d/g, 'W')} → ${r.detail}` });
+		const min = r.dice.reduce((a, d) => a + Math.sign(d.value), 0) + r.modifier;
+		const die = Math.max(0, ...r.dice.map((d) => d.sides));
+		this.push({ kind: 'dmg', label, total: r.total, detail: `${expr.replace(/d/g, 'W')} → ${r.detail}`, range: [min, maxOf(expr)], die });
 		return r;
 	}
 

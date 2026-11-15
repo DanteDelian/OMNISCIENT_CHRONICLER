@@ -103,7 +103,37 @@ export interface PlayState {
 	projects?: CraftProject[];
 	/** Allgemeiner Befehl an die Untoten, gilt bis die Aufgabe erledigt ist (laut DM) */
 	minionCommand?: string;
+	/** Kampfmodus: Runde, was in deinem Zug verbraucht ist, laufende Effekte. Nur für Valerius, keine Gegner. */
+	combat?: Combat;
 	updatedAt: number;
+}
+
+/** Ein laufender Effekt im Kampf */
+export interface CombatEffect {
+	id: string;
+	name: string;
+	/** Runde, mit deren Beginn der Effekt endet (null: läuft, bis du ihn beendest) */
+	until: number | null;
+	spellId?: string;
+	note?: string;
+}
+
+export interface Combat {
+	round: number;
+	used: {
+		action: boolean;
+		bonus: boolean;
+		reaction: boolean;
+		/** verbrauchte Bewegung in Metern */
+		move: number;
+		dash: boolean;
+		/** Zauber als Bonusaktion gewirkt: In diesem Zug geht nur noch ein Zaubertrick mit 1 Aktion */
+		bonusSpell?: boolean;
+		/** Zauber mit Grad als Aktion gewirkt: In diesem Zug geht kein Bonusaktionszauber mehr */
+		leveledSpell?: boolean;
+	};
+	effects: CombatEffect[];
+	startedAt: number;
 }
 
 /** Ein Herstellungsprojekt: 5 GM Marktwert pro 8 Stunden Arbeit (Spielerhandbuch) */

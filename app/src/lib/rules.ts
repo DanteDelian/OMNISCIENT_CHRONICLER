@@ -112,6 +112,25 @@ export const EXHAUSTION = [
 	'Tod'
 ];
 
+/** Zustände, in denen du dich nicht bewegen kannst (Anhang A: „Bewegungsrate 0“ oder „kann sich nicht bewegen“) */
+const NO_MOVE: Record<string, string> = {
+	gepackt: 'Gepackt',
+	festgehalten: 'Festgehalten',
+	gelaehmt: 'Gelähmt',
+	versteinert: 'Versteinert',
+	betaeubt: 'Betäubt',
+	bewusstlos: 'Bewusstlos'
+};
+
+/** Bewegungsrate in diesem Moment: Zustände und Erschöpfung eingerechnet. */
+export function currentSpeed(c: Character, s: PlayState): { speed: number; why?: string } {
+	const stop = s.conditions.find((x) => x in NO_MOVE);
+	if (stop) return { speed: 0, why: `${NO_MOVE[stop]}: Bewegungsrate 0` };
+	if (s.exhaustion >= 5) return { speed: 0, why: 'Erschöpfung 5: Bewegungsrate 0' };
+	if (s.exhaustion >= 2) return { speed: c.speed / 2, why: 'Erschöpfung 2: Bewegungsrate halbiert' };
+	return { speed: c.speed };
+}
+
 export function mod(score: number): number {
 	return Math.floor((score - 10) / 2);
 }

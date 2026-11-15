@@ -1,5 +1,6 @@
 import {
 	LayoutDashboard,
+	Swords,
 	IdCard,
 	Sparkles,
 	Skull,
@@ -22,6 +23,7 @@ export const NAV = [
 		group: 'Am Tisch',
 		items: [
 			{ href: '/', label: 'Spieltisch', icon: LayoutDashboard, key: '1' },
+			{ href: '/kampf', label: 'Kampf', icon: Swords, key: '' },
 			{ href: '/bogen', label: 'Charakterbogen', icon: IdCard, key: '2' },
 			{ href: '/zauber', label: 'Zauberbuch', icon: Sparkles, key: '3' },
 			{ href: '/gefolge', label: 'Gefolge', icon: Skull, key: '4' },

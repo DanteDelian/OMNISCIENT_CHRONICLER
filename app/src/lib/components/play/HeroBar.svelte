@@ -1,8 +1,9 @@
 <script lang="ts">
-	import { Coffee, Moon, Star, Shield, Eye, Footprints, Swords, Target, Sparkles, Zap } from '@lucide/svelte';
+	import { Coffee, Moon, Star, Shield, Eye, Footprints, Swords, Target, Sparkles, Zap, IdCard } from '@lucide/svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { rolls } from '$lib/stores/rolls.svelte';
 	import { ui } from '$lib/stores/ui.svelte';
+	import { startCombat } from '$lib/game';
 	import { armorClass, fmtMod, initiative, passivePerception, spellAttack, spellDc } from '$lib/rules';
 
 	const c = $derived(campaign.data.character);
@@ -10,6 +11,10 @@
 
 	function toggleShield() {
 		campaign.change('state', (st) => (st.shield = !st.shield));
+	}
+	function beginCombat() {
+		startCombat();
+		rolls.check('Initiative', initiative(c));
 	}
 	function toggleInspiration() {
 		campaign.change('state', (st) => (st.inspiration = !st.inspiration));
@@ -55,7 +60,12 @@
 			{/if}
 			<button class="btn btn-sm" onclick={() => (ui.rest = 'kurz')}><Coffee size={14} />Kurze Rast</button>
 			<button class="btn btn-sm" onclick={() => (ui.rest = 'lang')}><Moon size={14} />Lange Rast</button>
-			<a class="btn btn-sm btn-ghost" href="/bogen"><Swords size={14} />Bogen</a>
+			{#if s.combat}
+				<a class="btn btn-sm btn-danger" href="/kampf" title="Zur Kampfansicht"><Swords size={14} />Runde {s.combat.round}</a>
+			{:else}
+				<button class="btn btn-sm btn-danger" onclick={beginCombat} title="Kampf beginnen und Initiative würfeln"><Swords size={14} />Kampf</button>
+			{/if}
+			<a class="btn btn-sm btn-ghost" href="/bogen"><IdCard size={14} />Bogen</a>
 		</div>
 	</div>
 
