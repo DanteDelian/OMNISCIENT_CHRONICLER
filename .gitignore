@@ -17,3 +17,6 @@ campaign/.history/
 
 # ----- Erzeugte Druckfassung (npm run druck) -----
 /druck/
+
+# Python
+__pycache__/

@@ -38,11 +38,12 @@
 - **Überall:** Astral-Grimoire-Design (Sternenfeld auf Canvas, Antiqua, Kapitälchen, Buchschrift, Goldornamente),
   weiche Seitenwechsel, Suche (Strg+K), Vorschaukarten, Würfelschale (D), Tastenkürzel 1 bis 0,
   Live-Abgleich zwischen Geräten, große Ziele auf Touch-Geräten, ruhige Darstellung bei reduzierter Bewegung.
+- **Stimmungsbilder:** alle 21 Aufträge aus `bilder.json` als gemalte Szenen für Welt- und Journal-Einträge (Kopfbild,
+  Karte in der Liste, Druck). Neue Aufträge erzeugt `python -P scripts/bilder.py` mit der Antigravity-CLI; bei einer
+  Kontingentsperre wechselt das Skript selbst das Agentenmodell.
 
 ## Ideen für später
 
-- **Stimmungsbilder:** Die Aufträge in `bilder.json` (unter anderem `riesen.webp`, `orcs.webp`) mit der Antigravity-CLI
-  erzeugen, sobald ihr Kontingent wieder frei ist.
 - **Stufe 6:** wenn es so weit ist, nach dem Ablauf in `CLAUDE.md` (TP-Wurf, zwei Zauber ins Buch, Gutartiges
   Versetzen aktiv, Zauber-Sets nachziehen). Der Plan steht in `campaign/docs/stufe-6.md`.
 - **Kampfbilanz:** Am Ende eines Kampfes Runden, verbrauchte Plätze und Schaden als Vorschlag für die Session-Notizen.

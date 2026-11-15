@@ -13,8 +13,13 @@ Aufruf (aus app/):
   python -P scripts/bilder.py --neu        vorhandene Bilder neu erzeugen
   python -P scripts/bilder.py --liste      nur anzeigen, was fehlt
 
-Kontingent: nach etwa 13 Bildern meldet agy 429 RESOURCE_EXHAUSTED mit der Wartezeit. Das Skript hört dann
-auf und nennt sie. Später einfach erneut starten: Fertige Bilder werden übersprungen.
+  python -P scripts/bilder.py --modell gemini-4-argon-low   mit diesem Agentenmodell beginnen
+
+Kontingent: nach etwa 13 Bildern meldet agy 429 RESOURCE_EXHAUSTED mit der Wartezeit, daneben gibt es eine
+Wochensperre. Die Sperre hängt am Weg über das Agentenmodell: Am 15.11.2026 meldete das Standardmodell rund
+137 Stunden Wartezeit, mit --model gemini-3.8-flash-medium lief derselbe Auftrag sofort durch. Das Skript wechselt
+deshalb bei einer Sperre selbst zum nächsten Modell aus AGY_MODELLE und hört erst auf, wenn alle gesperrt sind.
+Später einfach erneut starten: Fertige Bilder werden übersprungen.
 """
 import argparse
 import json
@@ -32,6 +37,8 @@ ROOT = Path(__file__).resolve().parents[2]
 CAMPAIGN = ROOT / 'campaign'
 ASSETS = CAMPAIGN / 'assets'
 AGY = Path(os.path.expandvars(r'%LOCALAPPDATA%')) / 'agy' / 'bin' / 'agy.exe'
+# Agentenmodelle in der Reihenfolge der Versuche ('' = Standard von agy). Liste: agy models
+AGY_MODELLE = ['', 'gemini-3.8-flash-medium', 'gemini-4-argon-low', 'gemini-3.8-flash-high', 'gemini-4-hydrogen-low']
 
 
 def task_text(name: str, prompt: str, style: str, refs: list[tuple[str, str]] | None = None) -> str:
@@ -66,7 +73,7 @@ def save_variants(png: Path, image_id: str) -> None:
     im.resize((1000, round(1000 * h / w)), Image.LANCZOS).save(ASSETS / f'{image_id}-druck.jpg', quality=84, optimize=True)
 
 
-def generate(item: dict, style: str) -> str:
+def generate(item: dict, style: str, model: str = '') -> str:
     """Ein Bild erzeugen. Gibt 'ok', 'fehler' oder 'kontingent:<zeit>' zurück."""
     work = Path(tempfile.mkdtemp(prefix=f'agy-{item["id"]}-'))
     try:
@@ -79,6 +86,8 @@ def generate(item: dict, style: str) -> str:
                 Image.open(src).convert('RGB').save(work / name, quality=92)
                 refs.append((name, ref['was']))
         cmd = [str(AGY), '-p', task_text(item['id'], item['prompt'], style, refs), '--sandbox', '--dangerously-skip-permissions', '--print-timeout', '6m']
+        if model:
+            cmd += ['--model', model]
         try:
             run = subprocess.run(cmd, cwd=work, capture_output=True, text=True, encoding='utf-8', errors='replace', timeout=420)
         except subprocess.TimeoutExpired:
@@ -102,6 +111,7 @@ def main() -> int:
     ap.add_argument('--nur', default='')
     ap.add_argument('--neu', action='store_true')
     ap.add_argument('--liste', action='store_true')
+    ap.add_argument('--modell', default='', help='mit diesem Agentenmodell beginnen (agy models)')
     args = ap.parse_args()
 
     data = json.loads((CAMPAIGN / 'bilder.json').read_text(encoding='utf-8'))
@@ -117,13 +127,21 @@ def main() -> int:
         print(f'agy nicht gefunden: {AGY}')
         return 1
 
+    models = [args.modell] + [m for m in AGY_MODELLE if m != args.modell] if args.modell else list(AGY_MODELLE)
     print(f'{len(todo)} Bild(er) zu erzeugen, je etwa 80 Sekunden.')
     for n, item in enumerate(todo, 1):
-        print(f'[{n}/{len(todo)}] {item["id"]} ({item["titel"]}) …', flush=True)
-        result = generate(item, data['stil'])
-        if result.startswith('kontingent:'):
-            print(f'Kontingent erschöpft. Wieder möglich in etwa {result.split(":", 1)[1]}. Danach erneut starten.')
-            return 2
+        while True:
+            label = models[0] or 'Standardmodell'
+            print(f'[{n}/{len(todo)}] {item["id"]} ({item["titel"]}) über {label} …', flush=True)
+            result = generate(item, data['stil'], models[0])
+            if not result.startswith('kontingent:'):
+                break
+            wait = result.split(':', 1)[1]
+            print(f'    {label} gesperrt (wieder möglich in etwa {wait}).', flush=True)
+            models.pop(0)
+            if not models:
+                print('Alle Agentenmodelle gesperrt. Später erneut starten, fertige Bilder werden übersprungen.')
+                return 2
         print(f'    {result}', flush=True)
     print('Fertig.')
     return 0
