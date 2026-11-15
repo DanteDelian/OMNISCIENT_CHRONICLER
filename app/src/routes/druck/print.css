@@ -1038,6 +1038,46 @@ html:has(.druck) body {
 	padding-right: 1mm;
 }
 
+/* ---------- Regelwerk ---------- */
+.druck .rb-toc {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1.2mm 7mm;
+	margin: 2mm 0 0;
+}
+.druck .rb-rule {
+	margin-bottom: 2.6mm;
+}
+.druck .rb-rule h3 {
+	margin-top: 1.2mm;
+	break-after: avoid;
+}
+
+/* ---------- Uhren ---------- */
+.druck .clock-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 4mm 7mm;
+}
+.druck .clock {
+	display: flex;
+	gap: 3.4mm;
+	align-items: flex-start;
+	border: 0.5pt solid var(--p-line);
+	border-radius: 2mm;
+	padding: 2.6mm 3mm;
+}
+.druck .clock svg {
+	flex-shrink: 0;
+}
+.druck .clock-kind {
+	font-size: 6.4pt;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	margin: 0 0 0 1mm;
+}
+
 /* ---------- Seitenzahlen im Inhaltsverzeichnis ---------- */
 .druck .cover-toc a {
 	flex: 1 1 auto;

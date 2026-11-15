@@ -39,7 +39,9 @@ const JOBS = [
 	{ file: '14-raetselwand.pdf', teil: 'raetsel' },
 	{ file: '15-netzwerk.pdf', teil: 'netzwerk' },
 	{ file: '16-begriffe-deutsch-englisch.pdf', teil: 'begriffe' },
-	{ file: '17-wer-weiss-was.pdf', teil: 'geheimnisse' }
+	{ file: '17-wer-weiss-was.pdf', teil: 'geheimnisse' },
+	{ file: '18-uhren.pdf', teil: 'uhren' },
+	{ file: '19-regelwerk.pdf', teil: 'regelwerk' }
 ];
 
 // ---------- Argumente und .env ----------

@@ -5,7 +5,7 @@
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { glossaryGroups } from '$lib/terms';
 	import { normalizeName } from '$lib/refs';
-	import { ruleHref, searchRules } from '$lib/rulebook';
+	import { SRD_NOTICE, ruleHref, searchRules } from '$lib/rulebook';
 
 	const chapters = $derived(campaign.data.rules);
 	const total = $derived(chapters.reduce((n, c) => n + c.rules.length, 0));
@@ -131,9 +131,4 @@
 	</div>
 </section>
 
-<p class="mt-4 text-xs leading-relaxed text-ink-3">
-	Enthält Regelinhalte aus dem System Reference Document 5.1 („SRD 5.1“) von Wizards of the Coast LLC, verfügbar unter
-	https://dnd.wizards.com/resources/systems-reference-document, lizenziert unter der Creative Commons Attribution 4.0 International License
-	(https://creativecommons.org/licenses/by/4.0/legalcode), in eigener deutscher Übersetzung. Regeln aus anderen Büchern stehen in eigenen Worten
-	und sind mit ihrer Quelle gekennzeichnet.
-</p>
+<p class="mt-4 text-xs leading-relaxed text-ink-3">{SRD_NOTICE}</p>

@@ -25,12 +25,14 @@ export const PRINT_PARTS: PrintPart[] = [
 	{ id: 'begriffe', label: 'Begriffe Deutsch – Englisch', hint: 'Für den Denglisch-DM, 1 Seite', group: 'Am Tisch' },
 	{ id: 'inventar', label: 'Inventar', hint: 'Besitz, Geld, Wunschliste', group: 'Kampagne' },
 	{ id: 'quests', label: 'Quests', hint: 'Aktiv, Gerüchte, erledigt', group: 'Kampagne' },
+	{ id: 'uhren', label: 'Uhren', hint: 'Fristen, Gefahren, Ziele zum Ausmalen', group: 'Kampagne' },
 	{ id: 'raetsel', label: 'Rätselwand', hint: 'Theorien, Widersprüche, Mysterien', group: 'Kampagne' },
 	{ id: 'journal', label: 'Journal', hint: 'Datierte Chronik und Notizseite', group: 'Kampagne' },
 	{ id: 'welt', label: 'Welt', hint: 'Personen, Fraktionen, Orte', group: 'Kampagne' },
 	{ id: 'netzwerk', label: 'Die Unsichtbare Hand', hint: 'Rollen und Leute, zum Ergänzen', group: 'Kampagne' },
 	{ id: 'geheimnisse', label: 'Wer weiß was?', hint: 'Floshems Ruf, Geheimnisse und Mitwisser', group: 'Kampagne' },
 	{ id: 'karte', label: 'Echsen-Karte', hint: 'Karte mit nummerierten Markierungen', group: 'Kampagne' },
+	{ id: 'regelwerk', label: 'Regelwerk', hint: 'Zehn Kapitel im vollen Wortlaut, mit Sprungmarken', group: 'Archiv' },
 	{ id: 'quellen', label: 'Quellenverzeichnis', hint: 'Alle Originale mit Bewertung', group: 'Archiv' }
 ];
 

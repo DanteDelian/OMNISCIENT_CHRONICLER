@@ -23,6 +23,8 @@
 	import PMysteries from '$lib/components/print/PMysteries.svelte';
 	import PNetwork from '$lib/components/print/PNetwork.svelte';
 	import PSecrets from '$lib/components/print/PSecrets.svelte';
+	import PRulebook from '$lib/components/print/PRulebook.svelte';
+	import PClocks from '$lib/components/print/PClocks.svelte';
 
 	const docs = $derived([...campaign.data.docs].sort((a, b) => a.order - b.order));
 	const parts = $derived<PrintPart[]>([
@@ -44,7 +46,7 @@
 	const fromUrl = page.url.searchParams.get('teil');
 	let chosen = $state<string[] | null>(fromUrl ? fromUrl.split(',').map((s) => s.trim()) : null);
 	// „archiv“ steht für alle Archiv-Dokumente plus Quellenverzeichnis.
-	const expanded = $derived(chosen?.flatMap((id) => (id === 'archiv' ? [...docs.map((d) => `doc-${d.slug}`), 'quellen'] : [id])) ?? null);
+	const expanded = $derived(chosen?.flatMap((id) => (id === 'archiv' ? ['regelwerk', ...docs.map((d) => `doc-${d.slug}`), 'quellen'] : [id])) ?? null);
 	const active = $derived(parts.filter((p) => (expanded ? expanded.includes(p.id) : true)));
 	const toc = $derived(active.filter((p) => p.id !== 'deckblatt'));
 	const groups = ['Am Tisch', 'Kampagne', 'Archiv'] as const;
@@ -52,7 +54,7 @@
 	const PRESETS: { label: string; ids: string[] | null }[] = [
 		{ label: 'Alles', ids: null },
 		{ label: 'Für den Spieltisch', ids: ['deckblatt', 'bogen', 'spielbogen', 'zauber', 'zauberkarten', 'gefolge', 'regeln', 'begriffe', 'fragen'] },
-		{ label: 'Kampagne', ids: ['quests', 'raetsel', 'journal', 'welt', 'netzwerk', 'geheimnisse', 'karte'] },
+		{ label: 'Kampagne', ids: ['quests', 'uhren', 'raetsel', 'journal', 'welt', 'netzwerk', 'geheimnisse', 'karte'] },
 		{ label: 'Archiv', ids: ['archiv'] },
 		{ label: 'Nichts', ids: [] }
 	];
@@ -128,6 +130,10 @@
 			<PInventory />
 		{:else if p.id === 'quests'}
 			<PQuests />
+		{:else if p.id === 'uhren'}
+			<PClocks />
+		{:else if p.id === 'regelwerk'}
+			<PRulebook />
 		{:else if p.id === 'journal'}
 			<PJournal {pages} />
 		{:else if p.id === 'welt'}

@@ -37,6 +37,13 @@ export const CONDITION_IDS = [
 	'bewusstlos'
 ] as const;
 
+/** Lizenzhinweis für die übersetzten SRD-Texte (Pflicht nach CC BY 4.0), auf der Regelseite und im Druck */
+export const SRD_NOTICE =
+	'Enthält Regelinhalte aus dem System Reference Document 5.1 („SRD 5.1“) von Wizards of the Coast LLC, verfügbar unter ' +
+	'https://dnd.wizards.com/resources/systems-reference-document, lizenziert unter der Creative Commons Attribution 4.0 International License ' +
+	'(https://creativecommons.org/licenses/by/4.0/legalcode), in eigener deutscher Übersetzung. Regeln aus anderen Büchern stehen in eigenen Worten ' +
+	'und sind mit ihrer Quelle gekennzeichnet.';
+
 /** „03-kampf.md“ → „kampf“ */
 export function ruleChapterSlug(file: string): string {
 	return file.replace(/\.md$/i, '').replace(/^\d+[-_]/, '');

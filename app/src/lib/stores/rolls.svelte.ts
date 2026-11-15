@@ -30,7 +30,7 @@ class RollStore {
 		this.toasts = [entry, ...this.toasts].slice(0, 4);
 		setTimeout(() => {
 			this.toasts = this.toasts.filter((t) => t.id !== entry.id);
-		}, e.kind === 'event' ? 3500 : 7000);
+		}, e.kind === 'event' ? 5000 : 7000);
 		return entry;
 	}
 
