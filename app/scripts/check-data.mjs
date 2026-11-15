@@ -13,6 +13,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
 import { buildIndex, extractLinks, makeResolver } from '../src/lib/refs.ts';
+import { CONDITION_IDS, parseRuleChapter, rulesOf } from '../src/lib/rulebook.ts';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, '..', '..', 'campaign');
@@ -58,6 +59,18 @@ const d = {
 	zaubersets: { sets: [], ...(json('zaubersets.json') ?? {}) },
 	geheimnisse: { ruf: '', gefahren: '', secrets: [], ...(json('geheimnisse.json') ?? {}) },
 	uhren: { clocks: [], ...(json('uhren.json') ?? {}) },
+	rules: fs.existsSync(path.join(root, 'regeln'))
+		? fs
+				.readdirSync(path.join(root, 'regeln'))
+				.filter((f) => f.endsWith('.md'))
+				.sort()
+				.map((f) => {
+					// parseRuleChapter wandelt CRLF selbst in LF um
+					const { data, content } = matter(fs.readFileSync(path.join(root, 'regeln', f), 'utf-8'));
+					return parseRuleChapter(f, data, content);
+				})
+				.sort((a, b) => a.order - b.order)
+		: [],
 	docs: mdDir('docs', (slug, data, body) => ({ slug, title: String(data.title ?? slug), subtitle: data.subtitle, aliases: asArray(data.aliases), order: data.order ?? 99, group: data.group ?? '', body })),
 	world: mdDir('world', (slug, data, body) => ({
 		slug,
@@ -219,6 +232,24 @@ for (const g of d.geheimnisse.secrets) {
 	links(where, [g.truth, g.cover, g.risk, g.note].filter(Boolean).join(' '));
 }
 
+// Regelwerk: Kapitel, eindeutige IDs, Zustände, Verweise
+const ruleIds = new Map();
+for (const ch of d.rules) {
+	if (!ch.title) errors.push(`regeln/${ch.file}: ohne title`);
+	if (!ch.rules.length) warnings.push(`regeln/${ch.file}: keine Regel (## Name {Englisch} {#id})`);
+	links(`regeln/${ch.file}`, ch.intro);
+	for (const r of ch.rules) {
+		const where = `regeln/${ch.file} ${r.id}`;
+		if (ruleIds.has(r.id)) errors.push(`${where}: ID schon in regeln/${ruleIds.get(r.id)}`);
+		ruleIds.set(r.id, ch.file);
+		if (!r.text) errors.push(`${where}: ohne Regeltext`);
+		links(where, `${r.text} ${r.valerius ?? ''} ${r.short ?? ''}`);
+	}
+}
+const conditionIds = new Set(rulesOf(d.rules, 'zustaende').map((r) => r.id));
+for (const id of [...CONDITION_IDS, 'erschoepfung']) if (!conditionIds.has(id)) errors.push(`regeln: Zustand „${id}“ fehlt in 01-zustaende.md`);
+for (const c of d.state?.conditions ?? []) if (!conditionIds.has(c)) errors.push(`state.json: unbekannter Zustand „${c}“`);
+
 // Uhren: Fristen, Gefahren und Ziele
 const clockIds = new Set();
 for (const c of d.uhren.clocks) {
@@ -263,7 +294,7 @@ for (const s of d.spells.filter((x) => x.status === 'buch' && !x.card)) {
 	if (plain.length > 650) warnings.push(`spells.json ${s.id}: langer Regeltext ohne „card“ für die Zauberkarte`);
 }
 
-console.log(`Index: ${index.length} Einträge · Zauber ${d.spells.length} · Welt ${d.world.length} · Dokumente ${d.docs.length} · Journal ${d.journal.length} · Quests ${d.quests.length} · Stammbäume ${d.trees.length} · Fragen ${d.fragen.length} · Netzwerk ${d.netzwerk.agents.length} · Zauber-Sets ${d.zaubersets.sets.length} · Geheimnisse ${d.geheimnisse.secrets.length} · Uhren ${d.uhren.clocks.length}`);
+console.log(`Index: ${index.length} Einträge · Zauber ${d.spells.length} · Welt ${d.world.length} · Dokumente ${d.docs.length} · Journal ${d.journal.length} · Quests ${d.quests.length} · Stammbäume ${d.trees.length} · Fragen ${d.fragen.length} · Netzwerk ${d.netzwerk.agents.length} · Zauber-Sets ${d.zaubersets.sets.length} · Geheimnisse ${d.geheimnisse.secrets.length} · Uhren ${d.uhren.clocks.length} · Regeln ${d.rules.reduce((n, c) => n + c.rules.length, 0)} in ${d.rules.length} Kapiteln`);
 for (const w of warnings) console.log(`  Hinweis: ${w}`);
 for (const e of errors) console.log(`  FEHLER:  ${e}`);
 console.log(errors.length ? `\n${errors.length} Fehler gefunden.` : '\nAlles konsistent.');

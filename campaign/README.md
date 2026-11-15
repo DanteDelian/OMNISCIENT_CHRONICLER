@@ -22,6 +22,7 @@ Alles, was das Grimoire anzeigt, steht in diesen Dateien. Ändert man sie (von H
 | `zaubersets.json` | Zauber-Sets für den Tag: Prioritätenlisten zum Vorbereiten (Zauberbuch, Dialog Lange Rast, Druck) | ja |
 | `geheimnisse.json` | Wer weiß was? Floshems Ruf, Gefahren und Geheimnisse mit Mitwissern (eigene Seite, Druck) | ja |
 | `uhren.json` | Uhren: Fristen, wachsende Gefahren und Ziele, in Feldern gezählt (Spieltisch, Quests) | ja |
+| `regeln/*.md` | Regelwerk im vollen Wortlaut: ein Kapitel pro Datei (Seite Regeln, Spickzettel, Zustände am Spieltisch) | nein |
 | `docs/*.md` | Archiv-Dokumente (Prüfbericht, Lage, Taktik, DM-Nachrichten, Backstory, Alchemie, Einkauf) | nein |
 | `world/*.md` | Personen, Fraktionen, Orte | nein |
 | `bilder.json` | Aufträge für die KI-Stimmungsbilder (Stil, Prompt je Bild), erzeugt mit `python -P scripts/bilder.py` | nein |
@@ -31,7 +32,7 @@ Alles, was das Grimoire anzeigt, steht in diesen Dateien. Ändert man sie (von H
 
 - In jedem Markdown-Text (auch in JSON-Strings) verlinkt `[[Name]]` oder `[[Name|Anzeigetext]]` auf einen Eintrag.
 - Aufgelöst wird über Namen und Aliasse von: Welt-Einträgen, Zaubern (deutsch und englisch), Merkmalen, Kreaturen,
-  Quests, Gegenständen, Dokumenten (Titel und `aliases`) und Journal-Einträgen. Dazu kommen die Seiten
+  Quests, Gegenständen, Dokumenten (Titel und `aliases`), Journal-Einträgen und Regeln (Name, englischer Begriff, `auch`). Dazu kommen die Seiten
   `Echsen-Karte`/`Wüstenkarte`, `Zauberbuch`, `Gefolge` und `Regeln`.
 - Groß- und Kleinschreibung und Spitznamen in „…“ spielen keine Rolle (`[[Aella Rayann]]` findet `Aella Rayann „Khoraa“ Stormscale`).
 - Unaufgelöste Verweise erscheinen gestrichelt. `npm run check:data` listet sie.
@@ -50,6 +51,23 @@ summary: Ein Satz für Karten und Vorschauen.
 image: lisbeth.webp    # optional: Stimmungsbild aus assets/ (Kopfbild, Karte in der Liste, Druck)
 imageFocus: 50% 20%    # optional: Bildausschnitt (CSS object-position), damit Köpfe nicht abgeschnitten werden
 ```
+
+### regeln/*.md
+Ein Kapitel pro Datei, Name `NN-slug.md` (die Nummer ordnet, der Slug ist die Adresse `/regeln/slug`). Frontmatter: `title`, `en`,
+`order`, `icon` (Lucide-Name), `source`, `summary`. Alles vor der ersten `##`-Überschrift ist die Einleitung. Jede Regel:
+```markdown
+## Festgehalten {Restrained} {#festgehalten}
+<!-- auch: Weitere Namen, für Verweise -->
+<!-- quelle: Xanathars Ratgeber für alles, in eigenen Worten -->
+<!-- kurz: Kurzfassung für den Spickzettel im Druck -->
+Voller Regeltext, Unterabschnitte mit ###.
+
+> [!VAL]
+> Was die Regel für Valerius bedeutet.
+```
+Die IDs sind über alle Kapitel eindeutig. Die Zustands-IDs in `01-zustaende.md` sind die aus `state.json` und dürfen nicht umbenannt werden.
+`[[Festgehalten]]` verlinkt auf die Regel. Bei Namensgleichheit gewinnen Zauber, Merkmale und Gegenstände. SRD-Regeln werden vollständig
+übersetzt, alles andere steht in eigenen Worten und trägt `quelle`.
 
 ### docs/*.md (Frontmatter)
 `title`, `subtitle`, `icon` (shield-check, compass, scroll-text, swords, mail, book-open, flask-conical, shopping-bag, lightbulb, hammer, telescope),

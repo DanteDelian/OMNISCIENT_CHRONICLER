@@ -34,10 +34,16 @@ Die folgenden Beschreibungen legen fest, was mit einer Kreatur geschieht, solang
 
 - Eine taube Kreatur kann nicht hören und scheitert automatisch an jedem Attributswurf, der Gehör erfordert.
 
+> [!VAL]
+> Taub kannst du weiter zaubern: Verbale Komponenten musst du sprechen, nicht hören. *Botschaft* hörst du dann nicht mehr, und eine Fledermaus als Vertrauter verliert ihre Blindsicht.
+
 ## Verängstigt {Frightened} {#veraengstigt}
 
 - Eine verängstigte Kreatur hat Nachteil auf Attributswürfe und Angriffswürfe, solange sich die Quelle ihrer Furcht in Sichtlinie befindet.
 - Die Kreatur kann sich nicht freiwillig näher an die Quelle ihrer Furcht heranbewegen.
+
+> [!VAL]
+> Verängstigt haben *Eismesser* und *Sengender Strahl* Nachteil, *Totenglocke* und *Netz* nicht: Sie verlangen einen Rettungswurf. *Schutz vor Gut und Böse* verhindert Furcht durch Untote, Unholde und andere der genannten Wesen.
 
 ## Gepackt {Grappled} {#gepackt}
 
@@ -82,6 +88,9 @@ Die folgenden Beschreibungen legen fest, was mit einer Kreatur geschieht, solang
 - Die Kreatur hat Resistenz gegen jeden Schaden.
 - Die Kreatur ist immun gegen Gift und Krankheit. Ein Gift oder eine Krankheit, die sie bereits in sich trägt, wird aber nur ausgesetzt, nicht aufgehoben.
 
+> [!VAL]
+> Versteinert bist du kampfunfähig: Deine Konzentration endet, und deine Untoten bekommen keine neuen Befehle.
+
 ## Vergiftet {Poisoned} {#vergiftet}
 
 - Eine vergiftete Kreatur hat Nachteil auf Angriffswürfe und Attributswürfe.
@@ -112,6 +121,9 @@ Die folgenden Beschreibungen legen fest, was mit einer Kreatur geschieht, solang
 - Eine betäubte Kreatur ist kampfunfähig (siehe Zustand), kann sich nicht bewegen und nur stockend sprechen.
 - Die Kreatur scheitert automatisch an Stärke- und Geschicklichkeitsrettungswürfen.
 - Angriffswürfe gegen die Kreatur haben Vorteil.
+
+> [!VAL]
+> Betäubt bist du kampfunfähig: Deine Konzentration endet sofort.
 
 ## Bewusstlos {Unconscious} {#bewusstlos}
 

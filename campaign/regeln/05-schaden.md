@@ -32,6 +32,7 @@ Fügt ein Zauber oder ein anderer Effekt **mehr als einem Ziel gleichzeitig** Sc
 
 ## Kritische Treffer {Critical Hits} {#kritische-treffer}
 <!-- auch: Kritischer Treffer -->
+<!-- kurz: Alle Schadenswürfel des Angriffs doppelt würfeln, Modifikatoren nur einmal. -->
 
 Erzielst du einen kritischen Treffer, darfst du für den Schaden des Angriffs gegen das Ziel zusätzliche Würfel würfeln. **Würfle alle Schadenswürfel des Angriffs zweimal** und zähle sie zusammen. Addiere dann wie gewohnt alle zutreffenden Modifikatoren. Um das Spiel zu beschleunigen, kannst du alle Schadenswürfel auf einmal würfeln.
 
@@ -63,6 +64,7 @@ Verschiedene Angriffe, schädliche Zauber und andere Effekte verursachen verschi
 
 ## Resistenz und Anfälligkeit {Damage Resistance and Vulnerability} {#resistenz-und-anfaelligkeit}
 <!-- auch: Resistenz, Anfälligkeit, Immunität, Schadensresistenz -->
+<!-- kurz: Resistenz halbiert, Anfälligkeit verdoppelt, beides nach allen anderen Modifikatoren. Mehrere Resistenzen gegen dieselbe Art zählen einmal. -->
 
 Manche Kreaturen und Gegenstände sind mit bestimmten Schadensarten überaus schwer oder ungewöhnlich leicht zu verletzen.
 
@@ -88,6 +90,7 @@ Eine Kreatur, die gestorben ist, kann keine Trefferpunkte zurückgewinnen, bis M
 
 ## Auf 0 Trefferpunkte fallen {Dropping to 0 Hit Points} {#auf-0-trefferpunkte-fallen}
 <!-- auch: 0 Trefferpunkte, Sofortiger Tod, Bewusstlos werden -->
+<!-- kurz: Bleibt nach 0 TP noch Schaden in Höhe deines TP-Maximums übrig, bist du sofort tot. Sonst bewusstlos, bis du TP zurückgewinnst. -->
 
 Fällst du auf 0 Trefferpunkte, stirbst du entweder sofort oder wirst bewusstlos, wie im Folgenden erklärt.
 
@@ -106,6 +109,7 @@ Bringt dich Schaden auf 0 Trefferpunkte, ohne dich zu töten, wirst du **bewusst
 
 ## Todesrettungswürfe {Death Saving Throws} {#todesrettungswuerfe}
 <!-- auch: Todesrettungswurf -->
+<!-- kurz: Zu Beginn jedes Zuges bei 0 TP: W20, ab 10 Erfolg. 3 Erfolge: stabil, 3 Fehlschläge: tot. Eine 1 zählt doppelt, eine 20 gibt 1 TP. Schaden bei 0 TP: ein Fehlschlag, kritisch zwei. -->
 
 Wann immer du deinen Zug mit 0 Trefferpunkten beginnst, musst du einen besonderen Rettungswurf machen, einen Todesrettungswurf. Er entscheidet, ob du dem Tod näher rückst oder dich am Leben festklammerst. Anders als andere Rettungswürfe ist dieser an kein Attribut gebunden. Du bist jetzt in der Hand des Schicksals, unterstützt nur von Zaubern und Merkmalen, die deine Chancen bei einem Rettungswurf verbessern.
 
@@ -119,6 +123,7 @@ Würfle einen W20. Zeigt der Wurf **10 oder mehr**, hast du Erfolg. Andernfalls 
 > Bewusstlos bist du gelähmt gleichgestellt: Jeder Treffer aus 1,5 m ist kritisch und zählt als zwei Fehlschläge. Ein Gegner, der neben dir steht, tötet dich in zwei Hieben. Der Spieltisch zählt Erfolge und Fehlschläge mit.
 
 ## Stabilisieren {Stabilizing a Creature} {#stabilisieren}
+<!-- kurz: Aktion und WE (Heilkunde) gegen SG 10. Stabil heißt: keine Todesrettungswürfe mehr, nach 1W4 Stunden 1 TP. Neuer Schaden macht wieder instabil. -->
 
 Am besten rettest du eine Kreatur mit 0 Trefferpunkten, indem du sie heilst. Gibt es keine Heilung, lässt sich die Kreatur zumindest stabilisieren, damit sie nicht an einem gescheiterten Todesrettungswurf stirbt.
 
@@ -147,6 +152,7 @@ Manchmal will ein Angreifer einen Gegner außer Gefecht setzen, statt ihm den To
 > Nur ein Nahkampfangriff kann das. Deine Zauber töten. Wer lebend gefangen werden soll, bekommt den letzten Schlag von Kho, Fridolin oder einem Skelett im Nahkampf.
 
 ## Temporäre Trefferpunkte {Temporary Hit Points} {#temporaere-trefferpunkte}
+<!-- kurz: Gehen zuerst verloren, addieren sich nicht (du wählst die höheren), Heilung stellt sie nicht her. Ohne Dauer halten sie bis zur langen Rast. -->
 
 Manche Zauber und besonderen Fähigkeiten verleihen einer Kreatur temporäre Trefferpunkte. Temporäre Trefferpunkte sind keine echten Trefferpunkte. Sie sind ein Puffer gegen Schaden, ein Vorrat an Trefferpunkten, der dich vor Verletzung schützt.
 

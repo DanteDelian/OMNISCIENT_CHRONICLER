@@ -21,7 +21,8 @@
 		Quest: 'var(--color-warn)',
 		Gegenstand: 'var(--color-s-verw)',
 		Dokument: 'var(--color-ink-2)',
-		Journal: 'var(--color-s-herv)'
+		Journal: 'var(--color-s-herv)',
+		Regel: 'var(--color-s-bann)'
 	};
 
 	function hide() {

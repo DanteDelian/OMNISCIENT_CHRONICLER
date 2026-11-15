@@ -75,6 +75,7 @@ Ein Zaubertrick ist ein Zauber, der **nach Belieben** gewirkt werden kann, ohne 
 
 ## Rituale {Rituals} {#rituale}
 <!-- auch: Ritual -->
+<!-- kurz: +10 Minuten Wirkzeit, kein Zauberplatz, darum kein höherer Grad. Magier wirken jedes Ritual aus ihrem Buch, ohne es vorzubereiten. -->
 
 Bestimmte Zauber tragen ein besonderes Kennzeichen: Ritual. Ein solcher Zauber kann nach den normalen Regeln des Zauberwirkens gewirkt werden, oder er wird als Ritual gewirkt. Die Ritualfassung eines Zaubers braucht **10 Minuten länger** als gewöhnlich. Sie **verbraucht keinen Zauberplatz**. Das heißt auch, dass die Ritualfassung eines Zaubers nicht auf einem höheren Grad gewirkt werden kann.
 
@@ -84,6 +85,7 @@ Um einen Zauber als Ritual zu wirken, braucht ein Zauberwirker ein Merkmal, das 
 > Als Magier wirkst du jedes Ritual aus deinem Buch, **ohne es vorzubereiten**. Heute: *Vertrauten finden*, *Unsichtbarer Diener*, *Magie entdecken*, *Tensers schwebende Scheibe*. Jedes weitere Ritual im Buch ist Nutzen ohne Kosten.
 
 ## Wirkzeit {Casting Time} {#wirkzeit}
+<!-- kurz: Bonusaktions-Zauber: im selben Zug nur noch ein Zaubertrick mit 1 Aktion. Länger als 1 Aktion: jede Runde deine Aktion und deine Konzentration, bei Abbruch ist kein Platz verbraucht. -->
 
 Die meisten Zauber brauchen zum Wirken eine einzige Aktion, manche aber eine Bonusaktion, eine Reaktion oder viel mehr Zeit.
 
@@ -117,6 +119,7 @@ Ist ein Zauber einmal gewirkt, ist seine Wirkung nicht durch seine Reichweite be
 
 ## Komponenten {Components} {#komponenten}
 <!-- auch: Verbal, Gestik, Material, Materialkomponenten, Zauberfokus, Komponentenbeutel -->
+<!-- kurz: V: sprechen können. G: eine Hand frei. M: Fokus oder Beutel ersetzt Material ohne Preis, das nicht verbraucht wird. Material mit Preis oder Verbrauch brauchst du wirklich. Fokus- und Gestenhand dürfen dieselbe sein. -->
 
 Die Komponenten eines Zaubers sind die körperlichen Voraussetzungen, die du erfüllen musst, um ihn zu wirken. Die Beschreibung jedes Zaubers gibt an, ob er verbale (V), gestische (G) oder materielle (M) Komponenten verlangt. Kannst du eine oder mehrere Komponenten eines Zaubers nicht erbringen, kannst du den Zauber nicht wirken.
 
@@ -152,6 +155,7 @@ Viele Zauber wirken unmittelbar. Der Zauber verletzt, heilt, erschafft oder ver�
 > *Tote erwecken* wirkt unmittelbar: Deine Untoten lassen sich nicht bannen. Nur die Kontrolle läuft nach 24 Stunden ab.
 
 ## Konzentration {Concentration} {#konzentration}
+<!-- kurz: Nur ein Konzentrationszauber zur Zeit. Bei Schaden KO-Rettungswurf gegen SG 10 oder den halben Schaden (der höhere Wert), je Schadensquelle. Endet auch, wenn du kampfunfähig wirst oder stirbst. Beenden ist jederzeit frei. -->
 
 Manche Zauber verlangen, dass du die Konzentration aufrechterhältst, damit ihre Magie wirksam bleibt. Verlierst du die Konzentration, endet ein solcher Zauber.
 
@@ -259,6 +263,7 @@ Die Schulen der Magie helfen, Zauber zu beschreiben. Sie haben keine eigenen Reg
 
 ## Zauberwirken wahrnehmen {Perceiving a Caster at Work} {#zauberwirken-wahrnehmen}
 <!-- quelle: Xanathars Ratgeber für alles, in eigenen Worten -->
+<!-- kurz: Mit V, G oder M ist das Wirken wahrnehmbar. Ohne Komponenten nicht, die Wirkung kann trotzdem auffallen. -->
 
 Ob andere bemerken, dass jemand zaubert, hängt an den Komponenten. Hat ein Zauber eine **verbale, gestische oder materielle Komponente**, ist das Wirken **wahrnehmbar**: Wer den Zaubernden sieht oder hört, merkt, dass er zaubert.
 
@@ -272,6 +277,7 @@ Ist das Wirken nicht wahrnehmbar, kann die **Wirkung** trotzdem auffallen. Das s
 ## Einen Zauber erkennen {Identifying a Spell} {#einen-zauber-erkennen}
 <!-- auch: Zauber erkennen -->
 <!-- quelle: Xanathars Ratgeber für alles, in eigenen Worten -->
+<!-- kurz: Reaktion beim Wirken oder Aktion nach der Wirkung: IN (Arkane Kunde) gegen SG 15 + Grad, Vorteil bei Zaubern der eigenen Klasse. -->
 
 Manchmal willst du wissen, welchen Zauber jemand wirkt oder gewirkt hat. Dafür gibt es zwei Wege:
 

@@ -16,7 +16,11 @@ Ein typischer Kampf ist ein Aufeinandertreffen zweier Seiten, ein Wirbel aus Waf
 4. **Züge ausführen.** Jeder Teilnehmer des Kampfes führt in der Reihenfolge der Initiative seinen Zug aus.
 5. **Die nächste Runde beginnen.** Wenn jeder, der am Kampf beteiligt ist, an der Reihe war, endet die Runde. Schritt 4 wird wiederholt, bis der Kampf endet.
 
+> [!VAL]
+> Deine Initiative ist +1. Deine Skelette würfeln ihre eigene und handeln in ihrem Zug, gelenkt durch deinen Befehl.
+
 ## Überraschung {Surprise} {#ueberraschung}
+<!-- kurz: Heimlichkeit gegen passive Wahrnehmung. Überrascht: im ersten Zug weder Bewegung noch Aktion, bis dieser Zug endet keine Reaktion. -->
 
 Eine Schar Abenteurer schleicht sich an ein Banditenlager an und springt zwischen den Bäumen hervor, um anzugreifen. Ein Gallertwürfel gleitet durch einen Gewölbegang, unbemerkt von den Abenteurern, bis er einen von ihnen verschlingt. In solchen Lagen überrascht eine Seite des Kampfes die andere.
 
@@ -39,6 +43,7 @@ Bei Gleichstand entscheidet der DM die Reihenfolge unter den Kreaturen, die er f
 > Deine Initiative ist +1. Deine Untoten würfeln ihre eigene: Skelette haben +2, Zombies −2.
 
 ## Dein Zug {Your Turn} {#dein-zug}
+<!-- kurz: Bewegung bis zur Bewegungsrate und eine Aktion, in beliebiger Reihenfolge. Dazu höchstens eine Bonusaktion, eine Reaktion pro Runde und eine freie Interaktion mit einem Gegenstand. -->
 
 In deinem Zug kannst du dich **bis zu deiner Bewegungsrate weit bewegen** und **eine Aktion ausführen**. Du entscheidest, ob du dich zuerst bewegst oder zuerst deine Aktion ausführst. Deine Bewegungsrate, manchmal Schrittbewegungsrate genannt, steht auf deinem Charakterbogen.
 
@@ -129,6 +134,9 @@ Du kannst dich **hinwerfen, ohne Bewegungsrate aufzuwenden**. **Aufstehen** ist 
 
 Um dich im Liegen zu bewegen, musst du **kriechen** oder Magie wie Teleportation nutzen. Beim Kriechen kostet jeder Meter Bewegung 1 zusätzlichen Meter. 1 m durch schwieriges Gelände zu kriechen kostet also 3 m Bewegung.
 
+> [!VAL]
+> Aufstehen kostet dich 4,5 m deiner 9 m. Liegst du, schießen Fernkämpfer mit Nachteil auf dich, wer neben dir steht, mit Vorteil. *Sternenschritt* bringt dich auch liegend weg, du landest aber liegend.
+
 ## Bewegung um andere Kreaturen {Moving Around Other Creatures} {#bewegung-um-andere-kreaturen}
 
 Du kannst dich durch das Feld einer **nicht feindlichen** Kreatur bewegen. Durch das Feld einer **feindlichen** Kreatur kannst du dich dagegen nur bewegen, wenn die Kreatur mindestens **zwei Größenkategorien** größer oder kleiner ist als du. Denk daran, dass das Feld einer anderen Kreatur für dich schwieriges Gelände ist.
@@ -172,6 +180,7 @@ Weil größere Kreaturen mehr Raum einnehmen, können weniger von ihnen eine Kre
 > Du und deine Skelette seid mittelgroß. Riesen sind riesig, der Dino auch. Deine Eule ist winzig und taugt deshalb nicht für das *Gutartige Versetzen*.
 
 ## Zwängen {Squeezing into a Smaller Space} {#zwaengen}
+<!-- kurz: Durch Raum für eine Größe kleiner: doppelte Bewegung, Nachteil auf Angriffe und GE-Rettungswürfe, Angriffe gegen dich mit Vorteil. Noch schmaler: kein Durchkommen. -->
 
 Eine Kreatur kann sich durch einen Raum zwängen, der groß genug für eine Kreatur ist, die **eine Größenkategorie kleiner** ist als sie. Eine große Kreatur kann sich also durch einen Gang zwängen, der nur 1,5 m (5 Fuß) breit ist. Während sie sich durch einen Raum zwängt, muss eine Kreatur für jeden Meter, den sie sich dort bewegt, **1 zusätzlichen Meter** aufwenden, und sie hat **Nachteil auf Angriffswürfe und Geschicklichkeitsrettungswürfe**. Angriffswürfe gegen die Kreatur haben **Vorteil**, solange sie sich in dem kleineren Raum befindet.
 
@@ -180,6 +189,7 @@ Eine Kreatur kann sich durch einen Raum zwängen, der groß genug für eine Krea
 
 ## Berittener Kampf {Mounted Combat} {#berittener-kampf}
 <!-- auch: Reiten, Reittiere im Kampf -->
+<!-- kurz: Auf- oder Absteigen kostet halbe Bewegung. Wirst du umgestoßen oder dein Reittier gegen seinen Willen bewegt: GE-Rettungswurf SG 10, sonst fällst du. Nur abgerichtete Reittiere lassen sich lenken (Spurt, Rückzug, Ausweichen). -->
 
 Ein Ritter, der auf einem Schlachtross in die Schlacht stürmt, ein Magier, der vom Rücken eines Greifen aus Zauber wirkt, oder ein Kleriker, der auf einem Pegasus durch den Himmel jagt: Sie alle genießen die Schnelligkeit und Beweglichkeit, die ein Reittier bieten kann.
 

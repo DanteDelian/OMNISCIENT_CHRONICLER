@@ -1,10 +1,11 @@
 <script lang="ts">
 	import PDoc from './PDoc.svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
-	import { CONDITIONS } from '$lib/rules-ref';
+	import { conditionRules } from '$lib/rulebook';
 	import { abilityMod, castable, diceDe, fmtMod, saveBonus, slotTotals, spellAttack, spellDc } from '$lib/rules';
 
 	const c = $derived(campaign.data.character);
+	const conditions = $derived(conditionRules(campaign.data.rules));
 	const s = $derived(campaign.data.state);
 	const inv = $derived(campaign.data.inventory);
 	const cr = $derived(campaign.data.creatures);
@@ -97,14 +98,14 @@
 				{/each}
 			</tbody>
 		</table>
-		<p class="tiny muted" style="margin: 1mm 0 0">Skelett RK 13, 13 TP, Kurzbogen +4 (1W6 + 2), Dolch +4 (1W4 + 2) · Zombie RK 8, 22 TP · Erneuern: 1 Minute, Grad-3-Platz für bis zu 4, am klügsten abends vor der Rast.</p>
+		<p class="tiny muted" style="margin: 1mm 0 0">Skelett RK 12 ohne Rüstung (Leder 13, Fell 14), 13 TP, Kurzbogen +4 (1W6 + 2), Dolch +4 (1W4 + 2) · Zombie RK 8, 22 TP · Erneuern: 1 Minute, Grad-3-Platz für bis zu 4, am klügsten abends vor der Rast.</p>
 	</div>
 
 	<div class="grid" style="grid-template-columns: 1.6fr 1fr; gap: 4mm; margin-top: 2.5mm">
 		<div class="box">
 			<h3 style="margin: 0 0 1.4mm">Zustände</h3>
 			<div class="grid g4" style="gap: 0.8mm 2mm">
-				{#each CONDITIONS as cond (cond.id)}<span class="small"><span class="cb" style="width: 2.8mm; height: 2.8mm"></span> {cond.name}</span>{/each}
+				{#each conditions as cond (cond.id)}<span class="small"><span class="cb" style="width: 2.8mm; height: 2.8mm"></span> {cond.name}</span>{/each}
 			</div>
 			<div class="small" style="margin-top: 1.6mm">Erschöpfung <span class="boxes">{#each Array(6) as _, i (i)}<span class="cb" style="width: 3.6mm; height: 3.6mm; font-size: 5.6pt; text-align: center; line-height: 3.3mm; color: #9a95ab">{i + 1}</span>{/each}</span></div>
 		</div>

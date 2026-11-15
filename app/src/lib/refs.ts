@@ -50,7 +50,9 @@ const KIND_ORDER: Record<string, number> = {
 	Dokument: 9,
 	Journal: 10,
 	Seite: 11,
-	Agent: 12
+	Agent: 12,
+	// Regeln zuletzt: Bei gleichem Namen gewinnen Zauber, Merkmale und Gegenstände.
+	Regel: 13
 };
 
 export function kindRank(kind: string): number {
@@ -123,6 +125,12 @@ export function buildIndex(d: IndexInput): RefEntry[] {
 		const role = d.netzwerk.roles.find((r) => r.id === a.role)?.label ?? a.role;
 		push({ key: `agent:${a.id}`, title: a.name, kind: 'Agent', summary: [role, a.place].filter(Boolean).join(' · '), href: `/netzwerk#${a.id}`, names: [a.name] });
 	}
+	for (const ch of d.rules ?? []) {
+		push({ key: `rulechapter:${ch.slug}`, title: ch.title, kind: 'Regel', summary: ch.summary ?? '', href: `/regeln/${ch.slug}`, names: [ch.title, ch.en ?? ''], meta: 'Kapitel des Regelwerks' });
+		for (const r of ch.rules) {
+			push({ key: `rule:${ch.slug}/${r.id}`, title: r.name, kind: 'Regel', summary: r.summary, href: `/regeln/${ch.slug}#${r.id}`, names: [r.name, r.en ?? '', ...r.aliases], meta: r.en ? `${r.en} · ${ch.title}` : ch.title });
+		}
+	}
 	// Feste Seiten
 	push({ key: 'page:karte', title: 'Echsen-Karte', kind: 'Seite', summary: d.map.note, href: '/karte', names: ['Echsen-Karte', 'Wüstenkarte', 'Karte', 'Echsenkarte'] });
 	push({ key: 'page:zauber', title: 'Zauberbuch', kind: 'Seite', summary: 'Alle Zauber mit vollständigen Regeln', href: '/zauber', names: ['Zauberbuch', 'Zauber-Sets'] });
@@ -188,6 +196,12 @@ export function buildBacklinks(d: IndexInput, index: RefEntry[]): Record<string,
 		const people = [...g.knownBy, ...g.suspects].map((w) => w.who);
 		const texts = [g.truth, g.cover, g.risk, g.note, ...[...g.knownBy, ...g.suspects].map((w) => w.how)];
 		for (const l of [...people, ...(g.links ?? []), ...texts.flatMap((t) => extractLinks(t))]) add(l, from);
+	}
+	for (const ch of d.rules ?? []) {
+		for (const r of ch.rules) {
+			const from = { key: `rule:${ch.slug}/${r.id}`, title: r.name, kind: 'Regel', href: `/regeln/${ch.slug}#${r.id}` };
+			for (const l of [...extractLinks(r.text), ...extractLinks(r.valerius)]) add(l, from);
+		}
 	}
 	return result;
 }

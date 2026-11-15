@@ -64,6 +64,12 @@
 	::selection {
 		background: rgb(160 148 255 / 0.35);
 	}
+	mark {
+		background: rgb(230 189 110 / 0.22);
+		color: var(--color-ink);
+		border-radius: 3px;
+		padding: 0 2px;
+	}
 	* {
 		scrollbar-width: thin;
 		scrollbar-color: rgb(255 255 255 / 0.12) transparent;
@@ -582,6 +588,9 @@
 }
 .callout-note {
 	--c: var(--color-astral);
+}
+.callout-val {
+	--c: var(--color-gold);
 }
 
 /* ---------- Animationen ---------- */

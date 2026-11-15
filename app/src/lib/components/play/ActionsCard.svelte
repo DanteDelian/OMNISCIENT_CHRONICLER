@@ -7,7 +7,7 @@
 	import { rolls } from '$lib/stores/rolls.svelte';
 	import { ui } from '$lib/stores/ui.svelte';
 	import { useFeature } from '$lib/game';
-	import { ACTIONS } from '$lib/rules-ref';
+	import { ruleHref, rulesOf } from '$lib/rulebook';
 	import { attackBonus, SCHOOL_COLOR, castable, diceDe, featureLeft, fmtMod, skillBonus, spellAttack, spellDc } from '$lib/rules';
 	import type { Attack, Feature, Spell } from '$lib/types';
 
@@ -17,6 +17,7 @@
 	const c = $derived(campaign.data.character);
 	const s = $derived(campaign.data.state);
 	const spells = $derived(campaign.data.spells.filter(castable));
+	const standard = $derived(rulesOf(campaign.data.rules, 'aktionen'));
 
 	interface Row {
 		key: string;
@@ -152,11 +153,14 @@
 
 	{#if tab === 'standard'}
 		<ul class="grid gap-2 sm:grid-cols-2">
-			{#each ACTIONS as a (a.name)}
+			{#each standard as a (a.id)}
 				<li class="rounded-xl border border-line bg-white/[0.02] p-3">
-					<div class="text-sm font-medium">{a.name}</div>
-					<p class="mt-0.5 text-xs leading-relaxed text-ink-2">{a.text}</p>
-					{#if a.valerius}<p class="mt-1 text-xs text-astral">{a.valerius}</p>{/if}
+					<div class="flex items-baseline justify-between gap-2">
+						<a class="text-sm font-medium hover:text-astral" href={ruleHref('aktionen', a.id)} data-ref="rule:aktionen/{a.id}">{a.name}</a>
+						{#if a.en}<span class="truncate text-[0.68rem] text-ink-3 italic">{a.en}</span>{/if}
+					</div>
+					<p class="mt-0.5 text-xs leading-relaxed text-ink-2">{a.short ?? a.summary}</p>
+					{#if a.valerius}<p class="mt-1 text-xs text-gold/90"><Markdown src={a.valerius} inline /></p>{/if}
 				</li>
 			{/each}
 		</ul>

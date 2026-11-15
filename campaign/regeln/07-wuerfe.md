@@ -38,6 +38,7 @@ Weil Attributsmodifikatoren fast jeden Angriffswurf, Attributswurf und Rettungsw
 
 ## Vorteil und Nachteil {Advantage and Disadvantage} {#vorteil-und-nachteil}
 <!-- auch: Vorteil, Nachteil -->
+<!-- kurz: Zwei W20, der höhere (Vorteil) oder der niedrigere (Nachteil) zählt. Nie mehr als ein zusätzlicher W20, beides zusammen hebt sich auf. -->
 
 Manchmal sagt dir eine besondere Fähigkeit oder ein Zauber, dass du bei einem Attributswurf, einem Rettungswurf oder einem Angriffswurf Vorteil oder Nachteil hast. Dann würfelst du bei dem Wurf **einen zweiten W20**. Hast du Vorteil, nimmst du den **höheren** der beiden Würfe, hast du Nachteil, den **niedrigeren**. Hast du zum Beispiel Nachteil und würfelst eine 17 und eine 5, gilt die 5. Hast du stattdessen Vorteil und würfelst diese Zahlen, gilt die 17.
 
@@ -136,6 +137,7 @@ Gewöhnlich gilt deine Übung in einer Fertigkeit nur für eine bestimmte Art vo
 
 ## Passive Würfe {Passive Checks} {#passive-wuerfe}
 <!-- auch: Passive Wahrnehmung, Passiver Wurf -->
+<!-- kurz: 10 + alle üblichen Modifikatoren, mit Vorteil +5, mit Nachteil −5. -->
 
 Ein passiver Wurf ist eine besondere Art von Attributswurf, bei der **nicht gewürfelt** wird. Ein solcher Wurf kann für das durchschnittliche Ergebnis einer Aufgabe stehen, die wiederholt ausgeführt wird, etwa wenn man immer wieder nach Geheimtüren sucht. Oder der DM nutzt ihn, wenn er verdeckt bestimmen will, ob den Charakteren etwas gelingt, ohne zu würfeln, etwa ob sie ein verstecktes Monster bemerken.
 
@@ -260,6 +262,7 @@ Zu Beginn jedes Kampfes würfelst du Initiative, indem du einen Geschicklichkeit
 
 ## Sich verstecken {Hiding} {#sich-verstecken}
 <!-- auch: Versteckt, Heimlichkeit und Wahrnehmung -->
+<!-- kurz: GE (Heimlichkeit) gegen die Wahrnehmung der Suchenden, sonst gegen ihre passive Wahrnehmung. Wer dich deutlich sieht, vor dem kannst du dich nicht verstecken. Lärm verrät dich. -->
 
 Der DM entscheidet, wann die Umstände es zulassen, sich zu verstecken. Willst du dich verstecken, mach einen **Geschicklichkeitswurf (Heimlichkeit)**. Bis du entdeckt wirst oder aufhörst, dich zu verstecken, tritt das Ergebnis dieses Wurfs gegen den **Weisheitswurf (Wahrnehmung)** jeder Kreatur an, die gezielt nach Anzeichen deiner Anwesenheit sucht.
 

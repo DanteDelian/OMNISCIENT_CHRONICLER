@@ -107,6 +107,7 @@ Du kannst deine Arme während des Sprungs um die Hälfte deiner Körpergröße �
 
 ## Stürzen {Falling} {#stuerzen}
 <!-- auch: Fallschaden, Sturz -->
+<!-- kurz: 1W6 Wucht je 3 m, höchstens 20W6, danach liegend. -->
 
 Ein Sturz aus großer Höhe ist eine der häufigsten Gefahren für einen Abenteurer. Am Ende eines Sturzes erleidet eine Kreatur **1W6 Wuchtschaden für je 3 m (10 Fuß)**, die sie gefallen ist, höchstens **20W6**. Die Kreatur landet **liegend**, außer sie vermeidet es, durch den Sturz Schaden zu erleiden.
 
@@ -127,6 +128,7 @@ Eine Kreatur mit einer Konstitution von 14 kann zum Beispiel den Atem 3 Minuten 
 
 ## Sicht und Licht {Vision and Light} {#sicht-und-licht}
 <!-- auch: Leicht verschleiert, Komplett verschleiert, Helles Licht, Dämmriges Licht, Dämmerlicht, Dunkelheit -->
+<!-- kurz: Leicht verschleiert (Dämmerlicht, lockerer Nebel, Laub): Nachteil auf Wahrnehmung über Sicht. Komplett verschleiert (Dunkelheit, dichter Nebel): praktisch blind. -->
 
 Die grundlegendsten Aufgaben eines Abenteuers, also Gefahr bemerken, versteckte Gegenstände finden, einen Feind im Kampf treffen und einen Zauber auf ein Ziel richten, um nur einige zu nennen, hängen stark davon ab, dass ein Charakter sehen kann. Dunkelheit und andere Effekte, die die Sicht verschleiern, können ein erhebliches Hindernis sein.
 
@@ -147,6 +149,7 @@ Ob in einer Umgebung Licht vorhanden ist, ergibt drei Stufen der Beleuchtung: he
 
 ## Besondere Sinne {Special Senses} {#besondere-sinne}
 <!-- auch: Blindsicht, Wahrer Blick, Erschütterungssinn -->
+<!-- kurz: Dunkelsicht: Dunkelheit wie Dämmerlicht, nur Grautöne. Blindsicht: Wahrnehmung ohne Augen. Wahrer Blick: sieht Unsichtbares, Illusionen, wahre Gestalten. -->
 
 **Blindsicht** (Blindsight). Eine Kreatur mit Blindsicht kann ihre Umgebung in einem bestimmten Umkreis wahrnehmen, ohne sich auf Sicht zu verlassen. Kreaturen ohne Augen, etwa Schlicke, und Kreaturen mit Echoortung oder geschärften Sinnen, etwa Fledermäuse und wahre Drachen, haben diesen Sinn.
 
@@ -205,6 +208,7 @@ Ein Charakter kann auch einen Stärkewurf versuchen, um einen Gegenstand zu zerb
 > *Totenglocke* wirkt nur auf Kreaturen. *Sengender Strahl* und *Flammenkugel* entzünden Brennbares, das niemand trägt: Holzstapel, Zelte, dein eigenes Netz.
 
 ## Kurze Rast {Short Rest} {#kurze-rast}
+<!-- kurz: Mindestens 1 Stunde Ruhe. Am Ende Trefferwürfel ausgeben: je Würfel + KO-Modifikator heilen. -->
 
 Heldenhaft, wie sie sein mögen: Abenteurer können nicht jede Stunde des Tages mit Erkundung, Gesprächen und Kampf verbringen. Sie brauchen Rast, also Zeit, um zu schlafen und zu essen, ihre Wunden zu versorgen, Geist und Gemüt für das Zauberwirken zu erfrischen und sich für weitere Abenteuer zu wappnen. Abenteurer können mitten an einem Abenteuertag kurze Rasten einlegen und am Ende des Tages eine lange Rast.
 
@@ -216,6 +220,7 @@ Ein Charakter kann am Ende einer kurzen Rast **einen oder mehrere Trefferwürfel
 > Je Trefferwürfel W6 + 3 (im Schnitt 6,5), du hast 5. Am Ende einer kurzen Rast greift einmal am Tag deine *Arkane Erholung*: Plätze mit zusammen 3 Graden. Eine kurze Rast passt auch in die freien Stunden nach deiner Trance.
 
 ## Lange Rast {Long Rest} {#lange-rast}
+<!-- kurz: 8 Stunden, davon mindestens 6 Schlaf. 1 Stunde Anstrengung unterbricht sie. Danach alle TP und die Hälfte der Trefferwürfel zurück. Eine pro 24 Stunden, nur mit mindestens 1 TP. -->
 
 Eine lange Rast ist eine ausgedehnte Ruhepause von **mindestens 8 Stunden**, in der ein Charakter **mindestens 6 Stunden schläft** und **höchstens 2 Stunden** mit leichter Tätigkeit verbringt, etwa Lesen, Reden, Essen oder Wachehalten. Wird die Rast durch eine Zeit anstrengender Tätigkeit unterbrochen, also durch **mindestens 1 Stunde** Gehen, Kämpfen, Zauberwirken oder ähnliches Abenteurertreiben, müssen die Charaktere die Rast von vorn beginnen, um einen Nutzen daraus zu ziehen.
 

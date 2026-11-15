@@ -1,5 +1,28 @@
 <script lang="ts">
-	import { ShieldCheck, Compass, ScrollText, Swords, Mail, BookOpen, FlaskConical, ShoppingBag, Lightbulb, FileText, Hammer, Telescope } from '@lucide/svelte';
+	/** Symbol nach Namen aus dem Frontmatter (Dokumente, Regelkapitel). Unbekannte Namen zeigen ein Blatt. */
+	import {
+		Activity,
+		Backpack,
+		BookOpen,
+		Compass,
+		Crosshair,
+		Dices,
+		FileText,
+		Flag,
+		FlaskConical,
+		Gem,
+		Hammer,
+		HeartPulse,
+		Lightbulb,
+		Mail,
+		ScrollText,
+		ShieldCheck,
+		ShoppingBag,
+		Sparkles,
+		Swords,
+		Telescope,
+		Tent
+	} from '@lucide/svelte';
 	let { name = '', size = 18, class: cls = '' }: { name?: string; size?: number; class?: string } = $props();
 	const ICONS = {
 		'shield-check': ShieldCheck,
@@ -12,7 +35,16 @@
 		'shopping-bag': ShoppingBag,
 		lightbulb: Lightbulb,
 		hammer: Hammer,
-		telescope: Telescope
+		telescope: Telescope,
+		activity: Activity,
+		flag: Flag,
+		crosshair: Crosshair,
+		'heart-pulse': HeartPulse,
+		sparkles: Sparkles,
+		dices: Dices,
+		tent: Tent,
+		backpack: Backpack,
+		gem: Gem
 	} as const;
 	const Icon = $derived(ICONS[name as keyof typeof ICONS] ?? FileText);
 </script>

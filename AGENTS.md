@@ -59,7 +59,7 @@ Sie brauchen keine Vorbereitung.
   `-sm`, `-xs`), `chip`/`chip-on`, `badge` (Farbe über `--c`), `eyebrow`, `title-display`, `num`, `prose-grim`,
   `callout-*`, Tokens wie `text-astral`, `bg-panel`, `border-line`. Neue UI immer daraus bauen.
 - **Bausteine:** `Markdown` (mit Verweisen), `RefChip`, `SourceChip`, `Pips`, `Modal`, `PageHeader`, `StatBlock`,
-  `SpellDetail`, `Callout`. Regeln und Rechnungen: `lib/rules.ts`, Regeltexte: `lib/rules-ref.ts`.
+  `SpellDetail`, `Callout`. Regeln und Rechnungen: `lib/rules.ts`, Regeltexte im vollen Wortlaut: `campaign/regeln/*.md` (Parser `lib/rulebook.ts`, Seite `/regeln`).
 - **Druckfassung** (`/druck`): Teile in `lib/components/print/` (Präfix `P`), Stil in `routes/druck/print.css`,
   nur Klassen unter `.druck`. Neue Daten, die man am Tisch braucht, auch dort ergänzen.
 - Vor jedem Commit: `npm run check` und `npm run check:data` grün.

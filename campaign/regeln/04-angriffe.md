@@ -40,6 +40,7 @@ Zeigt der W20 bei einem Angriffswurf eine **1**, verfehlt der Angriff unabhängi
 > Zauberangriff +7 (Übungsbonus 3 + Intelligenz 4), Dolch +4, Stab +3. Kritische Treffer gibt es nur bei Angriffswürfen: *Eismesser* und *Sengender Strahl* können kritisch treffen, *Totenglocke* und *Netz* nicht.
 
 ## Ungesehene Angreifer und Ziele {Unseen Attackers and Targets} {#ungesehene-angreifer-und-ziele}
+<!-- kurz: Ungesehenes Ziel: Nachteil. Ungesehener Angreifer: Vorteil. Wer versteckt angreift, verrät danach seinen Standort. -->
 
 Kämpfende versuchen oft, der Aufmerksamkeit ihrer Gegner zu entgehen, indem sie sich verstecken, den Zauber *Unsichtbarkeit* wirken oder in der Dunkelheit lauern.
 
@@ -51,6 +52,7 @@ Kann eine Kreatur **dich nicht sehen**, hast du **Vorteil** auf Angriffswürfe g
 > In deiner *Nebelwolke* sieht keiner den anderen: Vorteil und Nachteil heben sich auf. Zauber, die ein Ziel verlangen, „das du sehen kannst“, gehen ohne Sicht gar nicht: *Totenglocke*, *Gegenzauber*, *Nebelschritt*.
 
 ## Fernkampfangriffe {Ranged Attacks} {#fernkampfangriffe}
+<!-- kurz: Jenseits der Grundreichweite Nachteil, jenseits der Maximalreichweite unmöglich. Steht ein Feind in 1,5 m, der dich sieht und nicht kampfunfähig ist: Nachteil, auch für Zauberangriffe. -->
 
 Bei einem Fernkampfangriff schießt du mit einem Bogen oder einer Armbrust, schleuderst ein Handbeil oder schickst auf andere Weise Geschosse los, um einen Gegner aus der Entfernung zu treffen. Ein Monster könnte Stacheln von seinem Schwanz verschießen. Auch viele Zauber schließen einen Fernkampfangriff ein.
 
@@ -82,6 +84,7 @@ Statt mit einer Waffe kannst du einen Nahkampfwaffenangriff auch als **waffenlos
 
 ## Gelegenheitsangriffe {Opportunity Attacks} {#gelegenheitsangriffe}
 <!-- auch: Gelegenheitsangriff -->
+<!-- kurz: Verlässt ein sichtbarer Feind deine Reichweite: Reaktion für einen Nahkampfangriff. Kein Gelegenheitsangriff bei Rückzug, Teleport oder wenn jemand anderes dich bewegt. -->
 
 In einem Kampf lauert jeder ständig auf die Gelegenheit, einen Gegner zu treffen, der flieht oder vorbeiläuft. Ein solcher Schlag heißt Gelegenheitsangriff.
 
@@ -103,6 +106,7 @@ Hat eine der Waffen die Eigenschaft Wurfwaffe, kannst du sie werfen, statt mit i
 
 ## Packen {Grappling} {#packen}
 <!-- auch: Ringen, Ringkampf -->
+<!-- kurz: Statt eines Angriffs, eine Hand frei, Ziel höchstens eine Größe größer: ST (Athletik) gegen ST (Athletik) oder GE (Akrobatik). Gepackt heißt Bewegungsrate 0. Befreien kostet eine Aktion mit demselben Vergleich, Mitziehen halbiert deine Bewegung. -->
 
 Willst du eine Kreatur packen oder mit ihr ringen, kannst du mit der Angriffsaktion einen besonderen Nahkampfangriff ausführen, das Packen. Kannst du mit der Angriffsaktion mehrere Angriffe ausführen, ersetzt dieser Angriff einen davon.
 
@@ -125,8 +129,12 @@ Das Ziel darf **höchstens eine Größenkategorie größer** sein als du und mus
 
 Im Kampf misst du oft dein Können mit dem deines Gegners. Eine solche Herausforderung wird durch einen vergleichenden Wurf dargestellt. Packen und Stoßen sind die häufigsten Wettstreite, die im Kampf eine Aktion erfordern. Der DM kann sie als Vorlage nehmen, um andere zu improvisieren.
 
+> [!VAL]
+> Athletik +0: Stoßen lohnt sich für dich nicht. Wer neben dir steht, wird mit *Sternenschritt* nicht weggestoßen, sondern einfach zurückgelassen.
+
 ## Deckung {Cover} {#deckung}
 <!-- auch: Halbe Deckung, Dreivierteldeckung, Volle Deckung, Vollständige Deckung -->
+<!-- kurz: Halbe Deckung (die Hälfte verdeckt, auch durch Kreaturen): +2 auf RK und GE-Rettungswürfe. Dreivierteldeckung: +5. Volle Deckung: kein direktes Ziel, Flächen erreichen dich trotzdem. Es zählt nur der beste Grad. -->
 
 Mauern, Bäume, Kreaturen und andere Hindernisse können im Kampf Deckung bieten und machen es schwerer, einem Ziel zu schaden. Ein Ziel hat nur dann einen Nutzen von Deckung, wenn ein Angriff oder ein anderer Effekt von der **gegenüberliegenden Seite** der Deckung ausgeht.
 

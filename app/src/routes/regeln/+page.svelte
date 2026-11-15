@@ -1,25 +1,38 @@
 <script lang="ts">
-	import { Search } from '@lucide/svelte';
+	import { Search, ArrowRight } from '@lucide/svelte';
 	import PageHeader from '$lib/components/PageHeader.svelte';
+	import DocIcon from '$lib/components/DocIcon.svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
-	import { CONDITIONS, EXHAUSTION, ACTIONS, SPELL_RULES, COMBAT_RULES, VISION_RULES, DEATH_RULES, REST_RULES, type RuleItem } from '$lib/rules-ref';
 	import { glossaryGroups } from '$lib/terms';
+	import { normalizeName } from '$lib/refs';
+	import { ruleHref, searchRules } from '$lib/rulebook';
 
-	const SECTIONS: { id: string; title: string; items: RuleItem[] }[] = [
-		{ id: 'aktionen', title: 'Aktionen im Kampf', items: ACTIONS },
-		{ id: 'zauberwirken', title: 'Zauberwirken', items: SPELL_RULES },
-		{ id: 'kampf', title: 'Kampfregeln', items: COMBAT_RULES },
-		{ id: 'sicht', title: 'Sicht und Licht', items: VISION_RULES },
-		{ id: 'tod', title: 'Bei 0 Trefferpunkten', items: DEATH_RULES },
-		{ id: 'rasten', title: 'Rasten', items: REST_RULES }
-	];
-
-	// Deutsch und Englisch, die häufigsten Begriffe zuerst
-	const groups = $derived(glossaryGroups(campaign.data.character.features));
+	const chapters = $derived(campaign.data.rules);
+	const total = $derived(chapters.reduce((n, c) => n + c.rules.length, 0));
 
 	let q = $state('');
+	const hits = $derived(searchRules(chapters, q, normalizeName));
+
+	/** Treffer im Text hervorheben (HTML wird vorher maskiert). */
+	function mark(text: string, query: string): string {
+		const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+		const needle = query.trim();
+		if (!needle) return esc(text);
+		const re = new RegExp(needle.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+		let out = '';
+		let last = 0;
+		for (const m of text.matchAll(re)) {
+			out += esc(text.slice(last, m.index)) + `<mark>${esc(m[0])}</mark>`;
+			last = (m.index ?? 0) + m[0].length;
+		}
+		return out + esc(text.slice(last));
+	}
+
+	// Deutsch und Englisch, die häufigsten Begriffe zuerst, dazu alle übrigen Regeln
+	const groups = $derived(glossaryGroups(campaign.data.character.features, chapters, true));
+	let gq = $state('');
 	const shown = $derived.by(() => {
-		const f = q.trim().toLowerCase();
+		const f = gq.trim().toLowerCase();
 		if (!f) return groups;
 		return groups
 			.map((g) => ({ ...g, terms: g.terms.filter(([de, en]) => de.toLowerCase().includes(f) || en.toLowerCase().includes(f)) }))
@@ -27,52 +40,64 @@
 	});
 </script>
 
-<svelte:head><title>Regeln · Valerius</title></svelte:head>
+<svelte:head><title>Regelwerk · Valerius</title></svelte:head>
 
-<PageHeader eyebrow="Regeln" title="Schnellreferenz" subtitle="D&D 5e (Spielerhandbuch 2014, SRD 5.1), kompakt zusammengefasst. Bei jedem Punkt steht, was er konkret für Valerius bedeutet, und daneben der englische Begriff." />
+<PageHeader
+	eyebrow="Regeln"
+	title="Regelwerk"
+	subtitle="D&D 5e im vollen Wortlaut: das SRD 5.1 übersetzt, ergänzt um Regeln aus Xanathars Ratgeber und dem Spielleiterhandbuch in eigenen Worten. Bei jeder Regel steht, was sie für Valerius bedeutet."
+/>
 
-<nav class="mb-6 flex flex-wrap gap-2">
-	<a class="chip chip-on" href="#begriffe">Deutsch – Englisch</a>
-	<a class="chip" href="#zustaende">Zustände</a>
-	{#each SECTIONS as s (s.id)}<a class="chip" href="#{s.id}">{s.title}</a>{/each}
-</nav>
+<div class="relative mb-8 max-w-2xl">
+	<Search size={18} class="pointer-events-none absolute top-1/2 left-4 -translate-y-1/2 text-ink-3" />
+	<input class="input !h-12 !rounded-2xl !pl-11 text-[1rem]" placeholder="{total} Regeln durchsuchen: Deckung, Opportunity Attack, Konzentration …" bind:value={q} aria-label="Regeln durchsuchen" />
+</div>
 
-<section id="zustaende" class="mb-10 scroll-mt-24">
-	<h2 class="title-display mb-3 text-3xl">Zustände <span class="text-xl text-ink-3">· Conditions</span></h2>
-	<div class="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-		{#each CONDITIONS as c (c.id)}
-			<article class="panel p-4">
-				<h3 class="font-semibold">{c.name}{#if c.en}{' '}<span class="text-sm font-normal text-ink-3 italic">{c.en}</span>{/if}</h3>
-				<ul class="prose-grim prose-sm mt-2">
-					{#each c.effects as e (e)}<li>{e}</li>{/each}
-				</ul>
-				{#if c.valerius}<p class="mt-2 rounded-lg bg-astral/[0.08] px-3 py-1.5 text-xs text-ink-2"><b class="text-astral">Für Valerius:</b> {c.valerius}</p>{/if}
-			</article>
-		{/each}
-		<article class="panel p-4">
-			<h3 class="font-semibold">Erschöpfung <span class="text-sm font-normal text-ink-3 italic">Exhaustion</span></h3>
-			<ol class="prose-grim prose-sm mt-2">
-				{#each EXHAUSTION as e (e)}<li>{e}</li>{/each}
-			</ol>
-			<p class="mt-2 text-xs text-ink-3">Stufen wirken kumulativ. Eine lange Rast mit Essen und Trinken senkt die Erschöpfung um 1.</p>
-		</article>
-	</div>
-</section>
-
-{#each SECTIONS as s (s.id)}
-	<section id={s.id} class="mb-10 scroll-mt-24">
-		<h2 class="title-display mb-3 text-3xl">{s.title}</h2>
-		<div class="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-			{#each s.items as it (it.name)}
-				<article class="panel p-4">
-					<h3 class="font-semibold">{it.name}{#if it.en && it.en !== it.name}{' '}<span class="text-sm font-normal text-ink-3 italic">{it.en}</span>{/if}</h3>
-					<p class="mt-1.5 text-sm leading-relaxed text-ink-2">{it.text}</p>
-					{#if it.valerius}<p class="mt-2 rounded-lg bg-astral/[0.08] px-3 py-1.5 text-xs text-ink-2"><b class="text-astral">Für Valerius:</b> {it.valerius}</p>{/if}
-				</article>
+{#if q.trim()}
+	<section class="mb-12" aria-live="polite">
+		<div class="eyebrow mb-3">{hits.length ? `${hits.length} Treffer` : 'Keine Treffer'}</div>
+		<ul class="space-y-2">
+			{#each hits as h (`${h.chapter.slug}/${h.rule.id}`)}
+				<li>
+					<a class="panel panel-hover flex items-start gap-4 p-4" href={ruleHref(h.chapter.slug, h.rule.id)}>
+						<span class="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-white/[0.04] text-astral"><DocIcon name={h.chapter.icon} size={17} /></span>
+						<span class="min-w-0 flex-1">
+							<span class="flex flex-wrap items-baseline gap-x-2">
+								<span class="font-semibold text-ink">{@html mark(h.rule.name, q)}</span>
+								{#if h.rule.en}<span class="text-xs text-ink-3 italic">{@html mark(h.rule.en, q)}</span>{/if}
+								<span class="text-xs text-ink-3">· {h.chapter.title}</span>
+							</span>
+							<span class="mt-1 block text-sm leading-relaxed text-ink-2">{@html mark(h.snippet, q)}</span>
+						</span>
+					</a>
+				</li>
 			{/each}
-		</div>
+		</ul>
 	</section>
-{/each}
+{:else}
+	<section class="mb-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+		{#each chapters as ch (ch.slug)}
+			<a class="panel panel-hover group flex flex-col p-5" href={ruleHref(ch.slug)}>
+				<div class="flex items-start gap-3">
+					<span class="grid h-11 w-11 shrink-0 place-items-center rounded-2xl border border-line-2 bg-white/[0.03] text-astral transition group-hover:text-gold">
+						<DocIcon name={ch.icon} size={20} />
+					</span>
+					<div class="min-w-0">
+						<div class="eyebrow">Kapitel {ch.order} · {ch.rules.length} Regeln</div>
+						<h2 class="title-display mt-1 text-[1.65rem]">{ch.title}</h2>
+						{#if ch.en}<div class="text-xs text-ink-3 italic">{ch.en}</div>{/if}
+					</div>
+				</div>
+				{#if ch.summary}<p class="mt-3 text-sm leading-relaxed text-ink-2">{ch.summary}</p>{/if}
+				<div class="mt-auto flex flex-wrap gap-1.5 pt-4">
+					{#each ch.rules.slice(0, 6) as r (r.id)}<span class="chip !h-6 !px-2 !text-[0.7rem]">{r.name}</span>{/each}
+					{#if ch.rules.length > 6}<span class="chip !h-6 !px-2 !text-[0.7rem] text-ink-3">+{ch.rules.length - 6}</span>{/if}
+				</div>
+				<span class="mt-3 flex items-center gap-1 text-xs text-ink-3 transition group-hover:text-ink">Lesen <ArrowRight size={12} /></span>
+			</a>
+		{/each}
+	</section>
+{/if}
 
 <section id="begriffe" class="mb-10 scroll-mt-24">
 	<div class="mb-3 flex flex-wrap items-end justify-between gap-3">
@@ -82,7 +107,7 @@
 		</div>
 		<div class="relative w-full sm:w-64">
 			<Search size={14} class="absolute top-1/2 left-3 -translate-y-1/2 text-ink-3" />
-			<input class="input !pl-8" placeholder="z. B. Perception" bind:value={q} />
+			<input class="input !pl-8" placeholder="z. B. Perception" bind:value={gq} aria-label="Begriffe durchsuchen" />
 		</div>
 	</div>
 	<div class="columns-1 gap-4 md:columns-2 xl:columns-3">
@@ -106,6 +131,9 @@
 	</div>
 </section>
 
-<p class="mt-4 text-xs text-ink-3">
-	Enthält Regelinhalte aus dem System Reference Document 5.1 von Wizards of the Coast LLC, lizenziert unter CC BY 4.0, in eigener deutscher Zusammenfassung.
+<p class="mt-4 text-xs leading-relaxed text-ink-3">
+	Enthält Regelinhalte aus dem System Reference Document 5.1 („SRD 5.1“) von Wizards of the Coast LLC, verfügbar unter
+	https://dnd.wizards.com/resources/systems-reference-document, lizenziert unter der Creative Commons Attribution 4.0 International License
+	(https://creativecommons.org/licenses/by/4.0/legalcode), in eigener deutscher Übersetzung. Regeln aus anderen Büchern stehen in eigenen Worten
+	und sind mit ihrer Quelle gekennzeichnet.
 </p>

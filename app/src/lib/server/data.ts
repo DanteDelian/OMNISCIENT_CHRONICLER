@@ -1,6 +1,7 @@
 /** Lädt die komplette Kampagne aus campaign/ und baut Index und Rückverweise. */
 import matter from 'gray-matter';
 import { buildBacklinks, buildIndex } from '$lib/refs';
+import { parseRuleChapter } from '$lib/rulebook';
 import type {
 	CampaignData,
 	Character,
@@ -17,6 +18,7 @@ import type {
 	PlayState,
 	Quest,
 	Question,
+	RuleChapter,
 	Source,
 	Spell,
 	WorldEntry
@@ -86,6 +88,16 @@ function loadWorld(): WorldEntry[] {
 	});
 }
 
+/** Regelwerk: campaign/regeln/NN-slug.md, sortiert nach order */
+function loadRules(): RuleChapter[] {
+	return listFiles('regeln', '.md')
+		.map((file) => {
+			const { data, content } = matter(readText(`regeln/${file}`));
+			return parseRuleChapter(file, data, content);
+		})
+		.sort((a, b) => a.order - b.order);
+}
+
 let cache: { rev: number; data: CampaignData } | null = null;
 
 export function loadCampaign(): CampaignData {
@@ -107,7 +119,8 @@ export function loadCampaign(): CampaignData {
 		netzwerk: { roles: [], agents: [], ...readJson<Partial<Network>>('netzwerk.json', {}) },
 		zaubersets: { sets: [], ...readJson<Partial<SpellSets>>('zaubersets.json', {}) },
 		geheimnisse: { ruf: '', gefahren: '', secrets: [], ...readJson<Partial<Secrets>>('geheimnisse.json', {}) },
-		uhren: { clocks: [], ...readJson<Partial<Clocks>>('uhren.json', {}) }
+		uhren: { clocks: [], ...readJson<Partial<Clocks>>('uhren.json', {}) },
+		rules: loadRules()
 	};
 	const index = buildIndex(base);
 	const data: CampaignData = { ...base, index, backlinks: buildBacklinks(base, index) };

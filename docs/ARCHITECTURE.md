@@ -31,7 +31,8 @@ app/src/
   lib/
     types.ts              Typen aller Kampagnendateien
     rules.ts              D&D-Rechnungen: Modifikatoren, Fertigkeiten, SG, Plätze, Wahrscheinlichkeiten
-    rules-ref.ts          Regel-Referenz (Zustände, Aktionen, Zauberwirken, Deckung, Licht, Tod, Rasten)
+    rulebook.ts           Regelwerk: liest campaign/regeln/*.md (Kapitel, Regeln, Für Valerius, Kurzfassung), Suche
+    glossary.ts           Wörterbuch Deutsch–Englisch (feste Begriffe)
     refs.ts               Verweis-Index, Namensauflösung, Rückverweise (läuft auch im Prüfskript)
     markdown.ts           Markdown → HTML mit [[Verweisen]] und Hinweiskästen
     game.ts               Spielaktionen: Schaden, Heilen, Wirken, Konzentration, Rasten, Untote erneuern, Bezahlen
@@ -47,7 +48,7 @@ app/src/
     components/           Bausteine; play/ = Karten des Spieltischs; print/ = Teile der Druckfassung
     print.ts              Teile, Beschriftungen und Papierfarben der Druckfassung
   routes/                 Seiten: / bogen zauber gefolge inventar werkstatt journal quests raetsel welt karte netzwerk
-                          geheimnisse archiv regeln druck login
+                          geheimnisse archiv regeln regeln/[kapitel] druck login
                           api/: save, stream, assets, health
 app/scripts/check-data.mjs  Konsistenzprüfung der Kampagnendaten (npm run check:data)
 app/scripts/druck.mjs       PDFs der Druckfassung über Edge/Chrome ohne Fenster (npm run druck)

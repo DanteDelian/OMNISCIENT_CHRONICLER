@@ -102,6 +102,16 @@ export const ECONOMY_LABEL: Record<string, string> = {
 	rast: 'Rast'
 };
 
+/** Erschöpfung: Wirkung je Stufe, kumulativ. Der Wortlaut steht im Regelwerk unter Zustände. */
+export const EXHAUSTION = [
+	'Nachteil auf Attributswürfe',
+	'Bewegungsrate halbiert',
+	'Nachteil auf Angriffswürfe und Rettungswürfe',
+	'Trefferpunktemaximum halbiert',
+	'Bewegungsrate auf 0 verringert',
+	'Tod'
+];
+
 export function mod(score: number): number {
 	return Math.floor((score - 10) / 2);
 }

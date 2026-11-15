@@ -3,7 +3,7 @@
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { glossaryGroups } from '$lib/terms';
 
-	const groups = $derived(glossaryGroups(campaign.data.character.features));
+	const groups = $derived(glossaryGroups(campaign.data.character.features, campaign.data.rules));
 </script>
 
 <PDoc id="begriffe" eyebrow="Am Tisch" title="Deutsch – Englisch" subtitle="Für den DM, der gern Denglisch spricht: Proben, Zustände, Zauberbegriffe und deine Merkmale." compact>

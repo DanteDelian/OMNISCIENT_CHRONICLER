@@ -560,9 +560,46 @@ export interface Clocks {
 	clocks: Clock[];
 }
 
+/** Eine Regel im vollen Wortlaut (campaign/regeln/*.md, Abschnitt „## Name {Englisch} {#id}“). */
+export interface Rule {
+	id: string;
+	name: string;
+	/** Englischer Begriff */
+	en?: string;
+	/** Weitere Namen für [[Verweise]] und die Suche */
+	aliases: string[];
+	/** Voller Regeltext (Markdown), ohne den Kasten „Für Valerius“ */
+	text: string;
+	/** Was die Regel für Valerius bedeutet (Markdown) */
+	valerius?: string;
+	/** Quelle, wenn sie von der des Kapitels abweicht */
+	source?: string;
+	/** Kurzfassung für den Spickzettel */
+	short?: string;
+	/** Erster Absatz ohne Markdown (Vorschaukarten, Suche) */
+	summary: string;
+}
+
+/** Ein Kapitel des Regelwerks (campaign/regeln/NN-slug.md) */
+export interface RuleChapter {
+	slug: string;
+	file: string;
+	title: string;
+	en?: string;
+	order: number;
+	/** Lucide-Symbol */
+	icon?: string;
+	source?: string;
+	summary?: string;
+	/** Einleitung vor der ersten Regel (Markdown) */
+	intro: string;
+	rules: Rule[];
+}
+
 export interface CampaignData {
 	trees: FamilyTree[];
 	uhren: Clocks;
+	rules: RuleChapter[];
 	fragen: Question[];
 	netzwerk: Network;
 	zaubersets: SpellSets;

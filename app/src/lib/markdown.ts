@@ -1,6 +1,6 @@
 /**
  * Markdown → HTML mit [[Wikilinks]] (inkl. Vorschaukarten-Attribut) und
- * Hinweis-Kästen im GitHub-Stil: > [!TIP] Titel / [!RULE] / [!WARNING] / [!NOTE] / [!FIX]
+ * Hinweis-Kästen im GitHub-Stil: > [!TIP] Titel / [!RULE] / [!WARNING] / [!NOTE] / [!FIX] / [!VAL]
  */
 import { marked } from 'marked';
 import type { RefEntry } from './types';
@@ -14,7 +14,8 @@ const CALLOUT_LABEL: Record<string, string> = {
 	rule: 'Regel',
 	warning: 'Achtung',
 	note: 'Hinweis',
-	fix: 'Korrigiert'
+	fix: 'Korrigiert',
+	val: 'Für Valerius'
 };
 
 function escapeAttr(s: string): string {
