@@ -8,6 +8,13 @@
 
 	const c = $derived(campaign.data.character);
 	const s = $derived(campaign.data.state);
+	// Stand der Tarnung aus geheimnisse.json (Eintrag „donnergarde“), nicht fest eingetragen
+	const cover = $derived(campaign.data.geheimnisse.secrets.find((x) => x.id === 'donnergarde'));
+	const COVER: Record<string, { label: string; color: string }> = {
+		sicher: { label: 'Tarnung sicher', color: 'var(--color-life)' },
+		gefaehrdet: { label: 'Tarnung gefährdet', color: 'var(--color-warn)' },
+		aufgeflogen: { label: 'Tarnung aufgeflogen', color: 'var(--color-blood)' }
+	};
 
 	function toggleShield() {
 		campaign.change('state', (st) => (st.shield = !st.shield));
@@ -45,7 +52,9 @@
 				<h1 class="title-display title-gold pb-1 text-[2.1rem] leading-[0.95] sm:text-[2.7rem]">{c.name}</h1>
 				<div class="mt-1.5 flex flex-wrap items-center gap-2 text-sm text-ink-2">
 					<span class="italic">„{c.alias}“, {c.aliasTitle}</span>
-					<span class="badge" style="--c: var(--color-blood)">Tarnung aufgeflogen</span>
+					{#if cover && COVER[cover.status]}
+						<a class="badge" style="--c: {COVER[cover.status].color}" href="/geheimnisse#{cover.id}" title="{cover.title}: zum Eintrag in Wer weiß was?">{COVER[cover.status].label}</a>
+					{/if}
 				</div>
 				<div class="mt-1 text-sm text-ink-3">{c.race} · {c.className} {c.level} · {c.subclass} · {c.alignment}</div>
 			</div>

@@ -4,7 +4,7 @@ subtitle: Wo Valerius gerade steht
 icon: compass
 order: 2
 group: Kampagne
-updated: 2026-11-14
+updated: 2026-11-15
 ---
 # Aktuelle Lage
 
@@ -12,12 +12,13 @@ updated: 2026-11-14
 
 ## Vor dem Überfall
 
-Die Hütte hält 8 Stunden, die Verfolger kamen nach 6 bis 7. Euch bleiben 1 bis 2 Stunden. In dieser Reihenfolge:
+Die Hütte hält 8 Stunden, die Verfolger kamen nach 6 bis 7. Euch bleiben 1 bis 2 Stunden, es sei denn, [[Twee]] wirkt die Hütte als Ritual neu (11 Minuten, kein Platz): Dann zählt nur noch das Morgengrauen. In dieser Reihenfolge:
 
-1. **Eine [[Eule]] als Ritual beschwören** (70 Minuten, kein Platz) und das Lager der Verfolger auskundschaften.
-2. **Das Orc-Skelett erwecken,** 1 Stunde kurz rasten und den Platz mit der [[Arkane Erholung|Arkanen Erholung]] zurückholen.
-3. **Leonidas jetzt berichten,** nicht erst nach dem Morgengrauen. Der [[Verständigungsstein]] lädt sich dann ohnehin auf, du hast also zwei Nachrichten. Beide stehen bei [[Die Belagerung im Westen brechen]].
-4. **Vor dem Morgengrauen zuschlagen.** Bis dahin ist das Steinpaar stumm, über das der Anführer Alarm schlug.
+1. **Neu vorbereiten:** Deine Trance ist vorbei, du darfst schon jetzt umbereiten. Zauber-Set „Society, Teufel, Geister“: *Unsichtbares sehen* und *Flammenkugel* statt *Schutz vor Gut und Böse*, für das dir das Material fehlt (17 Minuten).
+2. **Eine [[Eule]] als Ritual beschwören** (70 Minuten, kein Platz) und das Lager der Verfolger auskundschaften.
+3. **Das Orc-Skelett erwecken,** 1 Stunde kurz rasten und den Platz mit der [[Arkane Erholung|Arkanen Erholung]] zurückholen.
+4. **Leonidas jetzt berichten,** nicht erst nach dem Morgengrauen. Der [[Verständigungsstein]] lädt sich dann ohnehin auf, du hast also zwei Nachrichten. Beide stehen bei [[Die Belagerung im Westen brechen]].
+5. **Vor dem Morgengrauen zuschlagen.** Bis dahin ist das Steinpaar stumm, über das der Anführer Alarm schlug.
 
 Das Briefing steht im [[Taktik-Handbuch]], die Gründe in der [[Tiefenanalyse]].
 
@@ -29,8 +30,8 @@ Das Briefing steht im [[Taktik-Handbuch]], die Gründe in der [[Tiefenanalyse]].
 - **Die Spur:** Der Dino walzt eine Schneise, der jeder Jäger folgt. In Twees Hütte passt er nach den Regeln nicht.
 
 ## Was du jetzt hast
-- **Zauberbuch:** 14 Zauber ab Grad 1, neu sind [[Nebelwolke]], [[Flammenkugel]], [[Tensers schwebende Scheibe]] und [[Unsichtbares sehen]]. Für morgen ein [[Zauber-Sets|Zauber-Set]] wählen. Auf Stufe 6 kommen *Hypnotisches Muster* und *Flutwelle* (siehe [[Stufe-6-Planer]]).
-- **Nicht wirkbar:** [[Schutz vor Gut und Böse]] verbraucht Weihwasser oder Silber- und Eisenpulver. Du hast keins, der Zauber belegt aber einen Vorbereitungsplatz.
+- **Zauberbuch:** 14 Zauber ab Grad 1, neu sind [[Nebelwolke]], [[Flammenkugel]], [[Tensers schwebende Scheibe]] und [[Unsichtbares sehen]]. Das passende [[Zauber-Sets|Zauber-Set]] wählst du nach der Trance, Zauber ohne Material überspringt es von selbst. Auf Stufe 6 kommen *Hypnotisches Muster* und *Flutwelle* (siehe [[Stufe-6-Planer]]).
+- **Nicht wirkbar:** [[Schutz vor Gut und Böse]] verbraucht Weihwasser oder Silber- und Eisenpulver. Du hast keins, der Zauber ist aber noch vorbereitet. Die Zauber-Sets überspringen ihn, bis das Material im Inventar steht.
 - **Untote:** keine aktiven. Ein Orc-Skelett mit Umhang trägst du im Rucksack, zwei inaktive Skelette liegen mit den Society-Uniformen in eurer Unterkunft in [[Die Siedlung|Dehapten]]. Ohne Rüstung haben sie RK 12, allgemeine Befehle gehen (DM).
 - **Astrale Trance:** Für den neuen Tag Lederwerkzeug, für Lederrüstungen der Skelette und Geschirr fürs Reittier. Das Werkzeug beschwörst du mit *Geringer Beschwörung*, das hat der DM erlaubt. Mit Feinden in 100 m gehen Wache und Untote vor. Was du alles herstellen kannst: [[Werkstatt]].
 - **Verbindungen:** der Verständigungsstein zu Leonidas. Er lädt sich im Morgengrauen auf, die Ladung vom 08.11. ist noch da. Die Ohrringe hast du beide bei dir, der zweite ist für deinen künftigen Verwalter gedacht.

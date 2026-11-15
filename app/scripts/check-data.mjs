@@ -286,6 +286,14 @@ if (s && d.character) {
 		if (used > (d.character.spellcasting.slots[lvl] ?? 0)) errors.push(`state.json: mehr Grad-${lvl}-Plätze verbraucht als vorhanden`);
 	}
 }
+// Verbrauchtes Material: Die ID muss im Inventar oder auf der Wunschliste stehen
+const itemIds = new Set([...d.inventory.items.map((i) => i.id), ...(d.inventory.wishlist ?? []).map((w) => w.id)]);
+for (const s of d.spells) {
+	if (!s.consumes) continue;
+	if (!itemIds.has(s.consumes)) errors.push(`spells.json ${s.id}: „consumes“ ${s.consumes} steht weder im Inventar noch auf der Wunschliste`);
+	else if (s.prepared && !d.inventory.items.some((i) => i.id === s.consumes && i.qty > 0))
+		warnings.push(`spells.json ${s.id}: vorbereitet, aber das verbrauchte Material (${s.consumes}) fehlt im Inventar`);
+}
 const prepared = d.spells.filter((x) => x.status === 'buch' && x.level > 0 && x.prepared).length;
 if (prepared > d.character.spellcasting.preparedMax) warnings.push(`spells.json: ${prepared} vorbereitet, erlaubt sind ${d.character.spellcasting.preparedMax}`);
 // Zauberkarten im Druck: Lange Regeltexte brauchen eigene Kurzregeln (card), sonst wird die Schrift winzig

@@ -20,7 +20,7 @@ Die folgenden Beschreibungen legen fest, was mit einer Kreatur geschieht, solang
 - Angriffswürfe gegen die Kreatur haben Vorteil, und die Angriffswürfe der Kreatur haben Nachteil.
 
 > [!VAL]
-> Zauber, die ein sichtbares Ziel brauchen (*Totenglocke*, *Gegenzauber*), gehen nicht. Auch *Sternenschritt* und *Nebelschritt* verlangen einen Ort, den du siehst.
+> Zauber, die ein sichtbares Ziel brauchen (*Totenglocke*, *Gegenzauber*), gehen nicht. Auch dein *Sternenschritt* verlangt einen Ort, den du siehst, ebenso *Nebelschritt*, falls du ihn auf Stufe 6 lernst.
 
 ## Bezaubert {Charmed} {#bezaubert}
 
@@ -114,7 +114,7 @@ Die folgenden Beschreibungen legen fest, was mit einer Kreatur geschieht, solang
 - Die Kreatur hat Nachteil auf Geschicklichkeitsrettungswürfe.
 
 > [!VAL]
-> Das ist der Zustand, den dein *Netz* verursacht. Er verhindert keinen Teleport: *Nebelschritt* führt aus dem Netz hinaus.
+> Das ist der Zustand, den dein *Netz* verursacht. Er verhindert keinen Teleport: Ein Gegner mit *Nebelschritt* entkommt, wie der Anführer der Sumpfschuppen zweimal. Du selbst kommst mit *Sternenschritt* aus einem fremden Netz.
 
 ## Betäubt {Stunned} {#betaeubt}
 

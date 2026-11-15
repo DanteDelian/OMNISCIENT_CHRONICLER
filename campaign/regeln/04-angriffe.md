@@ -49,7 +49,7 @@ Greifst du ein Ziel an, das du **nicht sehen** kannst, hast du **Nachteil** auf 
 Kann eine Kreatur **dich nicht sehen**, hast du **Vorteil** auf Angriffswürfe gegen sie. Bist du versteckt, also weder zu sehen noch zu hören, wenn du angreifst, verrätst du deinen Standort, sobald der Angriff trifft oder verfehlt.
 
 > [!VAL]
-> In deiner *Nebelwolke* sieht keiner den anderen: Vorteil und Nachteil heben sich auf. Zauber, die ein Ziel verlangen, „das du sehen kannst“, gehen ohne Sicht gar nicht: *Totenglocke*, *Gegenzauber*, *Nebelschritt*.
+> In deiner *Nebelwolke* sieht keiner den anderen: Vorteil und Nachteil heben sich auf. Zauber, die ein Ziel verlangen, „das du sehen kannst“, gehen ohne Sicht gar nicht: *Totenglocke*, *Gegenzauber*, und auch dein *Sternenschritt* braucht einen Ort, den du siehst.
 
 ## Fernkampfangriffe {Ranged Attacks} {#fernkampfangriffe}
 <!-- kurz: Jenseits der Grundreichweite Nachteil, jenseits der Maximalreichweite unmöglich. Steht ein Feind in 1,5 m, der dich sieht und nicht kampfunfähig ist: Nachteil, auch für Zauberangriffe. -->

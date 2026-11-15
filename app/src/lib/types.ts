@@ -192,6 +192,8 @@ export interface Spell {
 	docs?: string[];
 	/** Kurzregeln für die Zauberkarte im Druck (Volltext steht in text) */
 	card?: string;
+	/** ID eines Gegenstands (Inventar oder Wunschliste), den der Zauber verbraucht. Fehlt er im Inventar, geht der Zauber nicht */
+	consumes?: string;
 	/** Vorschlag, den der Stufe-6-Planer empfiehlt */
 	pick?: boolean;
 }

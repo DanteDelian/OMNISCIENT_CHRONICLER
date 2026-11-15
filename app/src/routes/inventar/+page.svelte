@@ -135,7 +135,7 @@
 			// Pfeile, Rationen, Tränke: zum vorhandenen Stapel, sonst als neuer Gegenstand
 			const stack = w.stack ? i.items.find((x) => x.id === w.stack) : undefined;
 			if (stack) stack.qty += w.qty ?? 1;
-			else i.items.push({ id: uid('item'), name: w.name, group: w.group ?? 'koerper', qty: w.qty ?? 1, desc: w.why });
+			else i.items.push({ id: i.items.some((x) => x.id === w.id) ? uid('item') : w.id, name: w.name, group: w.group ?? 'koerper', qty: w.qty ?? 1, desc: w.why });
 		});
 		rolls.event('Gekauft', `${w.name} für ${fmtGold(w.price ?? 0)} GM`, 'good');
 		buying = null;

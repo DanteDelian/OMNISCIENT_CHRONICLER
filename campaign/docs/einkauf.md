@@ -20,7 +20,7 @@ updated: 2026-11-14
 
 | Priorität | Gegenstand | Kosten | Nutzen |
 | :-- | :-- | :-- | :-- |
-| Mittel | Gute Kleidung | 15 GM | Nach der aufgeflogenen Tarnung Autorität ausstrahlen, vor Leon und dem Paladin |
+| Mittel | Gute Kleidung | 15 GM | Wenn die Tarnung fällt, Autorität ausstrahlen, vor Leon und dem Paladin |
 | Vorschlag | Kräuterkundeausrüstung | 5 GM | Das Werkzeug für Heiltränke. Laut DM darfst du es auch mit *Geringer Beschwörung* erschaffen |
 | Hoch | Silber- und Eisenpulver oder Weihwasser | 1 SM oder 25 GM | Wird von *Schutz vor Gut und Böse* verbraucht. Ohne das Material ist der Zauber nicht wirkbar |
 | Hoch | Säcke, Knebel und Seil | rund 1 GM | Für Gefangene der Society: *Nebelschritt* braucht Stimme und Sicht |

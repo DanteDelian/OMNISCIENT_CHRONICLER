@@ -3,7 +3,7 @@
 	import { ChevronDown, Wand2, Hourglass } from '@lucide/svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { castSpell } from '$lib/game';
-	import { lowestFreeSlot, slotTotals, slotsLeft } from '$lib/rules';
+	import { lowestFreeSlot, materialMissing, slotTotals, slotsLeft } from '$lib/rules';
 	import type { Spell } from '$lib/types';
 
 	let { spell, size = 'sm' }: { spell: Spell; size?: 'sm' | 'xs' } = $props();
@@ -14,6 +14,10 @@
 	const free = $derived(spell.level > 0 ? lowestFreeSlot(c, s, spell.level) : null);
 	const higher = $derived(slotTotals(c).filter((x) => x.level >= spell.level && x.level > 0));
 	const canSlot = $derived(spell.level === 0 || (!!spell.prepared && free !== null));
+	const noMaterial = $derived(materialMissing(spell, campaign.data.inventory.items));
+	const materialName = $derived(
+		campaign.data.inventory.wishlist.find((w) => w.id === spell.consumes)?.name ?? campaign.data.inventory.items.find((i) => i.id === spell.consumes)?.name ?? spell.consumes
+	);
 </script>
 
 <div class="relative inline-flex gap-1">
@@ -38,6 +42,10 @@
 		{#if !spell.prepared && !spell.ritual}
 			<span class="text-xs text-ink-3">Nicht vorbereitet</span>
 		{/if}
+	{/if}
+
+	{#if noMaterial}
+		<span class="badge self-center" style="--c: var(--color-warn)" title="Verbraucht {materialName}. Laut Inventar hast du keins, und ein Fokus ersetzt Verbrauchtes nicht.">Material fehlt</span>
 	{/if}
 
 	{#if open}

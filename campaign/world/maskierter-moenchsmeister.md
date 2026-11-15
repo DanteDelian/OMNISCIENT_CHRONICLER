@@ -14,5 +14,5 @@ imageFocus: 50% 30%
 **Unbekannter Ermittler. „Wie ein Bluthund jeder Spur nach“ ([[Cam Buckland]]).**
 
 - Fand die gut versteckten Leichen der **echten Donnergarde** und machte ihren Tod öffentlich.
-- Damit ist die Tarnung von Valerius und [[Aella Rayann|Aella]] **aufgeflogen**.
+- Damit wackelt die Tarnung von Valerius und [[Aella Rayann|Aella]]: Der Tod der echten Donnergarde ist öffentlich, spätestens mit der nächsten Schiffskarawane weiß es auch Xantus (laut [[Cam Buckland|Cam]]).
 - Identität, Motive und Auftraggeber sind **unbekannt**.

@@ -272,6 +272,11 @@ export function wizardPicks(level: number, gradesInBook: number[]): PickGroup[] 
 }
 
 /** Kann der Zauber gerade gewirkt werden (vorbereitet, Ritual oder Zaubertrick)? */
+/** Verbrauchtes Material fehlt im Inventar? Ein Fokus ersetzt es nie (Sage Advice). */
+export function materialMissing(sp: Spell, items: { id: string; qty: number }[]): boolean {
+	return !!sp.consumes && !items.some((i) => i.id === sp.consumes && i.qty > 0);
+}
+
 export function castable(sp: Spell): boolean {
 	if (sp.status !== 'buch') return false;
 	return sp.level === 0 || !!sp.prepared || !!sp.ritual;

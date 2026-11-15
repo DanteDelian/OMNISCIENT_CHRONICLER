@@ -216,9 +216,10 @@ Der Eisriese entspricht dem **Frostriesen** des Monsterhandbuchs.
 
 ### Vorher, in der Hütte
 
+- **Zeit gewinnen:** [[Twee]] wirkt *Leomunds winzige Hütte* vor Ablauf als Ritual neu (11 Minuten, kein Platz). Dann hält die Kuppel wieder 8 Stunden, und eure einzige Frist ist das Morgengrauen.
 - **Eine [[Eule]] als Ritual beschwören** (70 Minuten, kein Platz, Material hast du). Sie sieht 36 m im Dunkeln. Mit einer Aktion siehst du durch ihre Augen: wie viele, wer schläft, wo die Steine sind, wer am meisten Echse ist.
 - **Das Orc-Skelett erwecken und den Platz zurückholen:** *Tote erwecken* (1 Minute), danach 1 Stunde kurze Rast und [[Arkane Erholung]]. So hast du einen Bogenschützen **und** beide Grad-3-Plätze für *Gegenzauber*. Reicht die Zeit nur für eins, nimm die Eule.
-- **Zauber-Set „Society, Teufel, Geister“** vorbereiten: [[Gegenzauber]], [[Unsichtbares sehen]], [[Netz]], [[Sengender Strahl]], [[Schild]], [[Nebelwolke]]. [[Totenglocke]] hast du ohnehin. [[Schutz vor Gut und Böse]] nützt dir erst, wenn du das Material dafür hast.
+- **Zauber-Set „Society, Teufel, Geister“** vorbereiten, gleich nach deiner Trance (17 Minuten Studium): [[Gegenzauber]], [[Unsichtbares sehen]], [[Netz]], [[Sengender Strahl]], [[Schild]], [[Nebelwolke]], dazu *Tote erwecken*, *Eismesser* und *Flammenkugel*. [[Totenglocke]] hast du ohnehin. [[Schutz vor Gut und Böse]] überspringt das Set, solange dir das Material fehlt.
 - **[[Unsichtbares sehen]] kurz vor dem Zugriff wirken.** Der Anführer aus der Zuflucht entkam unsichtbar. Der Zauber hält 1 Stunde ohne Konzentration.
 - **Absprechen, wer bewusstlos schlägt.** Nur ein Nahkampfangriff kann jemanden auf 0 TP bewusstlos statt tot machen. Das übernehmen Kho oder Fridolin, deine Zauber töten.
 - **Knebel, Säcke und Fesseln bereithalten.** Der Knebel nimmt die Stimme, der Sack die Sicht. Mit [[Geringe Beschwörung|Geringer Beschwörung]] erschaffst du Handschellen (Befreien oder Zerbrechen jeweils SG 20). Sie halten nur 1 Stunde und immer nur ein Paar, danach echte Fesseln.

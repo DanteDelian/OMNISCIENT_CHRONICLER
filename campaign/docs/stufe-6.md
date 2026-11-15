@@ -104,7 +104,7 @@ Der dritte Grad-3-Platz ist der größte Gewinn: *Gegenzauber*, *Tote erwecken* 
 - **Aufladen:** nach einer langen Rast **oder sobald du einen Beschwörungszauber ab Grad 1 wirkst**. Heute sind das *[[Eismesser]]*, *[[Netz]]*, *[[Nebelwolke]]*, *[[Flammenkugel]]*, *[[Tensers schwebende Scheibe]]*, *[[Unsichtbarer Diener]]* und *[[Vertrauten finden]]*, auf Stufe 6 kommt *Flutwelle* dazu.
 
 > [!TIP] Der Trick mit dem Diener
-> Nach einem Versetzen wirkst du *Unsichtbarer Diener* als Ritual (11 Minuten). Damit ist *Gutartiges Versetzen* wieder bereit, ohne dass du einen Platz verbrauchst.
+> Nach einem Versetzen wirkst du *Unsichtbarer Diener* als Ritual (11 Minuten). *Theorie:* Damit ist *Gutartiges Versetzen* wieder bereit, ohne dass du einen Platz verbrauchst, denn das Ritual bleibt ein Beschwörungszauber des 1. Grades. **Offen:** Ob ein Ritual ohne Zauberplatz zählt, entscheidet dein DM. Die Frage steht auf der [[Rätselwand]].
 
 **Einsatz:** Steht ein Gegner vor dir, teleportierst du dich weg oder tauschst mit einem Nahkämpfer: Er steht sofort an deiner Stelle, du an seinem sicheren Platz. Anders als [[Sternenschritt]] kostet es deine Aktion.
 

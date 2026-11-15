@@ -18,7 +18,8 @@
 	const sets = $derived(campaign.data.zaubersets.sets);
 	const max = $derived(campaign.data.character.spellcasting.preparedMax);
 	const rituals = $derived(spells.filter((s) => s.status === 'buch' && s.ritual));
-	const active = $derived(activeSetId(sets, spells, max, campaign.data.state.spellSet));
+	const items = $derived(campaign.data.inventory.items);
+	const active = $derived(activeSetId(sets, spells, max, campaign.data.state.spellSet, items));
 	const nameOf = (id: string) => spells.find((s) => s.id === id)?.name ?? id;
 
 	// ---------- Bearbeiten ----------
@@ -100,7 +101,7 @@
 		<div class="grid gap-3 md:grid-cols-2 2xl:grid-cols-4">
 			{#each sets as set (set.id)}
 				{@const Icon = iconOf(set)}
-				{@const plan = planSet(set, spells, max)}
+				{@const plan = planSet(set, spells, max, items)}
 				{@const on = active === set.id}
 				<article class="flex flex-col rounded-2xl border p-4 transition {on ? 'border-astral/60 bg-astral/[0.06] shadow-[0_0_24px_-8px_var(--color-astral)]' : 'border-line bg-white/[0.015]'}">
 					<div class="flex items-start gap-3">
@@ -121,6 +122,9 @@
 						{/each}
 						{#each plan.over as sp (sp.id)}
 							<li><a class="chip !py-0.5 !text-xs opacity-45" href="/zauber/{sp.id}" title="Heute nicht: über der Grenze von {max}"><span class="num">{sp.level}</span><s>{sp.name}</s></a></li>
+						{/each}
+						{#each plan.missing as sp (sp.id)}
+							<li><a class="chip !border-warn/40 !py-0.5 !text-xs text-warn" href="/zauber/{sp.id}" title="Übersprungen: Das verbrauchte Material fehlt im Inventar, ein Fokus ersetzt es nicht"><span class="num">{sp.level}</span>{sp.name} · Material fehlt</a></li>
 						{/each}
 						{#each plan.notInBook as sp (sp.id)}
 							<li><a class="chip !border-dashed !py-0.5 !text-xs text-ink-3" href="/zauber/{sp.id}" title="Noch nicht im Buch: Plan"><Sparkle size={10} class="text-life" />{sp.name}</a></li>

@@ -5,12 +5,12 @@ icon: telescope
 order: 2.5
 group: Prüfung
 aliases: [Analyse, Muster und Fäden, Tiefenanalyse vom 14.11.2026]
-updated: 2026-11-14
+updated: 2026-11-15
 ---
 # Tiefenanalyse
 
 > [!NOTE] Analyse, kein Kanon
-> Stand 14.11.2026. Alle Einträge unter `campaign/` wurden gegeneinander und gegen die Regeln gelesen. Was belegt ist, steht mit Quelle da. Was daraus nur folgt, ist als *Theorie* markiert und erscheint von selbst auf der [[Rätselwand]]. Die neuen Fragen stehen dort zum Abhaken.
+> Stand 14.11.2026, mit Nachträgen aus der Gesamtdurchsicht vom 15.11.2026. Alle Einträge unter `campaign/` wurden gegeneinander und gegen die Regeln gelesen. Was belegt ist, steht mit Quelle da. Was daraus nur folgt, ist als *Theorie* markiert und erscheint von selbst auf der [[Rätselwand]]. Die neuen Fragen stehen dort zum Abhaken.
 
 ## 1 · Diese Nacht: was vor dem Überfall noch geht
 
@@ -23,6 +23,12 @@ updated: 2026-11-14
 3. **Leder wartet.** Dein Trance-Werkzeug ist das Lederwerkzeug. Mit Feinden in 100 m gilt die erste Regel aus dem [[Handwerks-Handbuch]]: erst Wache und Untote, dann Handwerk.
 
 Reicht die Zeit nur für eins, nimm den Vertrauten: Er kostet keinen Platz.
+
+**Zeit gewinnen: Twee wirkt die Hütte neu.** *Leomunds winzige Hütte* ist ein Ritual, und [[Twee]] wirkt sie so (11 Minuten, kein Platz). Wirkt er sie vor Ablauf ein zweites Mal, hält die neue Kuppel wieder 8 Stunden. Dann ist nicht mehr die Kuppel eure Frist, sondern das Morgengrauen, ab dem die Steine der Verfolger wieder senden. Twee darf die Kuppel dabei nicht verlassen, und der Dino passt weiterhin nicht hinein.
+
+**Neu vorbereiten, jetzt und nicht erst morgen.** Deine Trance ist vorbei, und als Astralelf beendest du die lange Rast damit nach 4 Stunden. Also darfst du deine Zauber schon jetzt neu vorbereiten (1 Minute Studium pro Grad). Das Set „Society, Teufel, Geister“ bringt *Unsichtbares sehen* und *Flammenkugel* statt *Schutz vor Gut und Böse*, für das dir das Material fehlt: 9 Zauber, 17 Minuten.
+
+- **Offen:** Wie viele Stunden sind es noch bis zum Morgengrauen? Davon hängt ab, ob nach Eule, Skelett und Rast noch Dunkelheit für den Überfall bleibt.
 
 **Der Stein zu Leonidas hat zwei Nachrichten, nicht eine.** Ein [[Verständigungsstein]] lädt sich mit dem Morgengrauen auf. Ihr habt ihn am 08.11.2026 bekommen und noch nicht benutzt. Sendest du **vor** dem Morgengrauen, ist die Ladung von gestern nicht verschenkt, und **nach** dem Morgengrauen hast du sofort wieder eine. Leonidas antwortet jedes Mal mit bis zu 25 Wörtern.
 
@@ -266,7 +272,7 @@ Keiner davon ist ein Beschwörungszauber. Abschreiben von einer Rolle kostet den
 
 | Uhr | Läuft ab | Dann |
 | :-- | :-- | :-- |
-| Twees Hütte | 8 Stunden nach dem Wirken | Die Kuppel verschwindet |
+| Twees Hütte | 8 Stunden nach dem Wirken, Twee kann sie als Ritual neu wirken | Die Kuppel verschwindet |
 | Steine der Verfolger | nächstes Morgengrauen | Sie können wieder senden |
 | Dein Stein zu Leonidas | lädt sich im Morgengrauen auf | Vorher nutzen, sonst verfällt die Ladung |
 | Tierfreundschaft am Dino | 24 Stunden nach dem Wirken am 08.11. | Der Dino ist nicht mehr bezaubert |
@@ -280,4 +286,4 @@ Die Uhren führst du am Spieltisch mit: Karte **Uhren**.
 
 ## 8 · Was am Grimoire berichtigt wurde
 
-Veraltete Angaben, die sich seit dem 08.11.2026 erledigt haben, und die Regelkorrekturen aus dieser Analyse stehen im [[Prüfbericht]] unter „Prüfung am 14.11.2026“.
+Veraltete Angaben, die sich seit dem 08.11.2026 erledigt haben, und die Regelkorrekturen aus dieser Analyse stehen im [[Prüfbericht]] unter „Prüfung am 14.11.2026“, die Funde der Gesamtdurchsicht unter „Gesamtdurchsicht am 15.11.2026“.

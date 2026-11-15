@@ -138,7 +138,16 @@ export function castSpell(sp: Spell, slotLevel: number | null, asRitual = false)
 		}
 	}
 	if (sp.id === 'unsichtbarer-diener') s.servant = true;
-	const how = asRitual ? 'als Ritual' : sp.level === 0 ? 'Zaubertrick' : `Grad ${slotLevel}`;
+	let how = asRitual ? 'als Ritual' : sp.level === 0 ? 'Zaubertrick' : `Grad ${slotLevel}`;
+	// Verbrauchtes Material abziehen (z. B. Silber- und Eisenpulver für Schutz vor Gut und Böse)
+	const mat = sp.consumes ? campaign.data.inventory.items.find((i) => i.id === sp.consumes && i.qty > 0) : undefined;
+	if (mat) {
+		campaign.change('inventory', (inv) => {
+			const m = inv.items.find((i) => i.id === mat.id);
+			if (m) m.qty = Math.max(0, m.qty - 1);
+		});
+		how += ` · ${mat.name}: noch ${Math.max(0, mat.qty)}`;
+	} else if (sp.consumes) how += ' · ohne Material laut Inventar';
 	rolls.event(`${sp.name} gewirkt`, how, 'info');
 	ui.castFx = { color: SCHOOL_COLOR[sp.school] ?? 'var(--color-astral)', name: sp.name, key: Date.now() };
 	save();

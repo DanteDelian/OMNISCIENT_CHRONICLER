@@ -353,7 +353,8 @@
       "charakterbogen-alt"
     ],
     "card": "Eine bereitwillige Kreatur, die du berührst, ist geschützt vor **Aberrationen, Himmlischen, Elementaren, Feenwesen, Unholden und Untoten**: Ihre Angriffe haben **Nachteil**, und das Ziel kann von ihnen **nicht bezaubert, verängstigt oder besessen** werden. Ist es schon betroffen, hat es Vorteil auf neue Rettungswürfe dagegen. Material wird verbraucht.",
-    "note": "**Berichtigt am 14.11.2026:** Bisher stand hier, dein Fokus ersetze auch verbrauchte Komponenten ohne Preis. Laut Sage Advice ersetzt ein Fokus nur Komponenten ohne Preis, die **nicht** verbraucht werden."
+    "note": "**Berichtigt am 14.11.2026:** Bisher stand hier, dein Fokus ersetze auch verbrauchte Komponenten ohne Preis. Laut Sage Advice ersetzt ein Fokus nur Komponenten ohne Preis, die **nicht** verbraucht werden.",
+    "consumes": "silber-eisenpulver"
   },
   {
     "id": "magie-entdecken",
@@ -882,7 +883,7 @@
     "source": "Spielerhandbuch 2014 (engl. S. 233) · SRD 5.1",
     "text": "Du lässt dich selbst, samt Kleidung, Rüstung, Waffen und anderer Gegenstände, die du bei dir trägst, anders aussehen, bis der Zauber endet oder du ihn als Aktion beendest. Du kannst bis zu **30 cm** kleiner oder größer erscheinen und dünn, dick oder etwas dazwischen wirken. Deinen **Körperbau** kannst du nicht ändern, du brauchst also eine Gestalt mit derselben grundlegenden Anordnung der Gliedmaßen. Ansonsten bestimmst du das Ausmaß der Illusion.\n\nDie Veränderungen halten **keiner körperlichen Überprüfung** stand. Fügst du deiner Kleidung einen Hut hinzu, gehen Gegenstände durch ihn hindurch, und wer ihn berührt, fühlt nichts oder nur deinen Kopf und dein Haar. Erscheinst du dünner, stößt die Hand einer Person, die dich berühren will, scheinbar noch in der Luft gegen dich.\n\nUm zu erkennen, dass du verkleidet bist, kann eine Kreatur ihre Aktion nutzen, um dein Aussehen zu untersuchen, und muss einen **Intelligenzwurf (Nachforschung) gegen deinen Zauber-SG** schaffen.",
     "valerius": "Durchschauen: IN (Nachforschung) gegen **SG 15** · 1 Stunde · keine Konzentration",
-    "why": "**Die direkte Antwort auf die aufgeflogene Donnergarde.** Jederzeit ein anderes Gesicht, zum Beispiel passend zu den drei Society-Uniformen. Keine Konzentration, also kein Konflikt mit *Netz*. Als Illusion kein Rabatt beim Kopieren, als freier Stufenaufstiegs-Zauber aber kostenlos.",
+    "why": "**Die direkte Antwort auf die wackelnde Donnergarde-Tarnung.** Jederzeit ein anderes Gesicht, zum Beispiel passend zu den drei Society-Uniformen. Keine Konzentration, also kein Konflikt mit *Netz*. Als Illusion kein Rabatt beim Kopieren, als freier Stufenaufstiegs-Zauber aber kostenlos.",
     "slot": "jeden fehlenden Eintrag (bis Grad 1 oder bis Grad 2)",
     "tips": [
       "**Nicht anfassen lassen:** Wer dich berührt, kann die Illusion bemerken. Händeschütteln und Umarmungen vermeiden.",

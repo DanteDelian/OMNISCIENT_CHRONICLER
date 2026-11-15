@@ -19,7 +19,7 @@ imageFocus: 50% 14%
 > **Name:** Aella Rayann, wie in ihren eigenen Dokumenten (von Patrick bestätigt am 12.10.2026). In Valerius' Backstory heißt sie noch *Draka „Drake“ Stormscale*.
 
 - Waisenkind aus [[Oakhaven]]. Über eine Straßengang stieg sie zur „Vollstreckerin“ im [[Zaffera-Syndikat]] auf. Ihr Mentor, der vernarbte Drachenblütige **Theron**, lehrte sie, ihre Wut zu kanalisieren.
-- Tarnidentität: **„Khoraa, die wandernde Dragonborn-Ritterin“** der [[Die Donnergarde|Donnergarde]], inzwischen aufgeflogen.
+- Tarnidentität: **„Khoraa, die wandernde Dragonborn-Ritterin“** der [[Die Donnergarde|Donnergarde]], seit dem Fund der Leichen gefährdet.
 - Beim Verhör durch [[Lisbeth Lhaaz]] versagten ihr die Worte. Das hat Lisbeths Verdacht bestätigt.
 - Sie träumt von einem Leben ohne ständige Gewalt und sieht mit Sorge, wie Valerius sich an seiner Macht berauscht. Sie versteht sich als sein Schild, vielleicht auch als sein Gewissen.
 - **Ohrringe:** Beide liegen bei dir. Den zweiten bekommt eher dein künftiger Verwalter: Mit Aella reist du ohnehin, und für Notfälle gibt es *Botschaft*.

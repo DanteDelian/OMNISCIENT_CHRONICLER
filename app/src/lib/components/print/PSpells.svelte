@@ -17,7 +17,7 @@
 	const free = $derived(picks.reduce((n, g) => n + g.total - g.used, 0));
 	const prepared = $derived(book.filter((s) => s.level > 0 && s.prepared).length);
 	const levels = $derived([...new Set(book.map((s) => s.level))]);
-	const sets = $derived(campaign.data.zaubersets.sets.map((set) => ({ set, plan: planSet(set, all, c.spellcasting.preparedMax) })));
+	const sets = $derived(campaign.data.zaubersets.sets.map((set) => ({ set, plan: planSet(set, all, c.spellcasting.preparedMax, campaign.data.inventory.items) })));
 </script>
 
 <PDoc id="zauber" refs={['page:zauber']} eyebrow="Zauberbuch" title="Valerius' Grimoire" subtitle="Alle Zauber im Buch mit vollständigem Regeltext (Spielerhandbuch 2014 / SRD 5.1), deinen Werten, Tipps und Korrekturen.">

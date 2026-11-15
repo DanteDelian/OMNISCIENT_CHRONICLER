@@ -4,18 +4,18 @@ subtitle: Was falsch war, was korrigiert wurde und was noch offen ist
 icon: shield-check
 order: 1
 group: Prüfung
-updated: 2026-11-14
+updated: 2026-11-15
 ---
 # Prüfbericht
 
-**Stand: 14. November 2026.** Am 14.11.2026 wurden alle Einträge gegeneinander und gegen die Regeln gelesen, das Ergebnis steht in der [[Tiefenanalyse]] und unten bei Punkt B 19. Abgeglichen wurden die 12 Dateien im Drive-Ordner *Valerius*, die 3 Dokumente im Ordner *Kho* (darunter dein Sessionbericht vom 12.10.2026), das alte Grimoire auf GitHub und die D&D-5e-Regeln (Spielerhandbuch 2014, Xanathars Ratgeber für alles, Spelljammer für den Astralelfen). Deine Antworten vom 12.10.2026, dein [[Sessionbericht Juli bis Oktober 2026|Sessionbericht]], die Session vom 08.11.2026 und deine Antworten vom 08. und 09.11.2026 sind eingearbeitet.
+**Stand: 15. November 2026.** Am 14.11.2026 wurden alle Einträge gegeneinander und gegen die Regeln gelesen, das Ergebnis steht in der [[Tiefenanalyse]] und unten bei Punkt B 19. Die Gesamtdurchsicht vom 15.11.2026 (Punkt B 20) hat danach alle Texte noch einmal maschinell und von Hand gegen Spielstand, Uhren und Regeln geprüft. Abgeglichen wurden die 12 Dateien im Drive-Ordner *Valerius*, die 3 Dokumente im Ordner *Kho* (darunter dein Sessionbericht vom 12.10.2026), das alte Grimoire auf GitHub und die D&D-5e-Regeln (Spielerhandbuch 2014, Xanathars Ratgeber für alles, Spelljammer für den Astralelfen). Deine Antworten vom 12.10.2026, dein [[Sessionbericht Juli bis Oktober 2026|Sessionbericht]], die Session vom 08.11.2026 und deine Antworten vom 08. und 09.11.2026 sind eingearbeitet.
 
 > **Gemini-Entwürfe:** Die beiden „Optimiert“-Dokumente vom 10.10.2026 waren Vorschläge von Gemini und sind **nicht übernommen**. Ihre vier neuen Zauber (Nebelwolke, Spiegelbilder, Gedanken wahrnehmen, Fliegen) wurden nicht übernommen. *Nebelwolke* hast du am 08.11.2026 selbst gewählt. Gemini hat auch in deinen älteren Dokumenten mitgeschrieben. Daher stammen viele der Fehler unten.
 
 ## Kurzfassung
 
 - **Werte:** Der Weisheits-Modifikator war in allen Bögen falsch (−2 statt **−1**). Dadurch steigen Wahrnehmung, Menschenkenntnis und der WE-Rettungswurf um 1, die passive Wahrnehmung ist **12**. Trefferpunkte: **36** (deine Angabe).
-- **Regeln:** Nebelschritt ist nicht „immer vorbereitet“ und steht laut dir auch nicht im Buch. Die [[Astrale Trance]] gibt täglich zusätzlich eine **Fertigkeit**. Die [[Dunkelsicht]] fehlte. Den Zaubertrick des Astralelfen (Astrales Feuer) hat Valerius laut DM **nicht**. Das Erneuern von *Tote erwecken* dauert **1 Minute**.
+- **Regeln:** Nebelschritt ist nicht „immer vorbereitet“ und steht laut dir auch nicht im Buch. Die [[Astrale Trance]] gibt nach den Regeln täglich zusätzlich eine **Fertigkeit**, die der DM am 12.10.2026 gestrichen hat (siehe unten). Die [[Dunkelsicht]] fehlte. Den Zaubertrick des Astralelfen (Astrales Feuer) hat Valerius laut DM **nicht**. Das Erneuern von *Tote erwecken* dauert **1 Minute**.
 - **Zauberbuch:** voll, **14 von 14** (DM, 08.11.2026). Neu sind [[Nebelwolke]], [[Flammenkugel]], [[Tensers schwebende Scheibe]] und [[Unsichtbares sehen]]. *Magierrüstung* und *Spiegelbilder* willst du nicht. [[Botschaft]] ist ein Zaubertrick, alle 4 Zaubertricks sind belegt.
 - **Kampagne:** **[[Lisbeth Lhaaz]] lebt.** Ihr habt sie gerettet. Die alten Notizen hielten sie für erledigt. Die Gefährtin heißt **[[Aella Rayann]]**. [[Taya]] ist laut Aellas aktuelleren Notizen wiederbelebt.
 - **DM-Entscheidungen (12.10.2026):** Die [[Astrale Trance]] gibt nur Waffe oder Werkzeug, keine Fertigkeit. [[Sternenschritt]] hast du 1× pro langer Rast. Die Ohrringe tragen *Verständigung*, nicht *Botschaft*.
@@ -88,6 +88,16 @@ updated: 2026-11-14
     - **Sechs neue Vorschläge im Zauberbuch** mit vollem Regeltext: [[Alarm]], [[Sprachen verstehen]], [[Illusionsschrift]], [[Magischer Mund]], [[Gedanken wahrnehmen]] und [[Verbannung]].
     - **Veraltet und nachgezogen:** der Wasserweg (seit dem 08.11. reitet ihr am Wüstenrand), der Vorrat an Knochen, die Ohrringe (für den Verwalter, nicht für Aella), das Geld, Lucaz (zurück beim Vater), die Namen Grum und Dehapten, Tashas Kessel (erlaubt), Heiltränke (nur mit Kräuterkunde).
     - **Deine Werte gehen auf:** Die Standardwerte 15, 14, 13, 12, 10 und 8, dazu +2 Intelligenz und +1 Konstitution vom Volk und je +1 auf beide mit Stufe 4, ergeben genau deinen Bogen. Offen sind die zweite Sprache des Astralelfen und dein Hintergrund: Er bringt zwei Fertigkeiten, eingetragen ist nur Täuschen.
+20. **Gesamtdurchsicht am 15.11.2026.** Alle Texte unter `campaign/` wurden mit einem Prüfskript nach Widersprüchen durchsucht (deine Werte, Zauber außerhalb des Buchs, Quest-Bezüge, Geld, Stand-Angaben, spätere Merkmale) und die Lage-Dokumente von Hand gegen Spielstand, Uhren und Regeln gelesen. Berichtigt:
+    - **Donnergarde-Tarnung „gefährdet“, nicht „aufgeflogen“.** Bogen, Weltseiten, Einkaufsliste und die Plakette im Kopf des Spieltischs sagten „aufgeflogen“. Belegt ist laut Cam nur: Der Tod der echten Donnergarde ist öffentlich, und „spätestens bei der nächsten Karawane müsst ihr euch was einfallen lassen“. In Xantus weiß es also noch niemand sicher, so wie es schon in [[Wer weiß was?]], in der Quest und an der Uhr „Schiffskarawane“ stand. Die Plakette liest den Stand jetzt aus *Wer weiß was?* und verlinkt dorthin.
+    - **Zauber-Sets bereiteten einen Zauber ohne Material vor.** Alle vier Sets führten [[Schutz vor Gut und Böse]] weit oben, „Society, Teufel, Geister“ sogar auf Platz 3. Das Set hätte den Zauber vorbereitet und dafür *Flammenkugel* verdrängt. Neu: Zauber mit verbrauchtem Material überspringt jedes Set, solange das Material im Inventar fehlt. Der Wirken-Knopf zeigt „Material fehlt“, beim Wirken wird das Material abgezogen, und ein Kauf über die Wunschliste schaltet den Zauber frei. Das Prüfskript meldet einen vorbereiteten Zauber ohne Material.
+    - **Nachtplan: Die Kuppel ist keine harte Frist.** *Leomunds winzige Hütte* ist ein Ritual, und [[Twee]] wirkt sie so: Neu gewirkt (11 Minuten, kein Platz) hält sie wieder 8 Stunden. Die echte Frist ist das Morgengrauen. Außerdem darfst du schon nach deiner Trance neu vorbereiten, als Astralelf endet die lange Rast für dich nach 4 Stunden. Lage, Taktik-Handbuch, Tiefenanalyse und die Uhr „Twees Hütte“ sind ergänzt.
+    - **Nebelschritt in drei Kästen „Für Valerius“** (Blind, Festgehalten, ungesehene Ziele) klang, als stünde er in deinem Buch. Er ist ein Vorschlag für Stufe 6. Dort steht jetzt dein [[Sternenschritt]], beim Netz zusätzlich die Warnung vor Gegnern, die per Teleport entkommen.
+    - **Der „Trick mit dem Diener“** im [[Stufe-6-Planer]] war als Tatsache formuliert. Ob ein Beschwörungsritual ohne Zauberplatz *Gutartiges Versetzen* auflädt, entscheidet der DM. Jetzt als *Theorie* markiert, die Frage steht auf der Rätselwand.
+    - **Kurzfassung oben:** Regel und DM-Entscheid zur Astralen Trance standen ohne Zusammenhang nebeneinander.
+    - **[[Schlachtfeld im Südosten]]** hieß noch „nächstes Ziel“ und „wichtigstes Reiseziel“. Ihr reitet aber nach Westen, das Schlachtfeld ist jetzt die Knochenquelle für später.
+    - **Neues Regelkapitel „Der Magier“:** die Magiertabelle bis Stufe 20 mit allen Zauberplätzen, Zaubermeisterschaft, Signaturzauber und die Schule der Beschwörung im Überblick.
+    - **Ohne Befund geprüft:** deine Werte in allen Texten (SG 15, Zauberangriff +7, TP 36, Übungsbonus +3, 9 vorbereitete Zauber; abweichende Zahlen nur bei klar markierten Zukunftswerten wie Intelligenz 20), die Quest-Bezüge im Journal, das Geld (47 GM, 27 SM), die Stand-Angaben der Dokumente, die Uhren gegen die Lage und das Material für [[Vertrauten finden]] (9 Sätze).
 
 ### Nur in den Gemini-Entwürfen (zur Info)
 - *Gedanken wahrnehmen*: Tieferes Sondieren ist ein **WE**-Rettungswurf, nicht IN.
@@ -114,7 +124,7 @@ updated: 2026-11-14
 
 ## D · Offene Fragen
 
-Die offenen Fragen stehen gebündelt auf der **[[Rätselwand]]** und als Druckblatt „Fragen an den DM“. Offen sind 23 Fragen: der Verständigungsstein des Sumpfschuppen-Anführers, Khos Drachenabstammung und 21 neue aus der Tiefenanalyse vom 14.11.2026.
+Die offenen Fragen stehen gebündelt auf der **[[Rätselwand]]** und als Druckblatt „Fragen an den DM“. Offen sind 24 Fragen (14 an den DM, 8 an den Tisch, 2 an dich): der Verständigungsstein des Sumpfschuppen-Anführers, Khos Drachenabstammung, 21 aus der Tiefenanalyse vom 14.11.2026 und seit dem 15.11.2026 die Frage, ob ein Beschwörungsritual *Gutartiges Versetzen* auflädt.
 
 ### Geklärt am 9. November 2026
 - **Namen:** Die Fee heißt **Alucasia**, der befreite Orc **Grum**, eure Basis **Dehapten**.
