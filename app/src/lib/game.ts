@@ -2,7 +2,7 @@
 import { campaign } from './stores/campaign.svelte';
 import { rolls } from './stores/rolls.svelte';
 import { ui } from './stores/ui.svelte';
-import { concentrationDc, slotsLeft } from './rules';
+import { SCHOOL_COLOR, concentrationDc, slotsLeft } from './rules';
 import type { Minion, Spell } from './types';
 import { uid } from './format';
 
@@ -117,6 +117,7 @@ export function castSpell(sp: Spell, slotLevel: number | null, asRitual = false)
 	if (sp.id === 'unsichtbarer-diener') s.servant = true;
 	const how = asRitual ? 'als Ritual' : sp.level === 0 ? 'Zaubertrick' : `Grad ${slotLevel}`;
 	rolls.event(`${sp.name} gewirkt`, how, 'info');
+	ui.castFx = { color: SCHOOL_COLOR[sp.school] ?? 'var(--color-astral)', name: sp.name, key: Date.now() };
 	save();
 	return true;
 }

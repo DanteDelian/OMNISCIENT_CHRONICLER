@@ -11,9 +11,9 @@
 
 <svelte:head><title>Spieltisch · Valerius</title></svelte:head>
 
-<div class="space-y-4">
+<div class="stagger space-y-4">
 	<HeroBar />
-	<div class="grid gap-4 lg:grid-cols-12">
+	<div class="stagger grid gap-4 lg:grid-cols-12">
 		<div class="space-y-4 lg:col-span-5 xl:col-span-4 2xl:col-span-3">
 			<HealthCard />
 			<MagicCard />

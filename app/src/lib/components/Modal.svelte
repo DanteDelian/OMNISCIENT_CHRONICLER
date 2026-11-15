@@ -31,10 +31,10 @@
 {#if open}
 	<div class="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto p-4 pt-[10vh]" role="presentation">
 		<button class="fixed inset-0 bg-black/60 backdrop-blur-sm" aria-label="Schließen" onclick={onclose} transition:fade={{ duration: 120 }}></button>
-		<div class="panel relative w-full {width} p-5" role="dialog" aria-modal="true" aria-label={title} transition:scale={{ start: 0.97, duration: 160 }}>
+		<div class="panel panel-ornate relative w-full {width} p-6" role="dialog" aria-modal="true" aria-label={title} transition:scale={{ start: 0.97, duration: 160 }}>
 			<div class="mb-4 flex items-start justify-between gap-4">
 				<div>
-					<h2 class="title-display text-2xl">{title}</h2>
+					<h2 class="title-display title-astral text-[1.75rem]">{title}</h2>
 					{#if subtitle}<p class="mt-1 text-sm text-ink-3">{subtitle}</p>{/if}
 				</div>
 				<button class="icon-btn" onclick={onclose} aria-label="Schließen"><X size={18} /></button>

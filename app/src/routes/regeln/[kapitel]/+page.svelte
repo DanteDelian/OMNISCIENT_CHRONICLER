@@ -80,7 +80,7 @@
 						{#if ch.en}<div class="mt-1 text-sm text-ink-3 italic">{ch.en}{#if ch.source}{' '}· {ch.source}{/if}</div>{/if}
 					</div>
 				</div>
-				{#if ch.intro}<Markdown src={ch.intro} class="mt-6 text-[1rem]" />{/if}
+				{#if ch.intro}<Markdown src={ch.intro} class="dropcap mt-6 text-[1.08rem]" />{/if}
 				<div class="mt-5 flex flex-wrap gap-1.5 xl:hidden">
 					{#each ch.rules as r (r.id)}<a class="chip !h-7" href="#{r.id}">{r.name}</a>{/each}
 				</div>

@@ -19,10 +19,10 @@
 
 <nav class="flex h-full flex-col gap-4 px-3 py-4" aria-label="Hauptnavigation">
 	<a href="/" class="flex items-center gap-3 px-2" onclick={onnavigate}>
-		<img src="/favicon.svg" alt="" class="h-8 w-8" />
+		<img src="/favicon.svg" alt="" class="h-9 w-9 drop-shadow-[0_0_10px_rgba(160,148,255,0.55)]" />
 		<div class="leading-tight">
-			<div class="title-display text-[1.35rem]">Valerius</div>
-			<div class="eyebrow !text-[0.6rem]">Grimoire · Xantus</div>
+			<div class="title-display title-gold text-[1.6rem] leading-none">Valerius</div>
+			<div class="eyebrow mt-0.5 !text-[0.56rem]">Grimoire · Xantus</div>
 		</div>
 	</a>
 
@@ -71,10 +71,12 @@
 							<a
 								href={it.href}
 								onclick={onnavigate}
-								class="group flex items-center gap-3 rounded-[10px] px-2.5 py-2 text-sm transition {on
-									? 'bg-white/[0.07] text-ink'
+								class="group relative flex items-center gap-3 rounded-[10px] px-2.5 py-2 text-sm transition {on
+									? 'bg-gradient-to-r from-white/[0.08] to-white/[0.02] text-ink'
 									: 'text-ink-2 hover:bg-white/[0.04] hover:text-ink'}"
+								aria-current={on ? 'page' : undefined}
 							>
+								{#if on}<span class="absolute top-1/2 -left-3 h-5 w-[3px] -translate-y-1/2 rounded-full bg-gold shadow-[0_0_12px_var(--color-gold)]"></span>{/if}
 								<it.icon size={17} class={on ? 'text-astral' : 'text-ink-3 group-hover:text-ink-2'} />
 								<span class="flex-1">{it.label}</span>
 								{#if it.href === '/quests' && quests}<span class="badge" style="--c: var(--color-warn)">{quests}</span>{/if}

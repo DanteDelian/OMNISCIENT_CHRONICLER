@@ -9,6 +9,8 @@ class UiStore {
 	/** Offene Konzentrationsprobe nach Schaden. */
 	concentrationCheck = $state<{ dc: number; damage: number } | null>(null);
 	sidebarCollapsed = $state(false);
+	/** Lichtschein beim Wirken (Farbe der Zauberschule) */
+	castFx = $state<{ color: string; name: string; key: number } | null>(null);
 }
 
 export const ui = new UiStore();

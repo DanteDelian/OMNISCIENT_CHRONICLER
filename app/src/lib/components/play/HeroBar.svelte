@@ -26,7 +26,7 @@
 	]);
 </script>
 
-<section class="panel panel-glow @container overflow-hidden p-5">
+<section class="panel panel-ornate panel-glow @container overflow-hidden p-5">
 	<div class="pointer-events-none absolute -top-24 -left-16 h-64 w-64 rounded-full bg-astral/20 blur-3xl"></div>
 
 	<div class="relative flex flex-wrap items-center gap-x-6 gap-y-4">
@@ -34,10 +34,10 @@
 		<div class="flex min-w-[min(100%,24rem)] flex-1 items-center gap-4">
 			<div class="relative shrink-0">
 				<div class="absolute inset-0 rounded-full bg-gold/30 blur-xl"></div>
-				<img src="/api/assets/{c.portrait}" alt="Valerius als Floshem" class="relative h-[88px] w-[88px] rounded-full" />
+				<img src="/api/assets/{c.portrait}" alt="Valerius als Floshem" class="relative h-[88px] w-[88px] rounded-full ring-1 ring-gold/50" />
 			</div>
 			<div class="min-w-0">
-				<h1 class="title-display truncate text-[2.5rem] leading-none">{c.name}</h1>
+				<h1 class="title-display title-gold pb-1 text-[2.1rem] leading-[0.95] sm:text-[2.7rem]">{c.name}</h1>
 				<div class="mt-1.5 flex flex-wrap items-center gap-2 text-sm text-ink-2">
 					<span class="italic">„{c.alias}“, {c.aliasTitle}</span>
 					<span class="badge" style="--c: var(--color-blood)">Tarnung aufgeflogen</span>
@@ -68,7 +68,7 @@
 			title="Armor Class · Klicken: Schild an/aus (+5 RK bis zu deinem nächsten Zug)"
 		>
 			<Shield size={15} class={s.shield ? 'text-astral-2' : 'text-ink-3'} />
-			<span class="num mt-0.5 text-[1.7rem] leading-tight font-semibold">{armorClass(c, s)}</span>
+			<span class="num mt-0.5 text-[1.35rem] leading-tight font-semibold whitespace-nowrap @2xl:text-[1.7rem]">{armorClass(c, s)}</span>
 			<span class="text-center text-[0.65rem] leading-tight text-ink-3">{s.shield ? 'RK mit Schild' : 'Rüstungsklasse'}</span>
 		</button>
 		{#each stats as st (st.label)}
@@ -82,7 +82,7 @@
 				title={st.hint}
 			>
 				<st.icon size={15} class="text-ink-3" />
-				<span class="num mt-0.5 text-[1.7rem] leading-tight font-semibold">{st.value}</span>
+				<span class="num mt-0.5 text-[1.35rem] leading-tight font-semibold whitespace-nowrap @2xl:text-[1.7rem]">{st.value}</span>
 				<span class="text-center text-[0.65rem] leading-tight text-ink-3">{st.label}</span>
 			</svelte:element>
 		{/each}

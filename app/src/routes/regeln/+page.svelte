@@ -75,7 +75,7 @@
 		</ul>
 	</section>
 {:else}
-	<section class="mb-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+	<section class="stagger mb-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
 		{#each chapters as ch (ch.slug)}
 			<a class="panel panel-hover group flex flex-col p-5" href={ruleHref(ch.slug)}>
 				<div class="flex items-start gap-3">

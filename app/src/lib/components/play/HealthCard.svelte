@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { untrack } from 'svelte';
 	import { Heart, HeartCrack, Brain, ShieldCheck, Skull, Dices } from '@lucide/svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { damage, heal, setTempHp, endConcentration, setDeathSave, rollDeathSave } from '$lib/game';
@@ -13,6 +14,26 @@
 	const color = $derived(pctHp > 0.5 ? 'var(--color-life)' : pctHp > 0.25 ? 'var(--color-warn)' : 'var(--color-blood)');
 	const R = 54;
 	const CIRC = 2 * Math.PI * R;
+
+	// Treffer schüttelt den Ring rot, Heilung lässt ihn grün aufleuchten (auch bei Änderungen von anderen Geräten).
+	let prevHp = untrack(() => campaign.data.state.hp);
+	let fx = $state<'' | 'hp-hit' | 'hp-heal'>('');
+	let fxTimer: ReturnType<typeof setTimeout> | undefined;
+	$effect(() => {
+		const hp = s.hp;
+		untrack(() => {
+			if (hp !== prevHp) {
+				const next = hp < prevHp ? 'hp-hit' : 'hp-heal';
+				fx = '';
+				requestAnimationFrame(() => {
+					fx = next;
+					clearTimeout(fxTimer);
+					fxTimer = setTimeout(() => (fx = ''), 1000);
+				});
+			}
+			prevHp = hp;
+		});
+	});
 
 	function apply(kind: 'dmg' | 'heal', n = amount ?? 0) {
 		if (!n) return;
@@ -30,7 +51,7 @@
 
 	<!-- Schmale Karte: Ring über den Knöpfen statt daneben -->
 	<div class="flex flex-col items-center gap-4 @[19rem]:flex-row">
-		<div class="relative h-[120px] w-[120px] shrink-0">
+		<div class="relative h-[120px] w-[120px] shrink-0 {fx}">
 			<svg viewBox="0 0 132 132" class="h-full w-full -rotate-90">
 				<circle cx="66" cy="66" r={R} fill="none" stroke="rgb(255 255 255 / 0.06)" stroke-width="10" />
 				<circle

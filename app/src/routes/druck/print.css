@@ -45,6 +45,8 @@ html:has(.druck) body {
 }
 
 .druck {
+	/* Der Druck behält seine eigene Überschriftenschrift, das Grimoire am Bildschirm nutzt Cormorant */
+	--font-display: 'Instrument Serif', ui-serif, Georgia, serif;
 	--p-ink: #1d1a28;
 	--p-ink-2: #474357;
 	--p-ink-3: #7c778e;
