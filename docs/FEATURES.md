@@ -9,7 +9,8 @@
 - **Kampfmodus** (Seite Kampf, Knopf im Kopf des Spieltischs): Rundenzähler, Aktion, Bonusaktion und Reaktion zum
   Abhaken (Wirken und Würfe markieren sie selbst), Bewegung in Feldern zu 1,5 m mit Spurt und Aufstehen, laufende
   Effekte mit Ablauf in Runden (Schild bis zum nächsten Zug, Netz eine Stunde), eigene Effekte, Hinweise aus den Regeln
-  (Bonusaktionszauber, Liegend, Bewegungsrate 0, Untote ohne Befehl), Schild und Gegenzauber direkt wirkbar.
+  (Bonusaktionszauber, Liegend, Bewegungsrate 0, Untote ohne Befehl), Schild und Gegenzauber direkt wirkbar,
+  Deckung per Knopf (halb +2, dreiviertel +5, voll), die RK und GE-Rettungswurf am ganzen Spieltisch mitrechnen.
   Nur für Valerius: keine Gegner, keine Initiative-Liste.
 - **Uhren:** Fristen, wachsende Gefahren und Ziele als Felderringe am Spieltisch, Felder per Klick, Anlegen,
   Bearbeiten, Löschen. Im Druck zum Weiterführen mit dem Bleistift.

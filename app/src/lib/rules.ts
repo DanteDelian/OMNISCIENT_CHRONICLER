@@ -1,5 +1,5 @@
 /** D&D-5e-Rechenlogik für Valerius (Spielerhandbuch 2014). Läuft auf Client und Server. */
-import type { Ability, Attack, Character, PlayState, Spell } from './types';
+import type { Ability, Attack, Character, CoverLevel, PlayState, Spell } from './types';
 
 /** Attribute, dazu die englischen Begriffe: Der DM fragt gern auf Englisch nach Würfen. */
 export const ABILITIES: { key: Ability; short: string; name: string; en: string; enShort: string }[] = [
@@ -179,8 +179,36 @@ export function initiative(c: Character): number {
 	return abilityMod(c, 'dex');
 }
 
+/** Deckung (Spielerhandbuch): Bonus auf RK und GE-Rettungswürfe. Mehrere Deckungen zählen nicht zusammen. */
+export const COVER: Record<CoverLevel, { label: string; short: string; bonus: number; text: string }> = {
+	halb: {
+		label: 'Halbe Deckung',
+		short: 'Halb +2',
+		bonus: 2,
+		text: '+2 auf RK und GE-Rettungswürfe. Zum Beispiel ein Skelett, ein Gefährte, eine niedrige Mauer oder ein schmaler Baum zwischen dir und dem Angreifer.'
+	},
+	dreiviertel: {
+		label: 'Dreivierteldeckung',
+		short: 'Dreiviertel +5',
+		bonus: 5,
+		text: '+5 auf RK und GE-Rettungswürfe. Zum Beispiel hinter Zinnen, einer Schießscharte oder einem dicken Baumstamm.'
+	},
+	voll: {
+		label: 'Volle Deckung',
+		short: 'Voll',
+		bonus: 0,
+		text: 'Du bist kein direktes Ziel für Angriffe und Zauber. Flächenzauber können dich trotzdem erreichen, und du selbst triffst niemanden durch die Deckung.'
+	}
+};
+
+export function coverBonus(s: PlayState | null): number {
+	const level = s?.combat?.cover;
+	return level ? COVER[level].bonus : 0;
+}
+
+/** RK mit Schild (+5) und, im Kampf, der gewählten Deckung. */
 export function armorClass(c: Character, s: PlayState | null): number {
-	return c.ac.base + (s?.shield ? 5 : 0);
+	return c.ac.base + (s?.shield ? 5 : 0) + coverBonus(s);
 }
 
 /** Konzentrations-SG nach Schaden: 10 oder halber Schaden, je nachdem, was höher ist. */

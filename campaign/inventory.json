@@ -279,6 +279,19 @@
       "how": "Den ersten Bogen hast du von den Orcs am Fluss. Beim nächsten Orc-Trupp auf Bögen achten. **Herstellen** geht nach dem Spielerhandbuch auch, vermutlich mit Holzschnitzwerkzeug (DM fragen): 5 GM Fortschritt pro Arbeitstag, also 5 Tage und 12,5 GM Material, und jeden Tag dieselbe Trance-Übung."
     },
     {
+      "id": "holzschild",
+      "name": "Holzschild für den Schildträger",
+      "price": 10,
+      "priority": "hoch",
+      "phase": "jetzt",
+      "why": "Fellrüstung und Schild machen ein Skelett zum Schildträger mit RK 16. Steht es zwischen dir und einem Schützen, hast du halbe Deckung (+2). Siehe [[Taktik-Handbuch]], „Leibwache aus Skeletten“.",
+      "ways": [
+        "herstellen",
+        "erbeuten"
+      ],
+      "how": "**Herstellen** mit Holzschnitzwerkzeug über die Astrale Trance: 4 freie Nächte, 5 GM Material (Holz und Leder aus dem Dschungel, Beschläge kaufen). Ob die Rüstungsregel des DM auch Schilde einschließt, steht auf der Rätselwand."
+    },
+    {
       "id": "rationen-10",
       "name": "Rationen",
       "price": 5,
@@ -472,6 +485,19 @@
       "why": "Dein Zauberbuch ist dein wertvollster Besitz. Eine Kopie kostet 1 Stunde und 10 GM pro Zaubergrad: für deine 14 Zauber (22 Grade) 22 Stunden und 220 GM, dazu das Buch. Die Arbeit passt in deine freien Nachtstunden, die Kopie ins Kellerlabor. Siehe [[Dein Zauberbuch]]."
     },
     {
+      "id": "schuppenpanzer-skelett",
+      "name": "Schuppenpanzer für den Schildträger",
+      "price": 50,
+      "priority": "mittel",
+      "phase": "nach-saladin",
+      "why": "RK 16 statt 14, mit Schild 18, ohne Bewegung zu verlieren. Nachteil auf Heimlichkeit. Ein Kettenpanzer lohnt nicht: Bei Geschicklichkeit 14 ist er nur gleich gut, kostet 75 GM und bremst auf 6 m.",
+      "ways": [
+        "erfragen",
+        "erbeuten"
+      ],
+      "how": "Beim Schmied. Mit einer Organisation fertigt ein eigener Schmied später auch Schienen- oder Plattenpanzer (RK 19 bis 20 mit Schild)."
+    },
+    {
       "id": "ring-gedankenschutz",
       "name": "Ring des Gedankenschutzes",
       "priority": "saladin",
@@ -520,6 +546,14 @@
       "priority": "saladin",
       "phase": "saladin",
       "why": "Saladins Angebot (12.07.2026): eine unendlich lange Schriftrolle, um Zauberrollen herzustellen. Gegenleistung: ein rechtmäßig erworbener Handelsposten in Freistadt."
+    },
+    {
+      "id": "schild-magisch",
+      "name": "Magischer Schild für den Schildträger",
+      "priceText": "selten: 501 bis 5 000 GM (Spielleiterhandbuch)",
+      "priority": "saladin",
+      "phase": "saladin",
+      "why": "*Pfeilfängerschild:* +2 RK gegen Fernkampf, und mit seiner Reaktion zieht der Träger einen Fernkampfangriff auf ein Ziel in 1,5 m auf sich. *Schild der Geschossanziehung* (verflucht): Resistenz gegen Fernkampf-Waffenangriffe, und jeder solche Angriff auf ein Ziel in 3 m trifft stattdessen den Träger. Beide brauchen Einstimmung, ob ein Skelett das kann, entscheidet der DM."
     }
   ]
 }

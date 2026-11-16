@@ -2,10 +2,13 @@
 	/** Rettungswürfe und Fertigkeiten – Klick würfelt (Vorteil/Nachteil über die Würfelschale). */
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { rolls } from '$lib/stores/rolls.svelte';
-	import { ABILITIES, ABILITY_SHORT, SKILLS, abilityMod, fmtMod, saveBonus, skillBonus, skillProficient } from '$lib/rules';
+	import { ABILITIES, ABILITY_SHORT, COVER, SKILLS, abilityMod, coverBonus, fmtMod, saveBonus, skillBonus, skillProficient } from '$lib/rules';
 
 	const c = $derived(campaign.data.character);
 	const s = $derived(campaign.data.state);
+	/** Deckung im Kampf zählt auch auf GE-Rettungswürfe */
+	const cover = $derived(coverBonus(s));
+	const save = (key: (typeof ABILITIES)[number]['key']) => saveBonus(c, key) + (key === 'dex' ? cover : 0);
 	const passives = $derived([
 		{ name: 'Wahrnehmung', en: 'Perception', v: 10 + skillBonus(c, s, 'perception') },
 		{ name: 'Menschenkenntnis', en: 'Insight', v: 10 + skillBonus(c, s, 'insight') },
@@ -23,14 +26,14 @@
 			{@const prof = c.saves.includes(a.key)}
 			<button
 				class="rounded-xl border px-2 py-1.5 text-left transition {prof ? 'border-astral/35 bg-astral/[0.08]' : 'border-line bg-white/[0.02]'} hover:border-white/20"
-				onclick={() => rolls.check(`Rettungswurf ${a.name} (${a.enShort} Save)`, saveBonus(c, a.key))}
-				title="{a.name} ({a.en}): Wert {c.abilities[a.key]} ({fmtMod(abilityMod(c, a.key))}){prof ? ', geübt' : ''}"
+				onclick={() => rolls.check(`Rettungswurf ${a.name} (${a.enShort} Save)${a.key === 'dex' && cover ? ' mit Deckung' : ''}`, save(a.key))}
+				title="{a.name} ({a.en}): Wert {c.abilities[a.key]} ({fmtMod(abilityMod(c, a.key))}){prof ? ', geübt' : ''}{a.key === 'dex' && cover && s.combat?.cover ? `, ${COVER[s.combat.cover].label} +${cover}` : ''}"
 			>
 				<div class="flex items-center justify-between">
 					<span class="text-[0.7rem] font-semibold text-ink-3">{a.short} <span class="font-normal opacity-70">{a.enShort}</span></span>
-					{#if prof}<span class="h-1.5 w-1.5 rounded-full bg-astral"></span>{/if}
+					{#if a.key === 'dex' && cover}<span class="text-[0.6rem] font-semibold text-astral-2">+{cover} Deckung</span>{:else if prof}<span class="h-1.5 w-1.5 rounded-full bg-astral"></span>{/if}
 				</div>
-				<div class="num text-lg font-semibold">{fmtMod(saveBonus(c, a.key))}</div>
+				<div class="num text-lg font-semibold">{fmtMod(save(a.key))}</div>
 			</button>
 		{/each}
 	</div>

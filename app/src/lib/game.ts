@@ -3,7 +3,7 @@ import { campaign } from './stores/campaign.svelte';
 import { rolls } from './stores/rolls.svelte';
 import { ui } from './stores/ui.svelte';
 import { SCHOOL_COLOR, concentrationDc, currentSpeed, slotsLeft } from './rules';
-import type { CombatEffect, Minion, Spell } from './types';
+import type { CombatEffect, CoverLevel, Minion, Spell } from './types';
 import { uid } from './format';
 
 const st = () => campaign.data.state;
@@ -409,6 +409,15 @@ export function setMove(m: number) {
 export function spendMove(m: number) {
 	const c = st().combat;
 	if (c) setMove(c.used.move + m);
+}
+
+/** Deckung setzen oder aufheben (null). Sie bleibt über Züge hinweg, bis du sie änderst oder der Kampf endet. */
+export function setCover(level: CoverLevel | null) {
+	const c = st().combat;
+	if (!c) return;
+	if (level) c.cover = level;
+	else delete c.cover;
+	save();
 }
 
 export function toggleDash() {

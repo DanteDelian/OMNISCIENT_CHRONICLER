@@ -1136,7 +1136,7 @@
     "text": "Ein Blitzstrahl, der eine **30 m (100 Fuß) lange und 1,5 m (5 Fuß) breite Linie** bildet, schießt in eine Richtung deiner Wahl von dir aus. Jede Kreatur in der Linie macht einen **Geschicklichkeitsrettungswurf**: bei Misserfolg **8W6 Blitzschaden**, bei Erfolg die Hälfte. Der Blitz entzündet brennbare Gegenstände im Bereich, die niemand trägt oder hält.",
     "higher": "Mit einem Platz des 4. Grades oder höher steigt der Schaden um **1W6** pro Grad über dem 3.",
     "valerius": "SG **15** · Linie 30 m ab dir · 8W6 Blitz (Ø 28). Gegen Eis- und Hügelriesen im Schnitt etwa 24 pro Riese in der Linie.",
-    "why": "**Die Alternative mit mehr Schaden:** Ø 28 statt 18. Der Blitz schießt aber als 30-m-Linie von dir aus los und trifft alles darin. Ob Aella gegen Blitz resistent ist, hängt von ihrer Drachenabstammung ab (offen). Keine Beschwörung, also kein Aufladen von *Gutartiges Versetzen*.",
+    "why": "**Die Alternative mit mehr Schaden:** Ø 28 statt 18. Der Blitz schießt aber als 30-m-Linie von dir aus los und trifft alles darin. Aella ist im Kampfrausch gegen Blitz resistent und nimmt dann nur den halben Schaden. Keine Beschwörung, also kein Aufladen von *Gutartiges Versetzen*.",
     "slot": "Stufe 6 (einer der 2 neuen Zauber bis Grad 3)",
     "tips": [
       "**Ausrichten:** Stell dich so, dass mehrere Gegner hintereinander stehen, etwa an einem Tor oder einer Gasse."

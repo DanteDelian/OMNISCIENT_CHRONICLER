@@ -3,14 +3,17 @@
 	 * Kampfmodus für Valerius: Runde, was im eigenen Zug verbraucht ist, Bewegung in Feldern, laufende Effekte.
 	 * Bewusst ohne Gegner und ohne Initiative-Liste: Die führt der DM.
 	 */
-	import { Swords, SkipForward, Flag, Zap, Sparkles, Shield, Footprints, X, Plus, ArrowUp, Skull, Info } from '@lucide/svelte';
+	import { Swords, SkipForward, Flag, Zap, Sparkles, Shield, ShieldHalf, Footprints, X, Plus, ArrowUp, Skull, Info } from '@lucide/svelte';
 	import CastButton from '../CastButton.svelte';
 	import Markdown from '../Markdown.svelte';
 	import { campaign } from '$lib/stores/campaign.svelte';
 	import { rolls } from '$lib/stores/rolls.svelte';
-	import { addEffect, endCombat, markUsed, moveBudget, nextTurn, removeEffect, setMove, standUp, startCombat, toggleDash, toggleEconomy } from '$lib/game';
-	import { castable, currentSpeed, fmtMod, initiative, slotsLeft } from '$lib/rules';
+	import { addEffect, endCombat, markUsed, moveBudget, nextTurn, removeEffect, setCover, setMove, standUp, startCombat, toggleDash, toggleEconomy } from '$lib/game';
+	import { COVER, armorClass, castable, coverBonus, currentSpeed, fmtMod, initiative, saveBonus, slotsLeft } from '$lib/rules';
 	import { ruleHref } from '$lib/rulebook';
+	import type { CoverLevel } from '$lib/types';
+
+	const COVER_LEVELS = Object.keys(COVER) as CoverLevel[];
 
 	let { showIdle = true }: { showIdle?: boolean } = $props();
 
@@ -154,6 +157,24 @@
 					<a class="ml-auto text-[0.68rem] text-ink-3 hover:text-ink" href={ruleHref('kampf', 'bewegung-und-position')} data-ref="rule:kampf/bewegung-und-position">Regeln zur Bewegung →</a>
 				</div>
 			</div>
+		</div>
+
+		<!-- Deckung: wechselt mit der Position, darum von Hand -->
+		<div class="relative mt-3 rounded-2xl border p-3 transition {combat.cover ? 'border-astral-2/45 bg-astral-2/[0.06]' : 'border-line bg-white/[0.02]'}">
+			<div class="flex flex-wrap items-center gap-2">
+				<span class="flex items-center gap-1.5 text-xs text-ink-2"><ShieldHalf size={14} class={combat.cover ? 'text-astral-2' : ''} />Deckung</span>
+				<div class="flex flex-wrap gap-1.5" role="group" aria-label="Deckung wählen">
+					<button class="chip !h-8 {!combat.cover ? 'chip-on' : ''}" aria-pressed={!combat.cover} onclick={() => setCover(null)}>Keine</button>
+					{#each COVER_LEVELS as lv (lv)}
+						<button class="chip !h-8 {combat.cover === lv ? 'chip-on' : ''}" aria-pressed={combat.cover === lv} onclick={() => setCover(lv)} title={COVER[lv].text}>{COVER[lv].short}</button>
+					{/each}
+				</div>
+				<span class="num ml-auto text-xs text-ink-2">RK <b class="text-ink">{armorClass(c, s)}</b> · GE-Rettung <b class="text-ink">{fmtMod(saveBonus(c, 'dex') + coverBonus(s))}</b></span>
+			</div>
+			<p class="mt-1.5 text-[0.7rem] leading-snug text-ink-3">
+				{combat.cover ? COVER[combat.cover].text : 'Steht ein Skelett oder Gefährte zwischen dir und dem Angreifer, hast du halbe Deckung (+2). Die beste Deckung zählt, sie addiert sich nicht.'}
+				<a class="ml-1 whitespace-nowrap hover:text-ink" href={ruleHref('angriffe', 'deckung')} data-ref="rule:angriffe/deckung">Regel →</a>
+			</p>
 		</div>
 
 		<!-- Reaktion bereit -->

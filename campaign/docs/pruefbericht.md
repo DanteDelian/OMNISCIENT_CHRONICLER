@@ -109,7 +109,7 @@ updated: 2026-11-15
     - **Tensers Scheibe lädt Versetzen auf:** im Zauberbuch und im Taktik-Handbuch noch als Tatsache, jetzt wie im Stufe-6-Planer als *Theorie*.
     - **[[Verbannung]]:** Ein Eisriese ist in Charisma-Rettungswürfen geübt (+4) und rettet gegen SG 15 zur Hälfte. Dort standen 65 % Erfolg für dich.
     - **[[Feenwesen beschwören]]:** Dort stand noch „vorher klären, ob euer DM ihn erlaubt“. Tashas Kessel ist erlaubt (09.11.2026).
-    - **Aella:** RK 18 mit Schild gilt nur mit Einhandwaffe, die Sense ist vermutlich zweihändig (siehe F). Ob sie gegen Blitz resistent ist, hängt an ihrer offenen Drachenabstammung. Der Stufe-6-Planer sagte „resistent“.
+    - **Aella:** RK 18 mit Schild gilt nur mit Einhandwaffe, die Sense ist vermutlich zweihändig (siehe F). Ob sie gegen Blitz resistent ist, hängt an ihrer offenen Drachenabstammung. Der Stufe-6-Planer sagte „resistent“. Beides noch am selben Tag geklärt (D, 15. November).
     - **Plan vor dem Überfall:** In der Quest stand, du wirkst [[Unsichtbares sehen]], ohne dass es vorbereitet war. Jetzt: Hütte neu, Set nach der Trance, Eule, dann der Zauber.
     - **Veraltet:** der Kadaver im Inventar („entscheidet der DM“, „offen, wo er liegt“; laut DM untauglich, er liegt bei eurem Haus), Lucira „verschwunden“ (seit dem 08.11. zurück), „zu Fuß“ statt über Land, der Kartenpunkt des Schlachtfelds („wichtigstes Reiseziel“), Cams Ohrring (für den Verwalter, nicht für Aella), *Flammenkugel* und *Nebelwolke* im Taktik-Handbuch noch als Plan.
     - **Kleinigkeiten:** der Set-Name im Stufe-6-Planer, *Hypnotisches Muster* im Regelkapitel ohne „ab Stufe 6“, die Ritualliste im Bogen ohne *Tensers schwebende Scheibe*, *Spiegelbilder* und *Magierrüstung* ohne den Hinweis, dass du sie nicht willst, „Dehubden“ statt Dehapten, Twees Seite ohne die Ritualregel der Hütte, der Gewinn je Spruchrolle, der Inhalt der Apotheker-Quest (nicht belegt, jetzt neutral), ein Grammatikfehler, das Datum der Alchemie-Seite.
@@ -141,7 +141,12 @@ updated: 2026-11-15
 
 ## D · Offene Fragen
 
-Die offenen Fragen stehen gebündelt auf der **[[Rätselwand]]** und als Druckblatt „Fragen an den DM“. Offen sind 25 Fragen (15 an den DM, 8 an den Tisch, 2 an dich): der Verständigungsstein des Sumpfschuppen-Anführers, Khos Drachenabstammung, 21 aus der Tiefenanalyse vom 14.11.2026 und seit dem 15.11.2026 zwei Regelfragen: ob ein Beschwörungsritual *Gutartiges Versetzen* auflädt und was nach 10 Tagen mit einer *Illusionsschrift* geschieht.
+Die offenen Fragen stehen gebündelt auf der **[[Rätselwand]]** und als Druckblatt „Fragen an den DM“. Offen sind 26 Fragen (17 an den DM, 7 an den Tisch, 2 an dich): der Verständigungsstein des Sumpfschuppen-Anführers, 21 aus der Tiefenanalyse vom 14.11.2026 und seit dem 15.11.2026 vier Regelfragen: ob ein Beschwörungsritual *Gutartiges Versetzen* auflädt, was nach 10 Tagen mit einer *Illusionsschrift* geschieht, wie viel Deckung Schild-Skelette geben und ob Skelette Schilde und magische Gegenstände nutzen können.
+
+### Geklärt am 15. November 2026
+- **Aella trägt keinen Schild.** Sie führt die Sense zweihändig und will keinen Schild nutzen (laut ihr). Ihre RK bleibt 16.
+- **Aella ist gegen Blitz resistent,** laut dir im Kampfrausch. Für Valerius: *Blitz* trifft sie dann nur halb.
+- **Rüstung der Skelette:** Du stellst sie zuerst selbst her, aus dem, was der Dschungel hergibt. Schwere Rüstung und große Schilde kommen, wenn Gold und Organisation da sind. Was die Regeln zu Schildträgern sagen, steht im [[Taktik-Handbuch]] unter „Leibwache aus Skeletten“.
 
 ### Geklärt am 9. November 2026
 - **Namen:** Die Fee heißt **Alucasia**, der befreite Orc **Grum**, eure Basis **Dehapten**.
@@ -217,9 +222,9 @@ Die offenen Fragen stehen gebündelt auf der **[[Rätselwand]]** und als Druckbl
 
 ## F · Hinweise zu Aellas Bogen (für ihre Spielerin)
 
-- Ihre Waffe ist eine magische Sense (deine Bilder). Eine Sense gibt es im Spielerhandbuch nicht, sie nutzt vermutlich die Werte der Glefe: 1W10 Hieb, schwer, Reichweite, zweihändig. Zweihandwaffe und Schild schließen sich aus, RK 18 gilt nur mit Einhandwaffe.
+- Ihre Waffe ist eine magische Sense (deine Bilder), die sie zweihändig führt; einen Schild nutzt sie nicht (laut ihr, 15.11.2026). Eine Sense gibt es im Spielerhandbuch nicht, die Werte der Glefe passen: 1W10 Hieb, schwer, Reichweite, zweihändig.
 - Sturmaura (Meer) macht auf Stufe 5 **2W6** Blitzschaden (nicht 1W6), SG = 8 + 3 + 2 = **13**. Im Bogen stehen 12 und 13.
-- Kampfrausch gibt keine Blitzresistenz. Die hat sie nur mit bronzener Abstammung, wie ihr Bogen sagt. Mit roter Abstammung wäre es Feuer (offen).
+- Blitzresistenz hat sie laut dir im Kampfrausch. Nach den Regeln gibt der Kampfrausch selbst nur Resistenz gegen Hieb, Stich und Wucht; gegen Blitz schützt die bronzene Abstammung (dann immer, auch ohne Kampfrausch) oder ab Stufe 6 die Seele des Sturms (Meer). Ein Blick in ihren Bogen klärt, woher es kommt.
 
 ## Quellen
 

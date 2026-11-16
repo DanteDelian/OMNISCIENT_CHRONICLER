@@ -47,4 +47,4 @@ Das Briefing steht im [[Taktik-Handbuch]], die Gründe in der [[Tiefenanalyse]].
 **Euer Ruf:** „Held der Echsenmenschen“ und „Riesenbezwinger, der Schlächter“. Nach der Befreiung der Stadt erwartest du einen Adelstitel (siehe [[Aufbauplan der Unsichtbaren Hand]]).
 
 > [!NOTE] Offen
-> Die Fragen an den DM, an den Tisch und an dich stehen auf der [[Rätselwand]], 23 davon neu seit dem 14.11.2026. Was abläuft, zeigen die Uhren am Spieltisch. Die ganze Session im Journal: [[Die Türen im Nebel und die Sumpfschuppen]].
+> Die Fragen an den DM, an den Tisch und an dich stehen auf der [[Rätselwand]], 25 davon neu seit dem 14.11.2026. Was abläuft, zeigen die Uhren am Spieltisch. Die ganze Session im Journal: [[Die Türen im Nebel und die Sumpfschuppen]].

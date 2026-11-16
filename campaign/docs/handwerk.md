@@ -5,7 +5,7 @@ icon: hammer
 order: 6.5
 group: Pläne
 aliases: [Handwerk, Handwerksbuch, Kräuter sammeln, Herstellen]
-updated: 2026-11-09
+updated: 2026-11-15
 ---
 # Handwerks-Handbuch
 
@@ -270,7 +270,7 @@ Freie Nächte: je 4 Stunden nach deiner Trance, also 2,5 GM Fortschritt pro Nach
 | Schild | +2 RK | 10 GM | 4 |
 | Kurzbogen | 1W6 Stich, Munition (24/96 m), zweihändig | 25 GM | 10 |
 
-**Für dich:** Pfeile für deine Bogen-Skelette, ein zweiter Kurzbogen für ein Dolch-Skelett. Ein Schild gäbe einem Dolch-Skelett +2 RK, ob Skelette Schilde nutzen dürfen, entscheidet der DM.
+**Für dich:** Pfeile für deine Bogen-Skelette, ein zweiter Kurzbogen für ein Dolch-Skelett. Ein Schild gibt einem Schildträger-Skelett +2 RK, mit Fellrüstung also RK 16. Ob die Rüstungsregel des DM auch Schilde einschließt, steht als Frage auf der [[Rätselwand]]. Welche Rüstung sich für eine Leibwache lohnt: [[Taktik-Handbuch]], „Leibwache aus Skeletten“.
 
 ## Weitere Werkzeuge für die Trance
 

@@ -75,7 +75,7 @@ Resistenz und danach Anfälligkeit werden **nach allen anderen Modifikatoren** a
 Mehrere Resistenzen oder Anfälligkeiten, die dieselbe Schadensart betreffen, zählen nur als **eine**. Hat eine Kreatur zum Beispiel Resistenz gegen Feuerschaden und außerdem Resistenz gegen jeden nichtmagischen Schaden, wird der Schaden eines nichtmagischen Feuers gegen die Kreatur halbiert, nicht auf ein Viertel verringert.
 
 > [!VAL]
-> Wucht zerlegt deine Skelette doppelt so schnell: Eine Riesenkeule macht bei ihnen den doppelten Schaden. Aella hat im Kampfrausch Resistenz gegen Hieb, Stich und Wucht.
+> Wucht zerlegt deine Skelette doppelt so schnell: Eine Riesenkeule macht bei ihnen den doppelten Schaden. Aella hat im Kampfrausch Resistenz gegen Hieb, Stich und Wucht, laut dir auch gegen Blitz.
 
 ## Heilung {Healing} {#heilung}
 

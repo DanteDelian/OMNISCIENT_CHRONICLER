@@ -617,7 +617,7 @@
           "action": "Dolch (wenn ausgerüstet)"
         }
       ],
-      "verdict": "Fernkampf-Artillerie aus der Deckung oder mit Orc-Axt in der zweiten Reihe. Entsteht aus **Knochen**. **Laut DM** tragen deine Skelette nur, was du ihnen gibst: Waffen, Rüstung, Kleidung. Jede Rüstung geht ohne Übung, weil sie Teil des Zaubers ist. Die Orc-Axt wird wie eine Zweihandaxt geführt: Stärke statt Geschicklichkeit, darum +2 auf den Angriff, aber 1W12 Schaden.",
+      "verdict": "Fernkampf-Artillerie aus der Deckung, mit Orc-Axt in der zweiten Reihe oder als **Schildträger** direkt vor dir: Ein Skelett zwischen dir und dem Schützen gibt dir halbe Deckung (+2). Siehe Taktik-Handbuch, „Leibwache aus Skeletten“. Entsteht aus **Knochen**. **Laut DM** tragen deine Skelette nur, was du ihnen gibst: Waffen, Rüstung, Kleidung. Jede Rüstung geht ohne Übung, weil sie Teil des Zaubers ist. Die Orc-Axt wird wie eine Zweihandaxt geführt: Stärke statt Geschicklichkeit, darum +2 auf den Angriff, aber 1W12 Schaden.",
       "conditionImmune": "Erschöpfung, Vergiftet"
     },
     {
@@ -666,15 +666,15 @@
       "name": "Aella Rayann „Khoraa“ Stormscale",
       "altName": "In Valerius' Backstory noch Draka „Drake“ Stormscale",
       "role": "Drachenblütige · Barbarin 5 (Pfad des Sturmherolds)",
-      "ac": "16 (Halbplatte) · 18 mit Schild, nur mit Einhandwaffe (die Sense ist vermutlich zweihändig)",
+      "ac": "16 (Halbplatte), kein Schild: Sie führt die Sense zweihändig (laut ihr, 15.11.2026)",
       "hp": 45,
       "speed": "12 m",
       "notes": [
-        "Kampfrausch 3× pro langer Rast: Resistenz gegen Hieb, Stich und Wucht, +2 Nahkampfschaden, Vorteil auf ST-Würfe",
+        "Kampfrausch 3× pro langer Rast: Resistenz gegen Hieb, Stich und Wucht, laut dir auch gegen Blitz (15.11.2026), +2 Nahkampfschaden, Vorteil auf ST-Würfe",
         "Sturmaura (Meer): Blitz auf eine Kreatur in 3 m, GE-Rettungswurf",
         "Odem: 1,5 × 9 m Blitzlinie, GE-Rettungswurf SG 13, 2W6",
         "Zusätzlicher Angriff · Leichtsinniger Angriff · Gefahrensinn",
-        "Waffe: eine magische Sense mit Totenschädel am Schaft (deine Bilder, 09.11.2026)"
+        "Waffe: eine magische Sense mit Totenschädel am Schaft (deine Bilder, 09.11.2026), zweihändig geführt"
       ],
       "source": "aella-overview"
     }

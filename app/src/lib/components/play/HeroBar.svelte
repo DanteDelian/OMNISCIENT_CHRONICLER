@@ -4,7 +4,7 @@
 	import { rolls } from '$lib/stores/rolls.svelte';
 	import { ui } from '$lib/stores/ui.svelte';
 	import { startCombat } from '$lib/game';
-	import { armorClass, fmtMod, initiative, passivePerception, spellAttack, spellDc } from '$lib/rules';
+	import { armorClass, coverBonus, fmtMod, initiative, passivePerception, spellAttack, spellDc } from '$lib/rules';
 
 	const c = $derived(campaign.data.character);
 	const s = $derived(campaign.data.state);
@@ -15,6 +15,9 @@
 		gefaehrdet: { label: 'Tarnung gefährdet', color: 'var(--color-warn)' },
 		aufgeflogen: { label: 'Tarnung aufgeflogen', color: 'var(--color-blood)' }
 	};
+
+	// Was in der angezeigten RK steckt: Schild-Zauber und Deckung im Kampf
+	const acParts = $derived([s.shield ? 'Schild' : '', coverBonus(s) ? 'Deckung' : ''].filter(Boolean));
 
 	function toggleShield() {
 		campaign.change('state', (st) => (st.shield = !st.shield));
@@ -80,15 +83,15 @@
 
 	<div class="relative mt-5 grid grid-cols-4 gap-2 @3xl:grid-cols-8">
 		<button
-			class="flex flex-col items-center justify-center rounded-2xl border px-2 py-2.5 transition {s.shield
+			class="flex flex-col items-center justify-center rounded-2xl border px-2 py-2.5 transition {acParts.length
 				? 'border-astral-2/60 bg-astral-2/10'
 				: 'border-line-2 bg-white/[0.03] hover:border-white/20'}"
 			onclick={toggleShield}
-			title="Armor Class · Klicken: Schild an/aus (+5 RK bis zu deinem nächsten Zug)"
+			title="Armor Class · Klicken: Schild an/aus (+5 RK bis zu deinem nächsten Zug). Deckung wählst du im Kampfmodus."
 		>
-			<Shield size={15} class={s.shield ? 'text-astral-2' : 'text-ink-3'} />
+			<Shield size={15} class={acParts.length ? 'text-astral-2' : 'text-ink-3'} />
 			<span class="num mt-0.5 text-[1.35rem] leading-tight font-semibold whitespace-nowrap @2xl:text-[1.7rem]">{armorClass(c, s)}</span>
-			<span class="text-center text-[0.65rem] leading-tight text-ink-3">{s.shield ? 'RK mit Schild' : 'Rüstungsklasse'}</span>
+			<span class="text-center text-[0.65rem] leading-tight text-ink-3">{acParts.length ? `RK mit ${acParts.join(' + ')}` : 'Rüstungsklasse'}</span>
 		</button>
 		{#each stats as st (st.label)}
 			<svelte:element

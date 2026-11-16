@@ -5,7 +5,7 @@ icon: swords
 order: 4
 group: Zauber & Taktik
 aliases: [Taktik, Zauber-Taktiken, Taktikhandbuch]
-updated: 2026-11-14
+updated: 2026-11-15
 ---
 # Taktik-Handbuch
 
@@ -119,7 +119,7 @@ Konzentration brauchen: [[Netz]], [[Nebelwolke]], [[Flammenkugel]], [[Schutz vor
 - **Netz → Eismesser:** Festgehaltene retten mit Nachteil gegen die Explosion.
 - **Netz → Skelette:** Pfeil und Dolche gegen Festgehaltene mit Vorteil. Allgemeiner Befehl: „Greift an, wer im Netz festhängt.“
 - **Skelett trifft → Totenglocke:** Das Ziel ist verletzt, die Totenglocke macht 2W12.
-- **Dolch-Skelette als Leibwache:** Die beiden mit den Society-Dolchen bleiben neben dir. Wer dich im Nahkampf angreift, steht neben ihnen. Ein geworfener Dolch ist weg, bis jemand ihn aufhebt.
+- **Dolch-Skelette als Leibwache:** Die beiden mit den Society-Dolchen bleiben neben dir, mit Schild noch besser (siehe „Leibwache aus Skeletten“). Wer dich im Nahkampf angreift, steht neben ihnen. Ein geworfener Dolch ist weg, bis jemand ihn aufhebt.
 - **Flammenkugel → Totenglocke:** Mit der Bonusaktion rammen, mit der Aktion die Totenglocke auf das verletzte Ziel. Zwei Schadensquellen pro Runde, nur eine Konzentration.
 - **Nebelwolke als Bühne:** Du stehst im Nebel, trittst an den Rand, wirkst und gehst zurück. Schützen draußen sehen dich nur in deinem Zug.
 - **Vertrauter späht → Botschaft an Aella → koordinierter Zugriff.**
@@ -303,6 +303,54 @@ Der Preis: Die Arkane Erholung ist für diesen Tag verbraucht. **Faustregel:** I
 - **Mitnehmen:** Erweckte Skelette laufen 9 m pro Runde und halten mit keinem Reittier mit. Auf [[Tensers schwebende Scheibe|Tensers schwebender Scheibe]] reisen sie mit (DM fragen). Sonst reist du mit Knochen im Sack und erweckst sie am Ziel.
 - **Perle der Macht** (Wunsch an Saladin): holt einmal am Tag einen Platz bis Grad 3 zurück. Damit ist das Erneuern immer gedeckt.
 - **Rohstoff:** nur Knochen (Skelette) oder Leichen (Zombies) kleiner oder mittelgroßer Humanoider. Vorrat am 08.11.2026: ein Orc-Skelett im Rucksack, zwei inaktive Skelette in Dehapten. Weitere Knochen: das Schlachtfeld im Südosten.
+
+## Leibwache aus Skeletten
+
+Dein Plan (15.11.2026): ein oder zwei Skelette mit schwerer Rüstung und großem Schild, die dich vor Schützen und Nahkämpfern schützen. Die übrigen kämpfen aus der Distanz. Was die Regeln dazu sagen:
+
+### Was geht
+
+- **Ein Befehl reicht.** Mit deiner Bonusaktion gibst du einen allgemeinen Befehl wie „Bleibt zwischen mir und den Feinden, greift an, wer mich angreift“. Laut Zaubertext folgen sie ihm, bis die Aufgabe erledigt ist, und laut DM gehen solche Befehle. Gib ihn vor dem Kampf, dann bleibt deine Bonusaktion frei.
+- **Deckung gegen Schützen.** Steht ein Skelett zwischen dir und dem Schützen, hast du halbe [[Deckung]]: +2 auf RK und GE-Rettungswürfe, also RK 13, mit [[Schild]] 18. Ein Orc (+5) trifft dich dann zu 65 % statt 75 %, mit *Schild* zu 40 %. Das gilt auch gegen geworfene Felsen. Mehrere Deckungen zählen nicht zusammen, nur die beste gilt.
+- **Den Weg versperren.** Durch das Feld eines Feindes kommt nur, wer mindestens zwei Größen größer oder kleiner ist. Orcs und Sumpfschuppen müssen also um deine Schildträger herum. Riesen gehen hindurch und schlagen mit ihrer Reichweite ohnehin über sie hinweg.
+- **Zurückschlagen.** Wer an einem Skelett vorbei will, riskiert seinen Gelegenheitsangriff. „Greift an, wer sich ihm nähert“ ist eine vorbereitete Aktion, beides kostet die Reaktion des Skeletts.
+
+### Was nicht geht
+
+- **Treffer abfangen** kann ein Skelett nicht, und Angriffe auf dich erschweren auch nicht. Dafür bräuchte es den Kampfstil Schutz oder Abfangen, den nur Kämpfer und Paladine haben. Das schaffen nur magische Schilde (unten).
+- **Zwei Schilde:** Ein Schild gibt +2 RK, und man profitiert immer nur von einem (Spielerhandbuch). Turmschilde und Belagerungsschilde gibt es in den Regeln nicht.
+- **Mehr als halbe Deckung** gibt es nur hinter einem Hindernis, das dich zu drei Vierteln verdeckt, etwa einer Schießscharte (+5). *Theorie:* Ein Setzschild (Pavese), den ein Skelett vor dir aufstellt, wäre so ein Hindernis. Das Spielleiterhandbuch zählt beim Auszählen auf dem Raster auch Kreaturen als Hindernis, dann gäben zwei Skelette nebeneinander vielleicht Dreivierteldeckung. **Offen:** Der DM entscheidet, die Frage steht auf der [[Rätselwand]].
+
+### Schwere Rüstung: was sich lohnt
+
+Skelette haben Geschicklichkeit 14 und Stärke 10. Mittelschwere Rüstung zählt die Geschicklichkeit mit (+2), schwere nicht, und unter der verlangten Stärke kostet sie 3 m Bewegung.
+
+| Rüstung | RK | mit Schild | Preis | Haken |
+| :-- | :-: | :-: | :-- | :-- |
+| keine | 12 | 14 | – | |
+| Fellrüstung | 14 | **16** | 10 GM, selbst gemacht 5 GM Material | |
+| Schuppenpanzer | 16 | **18** | 50 GM | Nachteil auf Heimlichkeit |
+| Brustplatte | 16 | 18 | 400 GM | |
+| Kettenpanzer (schwer) | 16 | 18 | 75 GM | Nachteil auf Heimlichkeit, nur 6 m Bewegung (ST 13): lohnt nicht |
+| Schienenpanzer (schwer) | 17 | 19 | 200 GM | Nachteil auf Heimlichkeit, nur 6 m Bewegung (ST 15) |
+| Halbplatte | 17 | 19 | 750 GM | Nachteil auf Heimlichkeit |
+| Plattenpanzer (schwer) | 18 | **20** | 1 500 GM | Nachteil auf Heimlichkeit, nur 6 m Bewegung (ST 15) |
+
+Ein Orc (+5) trifft ein Skelett ohne Rüstung zu 70 %, mit Fellrüstung und Schild zu 50 %, mit Schuppenpanzer und Schild zu 40 %, mit Plattenpanzer und Schild zu 30 %. Für einen Schildträger, der neben dir stehen bleibt, ist der Schienenpanzer die günstige schwere Rüstung. Wenn ihr euch anschleicht, bleibt er besser zurück.
+
+### Ausrüstung in Stufen
+
+1. **Jetzt, aus dem Dschungel:** Fellrüstung und Holzschild selbst herstellen, mit Lederwerkzeug und Holzschnitzwerkzeug über die Astrale Trance, je 4 freie Nächte. Häute bringt die Jagd, Holz und Leder der Dschungel, nur Beschläge musst du kaufen (siehe [[Handwerks-Handbuch]]). Ergebnis: ein Schildträger mit RK 16. Orcs tragen oft Fellrüstung, Beute zählt auch.
+2. **Mit Gold:** ein Schuppenpanzer vom Schmied (50 GM), mit Schild RK 18.
+3. **Mit Organisation:** Ein Schmied der Unsichtbaren Hand fertigt Schienen- oder Plattenpanzer, mit Schild RK 19 bis 20.
+4. **Das Ziel, ein magischer Schild** (Spielleiterhandbuch, selten): Der *Pfeilfängerschild* gibt +2 RK gegen Fernkampf, und mit seiner Reaktion zieht der Träger einen Fernkampfangriff auf ein Ziel in 1,5 m auf sich. Der *Schild der Geschossanziehung* ist verflucht: Sein Träger ist resistent gegen Fernkampf-Waffenangriffe, und jeder solche Angriff auf ein Ziel in 3 m trifft stattdessen ihn. Für ein Skelett ist der Fluch genau der Zweck. Bei Felsen hebt die Resistenz allerdings nur die Wucht-Anfälligkeit auf. Beide Schilde brauchen Einstimmung, ob ein Skelett das kann, entscheidet der DM.
+
+### Aufstellung
+
+- **1 bis 2 Schildträger** direkt vor dir, zum Feind hin, in der anderen Hand Kurzschwert (+4, 1W6 + 2) oder Society-Dolch (+4, 1W4 + 2).
+- **Alle anderen schießen** mit Kurzbögen (+4, 1W6 + 2, 24/96 m) aus der Deckung, so weit hinten wie du. Gegen Riesen ist das Pflicht: Ihre Keulen und Felsen machen Skeletten doppelten Schaden.
+- **Ein Skelett mit der Orc-Axt** (1W12) wartet in der zweiten Reihe auf Gegner, die durchbrechen.
+- **Zwei Schildträger reichen:** einer je Richtung, aus der geschossen wird. Deckung zählt nicht doppelt, jedes weitere Skelett schießt besser mit.
 
 ## Positionierung
 

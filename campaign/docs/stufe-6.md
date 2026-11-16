@@ -52,7 +52,7 @@ updated: 2026-11-15
 
 | Zauber | Grad | Konz. | Wofür | Trifft eure Leute? |
 | :-- | :-: | :-: | :-- | :-- |
-| [[Blitz]] | 3 | | 8W6 in einer 30-m-Linie aus dir heraus (Ø 28). Mehr Schaden als *Flutwelle*, aber schwerer zu lenken | ja, wer in der Linie steht. Ob Aella gegen Blitz resistent ist, hängt an ihrer Drachenabstammung (offen) |
+| [[Blitz]] | 3 | | 8W6 in einer 30-m-Linie aus dir heraus (Ø 28). Mehr Schaden als *Flutwelle*, aber schwerer zu lenken | ja, wer in der Linie steht. Aella ist im Kampfrausch resistent und nimmt dann nur den halben Schaden |
 | [[Feuerball]] | 3 | | 8W6 in 6 m Radius, gegen dichte Gruppen | ja, alles in der Kugel |
 | [[Schneesturm]] ★ | 3 | ● | Riesen stürzen und kommen kaum voran. Statt *Muster* bei einer Belagerung auf Abstand | ja, 12 m Radius |
 | [[Stinkende Wolke]] ★ | 3 | ● | Trupps verlieren ihre Aktion, die Sicht ist blockiert | ja, 6 m Radius |

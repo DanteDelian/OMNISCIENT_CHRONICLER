@@ -134,7 +134,12 @@ export interface Combat {
 	};
 	effects: CombatEffect[];
 	startedAt: number;
+	/** Deckung, in der Valerius gerade steht. Wechselt mit der Position, darum nur von Hand gesetzt */
+	cover?: CoverLevel;
 }
+
+/** Grade der Deckung (Spielerhandbuch): halb +2, dreiviertel +5, voll: kein direktes Ziel */
+export type CoverLevel = 'halb' | 'dreiviertel' | 'voll';
 
 /** Ein Herstellungsprojekt: 5 GM Marktwert pro 8 Stunden Arbeit (Spielerhandbuch) */
 export interface CraftProject {

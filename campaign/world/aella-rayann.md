@@ -14,7 +14,7 @@ imageFocus: 50% 14%
 **Drachenblütige · Barbarin (Pfad des Sturmherolds) · Valerius' Partnerin und loyalste Verbündete.**
 
 - **Aussehen (deine Bilder, 09.11.2026):** rote Schuppen, gebogene dunkle Hörner, ein langer dunkler Zopf und, ungewöhnlich für Drachenblütige, ein langer Drachenschwanz. Ihre Waffe ist eine **magische Sense** mit einem Totenschädel am Schaft, über die Blitze laufen. Sturmherold des Meeres.
-- **Offen:** Ihr Bogen nennt eine bronzene Abstammung: Blitz-Odem und Blitzresistenz. Bleibt das trotz der roten Schuppen so? Frage an den Tisch.
+- **Geklärt (15.11.2026, laut dir):** Im Kampfrausch ist sie resistent gegen Blitzschaden. Ihr Bogen nennt dazu eine bronzene Abstammung mit Blitz-Odem, die roten Schuppen sind ihr Aussehen.
 
 > **Name:** Aella Rayann, wie in ihren eigenen Dokumenten (von Patrick bestätigt am 12.10.2026). In Valerius' Backstory heißt sie noch *Draka „Drake“ Stormscale*.
 
@@ -25,7 +25,7 @@ imageFocus: 50% 14%
 - **Ohrringe:** Beide liegen bei dir. Den zweiten bekommt eher dein künftiger Verwalter: Mit Aella reist du ohnehin, und für Notfälle gibt es *Botschaft*.
 - Ihre Notizen sind laut Patrick aktueller als Valerius' Kampagnen-Log.
 
-**Kampfwerte laut ihrem Bogen:** RK 16 (mit Schild 18, aber nur mit einer Einhandwaffe: Die Sense ist vermutlich zweihändig, siehe [[Prüfbericht]]) · 45 TP · 12 m · Kampfrausch 3× · Sturmaura · Odem.
+**Kampfwerte laut ihrem Bogen:** RK 16, einen Schild nutzt sie nicht, weil sie die Sense zweihändig führt (laut ihr, 15.11.2026) · 45 TP · 12 m · Kampfrausch 3× (dann auch resistent gegen Blitz) · Sturmaura · Odem.
 
 Gemeinsame Geschichte: [[Backstory]]
 - **11.10.2026:** Sie war dabei, als drei Gefährten über Nacht verschwanden, und wartete mit dir und dem gefangenen Orc in [[Twee]]s winziger Hütte.

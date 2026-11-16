@@ -45,4 +45,5 @@ Journal-Eintrag `images: [{ "file": "nebel-tueren.webp", "caption": "…" }]`, U
 
 Die Bilder sind Stimmungsbilder, keine Fakten: Details wie Kleidung oder Begleiter im Hintergrund sind nicht Kanon.
 Das erste Bild der Diener (20.10.2026) stammte noch von FLUX.1-dev über Hugging Face, seit dem 09.11.2026 kommen alle
-Bilder aus Gemini.
+Bilder aus Gemini über agy. Seit dem 15.11.2026 ist agy die einzige erlaubte Bildquelle (Patricks Vorgabe für alle
+Projekte), alle anderen Wege sind gelöscht und gesperrt.

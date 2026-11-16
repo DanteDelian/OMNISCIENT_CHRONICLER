@@ -599,10 +599,12 @@
     "to": "tisch",
     "topic": "Khos Drachenabstammung",
     "question": "Kho hat rote Schuppen. Bleibt ihre Abstammung laut Bogen bronzen (Blitz-Odem, Blitzresistenz), oder ist sie auch in den Werten rot (Feuer)?",
-    "status": "offen",
+    "status": "geklaert",
     "links": [
       "Aella Rayann"
-    ]
+    ],
+    "answer": "Sie ist auch gegen blitz schaden resistent, bei rage modus.",
+    "answered": "2026-11-15"
   },
   {
     "id": "versetzen-ritual",
@@ -624,6 +626,28 @@
     "links": [
       "Illusionsschrift",
       "Cam Buckland"
+    ]
+  },
+  {
+    "id": "leibwache-deckung",
+    "to": "dm",
+    "topic": "Schildträger-Skelette",
+    "question": "Wie viel Deckung geben Valerius’ Schild-Skelette? Nach dem Spielerhandbuch gibt eine Kreatur halbe Deckung (+2). Zählen zwei Skelette nebeneinander oder ein großer Setzschild (Pavese), den ein Skelett vor ihm aufstellt, als Dreivierteldeckung (+5)? Und gibt es bei euch Turmschilde?",
+    "status": "offen",
+    "links": [
+      "Taktik-Handbuch",
+      "Skelett"
+    ]
+  },
+  {
+    "id": "leibwache-einstimmung",
+    "to": "dm",
+    "topic": "Schilde und magische Gegenstände für Skelette",
+    "question": "Gilt eure Rüstungsregel (Skelette tragen jede Rüstung ohne Übung) auch für Schilde? Und können sich die Skelette auf magische Gegenstände einstimmen, etwa auf einen Pfeilfängerschild oder einen Schild der Geschossanziehung?",
+    "status": "offen",
+    "links": [
+      "Taktik-Handbuch",
+      "Skelett"
     ]
   }
 ]
